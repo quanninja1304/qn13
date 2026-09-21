@@ -1,0 +1,14 @@
+contract_version: "1.0.0"
+phase: 1
+scope: main
+observed_nodes: [10, 20]
+latent_ratios: [0.2, 0.4]
+mean_degrees: [2.0, 4.0]
+graph_seeds_per_cell: 20
+graph_seed_start: 10000
+schedulers: [stable_default, random_valid, cost_only, graph_only, oracle_query]
+budget_checkpoints: [0.10, 0.25, 0.50, 1.00]
+ci_backend: oracle
+bootstrap_seed: 51001
+bootstrap_resamples: 10000
+

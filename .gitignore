@@ -1,0 +1,28 @@
+# Experiment outputs are versioned by SHA-256 manifests and external storage,
+# not by Git. The current artifact tree is larger than 15 GB.
+/artifacts/
+
+# Python build, test, and environment state
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.venv/
+venv/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Runtime scratch files
+*.tmp
+*.log

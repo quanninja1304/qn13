@@ -1,0 +1,59 @@
+from __future__ import annotations
+
+import argparse
+import json
+
+from .reporting import generate_figures, generate_reports
+from .runner import ROOT, dry_run, evaluate_gates, run_phase0, run_phase1
+from .phase1_execution import analyze as analyze_phase1, preflight as preflight_phase1, run_shard
+from .migration import prepare_source_migration, validate_vps_migration
+
+
+def main(argv=None) -> int:
+    parser = argparse.ArgumentParser(description="Safe Imperfect Priors kill test")
+    sub = parser.add_subparsers(dest="command", required=True)
+    dry = sub.add_parser("dry-run")
+    dry.add_argument("--phase", type=int, required=True, choices=range(4))
+    smoke = sub.add_parser("smoke")
+    p0 = sub.add_parser("phase0")
+    p1 = sub.add_parser("phase1")
+    p1.add_argument("--smoke", action="store_true")
+    sub.add_parser("phase1-preflight")
+    shard = sub.add_parser("phase1-shard")
+    shard.add_argument("--shard", type=int, required=True, choices=range(8))
+    sub.add_parser("phase1-analyze")
+    sub.add_parser("migration-prepare")
+    sub.add_parser("migration-validate")
+    sub.add_parser("evaluate-gates")
+    sub.add_parser("report")
+    sub.add_parser("figures")
+    args = parser.parse_args(argv)
+    if args.command == "dry-run":
+        print(json.dumps(dry_run(args.phase), indent=2))
+    elif args.command == "smoke":
+        print(json.dumps({"runs": len(run_phase0(ROOT / "configs/kill_test/phase0.yaml", smoke=True)), "scope": "smoke"}, indent=2))
+    elif args.command == "phase0":
+        print(json.dumps({"runs": len(run_phase0(ROOT / "configs/kill_test/phase0.yaml")), "scope": "main"}, indent=2))
+    elif args.command == "phase1":
+        print(json.dumps({"runs": len(run_phase1(ROOT / "configs/kill_test/phase1.yaml", smoke=args.smoke)), "scope": "smoke" if args.smoke else "main"}, indent=2))
+    elif args.command == "phase1-preflight":
+        print(json.dumps(preflight_phase1(), indent=2))
+    elif args.command == "phase1-shard":
+        print(json.dumps(run_shard(args.shard), indent=2))
+    elif args.command == "phase1-analyze":
+        print(json.dumps(analyze_phase1(), indent=2))
+    elif args.command == "migration-prepare":
+        print(json.dumps(prepare_source_migration(), indent=2))
+    elif args.command == "migration-validate":
+        print(json.dumps(validate_vps_migration(), indent=2))
+    elif args.command == "evaluate-gates":
+        print(json.dumps(evaluate_gates(), indent=2))
+    elif args.command == "report":
+        generate_reports()
+    elif args.command == "figures":
+        generate_figures()
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

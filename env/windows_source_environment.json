@@ -1,0 +1,28 @@
+{
+  "captured_at": "2026-09-21T04:21:26.972313+00:00",
+  "code_revision": "UNAVAILABLE_NOT_A_GIT_REPOSITORY",
+  "cpu_count": 4,
+  "kernel": "10",
+  "label": "windows_source",
+  "machine": "AMD64",
+  "memory_bytes": 8355045376,
+  "os": "Windows",
+  "packages": {
+    "PyYAML": "6.0.3",
+    "causal-learn": "0.1.4.8",
+    "matplotlib": "3.11.1",
+    "networkx": "3.6.1",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "psutil": "7.2.2",
+    "pyarrow": "25.0.1",
+    "pytest": "9.1.1",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1"
+  },
+  "pip_freeze": "env/windows_source_freeze.txt",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "processor": "Intel64 Family 6 Model 126 Stepping 5, GenuineIntel",
+  "python": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+  "python_executable": "C:\\Python314\\python.exe"
+}
