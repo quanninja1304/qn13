@@ -162,6 +162,12 @@ def write_migration_snapshot() -> dict:
             continue
         if row.get("terminal_status") == "completed":
             completed_ids.add(row["logical_run_id"])
+    revision = _revision()
+    code_truth = (
+        f"Git commit {revision} plus the source-tree checksum"
+        if revision != "UNAVAILABLE_NOT_A_GIT_REPOSITORY"
+        else "source-tree checksum; Git revision unavailable"
+    )
     payload = {
         "created_at": _now(),
         "expected": len(expected_ids),
@@ -174,7 +180,7 @@ def write_migration_snapshot() -> dict:
         "scientific_contract_version": load_config(ROOT / "configs/kill_test/phase1.yaml")["contract_version"],
         "active_executor": "NONE_MIGRATION_QUIESCED",
         "source_of_truth_policy": {
-            "code": "source tree checksum; Git revision unavailable until repository is initialized",
+            "code": code_truth,
             "active_artifacts": "VPS after validation",
             "durable_artifacts": "external archive with verified checksum",
             "laptop_during_vps_execution": "READ_ONLY",

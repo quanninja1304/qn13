@@ -42,7 +42,7 @@ python-dateutil==2.9.0.post0
 PyYAML==6.0.3
 referencing==0.37.0
 rpds-py==2026.6.3
-# Editable install with no version control (safe-imperfect-priors-kill-test==0.1.0)
+# Editable Git install with no remote (safe-imperfect-priors-kill-test==0.1.0)
 -e d:\research\causal multi-agent\safety_prior
 scikit-learn==1.9.1
 scipy==1.18.1
