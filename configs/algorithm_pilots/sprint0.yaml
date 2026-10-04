@@ -1,0 +1,53 @@
+contract_version: "0.1.0"
+phase: sprint0_reference_freeze
+
+references:
+  icd:
+    paper: "https://proceedings.neurips.cc/paper/2021/hash/144a3f71a03ab7c4f46f9656608efdb2-Abstract.html"
+    source_repository: "https://github.com/IntelLabs/causality-lab"
+    audited_source_revision: "36625da6eeef059e36dab2b4467235a036136b76"
+    reference_class: "causal_discovery_algs.icd.LearnStructICD"
+    local_adapter: "safety_prior.algorithms.icd_official_adapter"
+    candidate_semantics: dynamic_current_pag
+    optional_precalculated_mode: true
+    orientation_complete_in_local_code: false
+  simple_tfci:
+    paper: "https://arxiv.org/abs/2503.21526"
+    proposition_past: 6
+    proposition_sound_complete: 7
+    pds_restriction: "PDS(X,Y) intersect {Z: tier(Z) <= max(tier(X), tier(Y))}"
+    tier_based_orientation: false
+
+canonical_equality:
+  compare_nodes: true
+  compare_endpoint_matrix: true
+  compare_skeleton: true
+  compare_valid_sepsets: true
+  ignore_query_log_order: true
+  ignore_wall_clock: true
+
+motifs:
+  - chain
+  - fork
+  - collider
+  - latent_confounder
+  - latent_mediator
+  - diamond
+  - future_confounder_claim
+  - latent_diamond
+  - dynamic_snapshot_trace_gap
+
+artifact_policy:
+  root: "artifacts/algorithm_pilots"
+  full_trace_on:
+    - mismatch
+    - false_definite_endpoint
+    - solver_discrepancy
+    - first_failure_signature
+  successful_trace_sample_rate: 0.01
+
+gates:
+  require_official_icd_conformance_before_block_benchmark: true
+  require_simple_tfci_pag_equivalence_before_robust_envelope: true
+  allow_llm: false
+  allow_gpu: false
