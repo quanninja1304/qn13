@@ -1,0 +1,61 @@
+I. motivation
+1. Lời nguyền số chiều
+- Nhìn chung như sau: theo lý thuyết, khi không gian mẫu tiến đến vô cùng (n-> inf), các thuật toán như PC/FCI hội tụ về các lớp tương đương markov CPDAG của đồ thị thực tế. tức là tiệm cận hoàn hảo so với oracle.
+- Tuy nhiên, trong thực tế dữ liệu là hữu hạn, việc thiếu hụt mẫu khi kích thước tăng dẫn đến 2 vấn đề như sau:
+a. biến rời rạc: trong không gian S có n quan sát, mỗi quan sát có k giá trị. Khi không gian mẫu n tăng lên, dữ liệu bị phân mảnh thành k^n ô, các ô giá trị rỗng/null cascade và làm sụp đổ các kiểm định chi bình phương và G-test.
+b. biến liên tục: **ko hiểu**
+- cả 2 đều dẫn tới lan truyền sai số, phá vỡ tập kề và tập tách.
+- Kể cả khi dữ liệu tồn tại ở dạng lý tưởng. Chi phí tính toán vẫn là thách thức lớn. vì các thuật toán PC/FCI hoạt động theo cơ chế tuần tự với độ phức tạp thuật toán trong worst case có thể lên tới O(p^2 * 2^p)
+
+2. rào cản khi tích hợp tri thức chuyên gia (human/LLM)
+- Human: đắt đỏ, khó scale
+- LLM: phụ thuộc vào prior knowledge, hallucination
+
+3. Hạn chế của các phương pháp hiện tại
+- ràng buộc cứng
+- ràng buộc mềm
+
+II. research questions
+câu hỏi 1 (tính an toàn): thiết lập 1 khung toán học tích hợp LLM mà không gây hại, đảm báo tính nhất quán thống kê và cải thiện hiệu năng trên tập mẫu hữu hạn?
+câu hỏi 2 (cấu trúc thuật toán): các thuật toán truyền thống (như PC) có kiến trúc kiểm định tối ưu tĩnh (sequential), cần tái cấu trúc hoặc thiết kế ra sao để nhạy hơn và sử dụng tối đa tri thức từ chuyên gia (LLM)?
+
+III. ý tưởng cốt lõi
+
+1. LLM chỉ đóng vai trò sắp xếp thứ tự kiểm định (scheduling), không được phép can thiệp vào kết quả kiểm định thống kê.
+2. bài báo định nghĩa 1 thuật toán RL thoả mãn:
+a. khi n-> +inf. thuật toán chắc chắn hội tụ về G*.
+b. chất lượng đồ thị phục hồi trong mẫu hữu hạn đồng biến với tri thức từ LLM.
+c. tồn tại ngưỡng chất lượng từ chuyên gia sao cho kỳ vọng hiệu năng luôn lớn hơn thuật toán truyền thống.
+
+IV. đóng góp chính
+
+1. Khung phương pháp luận G2G đầu tiên: Đề xuất mô hình toán học giải quyết trọn vẹn bài toán tích hợp chuyên gia không đáng tin cậy vào khám phá nhân quả bằng cách sắp xếp thứ tự kiểm định, đảm bảo không vi phạm tính nhất quán thống kê.
+
+2. Khám phá về mặt thiết kế thuật toán (Redesign vs. Augment): Chứng minh rằng việc chỉ tích hợp tri thức vào thuật toán cũ (PC-Guess) sẽ bị triệt tiêu bớt lợi ích bởi các định kiến thiết kế cũ; phải tái thiết kế cấu trúc luồng điều khiển (như gPC-Guess) mới khai phóng được toàn bộ sức mạnh của tri thức chuyên gia.
+
+3. Bộ định lý bảo đảm toán học vững chắc:
+- Định lý 5.1: Đảm bảo tính nhất quán tiệm cận cho cả hai phương pháp.
+- Định lý 5.2 & 5.3: Chứng minh tính tăng đơn điệu theo chất lượng chuyên gia và bảo đảm chặn dưới hiệu năng khi $p_\psi \ge 0.5$
+
+4. Kiểm chứng thực nghiệm xuất sắc:
+- Trên đồ thị Erdős-Rényi và mạng protein Sachs: gPC-Guess cải thiện tới 30% F1-score khi chuyên gia có chất lượng cao.
+- Kết hợp thành công với LLM thực tế (Claude Opus 4.1 qua prompt Chain-of-Thought): gPC-Guess tăng ~15% F1-score trên dữ liệu Sachs, vượt qua cả phương pháp thuần dữ liệu lẫn phương pháp thuần LLM.
+- Bảo chứng an toàn: Khi chuyên gia hoàn toàn đối nghịch/sai lệch 100% ($p_\psi = 0$), F1-score của gPC-Guess chỉ giảm nhẹ khoảng 8%, hoàn toàn tránh được thảm họa sai số vô hạn (unbounded error) của các phương pháp ràng buộc cứng.
+
+V. hạn chế
+- Giả định Đủ nguyên nhân (Causal Sufficiency): Giả định không có biến ẩn gây nhiễu (latent confounders) và không có thiên lệch chọn mẫu. Toàn bộ lý thuyết chỉ áp dụng cho không gian DAG/CPDAG, chưa dùng được cho các đồ thị tổng quát như MAG/PAG.
+- Chỉ tối ưu hóa cho khung vô hướng (Skeleton): Mặc dù khung vô hướng chuẩn sẽ cải thiện pha định hướng, bài báo chưa mở rộng cơ chế sắp xếp thứ tự an toàn cho các quy tắc định hướng v-structures và định hướng lan truyền (Meek rules).
+- Mô hình lỗi chuyên gia đơn giản hóa: Mô hình hóa chuyên gia theo kênh nhị phân đối xứng với xác suất lỗi độc lập trên từng cạnh. Trong thực tế, chuyên gia con người và LLM thường mắc lỗi có tương quan hệ thống (ví dụ: ảo giác theo vùng, nhầm lẫn cấu trúc chuỗi và rẽ nhánh).
+- Sự đánh đổi của gPC-Guess khi chuyên gia rất tệ ($p_\psi < 0.5$): Do gPC-Guess sẵn sàng thử ngay các tập điều kiện lớn dựa trên lời khuyên, nếu chuyên gia kém hơn đoán ngẫu nhiên, gPC-Guess bị giảm hiệu năng nhiều hơn so với PC-Guess (mặc dù vẫn có chặn dưới an toàn).
+- Giả định về kiểm định độc lập khi phân tích thời gian chạy: Để chứng minh thời gian chạy giảm đơn điệu trong thủ tục EP-Guess, tác giả phải giả định các kiểm định thống kê độc lập với nhau (Assumption E.1), điều này không hoàn toàn thỏa mãn trên cỡ mẫu hữu hạn dùng chung dữ liệu.
+
+
+
+
+
+về thuật toán PC:
+1. triết lý hoạt động: nếu 2 sự việc có quan hệ nhân quả (dù trực tiếp hay gián tiếp), chúng sẽ có tương quan thống kê. ngược lại, nếu ta kiểm soát/điều kiện hoá trên 1 nhóm các biến trung gian thích hợp mà 2 sự việc độc lập thống kê với nhau -> ko có liên kết nhân quả trực tiếp.
+
+2. input&output:
+- input: ma trận observational data
+- output: CPDAG đại diện cho markov equivalence class

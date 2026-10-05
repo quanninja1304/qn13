@@ -23,6 +23,9 @@ venv/
 Thumbs.db
 Desktop.ini
 
+# Local paper corpus; keep derived notes and source manifests in Git instead.
+/docs/papers/*.pdf
+
 # Runtime scratch files
 *.tmp
 *.log
