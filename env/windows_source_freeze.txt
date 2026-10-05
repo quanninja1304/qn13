@@ -42,8 +42,7 @@ python-dateutil==2.9.0.post0
 PyYAML==6.0.3
 referencing==0.37.0
 rpds-py==2026.6.3
-# Editable Git install with no remote (safe-imperfect-priors-kill-test==0.1.0)
--e d:\research\causal multi-agent\safety_prior
+-e git+https://github.com/quanninja1304/qn13.git@f5eb7994960bb06f8b610b964910fbfd9277c9a2#egg=safe_imperfect_priors_kill_test
 scikit-learn==1.9.1
 scipy==1.18.1
 six==1.17.0
