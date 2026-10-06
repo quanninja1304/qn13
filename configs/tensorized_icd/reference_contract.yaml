@@ -1,0 +1,50 @@
+contract_version: "0.2.0"
+
+references:
+  fci:
+    reference_id: "causal-learn==0.1.4.8"
+    reference_mode: dynamic_reference
+    equality_targets:
+      - evidence
+      - final_pag
+  icd:
+    reference_id: "causality-lab@36625da6eeef059e36dab2b4467235a036136b76"
+    reference_mode: dynamic_reference
+    local_candidate_enumerator: safety_prior.algorithms.icd_reference
+    local_candidate_enumerator_is_complete_round: false
+    equality_targets:
+      - trace
+      - evidence
+      - final_pag
+  scalar_gaussian_ci:
+    reference_id: GaussianCI.scalar.strict
+    reference_mode: tensor_backend
+    equality_targets:
+      - ci_result
+
+reference_modes:
+  dynamic_reference: candidates and state update under the official dynamic algorithm
+  frozen_epoch_reference: candidate family is frozen at an epoch barrier
+  block_candidate: frozen epoch plus dependency-certified block execution
+  tensor_backend: unchanged algorithm with a different numerical execution backend
+
+trace_policy:
+  full_trace_on:
+    - mismatch
+    - first_failure_signature
+    - numerical_instability
+  successful_trace_sample_rate: 0.01
+
+gates:
+  g0_5:
+    official_icd_clean_environment_required: true
+    icd_audit_graphs: 40
+    frozen_regression_seed: 74304
+    artifact_schema_version: "0.2.0"
+    reject_duplicate_logical_keys: true
+  g1:
+    decision_equality_outside_margin: 1.0
+    undefined_status_equality: 1.0
+    effect_tolerance_float64: 1.0e-11
+    statistic_tolerance_float64: 1.0e-10
+    p_value_tolerance_float64: 1.0e-11

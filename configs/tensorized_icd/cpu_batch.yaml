@@ -1,0 +1,27 @@
+contract_version: "0.2.0"
+reference_id: "GaussianCI.scalar.strict"
+reference_mode: tensor_backend
+equality_target: ci_result
+
+backend:
+  implementation: safety_prior.ci_batch.GaussianBatchCI
+  device: cpu
+  dtype: float64
+  inversion: strict
+  alpha: 0.05
+  batching_strategies:
+    - exact_size
+    - power_of_two
+  memory_budget_mb: 64
+  memory_safety_factor: 1.25
+  shared_s_min_reuse: 3
+
+audit:
+  seed: 20261006
+  samples: 512
+  variables: 12
+  queries: 256
+  numerical_margin: 1.0e-10
+  effect_tolerance: 1.0e-11
+  statistic_tolerance: 1.0e-10
+  p_value_tolerance: 1.0e-11

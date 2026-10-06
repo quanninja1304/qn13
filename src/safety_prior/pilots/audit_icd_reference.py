@@ -5,13 +5,15 @@ import contextlib
 import io
 import json
 from dataclasses import asdict, dataclass
+from pathlib import Path
 from typing import Iterable
 
 from causallearn.search.ConstraintBased.FCI import fci
 
-from ..algorithms.icd_official_adapter import run_official_icd
+from ..algorithms.icd_official_adapter import OfficialICDUnavailable, run_official_icd
 from ..ci import OracleCI
 from ..graphs import canonical_pag, dummy_data, generate_dag
+from .schemas import ARTIFACT_SCHEMA_VERSION
 
 
 @dataclass(frozen=True)
@@ -31,6 +33,10 @@ class ICDAuditSummary:
     dynamic_precomputed_output_mismatches: int
     dynamic_precomputed_trace_mismatches: int
     first_mismatches: tuple[AuditMismatch, ...]
+    contract_version: str = ARTIFACT_SCHEMA_VERSION
+    reference_id: str = "causality-lab@36625da6eeef059e36dab2b4467235a036136b76"
+    reference_mode: str = "dynamic_reference"
+    equality_target: str = "final_pag"
 
 
 def _trace(iterations) -> tuple[tuple[int, int, tuple[int, ...]], ...]:
@@ -113,13 +119,41 @@ def audit_icd_reference(
     )
 
 
-def main() -> None:
+def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description="Audit the pinned official ICD reference")
     parser.add_argument("--seeds-per-cell", type=int, default=5)
-    args = parser.parse_args()
-    summary = audit_icd_reference(seeds_per_cell=args.seeds_per_cell)
-    print(json.dumps(asdict(summary), indent=2, sort_keys=True))
+    parser.add_argument("--output", type=Path)
+    args = parser.parse_args(argv)
+    try:
+        summary = audit_icd_reference(seeds_per_cell=args.seeds_per_cell)
+    except OfficialICDUnavailable as exc:
+        payload = {
+            "contract_version": ARTIFACT_SCHEMA_VERSION,
+            "reference_id": "causality-lab@36625da6eeef059e36dab2b4467235a036136b76",
+            "reference_mode": "dynamic_reference",
+            "equality_target": "final_pag",
+            "status": "BLOCKED_EXTERNAL_DEPENDENCY",
+            "reason": str(exc),
+        }
+    else:
+        payload = asdict(summary)
+        payload["status"] = (
+            "PASS"
+            if summary.icd_fci_output_mismatches == 0
+            and summary.dynamic_precomputed_output_mismatches == 0
+            else "FAIL"
+        )
+    encoded = json.dumps(payload, indent=2, sort_keys=True)
+    if args.output is not None:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        temporary = args.output.with_suffix(args.output.suffix + ".tmp")
+        temporary.write_text(encoded + "\n", encoding="utf-8", newline="\n")
+        temporary.replace(args.output)
+    print(encoded)
+    if payload["status"] == "PASS":
+        return 0
+    return 2 if payload["status"] == "BLOCKED_EXTERNAL_DEPENDENCY" else 1
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 
 from .reporting import generate_figures, generate_reports
 from .runner import ROOT, dry_run, evaluate_gates, run_phase0, run_phase1
@@ -15,9 +16,16 @@ from .delta_handoff import (
     verify_delta_package,
 )
 from .migration import prepare_source_migration, validate_vps_migration
+from .pilots.audit_batch_ci import main as audit_batch_ci
+from .pilots.audit_icd_reference import main as audit_icd_reference
 
 
 def main(argv=None) -> int:
+    raw_argv = list(sys.argv[1:] if argv is None else argv)
+    if raw_argv and raw_argv[0] == "batch-ci-audit":
+        return audit_batch_ci(raw_argv[1:])
+    if raw_argv and raw_argv[0] == "icd-reference-audit":
+        return audit_icd_reference(raw_argv[1:])
     parser = argparse.ArgumentParser(description="Safe Imperfect Priors kill test")
     sub = parser.add_subparsers(dest="command", required=True)
     dry = sub.add_parser("dry-run")
@@ -50,7 +58,9 @@ def main(argv=None) -> int:
     sub.add_parser("evaluate-gates")
     sub.add_parser("report")
     sub.add_parser("figures")
-    args = parser.parse_args(argv)
+    sub.add_parser("batch-ci-audit")
+    sub.add_parser("icd-reference-audit")
+    args = parser.parse_args(raw_argv)
     if args.command == "dry-run":
         print(json.dumps(dry_run(args.phase), indent=2))
     elif args.command == "smoke":

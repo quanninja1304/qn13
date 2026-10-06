@@ -27,6 +27,8 @@ Tài liệu trong thư mục này là bản bàn giao nghiên cứu bám theo tr
 10. [Bản đồ nguồn và glossary](10_source_map_and_glossary.md)
 11. [Khảo cứu đại số hóa FCI/ICD](11_formal_tensorization_fci_icd_survey_vi.md)
 12. [Implementation plan cho Certified Blockwise ICD](12_certified_blockwise_icd_implementation_plan_vi.md)
+13. [Sprint C0 — Correctness repair](13_c0_correctness_repair_report_vi.md)
+14. [Sprint C1 — Reference contracts và CPU Batch CI](14_c1_contracts_cpu_batch_report_vi.md)
 
 ## Quy ước trạng thái
 

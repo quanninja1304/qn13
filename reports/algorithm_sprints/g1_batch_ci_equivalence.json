@@ -1,0 +1,46 @@
+{
+  "contract_version": "0.2.0",
+  "gate": "G1_BATCH_CI_EQUIVALENT",
+  "status": "PASS",
+  "reference_id": "GaussianCI.scalar.strict",
+  "reference_mode": "tensor_backend",
+  "device": "cpu",
+  "dtype": "float64",
+  "audit": {
+    "queries_per_strategy": 256,
+    "strategies": [
+      "exact_size",
+      "power_of_two"
+    ],
+    "decision_mismatches_outside_margin": 0,
+    "decision_mismatches_within_margin": 0,
+    "numerical_status_mismatches": 0,
+    "max_effect_error": 7.63278329429795e-17,
+    "max_statistic_error": 1.88737914186277e-15,
+    "max_p_value_error": 8.88178419700125e-16,
+    "effect_tolerance": 1.0e-11,
+    "statistic_tolerance": 1.0e-10,
+    "p_value_tolerance": 1.0e-11,
+    "memory_budget_bytes": 67108864,
+    "exact_size_planned_peak_workspace_bytes": 75480,
+    "power_of_two_planned_peak_workspace_bytes": 244800
+  },
+  "integration": {
+    "candidate_trace_equal": true,
+    "evidence_query_ids_equal": true,
+    "final_output_equal": true
+  },
+  "verification": {
+    "full_suite_with_official_reference": "103 passed",
+    "default_suite_without_optional_reference": "88 passed, 15 skipped",
+    "randomized_grid_seeds": 8,
+    "queries_per_grid_case": 24,
+    "undefined_status_cases": [
+      "singular",
+      "near_singular",
+      "insufficient_df"
+    ]
+  },
+  "raw_artifact": "artifacts/tensorized_icd/c1_batch_audit.json",
+  "claim_boundary": "Correctness/equivalence only; no speedup claim."
+}

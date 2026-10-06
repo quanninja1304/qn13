@@ -1,0 +1,28 @@
+{
+  "contract_version": "0.2.0",
+  "gate": "G0.5_REFERENCE_AND_ARTIFACT_CONTRACT",
+  "status": "PASS",
+  "reference": {
+    "reference_id": "causality-lab@36625da6eeef059e36dab2b4467235a036136b76",
+    "reference_mode": "dynamic_reference",
+    "activation": "fresh venv plus exact-commit source snapshot on PYTHONPATH",
+    "transport_note": "Direct pip Git transport timed out; the exact commit archive was used without changing source semantics."
+  },
+  "icd_audit": {
+    "graphs": 40,
+    "icd_fci_output_mismatches": 0,
+    "dynamic_precomputed_output_mismatches": 0,
+    "dynamic_precomputed_trace_mismatches": 10,
+    "first_trace_mismatch_seed": 74304,
+    "dynamic_queries_at_first_mismatch": 21,
+    "precomputed_queries_at_first_mismatch": 25
+  },
+  "checks": {
+    "artifact_schema_0_2_0_rejects_missing_fields": true,
+    "duplicate_logical_keys_rejected": true,
+    "generated_audits_declare_reference_mode": true,
+    "official_icd_reference_executable": true,
+    "regression_seed_74304_preserved": true
+  },
+  "raw_artifact": "artifacts/tensorized_icd/c1_icd_reference_clean_venv.json"
+}

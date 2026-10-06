@@ -5,6 +5,41 @@ from typing import Any, Mapping, Sequence
 
 
 @dataclass(frozen=True)
+class CIQuery:
+    query_id: str
+    x: int
+    y: int
+    conditioning_set: tuple[int, ...]
+    phase: str
+    epoch_id: str
+    pair_order: int
+    canonical_rank: int
+
+    def __post_init__(self) -> None:
+        if not self.query_id:
+            raise ValueError("CI query_id cannot be empty")
+        x, y = int(self.x), int(self.y)
+        if x == y:
+            raise ValueError("CI endpoints must be distinct")
+        raw = tuple(map(int, self.conditioning_set))
+        if len(raw) != len(set(raw)):
+            raise ValueError("conditioning set contains a duplicate node")
+        if x in raw or y in raw:
+            raise ValueError("CI endpoint cannot occur in the conditioning set")
+        if not self.phase or not self.epoch_id:
+            raise ValueError("CI phase and epoch_id cannot be empty")
+        if self.pair_order < 0 or self.canonical_rank < 0:
+            raise ValueError("CI pair_order and canonical_rank must be non-negative")
+        object.__setattr__(self, "x", min(x, y))
+        object.__setattr__(self, "y", max(x, y))
+        object.__setattr__(self, "conditioning_set", tuple(sorted(raw)))
+
+    @property
+    def local_size(self) -> int:
+        return len(self.conditioning_set) + 2
+
+
+@dataclass(frozen=True)
 class QueryCandidate:
     query_id: str
     pair: tuple[int, int]
