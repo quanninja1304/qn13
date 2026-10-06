@@ -6,6 +6,7 @@ from dataclasses import asdict
 from pathlib import Path
 from typing import Callable
 
+from .ci import UndefinedCIResultError
 from .models import QueryCandidate, QueryRecord, ScoreBreakdown
 
 
@@ -27,6 +28,7 @@ class ProvenanceLog:
         state_after: str,
         elapsed_ms: float,
         provisional_removed_edges: set[tuple[int, int]],
+        separating_set_recorded: bool = False,
     ) -> QueryRecord:
         rec = QueryRecord(
             run_id=self.run_id,
@@ -43,7 +45,11 @@ class ProvenanceLog:
             ci_backend=self.ci_backend,
             ci_statistic=result.statistic,
             p_value=result.p_value,
-            ci_decision="independent" if result.independent else "dependent",
+            ci_decision=(
+                "undefined"
+                if result.independent is None
+                else "independent" if result.independent else "dependent"
+            ),
             prior_score=score.prior_score,
             graph_score=score.graph_score,
             cost_score=score.cost_score,
@@ -54,15 +60,26 @@ class ProvenanceLog:
             wall_time_ms=elapsed_ms,
             state_digest_after=state_after,
             edge_removed=False,
-            separating_set_recorded=result.independent,
+            separating_set_recorded=separating_set_recorded,
             opened_query_ids=[],
             seed_refs=dict(self.seed_refs),
             provisional_removed_edges=[
                 [self.node_names[i], self.node_names[j]] for i, j in sorted(provisional_removed_edges)
             ],
+            independence_witness=result.independent is True,
+            ci_effect=getattr(result, "effect", None),
+            ci_numerical_status=getattr(result, "numerical_status", "ok"),
+            ci_decision_margin=getattr(result, "decision_margin", None),
         )
         self.queries.append(rec)
         return rec
+
+    def mark_separating_set_recorded(self, query_id: str) -> None:
+        matches = [query for query in self.queries if query.query_id == query_id]
+        if len(matches) != 1:
+            raise RuntimeError(f"expected exactly one provenance record for {query_id!r}")
+        matches[0].separating_set_recorded = True
+        matches[0].edge_removed = True
 
     def graph_event(self, event_type: str, rule: str, before: str, after: str, evidence_query_ids: list[str], details: dict) -> None:
         self.graph_events.append({
@@ -106,5 +123,20 @@ class LoggedCIProxy:
         start = time.perf_counter()
         result = self.ci.test(int(i), int(j), z)
         elapsed = (time.perf_counter() - start) * 1000
-        self.provenance.record_query(candidate, ScoreBreakdown(tie_break_key=qid), result, 1, self.graph_digest(), elapsed, set())
+        query_record = self.provenance.record_query(
+            candidate,
+            ScoreBreakdown(tie_break_key=qid),
+            result,
+            1,
+            self.graph_digest(),
+            elapsed,
+            set(),
+            separating_set_recorded=result.independent is True,
+        )
+        if result.independent is None:
+            raise UndefinedCIResultError(
+                qid,
+                getattr(result, "numerical_status", "unknown"),
+                query_record.as_dict(),
+            )
         return result.p_value

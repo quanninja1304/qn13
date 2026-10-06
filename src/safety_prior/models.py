@@ -17,6 +17,14 @@ class QueryCandidate:
 
 
 @dataclass(frozen=True)
+class SeparationWitness:
+    pair: tuple[int, int]
+    conditioning_set: tuple[int, ...]
+    query_id: str
+    canonical_rank: int
+
+
+@dataclass(frozen=True)
 class ScoreBreakdown:
     prior_score: float = 0.0
     graph_score: float = 0.0
@@ -57,6 +65,10 @@ class QueryRecord:
     opened_query_ids: list[str]
     seed_refs: dict[str, int | None]
     provisional_removed_edges: list[list[str]] = field(default_factory=list)
+    independence_witness: bool = False
+    ci_effect: float | None = None
+    ci_numerical_status: str = "ok"
+    ci_decision_margin: float | None = None
 
     def as_dict(self) -> dict[str, Any]:
         return asdict(self)
@@ -84,4 +96,3 @@ class PriorView:
     source: str
     realized_auc: float | None = None
     metadata: Mapping[str, Any] = field(default_factory=dict)
-

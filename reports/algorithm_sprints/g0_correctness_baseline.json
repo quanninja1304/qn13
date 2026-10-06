@@ -1,0 +1,33 @@
+{
+  "base_revision": "c26cdc95ee6e36d6a7d7ad039a1f596a2588ff79",
+  "evaluated_at": "2026-10-05T15:35:33.4943812+07:00",
+  "gate": "G0_CORRECTNESS_BASELINE",
+  "oracle_k0_regression": {
+    "compared_runs": 220,
+    "digest_mismatches": 0,
+    "reference": "artifacts/kill_test/runs.parquet phase=0 scope=main"
+  },
+  "scope": "Sprint C0 correctness repair only",
+  "status": "PASS",
+  "test_suite": {
+    "command": "python -m pytest",
+    "passed": 67,
+    "skipped": 15
+  },
+  "checks": {
+    "canonical_single_witness_per_skeleton_deletion": true,
+    "every_skeleton_deletion_event_has_exact_witness_query_id": true,
+    "gaussian_scalar_semantics": true,
+    "incomplete_epoch_does_not_commit": true,
+    "no_sepset_union": true,
+    "undefined_ci_aborts_before_graph_mutation": true,
+    "undefined_ci_has_structured_failure_artifact": true
+  },
+  "excluded": [
+    "batched CI",
+    "block executor",
+    "GPU backend",
+    "ICD round implementation",
+    "performance claims"
+  ]
+}

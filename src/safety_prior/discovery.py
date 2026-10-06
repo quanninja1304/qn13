@@ -13,7 +13,8 @@ from causallearn.search.ConstraintBased import FCI as upstream
 from causallearn.utils.PCUtils.Helper import append_value
 
 from .graphs import canonical_pag, digest_object, pag_digest
-from .models import DiscoveryState, PAGResult, PriorView, QueryCandidate
+from .ci import UndefinedCIResultError
+from .models import DiscoveryState, PAGResult, PriorView, QueryCandidate, SeparationWitness
 from .provenance import LoggedCIProxy, ProvenanceLog
 from .schedulers import Scheduler
 
@@ -52,6 +53,11 @@ def scheduled_fas(
     alpha: float = 0.05, depth: int = -1, prior: PriorView | None = None,
     weighted_budget: int | None = None,
 ):
+    if not 0.0 < float(alpha) < 1.0:
+        raise ValueError("alpha must lie strictly between zero and one")
+    ci_alpha = getattr(ci, "alpha", None)
+    if ci_alpha is not None and not np.isclose(float(ci_alpha), float(alpha), rtol=0.0, atol=0.0):
+        raise ValueError("discovery alpha must exactly match the CI decision alpha")
     cg = CausalGraph(len(node_names), node_names)
     sep_sets: dict[tuple[int, int], set[int]] = {}
     used_weighted = 0
@@ -65,10 +71,10 @@ def scheduled_fas(
         current_depth += 1
         before_level = _raw_graph_digest(cg.G)
         candidates = _candidates(cg.G, current_depth, before_level)
+        canonical_rank = {candidate.query_id: rank for rank, candidate in enumerate(candidates)}
         state_view = {"graph_digest": before_level, "degrees": _degrees(cg.G), "depth": current_depth}
         ordered = scheduler.order(candidates, state_view, prior)
-        pair_seps: dict[tuple[int, int], set[int]] = {}
-        evidence: dict[tuple[int, int], list[str]] = {}
+        pair_witnesses: dict[tuple[int, int], list[SeparationWitness]] = {}
         for index, (candidate, score) in enumerate(ordered):
             if weighted_budget is not None and used_weighted + candidate.estimated_cost > weighted_budget:
                 untested.extend(c for c, _ in ordered[index:])
@@ -84,12 +90,35 @@ def scheduled_fas(
             if result.independent:
                 key = tuple(sorted((x, y)))
                 provisional_removed.add(key)
-                pair_seps.setdefault(key, set()).update(candidate.conditioning_set)
-                evidence.setdefault(key, []).append(candidate.query_id)
-            provenance.record_query(candidate, score, result, len(candidates) - index, before_level, elapsed, provisional_removed)
+                pair_witnesses.setdefault(key, []).append(
+                    SeparationWitness(
+                        key,
+                        candidate.conditioning_set,
+                        candidate.query_id,
+                        canonical_rank[candidate.query_id],
+                    )
+                )
+            query_record = provenance.record_query(
+                candidate,
+                score,
+                result,
+                len(candidates) - index,
+                before_level,
+                elapsed,
+                provisional_removed,
+            )
+            if result.independent is None:
+                raise UndefinedCIResultError(
+                    candidate.query_id,
+                    getattr(result, "numerical_status", "unknown"),
+                    query_record.as_dict(),
+                )
         if stopped:
             break
-        for (x, y), separator in sorted(pair_seps.items()):
+        for (x, y), witnesses in sorted(pair_witnesses.items()):
+            witness = min(witnesses, key=lambda item: (item.canonical_rank, item.query_id))
+            separator = witness.conditioning_set
+            provenance.mark_separating_set_recorded(witness.query_id)
             before = _raw_graph_digest(cg.G)
             _remove(cg.G, x, y)
             append_value(cg.sepset, x, y, tuple(sorted(separator)))
@@ -97,7 +126,21 @@ def scheduled_fas(
             sep_sets[(x, y)] = set(separator)
             sep_sets[(y, x)] = set(separator)
             after = _raw_graph_digest(cg.G)
-            provenance.graph_event("edge_removal", "stable_fas_depth_barrier", before, after, evidence[(x, y)], {"edge": [node_names[x], node_names[y]], "separator": [node_names[z] for z in sorted(separator)], "depth": current_depth})
+            provenance.graph_event(
+                "edge_removal",
+                "stable_fas_depth_barrier",
+                before,
+                after,
+                [witness.query_id],
+                {
+                    "edge": [node_names[x], node_names[y]],
+                    "separator": [node_names[z] for z in separator],
+                    "depth": current_depth,
+                    "witness_query_id": witness.query_id,
+                    "witness_count": len(witnesses),
+                    "selection_policy": "minimum_frozen_candidate_rank",
+                },
+            )
         # Record empty sepset observations in the same container shape expected by FCI.
         for candidate in candidates:
             x, y = candidate.pair
