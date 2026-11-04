@@ -12,6 +12,7 @@ The goal is a credible contribution for a reputable Q1 journal, with ICML/NeurIP
 
 ## Read order
 
+0. [`RESEARCH_HISTORY_vi.md`](RESEARCH_HISTORY_vi.md) — **what was already tried, refuted or shelved, and why.** Check its do-not-redo registry (§3) before proposing any direction. Current status: `reports/aprime_review_2026-11-04/`.
 1. [`research/01-philosophy-and-goals.md`](research/01-philosophy-and-goals.md) — research philosophy, scientific standards, risk boundaries.
 2. [`research/02-context-and-scope.md`](research/02-context-and-scope.md) — past dcFCI work, what is and is not binding.
 3. [`research/03-candidate-directions.md`](research/03-candidate-directions.md) — initial A/B/C areas to investigate, **not approved topics**.
