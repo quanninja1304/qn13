@@ -1,0 +1,331 @@
+{
+  "date": "2026-11-04",
+  "files": [
+    {
+      "file": "ACI_2016.pdf",
+      "source_url": "https://proceedings.neurips.cc/paper_files/paper/2016/file/f3d9de86462c28781cbe5c47ef22c3e5-Paper.pdf",
+      "bytes": 4421855,
+      "sha256": "0022579cb2a0815d6a12dbd1d597e907b29986de3f047c270155e0422441e79b",
+      "pages": 9,
+      "validation": "PDF opened; all pages parsed; identity checked from text or rendered title page"
+    },
+    {
+      "file": "ACI_2016_supplement.zip",
+      "source_url": "https://proceedings.neurips.cc/paper_files/paper/2016/file/f3d9de86462c28781cbe5c47ef22c3e5-Supplemental.zip",
+      "bytes": 8188946,
+      "sha256": "34e91f0b4e445b5f1e82313a3abf39ba232122fa55ab8e485efd26a1ab1f74f3"
+    },
+    {
+      "file": "ACI_2016_supplement_supplementary.pdf",
+      "source_url": "https://proceedings.neurips.cc/paper_files/paper/2016/file/f3d9de86462c28781cbe5c47ef22c3e5-Supplemental.zip",
+      "bytes": 8719577,
+      "sha256": "ad351e2be5521505ac3c3a7b12c27ecac419d9fb7377fcb56378f627700815f9",
+      "pages": 13,
+      "validation": "PDF opened; all pages parsed; identity checked from text or rendered title page"
+    },
+    {
+      "file": "BCCD_Claassen_Heskes_2012.pdf",
+      "source_url": "https://raw.githubusercontent.com/mlresearch/r10/main/assets/claassen12a/claassen12a.pdf",
+      "bytes": 328440,
+      "sha256": "a8131f0d946d08a820e21071182f6c816b2da51fcc3d79c94dfe38bc44a26684",
+      "pages": 10,
+      "validation": "PDF opened; all pages parsed; identity checked from text or rendered title page"
+    },
+    {
+      "file": "Berger_1980_M555_Technical_Report.pdf",
+      "source_url": "https://archive.org/download/DTIC_ADA091607/DTIC_ADA091607.pdf",
+      "bytes": 561601,
+      "sha256": "181bc675c12c130721e3b67e66c3a89acdf1cb7b5ca64ff9545ba5585b039937",
+      "pages": 14,
+      "validation": "PDF opened; all pages parsed; identity checked from text or rendered title page"
+    },
+    {
+      "file": "Bucur_et_al_2019_Local_Causal_Inference.pdf",
+      "source_url": "https://arxiv.org/pdf/1909.03818v2",
+      "bytes": 2651933,
+      "sha256": "2523388b8494b754a23a4e28b5333cf60146c28d59e40448a14076bebac5bbf9",
+      "pages": 32,
+      "validation": "PDF opened; all pages parsed; identity checked from text or rendered title page"
+    },
+    {
+      "file": "Drton_2009_Likelihood_Ratio_Tests_Singularities.pdf",
+      "source_url": "https://arxiv.org/pdf/math/0703360",
+      "bytes": 461581,
+      "sha256": "f18f051371ad51157d904ab80ea521a07204f2fef63d2cfb993f2971cefb5208",
+      "pages": 35,
+      "validation": "PDF opened; all pages parsed; identity checked from text or rendered title page"
+    },
+    {
+      "file": "Guo_Wu_Yiu_2026_Price_Valid_Inference.pdf",
+      "source_url": "https://raw.githubusercontent.com/mlresearch/v337/main/assets/guo26a/guo26a.pdf",
+      "bytes": 927255,
+      "sha256": "b3591e0fa117e6dbb635d433f33adb70a03e1a1785670f2aeb01a39d92a90a5e",
+      "pages": 19,
+      "validation": "PDF opened; all pages parsed; identity checked from text or rendered title page"
+    },
+    {
+      "file": "Olkin_Finn_1994_Correlations_Redux_Technical_Report.pdf",
+      "source_url": "https://stacks.stanford.edu/file/druid:qh451qz8263/qh451qz8263_OLK-NSF-299.pdf",
+      "bytes": 865365,
+      "sha256": "7bb205b84d6f930bdb96f370f44a1780ac5b152f04dca33d9331ea215f999e99",
+      "pages": 24,
+      "validation": "PDF opened; all pages parsed; identity checked from text or rendered title page"
+    },
+    {
+      "file": "Parviainen_Koivisto_2011_Ancestor_Relations.pdf",
+      "source_url": "https://link.springer.com/content/pdf/10.1007/978-3-642-23783-6_37.pdf",
+      "bytes": 416435,
+      "sha256": "5ee4c5928235c0b160633ae0a21554ae738c105a15d8504e3a4071406215bf2c",
+      "pages": 16,
+      "validation": "PDF opened; all pages parsed; identity checked from text or rendered title page"
+    },
+    {
+      "file": "RICF_Drton_Eichler_Richardson_JMLR_2009.pdf",
+      "source_url": "https://www.jmlr.org/papers/volume10/drton09a/drton09a.pdf",
+      "bytes": 174470,
+      "sha256": "e7fa9593f012da1ce86cf91f7411b5a519c9a530c4e5bc4cd414ef5986e8bce6",
+      "pages": 20,
+      "validation": "PDF opened; all pages parsed; identity checked from text or rendered title page"
+    },
+    {
+      "file": "Richardson_Spirtes_2002_Ancestral_Graph_Markov_Models.pdf",
+      "source_url": "https://www.cmu.edu/dietrich/philosophy/docs/spirtes/annals2002.pdf",
+      "bytes": 632696,
+      "sha256": "ceca5081dc8d9e9040c8ccd5af138304641e1d761f816e335ca3c430eebb638d",
+      "pages": 69,
+      "validation": "PDF opened; all pages parsed; identity checked from text or rendered title page"
+    },
+    {
+      "file": "Shah_Peters_GCM_arxiv.pdf",
+      "source_url": "https://arxiv.org/pdf/1804.07203",
+      "bytes": 771051,
+      "sha256": "061df746480e2f2aa563e90a9583afd04250775240f5e5905ce484f035067576",
+      "pages": 46,
+      "validation": "PDF opened; all pages parsed; identity checked from text or rendered title page"
+    },
+    {
+      "file": "Shapiro_1985_Inequality_Constraints.pdf",
+      "source_url": "https://bpb-us-e1.wpmucdn.com/sites.gatech.edu/dist/4/1470/files/2021/03/biometrika.pdf",
+      "bytes": 1339269,
+      "sha256": "a12c7d46234b630cf1c407f514fa6c07218de58e8c4cf4bbc187dd0321842738",
+      "pages": 12,
+      "validation": "PDF opened; all pages parsed; identity checked from text or rendered title page"
+    }
+  ],
+  "attempts": [
+    {
+      "file": "ACI_2016.pdf",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2016/file/f3d9de86462c28781cbe5c47ef22c3e5-Paper.pdf",
+      "final_url": "https://proceedings.neurips.cc/paper_files/paper/2016/file/f3d9de86462c28781cbe5c47ef22c3e5-Paper.pdf",
+      "bytes": 4421855,
+      "sha256": "0022579cb2a0815d6a12dbd1d597e907b29986de3f047c270155e0422441e79b"
+    },
+    {
+      "file": "ACI_2016_supplement.zip",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2016/file/f3d9de86462c28781cbe5c47ef22c3e5-Supplemental.zip",
+      "final_url": "https://proceedings.neurips.cc/paper_files/paper/2016/file/f3d9de86462c28781cbe5c47ef22c3e5-Supplemental.zip",
+      "bytes": 8188946,
+      "sha256": "34e91f0b4e445b5f1e82313a3abf39ba232122fa55ab8e485efd26a1ab1f74f3"
+    },
+    {
+      "file": "Richardson_Spirtes_2002_Ancestral_Graph_Markov_Models.pdf",
+      "url": "https://www.cmu.edu/dietrich/philosophy/docs/spirtes/annals2002.pdf",
+      "final_url": "https://www.cmu.edu/dietrich/philosophy/docs/spirtes/annals2002.pdf",
+      "bytes": 632696,
+      "sha256": "ceca5081dc8d9e9040c8ccd5af138304641e1d761f816e335ca3c430eebb638d"
+    },
+    {
+      "file": "Shah_Peters_GCM_arxiv.pdf",
+      "url": "https://arxiv.org/pdf/1804.07203",
+      "error": "'charmap' codec can't encode character '\\u2217' in position 101: character maps to <undefined>"
+    },
+    {
+      "file": "Shapiro_1985_Inequality_Constraints.pdf",
+      "url": "https://bpb-us-e1.wpmucdn.com/sites.gatech.edu/dist/4/1470/files/2021/03/biometrika.pdf",
+      "final_url": "https://bpb-us-e1.wpmucdn.com/sites.gatech.edu/dist/4/1470/files/2021/03/biometrika.pdf",
+      "bytes": 1339269,
+      "sha256": "a12c7d46234b630cf1c407f514fa6c07218de58e8c4cf4bbc187dd0321842738"
+    },
+    {
+      "file": "Berger_1980_M555_Technical_Report.pdf",
+      "url": "https://scispace.com/pdf/multiparameter-hypothesis-testing-and-acceptance-sampling-2d5n18ruvg.pdf",
+      "error": "HTTP Error 405: Not Allowed"
+    },
+    {
+      "file": "Zhang_2008_Complete_Orientation_Rules.pdf",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0004370208001008/pdf",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "file": "Silvapulle_Sen_2005_sample_chapter.pdf",
+      "url": "https://catalogimages.wiley.com/images/db/pdf/0471208272.excerpt.pdf",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "file": "RICF_Drton_Eichler_Richardson_JMLR_2009.pdf",
+      "url": "https://www.jmlr.org/papers/volume10/drton09a/drton09a.pdf",
+      "final_url": "https://www.jmlr.org/papers/volume10/drton09a/drton09a.pdf",
+      "bytes": 174470,
+      "pages": 20,
+      "sha256": "e7fa9593f012da1ce86cf91f7411b5a519c9a530c4e5bc4cd414ef5986e8bce6"
+    },
+    {
+      "file": "Berger_1980_M555_Technical_Report.pdf",
+      "url": "https://apps.dtic.mil/sti/tr/pdf/ADA091607.pdf",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "file": "Silvapulle_Sen_front_matter.pdf",
+      "url": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781118165614.fmatter",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "file": "Parviainen_Koivisto_2011_Ancestor_Relations.pdf",
+      "url": "https://link.springer.com/content/pdf/10.1007/978-3-642-23783-6_37.pdf",
+      "pages": 16
+    },
+    {
+      "file": "Berger_1980_M555_Technical_Report.pdf",
+      "url": "https://archive.org/download/DTIC_ADA091607/DTIC_ADA091607.pdf",
+      "pages": 14
+    },
+    {
+      "file": "Olkin_Finn_1994_Correlations_Redux_Technical_Report.pdf",
+      "url": "https://stacks.stanford.edu/file/druid:qh451qz8263/qh451qz8263_OLK-NSF-299.pdf",
+      "pages": 24,
+      "sha256": "7bb205b84d6f930bdb96f370f44a1780ac5b152f04dca33d9331ea215f999e99"
+    },
+    {
+      "file": "Guo_Wu_Yiu_2026_Price_Valid_Inference.pdf",
+      "url": "https://raw.githubusercontent.com/mlresearch/v337/main/assets/guo26a/guo26a.pdf",
+      "final_url": "https://raw.githubusercontent.com/mlresearch/v337/main/assets/guo26a/guo26a.pdf",
+      "bytes": 927255,
+      "pages": 19,
+      "sha256": "b3591e0fa117e6dbb635d433f33adb70a03e1a1785670f2aeb01a39d92a90a5e"
+    },
+    {
+      "file": "Parviainen_Koivisto_2011_Ancestor_Relations.pdf",
+      "url": "https://www.csc.kth.se/~pekkapa/papers/ancestors.pdf",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)>"
+    },
+    {
+      "file": "Bucur_et_al_2019_Local_Causal_Inference.pdf",
+      "url": "https://arxiv.org/pdf/1909.03818v2",
+      "error": "'charmap' codec can't encode character '\\u2217' in position 88: character maps to <undefined>"
+    },
+    {
+      "file": "BCCD_Claassen_Heskes_2012.pdf",
+      "url": "https://raw.githubusercontent.com/mlresearch/r10/main/assets/claassen12a/claassen12a.pdf",
+      "error": "'charmap' codec can't encode character '\\ufb01' in position 261: character maps to <undefined>"
+    },
+    {
+      "file": "Drton_2009_Likelihood_Ratio_Tests_Singularities.pdf",
+      "url": "https://arxiv.org/pdf/math/0703360",
+      "error": "'charmap' codec can't encode character '\\u20dd' in position 125: character maps to <undefined>"
+    },
+    {
+      "file": "Shah_Peters_GCM_arxiv.pdf",
+      "url": "https://arxiv.org/pdf/1804.07203",
+      "final_url": "https://arxiv.org/pdf/1804.07203",
+      "bytes": 771051,
+      "pages": 46,
+      "sha256": "061df746480e2f2aa563e90a9583afd04250775240f5e5905ce484f035067576"
+    },
+    {
+      "file": "Parviainen_Koivisto_2011_Ancestor_Relations.pdf",
+      "url": "https://www.csc.kth.se/~pekkapa/papers/ancestors.pdf",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "file": "Bucur_et_al_2019_Local_Causal_Inference.pdf",
+      "url": "https://arxiv.org/pdf/1909.03818v2",
+      "final_url": "https://arxiv.org/pdf/1909.03818v2",
+      "bytes": 2651933,
+      "pages": 32,
+      "sha256": "2523388b8494b754a23a4e28b5333cf60146c28d59e40448a14076bebac5bbf9"
+    },
+    {
+      "file": "BCCD_Claassen_Heskes_2012.pdf",
+      "url": "https://raw.githubusercontent.com/mlresearch/r10/main/assets/claassen12a/claassen12a.pdf",
+      "final_url": "https://raw.githubusercontent.com/mlresearch/r10/main/assets/claassen12a/claassen12a.pdf",
+      "bytes": 328440,
+      "pages": 10,
+      "sha256": "a8131f0d946d08a820e21071182f6c816b2da51fcc3d79c94dfe38bc44a26684"
+    },
+    {
+      "file": "Drton_2009_Likelihood_Ratio_Tests_Singularities.pdf",
+      "url": "https://arxiv.org/pdf/math/0703360",
+      "final_url": "https://arxiv.org/pdf/math/0703360",
+      "bytes": 461581,
+      "pages": 35,
+      "sha256": "f18f051371ad51157d904ab80ea521a07204f2fef63d2cfb993f2971cefb5208"
+    }
+  ],
+  "missing_fulltext": [
+    "Triantafillou et al. 2014",
+    "Zhang 2008",
+    "Silvapulle and Sen 2005"
+  ],
+  "version_limitations": [
+    "Berger: 1980 technical report, not 1982 journal PDF",
+    "Olkin and Finn: 1994 technical report, not 1995 journal PDF",
+    "Shah and Peters: arXiv revision dated 2022, not typeset 2020 journal PDF"
+  ],
+  "followup_2026_11_04": {
+    "new_pdfs": 0,
+    "findings": [
+      {
+        "item": "Triantafillou et al. 2014",
+        "url": "https://www.researchgate.net/profile/Ioannis-Tsamardinos/publication/266379149_Learning_Neighborhoods_of_High_Confidence_in_Constraint-Based_Causal_Discovery/links/542e56c80cf29bbc126f0c14/Learning-Neighborhoods-of-High-Confidence-in-Constraint-Based-Causal-Discovery.pdf",
+        "status": "Author-uploaded PDF identified and parsed by web tool: 16 pages. Local download HTTP 403; no PDF saved.",
+        "suggested_filename": "Triantafillou_et_al_2014_High_Confidence.pdf"
+      },
+      {
+        "item": "Zhang 2008",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0004370208001008/pdf",
+        "status": "Publisher API confirms openaccessArticle=true and openArchiveArticle=true. PDF download blocked with HTTP 403 and human verification challenge; no PDF saved.",
+        "metadata_url": "https://api.elsevier.com/content/article/pii/S0004370208001008?httpAccept=text/xml",
+        "suggested_filename": "Zhang_2008_Complete_Orientation_Rules.pdf"
+      },
+      {
+        "item": "Silvapulle and Sen 2005",
+        "url": "https://archive.org/details/constrainedstati0000silv",
+        "status": "Exact book scan found. Archive metadata marks access-restricted-item=true; full PDF is private. No full book downloaded.",
+        "metadata_url": "https://archive.org/metadata/constrainedstati0000silv",
+        "suggested_filename": "Silvapulle_Sen_2005_Constrained_Statistical_Inference.pdf"
+      }
+    ],
+    "note": "All three requested full texts remain missing locally."
+  },
+  "zhang_browser_followup": {
+    "target": "Zhang_2008_Complete_Orientation_Rules.pdf",
+    "downloaded": false,
+    "browser": "Installed Chrome via Playwright, headless, fresh temporary context",
+    "publisher_result": "HTTP 403, CPE00001, page reports a problem providing requested content",
+    "screenshot_result": "Screenshot captured the error page only; no paper pages available for OCR. Temporary screenshot retained outside repository.",
+    "additional_sources_checked": [
+      "OpenAlex locations: publisher, Caltech metadata, Lingnan metadata",
+      "University of Amsterdam causality reading group: links to the same ScienceDirect article",
+      "Elsevier PDF content negotiation: HTTP 406; DOI PDF endpoint: HTTP 429; text/plain: HTTP 400",
+      "ResearchGate: no full-text available"
+    ],
+    "new_fulltext_files": 0
+  },
+  "cleanup_2026_11_04": {
+    "removed_count": 10,
+    "removed": [
+      "Supplement của Confidence Sets for Causal Orderings.pdf",
+      "29910339.zip",
+      "Supplement của Confidence Sets for Causal Orderings.zip",
+      "ACI_2016_supplement.zip",
+      "aprime-three-day-review-prompts.zip",
+      "Triantafillou_2014_download.url",
+      "Zhang_2008_download.url",
+      "Silvapulle_Sen_2005_archive.url",
+      "Zhang_2008_publisher_metadata.xml",
+      "download_followup_attempts.json"
+    ],
+    "current_missing_fulltext_from_original_request": [],
+    "note": "Earlier files/attempts/missing_fulltext fields are historical download records, not a current inventory."
+  }
+}
