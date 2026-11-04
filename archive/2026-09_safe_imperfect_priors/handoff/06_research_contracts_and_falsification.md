@@ -1,6 +1,6 @@
 # 6. Research contract và falsification plan
 
-Tài liệu nguồn chi tiết: [research contracts và testbed](../docs/research/block_icd_robust_tier_contracts_and_testbed_vi.md). Chương này cô đọng thành hợp đồng bàn giao có tiêu chí ra quyết định.
+Tài liệu nguồn chi tiết: [research contracts và testbed](../research_notes/block_icd_robust_tier_contracts_and_testbed_vi.md). Chương này cô đọng thành hợp đồng bàn giao có tiêu chí ra quyết định.
 
 ## 6.1 Testbed chung
 

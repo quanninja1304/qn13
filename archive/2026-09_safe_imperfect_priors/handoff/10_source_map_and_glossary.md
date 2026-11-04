@@ -4,24 +4,24 @@
 
 | Chủ đề | Nguồn trong repo |
 |---|---|
-| Proposal high-level | [01_safe_imperfect_priors_high_level_vi.md](../01_safe_imperfect_priors_high_level_vi.md) |
-| Proposal chuyên sâu | [02_safe_imperfect_priors_chuyen_sau_vi.md](../02_safe_imperfect_priors_chuyen_sau_vi.md) |
-| Kill-test proposal | [02a_safe_imperfect_priors_kill_test_vi.md](../02a_safe_imperfect_priors_kill_test_vi.md) |
-| Problem restatement | [docs/kill_test/00_problem_restated.md](../docs/kill_test/00_problem_restated.md) |
-| Repository audit | [docs/kill_test/01_repository_audit.md](../docs/kill_test/01_repository_audit.md) |
-| Implementation plan | [docs/kill_test/02_implementation_plan.md](../docs/kill_test/02_implementation_plan.md) |
-| Scientific contract | [docs/kill_test/03_scientific_contract.md](../docs/kill_test/03_scientific_contract.md) |
-| Evaluator contract | [docs/kill_test/04_evaluator_contract.md](../docs/kill_test/04_evaluator_contract.md) |
-| Open issues | [docs/kill_test/open_issues.md](../docs/kill_test/open_issues.md) |
+| Proposal high-level | [01_safe_imperfect_priors_high_level_vi.md](../proposal/01_safe_imperfect_priors_high_level_vi.md) |
+| Proposal chuyên sâu | [02_safe_imperfect_priors_chuyen_sau_vi.md](../proposal/02_safe_imperfect_priors_chuyen_sau_vi.md) |
+| Kill-test proposal | [02a_safe_imperfect_priors_kill_test_vi.md](../proposal/02a_safe_imperfect_priors_kill_test_vi.md) |
+| Problem restatement | [docs/kill_test/00_problem_restated.md](../../../docs/kill_test/00_problem_restated.md) |
+| Repository audit | [docs/kill_test/01_repository_audit.md](../../../docs/kill_test/01_repository_audit.md) |
+| Implementation plan | [docs/kill_test/02_implementation_plan.md](../../../docs/kill_test/02_implementation_plan.md) |
+| Scientific contract | [docs/kill_test/03_scientific_contract.md](../../../docs/kill_test/03_scientific_contract.md) |
+| Evaluator contract | [docs/kill_test/04_evaluator_contract.md](../../../docs/kill_test/04_evaluator_contract.md) |
+| Open issues | [docs/kill_test/open_issues.md](../../../docs/kill_test/open_issues.md) |
 
 ## 10.2 Tài liệu nghiên cứu thuật toán
 
 | Chủ đề | Nguồn trong repo |
 |---|---|
-| Portfolio 4 vòng | [latent_fci_optimization_directions_4rounds_vi.md](../docs/research/latent_fci_optimization_directions_4rounds_vi.md) |
-| Hai research contracts và testbed | [block_icd_robust_tier_contracts_and_testbed_vi.md](../docs/research/block_icd_robust_tier_contracts_and_testbed_vi.md) |
-| Sprint 0 semantics | [sprint0_reference_semantics_vi.md](../docs/research/sprint0_reference_semantics_vi.md) |
-| OP-PDS minimal plan, hướng nghiên cứu trước đó | [op_pds_minimal_plan_vi.md](../docs/research/op_pds_minimal_plan_vi.md) |
+| Portfolio 4 vòng | [latent_fci_optimization_directions_4rounds_vi.md](../research_notes/latent_fci_optimization_directions_4rounds_vi.md) |
+| Hai research contracts và testbed | [block_icd_robust_tier_contracts_and_testbed_vi.md](../research_notes/block_icd_robust_tier_contracts_and_testbed_vi.md) |
+| Sprint 0 semantics | [sprint0_reference_semantics_vi.md](../research_notes/sprint0_reference_semantics_vi.md) |
+| OP-PDS minimal plan, hướng nghiên cứu trước đó | [op_pds_minimal_plan_vi.md](../research_notes/op_pds_minimal_plan_vi.md) |
 | Khảo cứu đại số hóa FCI/ICD, D1–D8 và work–span | [11_formal_tensorization_fci_icd_survey_vi.md](11_formal_tensorization_fci_icd_survey_vi.md) |
 | Implementation plan Certified Blockwise ICD | [12_certified_blockwise_icd_implementation_plan_vi.md](12_certified_blockwise_icd_implementation_plan_vi.md) |
 
@@ -31,8 +31,8 @@ OP-PDS được giữ như tài liệu suy nghĩ/baseline; không nên tự đ�
 
 | Nội dung | Đường dẫn |
 |---|---|
-| Gate status generated | [reports/kill_test/gate_status.json](../reports/kill_test/gate_status.json) |
-| Oracle headroom generated report | [reports/kill_test/oracle_headroom.md](../reports/kill_test/oracle_headroom.md) |
+| Gate status generated | [reports/kill_test/gate_status.json](../../../reports/kill_test/gate_status.json) |
+| Oracle headroom generated report | [reports/kill_test/oracle_headroom.md](../../../reports/kill_test/oracle_headroom.md) |
 | Kill-test reports | `reports/kill_test/` |
 | Phase 1 artifacts | `artifacts/kill_test/phase1/` |
 | Logical inventory | `artifacts/kill_test/phase1/logical_inventory.parquet` |
@@ -45,8 +45,8 @@ Generated report là output, không phải source of truth duy nhất. Khi repor
 
 | Chủ đề | Nguồn |
 |---|---|
-| Migration | [vps_migration.md](../docs/kill_test/vps_migration.md) |
-| Windows i9 delta handoff | [windows_i9_delta_handoff.md](../docs/kill_test/windows_i9_delta_handoff.md) |
+| Migration | [vps_migration.md](../../../docs/kill_test/vps_migration.md) |
+| Windows i9 delta handoff | [windows_i9_delta_handoff.md](../../../docs/kill_test/windows_i9_delta_handoff.md) |
 | Environment manifest | `env/` |
 
 ## 10.5 Glossary

@@ -311,7 +311,7 @@ Chỉ `PAGResult` được tạo sau khi mọi radius và authoritative orientat
 
 ### 6.1 WP0-A — Sửa GaussianCI
 
-Hiện [ci.py](../src/safety_prior/ci.py) tính `p` nhưng trả `CIResult(False, p, stat)`. Kế hoạch:
+Hiện [ci.py](../../../src/safety_prior/ci.py) tính `p` nhưng trả `CIResult(False, p, stat)`. Kế hoạch:
 
 1. thêm `alpha` vào `GaussianCI.__init__` hoặc một immutable decision policy;
 2. quyết định `independent = p_value > alpha`;
@@ -337,7 +337,7 @@ Tests:
 
 ### 6.2 WP0-B — Loại sepset union
 
-Hiện [discovery.py](../src/safety_prior/discovery.py) union mọi conditioning set độc lập của một pair. Thay bằng:
+Hiện [discovery.py](../../../src/safety_prior/discovery.py) union mọi conditioning set độc lập của một pair. Thay bằng:
 
 1. lưu danh sách `SeparationWitness` riêng;
 2. chọn một witness đã kiểm định theo canonical policy;

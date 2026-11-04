@@ -119,7 +119,7 @@ Theo dõi:
 6. So kết quả full với snapshot 131 pairs.
 7. Commit generated report/artifact manifest theo policy repo.
 
-Tài liệu chi tiết: [Windows i9 delta handoff](../docs/kill_test/windows_i9_delta_handoff.md).
+Tài liệu chi tiết: [Windows i9 delta handoff](../../../docs/kill_test/windows_i9_delta_handoff.md).
 
 ## 8.6 Kế hoạch hai sprint thuật toán đầu tiên
 

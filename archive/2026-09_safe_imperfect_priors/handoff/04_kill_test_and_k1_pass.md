@@ -6,7 +6,7 @@ Trước khi xây một hệ thống LLM phức tạp, dự án hỏi câu đơn
 
 Nếu câu trả lời là không, mọi scheduler dựa trên LLM — vốn kém oracle và còn tốn chi phí — gần như không có cơ sở. Kill test vì thế là một falsification gate, không phải benchmark để tô đẹp kết quả.
 
-Thiết kế gốc: [02a](../02a_safe_imperfect_priors_kill_test_vi.md), [scientific contract](../docs/kill_test/03_scientific_contract.md), [evaluator contract](../docs/kill_test/04_evaluator_contract.md).
+Thiết kế gốc: [02a](../proposal/02a_safe_imperfect_priors_kill_test_vi.md), [scientific contract](../../../docs/kill_test/03_scientific_contract.md), [evaluator contract](../../../docs/kill_test/04_evaluator_contract.md).
 
 ## 4.2 K0 — mechanical safety
 
@@ -144,7 +144,7 @@ Quyết định này cho phép bắt đầu phát triển thuật toán mà khô
 
 ## 4.7 Vì sao report cũ vẫn ghi NOT_RUN
 
-[Gate status sinh tự động](../reports/kill_test/gate_status.json) và [oracle headroom report](../reports/kill_test/oracle_headroom.md) được thiết kế bảo thủ: chúng không ra quyết định chính thức khi full matrix chưa đủ 800 run. Vì artifacts hiện mới có 656 run và analyzer chưa được chạy lại sau khi đóng matrix, report đó ghi `NOT_RUN`/blocked.
+[Gate status sinh tự động](../../../reports/kill_test/gate_status.json) và [oracle headroom report](../../../reports/kill_test/oracle_headroom.md) được thiết kế bảo thủ: chúng không ra quyết định chính thức khi full matrix chưa đủ 800 run. Vì artifacts hiện mới có 656 run và analyzer chưa được chạy lại sau khi đóng matrix, report đó ghi `NOT_RUN`/blocked.
 
 Hai phát biểu sau đồng thời đúng:
 

@@ -4,7 +4,7 @@
 
 Sprint 0 không nhằm chứng minh speedup. Mục tiêu là khóa semantics đủ chắc để hai hướng thuật toán không xây trên một reference mơ hồ.
 
-Nguồn trạng thái: [Sprint 0 reference semantics](../docs/research/sprint0_reference_semantics_vi.md). Commit khởi tạo được ghi nhận trong lịch sử repo là `1185b05` (`research: start sprint 0 reference semantics`).
+Nguồn trạng thái: [Sprint 0 reference semantics](../research_notes/sprint0_reference_semantics_vi.md). Commit khởi tạo được ghi nhận trong lịch sử repo là `1185b05` (`research: start sprint 0 reference semantics`).
 
 ## 7.2 Những gì đã có
 

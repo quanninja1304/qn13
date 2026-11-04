@@ -13,7 +13,7 @@ Repository này tập trung vào trường hợp thực tế hơn:
 - ngân sách CI test và compute hữu hạn;
 - mục tiêu cuối là PAG hoặc một trạng thái khám phá được gắn nhãn đúng.
 
-Nguồn đề cương gốc nằm ở [bản high-level](../01_safe_imperfect_priors_high_level_vi.md), [bản chuyên sâu](../02_safe_imperfect_priors_chuyen_sau_vi.md) và [thiết kế kill test](../02a_safe_imperfect_priors_kill_test_vi.md).
+Nguồn đề cương gốc nằm ở [bản high-level](../proposal/01_safe_imperfect_priors_high_level_vi.md), [bản chuyên sâu](../proposal/02_safe_imperfect_priors_chuyen_sau_vi.md) và [thiết kế kill test](../proposal/02a_safe_imperfect_priors_kill_test_vi.md).
 
 ## 2.2 Câu hỏi nghiên cứu
 

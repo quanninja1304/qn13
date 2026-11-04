@@ -21,7 +21,7 @@
 
 ## 9.2 Open issues kế thừa
 
-Theo [open issues](../docs/kill_test/open_issues.md), các điểm quan trọng gồm:
+Theo [open issues](../../../docs/kill_test/open_issues.md), các điểm quan trọng gồm:
 
 - RFCI chưa được triển khai như baseline riêng;
 - chưa có converter DAG+latent sang MAG/PAG hoàn toàn độc lập;

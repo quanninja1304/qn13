@@ -133,7 +133,7 @@ Một handoff/run được coi là có thể tái lập khi lưu:
 - bootstrap seed và number of resamples;
 - báo cáo generated sau cùng.
 
-Các tài liệu vận hành liên quan: [migration](../docs/kill_test/vps_migration.md) và [Windows i9 delta handoff](../docs/kill_test/windows_i9_delta_handoff.md).
+Các tài liệu vận hành liên quan: [migration](../../../docs/kill_test/vps_migration.md) và [Windows i9 delta handoff](../../../docs/kill_test/windows_i9_delta_handoff.md).
 
 ## 3.9 Ranh giới implementation hiện tại
 
