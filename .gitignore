@@ -29,3 +29,9 @@ Desktop.ini
 # Runtime scratch files
 *.tmp
 *.log
+
+# Local agent/editor settings
+.claude/settings.local.json
+
+# Shard worker runtime state (pid files and logs from K1 runs); kept locally, not versioned
+/worker_logs/
