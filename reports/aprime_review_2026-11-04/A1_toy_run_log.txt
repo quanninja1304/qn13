@@ -1,0 +1,275 @@
+
+=== Experiment A: deterministic algebra (mathematical illustration, fixed z) ===
+PASS A.P4 closed-form full  d=1.0 z=[2.0, 1.8] r=0.0  [3.240000 vs 3.240000 (inactive)]
+PASS A.P3 closed-form diag  d=1.0 z=[2.0, 1.8] r=0.0
+PASS A.r0 diag==full d=1.0 z=[2.0, 1.8]
+PASS A.P4 closed-form full  d=1.0 z=[2.0, 1.8] r=0.3  [1.582418 vs 1.582418 (inactive)]
+PASS A.P3 closed-form diag  d=1.0 z=[2.0, 1.8] r=0.3
+PASS A.P4 closed-form full  d=1.0 z=[2.0, 1.8] r=-0.3  [6.329670 vs 6.329670 (inactive)]
+PASS A.P3 closed-form diag  d=1.0 z=[2.0, 1.8] r=-0.3
+PASS A.P4 closed-form full  d=1.0 z=[2.0, 1.8] r=0.6  [0.312500 vs 0.312500 (active)]
+PASS A.P3 closed-form diag  d=1.0 z=[2.0, 1.8] r=0.6
+PASS A.P4 closed-form full  d=1.0 z=[2.0, 1.8] r=-0.6  [14.062500 vs 14.062500 (inactive)]
+PASS A.P3 closed-form diag  d=1.0 z=[2.0, 1.8] r=-0.6
+PASS A.P4 closed-form full  d=1.0 z=[2.0, 1.8] r=0.9  [-5.263158 vs -5.263158 (active)]
+PASS A.P3 closed-form diag  d=1.0 z=[2.0, 1.8] r=0.9
+PASS A.P4 closed-form full  d=1.0 z=[2.0, 1.8] r=-0.9  [68.210526 vs 68.210526 (inactive)]
+PASS A.P3 closed-form diag  d=1.0 z=[2.0, 1.8] r=-0.9
+PASS A.P4 closed-form full  d=1.0 z=[-2.0, 1.8] r=0.0  [3.240000 vs 3.240000 (inactive)]
+PASS A.P3 closed-form diag  d=1.0 z=[-2.0, 1.8] r=0.0
+PASS A.r0 diag==full d=1.0 z=[-2.0, 1.8]
+PASS A.P4 closed-form full  d=1.0 z=[-2.0, 1.8] r=0.3  [6.329670 vs 6.329670 (inactive)]
+PASS A.P3 closed-form diag  d=1.0 z=[-2.0, 1.8] r=0.3
+PASS A.P4 closed-form full  d=1.0 z=[-2.0, 1.8] r=-0.3  [1.582418 vs 1.582418 (inactive)]
+PASS A.P3 closed-form diag  d=1.0 z=[-2.0, 1.8] r=-0.3
+PASS A.P4 closed-form full  d=1.0 z=[-2.0, 1.8] r=0.6  [14.062500 vs 14.062500 (inactive)]
+PASS A.P3 closed-form diag  d=1.0 z=[-2.0, 1.8] r=0.6
+PASS A.P4 closed-form full  d=1.0 z=[-2.0, 1.8] r=-0.6  [0.312500 vs 0.312500 (active)]
+PASS A.P3 closed-form diag  d=1.0 z=[-2.0, 1.8] r=-0.6
+PASS A.P4 closed-form full  d=1.0 z=[-2.0, 1.8] r=0.9  [68.210526 vs 68.210526 (inactive)]
+PASS A.P3 closed-form diag  d=1.0 z=[-2.0, 1.8] r=0.9
+PASS A.P4 closed-form full  d=1.0 z=[-2.0, 1.8] r=-0.9  [-5.263158 vs -5.263158 (active)]
+PASS A.P3 closed-form diag  d=1.0 z=[-2.0, 1.8] r=-0.9
+PASS A.P4 closed-form full  d=1.0 z=[2.0, -1.8] r=0.0  [3.240000 vs 3.240000 (inactive)]
+PASS A.P3 closed-form diag  d=1.0 z=[2.0, -1.8] r=0.0
+PASS A.r0 diag==full d=1.0 z=[2.0, -1.8]
+PASS A.P4 closed-form full  d=1.0 z=[2.0, -1.8] r=0.3  [6.329670 vs 6.329670 (inactive)]
+PASS A.P3 closed-form diag  d=1.0 z=[2.0, -1.8] r=0.3
+PASS A.P4 closed-form full  d=1.0 z=[2.0, -1.8] r=-0.3  [1.582418 vs 1.582418 (inactive)]
+PASS A.P3 closed-form diag  d=1.0 z=[2.0, -1.8] r=-0.3
+PASS A.P4 closed-form full  d=1.0 z=[2.0, -1.8] r=0.6  [14.062500 vs 14.062500 (inactive)]
+PASS A.P3 closed-form diag  d=1.0 z=[2.0, -1.8] r=0.6
+PASS A.P4 closed-form full  d=1.0 z=[2.0, -1.8] r=-0.6  [0.312500 vs 0.312500 (active)]
+PASS A.P3 closed-form diag  d=1.0 z=[2.0, -1.8] r=-0.6
+PASS A.P4 closed-form full  d=1.0 z=[2.0, -1.8] r=0.9  [68.210526 vs 68.210526 (inactive)]
+PASS A.P3 closed-form diag  d=1.0 z=[2.0, -1.8] r=0.9
+PASS A.P4 closed-form full  d=1.0 z=[2.0, -1.8] r=-0.9  [-5.263158 vs -5.263158 (active)]
+PASS A.P3 closed-form diag  d=1.0 z=[2.0, -1.8] r=-0.9
+PASS A.P4 closed-form full  d=1.0 z=[0.5, 2.5] r=0.0  [6.250000 vs 6.250000 (inactive)]
+PASS A.P3 closed-form diag  d=1.0 z=[0.5, 2.5] r=0.0
+PASS A.r0 diag==full d=1.0 z=[0.5, 2.5]
+PASS A.P4 closed-form full  d=1.0 z=[0.5, 2.5] r=0.3  [6.068681 vs 6.068681 (inactive)]
+PASS A.P3 closed-form diag  d=1.0 z=[0.5, 2.5] r=0.3
+PASS A.P4 closed-form full  d=1.0 z=[0.5, 2.5] r=-0.3  [7.717033 vs 7.717033 (inactive)]
+PASS A.P3 closed-form diag  d=1.0 z=[0.5, 2.5] r=-0.3
+PASS A.P4 closed-form full  d=1.0 z=[0.5, 2.5] r=0.6  [7.562500 vs 7.562500 (inactive)]
+PASS A.P3 closed-form diag  d=1.0 z=[0.5, 2.5] r=0.6
+PASS A.P4 closed-form full  d=1.0 z=[0.5, 2.5] r=-0.6  [12.250000 vs 12.250000 (inactive)]
+PASS A.P3 closed-form diag  d=1.0 z=[0.5, 2.5] r=-0.6
+PASS A.P4 closed-form full  d=1.0 z=[0.5, 2.5] r=0.9  [22.118421 vs 22.118421 (inactive)]
+PASS A.P3 closed-form diag  d=1.0 z=[0.5, 2.5] r=0.9
+PASS A.P4 closed-form full  d=1.0 z=[0.5, 2.5] r=-0.9  [45.802632 vs 45.802632 (inactive)]
+PASS A.P3 closed-form diag  d=1.0 z=[0.5, 2.5] r=-0.9
+PASS A.P4 closed-form full  d=1.0 z=[2.5, 0.5] r=0.0  [0.000000 vs 0.000000 (active)]
+PASS A.P3 closed-form diag  d=1.0 z=[2.5, 0.5] r=0.0
+PASS A.r0 diag==full d=1.0 z=[2.5, 0.5]
+PASS A.P4 closed-form full  d=1.0 z=[2.5, 0.5] r=0.3  [-0.549451 vs -0.549451 (active)]
+PASS A.P3 closed-form diag  d=1.0 z=[2.5, 0.5] r=0.3
+PASS A.P4 closed-form full  d=1.0 z=[2.5, 0.5] r=-0.3  [1.717033 vs 1.717033 (inactive)]
+PASS A.P3 closed-form diag  d=1.0 z=[2.5, 0.5] r=-0.3
+PASS A.P4 closed-form full  d=1.0 z=[2.5, 0.5] r=0.6  [1.562500 vs 1.562500 (inactive)]
+PASS A.P3 closed-form diag  d=1.0 z=[2.5, 0.5] r=0.6
+PASS A.P4 closed-form full  d=1.0 z=[2.5, 0.5] r=-0.6  [6.250000 vs 6.250000 (inactive)]
+PASS A.P3 closed-form diag  d=1.0 z=[2.5, 0.5] r=-0.6
+PASS A.P4 closed-form full  d=1.0 z=[2.5, 0.5] r=0.9  [16.118421 vs 16.118421 (inactive)]
+PASS A.P3 closed-form diag  d=1.0 z=[2.5, 0.5] r=0.9
+PASS A.P4 closed-form full  d=1.0 z=[2.5, 0.5] r=-0.9  [39.802632 vs 39.802632 (inactive)]
+PASS A.P3 closed-form diag  d=1.0 z=[2.5, 0.5] r=-0.9
+PASS A.P4 closed-form full  d=3.0 z=[2.0, 1.8] r=0.0  [1.800000 vs 1.800000 (active)]
+PASS A.P3 closed-form diag  d=3.0 z=[2.0, 1.8] r=0.0
+PASS A.r0 diag==full d=3.0 z=[2.0, 1.8]
+PASS A.P4 closed-form full  d=3.0 z=[2.0, 1.8] r=0.3  [-1.978022 vs -1.978022 (active)]
+PASS A.P3 closed-form diag  d=3.0 z=[2.0, 1.8] r=0.3
+PASS A.P4 closed-form full  d=3.0 z=[2.0, 1.8] r=-0.3  [5.934066 vs 5.934066 (active)]
+PASS A.P3 closed-form diag  d=3.0 z=[2.0, 1.8] r=-0.3
+PASS A.P4 closed-form full  d=3.0 z=[2.0, 1.8] r=0.6  [-8.437500 vs -8.437500 (active)]
+PASS A.P3 closed-form diag  d=3.0 z=[2.0, 1.8] r=0.6
+PASS A.P4 closed-form full  d=3.0 z=[2.0, 1.8] r=-0.6  [14.062500 vs 14.062500 (inactive)]
+PASS A.P3 closed-form diag  d=3.0 z=[2.0, 1.8] r=-0.6
+PASS A.P4 closed-form full  d=3.0 z=[2.0, 1.8] r=0.9  [-47.368421 vs -47.368421 (active)]
+PASS A.P3 closed-form diag  d=3.0 z=[2.0, 1.8] r=0.9
+PASS A.P4 closed-form full  d=3.0 z=[2.0, 1.8] r=-0.9  [68.210526 vs 68.210526 (inactive)]
+PASS A.P3 closed-form diag  d=3.0 z=[2.0, 1.8] r=-0.9
+PASS A.P4 closed-form full  d=3.0 z=[-2.0, 1.8] r=0.0  [1.800000 vs 1.800000 (active)]
+PASS A.P3 closed-form diag  d=3.0 z=[-2.0, 1.8] r=0.0
+PASS A.r0 diag==full d=3.0 z=[-2.0, 1.8]
+PASS A.P4 closed-form full  d=3.0 z=[-2.0, 1.8] r=0.3  [5.934066 vs 5.934066 (active)]
+PASS A.P3 closed-form diag  d=3.0 z=[-2.0, 1.8] r=0.3
+PASS A.P4 closed-form full  d=3.0 z=[-2.0, 1.8] r=-0.3  [-1.978022 vs -1.978022 (active)]
+PASS A.P3 closed-form diag  d=3.0 z=[-2.0, 1.8] r=-0.3
+PASS A.P4 closed-form full  d=3.0 z=[-2.0, 1.8] r=0.6  [14.062500 vs 14.062500 (inactive)]
+PASS A.P3 closed-form diag  d=3.0 z=[-2.0, 1.8] r=0.6
+PASS A.P4 closed-form full  d=3.0 z=[-2.0, 1.8] r=-0.6  [-8.437500 vs -8.437500 (active)]
+PASS A.P3 closed-form diag  d=3.0 z=[-2.0, 1.8] r=-0.6
+PASS A.P4 closed-form full  d=3.0 z=[-2.0, 1.8] r=0.9  [68.210526 vs 68.210526 (inactive)]
+PASS A.P3 closed-form diag  d=3.0 z=[-2.0, 1.8] r=0.9
+PASS A.P4 closed-form full  d=3.0 z=[-2.0, 1.8] r=-0.9  [-47.368421 vs -47.368421 (active)]
+PASS A.P3 closed-form diag  d=3.0 z=[-2.0, 1.8] r=-0.9
+PASS A.P4 closed-form full  d=3.0 z=[2.0, -1.8] r=0.0  [1.800000 vs 1.800000 (active)]
+PASS A.P3 closed-form diag  d=3.0 z=[2.0, -1.8] r=0.0
+PASS A.r0 diag==full d=3.0 z=[2.0, -1.8]
+PASS A.P4 closed-form full  d=3.0 z=[2.0, -1.8] r=0.3  [5.934066 vs 5.934066 (active)]
+PASS A.P3 closed-form diag  d=3.0 z=[2.0, -1.8] r=0.3
+PASS A.P4 closed-form full  d=3.0 z=[2.0, -1.8] r=-0.3  [-1.978022 vs -1.978022 (active)]
+PASS A.P3 closed-form diag  d=3.0 z=[2.0, -1.8] r=-0.3
+PASS A.P4 closed-form full  d=3.0 z=[2.0, -1.8] r=0.6  [14.062500 vs 14.062500 (inactive)]
+PASS A.P3 closed-form diag  d=3.0 z=[2.0, -1.8] r=0.6
+PASS A.P4 closed-form full  d=3.0 z=[2.0, -1.8] r=-0.6  [-8.437500 vs -8.437500 (active)]
+PASS A.P3 closed-form diag  d=3.0 z=[2.0, -1.8] r=-0.6
+PASS A.P4 closed-form full  d=3.0 z=[2.0, -1.8] r=0.9  [68.210526 vs 68.210526 (inactive)]
+PASS A.P3 closed-form diag  d=3.0 z=[2.0, -1.8] r=0.9
+PASS A.P4 closed-form full  d=3.0 z=[2.0, -1.8] r=-0.9  [-47.368421 vs -47.368421 (active)]
+PASS A.P3 closed-form diag  d=3.0 z=[2.0, -1.8] r=-0.9
+PASS A.P4 closed-form full  d=3.0 z=[0.5, 2.5] r=0.0  [6.000000 vs 6.000000 (active)]
+PASS A.P3 closed-form diag  d=3.0 z=[0.5, 2.5] r=0.0
+PASS A.r0 diag==full d=3.0 z=[0.5, 2.5]
+PASS A.P4 closed-form full  d=3.0 z=[0.5, 2.5] r=0.3  [5.604396 vs 5.604396 (active)]
+PASS A.P3 closed-form diag  d=3.0 z=[0.5, 2.5] r=0.3
+PASS A.P4 closed-form full  d=3.0 z=[0.5, 2.5] r=-0.3  [7.582418 vs 7.582418 (active)]
+PASS A.P3 closed-form diag  d=3.0 z=[0.5, 2.5] r=-0.3
+PASS A.P4 closed-form full  d=3.0 z=[0.5, 2.5] r=0.6  [6.562500 vs 6.562500 (active)]
+PASS A.P3 closed-form diag  d=3.0 z=[0.5, 2.5] r=0.6
+PASS A.P4 closed-form full  d=3.0 z=[0.5, 2.5] r=-0.6  [12.187500 vs 12.187500 (active)]
+PASS A.P3 closed-form diag  d=3.0 z=[0.5, 2.5] r=-0.6
+PASS A.P4 closed-form full  d=3.0 z=[0.5, 2.5] r=0.9  [17.368421 vs 17.368421 (active)]
+PASS A.P3 closed-form diag  d=3.0 z=[0.5, 2.5] r=0.9
+PASS A.P4 closed-form full  d=3.0 z=[0.5, 2.5] r=-0.9  [45.789474 vs 45.789474 (active)]
+PASS A.P3 closed-form diag  d=3.0 z=[0.5, 2.5] r=-0.9
+PASS A.P4 closed-form full  d=3.0 z=[2.5, 0.5] r=0.0  [-6.000000 vs -6.000000 (active)]
+PASS A.P3 closed-form diag  d=3.0 z=[2.5, 0.5] r=0.0
+PASS A.r0 diag==full d=3.0 z=[2.5, 0.5]
+PASS A.P4 closed-form full  d=3.0 z=[2.5, 0.5] r=0.3  [-8.241758 vs -8.241758 (active)]
+PASS A.P3 closed-form diag  d=3.0 z=[2.5, 0.5] r=0.3
+PASS A.P4 closed-form full  d=3.0 z=[2.5, 0.5] r=-0.3  [-1.648352 vs -1.648352 (active)]
+PASS A.P3 closed-form diag  d=3.0 z=[2.5, 0.5] r=-0.3
+PASS A.P4 closed-form full  d=3.0 z=[2.5, 0.5] r=0.6  [-4.687500 vs -4.687500 (active)]
+PASS A.P3 closed-form diag  d=3.0 z=[2.5, 0.5] r=0.6
+PASS A.P4 closed-form full  d=3.0 z=[2.5, 0.5] r=-0.6  [4.687500 vs 4.687500 (active)]
+PASS A.P3 closed-form diag  d=3.0 z=[2.5, 0.5] r=-0.6
+PASS A.P4 closed-form full  d=3.0 z=[2.5, 0.5] r=0.9  [7.894737 vs 7.894737 (active)]
+PASS A.P3 closed-form diag  d=3.0 z=[2.5, 0.5] r=0.9
+PASS A.P4 closed-form full  d=3.0 z=[2.5, 0.5] r=-0.9  [39.473684 vs 39.473684 (active)]
+PASS A.P3 closed-form diag  d=3.0 z=[2.5, 0.5] r=-0.9
+PASS A.nonseparable d=1.0  [[14.0625  5.0625  0.3125]]
+PASS A.nonseparable d=3.0  [[14.0625  2.8125 -8.4375]]
+PASS A.P5 duplicate invariance (support) r=0.0 z=[2.0, 1.8]  [3.240000 vs 3.240000]
+INFO A.P5 under C-c (pinv) r=0.0 z=[2.0, 1.8]: K3_pinv=3.240000 K2=3.240000 active=False
+PASS A.P5 duplicate invariance (support) r=0.0 z=[0.5, 2.5]  [6.250000 vs 6.250000]
+INFO A.P5 under C-c (pinv) r=0.0 z=[0.5, 2.5]: K3_pinv=6.250000 K2=6.250000 active=False
+PASS A.P5 duplicate invariance (support) r=0.6 z=[2.0, 1.8]  [0.312500 vs 0.312500]
+INFO A.P5 under C-c (pinv) r=0.6 z=[2.0, 1.8]: K3_pinv=0.562500 K2=0.312500 active=True
+PASS A.P5 duplicate invariance (support) r=0.6 z=[0.5, 2.5]  [7.562500 vs 7.562500]
+INFO A.P5 under C-c (pinv) r=0.6 z=[0.5, 2.5]: K3_pinv=7.562500 K2=7.562500 active=False
+PASS A.ref enum vs SLSQP #0 pat=(0, 0, 0)  [1.09395224 vs 1.09395224]
+PASS A.ref enum vs SLSQP #1 pat=(0, 1, 0)  [6.30308578 vs 6.30308578]
+PASS A.ref enum vs SLSQP #2 pat=(0, 0, 0)  [0.00000000 vs 0.00000000]
+PASS A.ref enum vs SLSQP #3 pat=(0, 0, 0)  [1.55156134 vs 1.55156134]
+PASS A.ref enum vs SLSQP #4 pat=(0, 1, 1)  [2.55564145 vs 2.55564145]
+PASS A.ref enum vs SLSQP #5 pat=(1, 1, 0)  [5.29434740 vs 5.29434740]
+PASS A.ref enum vs SLSQP #6 pat=(0, 0, 0)  [2.82748247 vs 2.82748247]
+PASS A.ref enum vs SLSQP #7 pat=(0, 0, 0)  [1.26616690 vs 1.26616690]
+PASS A.ref enum vs SLSQP #8 pat=(1, 1, 0)  [0.39189748 vs 0.39189748]
+PASS A.ref enum vs SLSQP #9 pat=(0, 0, 0)  [4.38021925 vs 4.38021925]
+PASS A.ref enum vs SLSQP #10 pat=(1, 0, 1)  [70.44709279 vs 70.44709279]
+PASS A.ref enum vs SLSQP #11 pat=(1, 1, 1)  [11.89011817 vs 11.89011817]
+PASS A.ref enum vs SLSQP #12 pat=(0, 0, 0)  [2.58949004 vs 2.58949004]
+PASS A.ref enum vs SLSQP #13 pat=(0, 0, 1)  [5.67509492 vs 5.67509492]
+PASS A.ref enum vs SLSQP #14 pat=(0, 1, 1)  [8.99250724 vs 8.99250724]
+PASS A.ref enum vs SLSQP #15 pat=(0, 1, 1)  [22.39220236 vs 22.39220236]
+PASS A.ref enum vs SLSQP #16 pat=(0, 0, 0)  [2.17897347 vs 2.17897347]
+PASS A.ref enum vs SLSQP #17 pat=(1, 0, 1)  [17.90080296 vs 17.90080296]
+PASS A.ref enum vs SLSQP #18 pat=(1, 0, 0)  [7.26030348 vs 7.26030348]
+PASS A.ref enum vs SLSQP #19 pat=(1, 0, 0)  [7.86728480 vs 7.86728480]
+PASS A.ref enum vs SLSQP #20 pat=(0, 1, 1)  [35.37609204 vs 35.37609204]
+PASS A.ref enum vs SLSQP #21 pat=(0, 1, 0)  [25.38013376 vs 25.38013376]
+PASS A.ref enum vs SLSQP #22 pat=(1, 1, 0)  [3.38579372 vs 3.38579372]
+PASS A.ref enum vs SLSQP #23 pat=(1, 0, 0)  [0.44453631 vs 0.44453631]
+PASS A.ref enum vs SLSQP #24 pat=(1, 1, 1)  [29.69503010 vs 29.69503010]
+PASS A.P7 subset distance >= full-set distance (200 random)
+
+=== Experiment B: Monte Carlo under the working model (toy) ===
+B1_one_coord delta=1.5 r=+0.0: FAR D_full(transfer)=0.0523 D_diag(transfer)=0.0523  T_full(chi2_2)=0.0515 T_diag(chi2_2)=0.0515  tau=1.000
+B1_one_coord delta=1.5 r=+0.3: FAR D_full(transfer)=0.0500 D_diag(transfer)=0.0480  T_full(chi2_2)=0.0515 T_diag(chi2_2)=0.0525  tau=0.645
+B1_one_coord delta=1.5 r=+0.6: FAR D_full(transfer)=0.0493 D_diag(transfer)=0.0491  T_full(chi2_2)=0.0515 T_diag(chi2_2)=0.0631  tau=0.333
+B1_one_coord delta=1.5 r=+0.9: FAR D_full(transfer)=0.0241 D_diag(transfer)=0.0486  T_full(chi2_2)=0.0515 T_diag(chi2_2)=0.0795  tau=0.054
+B1_one_coord delta=1.5 r=-0.6: FAR D_full(transfer)=0.0515 D_diag(transfer)=0.0490  T_full(chi2_2)=0.0515 T_diag(chi2_2)=0.0631  tau=0.336
+B2_two_coord delta=1.5 r=+0.0: FAR D_full(transfer)=0.0486 D_diag(transfer)=0.0486  T_full(chi2_2)=0.0515 T_diag(chi2_2)=0.0515  tau=1.000
+B2_two_coord delta=1.5 r=+0.3: FAR D_full(transfer)=0.0509 D_diag(transfer)=0.0532  T_full(chi2_2)=0.0515 T_diag(chi2_2)=0.0525  tau=0.904
+B2_two_coord delta=1.5 r=+0.6: FAR D_full(transfer)=0.0486 D_diag(transfer)=0.0708  T_full(chi2_2)=0.0515 T_diag(chi2_2)=0.0631  tau=0.843
+B2_two_coord delta=1.5 r=+0.9: FAR D_full(transfer)=0.0489 D_diag(transfer)=0.0921  T_full(chi2_2)=0.0515 T_diag(chi2_2)=0.0795  tau=0.787
+B2_two_coord delta=1.5 r=-0.6: FAR D_full(transfer)=0.0486 D_diag(transfer)=0.0708  T_full(chi2_2)=0.0515 T_diag(chi2_2)=0.0631  tau=0.843
+B1_one_coord delta=3.0 r=+0.0: FAR D_full(transfer)=0.0523 D_diag(transfer)=0.0523  T_full(chi2_2)=0.0515 T_diag(chi2_2)=0.0515  tau=1.000
+B1_one_coord delta=3.0 r=+0.3: FAR D_full(transfer)=0.0440 D_diag(transfer)=0.0480  T_full(chi2_2)=0.0515 T_diag(chi2_2)=0.0525  tau=0.645
+B1_one_coord delta=3.0 r=+0.6: FAR D_full(transfer)=0.0252 D_diag(transfer)=0.0491  T_full(chi2_2)=0.0515 T_diag(chi2_2)=0.0631  tau=0.333
+B1_one_coord delta=3.0 r=+0.9: FAR D_full(transfer)=0.0003 D_diag(transfer)=0.0486  T_full(chi2_2)=0.0515 T_diag(chi2_2)=0.0795  tau=0.054
+B1_one_coord delta=3.0 r=-0.6: FAR D_full(transfer)=0.0246 D_diag(transfer)=0.0490  T_full(chi2_2)=0.0515 T_diag(chi2_2)=0.0631  tau=0.336
+B2_two_coord delta=3.0 r=+0.0: FAR D_full(transfer)=0.0497 D_diag(transfer)=0.0497  T_full(chi2_2)=0.0515 T_diag(chi2_2)=0.0515  tau=1.000
+B2_two_coord delta=3.0 r=+0.3: FAR D_full(transfer)=0.0538 D_diag(transfer)=0.0563  T_full(chi2_2)=0.0515 T_diag(chi2_2)=0.0525  tau=0.768
+B2_two_coord delta=3.0 r=+0.6: FAR D_full(transfer)=0.0736 D_diag(transfer)=0.0781  T_full(chi2_2)=0.0515 T_diag(chi2_2)=0.0631  tau=0.799
+B2_two_coord delta=3.0 r=+0.9: FAR D_full(transfer)=0.1100 D_diag(transfer)=0.1053  T_full(chi2_2)=0.0515 T_diag(chi2_2)=0.0795  tau=0.911
+B2_two_coord delta=3.0 r=-0.6: FAR D_full(transfer)=0.0736 D_diag(transfer)=0.0781  T_full(chi2_2)=0.0515 T_diag(chi2_2)=0.0631  tau=0.799
+-- B3: redundancy (equicorrelated K) --
+K=1 r=0.0: transfer FAR full=0.049 diag=0.049 | chi2_K FAR full=0.049 diag=0.049
+K=2 r=0.0: transfer FAR full=0.144 diag=0.144 | chi2_K FAR full=0.050 diag=0.050
+K=2 r=0.5: transfer FAR full=0.144 diag=0.146 | chi2_K FAR full=0.050 diag=0.062
+K=2 r=0.9: transfer FAR full=0.144 diag=0.158 | chi2_K FAR full=0.050 diag=0.082
+K=4 r=0.0: transfer FAR full=0.432 diag=0.432 | chi2_K FAR full=0.052 diag=0.052
+K=4 r=0.5: transfer FAR full=0.432 diag=0.377 | chi2_K FAR full=0.052 diag=0.084
+K=4 r=0.9: transfer FAR full=0.432 diag=0.336 | chi2_K FAR full=0.052 diag=0.119
+K=8 r=0.0: transfer FAR full=0.871 diag=0.871 | chi2_K FAR full=0.049 diag=0.049
+K=8 r=0.5: transfer FAR full=0.871 diag=0.741 | chi2_K FAR full=0.049 diag=0.107
+K=8 r=0.9: transfer FAR full=0.871 diag=0.509 | chi2_K FAR full=0.049 diag=0.156
+-- B4: estimated Sigma-hat ~ Wishart(nu, Sigma)/nu --
+nu=20: FAR(T_full, chi2_8)=0.3368  median cond=313.2
+nu=50: FAR(T_full, chi2_8)=0.1320  median cond=154.5
+nu=200: FAR(T_full, chi2_8)=0.0628  median cond=101.6
+nu=1000: FAR(T_full, chi2_8)=0.0506  median cond=83.8
+nu=None: FAR(T_full, chi2_8)=0.0448  median cond=73.0
+
+=== Experiment C: Gaussian data, rank, first-order duplicates, implicit evidence ===
+C1 empty n=200: MC eig=[0.0023 0.0024 0.0026 1.888  1.948  2.0294]  n*small=[0.45 0.47 0.51]  rel.err vs delta=0.030
+C1 empty n=1000: MC eig=[5.0000e-04 5.0000e-04 5.0000e-04 1.9034e+00 1.9656e+00 2.0756e+00]  n*small=[0.48 0.5  0.52]  rel.err vs delta=0.032
+C1 empty n=5000: MC eig=[1.0000e-04 1.0000e-04 1.0000e-04 1.9736e+00 2.0661e+00 2.0859e+00]  n*small=[0.51 0.52 0.57]  rel.err vs delta=0.034
+PASS C1 delta-method rank = 3 (empty)  [[0. 0. 0. 2. 2. 2.]]
+C1 generic n=200: MC eig=[1.7000e-03 1.8000e-03 2.0000e-03 1.8994e+00 1.9388e+00 2.0489e+00]  n*small=[0.33 0.36 0.4 ]  rel.err vs delta=0.035
+C1 generic n=1000: MC eig=[3.0000e-04 4.0000e-04 4.0000e-04 1.9171e+00 1.9730e+00 2.0870e+00]  n*small=[0.34 0.37 0.43]  rel.err vs delta=0.034
+C1 generic n=5000: MC eig=[1.0000e-04 1.0000e-04 1.0000e-04 1.9449e+00 2.0376e+00 2.1089e+00]  n*small=[0.37 0.38 0.44]  rel.err vs delta=0.032
+PASS C1 delta-method rank = 3 (generic)  [[-0.       -0.        0.        1.983722  1.991804  2.024474]]
+C2 a=0.0 n=200: r_MC=0.9976 (theory 1.0000)  support:inf=1.00,FAR=None  pinv:inf=0.00,FAR=0.05325  ridge0.1:inf=0.00,FAR=0.04575  ridge0.01:inf=0.00,FAR=0.07175  ridge0.001:inf=0.00,FAR=0.23775  ridge0.0001:inf=0.00,FAR=0.5405  plugin FAR=0.0175 cond=580.4
+C2 a=0.0 n=1000: r_MC=0.9995 (theory 1.0000)  support:inf=1.00,FAR=None  pinv:inf=0.00,FAR=0.04475  ridge0.1:inf=0.00,FAR=0.04225  ridge0.01:inf=0.00,FAR=0.04625  ridge0.001:inf=0.00,FAR=0.08475  ridge0.0001:inf=0.00,FAR=0.3115  plugin FAR=0.0143 cond=2888.3
+C2 a=0.3 n=200: r_MC=0.9521 (theory 0.9539)  support:inf=0.00,FAR=0.06125  pinv:inf=0.00,FAR=0.06125  plugin FAR=0.0362 cond=40.3
+PASS C2 r_MC~sqrt(1-a^2) a=0.3 n=200  [0.9521 vs 0.9539]
+C2 a=0.3 n=1000: r_MC=0.9551 (theory 0.9539)  support:inf=0.00,FAR=0.04775  pinv:inf=0.00,FAR=0.04775  plugin FAR=0.0418 cond=42.1
+PASS C2 r_MC~sqrt(1-a^2) a=0.3 n=1000  [0.9551 vs 0.9539]
+C2 a=0.6 n=200: r_MC=0.7966 (theory 0.8000)  support:inf=0.00,FAR=0.0475  pinv:inf=0.00,FAR=0.0475  plugin FAR=0.0447 cond=8.9
+PASS C2 r_MC~sqrt(1-a^2) a=0.6 n=200  [0.7966 vs 0.8000]
+C2 a=0.6 n=1000: r_MC=0.8022 (theory 0.8000)  support:inf=0.00,FAR=0.05925  pinv:inf=0.00,FAR=0.05925  plugin FAR=0.0580 cond=9.0
+PASS C2 r_MC~sqrt(1-a^2) a=0.6 n=1000  [0.8022 vs 0.8000]
+C2 a=0.9 n=200: r_MC=0.4438 (theory 0.4359)  support:inf=0.00,FAR=0.0525  pinv:inf=0.00,FAR=0.0525  plugin FAR=0.0530 cond=2.5
+PASS C2 r_MC~sqrt(1-a^2) a=0.9 n=200  [0.4438 vs 0.4359]
+C2 a=0.9 n=1000: r_MC=0.4390 (theory 0.4359)  support:inf=0.00,FAR=0.0515  pinv:inf=0.00,FAR=0.0515  plugin FAR=0.0508 cond=2.5
+PASS C2 r_MC~sqrt(1-a^2) a=0.9 n=1000  [0.4390 vs 0.4359]
+C3 n=200: corr((z2-r z1)/sqrt(1-r^2), z_YZ|X) = -0.9955
+C3 n=1000: corr((z2-r z1)/sqrt(1-r^2), z_YZ|X) = -0.9991
+C3 n=5000: corr((z2-r z1)/sqrt(1-r^2), z_YZ|X) = -0.9998
+PASS C3 Proposition E (corr < -0.95 at n=5000)  [{'a': 0.6, 'n': 5000, 'corr_GLSresid_zYZgivenX': -0.9998282086169874}]
+PASS C4 collider realizes pattern (1,0)  [-0, -0.2301]
+
+=== Experiment E: beta-min eta sensitivity (working model) ===
+n=200 eta=0.05: mean D=     3.61   P(D<0)=0.085
+n=200 eta=0.1: mean D=     3.30   P(D<0)=0.203
+n=200 eta=0.15: mean D=     2.33   P(D<0)=0.342
+n=200 eta=0.2: mean D=     0.36   P(D<0)=0.495
+n=200 eta=0.3: mean D=    -7.33   P(D<0)=0.792
+n=1000 eta=0.05: mean D=    14.35   P(D<0)=0.004
+n=1000 eta=0.1: mean D=    13.86   P(D<0)=0.038
+n=1000 eta=0.15: mean D=    10.09   P(D<0)=0.182
+n=1000 eta=0.2: mean D=     0.16   P(D<0)=0.493
+n=1000 eta=0.3: mean D=   -39.61   P(D<0)=0.966
+n=5000 eta=0.05: mean D=    67.50   P(D<0)=0.000
+n=5000 eta=0.1: mean D=    66.98   P(D<0)=0.000
+n=5000 eta=0.15: mean D=    49.77   P(D<0)=0.023
+n=5000 eta=0.2: mean D=    -0.26   P(D<0)=0.498
+n=5000 eta=0.3: mean D=  -200.23   P(D<0)=1.000
+
+Wrote D:\REsearch\causal multi-agent\safety_prior\reports\aprime_review_2026-11-04\A1_toy_outputs.json  runtime 312.3s  failed assertions: 0
