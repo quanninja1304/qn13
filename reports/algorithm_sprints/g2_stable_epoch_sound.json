@@ -1,0 +1,32 @@
+{
+  "contract_version": "0.2.0",
+  "gate": "G2_STABLE_EPOCH_SOUND",
+  "status": "PASS",
+  "reference_id": "FrozenEpoch.exhaustive_epoch",
+  "reference_mode": "frozen_epoch_reference",
+  "equality_target": "completed_epoch_state",
+  "audit": {
+    "truth_table_count": 64,
+    "schedule_permutations_per_table": 4,
+    "audited_schedule_count": 256,
+    "deletion_mismatches": 0,
+    "selected_witness_mismatches": 0,
+    "completion_order_mismatches": 0,
+    "frontier_mismatches": 0,
+    "replay_resume_mismatches": 0,
+    "provenance_mismatches": 0,
+    "budget_state_mismatches": 0
+  },
+  "thresholds": {
+    "truth_table_count": 64,
+    "minimum_audited_schedules": 256,
+    "maximum_mismatches_per_category": 0
+  },
+  "verification": {
+    "full_suite_with_official_reference": "133 passed",
+    "default_suite_without_optional_reference": "118 passed, 15 skipped",
+    "stable_epoch_targeted_suite": "30 passed"
+  },
+  "raw_artifact": "artifacts/tensorized_icd/c2_stable_epoch_audit.json",
+  "claim_boundary": "G2 proves frozen-epoch schedule, evidence, barrier, and resume semantics. It does not prove equivalence to dynamic ICD, block soundness, or speedup."
+}

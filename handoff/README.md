@@ -29,6 +29,7 @@ Tài liệu trong thư mục này là bản bàn giao nghiên cứu bám theo tr
 12. [Implementation plan cho Certified Blockwise ICD](12_certified_blockwise_icd_implementation_plan_vi.md)
 13. [Sprint C0 — Correctness repair](13_c0_correctness_repair_report_vi.md)
 14. [Sprint C1 — Reference contracts và CPU Batch CI](14_c1_contracts_cpu_batch_report_vi.md)
+15. [Sprint C2 — Frozen stable epoch và Gate G2](15_c2_frozen_stable_epoch_report_vi.md)
 
 ## Quy ước trạng thái
 

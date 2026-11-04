@@ -114,3 +114,8 @@ def test_reference_contract_declares_all_modes_and_regression_seed():
         "tensor_backend",
     }
     assert contract["gates"]["g0_5"]["frozen_regression_seed"] == 74304
+    assert (
+        contract["references"]["frozen_epoch"]["equality_targets"]
+        == ["completed_epoch_state"]
+    )
+    assert contract["gates"]["g2"]["minimum_audited_schedules"] == 256

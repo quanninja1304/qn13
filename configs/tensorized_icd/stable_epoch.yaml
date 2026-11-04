@@ -1,0 +1,36 @@
+contract_version: "0.2.0"
+reference_id: FrozenEpoch.exhaustive_epoch
+reference_mode: frozen_epoch_reference
+equality_target: completed_epoch_state
+
+epoch:
+  implementation: safety_prior.algorithms.epoch.FrozenEpoch
+  modes:
+    - exhaustive_epoch
+    - canonical_frontier
+  canonical_order:
+    - x
+    - y
+    - conditioning_set_size
+    - conditioning_set
+    - phase
+    - query_id
+  deletion_policy: any_independent_witness
+  sepset_policy: minimum_canonical_rank
+  mutation_barrier: atomic_epoch_commit
+  weighted_cost: local_matrix_size_cubed
+  undefined_ci_policy: fail_without_commit
+
+audit:
+  seed: 20261006
+  truth_tables: 64
+  schedule_permutations_per_table: 4
+  expected_schedule_cases: 256
+  require_zero_mismatch:
+    - deletions
+    - selected_witnesses
+    - completion_order
+    - canonical_frontier
+    - replay_resume
+    - graph_event_provenance
+    - budgeted_incomplete_state

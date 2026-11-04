@@ -21,6 +21,11 @@ references:
     reference_mode: tensor_backend
     equality_targets:
       - ci_result
+  frozen_epoch:
+    reference_id: FrozenEpoch.exhaustive_epoch
+    reference_mode: frozen_epoch_reference
+    equality_targets:
+      - completed_epoch_state
 
 reference_modes:
   dynamic_reference: candidates and state update under the official dynamic algorithm
@@ -48,3 +53,7 @@ gates:
     effect_tolerance_float64: 1.0e-11
     statistic_tolerance_float64: 1.0e-10
     p_value_tolerance_float64: 1.0e-11
+  g2:
+    truth_table_count: 64
+    minimum_audited_schedules: 256
+    require_zero_mismatch: true

@@ -18,6 +18,7 @@ from .delta_handoff import (
 from .migration import prepare_source_migration, validate_vps_migration
 from .pilots.audit_batch_ci import main as audit_batch_ci
 from .pilots.audit_icd_reference import main as audit_icd_reference
+from .pilots.audit_stable_epoch import main as audit_stable_epoch
 
 
 def main(argv=None) -> int:
@@ -26,6 +27,8 @@ def main(argv=None) -> int:
         return audit_batch_ci(raw_argv[1:])
     if raw_argv and raw_argv[0] == "icd-reference-audit":
         return audit_icd_reference(raw_argv[1:])
+    if raw_argv and raw_argv[0] == "stable-epoch-audit":
+        return audit_stable_epoch(raw_argv[1:])
     parser = argparse.ArgumentParser(description="Safe Imperfect Priors kill test")
     sub = parser.add_subparsers(dest="command", required=True)
     dry = sub.add_parser("dry-run")
@@ -60,6 +63,7 @@ def main(argv=None) -> int:
     sub.add_parser("figures")
     sub.add_parser("batch-ci-audit")
     sub.add_parser("icd-reference-audit")
+    sub.add_parser("stable-epoch-audit")
     args = parser.parse_args(raw_argv)
     if args.command == "dry-run":
         print(json.dumps(dry_run(args.phase), indent=2))

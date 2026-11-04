@@ -14,7 +14,9 @@ REFERENCE_MODES = frozenset(
         "tensor_backend",
     }
 )
-EQUALITY_TARGETS = frozenset({"trace", "evidence", "final_pag", "ci_result"})
+EQUALITY_TARGETS = frozenset(
+    {"trace", "evidence", "final_pag", "ci_result", "completed_epoch_state"}
+)
 RUN_STATUSES = frozenset({"completed", "failed", "incomplete"})
 
 
