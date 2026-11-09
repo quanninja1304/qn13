@@ -1,0 +1,32 @@
+
+REAL: strong edges kept 11/21; lost 10; total edges 26; median linear R2 of sensors 0.919
+  lost with a sensor in the separating set: 10 of 10
+  red->current     r given other parents +0.562; marginal +0.434; given sepset -0.020; sepset ['vis_1', 'ir_2']
+  red->vis_1       r given other parents +0.697; marginal +0.261; given sepset +0.056; sepset ['vis_2', 'green', 'current']
+  red->vis_2       r given other parents +0.679; marginal +0.247; given sepset +0.015; sepset ['vis_1']
+  red->vis_3       r given other parents +0.581; marginal +0.237; given sepset +0.002; sepset ['vis_1']
+  green->ir_2      r given other parents +0.849; marginal +0.459; given sepset -0.020; sepset ['ir_1', 'current', 'ir_3', 'vis_3']
+  green->vis_2     r given other parents +0.839; marginal +0.427; given sepset -0.007; sepset ['vis_1']
+  green->vis_3     r given other parents +0.794; marginal +0.450; given sepset -0.001; sepset ['ir_1', 'vis_1', 'ir_3']
+  blue->current    r given other parents +0.567; marginal +0.436; given sepset +0.027; sepset ['vis_1', 'ir_2', 'ir_3']
+
+LIN_PERM: strong edges kept 11/21; lost 10; total edges 30; median linear R2 of sensors 0.919
+  lost with a sensor in the separating set: 10 of 10
+  red->current     r given other parents +0.562; marginal +0.437; given sepset +0.013; sepset ['vis_1', 'ir_2']
+  red->vis_1       r given other parents +0.699; marginal +0.263; given sepset +0.054; sepset ['vis_2', 'green', 'current', 'vis_3']
+  red->vis_2       r given other parents +0.677; marginal +0.246; given sepset +0.012; sepset ['vis_1']
+  red->vis_3       r given other parents +0.585; marginal +0.239; given sepset +0.006; sepset ['vis_1']
+  green->ir_2      r given other parents +0.846; marginal +0.453; given sepset -0.048; sepset ['current', 'ir_1', 'vis_1', 'ir_3', 'vis_3']
+  green->vis_2     r given other parents +0.834; marginal +0.420; given sepset -0.018; sepset ['vis_1']
+  blue->current    r given other parents +0.555; marginal +0.426; given sepset +0.014; sepset ['green', 'ir_1', 'vis_1', 'vis_2', 'vis_3']
+  blue->ir_1       r given other parents +0.742; marginal +0.302; given sepset -0.049; sepset ['ir_2', 'current']
+
+LIN_NOISE_x5: strong edges kept 14/21; lost 7; total edges 29; median linear R2 of sensors 0.320
+  lost with a sensor in the separating set: 7 of 7
+  red->vis_1       r given other parents +0.204; marginal +0.164; given sepset -0.003; sepset ['ir_1', 'ir_2']
+  red->vis_2       r given other parents +0.196; marginal +0.157; given sepset -0.023; sepset ['ir_1', 'ir_2', 'ir_3']
+  red->vis_3       r given other parents +0.153; marginal +0.131; given sepset -0.027; sepset ['ir_1', 'ir_2', 'ir_3']
+  blue->current    r given other parents +0.118; marginal +0.113; given sepset +0.019; sepset ['vis_1', 'vis_2', 'vis_3']
+  blue->ir_1       r given other parents +0.217; marginal +0.176; given sepset +0.017; sepset ['vis_1', 'vis_2']
+  blue->ir_2       r given other parents +0.250; marginal +0.205; given sepset +0.010; sepset ['vis_1', 'vis_2', 'vis_3']
+  blue->ir_3       r given other parents +0.183; marginal +0.159; given sepset +0.017; sepset ['vis_1', 'vis_2']

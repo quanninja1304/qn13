@@ -1,0 +1,6 @@
+FCI 0.05 n=10000 strong kept 7 / 21 correctly directed 0 bidirected pairs 9 same-sensor bidirected 3 edges 20
+FCI 0.001 n=10000 strong kept 7 / 21 correctly directed 1 bidirected pairs 9 same-sensor bidirected 3 edges 19
+PC .05 n=10000 strong kept 11 / 21 correctly directed 10 bidirected pairs 0 same-sensor bidirected 0 edges 26
+BOSS x1 n=10000 strong kept 21 / 21 correctly directed 21 bidirected pairs 0 same-sensor bidirected 0 edges 41
+BOSS x8 n=10000 strong kept 21 / 21 correctly directed 21 bidirected pairs 0 same-sensor bidirected 0 edges 28
+BOSS x32 n=10000 strong kept 21 / 21 correctly directed 21 bidirected pairs 0 same-sensor bidirected 0 edges 26

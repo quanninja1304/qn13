@@ -1,0 +1,4 @@
+draw 0 rejection 0.083 max |r| pairs [('angle_1', 'vis_1', -0.024), ('ir_1', 'ir_2', 0.023), ('ir_1', 'vis_3', 0.02), ('ir_2', 'vis_2', 0.019)]
+draw 1 rejection 0.139 max |r| pairs [('angle_2', 'ir_2', 0.032), ('ir_3', 'vis_3', 0.027), ('ir_1', 'vis_1', 0.021), ('current', 'vis_1', -0.021)]
+draw 2 rejection 0.111 max |r| pairs [('ir_1', 'vis_1', 0.029), ('ir_2', 'vis_2', 0.027), ('current', 'ir_1', 0.02), ('ir_2', 'ir_3', 0.02)]
+mean control rejection 0.111 versus .361 on measured data -> L6: UNCLEAR

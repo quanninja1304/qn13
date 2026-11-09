@@ -1,0 +1,38 @@
+varying columns: ['red', 'green', 'blue', 'current', 'pol_1', 'pol_2', 'angle_1', 'angle_2', 'ir_1', 'vis_1', 'ir_2', 'vis_2', 'ir_3', 'vis_3', 'l_11', 'l_12', 'l_21', 'l_22', 'l_31', 'l_32']
+actuators ['red', 'green', 'blue', 'pol_1', 'pol_2', 'l_11', 'l_12', 'l_21', 'l_22', 'l_31', 'l_32'] 
+sensors ['current', 'angle_1', 'angle_2', 'ir_1', 'vis_1', 'ir_2', 'vis_2', 'ir_3', 'vis_3'] 
+isolated []
+{'N1': 55, 'N2': 60, 'N2c': 60, 'N3': 36, 'P': 39}
+
+=== part 1: Fisher z ===
+N1 {250: 0.057, 500: 0.048, 1000: 0.052, 2000: 0.048, 4000: 0.044, 7000: 0.035, 10000: 0.036}
+N2 {250: 0.053, 500: 0.05, 1000: 0.042, 2000: 0.037, 4000: 0.027, 7000: 0.022, 10000: 0.017}
+N2c {250: 0.056, 500: 0.052, 1000: 0.042, 2000: 0.056, 4000: 0.064, 7000: 0.074, 10000: 0.1}
+N3 {250: 0.161, 500: 0.218, 1000: 0.322, 2000: 0.372, 4000: 0.506, 7000: 0.56, 10000: 0.611}
+P {250: 0.662, 500: 0.694, 1000: 0.705, 2000: 0.719, 4000: 0.72, 7000: 0.714, 10000: 0.692}
+
+=== part 1: GCM ===
+N1 1000 {'reject': 0.061, 'median_abs_r': 0.022, 'median_abs_r_rejected': 0.066} 13s
+N1 4000 {'reject': 0.03, 'median_abs_r': 0.01, 'median_abs_r_rejected': 0.035} 13s
+N1 10000 {'reject': 0.036, 'median_abs_r': 0.005, 'median_abs_r_rejected': 0.022} 13s
+N2 1000 {'reject': 0.022, 'median_abs_r': 0.018, 'median_abs_r_rejected': 0.067} 13s
+N2 4000 {'reject': 0.033, 'median_abs_r': 0.009, 'median_abs_r_rejected': 0.035} 13s
+N2 10000 {'reject': 0.017, 'median_abs_r': 0.006, 'median_abs_r_rejected': 0.02} 13s
+N2c 1000 {'reject': 0.011, 'median_abs_r': 0.019, 'median_abs_r_rejected': 0.075} 137s
+N2c 4000 {'reject': 0.056, 'median_abs_r': 0.01, 'median_abs_r_rejected': 0.035} 411s
+N2c 10000 {'reject': 0.067, 'median_abs_r': 0.007, 'median_abs_r_rejected': 0.025} 500s
+N3 1000 {'reject': 0.13, 'median_abs_r': 0.023, 'median_abs_r_rejected': 0.596} 596s
+N3 4000 {'reject': 0.259, 'median_abs_r': 0.021, 'median_abs_r_rejected': 0.067} 781s
+N3 10000 {'reject': 0.361, 'median_abs_r': 0.012, 'median_abs_r_rejected': 0.047} 849s
+P 1000 {'reject': 0.684, 'median_abs_r': 0.561, 'median_abs_r_rejected': 0.71} 945s
+P 4000 {'reject': 0.709, 'median_abs_r': 0.576, 'median_abs_r_rejected': 0.748} 1110s
+P 10000 {'reject': 0.718, 'median_abs_r': 0.616, 'median_abs_r_rejected': 0.763} 1175s
+
+=== part 2: mechanism checks at n = 10000 ===
+N2c {'reject_with_time_control': 0.08333333333333333, 'reject_permutation_placebo': 0.03333333333333333, 'reject_block_variance': 0.06666666666666667, 'median_lag1_autocorr_resid': -0.012419072774093175} 1284s
+N3 {'reject_with_time_control': 0.3611111111111111, 'reject_permutation_placebo': 0.0, 'reject_block_variance': 0.3611111111111111, 'median_lag1_autocorr_resid': 0.011307275688763413} 1356s
+
+=== part 3: interventional check of the ground truth ===
+NOT descendant pairs 372 KS reject 0.102 median |mean shift, SD| 0.028 median KS D 0.028
+descendant pairs 96 KS reject 0.938 median |mean shift, SD| 1.675 median KS D 0.787
+L1: {'control_valid': True, 'pain_classes': ['N3'], 'verdict': 'PAIN'} runtime 1377s

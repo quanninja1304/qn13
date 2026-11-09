@@ -1,0 +1,362 @@
+{
+ "REAL": {
+  "kept": 11,
+  "total": 21,
+  "lost_rows": [
+   {
+    "edge": "red->current",
+    "sepset": [
+     "vis_1",
+     "ir_2"
+    ],
+    "sensor_in_sepset": true,
+    "marginal_r": 0.43390715724914714,
+    "r_given_other_parents": 0.5620047619935024,
+    "r_given_sepset": -0.01953750311293234
+   },
+   {
+    "edge": "red->vis_1",
+    "sepset": [
+     "vis_2",
+     "green",
+     "current"
+    ],
+    "sensor_in_sepset": true,
+    "marginal_r": 0.2614815974124608,
+    "r_given_other_parents": 0.6965697019558365,
+    "r_given_sepset": 0.05649974635174459
+   },
+   {
+    "edge": "red->vis_2",
+    "sepset": [
+     "vis_1"
+    ],
+    "sensor_in_sepset": true,
+    "marginal_r": 0.24734725901260962,
+    "r_given_other_parents": 0.6793189376375847,
+    "r_given_sepset": 0.015292194050872175
+   },
+   {
+    "edge": "red->vis_3",
+    "sepset": [
+     "vis_1"
+    ],
+    "sensor_in_sepset": true,
+    "marginal_r": 0.2372537335503437,
+    "r_given_other_parents": 0.5805436449074172,
+    "r_given_sepset": 0.0019171639804261992
+   },
+   {
+    "edge": "green->ir_2",
+    "sepset": [
+     "ir_1",
+     "current",
+     "ir_3",
+     "vis_3"
+    ],
+    "sensor_in_sepset": true,
+    "marginal_r": 0.45887660851188666,
+    "r_given_other_parents": 0.8487138501269877,
+    "r_given_sepset": -0.020341063268002207
+   },
+   {
+    "edge": "green->vis_2",
+    "sepset": [
+     "vis_1"
+    ],
+    "sensor_in_sepset": true,
+    "marginal_r": 0.42695332145855375,
+    "r_given_other_parents": 0.8392472757381857,
+    "r_given_sepset": -0.006895996987393657
+   },
+   {
+    "edge": "green->vis_3",
+    "sepset": [
+     "ir_1",
+     "vis_1",
+     "ir_3"
+    ],
+    "sensor_in_sepset": true,
+    "marginal_r": 0.449706709834652,
+    "r_given_other_parents": 0.7937221886690257,
+    "r_given_sepset": -0.0006616048531609415
+   },
+   {
+    "edge": "blue->current",
+    "sepset": [
+     "vis_1",
+     "ir_2",
+     "ir_3"
+    ],
+    "sensor_in_sepset": true,
+    "marginal_r": 0.4363098077305518,
+    "r_given_other_parents": 0.5666902410383879,
+    "r_given_sepset": 0.026918032065584945
+   },
+   {
+    "edge": "blue->ir_1",
+    "sepset": [
+     "ir_2",
+     "current"
+    ],
+    "sensor_in_sepset": true,
+    "marginal_r": 0.3017037030029916,
+    "r_given_other_parents": 0.7417687437253198,
+    "r_given_sepset": -0.04873760708932137
+   },
+   {
+    "edge": "blue->ir_3",
+    "sepset": [
+     "ir_2",
+     "current"
+    ],
+    "sensor_in_sepset": true,
+    "marginal_r": 0.31542665235342415,
+    "r_given_other_parents": 0.678249415271773,
+    "r_given_sepset": -0.003400810724863839
+   }
+  ],
+  "sensor_r2": {
+   "current": 0.5810256658146731,
+   "angle_1": 0.998218131757787,
+   "angle_2": 0.9969865990214641,
+   "ir_1": 0.9185725844196156,
+   "vis_1": 0.9212131822543571,
+   "ir_2": 0.9178466112340969,
+   "vis_2": 0.9218631694557654,
+   "ir_3": 0.8727671558220588,
+   "vis_3": 0.8789629435376444
+  }
+ },
+ "LIN_PERM": {
+  "kept": 11,
+  "total": 21,
+  "lost_rows": [
+   {
+    "edge": "red->current",
+    "sepset": [
+     "vis_1",
+     "ir_2"
+    ],
+    "sensor_in_sepset": true,
+    "marginal_r": 0.4374448583839436,
+    "r_given_other_parents": 0.5622075558441975,
+    "r_given_sepset": 0.012857532679077367
+   },
+   {
+    "edge": "red->vis_1",
+    "sepset": [
+     "vis_2",
+     "green",
+     "current",
+     "vis_3"
+    ],
+    "sensor_in_sepset": true,
+    "marginal_r": 0.2632513307552892,
+    "r_given_other_parents": 0.6991581621855002,
+    "r_given_sepset": 0.053544643351321856
+   },
+   {
+    "edge": "red->vis_2",
+    "sepset": [
+     "vis_1"
+    ],
+    "sensor_in_sepset": true,
+    "marginal_r": 0.2464963338808868,
+    "r_given_other_parents": 0.6770082763011604,
+    "r_given_sepset": 0.011922570239175066
+   },
+   {
+    "edge": "red->vis_3",
+    "sepset": [
+     "vis_1"
+    ],
+    "sensor_in_sepset": true,
+    "marginal_r": 0.23910602536603076,
+    "r_given_other_parents": 0.5847013635939083,
+    "r_given_sepset": 0.0059960826982684064
+   },
+   {
+    "edge": "green->ir_2",
+    "sepset": [
+     "current",
+     "ir_1",
+     "vis_1",
+     "ir_3",
+     "vis_3"
+    ],
+    "sensor_in_sepset": true,
+    "marginal_r": 0.45349338711737563,
+    "r_given_other_parents": 0.8463410372773286,
+    "r_given_sepset": -0.04817450835610221
+   },
+   {
+    "edge": "green->vis_2",
+    "sepset": [
+     "vis_1"
+    ],
+    "sensor_in_sepset": true,
+    "marginal_r": 0.41953369073637065,
+    "r_given_other_parents": 0.8340956827382253,
+    "r_given_sepset": -0.017730366129125492
+   },
+   {
+    "edge": "blue->current",
+    "sepset": [
+     "green",
+     "ir_1",
+     "vis_1",
+     "vis_2",
+     "vis_3"
+    ],
+    "sensor_in_sepset": true,
+    "marginal_r": 0.42575552234019604,
+    "r_given_other_parents": 0.5547673676930249,
+    "r_given_sepset": 0.014122506307021132
+   },
+   {
+    "edge": "blue->ir_1",
+    "sepset": [
+     "ir_2",
+     "current"
+    ],
+    "sensor_in_sepset": true,
+    "marginal_r": 0.3016441286908616,
+    "r_given_other_parents": 0.7421739998330151,
+    "r_given_sepset": -0.04949056171656676
+   },
+   {
+    "edge": "blue->ir_2",
+    "sepset": [
+     "ir_1",
+     "ir_3",
+     "vis_3"
+    ],
+    "sensor_in_sepset": true,
+    "marginal_r": 0.32578025912241504,
+    "r_given_other_parents": 0.7647819391777103,
+    "r_given_sepset": -0.019334421735986783
+   },
+   {
+    "edge": "blue->ir_3",
+    "sepset": [
+     "ir_2",
+     "current"
+    ],
+    "sensor_in_sepset": true,
+    "marginal_r": 0.31759397812295725,
+    "r_given_other_parents": 0.6791736059718133,
+    "r_given_sepset": 0.013260564519452216
+   }
+  ],
+  "sensor_r2": {
+   "current": 0.5749994432764785,
+   "angle_1": 0.9982191784078993,
+   "angle_2": 0.9969825859689155,
+   "ir_1": 0.9187930994744826,
+   "vis_1": 0.9213187286473412,
+   "ir_2": 0.9181527309142872,
+   "vis_2": 0.9213556348522632,
+   "ir_3": 0.8717947138738845,
+   "vis_3": 0.8797223644550647
+  }
+ },
+ "LIN_NOISE_x5": {
+  "kept": 14,
+  "total": 21,
+  "lost_rows": [
+   {
+    "edge": "red->vis_1",
+    "sepset": [
+     "ir_1",
+     "ir_2"
+    ],
+    "sensor_in_sepset": true,
+    "marginal_r": 0.1641845767499042,
+    "r_given_other_parents": 0.20367906092833263,
+    "r_given_sepset": -0.0030049650321975316
+   },
+   {
+    "edge": "red->vis_2",
+    "sepset": [
+     "ir_1",
+     "ir_2",
+     "ir_3"
+    ],
+    "sensor_in_sepset": true,
+    "marginal_r": 0.1570224138813375,
+    "r_given_other_parents": 0.19631585033267326,
+    "r_given_sepset": -0.02267284069827885
+   },
+   {
+    "edge": "red->vis_3",
+    "sepset": [
+     "ir_1",
+     "ir_2",
+     "ir_3"
+    ],
+    "sensor_in_sepset": true,
+    "marginal_r": 0.13133318917329573,
+    "r_given_other_parents": 0.1528985128504528,
+    "r_given_sepset": -0.026934392628347622
+   },
+   {
+    "edge": "blue->current",
+    "sepset": [
+     "vis_1",
+     "vis_2",
+     "vis_3"
+    ],
+    "sensor_in_sepset": true,
+    "marginal_r": 0.1132268087792388,
+    "r_given_other_parents": 0.11846448086711593,
+    "r_given_sepset": 0.018778051185985082
+   },
+   {
+    "edge": "blue->ir_1",
+    "sepset": [
+     "vis_1",
+     "vis_2"
+    ],
+    "sensor_in_sepset": true,
+    "marginal_r": 0.17552821237942734,
+    "r_given_other_parents": 0.21668341747601336,
+    "r_given_sepset": 0.016641625716942627
+   },
+   {
+    "edge": "blue->ir_2",
+    "sepset": [
+     "vis_1",
+     "vis_2",
+     "vis_3"
+    ],
+    "sensor_in_sepset": true,
+    "marginal_r": 0.20506887876883162,
+    "r_given_other_parents": 0.25027949901693325,
+    "r_given_sepset": 0.009643954232948018
+   },
+   {
+    "edge": "blue->ir_3",
+    "sepset": [
+     "vis_1",
+     "vis_2"
+    ],
+    "sensor_in_sepset": true,
+    "marginal_r": 0.15892530841538838,
+    "r_given_other_parents": 0.18309831964322504,
+    "r_given_sepset": 0.01678601277989009
+   }
+  ],
+  "sensor_r2": {
+   "current": 0.0540125579785955,
+   "angle_1": 0.9573224704712812,
+   "angle_2": 0.9297467739812005,
+   "ir_1": 0.3150505325272277,
+   "vis_1": 0.3279981169678724,
+   "ir_2": 0.32042696958290573,
+   "vis_2": 0.3293094354316325,
+   "ir_3": 0.21068375821858865,
+   "vis_3": 0.21784624283649068
+  }
+ }
+}

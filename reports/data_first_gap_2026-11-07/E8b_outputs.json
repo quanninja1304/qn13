@@ -1,0 +1,38 @@
+{
+ "FCI 0.05 n=10000": {
+  "kept": 7,
+  "directed": 0,
+  "bidirected": 9,
+  "edges": 20
+ },
+ "FCI 0.001 n=10000": {
+  "kept": 7,
+  "directed": 1,
+  "bidirected": 9,
+  "edges": 19
+ },
+ "PC .05 n=10000": {
+  "kept": 11,
+  "directed": 10,
+  "bidirected": 0,
+  "edges": 26
+ },
+ "BOSS x1 n=10000": {
+  "kept": 21,
+  "directed": 21,
+  "bidirected": 0,
+  "edges": 41
+ },
+ "BOSS x8 n=10000": {
+  "kept": 21,
+  "directed": 21,
+  "bidirected": 0,
+  "edges": 28
+ },
+ "BOSS x32 n=10000": {
+  "kept": 21,
+  "directed": 21,
+  "bidirected": 0,
+  "edges": 26
+ }
+}

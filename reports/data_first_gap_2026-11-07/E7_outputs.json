@@ -1,0 +1,170 @@
+{
+ "250": {
+  "spearman_rank_raw_vs_audited": 0.9642857142857145,
+  "best_raw": "DirectLiNGAM",
+  "best_audited": "DirectLiNGAM",
+  "raw_order": [
+   "DirectLiNGAM",
+   "GES",
+   "BOSS",
+   "GRaSP",
+   "PC_0.05",
+   "PC_0.01",
+   "PC_0.001"
+  ],
+  "audited_order": [
+   "DirectLiNGAM",
+   "BOSS",
+   "GES",
+   "GRaSP",
+   "PC_0.05",
+   "PC_0.01",
+   "PC_0.001"
+  ],
+  "ceiling_raw_recall": 0.6923076923076923
+ },
+ "500": {
+  "spearman_rank_raw_vs_audited": 1.0,
+  "best_raw": "DirectLiNGAM",
+  "best_audited": "DirectLiNGAM",
+  "raw_order": [
+   "DirectLiNGAM",
+   "GES",
+   "BOSS",
+   "GRaSP",
+   "PC_0.05",
+   "PC_0.01",
+   "PC_0.001"
+  ],
+  "audited_order": [
+   "DirectLiNGAM",
+   "GES",
+   "BOSS",
+   "GRaSP",
+   "PC_0.05",
+   "PC_0.01",
+   "PC_0.001"
+  ],
+  "ceiling_raw_recall": 0.6923076923076923
+ },
+ "1000": {
+  "spearman_rank_raw_vs_audited": 0.9642857142857145,
+  "best_raw": "BOSS",
+  "best_audited": "BOSS",
+  "raw_order": [
+   "BOSS",
+   "DirectLiNGAM",
+   "GES",
+   "GRaSP",
+   "PC_0.05",
+   "PC_0.01",
+   "PC_0.001"
+  ],
+  "audited_order": [
+   "BOSS",
+   "DirectLiNGAM",
+   "GRaSP",
+   "GES",
+   "PC_0.05",
+   "PC_0.01",
+   "PC_0.001"
+  ],
+  "ceiling_raw_recall": 0.6923076923076923
+ },
+ "2000": {
+  "spearman_rank_raw_vs_audited": 0.8928571428571429,
+  "best_raw": "BOSS",
+  "best_audited": "BOSS",
+  "raw_order": [
+   "BOSS",
+   "DirectLiNGAM",
+   "GES",
+   "GRaSP",
+   "PC_0.05",
+   "PC_0.01",
+   "PC_0.001"
+  ],
+  "audited_order": [
+   "BOSS",
+   "GRaSP",
+   "DirectLiNGAM",
+   "GES",
+   "PC_0.05",
+   "PC_0.01",
+   "PC_0.001"
+  ],
+  "ceiling_raw_recall": 0.6923076923076923
+ },
+ "4000": {
+  "spearman_rank_raw_vs_audited": 1.0,
+  "best_raw": "BOSS",
+  "best_audited": "BOSS",
+  "raw_order": [
+   "BOSS",
+   "GRaSP",
+   "GES",
+   "DirectLiNGAM",
+   "PC_0.05",
+   "PC_0.01",
+   "PC_0.001"
+  ],
+  "audited_order": [
+   "BOSS",
+   "GRaSP",
+   "GES",
+   "DirectLiNGAM",
+   "PC_0.05",
+   "PC_0.01",
+   "PC_0.001"
+  ],
+  "ceiling_raw_recall": 0.6923076923076923
+ },
+ "7000": {
+  "spearman_rank_raw_vs_audited": 1.0,
+  "best_raw": "BOSS",
+  "best_audited": "BOSS",
+  "raw_order": [
+   "BOSS",
+   "GRaSP",
+   "GES",
+   "DirectLiNGAM",
+   "PC_0.05",
+   "PC_0.01",
+   "PC_0.001"
+  ],
+  "audited_order": [
+   "BOSS",
+   "GRaSP",
+   "GES",
+   "DirectLiNGAM",
+   "PC_0.05",
+   "PC_0.01",
+   "PC_0.001"
+  ],
+  "ceiling_raw_recall": 0.6923076923076923
+ },
+ "10000": {
+  "spearman_rank_raw_vs_audited": 1.0,
+  "best_raw": "BOSS",
+  "best_audited": "BOSS",
+  "raw_order": [
+   "BOSS",
+   "GES",
+   "DirectLiNGAM",
+   "GRaSP",
+   "PC_0.05",
+   "PC_0.01",
+   "PC_0.001"
+  ],
+  "audited_order": [
+   "BOSS",
+   "GES",
+   "DirectLiNGAM",
+   "GRaSP",
+   "PC_0.05",
+   "PC_0.01",
+   "PC_0.001"
+  ],
+  "ceiling_raw_recall": 0.6923076923076923
+ }
+}
