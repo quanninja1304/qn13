@@ -1,0 +1,2986 @@
+{
+ "meta": {
+  "quick": false,
+  "seed": 20261108,
+  "runtime_sec": 108.99765610694885,
+  "n_pass": 24,
+  "failed": []
+ },
+ "A": {
+  "exhaustive_p3": {
+   "n": 139413,
+   "viol": 0
+  },
+  "random_p4": {
+   "n": 243326,
+   "viol": 0
+  },
+  "control_broken_assumption": {
+   "n": 122221,
+   "viol": 632
+  }
+ },
+ "R": {
+  "R0": {
+   "instances": 7819,
+   "viol": 0
+  },
+  "R0_naive": {
+   "instances": 1761,
+   "false_pure_claims": 395
+  },
+  "R1": {
+   "instances": 2161,
+   "indexed_viol": 0,
+   "naive_instances": 1674,
+   "naive_false": 457,
+   "union_instances": 487,
+   "union_viol": 0
+  },
+  "example_naive_R0": {
+   "p": 3,
+   "parents": {
+    "0": [
+     2
+    ],
+    "4": [
+     1
+    ],
+    "5": [
+     0,
+     1
+    ]
+   },
+   "rest": [
+    0,
+    1,
+    2,
+    0
+   ]
+  },
+  "example_naive_R1": {
+   "p": 3,
+   "parents": {
+    "1": [
+     0
+    ],
+    "3": [
+     2
+    ],
+    "4": [
+     2
+    ],
+    "5": [
+     1,
+     2
+    ]
+   },
+   "rest": [
+    0,
+    2,
+    1,
+    2,
+    3,
+    7
+   ]
+  }
+ },
+ "R4": {
+  "instances": 1425,
+  "viol": 0,
+  "b1": 1021,
+  "b2": 404,
+  "naive_instances": 1610,
+  "naive_false": 16,
+  "example_naive": {
+   "p": 5,
+   "parents": {
+    "0": [
+     3,
+     4
+    ],
+    "3": [
+     1
+    ],
+    "4": [
+     1,
+     3
+    ],
+    "8": [
+     1,
+     2
+    ],
+    "9": [
+     0
+    ]
+   },
+   "seq": [
+    2,
+    3,
+    1,
+    0
+   ],
+   "Sik": [
+    4
+   ]
+  }
+ },
+ "S": {
+  "pair1": "X->Z<-Y, T isolated; second DAG adds Z->R_T",
+  "pair2": "X->R_T1<-L->R_T2<-Y",
+  "explicit_naive": {
+   "graph": "Z->X, Y isolated, R_Z parents Y,Z",
+   "false_claims": [
+    [
+     "NA",
+     2,
+     0
+    ]
+   ],
+   "listwise_false": []
+  }
+ },
+ "H": {
+  "rows": [
+   {
+    "p": 4,
+    "density": 0.3,
+    "q": 0.0,
+    "latent_among_R": 0.0,
+    "graphs": 500,
+    "true_claims": {
+     "LW": 10.936,
+     "Naive": 10.936,
+     "LWu": 10.936,
+     "SepOnly": 10.936,
+     "PP3": 10.936,
+     "PP": 10.936,
+     "IdealU": 10.936
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 0,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 0,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.0,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0,
+    "ratio_PP3_SepOnly": 1.0,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.0,
+     "beyond_NA": 0.0,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.0,
+    "gap_closed": 0.0,
+    "frac_graphs_PP_gt_LWu": 0.0,
+    "new_per_graph": {
+     "new_total": 0.0,
+     "new_NE": 0.0,
+     "new_NA": 0.0,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.0,
+    "mean_min_U_of_LWu_claims": 2.164228237015362,
+    "example_false": null,
+    "seconds": 0.864919900894165
+   },
+   {
+    "p": 4,
+    "density": 0.3,
+    "q": 0.0,
+    "latent_among_R": 0.5,
+    "graphs": 500,
+    "true_claims": {
+     "LW": 11.532,
+     "Naive": 11.532,
+     "LWu": 11.532,
+     "SepOnly": 11.532,
+     "PP3": 11.532,
+     "PP": 11.532,
+     "IdealU": 11.532
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 0,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 0,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.0,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0,
+    "ratio_PP3_SepOnly": 1.0,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.0,
+     "beyond_NA": 0.0,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.0,
+    "gap_closed": 0.0,
+    "frac_graphs_PP_gt_LWu": 0.0,
+    "new_per_graph": {
+     "new_total": 0.0,
+     "new_NE": 0.0,
+     "new_NA": 0.0,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.0,
+    "mean_min_U_of_LWu_claims": 2.1364897676031913,
+    "example_false": null,
+    "seconds": 0.9487705230712891
+   },
+   {
+    "p": 4,
+    "density": 0.3,
+    "q": 0.1,
+    "latent_among_R": 0.0,
+    "graphs": 500,
+    "true_claims": {
+     "LW": 9.29,
+     "Naive": 10.288,
+     "LWu": 9.29,
+     "SepOnly": 9.826,
+     "PP3": 9.934,
+     "PP": 9.934,
+     "IdealU": 10.902
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 13,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 19,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.0693218514531755,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0109912477101566,
+    "ratio_PP3_SepOnly": 1.0109912477101566,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.108,
+     "beyond_NA": 0.108,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.054,
+    "gap_closed": 0.3995037220843673,
+    "frac_graphs_PP_gt_LWu": 0.15,
+    "new_per_graph": {
+     "new_total": 0.644,
+     "new_NE": 0.136,
+     "new_NA": 0.508,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 1.0,
+    "mean_min_U_of_LWu_claims": 2.1491926803013994,
+    "example_false": null,
+    "seconds": 1.0476109981536865
+   },
+   {
+    "p": 4,
+    "density": 0.3,
+    "q": 0.1,
+    "latent_among_R": 0.5,
+    "graphs": 500,
+    "true_claims": {
+     "LW": 9.432,
+     "Naive": 10.402,
+     "LWu": 9.432,
+     "SepOnly": 10.014,
+     "PP3": 10.086,
+     "PP": 10.086,
+     "IdealU": 11.106
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 10,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 12,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.0693384223918574,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.007189934092271,
+    "ratio_PP3_SepOnly": 1.007189934092271,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.072,
+     "beyond_NA": 0.072,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.036,
+    "gap_closed": 0.39068100358422947,
+    "frac_graphs_PP_gt_LWu": 0.156,
+    "new_per_graph": {
+     "new_total": 0.654,
+     "new_NE": 0.144,
+     "new_NA": 0.51,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 1.0,
+    "mean_min_U_of_LWu_claims": 2.1342239185750635,
+    "example_false": null,
+    "seconds": 1.3322386741638184
+   },
+   {
+    "p": 4,
+    "density": 0.3,
+    "q": 0.3,
+    "latent_among_R": 0.0,
+    "graphs": 500,
+    "true_claims": {
+     "LW": 5.744,
+     "Naive": 8.732,
+     "LWu": 5.744,
+     "SepOnly": 7.592,
+     "PP3": 7.636,
+     "PP": 7.636,
+     "IdealU": 11.452
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 55,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 72,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.3293871866295266,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.005795574288725,
+    "ratio_PP3_SepOnly": 1.005795574288725,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.044,
+     "beyond_NA": 0.044,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.022,
+    "gap_closed": 0.33146461107217945,
+    "frac_graphs_PP_gt_LWu": 0.44,
+    "new_per_graph": {
+     "new_total": 1.892,
+     "new_NE": 0.426,
+     "new_NA": 1.466,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 1.0,
+    "mean_min_U_of_LWu_claims": 2.1817548746518107,
+    "example_false": null,
+    "seconds": 1.0955555438995361
+   },
+   {
+    "p": 4,
+    "density": 0.3,
+    "q": 0.3,
+    "latent_among_R": 0.5,
+    "graphs": 500,
+    "true_claims": {
+     "LW": 4.854,
+     "Naive": 8.158,
+     "LWu": 4.854,
+     "SepOnly": 6.964,
+     "PP3": 7.018,
+     "PP": 7.018,
+     "IdealU": 10.79
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 43,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 52,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.445817882159044,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.007754164273406,
+    "ratio_PP3_SepOnly": 1.007754164273406,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.054,
+     "beyond_NA": 0.054,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.028,
+    "gap_closed": 0.36455525606469,
+    "frac_graphs_PP_gt_LWu": 0.488,
+    "new_per_graph": {
+     "new_total": 2.164,
+     "new_NE": 0.56,
+     "new_NA": 1.604,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 1.0,
+    "mean_min_U_of_LWu_claims": 2.238978162340338,
+    "example_false": null,
+    "seconds": 1.0451419353485107
+   },
+   {
+    "p": 4,
+    "density": 0.3,
+    "q": 0.6,
+    "latent_among_R": 0.0,
+    "graphs": 500,
+    "true_claims": {
+     "LW": 0.666,
+     "Naive": 3.354,
+     "LWu": 0.666,
+     "SepOnly": 2.092,
+     "PP3": 2.096,
+     "PP": 2.096,
+     "IdealU": 11.144
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 57,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 74,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 3.1471471471471473,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0019120458891013,
+    "ratio_PP3_SepOnly": 1.0019120458891013,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.004,
+     "beyond_NA": 0.004,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.002,
+    "gap_closed": 0.13647642679900746,
+    "frac_graphs_PP_gt_LWu": 0.372,
+    "new_per_graph": {
+     "new_total": 1.43,
+     "new_NE": 0.462,
+     "new_NA": 0.968,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 1.0,
+    "mean_min_U_of_LWu_claims": 2.6636636636636637,
+    "example_false": null,
+    "seconds": 1.110471248626709
+   },
+   {
+    "p": 4,
+    "density": 0.3,
+    "q": 0.6,
+    "latent_among_R": 0.5,
+    "graphs": 500,
+    "true_claims": {
+     "LW": 0.718,
+     "Naive": 3.686,
+     "LWu": 0.718,
+     "SepOnly": 2.314,
+     "PP3": 2.318,
+     "PP": 2.318,
+     "IdealU": 11.194
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 73,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 98,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 3.2284122562674096,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0017286084701815,
+    "ratio_PP3_SepOnly": 1.0017286084701815,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.004,
+     "beyond_NA": 0.004,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.002,
+    "gap_closed": 0.15273004963726614,
+    "frac_graphs_PP_gt_LWu": 0.426,
+    "new_per_graph": {
+     "new_total": 1.6,
+     "new_NE": 0.548,
+     "new_NA": 1.052,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 1.0,
+    "mean_min_U_of_LWu_claims": 2.4707520891364902,
+    "example_false": null,
+    "seconds": 1.4506337642669678
+   },
+   {
+    "p": 4,
+    "density": 0.5,
+    "q": 0.0,
+    "latent_among_R": 0.0,
+    "graphs": 500,
+    "true_claims": {
+     "LW": 7.656,
+     "Naive": 7.656,
+     "LWu": 7.656,
+     "SepOnly": 7.656,
+     "PP3": 7.656,
+     "PP": 7.656,
+     "IdealU": 7.656
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 0,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 0,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.0,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0,
+    "ratio_PP3_SepOnly": 1.0,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.0,
+     "beyond_NA": 0.0,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.0,
+    "gap_closed": 0.0,
+    "frac_graphs_PP_gt_LWu": 0.0,
+    "new_per_graph": {
+     "new_total": 0.0,
+     "new_NE": 0.0,
+     "new_NA": 0.0,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.0,
+    "mean_min_U_of_LWu_claims": 2.4302507836990594,
+    "example_false": null,
+    "seconds": 1.326636791229248
+   },
+   {
+    "p": 4,
+    "density": 0.5,
+    "q": 0.0,
+    "latent_among_R": 0.5,
+    "graphs": 500,
+    "true_claims": {
+     "LW": 8.012,
+     "Naive": 8.012,
+     "LWu": 8.012,
+     "SepOnly": 8.012,
+     "PP3": 8.012,
+     "PP": 8.012,
+     "IdealU": 8.012
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 0,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 0,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.0,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0,
+    "ratio_PP3_SepOnly": 1.0,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.0,
+     "beyond_NA": 0.0,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.0,
+    "gap_closed": 0.0,
+    "frac_graphs_PP_gt_LWu": 0.0,
+    "new_per_graph": {
+     "new_total": 0.0,
+     "new_NE": 0.0,
+     "new_NA": 0.0,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.0,
+    "mean_min_U_of_LWu_claims": 2.4056415376934597,
+    "example_false": null,
+    "seconds": 1.0750629901885986
+   },
+   {
+    "p": 4,
+    "density": 0.5,
+    "q": 0.1,
+    "latent_among_R": 0.0,
+    "graphs": 500,
+    "true_claims": {
+     "LW": 6.052,
+     "Naive": 6.844,
+     "LWu": 6.052,
+     "SepOnly": 6.442,
+     "PP3": 6.518,
+     "PP": 6.518,
+     "IdealU": 7.66
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 14,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 20,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.0769993390614674,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0117975783918036,
+    "ratio_PP3_SepOnly": 1.0117975783918036,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.076,
+     "beyond_NA": 0.076,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.038,
+    "gap_closed": 0.28980099502487566,
+    "frac_graphs_PP_gt_LWu": 0.116,
+    "new_per_graph": {
+     "new_total": 0.466,
+     "new_NE": 0.096,
+     "new_NA": 0.37,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 1.0,
+    "mean_min_U_of_LWu_claims": 2.365829477858559,
+    "example_false": null,
+    "seconds": 1.196119785308838
+   },
+   {
+    "p": 4,
+    "density": 0.5,
+    "q": 0.1,
+    "latent_among_R": 0.5,
+    "graphs": 500,
+    "true_claims": {
+     "LW": 5.67,
+     "Naive": 6.962,
+     "LWu": 5.67,
+     "SepOnly": 6.32,
+     "PP3": 6.496,
+     "PP": 6.496,
+     "IdealU": 7.856
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 25,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 33,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.145679012345679,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0278481012658227,
+    "ratio_PP3_SepOnly": 1.0278481012658227,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.176,
+     "beyond_NA": 0.176,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.088,
+    "gap_closed": 0.37785910338517864,
+    "frac_graphs_PP_gt_LWu": 0.188,
+    "new_per_graph": {
+     "new_total": 0.826,
+     "new_NE": 0.168,
+     "new_NA": 0.658,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 1.0,
+    "mean_min_U_of_LWu_claims": 2.398589065255732,
+    "example_false": null,
+    "seconds": 1.4580414295196533
+   },
+   {
+    "p": 4,
+    "density": 0.5,
+    "q": 0.3,
+    "latent_among_R": 0.0,
+    "graphs": 500,
+    "true_claims": {
+     "LW": 3.068,
+     "Naive": 5.146,
+     "LWu": 3.068,
+     "SepOnly": 4.192,
+     "PP3": 4.276,
+     "PP": 4.276,
+     "IdealU": 7.65
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 47,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 75,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.3937418513689699,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0200381679389312,
+    "ratio_PP3_SepOnly": 1.0200381679389312,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.084,
+     "beyond_NA": 0.084,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.042,
+    "gap_closed": 0.26364033173286766,
+    "frac_graphs_PP_gt_LWu": 0.338,
+    "new_per_graph": {
+     "new_total": 1.208,
+     "new_NE": 0.29,
+     "new_NA": 0.918,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 1.0,
+    "mean_min_U_of_LWu_claims": 2.452411994784876,
+    "example_false": null,
+    "seconds": 1.190624475479126
+   },
+   {
+    "p": 4,
+    "density": 0.5,
+    "q": 0.3,
+    "latent_among_R": 0.5,
+    "graphs": 500,
+    "true_claims": {
+     "LW": 2.9,
+     "Naive": 4.954,
+     "LWu": 2.9,
+     "SepOnly": 4.066,
+     "PP3": 4.158,
+     "PP": 4.158,
+     "IdealU": 7.774
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 47,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 68,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.433793103448276,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0226266601082146,
+    "ratio_PP3_SepOnly": 1.0226266601082146,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.092,
+     "beyond_NA": 0.092,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.046,
+    "gap_closed": 0.2581042265080017,
+    "frac_graphs_PP_gt_LWu": 0.32,
+    "new_per_graph": {
+     "new_total": 1.258,
+     "new_NE": 0.32,
+     "new_NA": 0.938,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 1.0,
+    "mean_min_U_of_LWu_claims": 2.432413793103448,
+    "example_false": null,
+    "seconds": 1.2538437843322754
+   },
+   {
+    "p": 4,
+    "density": 0.5,
+    "q": 0.6,
+    "latent_among_R": 0.0,
+    "graphs": 500,
+    "true_claims": {
+     "LW": 0.498,
+     "Naive": 1.996,
+     "LWu": 0.498,
+     "SepOnly": 1.244,
+     "PP3": 1.26,
+     "PP": 1.26,
+     "IdealU": 7.994
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 34,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 52,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 2.5301204819277108,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0128617363344052,
+    "ratio_PP3_SepOnly": 1.0128617363344052,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.016,
+     "beyond_NA": 0.016,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.008,
+    "gap_closed": 0.10165421558164354,
+    "frac_graphs_PP_gt_LWu": 0.23,
+    "new_per_graph": {
+     "new_total": 0.762,
+     "new_NE": 0.282,
+     "new_NA": 0.48,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 1.0,
+    "mean_min_U_of_LWu_claims": 3.040160642570281,
+    "example_false": null,
+    "seconds": 1.2787926197052002
+   },
+   {
+    "p": 4,
+    "density": 0.5,
+    "q": 0.6,
+    "latent_among_R": 0.5,
+    "graphs": 500,
+    "true_claims": {
+     "LW": 0.348,
+     "Naive": 1.64,
+     "LWu": 0.348,
+     "SepOnly": 1.006,
+     "PP3": 1.006,
+     "PP": 1.006,
+     "IdealU": 7.884
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 43,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 60,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 2.8908045977011496,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0,
+    "ratio_PP3_SepOnly": 1.0,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.0,
+     "beyond_NA": 0.0,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.0,
+    "gap_closed": 0.08731422505307855,
+    "frac_graphs_PP_gt_LWu": 0.198,
+    "new_per_graph": {
+     "new_total": 0.658,
+     "new_NE": 0.242,
+     "new_NA": 0.416,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 1.0,
+    "mean_min_U_of_LWu_claims": 2.839080459770115,
+    "example_false": null,
+    "seconds": 1.370863914489746
+   },
+   {
+    "p": 5,
+    "density": 0.3,
+    "q": 0.0,
+    "latent_among_R": 0.0,
+    "graphs": 200,
+    "true_claims": {
+     "LW": 19.215,
+     "Naive": 19.215,
+     "LWu": 19.215,
+     "SepOnly": 19.215,
+     "PP3": 19.215,
+     "PP": 19.215,
+     "IdealU": 19.215
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 0,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 0,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.0,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0,
+    "ratio_PP3_SepOnly": 1.0,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.0,
+     "beyond_NA": 0.0,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.0,
+    "gap_closed": 0.0,
+    "frac_graphs_PP_gt_LWu": 0.0,
+    "new_per_graph": {
+     "new_total": 0.0,
+     "new_NE": 0.0,
+     "new_NA": 0.0,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.0,
+    "mean_min_U_of_LWu_claims": 2.2235232890970598,
+    "example_false": null,
+    "seconds": 1.3026087284088135
+   },
+   {
+    "p": 5,
+    "density": 0.3,
+    "q": 0.0,
+    "latent_among_R": 0.5,
+    "graphs": 200,
+    "true_claims": {
+     "LW": 18.995,
+     "Naive": 18.995,
+     "LWu": 18.995,
+     "SepOnly": 18.995,
+     "PP3": 18.995,
+     "PP": 18.995,
+     "IdealU": 18.995
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 0,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 0,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.0,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0,
+    "ratio_PP3_SepOnly": 1.0,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.0,
+     "beyond_NA": 0.0,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.0,
+    "gap_closed": 0.0,
+    "frac_graphs_PP_gt_LWu": 0.0,
+    "new_per_graph": {
+     "new_total": 0.0,
+     "new_NE": 0.0,
+     "new_NA": 0.0,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.0,
+    "mean_min_U_of_LWu_claims": 2.2350618583837853,
+    "example_false": null,
+    "seconds": 1.341230869293213
+   },
+   {
+    "p": 5,
+    "density": 0.3,
+    "q": 0.1,
+    "latent_among_R": 0.0,
+    "graphs": 200,
+    "true_claims": {
+     "LW": 15.405,
+     "Naive": 18.55,
+     "LWu": 15.405,
+     "SepOnly": 17.09,
+     "PP3": 17.47,
+     "PP": 17.52,
+     "IdealU": 19.19
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 14,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 27,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.1372930866601754,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0251609128145114,
+    "ratio_PP3_SepOnly": 1.0222352252779403,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.43,
+     "beyond_NA": 0.42,
+     "beyond_A": 0.01,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.155,
+    "gap_closed": 0.5587846763540288,
+    "frac_graphs_PP_gt_LWu": 0.34,
+    "new_per_graph": {
+     "new_total": 2.115,
+     "new_NE": 0.375,
+     "new_NA": 1.73,
+     "new_A": 0.01,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.9763593380614657,
+    "mean_min_U_of_LWu_claims": 2.1970139565076274,
+    "example_false": null,
+    "seconds": 1.4146456718444824
+   },
+   {
+    "p": 5,
+    "density": 0.3,
+    "q": 0.1,
+    "latent_among_R": 0.5,
+    "graphs": 200,
+    "true_claims": {
+     "LW": 15.505,
+     "Naive": 17.98,
+     "LWu": 15.505,
+     "SepOnly": 16.765,
+     "PP3": 17.05,
+     "PP": 17.15,
+     "IdealU": 19.28
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 16,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 38,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.1060948081264106,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0229645093945718,
+    "ratio_PP3_SepOnly": 1.0169997017596182,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.385,
+     "beyond_NA": 0.38,
+     "beyond_A": 0.005,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.145,
+    "gap_closed": 0.43576158940397286,
+    "frac_graphs_PP_gt_LWu": 0.285,
+    "new_per_graph": {
+     "new_total": 1.645,
+     "new_NE": 0.285,
+     "new_NA": 1.355,
+     "new_A": 0.005,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.939209726443769,
+    "mean_min_U_of_LWu_claims": 2.1876813930990004,
+    "example_false": null,
+    "seconds": 1.530860185623169
+   },
+   {
+    "p": 5,
+    "density": 0.3,
+    "q": 0.3,
+    "latent_among_R": 0.0,
+    "graphs": 200,
+    "true_claims": {
+     "LW": 6.71,
+     "Naive": 14.33,
+     "LWu": 6.71,
+     "SepOnly": 11.08,
+     "PP3": 11.31,
+     "PP": 11.42,
+     "IdealU": 19.295
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 46,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 89,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.7019374068554396,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0306859205776173,
+    "ratio_PP3_SepOnly": 1.0207581227436824,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.34,
+     "beyond_NA": 0.33,
+     "beyond_A": 0.01,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.125,
+    "gap_closed": 0.3742550655542312,
+    "frac_graphs_PP_gt_LWu": 0.72,
+    "new_per_graph": {
+     "new_total": 4.71,
+     "new_NE": 1.125,
+     "new_NA": 3.575,
+     "new_A": 0.01,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.9766454352441614,
+    "mean_min_U_of_LWu_claims": 2.3532041728763042,
+    "example_false": null,
+    "seconds": 1.7467749118804932
+   },
+   {
+    "p": 5,
+    "density": 0.3,
+    "q": 0.3,
+    "latent_among_R": 0.5,
+    "graphs": 200,
+    "true_claims": {
+     "LW": 5.91,
+     "Naive": 14.7,
+     "LWu": 5.91,
+     "SepOnly": 11.06,
+     "PP3": 11.305,
+     "PP": 11.465,
+     "IdealU": 19.725
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 59,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 108,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.9399323181049068,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.036618444846293,
+    "ratio_PP3_SepOnly": 1.0221518987341771,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.405,
+     "beyond_NA": 0.405,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.17,
+    "gap_closed": 0.40209916757148023,
+    "frac_graphs_PP_gt_LWu": 0.79,
+    "new_per_graph": {
+     "new_total": 5.555,
+     "new_NE": 1.415,
+     "new_NA": 4.14,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.9711971197119712,
+    "mean_min_U_of_LWu_claims": 2.3739424703891707,
+    "example_false": null,
+    "seconds": 1.8626267910003662
+   },
+   {
+    "p": 5,
+    "density": 0.3,
+    "q": 0.6,
+    "latent_among_R": 0.0,
+    "graphs": 200,
+    "true_claims": {
+     "LW": 0.815,
+     "Naive": 6.48,
+     "LWu": 0.815,
+     "SepOnly": 3.485,
+     "PP3": 3.39,
+     "PP": 3.485,
+     "IdealU": 19.875
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 54,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 89,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 4.276073619631902,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0,
+    "ratio_PP3_SepOnly": 0.9727403156384505,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.0,
+     "beyond_NA": 0.0,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.0,
+    "gap_closed": 0.14008394543546696,
+    "frac_graphs_PP_gt_LWu": 0.53,
+    "new_per_graph": {
+     "new_total": 2.67,
+     "new_NE": 1.03,
+     "new_NA": 1.64,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.9644194756554307,
+    "mean_min_U_of_LWu_claims": 2.9877300613496933,
+    "example_false": null,
+    "seconds": 2.0836782455444336
+   },
+   {
+    "p": 5,
+    "density": 0.3,
+    "q": 0.6,
+    "latent_among_R": 0.5,
+    "graphs": 200,
+    "true_claims": {
+     "LW": 0.82,
+     "Naive": 6.52,
+     "LWu": 0.82,
+     "SepOnly": 3.585,
+     "PP3": 3.525,
+     "PP": 3.605,
+     "IdealU": 19.6
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 48,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 98,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 4.396341463414634,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.00557880055788,
+    "ratio_PP3_SepOnly": 0.9832635983263598,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.02,
+     "beyond_NA": 0.02,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.01,
+    "gap_closed": 0.14829605963791267,
+    "frac_graphs_PP_gt_LWu": 0.56,
+    "new_per_graph": {
+     "new_total": 2.785,
+     "new_NE": 1.025,
+     "new_NA": 1.76,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.9712746858168761,
+    "mean_min_U_of_LWu_claims": 3.048780487804878,
+    "example_false": null,
+    "seconds": 1.9609260559082031
+   },
+   {
+    "p": 5,
+    "density": 0.5,
+    "q": 0.0,
+    "latent_among_R": 0.0,
+    "graphs": 200,
+    "true_claims": {
+     "LW": 14.06,
+     "Naive": 14.06,
+     "LWu": 14.06,
+     "SepOnly": 14.06,
+     "PP3": 14.06,
+     "PP": 14.06,
+     "IdealU": 14.06
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 0,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 0,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.0,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0,
+    "ratio_PP3_SepOnly": 1.0,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.0,
+     "beyond_NA": 0.0,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.0,
+    "gap_closed": 0.0,
+    "frac_graphs_PP_gt_LWu": 0.0,
+    "new_per_graph": {
+     "new_total": 0.0,
+     "new_NE": 0.0,
+     "new_NA": 0.0,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.0,
+    "mean_min_U_of_LWu_claims": 2.666310921380292,
+    "example_false": null,
+    "seconds": 1.6332306861877441
+   },
+   {
+    "p": 5,
+    "density": 0.5,
+    "q": 0.0,
+    "latent_among_R": 0.5,
+    "graphs": 200,
+    "true_claims": {
+     "LW": 13.04,
+     "Naive": 13.04,
+     "LWu": 13.04,
+     "SepOnly": 13.04,
+     "PP3": 13.04,
+     "PP": 13.04,
+     "IdealU": 13.04
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 0,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 0,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.0,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0,
+    "ratio_PP3_SepOnly": 1.0,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.0,
+     "beyond_NA": 0.0,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.0,
+    "gap_closed": 0.0,
+    "frac_graphs_PP_gt_LWu": 0.0,
+    "new_per_graph": {
+     "new_total": 0.0,
+     "new_NE": 0.0,
+     "new_NA": 0.0,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.0,
+    "mean_min_U_of_LWu_claims": 2.700690713737529,
+    "example_false": null,
+    "seconds": 1.8376095294952393
+   },
+   {
+    "p": 5,
+    "density": 0.5,
+    "q": 0.1,
+    "latent_among_R": 0.0,
+    "graphs": 200,
+    "true_claims": {
+     "LW": 9.76,
+     "Naive": 12.57,
+     "LWu": 9.76,
+     "SepOnly": 10.895,
+     "PP3": 11.295,
+     "PP": 11.445,
+     "IdealU": 14.5
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 19,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 30,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.1726434426229508,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0504818724185407,
+    "ratio_PP3_SepOnly": 1.036714089031666,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.55,
+     "beyond_NA": 0.54,
+     "beyond_A": 0.01,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.195,
+    "gap_closed": 0.35548523206751065,
+    "frac_graphs_PP_gt_LWu": 0.295,
+    "new_per_graph": {
+     "new_total": 1.685,
+     "new_NE": 0.305,
+     "new_NA": 1.37,
+     "new_A": 0.01,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.9109792284866469,
+    "mean_min_U_of_LWu_claims": 2.5445696721311477,
+    "example_false": null,
+    "seconds": 1.6611969470977783
+   },
+   {
+    "p": 5,
+    "density": 0.5,
+    "q": 0.1,
+    "latent_among_R": 0.5,
+    "graphs": 200,
+    "true_claims": {
+     "LW": 8.815,
+     "Naive": 12.295,
+     "LWu": 8.815,
+     "SepOnly": 10.315,
+     "PP3": 10.695,
+     "PP": 10.955,
+     "IdealU": 14.51
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 15,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 44,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.2427680090754396,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0620455647115852,
+    "ratio_PP3_SepOnly": 1.0368395540475037,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.64,
+     "beyond_NA": 0.62,
+     "beyond_A": 0.02,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.2,
+    "gap_closed": 0.3757682177348552,
+    "frac_graphs_PP_gt_LWu": 0.345,
+    "new_per_graph": {
+     "new_total": 2.14,
+     "new_NE": 0.45,
+     "new_NA": 1.67,
+     "new_A": 0.02,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.8785046728971962,
+    "mean_min_U_of_LWu_claims": 2.6539988655700513,
+    "example_false": null,
+    "seconds": 1.7695190906524658
+   },
+   {
+    "p": 5,
+    "density": 0.5,
+    "q": 0.3,
+    "latent_among_R": 0.0,
+    "graphs": 200,
+    "true_claims": {
+     "LW": 3.315,
+     "Naive": 7.79,
+     "LWu": 3.315,
+     "SepOnly": 5.42,
+     "PP3": 5.485,
+     "PP": 5.61,
+     "IdealU": 13.655
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 45,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 110,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.6923076923076925,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0350553505535056,
+    "ratio_PP3_SepOnly": 1.0119926199261993,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.19,
+     "beyond_NA": 0.19,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.08,
+    "gap_closed": 0.2219535783365571,
+    "frac_graphs_PP_gt_LWu": 0.54,
+    "new_per_graph": {
+     "new_total": 2.295,
+     "new_NE": 0.74,
+     "new_NA": 1.555,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.9455337690631809,
+    "mean_min_U_of_LWu_claims": 2.9562594268476623,
+    "example_false": null,
+    "seconds": 2.0967793464660645
+   },
+   {
+    "p": 5,
+    "density": 0.5,
+    "q": 0.3,
+    "latent_among_R": 0.5,
+    "graphs": 200,
+    "true_claims": {
+     "LW": 3.18,
+     "Naive": 8.625,
+     "LWu": 3.18,
+     "SepOnly": 5.675,
+     "PP3": 5.87,
+     "PP": 6.025,
+     "IdealU": 13.94
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 47,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 111,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.8946540880503144,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0616740088105727,
+    "ratio_PP3_SepOnly": 1.0343612334801762,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.35,
+     "beyond_NA": 0.35,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.13,
+    "gap_closed": 0.26440520446096655,
+    "frac_graphs_PP_gt_LWu": 0.575,
+    "new_per_graph": {
+     "new_total": 2.845,
+     "new_NE": 0.815,
+     "new_NA": 2.03,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.945518453427065,
+    "mean_min_U_of_LWu_claims": 2.8679245283018866,
+    "example_false": null,
+    "seconds": 1.9240460395812988
+   },
+   {
+    "p": 5,
+    "density": 0.5,
+    "q": 0.6,
+    "latent_among_R": 0.0,
+    "graphs": 200,
+    "true_claims": {
+     "LW": 0.43,
+     "Naive": 2.295,
+     "LWu": 0.43,
+     "SepOnly": 1.075,
+     "PP3": 1.055,
+     "PP": 1.115,
+     "IdealU": 13.26
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 25,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 68,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 2.5930232558139537,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0372093023255815,
+    "ratio_PP3_SepOnly": 0.9813953488372092,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.04,
+     "beyond_NA": 0.04,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.015,
+    "gap_closed": 0.053390491036632896,
+    "frac_graphs_PP_gt_LWu": 0.22,
+    "new_per_graph": {
+     "new_total": 0.685,
+     "new_NE": 0.305,
+     "new_NA": 0.38,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.9124087591240876,
+    "mean_min_U_of_LWu_claims": 4.046511627906977,
+    "example_false": null,
+    "seconds": 2.201836109161377
+   },
+   {
+    "p": 5,
+    "density": 0.5,
+    "q": 0.6,
+    "latent_among_R": 0.5,
+    "graphs": 200,
+    "true_claims": {
+     "LW": 0.26,
+     "Naive": 2.455,
+     "LWu": 0.26,
+     "SepOnly": 1.21,
+     "PP3": 1.165,
+     "PP": 1.22,
+     "IdealU": 13.99
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 36,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 83,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 4.692307692307692,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0082644628099173,
+    "ratio_PP3_SepOnly": 0.9628099173553719,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.01,
+     "beyond_NA": 0.01,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.005,
+    "gap_closed": 0.06991988346686089,
+    "frac_graphs_PP_gt_LWu": 0.28,
+    "new_per_graph": {
+     "new_total": 0.96,
+     "new_NE": 0.44,
+     "new_NA": 0.52,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.9427083333333334,
+    "mean_min_U_of_LWu_claims": 4.0576923076923075,
+    "example_false": null,
+    "seconds": 1.974907398223877
+   },
+   {
+    "p": 6,
+    "density": 0.3,
+    "q": 0.0,
+    "latent_among_R": 0.0,
+    "graphs": 50,
+    "true_claims": {
+     "LW": 30.08,
+     "Naive": 30.08,
+     "LWu": 30.08,
+     "SepOnly": 30.08,
+     "PP3": 30.08,
+     "PP": 30.08,
+     "IdealU": 30.08
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 0,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 0,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.0,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0,
+    "ratio_PP3_SepOnly": 1.0,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.0,
+     "beyond_NA": 0.0,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.0,
+    "gap_closed": 0.0,
+    "frac_graphs_PP_gt_LWu": 0.0,
+    "new_per_graph": {
+     "new_total": 0.0,
+     "new_NE": 0.0,
+     "new_NA": 0.0,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.0,
+    "mean_min_U_of_LWu_claims": 2.285429141716567,
+    "example_false": null,
+    "seconds": 1.0657017230987549
+   },
+   {
+    "p": 6,
+    "density": 0.3,
+    "q": 0.0,
+    "latent_among_R": 0.5,
+    "graphs": 50,
+    "true_claims": {
+     "LW": 31.04,
+     "Naive": 31.04,
+     "LWu": 31.04,
+     "SepOnly": 31.04,
+     "PP3": 31.04,
+     "PP": 31.04,
+     "IdealU": 31.04
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 0,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 0,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.0,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0,
+    "ratio_PP3_SepOnly": 1.0,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.0,
+     "beyond_NA": 0.0,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.0,
+    "gap_closed": 0.0,
+    "frac_graphs_PP_gt_LWu": 0.0,
+    "new_per_graph": {
+     "new_total": 0.0,
+     "new_NE": 0.0,
+     "new_NA": 0.0,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.0,
+    "mean_min_U_of_LWu_claims": 2.3002577319587627,
+    "example_false": null,
+    "seconds": 1.070631980895996
+   },
+   {
+    "p": 6,
+    "density": 0.3,
+    "q": 0.1,
+    "latent_among_R": 0.0,
+    "graphs": 50,
+    "true_claims": {
+     "LW": 21.2,
+     "Naive": 27.9,
+     "LWu": 21.2,
+     "SepOnly": 24.32,
+     "PP3": 25.14,
+     "PP": 25.58,
+     "IdealU": 30.76
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 4,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 13,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.2066037735849056,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0518092105263157,
+    "ratio_PP3_SepOnly": 1.033717105263158,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 1.26,
+     "beyond_NA": 1.22,
+     "beyond_A": 0.04,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.34,
+    "gap_closed": 0.45815899581589936,
+    "frac_graphs_PP_gt_LWu": 0.54,
+    "new_per_graph": {
+     "new_total": 4.38,
+     "new_NE": 0.7,
+     "new_NA": 3.64,
+     "new_A": 0.04,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.8995433789954338,
+    "mean_min_U_of_LWu_claims": 2.380547686496695,
+    "example_false": null,
+    "seconds": 1.6124207973480225
+   },
+   {
+    "p": 6,
+    "density": 0.3,
+    "q": 0.1,
+    "latent_among_R": 0.5,
+    "graphs": 50,
+    "true_claims": {
+     "LW": 19.38,
+     "Naive": 28.34,
+     "LWu": 19.38,
+     "SepOnly": 23.86,
+     "PP3": 25.08,
+     "PP": 25.48,
+     "IdealU": 30.44
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 11,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 37,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.3147574819401446,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0678960603520538,
+    "ratio_PP3_SepOnly": 1.0511316010058676,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 1.62,
+     "beyond_NA": 1.54,
+     "beyond_A": 0.08,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.38,
+    "gap_closed": 0.5515370705244124,
+    "frac_graphs_PP_gt_LWu": 0.6,
+    "new_per_graph": {
+     "new_total": 6.1,
+     "new_NE": 0.92,
+     "new_NA": 5.1,
+     "new_A": 0.08,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.9344262295081968,
+    "mean_min_U_of_LWu_claims": 2.2518059855521155,
+    "example_false": null,
+    "seconds": 1.1973903179168701
+   },
+   {
+    "p": 6,
+    "density": 0.3,
+    "q": 0.3,
+    "latent_among_R": 0.0,
+    "graphs": 50,
+    "true_claims": {
+     "LW": 5.52,
+     "Naive": 19.36,
+     "LWu": 5.52,
+     "SepOnly": 12.0,
+     "PP3": 12.06,
+     "PP": 12.8,
+     "IdealU": 27.66
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 22,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 89,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 2.3188405797101455,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0666666666666667,
+    "ratio_PP3_SepOnly": 1.0050000000000001,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.8,
+     "beyond_NA": 0.8,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.24,
+    "gap_closed": 0.3288166214995484,
+    "frac_graphs_PP_gt_LWu": 0.9,
+    "new_per_graph": {
+     "new_total": 7.28,
+     "new_NE": 2.08,
+     "new_NA": 5.2,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.8983516483516484,
+    "mean_min_U_of_LWu_claims": 2.8731884057971016,
+    "example_false": null,
+    "seconds": 1.7101399898529053
+   },
+   {
+    "p": 6,
+    "density": 0.3,
+    "q": 0.3,
+    "latent_among_R": 0.5,
+    "graphs": 50,
+    "true_claims": {
+     "LW": 6.2,
+     "Naive": 19.64,
+     "LWu": 6.2,
+     "SepOnly": 12.42,
+     "PP3": 12.52,
+     "PP": 13.0,
+     "IdealU": 27.8
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 20,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 72,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 2.096774193548387,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0466988727858293,
+    "ratio_PP3_SepOnly": 1.0080515297906603,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.58,
+     "beyond_NA": 0.58,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.22,
+    "gap_closed": 0.31481481481481477,
+    "frac_graphs_PP_gt_LWu": 0.88,
+    "new_per_graph": {
+     "new_total": 6.8,
+     "new_NE": 2.02,
+     "new_NA": 4.78,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.9294117647058824,
+    "mean_min_U_of_LWu_claims": 2.829032258064516,
+    "example_false": null,
+    "seconds": 2.0508806705474854
+   },
+   {
+    "p": 6,
+    "density": 0.3,
+    "q": 0.6,
+    "latent_among_R": 0.0,
+    "graphs": 50,
+    "true_claims": {
+     "LW": 0.44,
+     "Naive": 8.08,
+     "LWu": 0.44,
+     "SepOnly": 3.08,
+     "PP3": 2.88,
+     "PP": 3.08,
+     "IdealU": 29.6
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 15,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 36,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 7.0,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0,
+    "ratio_PP3_SepOnly": 0.935064935064935,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.0,
+     "beyond_NA": 0.0,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.0,
+    "gap_closed": 0.09053497942386832,
+    "frac_graphs_PP_gt_LWu": 0.6,
+    "new_per_graph": {
+     "new_total": 2.64,
+     "new_NE": 1.2,
+     "new_NA": 1.44,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.9242424242424242,
+    "mean_min_U_of_LWu_claims": 4.636363636363637,
+    "example_false": null,
+    "seconds": 1.8870830535888672
+   },
+   {
+    "p": 6,
+    "density": 0.3,
+    "q": 0.6,
+    "latent_among_R": 0.5,
+    "graphs": 50,
+    "true_claims": {
+     "LW": 0.48,
+     "Naive": 6.54,
+     "LWu": 0.48,
+     "SepOnly": 2.32,
+     "PP3": 2.24,
+     "PP": 2.36,
+     "IdealU": 27.74
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 18,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 43,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 4.916666666666667,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0172413793103448,
+    "ratio_PP3_SepOnly": 0.9655172413793105,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.04,
+     "beyond_NA": 0.04,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.02,
+    "gap_closed": 0.06896551724137931,
+    "frac_graphs_PP_gt_LWu": 0.42,
+    "new_per_graph": {
+     "new_total": 1.88,
+     "new_NE": 0.76,
+     "new_NA": 1.12,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.9361702127659575,
+    "mean_min_U_of_LWu_claims": 4.458333333333333,
+    "example_false": null,
+    "seconds": 2.00753116607666
+   },
+   {
+    "p": 6,
+    "density": 0.5,
+    "q": 0.0,
+    "latent_among_R": 0.0,
+    "graphs": 50,
+    "true_claims": {
+     "LW": 20.18,
+     "Naive": 20.18,
+     "LWu": 20.18,
+     "SepOnly": 20.18,
+     "PP3": 20.18,
+     "PP": 20.18,
+     "IdealU": 20.18
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 0,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 0,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.0,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0,
+    "ratio_PP3_SepOnly": 1.0,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.0,
+     "beyond_NA": 0.0,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.0,
+    "gap_closed": 0.0,
+    "frac_graphs_PP_gt_LWu": 0.0,
+    "new_per_graph": {
+     "new_total": 0.0,
+     "new_NE": 0.0,
+     "new_NA": 0.0,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.0,
+    "mean_min_U_of_LWu_claims": 3.0506958250497016,
+    "example_false": null,
+    "seconds": 1.7854020595550537
+   },
+   {
+    "p": 6,
+    "density": 0.5,
+    "q": 0.0,
+    "latent_among_R": 0.5,
+    "graphs": 50,
+    "true_claims": {
+     "LW": 19.8,
+     "Naive": 19.8,
+     "LWu": 19.8,
+     "SepOnly": 19.8,
+     "PP3": 19.8,
+     "PP": 19.8,
+     "IdealU": 19.8
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 0,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 0,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.0,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0,
+    "ratio_PP3_SepOnly": 1.0,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.0,
+     "beyond_NA": 0.0,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.0,
+    "gap_closed": 0.0,
+    "frac_graphs_PP_gt_LWu": 0.0,
+    "new_per_graph": {
+     "new_total": 0.0,
+     "new_NE": 0.0,
+     "new_NA": 0.0,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.0,
+    "mean_min_U_of_LWu_claims": 2.991911021233569,
+    "example_false": null,
+    "seconds": 1.7451562881469727
+   },
+   {
+    "p": 6,
+    "density": 0.5,
+    "q": 0.1,
+    "latent_among_R": 0.0,
+    "graphs": 50,
+    "true_claims": {
+     "LW": 9.28,
+     "Naive": 19.14,
+     "LWu": 9.28,
+     "SepOnly": 12.6,
+     "PP3": 13.98,
+     "PP": 15.02,
+     "IdealU": 23.34
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 11,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 33,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.6185344827586208,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.192063492063492,
+    "ratio_PP3_SepOnly": 1.1095238095238096,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 2.42,
+     "beyond_NA": 2.3,
+     "beyond_A": 0.12,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.46,
+    "gap_closed": 0.40825035561877665,
+    "frac_graphs_PP_gt_LWu": 0.7,
+    "new_per_graph": {
+     "new_total": 5.74,
+     "new_NE": 0.96,
+     "new_NA": 4.66,
+     "new_A": 0.12,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.818815331010453,
+    "mean_min_U_of_LWu_claims": 3.209051724137931,
+    "example_false": null,
+    "seconds": 1.7265326976776123
+   },
+   {
+    "p": 6,
+    "density": 0.5,
+    "q": 0.1,
+    "latent_among_R": 0.5,
+    "graphs": 50,
+    "true_claims": {
+     "LW": 11.42,
+     "Naive": 19.14,
+     "LWu": 11.42,
+     "SepOnly": 14.36,
+     "PP3": 15.98,
+     "PP": 16.5,
+     "IdealU": 22.9
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 8,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 22,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.4448336252189142,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.149025069637883,
+    "ratio_PP3_SepOnly": 1.1128133704735377,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 2.14,
+     "beyond_NA": 2.02,
+     "beyond_A": 0.12,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.44,
+    "gap_closed": 0.4425087108013938,
+    "frac_graphs_PP_gt_LWu": 0.58,
+    "new_per_graph": {
+     "new_total": 5.08,
+     "new_NE": 0.94,
+     "new_NA": 4.02,
+     "new_A": 0.12,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.8976377952755905,
+    "mean_min_U_of_LWu_claims": 2.9194395796847634,
+    "example_false": null,
+    "seconds": 1.9009907245635986
+   },
+   {
+    "p": 6,
+    "density": 0.5,
+    "q": 0.3,
+    "latent_among_R": 0.0,
+    "graphs": 50,
+    "true_claims": {
+     "LW": 2.48,
+     "Naive": 8.42,
+     "LWu": 2.48,
+     "SepOnly": 4.2,
+     "PP3": 4.26,
+     "PP": 4.88,
+     "IdealU": 19.48
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 17,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 76,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 1.967741935483871,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.1619047619047618,
+    "ratio_PP3_SepOnly": 1.0142857142857142,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.68,
+     "beyond_NA": 0.68,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.22,
+    "gap_closed": 0.1411764705882353,
+    "frac_graphs_PP_gt_LWu": 0.56,
+    "new_per_graph": {
+     "new_total": 2.4,
+     "new_NE": 0.84,
+     "new_NA": 1.56,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.7416666666666667,
+    "mean_min_U_of_LWu_claims": 3.903225806451613,
+    "example_false": null,
+    "seconds": 2.3279683589935303
+   },
+   {
+    "p": 6,
+    "density": 0.5,
+    "q": 0.3,
+    "latent_among_R": 0.5,
+    "graphs": 50,
+    "true_claims": {
+     "LW": 3.44,
+     "Naive": 12.02,
+     "LWu": 3.44,
+     "SepOnly": 6.56,
+     "PP3": 6.52,
+     "PP": 7.02,
+     "IdealU": 21.2
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 23,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 71,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 2.0406976744186047,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0701219512195121,
+    "ratio_PP3_SepOnly": 0.9939024390243902,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.46,
+     "beyond_NA": 0.46,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.14,
+    "gap_closed": 0.20157657657657657,
+    "frac_graphs_PP_gt_LWu": 0.66,
+    "new_per_graph": {
+     "new_total": 3.58,
+     "new_NE": 1.48,
+     "new_NA": 2.1,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.8603351955307262,
+    "mean_min_U_of_LWu_claims": 3.6744186046511627,
+    "example_false": null,
+    "seconds": 2.3169069290161133
+   },
+   {
+    "p": 6,
+    "density": 0.5,
+    "q": 0.6,
+    "latent_among_R": 0.0,
+    "graphs": 50,
+    "true_claims": {
+     "LW": 0.38,
+     "Naive": 3.46,
+     "LWu": 0.38,
+     "SepOnly": 1.34,
+     "PP3": 1.2,
+     "PP": 1.34,
+     "IdealU": 22.52
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 9,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 32,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 3.5263157894736845,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0,
+    "ratio_PP3_SepOnly": 0.8955223880597014,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.0,
+     "beyond_NA": 0.0,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.0,
+    "gap_closed": 0.04336043360433604,
+    "frac_graphs_PP_gt_LWu": 0.28,
+    "new_per_graph": {
+     "new_total": 0.96,
+     "new_NE": 0.52,
+     "new_NA": 0.44,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.8541666666666666,
+    "mean_min_U_of_LWu_claims": 4.947368421052632,
+    "example_false": null,
+    "seconds": 2.283336877822876
+   },
+   {
+    "p": 6,
+    "density": 0.5,
+    "q": 0.6,
+    "latent_among_R": 0.5,
+    "graphs": 50,
+    "true_claims": {
+     "LW": 0.26,
+     "Naive": 2.46,
+     "LWu": 0.26,
+     "SepOnly": 0.88,
+     "PP3": 0.8,
+     "PP": 0.88,
+     "IdealU": 21.06
+    },
+    "graphs_with_false_claim": {
+     "LW": 0,
+     "Naive": 9,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "false_claims_total": {
+     "LW": 0,
+     "Naive": 24,
+     "LWu": 0,
+     "SepOnly": 0,
+     "PP3": 0,
+     "PP": 0,
+     "IdealU": 0
+    },
+    "ratio_PP_LWu": 3.3846153846153846,
+    "ratio_LWu_LW": 1.0,
+    "ratio_PP_SepOnly": 1.0,
+    "ratio_PP3_SepOnly": 0.9090909090909092,
+    "beyond_sep_per_graph": {
+     "beyond_sep_total": 0.0,
+     "beyond_NA": 0.0,
+     "beyond_A": 0.0,
+     "beyond_NE": 0.0,
+     "so_not_in_pp": 0.0
+    },
+    "frac_graphs_PP_gt_SepOnly": 0.0,
+    "gap_closed": 0.029807692307692313,
+    "frac_graphs_PP_gt_LWu": 0.24,
+    "new_per_graph": {
+     "new_total": 0.62,
+     "new_NE": 0.42,
+     "new_NA": 0.2,
+     "new_A": 0.0,
+     "lwu_not_in_pp": 0.0
+    },
+    "frac_new_from_U_le_3": 0.8709677419354839,
+    "mean_min_U_of_LWu_claims": 4.769230769230769,
+    "example_false": null,
+    "seconds": 2.4929230213165283
+   }
+  ],
+  "best_MNAR_ratio": 2.3188405797101455,
+  "K3_verdict": "worth a finite-sample pilot",
+  "cells_ge_110": 21,
+  "cells": 24,
+  "best_MNAR_ratio_PP_SepOnly": 1.192063492063492,
+  "K6_verdict": "orientation transport worth a pilot",
+  "cells_K6_ge_110": 3
+ }
+}

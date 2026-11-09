@@ -1,0 +1,1477 @@
+{
+ "note": "Forward-citation screen for T4-L, 2026-11-06. Keyword filter on title and abstract only; full text not screened. Semantic Scholar returned 0 for Witte because of rate limiting.",
+ "semantic_scholar": {
+  "counts": {
+   "M1 Strobl 2018": 46,
+   "Tu 2019 MVPC": 114,
+   "Witte 2022": 0,
+   "Didelez 2010": 80,
+   "Mohan Pearl 2021 review": 254,
+   "Nabi Bhattacharya 2022": 11,
+   "Qiao 2024": 12
+  },
+  "unique": 454,
+  "kept": [
+   {
+    "title": "A Causal Discovery Workflow for Rare Diseases: Experts-in-the-Loop Analysis of Sparse Longitudinal Data",
+    "year": 2026,
+    "venue": "Journal of medical systems",
+    "arxiv": null,
+    "doi": "10.1007/s10916-025-02327-4",
+    "seeds": [
+     "Tu 2019 MVPC"
+    ]
+   },
+   {
+    "title": "Best Practices in Handling Missing Data in Psychological Research",
+    "year": 2026,
+    "venue": "Advances in Methods and Practices in Psychological Science",
+    "arxiv": null,
+    "doi": "10.1177/25152459261444273",
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Beyond observational data: understanding anaesthesia research better with causal diagrams: An introductory review.",
+    "year": 2026,
+    "venue": "European Journal of Anaesthesiology",
+    "arxiv": null,
+    "doi": "10.1097/EJA.0000000000002355",
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Causal Modeling of Selection in Evolution",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "arxiv": "2606.05689",
+    "doi": "10.48550/arXiv.2606.05689",
+    "seeds": [
+     "Tu 2019 MVPC"
+    ]
+   },
+   {
+    "title": "Database Querying under Missing Values Governed by Missingness Mechanisms",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "arxiv": "2604.06520",
+    "doi": "10.48550/arXiv.2604.06520",
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Databases with Missing Values that are Governed by Missingness Mechanisms",
+    "year": 2026,
+    "venue": "",
+    "arxiv": "2609.26692",
+    "doi": null,
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Drop the mask! GAMM-A Taxonomy for Graph Attributes Missing Mechanisms",
+    "year": 2026,
+    "venue": "International Symposium on Intelligent Data Analysis",
+    "arxiv": "2602.08407",
+    "doi": "10.48550/arXiv.2602.08407",
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Generalizing Identifiability Results in Causal Discovery from Complete Data to Missing Data Settings",
+    "year": 2026,
+    "venue": "",
+    "arxiv": "2610.19211",
+    "doi": null,
+    "seeds": [
+     "M1 Strobl 2018",
+     "Tu 2019 MVPC",
+     "Mohan Pearl 2021 review",
+     "Qiao 2024"
+    ]
+   },
+   {
+    "title": "GoT-CD: Graph-of-Thoughts Causal Discovery and the Fragility of Post-hoc Path-Specific Fairness Audits",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "arxiv": "2608.02877",
+    "doi": "10.48550/arXiv.2608.02877",
+    "seeds": [
+     "Tu 2019 MVPC"
+    ]
+   },
+   {
+    "title": "Graphical Ising Models for Missing Data Patterns Detection in Sustainability Surveys",
+    "year": 2026,
+    "venue": "Social Indicators Research",
+    "arxiv": null,
+    "doi": "10.1007/s11205-026-03844-6",
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Joint Treatment Effect Estimation from Incomplete Healthcare Data: Temporal Causal Normalizing Flows with LLM-driven Evolutionary MNAR Imputation",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "arxiv": "2605.05125",
+    "doi": "10.48550/arXiv.2605.05125",
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Missing data and cluster graphs: cluster-level missingness vs variable-level missingness",
+    "year": 2026,
+    "venue": "",
+    "arxiv": "2605.20943",
+    "doi": null,
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "PAIR-CI: Calibrated Conditional Independence Testing for Causal Discovery with Incomplete Data",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "arxiv": "2605.04838",
+    "doi": "10.48550/arXiv.2605.04838",
+    "seeds": [
+     "Tu 2019 MVPC",
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "RC-GNN: robust causal graph neural networks under compound sensor corruptions",
+    "year": 2026,
+    "venue": "Defense + Security",
+    "arxiv": null,
+    "doi": "10.1117/12.3095157",
+    "seeds": [
+     "Tu 2019 MVPC",
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Rethinking GNNs and Missing Features: Challenges, Evaluation and a Robust Solution",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "arxiv": "2601.04855",
+    "doi": "10.48550/arXiv.2601.04855",
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Score-Based Methods for Selecting Direct Causes in Reweighted Distributions",
+    "year": 2026,
+    "venue": "",
+    "arxiv": "2610.09100",
+    "doi": null,
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Survival as a source of confounding, selection bias, and effect modification",
+    "year": 2026,
+    "venue": "International Journal of Epidemiology",
+    "arxiv": null,
+    "doi": "10.1093/ije/dyag099",
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "When Listwise Deletion Works: Causal Diagrams and Complete-Case Regression",
+    "year": 2026,
+    "venue": "",
+    "arxiv": "2611.04366",
+    "doi": null,
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "An Interdisciplinary and Cross-Task Review on Missing Data Imputation",
+    "year": 2025,
+    "venue": "Foundations and Trends® in Signal Processing",
+    "arxiv": "2511.01196",
+    "doi": "10.1108/FTSIG-11-2025-0139",
+    "seeds": [
+     "Tu 2019 MVPC"
+    ]
+   },
+   {
+    "title": "Causal Discovery for Irregularly Time Series with Consistency Guarantees",
+    "year": 2025,
+    "venue": "",
+    "arxiv": "2507.03310",
+    "doi": null,
+    "seeds": [
+     "Tu 2019 MVPC",
+     "Qiao 2024"
+    ]
+   },
+   {
+    "title": "Causal Discovery for Rolling Bearing Fault Under Missing Data: From the Perspective of Causal Effect and Information Flow",
+    "year": 2025,
+    "venue": "IEEE Transactions on Instrumentation and Measurement",
+    "arxiv": null,
+    "doi": "10.1109/TIM.2024.3522374",
+    "seeds": [
+     "M1 Strobl 2018",
+     "Tu 2019 MVPC",
+     "Mohan Pearl 2021 review",
+     "Qiao 2024"
+    ]
+   },
+   {
+    "title": "Causal Effect Estimation With TMLE: Handling Missing Data and Near Violations of Positivity",
+    "year": 2025,
+    "venue": "Biometrical journal. Biometrische Zeitschrift",
+    "arxiv": "2510.22202",
+    "doi": "10.1002/bimj.70134",
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Causal Inference amid Missingness-Specific Independences and Mechanism Shifts",
+    "year": 2025,
+    "venue": "Conference on Uncertainty in Artificial Intelligence",
+    "arxiv": "2506.15441",
+    "doi": null,
+    "seeds": [
+     "Mohan Pearl 2021 review",
+     "Nabi Bhattacharya 2022"
+    ]
+   },
+   {
+    "title": "Conformal network link prediction with false discovery rate control under unstructured missingness",
+    "year": 2025,
+    "venue": "Journal of Computational And Graphical Statistics",
+    "arxiv": "2507.07025",
+    "doi": "10.1080/10618600.2026.2719794",
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Federated causal discovery with missing data in a multicentric study on endometrial cancer",
+    "year": 2025,
+    "venue": "Journal of Biomedical Informatics",
+    "arxiv": null,
+    "doi": "10.1016/j.jbi.2025.104877",
+    "seeds": [
+     "Mohan Pearl 2021 review",
+     "Qiao 2024"
+    ]
+   },
+   {
+    "title": "Federated causal structure learning with missing data",
+    "year": 2025,
+    "venue": "Knowledge-Based Systems",
+    "arxiv": null,
+    "doi": "10.1016/j.knosys.2025.114601",
+    "seeds": [
+     "Tu 2019 MVPC"
+    ]
+   },
+   {
+    "title": "Local causal discovery in epidemiology: an application to quantifying the effect of diabetes on severe liver fibrosis in patients with viral hepatitis",
+    "year": 2025,
+    "venue": "medRxiv",
+    "arxiv": null,
+    "doi": "10.1101/2025.09.02.25334768",
+    "seeds": [
+     "Tu 2019 MVPC"
+    ]
+   },
+   {
+    "title": "Markov Missing Graph: A Graphical Approach for Missing Data Imputation",
+    "year": 2025,
+    "venue": "",
+    "arxiv": "2509.03410",
+    "doi": null,
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "On the Graphical Rules for Recovering the Average Treatment Effect Under Selection Bias",
+    "year": 2025,
+    "venue": "",
+    "arxiv": "2502.00924",
+    "doi": null,
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Recursive Equations For Imputation Of Missing Not At Random Data With Sparse Pattern Support",
+    "year": 2025,
+    "venue": "arXiv.org",
+    "arxiv": "2507.16107",
+    "doi": "10.48550/arXiv.2507.16107",
+    "seeds": [
+     "Tu 2019 MVPC",
+     "Didelez 2010",
+     "Mohan Pearl 2021 review",
+     "Nabi Bhattacharya 2022"
+    ]
+   },
+   {
+    "title": "Robust and missing-data-aware time-varying graphical lasso(RM-TVGL) for high-dimensional dynamic network estimation",
+    "year": 2025,
+    "venue": "Statistics and computing",
+    "arxiv": null,
+    "doi": "10.1007/s11222-025-10782-9",
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Using directed acyclic graphs to determine whether multiple imputation or subsample-multiple imputation estimates of an exposure-outcome association are unbiased",
+    "year": 2025,
+    "venue": "American Journal of Epidemiology",
+    "arxiv": "2503.24035",
+    "doi": "10.1093/aje/kwaf265",
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "When Selection Meets Intervention: Additional Complexities in Causal Discovery",
+    "year": 2025,
+    "venue": "International Conference on Learning Representations",
+    "arxiv": "2503.07302",
+    "doi": "10.48550/arXiv.2503.07302",
+    "seeds": [
+     "Didelez 2010"
+    ]
+   },
+   {
+    "title": "COKE: Causal Discovery with Chronological Order and Expert Knowledge in High Proportion of Missing Manufacturing Data",
+    "year": 2024,
+    "venue": "International Conference on Information and Knowledge Management",
+    "arxiv": "2407.12254",
+    "doi": "10.1145/3627673.3680083",
+    "seeds": [
+     "Tu 2019 MVPC",
+     "Qiao 2024"
+    ]
+   },
+   {
+    "title": "Causal Inference with Latent Variables: Recent Advances and Future Prospectives",
+    "year": 2024,
+    "venue": "Knowledge Discovery and Data Mining",
+    "arxiv": "2406.13966",
+    "doi": "10.1145/3637528.3671450",
+    "seeds": [
+     "M1 Strobl 2018"
+    ]
+   },
+   {
+    "title": "Full Law Identification under Missing Data with Categorical Variables",
+    "year": 2024,
+    "venue": "",
+    "arxiv": "2402.05633",
+    "doi": null,
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Gene Regulatory Network Inference in the Presence of Dropouts: a Causal View",
+    "year": 2024,
+    "venue": "International Conference on Learning Representations",
+    "arxiv": "2403.15500",
+    "doi": "10.48550/arXiv.2403.15500",
+    "seeds": [
+     "M1 Strobl 2018",
+     "Tu 2019 MVPC"
+    ]
+   },
+   {
+    "title": "Graph-enhanced data recovery network (GEDR-Net): a robust approach for missing transaction data in power markets",
+    "year": 2024,
+    "venue": "Other Conferences",
+    "arxiv": null,
+    "doi": "10.1117/12.3045180",
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Graphical tools for detection and control of selection bias with multiple exposures and samples",
+    "year": 2024,
+    "venue": "",
+    "arxiv": "2407.20027",
+    "doi": null,
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Learning Cyclic Causal Models from Incomplete Data",
+    "year": 2024,
+    "venue": "arXiv.org",
+    "arxiv": "2402.15625",
+    "doi": "10.48550/arXiv.2402.15625",
+    "seeds": [
+     "M1 Strobl 2018",
+     "Tu 2019 MVPC"
+    ]
+   },
+   {
+    "title": "MissNODAG: Differentiable Cyclic Causal Graph Learning from Incomplete Data",
+    "year": 2024,
+    "venue": "Trans. Mach. Learn. Res.",
+    "arxiv": "2410.18918",
+    "doi": "10.48550/arXiv.2410.18918",
+    "seeds": [
+     "M1 Strobl 2018",
+     "Tu 2019 MVPC",
+     "Mohan Pearl 2021 review",
+     "Nabi Bhattacharya 2022"
+    ]
+   },
+   {
+    "title": "Monotone Missing Data: A Blessing and a Curse",
+    "year": 2024,
+    "venue": "Trans. Mach. Learn. Res.",
+    "arxiv": "2411.03848",
+    "doi": null,
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Optimal Transport for Structure Learning Under Missing Data",
+    "year": 2024,
+    "venue": "International Conference on Machine Learning",
+    "arxiv": "2402.15255",
+    "doi": "10.48550/arXiv.2402.15255",
+    "seeds": [
+     "M1 Strobl 2018",
+     "Tu 2019 MVPC",
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Recoverability of causal effects under presence of missing data: a longitudinal case study",
+    "year": 2024,
+    "venue": "Biostatistics",
+    "arxiv": "2402.14562",
+    "doi": "10.1093/biostatistics/kxae044",
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Recovery and inference of causal effects with sequential adjustment for confounding and attrition",
+    "year": 2024,
+    "venue": "Journal of Causal Inference",
+    "arxiv": "2401.16990",
+    "doi": "10.1515/jci-2024-0009",
+    "seeds": [
+     "Didelez 2010",
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Simple graphical rules for assessing selection bias in general-population and selected-sample treatment effects",
+    "year": 2024,
+    "venue": "American Journal of Epidemiology",
+    "arxiv": null,
+    "doi": "10.1093/aje/kwae145",
+    "seeds": [
+     "Didelez 2010",
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Software application profile: tpc and micd-R packages for causal discovery with incomplete cohort data.",
+    "year": 2024,
+    "venue": "International Journal of Epidemiology",
+    "arxiv": null,
+    "doi": "10.1093/ije/dyae113",
+    "seeds": [
+     "M1 Strobl 2018"
+    ]
+   },
+   {
+    "title": "Treating gaps and biases in biodiversity data as a missing data problem",
+    "year": 2024,
+    "venue": "Biological Reviews of The Cambridge Philosophical Society",
+    "arxiv": null,
+    "doi": "10.1111/brv.13127",
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "A Guide to Impact Evaluation under Sample Selection and Missing Data: Teacher's Aides and Adolescent Mental Health",
+    "year": 2023,
+    "venue": "",
+    "arxiv": "2308.04963",
+    "doi": null,
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "A Review of Causal Identifiability Techniques across Different Observational Datasets",
+    "year": 2023,
+    "venue": "International Journal of Current Science Research and Review",
+    "arxiv": null,
+    "doi": "10.47191/ijcsrr/v6-i11-10",
+    "seeds": [
+     "Tu 2019 MVPC"
+    ]
+   },
+   {
+    "title": "Addressing Non-ignorable Panel Attrition Using External Population Data: Analysis of Demographic Events From Survey Data",
+    "year": 2023,
+    "venue": "Sociological Methods &amp; Research",
+    "arxiv": null,
+    "doi": "10.1177/00491241231186659",
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Assumptions and analysis planning in studies with missing data in multiple variables: moving beyond the MCAR/MAR/MNAR classification",
+    "year": 2023,
+    "venue": "International Journal of Epidemiology",
+    "arxiv": null,
+    "doi": "10.1093/ije/dyad008",
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "CUTS: Neural Causal Discovery from Irregular Time-Series Data",
+    "year": 2023,
+    "venue": "International Conference on Learning Representations",
+    "arxiv": "2302.07458",
+    "doi": "10.48550/arXiv.2302.07458",
+    "seeds": [
+     "M1 Strobl 2018",
+     "Tu 2019 MVPC"
+    ]
+   },
+   {
+    "title": "Case Studies of Causal Discovery from IT Monitoring Time Series",
+    "year": 2023,
+    "venue": "arXiv.org",
+    "arxiv": "2307.15678",
+    "doi": "10.48550/arXiv.2307.15678",
+    "seeds": [
+     "Tu 2019 MVPC"
+    ]
+   },
+   {
+    "title": "Causal Discovery with Missing Data in a Multicentric Clinical Study",
+    "year": 2023,
+    "venue": "Conference on Artificial Intelligence in Medicine in Europe",
+    "arxiv": "2305.10050",
+    "doi": "10.48550/arXiv.2305.10050",
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Deception by Omission: Using Adversarial Missingness to Poison Causal Structure Learning",
+    "year": 2023,
+    "venue": "Knowledge Discovery and Data Mining",
+    "arxiv": "2305.20043",
+    "doi": "10.1145/3580305.3599297",
+    "seeds": [
+     "Tu 2019 MVPC"
+    ]
+   },
+   {
+    "title": "Diagnosing and Handling Common Violations of Missing at Random",
+    "year": 2023,
+    "venue": "Psychometrika",
+    "arxiv": null,
+    "doi": "10.1007/s11336-022-09896-0",
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Estimating marginal treatment effect in cluster randomized trials with multi-level missing outcomes.",
+    "year": 2023,
+    "venue": "Biometrics",
+    "arxiv": "2304.05583",
+    "doi": "10.1093/biomtc/ujae135",
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Graphical Models of Entangled Missingness",
+    "year": 2023,
+    "venue": "",
+    "arxiv": "2304.01953",
+    "doi": null,
+    "seeds": [
+     "Mohan Pearl 2021 review",
+     "Nabi Bhattacharya 2022"
+    ]
+   },
+   {
+    "title": "Identification of Causal Structure in the Presence of Missing Data with Additive Noise Model",
+    "year": 2023,
+    "venue": "AAAI Conference on Artificial Intelligence",
+    "arxiv": "2312.12206",
+    "doi": "10.48550/arXiv.2312.12206",
+    "seeds": [
+     "M1 Strobl 2018",
+     "Tu 2019 MVPC",
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Potential biases in test-negative design studies of COVID-19 vaccine effectiveness arising from the inclusion of asymptomatic individuals",
+    "year": 2023,
+    "venue": "medRxiv",
+    "arxiv": null,
+    "doi": "10.1093/aje/kwae288",
+    "seeds": [
+     "Didelez 2010"
+    ]
+   },
+   {
+    "title": "Recoverability and estimation of causal effects under typical multivariable missingness mechanisms",
+    "year": 2023,
+    "venue": "Biometrical journal. Biometrische Zeitschrift",
+    "arxiv": "2301.06739",
+    "doi": "10.1002/bimj.202200326",
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Risk Assessment of Lymph Node Metastasis in Endometrial Cancer Patients: A Causal Approach",
+    "year": 2023,
+    "venue": "HC@AIxIA",
+    "arxiv": "2305.10041",
+    "doi": "10.48550/arXiv.2305.10041",
+    "seeds": [
+     "M1 Strobl 2018"
+    ]
+   },
+   {
+    "title": "Sufficient identification conditions and semiparametric estimation under missing not at random mechanisms",
+    "year": 2023,
+    "venue": "Conference on Uncertainty in Artificial Intelligence",
+    "arxiv": "2306.06443",
+    "doi": null,
+    "seeds": [
+     "Nabi Bhattacharya 2022"
+    ]
+   },
+   {
+    "title": "The Impact of Missing Data on Causal Discovery: A Multicentric Clinical Study",
+    "year": 2023,
+    "venue": "",
+    "arxiv": null,
+    "doi": null,
+    "seeds": [
+     "Tu 2019 MVPC",
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Towards a Transportable Causal Network Model Based on Observational Healthcare Data",
+    "year": 2023,
+    "venue": "HC@AIxIA",
+    "arxiv": "2311.08427",
+    "doi": "10.48550/arXiv.2311.08427",
+    "seeds": [
+     "Tu 2019 MVPC",
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "A Semi-Synthetic Dataset Generation Framework for Causal Inference in Recommender Systems",
+    "year": 2022,
+    "venue": "arXiv.org",
+    "arxiv": "2202.11351",
+    "doi": "10.48550/arXiv.2202.11351",
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "A self‐censoring model for multivariate nonignorable nonmonotone missing data",
+    "year": 2022,
+    "venue": "Biometrics",
+    "arxiv": "2207.08535",
+    "doi": "10.1111/biom.13916",
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Bayesian Network Structure Learning: A Review",
+    "year": 2022,
+    "venue": "2022 6th Asian Conference on Artificial Intelligence Technology (ACAIT)",
+    "arxiv": null,
+    "doi": "10.1109/ACAIT56212.2022.10137915",
+    "seeds": [
+     "M1 Strobl 2018"
+    ]
+   },
+   {
+    "title": "Causal Discovery of Medical Test Parameters Based on Improved PC Algorithm",
+    "year": 2022,
+    "venue": "2022 4th International Conference on Data-driven Optimization of Complex Systems (DOCS)",
+    "arxiv": null,
+    "doi": "10.1109/DOCS55193.2022.9967738",
+    "seeds": [
+     "Tu 2019 MVPC"
+    ]
+   },
+   {
+    "title": "Causal Graphs for Missing Data: A Gentle Introduction",
+    "year": 2022,
+    "venue": "Probabilistic and Causal Inference",
+    "arxiv": null,
+    "doi": "10.1145/3501714.3501750",
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Deep End-to-end Causal Inference",
+    "year": 2022,
+    "venue": "Trans. Mach. Learn. Res.",
+    "arxiv": "2202.02195",
+    "doi": "10.48550/arXiv.2202.02195",
+    "seeds": [
+     "M1 Strobl 2018",
+     "Tu 2019 MVPC"
+    ]
+   },
+   {
+    "title": "GLACIAL: Granger and Learning-based Causality Analysis for Longitudinal Imaging Studies",
+    "year": 2022,
+    "venue": "Machine Learning for Biomedical Imaging",
+    "arxiv": "2210.07416",
+    "doi": "10.59275/j.melba.2024-c7eg",
+    "seeds": [
+     "M1 Strobl 2018",
+     "Tu 2019 MVPC"
+    ]
+   },
+   {
+    "title": "Local Constraint-Based Causal Discovery under Selection Bias",
+    "year": 2022,
+    "venue": "CLEaR",
+    "arxiv": "2203.01848",
+    "doi": "10.48550/arXiv.2203.01848",
+    "seeds": [
+     "Tu 2019 MVPC"
+    ]
+   },
+   {
+    "title": "MissDAG: Causal Discovery in the Presence of Missing Data with Continuous Additive Noise Models",
+    "year": 2022,
+    "venue": "Neural Information Processing Systems",
+    "arxiv": "2205.13869",
+    "doi": "10.48550/arXiv.2205.13869",
+    "seeds": [
+     "Tu 2019 MVPC",
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "On Testability and Goodness of Fit Tests in Missing Data Models",
+    "year": 2022,
+    "venue": "Conference on Uncertainty in Artificial Intelligence",
+    "arxiv": "2203.00132",
+    "doi": "10.48550/arXiv.2203.00132",
+    "seeds": [
+     "Tu 2019 MVPC",
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "A practical guide to causal discovery with cohort data",
+    "year": 2021,
+    "venue": "",
+    "arxiv": "2108.13395",
+    "doi": null,
+    "seeds": [
+     "M1 Strobl 2018",
+     "Tu 2019 MVPC"
+    ]
+   },
+   {
+    "title": "Causal Algebras on Chain Event Graphs with Informed Missingness for System Failure",
+    "year": 2021,
+    "venue": "Entropy",
+    "arxiv": null,
+    "doi": "10.3390/e23101308",
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Explaining and predicting human behavior and social dynamics in simulated virtual worlds: reproducibility, generalizability, and robustness of causal discovery methods",
+    "year": 2021,
+    "venue": "Computational and mathematical organization theory",
+    "arxiv": null,
+    "doi": "10.1007/s10588-021-09351-y",
+    "seeds": [
+     "Tu 2019 MVPC"
+    ]
+   },
+   {
+    "title": "Greedy structure learning from data that contain systematic missing values",
+    "year": 2021,
+    "venue": "Machine-mediated learning",
+    "arxiv": "2107.04184",
+    "doi": "10.1007/s10994-022-06195-8",
+    "seeds": [
+     "M1 Strobl 2018",
+     "Tu 2019 MVPC",
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Multiple imputation and test‐wise deletion for causal discovery with incomplete cohort data",
+    "year": 2021,
+    "venue": "Statistics in Medicine",
+    "arxiv": "2108.13331",
+    "doi": "10.1002/sim.9535",
+    "seeds": [
+     "M1 Strobl 2018",
+     "Tu 2019 MVPC",
+     "Didelez 2010",
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Severity Adjustment in the Test-Negative Design.",
+    "year": 2021,
+    "venue": "American Journal of Epidemiology",
+    "arxiv": null,
+    "doi": "10.1093/aje/kwab066",
+    "seeds": [
+     "Didelez 2010"
+    ]
+   },
+   {
+    "title": "Simultaneous Missing Value Imputation and Structure Learning with Groups",
+    "year": 2021,
+    "venue": "Neural Information Processing Systems",
+    "arxiv": "2110.08223",
+    "doi": "10.52202/068431-1455",
+    "seeds": [
+     "M1 Strobl 2018",
+     "Tu 2019 MVPC"
+    ]
+   },
+   {
+    "title": "VICause: Simultaneous Missing Value Imputation and Causal Discovery with Groups",
+    "year": 2021,
+    "venue": "arXiv.org",
+    "arxiv": null,
+    "doi": "10.48550/arXiv.2110.08223",
+    "seeds": [
+     "M1 Strobl 2018",
+     "Tu 2019 MVPC"
+    ]
+   },
+   {
+    "title": "A Potential Outcomes Approach to Selection Bias",
+    "year": 2020,
+    "venue": "Epidemiology",
+    "arxiv": "2008.03786",
+    "doi": "10.1097/EDE.0000000000001660",
+    "seeds": [
+     "Didelez 2010"
+    ]
+   },
+   {
+    "title": "Causal Discovery from Incomplete Data: A Deep Learning Approach",
+    "year": 2020,
+    "venue": "arXiv.org",
+    "arxiv": "2001.05343",
+    "doi": "10.48550/arXiv.2001.05343",
+    "seeds": [
+     "M1 Strobl 2018",
+     "Tu 2019 MVPC"
+    ]
+   },
+   {
+    "title": "Causal Discovery in the Presence of Missing Values for Neuropathic Pain Diagnosis",
+    "year": 2020,
+    "venue": "",
+    "arxiv": null,
+    "doi": null,
+    "seeds": [
+     "M1 Strobl 2018",
+     "Tu 2019 MVPC"
+    ]
+   },
+   {
+    "title": "Causal discovery of gene regulation with incomplete data",
+    "year": 2020,
+    "venue": "Journal of the Royal Statistical Society: Series A (Statistics in Society)",
+    "arxiv": null,
+    "doi": "10.1111/rssa.12565",
+    "seeds": [
+     "M1 Strobl 2018",
+     "Tu 2019 MVPC"
+    ]
+   },
+   {
+    "title": "Full Law Identification in Graphical Models of Missing Data: Completeness Results",
+    "year": 2020,
+    "venue": "International Conference on Machine Learning",
+    "arxiv": "2004.04872",
+    "doi": "10.48550/arXiv.2004.04872",
+    "seeds": [
+     "M1 Strobl 2018",
+     "Tu 2019 MVPC"
+    ]
+   },
+   {
+    "title": "Handling missing values for mining gradual patterns from NoSQL graph databases",
+    "year": 2020,
+    "venue": "Future generations computer systems",
+    "arxiv": null,
+    "doi": "10.1016/j.future.2019.10.004",
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Pattern graphs: A graphical approach to nonmonotone missing data",
+    "year": 2020,
+    "venue": "Annals of Statistics",
+    "arxiv": "2004.00744",
+    "doi": "10.1214/21-aos2094",
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "The Importance of Modeling Data Missingness in Algorithmic Fairness: A Causal Perspective",
+    "year": 2020,
+    "venue": "AAAI Conference on Artificial Intelligence",
+    "arxiv": "2012.11448",
+    "doi": "10.48550/arXiv.2012.11448",
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Causal Effect Identification from Multiple Incomplete Data Sources: A General Search-based Approach",
+    "year": 2019,
+    "venue": "Journal of Statistical Software",
+    "arxiv": "1902.01073",
+    "doi": "10.18637/jss.v099.i05",
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Graphical Causal Models for Survey Inference",
+    "year": 2019,
+    "venue": "Sociological Methods &amp; Research",
+    "arxiv": null,
+    "doi": "10.1177/00491241231176851",
+    "seeds": [
+     "Didelez 2010",
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Neuropathic Pain Diagnosis Simulator for Causal Discovery Algorithm Evaluation",
+    "year": 2019,
+    "venue": "Neural Information Processing Systems",
+    "arxiv": "1906.01732",
+    "doi": "10.48550/arXiv.1906.01732",
+    "seeds": [
+     "M1 Strobl 2018",
+     "Tu 2019 MVPC"
+    ]
+   },
+   {
+    "title": "Canonical Causal Diagrams to Guide the Treatment of Missing Data in Epidemiologic Studies",
+    "year": 2018,
+    "venue": "American Journal of Epidemiology",
+    "arxiv": null,
+    "doi": "10.1093/aje/kwy173",
+    "seeds": [
+     "Mohan Pearl 2021 review"
+    ]
+   },
+   {
+    "title": "Causal Discovery in the Presence of Missing Data",
+    "year": 2018,
+    "venue": "",
+    "arxiv": null,
+    "doi": null,
+    "seeds": [
+     "M1 Strobl 2018"
+    ]
+   },
+   {
+    "title": "Causal discovery in the presence of missing data",
+    "year": 2018,
+    "venue": "International Conference on Artificial Intelligence and Statistics",
+    "arxiv": "1807.04010",
+    "doi": "10.48550/arXiv.1807.04010",
+    "seeds": [
+     "M1 Strobl 2018"
+    ]
+   },
+   {
+    "title": "Learning causal structure from mixed data with missing values using Gaussian copula models",
+    "year": 2018,
+    "venue": "Statistics and computing",
+    "arxiv": null,
+    "doi": "10.1007/s11222-018-9810-x",
+    "seeds": [
+     "M1 Strobl 2018"
+    ]
+   },
+   {
+    "title": "Selection Bias Correction in Supervised Learning with Importance Weight. (L'apprentissage des modèles graphiques probabilistes et la correction de biais sélection)",
+    "year": 2017,
+    "venue": "",
+    "arxiv": null,
+    "doi": "10.70675/8508e04bz5de7z47fdza12cz9503533fa640",
+    "seeds": [
+     "Didelez 2010"
+    ]
+   },
+   {
+    "title": "Recovering from Selection Bias in Causal and Statistical Inference",
+    "year": 2014,
+    "venue": "AAAI Conference on Artificial Intelligence",
+    "arxiv": null,
+    "doi": "10.1145/3501714.3501740",
+    "seeds": [
+     "Didelez 2010"
+    ]
+   },
+   {
+    "title": "Study Design in Causal Models",
+    "year": 2012,
+    "venue": "",
+    "arxiv": "1211.2958",
+    "doi": "10.1111/sjos.12110",
+    "seeds": [
+     "Didelez 2010"
+    ]
+   },
+   {
+    "title": "Controlling Selection Bias in Causal Inference",
+    "year": 2011,
+    "venue": "International Conference on Artificial Intelligence and Statistics",
+    "arxiv": null,
+    "doi": "10.1609/aaai.v25i1.8056",
+    "seeds": [
+     "Didelez 2010"
+    ]
+   },
+   {
+    "title": "UvA-DARE (Digital Academic Repository) Local Constraint-Based Causal Discovery under Selection Bias",
+    "year": null,
+    "venue": "",
+    "arxiv": null,
+    "doi": null,
+    "seeds": [
+     "Tu 2019 MVPC"
+    ]
+   }
+  ]
+ },
+ "openalex": {
+  "counts": {
+   "M1 Strobl 2018": 28,
+   "Witte 2022": 21,
+   "Didelez 2010": 78,
+   "Tu 2019 MVPC": 37,
+   "Mohan Pearl 2021": 177,
+   "Gain Shpitser 2018": null,
+   "Foraita 2020": 24
+  },
+  "unique": 321,
+  "kept": [
+   {
+    "title": "Causal Discovery with Incomplete Data Integrated from Multiple Sources",
+    "year": 2026,
+    "venue": "Journal of Survey Statistics and Methodology",
+    "doi": "https://doi.org/10.1093/jssam/smag016",
+    "seeds": [
+     "M1 Strobl 2018"
+    ]
+   },
+   {
+    "title": "Graphical Ising Models for Missing Data Patterns Detection in Sustainability Surveys",
+    "year": 2026,
+    "venue": "Social Indicators Research",
+    "doi": "https://doi.org/10.1007/s11205-026-03844-6",
+    "seeds": [
+     "Mohan Pearl 2021"
+    ]
+   },
+   {
+    "title": "RC-GNN: robust causal graph neural networks under compound sensor corruptions",
+    "year": 2026,
+    "venue": "Machine Learning from Challenging Data",
+    "doi": "https://doi.org/10.1117/12.3095157",
+    "seeds": [
+     "Mohan Pearl 2021"
+    ]
+   },
+   {
+    "title": "Authors’ reply to the Discussion of ‘Methods for estimating the exposure–response curve to inform the new safety standards for fine particulate matter’",
+    "year": 2025,
+    "venue": "Journal of the Royal Statistical Society Series A (Statistics in Society)",
+    "doi": "https://doi.org/10.1093/jrsssa/qnaf057",
+    "seeds": [
+     "Mohan Pearl 2021"
+    ]
+   },
+   {
+    "title": "Federated causal discovery with missing data in a multicentric study on endometrial cancer",
+    "year": 2025,
+    "venue": "Journal of Biomedical Informatics",
+    "doi": "https://doi.org/10.1016/j.jbi.2025.104877",
+    "seeds": [
+     "Tu 2019 MVPC",
+     "Mohan Pearl 2021"
+    ]
+   },
+   {
+    "title": "Federated causal structure learning with missing data",
+    "year": 2025,
+    "venue": "Knowledge-Based Systems",
+    "doi": "https://doi.org/10.1016/j.knosys.2025.114601",
+    "seeds": [
+     "Foraita 2020"
+    ]
+   },
+   {
+    "title": "Hierarchical Causal Discovery From Large-Scale Observed Variables",
+    "year": 2025,
+    "venue": "IEEE Transactions on Knowledge and Data Engineering",
+    "doi": "https://doi.org/10.1109/tkde.2025.3539788",
+    "seeds": [
+     "Witte 2022",
+     "Foraita 2020"
+    ]
+   },
+   {
+    "title": "Robust and missing-data-aware time-varying graphical lasso(RM-TVGL) for high-dimensional dynamic network estimation",
+    "year": 2025,
+    "venue": "Statistics and Computing",
+    "doi": "https://doi.org/10.1007/s11222-025-10782-9",
+    "seeds": [
+     "Mohan Pearl 2021"
+    ]
+   },
+   {
+    "title": "Using Graphical Models for Missing Data Patterns Detection in Sustainability Surveys",
+    "year": 2025,
+    "venue": "Springer eBooks",
+    "doi": "https://doi.org/10.1007/978-3-031-96033-8_4",
+    "seeds": [
+     "Mohan Pearl 2021"
+    ]
+   },
+   {
+    "title": "Using directed acyclic graphs to determine whether multiple imputation or subsample-multiple imputation estimates of an exposure-outcome association are unbiased",
+    "year": 2025,
+    "venue": "American Journal of Epidemiology",
+    "doi": "https://doi.org/10.1093/aje/kwaf265",
+    "seeds": [
+     "Mohan Pearl 2021"
+    ]
+   },
+   {
+    "title": "A longitudinal causal graph analysis investigating modifiable risk factors and obesity in a European cohort of children and adolescents",
+    "year": 2024,
+    "venue": "Scientific Reports",
+    "doi": "https://doi.org/10.1038/s41598-024-56721-y",
+    "seeds": [
+     "Witte 2022",
+     "Foraita 2020"
+    ]
+   },
+   {
+    "title": "Causal Discovery for Rolling Bearing Fault Under Missing Data: From the Perspective of Causal Effect and Information Flow",
+    "year": 2024,
+    "venue": "IEEE Transactions on Instrumentation and Measurement",
+    "doi": "https://doi.org/10.1109/tim.2024.3522374",
+    "seeds": [
+     "M1 Strobl 2018",
+     "Witte 2022",
+     "Tu 2019 MVPC",
+     "Mohan Pearl 2021",
+     "Foraita 2020"
+    ]
+   },
+   {
+    "title": "Identification of Causal Structure in the Presence of Missing Data with Additive Noise Model",
+    "year": 2024,
+    "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+    "doi": "https://doi.org/10.1609/aaai.v38i18.30036",
+    "seeds": [
+     "M1 Strobl 2018",
+     "Tu 2019 MVPC",
+     "Mohan Pearl 2021"
+    ]
+   },
+   {
+    "title": "Mathur and Shpitser respond to “The evolution of selection bias in the recent epidemiologic literature—a selective overview”",
+    "year": 2024,
+    "venue": "American Journal of Epidemiology",
+    "doi": "https://doi.org/10.1093/aje/kwae287",
+    "seeds": [
+     "Mohan Pearl 2021"
+    ]
+   },
+   {
+    "title": "Recoverability of causal effects under presence of missing data: a longitudinal case study",
+    "year": 2024,
+    "venue": "Biostatistics",
+    "doi": "https://doi.org/10.1093/biostatistics/kxae044",
+    "seeds": [
+     "Mohan Pearl 2021"
+    ]
+   },
+   {
+    "title": "Software application profile: tpc and micd—R packages for causal discovery with incomplete cohort data",
+    "year": 2024,
+    "venue": "International Journal of Epidemiology",
+    "doi": "https://doi.org/10.1093/ije/dyae113",
+    "seeds": [
+     "M1 Strobl 2018",
+     "Witte 2022",
+     "Foraita 2020"
+    ]
+   },
+   {
+    "title": "Causal Discovery with Missing Data in a Multicentric Clinical Study",
+    "year": 2023,
+    "venue": "Lecture notes in computer science",
+    "doi": "https://doi.org/10.1007/978-3-031-34344-5_5",
+    "seeds": [
+     "Mohan Pearl 2021"
+    ]
+   },
+   {
+    "title": "Deception by Omission: Using Adversarial Missingness to Poison Causal Structure Learning",
+    "year": 2023,
+    "venue": "ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD)",
+    "doi": "https://doi.org/10.1145/3580305.3599297",
+    "seeds": [
+     "Tu 2019 MVPC"
+    ]
+   },
+   {
+    "title": "Diagnosing and Handling Common Violations of Missing at Random",
+    "year": 2023,
+    "venue": "Psychometrika",
+    "doi": "https://doi.org/10.1007/s11336-022-09896-0",
+    "seeds": [
+     "Mohan Pearl 2021"
+    ]
+   },
+   {
+    "title": "Local causal structure learning with missing data",
+    "year": 2023,
+    "venue": "Expert Systems with Applications",
+    "doi": "https://doi.org/10.1016/j.eswa.2023.121831",
+    "seeds": [
+     "Tu 2019 MVPC",
+     "Foraita 2020"
+    ]
+   },
+   {
+    "title": "Bayesian Network Structure Learning: A Review",
+    "year": 2022,
+    "venue": "Asian Conference on Artificial Intelligence Technology (ACAIT)",
+    "doi": "https://doi.org/10.1109/acait56212.2022.10137915",
+    "seeds": [
+     "M1 Strobl 2018"
+    ]
+   },
+   {
+    "title": "Causal Discovery of Medical Test Parameters Based on Improved PC Algorithm",
+    "year": 2022,
+    "venue": "International Conference on Data-driven Optimization of Complex Systems (DOCS)",
+    "doi": "https://doi.org/10.1109/docs55193.2022.9967738",
+    "seeds": [
+     "Tu 2019 MVPC"
+    ]
+   },
+   {
+    "title": "Causal Graphs for Missing Data: A Gentle Introduction",
+    "year": 2022,
+    "venue": "ACM eBooks",
+    "doi": "https://doi.org/10.1145/3501714.3501750",
+    "seeds": [
+     "Mohan Pearl 2021"
+    ]
+   },
+   {
+    "title": "Greedy structure learning from data that contain systematic missing values",
+    "year": 2022,
+    "venue": "Machine Learning",
+    "doi": "https://doi.org/10.1007/s10994-022-06195-8",
+    "seeds": [
+     "M1 Strobl 2018",
+     "Tu 2019 MVPC",
+     "Mohan Pearl 2021"
+    ]
+   },
+   {
+    "title": "Multiple imputation and test‐wise deletion for causal discovery with incomplete cohort data",
+    "year": 2022,
+    "venue": "Statistics in Medicine",
+    "doi": "https://doi.org/10.1002/sim.9535",
+    "seeds": [
+     "M1 Strobl 2018",
+     "Didelez 2010",
+     "Tu 2019 MVPC",
+     "Mohan Pearl 2021",
+     "Foraita 2020"
+    ]
+   },
+   {
+    "title": "micd: Multiple Imputation in Causal Graph Discovery",
+    "year": 2022,
+    "venue": null,
+    "doi": "https://doi.org/10.32614/cran.package.micd",
+    "seeds": [
+     "Witte 2022",
+     "Foraita 2020"
+    ]
+   },
+   {
+    "title": "A practical guide to causal discovery with cohort data",
+    "year": 2021,
+    "venue": "arXiv (Cornell University)",
+    "doi": "https://doi.org/10.48550/arxiv.2108.13395",
+    "seeds": [
+     "M1 Strobl 2018",
+     "Witte 2022",
+     "Tu 2019 MVPC",
+     "Foraita 2020"
+    ]
+   },
+   {
+    "title": "The Importance of Modeling Data Missingness in Algorithmic Fairness: A Causal Perspective",
+    "year": 2021,
+    "venue": "AAAI Publications (The Association for the Advancement of Artificial Intelligence (AAAI))",
+    "doi": "https://doi.org/10.1609/aaai.v35i9.16926",
+    "seeds": [
+     "Mohan Pearl 2021"
+    ]
+   },
+   {
+    "title": "The Importance of Modeling Data Missingness in Algorithmic Fairness: A Causal Perspective",
+    "year": 2021,
+    "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+    "doi": "https://doi.org/10.1609/aaai.v35i9.16926",
+    "seeds": [
+     "Mohan Pearl 2021"
+    ]
+   },
+   {
+    "title": "VICause: Simultaneous Missing Value Imputation and Causal Discovery with Groups.",
+    "year": 2021,
+    "venue": "arXiv (Cornell University)",
+    "doi": null,
+    "seeds": [
+     "M1 Strobl 2018",
+     "Tu 2019 MVPC"
+    ]
+   },
+   {
+    "title": "Causal Discovery from Incomplete Data: A Deep Learning Approach",
+    "year": 2020,
+    "venue": "arXiv (Cornell University)",
+    "doi": "https://doi.org/10.48550/arxiv.2001.05343",
+    "seeds": [
+     "M1 Strobl 2018",
+     "Tu 2019 MVPC"
+    ]
+   },
+   {
+    "title": "Causal Discovery in the Presence of Missing Values for Neuropathic Pain Diagnosis",
+    "year": 2020,
+    "venue": null,
+    "doi": null,
+    "seeds": [
+     "Tu 2019 MVPC"
+    ]
+   },
+   {
+    "title": "Causal Discovery of Gene Regulation with Incomplete Data",
+    "year": 2020,
+    "venue": "Journal of the Royal Statistical Society Series A (Statistics in Society)",
+    "doi": "https://doi.org/10.1111/rssa.12565",
+    "seeds": [
+     "M1 Strobl 2018"
+    ]
+   },
+   {
+    "title": "Neuropathic Pain Diagnosis Simulator for Causal Discovery Algorithm Evaluation",
+    "year": 2019,
+    "venue": "arXiv (Cornell University)",
+    "doi": "https://doi.org/10.48550/arxiv.1906.01732",
+    "seeds": [
+     "M1 Strobl 2018",
+     "Tu 2019 MVPC"
+    ]
+   },
+   {
+    "title": "Causal Discovery in the Presence of Missing Data",
+    "year": 2018,
+    "venue": "arXiv (Cornell University)",
+    "doi": "https://doi.org/10.48550/arxiv.1807.04010",
+    "seeds": [
+     "M1 Strobl 2018"
+    ]
+   },
+   {
+    "title": "Learning causal structure from mixed data with missing values using Gaussian copula models",
+    "year": 2018,
+    "venue": "Statistics and Computing",
+    "doi": "https://doi.org/10.1007/s11222-018-9810-x",
+    "seeds": [
+     "M1 Strobl 2018"
+    ]
+   },
+   {
+    "title": "Recovering from selection bias using marginal structure in discrete models",
+    "year": 2015,
+    "venue": "Bristol Research (University of Bristol)",
+    "doi": null,
+    "seeds": [
+     "Didelez 2010"
+    ]
+   }
+  ]
+ }
+}

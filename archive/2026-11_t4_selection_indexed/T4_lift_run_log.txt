@@ -1,0 +1,193 @@
+
+=== L: lift certificate, oracle ===
+{'L1_n': 70428, 'L1_viol': 0, 'L2_n': 52392, 'L2_viol': 0}
+q=0.1: {'lw_sep': 10187, 'joint_from_smallest': 9923, 'direct_needed': 264, 'sep_small_dep_lw': 794, 'false_cert': 0}; coverage of listwise separations by one joint certificate 0.974
+q=0.3: {'lw_sep': 4346, 'joint_from_smallest': 4085, 'direct_needed': 261, 'sep_small_dep_lw': 1757, 'false_cert': 0}; coverage of listwise separations by one joint certificate 0.940
+q=0.6: {'lw_sep': 330, 'joint_from_smallest': 318, 'direct_needed': 12, 'sep_small_dep_lw': 841, 'false_cert': 0}; coverage of listwise separations by one joint certificate 0.964
+PASS L1 soundness  [{'L1_n': 70428, 'L1_viol': 0, 'L2_n': 52392, 'L2_viol': 0}]
+PASS L2 one-step equivalence  [{'L1_n': 70428, 'L1_viol': 0, 'L2_n': 52392, 'L2_viol': 0}]
+PASS L3 no false certificate
+
+=== P: finite sample, query level ===
+P A a=0.0 b=0.5 n=500: Naive=0.133 PerProof=0.117 M1global=0.117 Lift1=0.048 Lift2=0.072 LiftG=0.110 | rows lw/xyz/xy 71/161/320 | 3s
+P A a=0.0 b=0.5 n=1000: Naive=0.188 PerProof=0.163 M1global=0.175 Lift1=0.022 Lift2=0.045 LiftG=0.125 | rows lw/xyz/xy 142/320/641 | 1s
+P A a=0.0 b=0.5 n=2000: Naive=0.328 PerProof=0.280 M1global=0.307 Lift1=0.005 Lift2=0.020 LiftG=0.110 | rows lw/xyz/xy 285/640/1281 | 1s
+P A a=0.0 b=0.5 n=5000: Naive=0.620 PerProof=0.492 M1global=0.520 Lift1=0.000 Lift2=0.000 LiftG=0.040 | rows lw/xyz/xy 709/1598/3199 | 3s
+P A a=0.0 b=1.0 n=500: Naive=0.578 PerProof=0.458 M1global=0.507 Lift1=0.037 Lift2=0.085 LiftG=0.333 | rows lw/xyz/xy 71/159/320 | 1s
+P A a=0.0 b=1.0 n=1000: Naive=0.820 PerProof=0.583 M1global=0.700 Lift1=0.000 Lift2=0.003 LiftG=0.203 | rows lw/xyz/xy 142/321/640 | 2s
+P A a=0.0 b=1.0 n=2000: Naive=0.935 PerProof=0.492 M1global=0.713 Lift1=0.000 Lift2=0.000 LiftG=0.060 | rows lw/xyz/xy 285/640/1279 | 3s
+P A a=0.0 b=1.0 n=5000: Naive=0.955 PerProof=0.160 M1global=0.532 Lift1=0.000 Lift2=0.000 LiftG=0.000 | rows lw/xyz/xy 710/1601/3199 | 5s
+P A a=0.0 b=1.5 n=500: Naive=0.850 PerProof=0.590 M1global=0.718 Lift1=0.007 Lift2=0.020 LiftG=0.347 | rows lw/xyz/xy 71/160/320 | 2s
+P A a=0.0 b=1.5 n=1000: Naive=0.935 PerProof=0.510 M1global=0.725 Lift1=0.000 Lift2=0.000 LiftG=0.130 | rows lw/xyz/xy 142/319/639 | 3s
+P A a=0.0 b=1.5 n=2000: Naive=0.955 PerProof=0.163 M1global=0.530 Lift1=0.000 Lift2=0.000 LiftG=0.007 | rows lw/xyz/xy 283/640/1281 | 3s
+P A a=0.0 b=1.5 n=5000: Naive=0.948 PerProof=0.003 M1global=0.190 Lift1=0.000 Lift2=0.000 LiftG=0.000 | rows lw/xyz/xy 711/1600/3200 | 4s
+P A a=0.0 b=2.0 n=500: Naive=0.948 PerProof=0.552 M1global=0.743 Lift1=0.000 Lift2=0.007 LiftG=0.310 | rows lw/xyz/xy 71/161/321 | 2s
+P A a=0.0 b=2.0 n=1000: Naive=0.973 PerProof=0.312 M1global=0.570 Lift1=0.000 Lift2=0.000 LiftG=0.092 | rows lw/xyz/xy 142/321/640 | 3s
+P A a=0.0 b=2.0 n=2000: Naive=0.970 PerProof=0.072 M1global=0.323 Lift1=0.000 Lift2=0.000 LiftG=0.010 | rows lw/xyz/xy 283/639/1280 | 3s
+P A a=0.0 b=2.0 n=5000: Naive=0.953 PerProof=0.000 M1global=0.050 Lift1=0.000 Lift2=0.000 LiftG=0.000 | rows lw/xyz/xy 711/1601/3202 | 4s
+P A a=-1.5 b=0.5 n=500: Naive=0.052 PerProof=0.043 M1global=0.043 Lift1=0.043 Lift2=0.045 LiftG=0.048 | rows lw/xyz/xy 28/64/320 | 0s
+P A a=-1.5 b=0.5 n=1000: Naive=0.062 PerProof=0.055 M1global=0.058 Lift1=0.025 Lift2=0.037 LiftG=0.050 | rows lw/xyz/xy 57/131/640 | 1s
+P A a=-1.5 b=0.5 n=2000: Naive=0.102 PerProof=0.077 M1global=0.092 Lift1=0.007 Lift2=0.022 LiftG=0.043 | rows lw/xyz/xy 116/261/1280 | 1s
+P A a=-1.5 b=0.5 n=5000: Naive=0.223 PerProof=0.182 M1global=0.205 Lift1=0.000 Lift2=0.000 LiftG=0.022 | rows lw/xyz/xy 290/654/3198 | 2s
+P A a=-1.5 b=1.0 n=500: Naive=0.343 PerProof=0.275 M1global=0.290 Lift1=0.033 Lift2=0.090 LiftG=0.193 | rows lw/xyz/xy 35/80/320 | 1s
+P A a=-1.5 b=1.0 n=1000: Naive=0.560 PerProof=0.460 M1global=0.485 Lift1=0.003 Lift2=0.018 LiftG=0.140 | rows lw/xyz/xy 70/159/640 | 2s
+P A a=-1.5 b=1.0 n=2000: Naive=0.848 PerProof=0.590 M1global=0.690 Lift1=0.000 Lift2=0.000 LiftG=0.035 | rows lw/xyz/xy 141/318/1280 | 3s
+P A a=-1.5 b=1.0 n=5000: Naive=0.920 PerProof=0.407 M1global=0.670 Lift1=0.000 Lift2=0.000 LiftG=0.000 | rows lw/xyz/xy 353/797/3201 | 5s
+P A a=-1.5 b=1.5 n=500: Naive=0.807 PerProof=0.608 M1global=0.700 Lift1=0.007 Lift2=0.040 LiftG=0.295 | rows lw/xyz/xy 41/93/320 | 2s
+P A a=-1.5 b=1.5 n=1000: Naive=0.945 PerProof=0.603 M1global=0.767 Lift1=0.000 Lift2=0.003 LiftG=0.083 | rows lw/xyz/xy 83/187/641 | 3s
+P A a=-1.5 b=1.5 n=2000: Naive=0.953 PerProof=0.290 M1global=0.605 Lift1=0.000 Lift2=0.000 LiftG=0.003 | rows lw/xyz/xy 165/373/1280 | 3s
+P A a=-1.5 b=1.5 n=5000: Naive=0.925 PerProof=0.022 M1global=0.265 Lift1=0.000 Lift2=0.000 LiftG=0.000 | rows lw/xyz/xy 415/933/3199 | 4s
+P A a=-1.5 b=2.0 n=500: Naive=0.945 PerProof=0.600 M1global=0.765 Lift1=0.005 Lift2=0.015 LiftG=0.212 | rows lw/xyz/xy 46/104/320 | 2s
+P A a=-1.5 b=2.0 n=1000: Naive=0.950 PerProof=0.378 M1global=0.688 Lift1=0.000 Lift2=0.000 LiftG=0.045 | rows lw/xyz/xy 92/209/639 | 3s
+P A a=-1.5 b=2.0 n=2000: Naive=0.945 PerProof=0.083 M1global=0.383 Lift1=0.000 Lift2=0.000 LiftG=0.000 | rows lw/xyz/xy 186/419/1281 | 3s
+P A a=-1.5 b=2.0 n=5000: Naive=0.932 PerProof=0.000 M1global=0.075 Lift1=0.000 Lift2=0.000 LiftG=0.000 | rows lw/xyz/xy 463/1044/3200 | 4s
+P B a=0.0 b=0.5 n=500: Naive=0.958 PerProof=0.938 M1global=0.932 Lift1=0.917 Lift2=0.912 LiftG=0.912 | rows lw/xyz/xy 71/160/320 | 1s
+P B a=0.0 b=0.5 n=1000: Naive=0.960 PerProof=0.927 M1global=0.920 Lift1=0.907 Lift2=0.902 LiftG=0.900 | rows lw/xyz/xy 142/320/639 | 1s
+P B a=0.0 b=0.5 n=2000: Naive=0.948 PerProof=0.915 M1global=0.900 Lift1=0.902 Lift2=0.925 LiftG=0.920 | rows lw/xyz/xy 285/641/1282 | 2s
+P B a=0.0 b=0.5 n=5000: Naive=0.950 PerProof=0.917 M1global=0.892 Lift1=0.910 Lift2=0.905 LiftG=0.905 | rows lw/xyz/xy 709/1599/3199 | 3s
+P B a=0.0 b=1.0 n=500: Naive=0.950 PerProof=0.912 M1global=0.910 Lift1=0.905 Lift2=0.897 LiftG=0.890 | rows lw/xyz/xy 71/160/320 | 1s
+P B a=0.0 b=1.0 n=1000: Naive=0.932 PerProof=0.900 M1global=0.890 Lift1=0.895 Lift2=0.882 LiftG=0.895 | rows lw/xyz/xy 143/320/640 | 1s
+P B a=0.0 b=1.0 n=2000: Naive=0.963 PerProof=0.932 M1global=0.915 Lift1=0.905 Lift2=0.912 LiftG=0.907 | rows lw/xyz/xy 285/640/1279 | 2s
+P B a=0.0 b=1.0 n=5000: Naive=0.958 PerProof=0.915 M1global=0.915 Lift1=0.900 Lift2=0.902 LiftG=0.902 | rows lw/xyz/xy 707/1597/3196 | 3s
+P B a=0.0 b=1.5 n=500: Naive=0.943 PerProof=0.912 M1global=0.907 Lift1=0.910 Lift2=0.912 LiftG=0.873 | rows lw/xyz/xy 71/159/320 | 2s
+P B a=0.0 b=1.5 n=1000: Naive=0.935 PerProof=0.892 M1global=0.907 Lift1=0.892 Lift2=0.885 LiftG=0.887 | rows lw/xyz/xy 142/320/640 | 2s
+P B a=0.0 b=1.5 n=2000: Naive=0.968 PerProof=0.940 M1global=0.930 Lift1=0.932 Lift2=0.938 LiftG=0.900 | rows lw/xyz/xy 285/641/1280 | 2s
+P B a=0.0 b=1.5 n=5000: Naive=0.945 PerProof=0.892 M1global=0.895 Lift1=0.885 Lift2=0.887 LiftG=0.895 | rows lw/xyz/xy 710/1599/3201 | 4s
+P B a=0.0 b=2.0 n=500: Naive=0.948 PerProof=0.917 M1global=0.912 Lift1=0.902 Lift2=0.885 LiftG=0.897 | rows lw/xyz/xy 71/160/320 | 1s
+P B a=0.0 b=2.0 n=1000: Naive=0.950 PerProof=0.925 M1global=0.912 Lift1=0.905 Lift2=0.912 LiftG=0.895 | rows lw/xyz/xy 141/318/640 | 2s
+P B a=0.0 b=2.0 n=2000: Naive=0.953 PerProof=0.912 M1global=0.902 Lift1=0.900 Lift2=0.917 LiftG=0.877 | rows lw/xyz/xy 284/639/1279 | 2s
+P B a=0.0 b=2.0 n=5000: Naive=0.958 PerProof=0.917 M1global=0.922 Lift1=0.907 Lift2=0.892 LiftG=0.907 | rows lw/xyz/xy 712/1601/3200 | 3s
+P B a=-1.5 b=0.5 n=500: Naive=0.943 PerProof=0.897 M1global=0.870 Lift1=0.915 Lift2=0.910 LiftG=0.915 | rows lw/xyz/xy 28/62/320 | 2s
+P B a=-1.5 b=0.5 n=1000: Naive=0.953 PerProof=0.902 M1global=0.922 Lift1=0.907 Lift2=0.902 LiftG=0.917 | rows lw/xyz/xy 54/123/641 | 1s
+P B a=-1.5 b=0.5 n=2000: Naive=0.950 PerProof=0.907 M1global=0.895 Lift1=0.895 Lift2=0.900 LiftG=0.902 | rows lw/xyz/xy 109/246/1281 | 2s
+P B a=-1.5 b=0.5 n=5000: Naive=0.948 PerProof=0.902 M1global=0.902 Lift1=0.907 Lift2=0.902 LiftG=0.880 | rows lw/xyz/xy 275/620/3200 | 3s
+P B a=-1.5 b=1.0 n=500: Naive=0.950 PerProof=0.922 M1global=0.912 Lift1=0.902 Lift2=0.900 LiftG=0.900 | rows lw/xyz/xy 32/71/320 | 1s
+P B a=-1.5 b=1.0 n=1000: Naive=0.958 PerProof=0.905 M1global=0.917 Lift1=0.907 Lift2=0.900 LiftG=0.917 | rows lw/xyz/xy 62/141/640 | 2s
+P B a=-1.5 b=1.0 n=2000: Naive=0.953 PerProof=0.897 M1global=0.922 Lift1=0.920 Lift2=0.907 LiftG=0.920 | rows lw/xyz/xy 126/285/1280 | 2s
+P B a=-1.5 b=1.0 n=5000: Naive=0.948 PerProof=0.895 M1global=0.890 Lift1=0.892 Lift2=0.892 LiftG=0.892 | rows lw/xyz/xy 314/707/3198 | 6s
+P B a=-1.5 b=1.5 n=500: Naive=0.958 PerProof=0.922 M1global=0.907 Lift1=0.900 Lift2=0.907 LiftG=0.882 | rows lw/xyz/xy 36/82/320 | 3s
+P B a=-1.5 b=1.5 n=1000: Naive=0.943 PerProof=0.905 M1global=0.912 Lift1=0.900 Lift2=0.895 LiftG=0.900 | rows lw/xyz/xy 72/163/640 | 6s
+P B a=-1.5 b=1.5 n=2000: Naive=0.927 PerProof=0.880 M1global=0.887 Lift1=0.882 Lift2=0.890 LiftG=0.897 | rows lw/xyz/xy 144/325/1279 | 8s
+P B a=-1.5 b=1.5 n=5000: Naive=0.958 PerProof=0.902 M1global=0.927 Lift1=0.910 Lift2=0.917 LiftG=0.895 | rows lw/xyz/xy 360/813/3200 | 9s
+P B a=-1.5 b=2.0 n=500: Naive=0.953 PerProof=0.922 M1global=0.910 Lift1=0.897 Lift2=0.915 LiftG=0.895 | rows lw/xyz/xy 41/91/320 | 2s
+P B a=-1.5 b=2.0 n=1000: Naive=0.965 PerProof=0.925 M1global=0.915 Lift1=0.897 Lift2=0.912 LiftG=0.927 | rows lw/xyz/xy 81/181/640 | 2s
+P B a=-1.5 b=2.0 n=2000: Naive=0.943 PerProof=0.892 M1global=0.890 Lift1=0.885 Lift2=0.892 LiftG=0.882 | rows lw/xyz/xy 162/365/1280 | 2s
+P B a=-1.5 b=2.0 n=5000: Naive=0.950 PerProof=0.922 M1global=0.902 Lift1=0.895 Lift2=0.907 LiftG=0.882 | rows lw/xyz/xy 405/912/3199 | 4s
+P C a=0.0 b=0.5 n=500: Naive=0.950 PerProof=0.875 M1global=0.892 Lift1=0.015 Lift2=0.087 LiftG=0.613 | rows lw/xyz/xy 71/161/321 | 2s
+P C a=0.0 b=0.5 n=1000: Naive=0.948 PerProof=0.812 M1global=0.845 Lift1=0.000 Lift2=0.000 LiftG=0.225 | rows lw/xyz/xy 142/319/639 | 2s
+P C a=0.0 b=0.5 n=2000: Naive=0.945 PerProof=0.700 M1global=0.818 Lift1=0.000 Lift2=0.000 LiftG=0.005 | rows lw/xyz/xy 284/640/1281 | 3s
+P C a=0.0 b=0.5 n=5000: Naive=0.963 PerProof=0.410 M1global=0.703 Lift1=0.000 Lift2=0.000 LiftG=0.000 | rows lw/xyz/xy 707/1599/3198 | 4s
+P C a=0.0 b=1.0 n=500: Naive=0.955 PerProof=0.448 M1global=0.693 Lift1=0.000 Lift2=0.000 LiftG=0.100 | rows lw/xyz/xy 71/160/320 | 2s
+P C a=0.0 b=1.0 n=1000: Naive=0.943 PerProof=0.152 M1global=0.505 Lift1=0.000 Lift2=0.000 LiftG=0.003 | rows lw/xyz/xy 141/319/639 | 2s
+P C a=0.0 b=1.0 n=2000: Naive=0.935 PerProof=0.028 M1global=0.230 Lift1=0.000 Lift2=0.000 LiftG=0.000 | rows lw/xyz/xy 284/640/1281 | 3s
+P C a=0.0 b=1.0 n=5000: Naive=0.950 PerProof=0.000 M1global=0.028 Lift1=0.000 Lift2=0.000 LiftG=0.000 | rows lw/xyz/xy 711/1601/3200 | 4s
+P C a=0.0 b=1.5 n=500: Naive=0.950 PerProof=0.142 M1global=0.487 Lift1=0.000 Lift2=0.000 LiftG=0.007 | rows lw/xyz/xy 71/160/319 | 2s
+P C a=0.0 b=1.5 n=1000: Naive=0.963 PerProof=0.007 M1global=0.155 Lift1=0.000 Lift2=0.000 LiftG=0.000 | rows lw/xyz/xy 142/320/641 | 2s
+P C a=0.0 b=1.5 n=2000: Naive=0.948 PerProof=0.000 M1global=0.013 Lift1=0.000 Lift2=0.000 LiftG=0.000 | rows lw/xyz/xy 284/641/1281 | 3s
+P C a=0.0 b=1.5 n=5000: Naive=0.963 PerProof=0.000 M1global=0.000 Lift1=0.000 Lift2=0.000 LiftG=0.000 | rows lw/xyz/xy 710/1603/3204 | 4s
+P C a=0.0 b=2.0 n=500: Naive=0.950 PerProof=0.022 M1global=0.240 Lift1=0.000 Lift2=0.000 LiftG=0.003 | rows lw/xyz/xy 71/160/320 | 2s
+P C a=0.0 b=2.0 n=1000: Naive=0.950 PerProof=0.003 M1global=0.035 Lift1=0.000 Lift2=0.000 LiftG=0.000 | rows lw/xyz/xy 143/321/641 | 2s
+P C a=0.0 b=2.0 n=2000: Naive=0.927 PerProof=0.000 M1global=0.000 Lift1=0.000 Lift2=0.000 LiftG=0.000 | rows lw/xyz/xy 283/641/1281 | 3s
+P C a=0.0 b=2.0 n=5000: Naive=0.953 PerProof=0.000 M1global=0.000 Lift1=0.000 Lift2=0.000 LiftG=0.000 | rows lw/xyz/xy 711/1600/3199 | 7s
+P C a=-1.5 b=0.5 n=500: Naive=0.920 PerProof=0.885 M1global=0.887 Lift1=0.115 Lift2=0.263 LiftG=0.625 | rows lw/xyz/xy 29/65/320 | 3s
+P C a=-1.5 b=0.5 n=1000: Naive=0.965 PerProof=0.882 M1global=0.882 Lift1=0.003 Lift2=0.013 LiftG=0.265 | rows lw/xyz/xy 58/131/639 | 4s
+P C a=-1.5 b=0.5 n=2000: Naive=0.935 PerProof=0.828 M1global=0.865 Lift1=0.000 Lift2=0.000 LiftG=0.018 | rows lw/xyz/xy 116/261/1280 | 4s
+P C a=-1.5 b=0.5 n=5000: Naive=0.953 PerProof=0.795 M1global=0.880 Lift1=0.000 Lift2=0.000 LiftG=0.000 | rows lw/xyz/xy 288/651/3201 | 7s
+P C a=-1.5 b=1.0 n=500: Naive=0.943 PerProof=0.670 M1global=0.782 Lift1=0.000 Lift2=0.000 LiftG=0.087 | rows lw/xyz/xy 36/80/321 | 3s
+P C a=-1.5 b=1.0 n=1000: Naive=0.943 PerProof=0.448 M1global=0.695 Lift1=0.000 Lift2=0.000 LiftG=0.000 | rows lw/xyz/xy 71/160/641 | 3s
+P C a=-1.5 b=1.0 n=2000: Naive=0.948 PerProof=0.203 M1global=0.555 Lift1=0.000 Lift2=0.000 LiftG=0.000 | rows lw/xyz/xy 142/320/1279 | 3s
+P C a=-1.5 b=1.0 n=5000: Naive=0.943 PerProof=0.003 M1global=0.135 Lift1=0.000 Lift2=0.000 LiftG=0.000 | rows lw/xyz/xy 352/793/3201 | 5s
+P C a=-1.5 b=1.5 n=500: Naive=0.930 PerProof=0.275 M1global=0.532 Lift1=0.000 Lift2=0.000 LiftG=0.003 | rows lw/xyz/xy 41/93/320 | 2s
+P C a=-1.5 b=1.5 n=1000: Naive=0.968 PerProof=0.043 M1global=0.292 Lift1=0.000 Lift2=0.000 LiftG=0.000 | rows lw/xyz/xy 83/187/639 | 2s
+P C a=-1.5 b=1.5 n=2000: Naive=0.960 PerProof=0.000 M1global=0.075 Lift1=0.000 Lift2=0.000 LiftG=0.000 | rows lw/xyz/xy 166/374/1281 | 3s
+P C a=-1.5 b=1.5 n=5000: Naive=0.955 PerProof=0.000 M1global=0.000 Lift1=0.000 Lift2=0.000 LiftG=0.000 | rows lw/xyz/xy 412/932/3195 | 5s
+P C a=-1.5 b=2.0 n=500: Naive=0.900 PerProof=0.030 M1global=0.285 Lift1=0.000 Lift2=0.000 LiftG=0.000 | rows lw/xyz/xy 46/105/320 | 2s
+P C a=-1.5 b=2.0 n=1000: Naive=0.960 PerProof=0.000 M1global=0.070 Lift1=0.000 Lift2=0.000 LiftG=0.000 | rows lw/xyz/xy 93/210/641 | 3s
+P C a=-1.5 b=2.0 n=2000: Naive=0.948 PerProof=0.000 M1global=0.000 Lift1=0.000 Lift2=0.000 LiftG=0.000 | rows lw/xyz/xy 184/417/1281 | 6s
+P C a=-1.5 b=2.0 n=5000: Naive=0.953 PerProof=0.000 M1global=0.000 Lift1=0.000 Lift2=0.000 LiftG=0.000 | rows lw/xyz/xy 463/1044/3203 | 6s
+P D a=0.0 b=0.5 n=500: Naive=0.895 PerProof=0.623 M1global=0.772 Lift1=0.892 Lift2=0.675 LiftG=0.892 | rows lw/xyz/xy 71/160/320 | 2s
+P D a=0.0 b=0.5 n=1000: Naive=0.958 PerProof=0.432 M1global=0.730 Lift1=0.958 Lift2=0.435 LiftG=0.955 | rows lw/xyz/xy 143/320/640 | 2s
+P D a=0.0 b=0.5 n=2000: Naive=0.948 PerProof=0.188 M1global=0.525 Lift1=0.948 Lift2=0.095 LiftG=0.945 | rows lw/xyz/xy 283/639/1280 | 4s
+P D a=0.0 b=0.5 n=5000: Naive=0.958 PerProof=0.003 M1global=0.120 Lift1=0.955 Lift2=0.000 LiftG=0.955 | rows lw/xyz/xy 710/1599/3201 | 3s
+P D a=0.0 b=1.0 n=500: Naive=0.950 PerProof=0.362 M1global=0.662 Lift1=0.945 Lift2=0.307 LiftG=0.950 | rows lw/xyz/xy 71/160/320 | 1s
+P D a=0.0 b=1.0 n=1000: Naive=0.948 PerProof=0.092 M1global=0.420 Lift1=0.948 Lift2=0.030 LiftG=0.945 | rows lw/xyz/xy 142/322/640 | 2s
+P D a=0.0 b=1.0 n=2000: Naive=0.948 PerProof=0.003 M1global=0.133 Lift1=0.943 Lift2=0.000 LiftG=0.948 | rows lw/xyz/xy 283/640/1280 | 2s
+P D a=0.0 b=1.0 n=5000: Naive=0.958 PerProof=0.000 M1global=0.000 Lift1=0.955 Lift2=0.000 LiftG=0.953 | rows lw/xyz/xy 712/1604/3200 | 3s
+P D a=0.0 b=1.5 n=500: Naive=0.958 PerProof=0.200 M1global=0.542 Lift1=0.958 Lift2=0.083 LiftG=0.958 | rows lw/xyz/xy 70/159/319 | 2s
+P D a=0.0 b=1.5 n=1000: Naive=0.965 PerProof=0.028 M1global=0.247 Lift1=0.963 Lift2=0.000 LiftG=0.965 | rows lw/xyz/xy 141/319/640 | 2s
+P D a=0.0 b=1.5 n=2000: Naive=0.945 PerProof=0.000 M1global=0.020 Lift1=0.940 Lift2=0.000 LiftG=0.945 | rows lw/xyz/xy 283/639/1280 | 2s
+P D a=0.0 b=1.5 n=5000: Naive=0.953 PerProof=0.000 M1global=0.000 Lift1=0.950 Lift2=0.000 LiftG=0.945 | rows lw/xyz/xy 711/1600/3201 | 3s
+P D a=0.0 b=2.0 n=500: Naive=0.965 PerProof=0.113 M1global=0.482 Lift1=0.963 Lift2=0.033 LiftG=0.965 | rows lw/xyz/xy 71/160/321 | 2s
+P D a=0.0 b=2.0 n=1000: Naive=0.973 PerProof=0.000 M1global=0.172 Lift1=0.973 Lift2=0.000 LiftG=0.970 | rows lw/xyz/xy 142/319/640 | 2s
+P D a=0.0 b=2.0 n=2000: Naive=0.965 PerProof=0.000 M1global=0.018 Lift1=0.960 Lift2=0.000 LiftG=0.965 | rows lw/xyz/xy 284/640/1281 | 2s
+P D a=0.0 b=2.0 n=5000: Naive=0.960 PerProof=0.000 M1global=0.000 Lift1=0.958 Lift2=0.000 LiftG=0.958 | rows lw/xyz/xy 710/1603/3200 | 3s
+P D a=-1.5 b=0.5 n=500: Naive=0.848 PerProof=0.573 M1global=0.708 Lift1=0.843 Lift2=0.677 LiftG=0.845 | rows lw/xyz/xy 27/62/321 | 1s
+P D a=-1.5 b=0.5 n=1000: Naive=0.932 PerProof=0.495 M1global=0.700 Lift1=0.927 Lift2=0.585 LiftG=0.922 | rows lw/xyz/xy 55/124/641 | 2s
+P D a=-1.5 b=0.5 n=2000: Naive=0.938 PerProof=0.158 M1global=0.485 Lift1=0.932 Lift2=0.233 LiftG=0.935 | rows lw/xyz/xy 109/247/1281 | 2s
+P D a=-1.5 b=0.5 n=5000: Naive=0.958 PerProof=0.000 M1global=0.175 Lift1=0.950 Lift2=0.003 LiftG=0.953 | rows lw/xyz/xy 273/616/3200 | 3s
+P D a=-1.5 b=1.0 n=500: Naive=0.953 PerProof=0.347 M1global=0.627 Lift1=0.953 Lift2=0.372 LiftG=0.950 | rows lw/xyz/xy 30/69/320 | 1s
+P D a=-1.5 b=1.0 n=1000: Naive=0.940 PerProof=0.080 M1global=0.345 Lift1=0.938 Lift2=0.098 LiftG=0.932 | rows lw/xyz/xy 61/137/641 | 2s
+P D a=-1.5 b=1.0 n=2000: Naive=0.960 PerProof=0.000 M1global=0.110 Lift1=0.960 Lift2=0.000 LiftG=0.955 | rows lw/xyz/xy 121/274/1280 | 2s
+P D a=-1.5 b=1.0 n=5000: Naive=0.960 PerProof=0.000 M1global=0.003 Lift1=0.955 Lift2=0.000 LiftG=0.953 | rows lw/xyz/xy 304/684/3202 | 3s
+P D a=-1.5 b=1.5 n=500: Naive=0.950 PerProof=0.168 M1global=0.520 Lift1=0.948 Lift2=0.128 LiftG=0.945 | rows lw/xyz/xy 34/75/319 | 2s
+P D a=-1.5 b=1.5 n=1000: Naive=0.963 PerProof=0.005 M1global=0.175 Lift1=0.958 Lift2=0.000 LiftG=0.950 | rows lw/xyz/xy 66/150/640 | 2s
+P D a=-1.5 b=1.5 n=2000: Naive=0.960 PerProof=0.000 M1global=0.013 Lift1=0.950 Lift2=0.000 LiftG=0.958 | rows lw/xyz/xy 133/300/1280 | 2s
+P D a=-1.5 b=1.5 n=5000: Naive=0.963 PerProof=0.000 M1global=0.000 Lift1=0.960 Lift2=0.000 LiftG=0.963 | rows lw/xyz/xy 334/753/3200 | 3s
+P D a=-1.5 b=2.0 n=500: Naive=0.965 PerProof=0.072 M1global=0.400 Lift1=0.955 Lift2=0.048 LiftG=0.960 | rows lw/xyz/xy 36/82/320 | 2s
+P D a=-1.5 b=2.0 n=1000: Naive=0.927 PerProof=0.000 M1global=0.102 Lift1=0.920 Lift2=0.003 LiftG=0.910 | rows lw/xyz/xy 73/164/640 | 2s
+P D a=-1.5 b=2.0 n=2000: Naive=0.963 PerProof=0.000 M1global=0.007 Lift1=0.953 Lift2=0.000 LiftG=0.960 | rows lw/xyz/xy 144/325/1280 | 2s
+P D a=-1.5 b=2.0 n=5000: Naive=0.958 PerProof=0.000 M1global=0.000 Lift1=0.950 Lift2=0.000 LiftG=0.950 | rows lw/xyz/xy 363/815/3199 | 3s
+P E a=0.0 b=0.5 n=500: Naive=0.060 PerProof=0.055 M1global=0.058 Lift1=0.060 Lift2=0.058 LiftG=0.060 | rows lw/xyz/xy 71/160/320 | 0s
+P E a=0.0 b=0.5 n=1000: Naive=0.072 PerProof=0.062 M1global=0.060 Lift1=0.072 Lift2=0.065 LiftG=0.072 | rows lw/xyz/xy 142/319/639 | 0s
+P E a=0.0 b=0.5 n=2000: Naive=0.055 PerProof=0.048 M1global=0.050 Lift1=0.055 Lift2=0.052 LiftG=0.052 | rows lw/xyz/xy 283/640/1279 | 1s
+P E a=0.0 b=0.5 n=5000: Naive=0.070 PerProof=0.062 M1global=0.062 Lift1=0.070 Lift2=0.068 LiftG=0.070 | rows lw/xyz/xy 711/1602/3201 | 1s
+P E a=0.0 b=1.0 n=500: Naive=0.048 PerProof=0.040 M1global=0.043 Lift1=0.048 Lift2=0.043 LiftG=0.048 | rows lw/xyz/xy 71/160/319 | 1s
+P E a=0.0 b=1.0 n=1000: Naive=0.060 PerProof=0.052 M1global=0.050 Lift1=0.058 Lift2=0.058 LiftG=0.060 | rows lw/xyz/xy 142/319/640 | 0s
+P E a=0.0 b=1.0 n=2000: Naive=0.072 PerProof=0.068 M1global=0.068 Lift1=0.072 Lift2=0.070 LiftG=0.070 | rows lw/xyz/xy 284/641/1282 | 1s
+P E a=0.0 b=1.0 n=5000: Naive=0.102 PerProof=0.087 M1global=0.090 Lift1=0.102 Lift2=0.100 LiftG=0.102 | rows lw/xyz/xy 707/1600/3198 | 1s
+P E a=0.0 b=1.5 n=500: Naive=0.062 PerProof=0.060 M1global=0.060 Lift1=0.062 Lift2=0.060 LiftG=0.062 | rows lw/xyz/xy 71/161/320 | 0s
+P E a=0.0 b=1.5 n=1000: Naive=0.075 PerProof=0.068 M1global=0.070 Lift1=0.075 Lift2=0.072 LiftG=0.075 | rows lw/xyz/xy 142/319/638 | 0s
+P E a=0.0 b=1.5 n=2000: Naive=0.085 PerProof=0.062 M1global=0.077 Lift1=0.085 Lift2=0.080 LiftG=0.085 | rows lw/xyz/xy 285/642/1283 | 1s
+P E a=0.0 b=1.5 n=5000: Naive=0.105 PerProof=0.077 M1global=0.098 Lift1=0.105 Lift2=0.098 LiftG=0.105 | rows lw/xyz/xy 710/1599/3202 | 1s
+P E a=0.0 b=2.0 n=500: Naive=0.058 PerProof=0.052 M1global=0.052 Lift1=0.058 Lift2=0.058 LiftG=0.058 | rows lw/xyz/xy 71/160/321 | 1s
+P E a=0.0 b=2.0 n=1000: Naive=0.072 PerProof=0.062 M1global=0.065 Lift1=0.072 Lift2=0.070 LiftG=0.072 | rows lw/xyz/xy 142/320/641 | 1s
+P E a=0.0 b=2.0 n=2000: Naive=0.098 PerProof=0.092 M1global=0.095 Lift1=0.098 Lift2=0.090 LiftG=0.095 | rows lw/xyz/xy 284/637/1278 | 1s
+P E a=0.0 b=2.0 n=5000: Naive=0.177 PerProof=0.155 M1global=0.160 Lift1=0.177 Lift2=0.168 LiftG=0.175 | rows lw/xyz/xy 711/1603/3202 | 1s
+P E a=-1.5 b=0.5 n=500: Naive=0.048 PerProof=0.043 M1global=0.045 Lift1=0.045 Lift2=0.048 LiftG=0.048 | rows lw/xyz/xy 27/60/320 | 0s
+P E a=-1.5 b=0.5 n=1000: Naive=0.052 PerProof=0.052 M1global=0.052 Lift1=0.052 Lift2=0.052 LiftG=0.052 | rows lw/xyz/xy 54/121/639 | 0s
+P E a=-1.5 b=0.5 n=2000: Naive=0.062 PerProof=0.058 M1global=0.060 Lift1=0.062 Lift2=0.062 LiftG=0.062 | rows lw/xyz/xy 106/241/1280 | 1s
+P E a=-1.5 b=0.5 n=5000: Naive=0.072 PerProof=0.062 M1global=0.065 Lift1=0.070 Lift2=0.068 LiftG=0.072 | rows lw/xyz/xy 267/602/3198 | 1s
+P E a=-1.5 b=1.0 n=500: Naive=0.062 PerProof=0.055 M1global=0.060 Lift1=0.062 Lift2=0.062 LiftG=0.062 | rows lw/xyz/xy 29/65/319 | 1s
+P E a=-1.5 b=1.0 n=1000: Naive=0.040 PerProof=0.028 M1global=0.033 Lift1=0.040 Lift2=0.037 LiftG=0.037 | rows lw/xyz/xy 57/129/639 | 0s
+P E a=-1.5 b=1.0 n=2000: Naive=0.072 PerProof=0.065 M1global=0.062 Lift1=0.072 Lift2=0.070 LiftG=0.072 | rows lw/xyz/xy 115/259/1282 | 1s
+P E a=-1.5 b=1.0 n=5000: Naive=0.110 PerProof=0.090 M1global=0.100 Lift1=0.107 Lift2=0.092 LiftG=0.110 | rows lw/xyz/xy 287/648/3199 | 1s
+P E a=-1.5 b=1.5 n=500: Naive=0.065 PerProof=0.055 M1global=0.065 Lift1=0.065 Lift2=0.065 LiftG=0.065 | rows lw/xyz/xy 31/71/320 | 0s
+P E a=-1.5 b=1.5 n=1000: Naive=0.068 PerProof=0.055 M1global=0.062 Lift1=0.068 Lift2=0.060 LiftG=0.068 | rows lw/xyz/xy 63/141/640 | 0s
+P E a=-1.5 b=1.5 n=2000: Naive=0.068 PerProof=0.055 M1global=0.058 Lift1=0.068 Lift2=0.060 LiftG=0.068 | rows lw/xyz/xy 127/285/1281 | 1s
+P E a=-1.5 b=1.5 n=5000: Naive=0.125 PerProof=0.095 M1global=0.107 Lift1=0.125 Lift2=0.105 LiftG=0.125 | rows lw/xyz/xy 314/709/3200 | 1s
+P E a=-1.5 b=2.0 n=500: Naive=0.055 PerProof=0.045 M1global=0.048 Lift1=0.055 Lift2=0.052 LiftG=0.055 | rows lw/xyz/xy 34/77/320 | 1s
+P E a=-1.5 b=2.0 n=1000: Naive=0.045 PerProof=0.040 M1global=0.045 Lift1=0.045 Lift2=0.045 LiftG=0.045 | rows lw/xyz/xy 68/154/639 | 0s
+P E a=-1.5 b=2.0 n=2000: Naive=0.092 PerProof=0.077 M1global=0.085 Lift1=0.092 Lift2=0.090 LiftG=0.092 | rows lw/xyz/xy 137/309/1279 | 1s
+P E a=-1.5 b=2.0 n=5000: Naive=0.170 PerProof=0.133 M1global=0.152 Lift1=0.170 Lift2=0.152 LiftG=0.170 | rows lw/xyz/xy 342/773/3201 | 1s
+K7: {'Lift1': {'verdict': 'positive', 'cells_half': 23, 'cells_75': 27, 'family_B_ok': True, 'cells_A_with_PerProof_ge_10': 23}, 'Lift2': {'verdict': 'weak', 'cells_half': 22, 'cells_75': 27, 'family_B_ok': False, 'cells_A_with_PerProof_ge_10': 23}, 'LiftG_vs_rule_with_PerProof': {'verdict': 'weak', 'cells_half': 17, 'cells_75': 24, 'family_B_ok': False, 'cells_A_with_PerProof_ge_10': 23}, 'D_max_excess_Lift1': 0.9725, 'D_max_excess_Lift2': 0.10499999999999998, 'Lift1_fragile': True, 'Lift2_within_tolerance': False}
+
+=== K6R: PP vs SepOnly with more graphs ===
+K6R p=6 d=0.3 q=0.1 Rc=0.0 N=400: LWu=21.07 Sep=24.44 PP=25.54 ratio=1.045 CI [1.036,1.054] PP>Sep 0.28 false 0 | 10s
+K6R p=6 d=0.3 q=0.1 Rc=0.5 N=400: LWu=20.44 Sep=24.27 PP=25.48 ratio=1.050 CI [1.041,1.060] PP>Sep 0.30 false 0 | 10s
+K6R p=6 d=0.3 q=0.3 Rc=0.0 N=400: LWu=6.52 Sep=13.47 PP=14.16 ratio=1.051 CI [1.041,1.063] PP>Sep 0.21 false 0 | 14s
+K6R p=6 d=0.3 q=0.3 Rc=0.5 N=400: LWu=6.62 Sep=13.90 PP=14.52 ratio=1.044 CI [1.035,1.054] PP>Sep 0.20 false 0 | 15s
+K6R p=6 d=0.5 q=0.1 Rc=0.0 N=400: LWu=10.64 Sep=12.85 PP=14.41 ratio=1.122 CI [1.101,1.146] PP>Sep 0.33 false 0 | 14s
+K6R p=6 d=0.5 q=0.1 Rc=0.5 N=400: LWu=9.98 Sep=12.43 PP=14.22 ratio=1.145 CI [1.122,1.168] PP>Sep 0.39 false 0 | 16s
+K6R p=6 d=0.5 q=0.3 Rc=0.0 N=400: LWu=3.36 Sep=6.05 PP=6.68 ratio=1.104 CI [1.081,1.129] PP>Sep 0.18 false 0 | 19s
+K6R p=6 d=0.5 q=0.3 Rc=0.5 N=400: LWu=3.36 Sep=6.07 PP=6.71 ratio=1.106 CI [1.083,1.132] PP>Sep 0.18 false 0 | 19s
+K6R p=7 d=0.3 q=0.1 Rc=0.0 N=100: LWu=23.43 Sep=30.52 PP=33.12 ratio=1.085 CI [1.064,1.111] PP>Sep 0.53 false 0 | 11s
+K6R p=7 d=0.3 q=0.1 Rc=0.5 N=100: LWu=24.20 Sep=31.48 PP=34.17 ratio=1.085 CI [1.061,1.115] PP>Sep 0.48 false 0 | 15s
+K6R p=7 d=0.3 q=0.3 Rc=0.0 N=100: LWu=7.79 Sep=17.90 PP=19.30 ratio=1.078 CI [1.054,1.107] PP>Sep 0.34 false 0 | 15s
+K6R p=7 d=0.3 q=0.3 Rc=0.5 N=100: LWu=7.47 Sep=17.19 PP=18.44 ratio=1.073 CI [1.047,1.099] PP>Sep 0.30 false 0 | 15s
+K6R p=7 d=0.5 q=0.1 Rc=0.0 N=100: LWu=12.97 Sep=17.05 PP=20.58 ratio=1.207 CI [1.157,1.263] PP>Sep 0.57 false 0 | 15s
+K6R p=7 d=0.5 q=0.1 Rc=0.5 N=100: LWu=13.64 Sep=17.51 PP=21.12 ratio=1.206 CI [1.154,1.266] PP>Sep 0.57 false 0 | 16s
+K6R p=7 d=0.5 q=0.3 Rc=0.0 N=100: LWu=3.99 Sep=7.05 PP=8.13 ratio=1.153 CI [1.093,1.221] PP>Sep 0.22 false 0 | 18s
+K6R p=7 d=0.5 q=0.3 Rc=0.5 N=100: LWu=3.41 Sep=5.62 PP=6.46 ratio=1.149 CI [1.079,1.225] PP>Sep 0.18 false 0 | 18s
+K6R verdict: K6 stands; cells passing 8/16
+PASS K6R PP has no false claim
+runtime 620s failed=[]

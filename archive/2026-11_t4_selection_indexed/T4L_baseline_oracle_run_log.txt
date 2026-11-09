@@ -1,0 +1,27 @@
+p=4 d=0.3 q=0.0 Rc=0.0 N=400: true LW=11.16 NaiveO=11.16 NaiveOR=11.16 NaiveOR+=11.16 | false graphs {'LW': 0, 'NaiveO': 0, 'NaiveOR': 0, 'NaiveOR+': 0} | 1s
+p=4 d=0.3 q=0.0 Rc=0.5 N=400: true LW=10.96 NaiveO=10.96 NaiveOR=10.96 NaiveOR+=10.96 | false graphs {'LW': 0, 'NaiveO': 0, 'NaiveOR': 0, 'NaiveOR+': 0} | 2s
+p=4 d=0.3 q=0.1 Rc=0.0 N=400: true LW=10.23 NaiveO=11.01 NaiveOR=11.08 NaiveOR+=11.07 | false graphs {'LW': 0, 'NaiveO': 5, 'NaiveOR': 10, 'NaiveOR+': 8} | 2s
+p=4 d=0.3 q=0.1 Rc=0.5 N=400: true LW=9.82 NaiveO=10.88 NaiveOR=11.09 NaiveOR+=11.08 | false graphs {'LW': 0, 'NaiveO': 12, 'NaiveOR': 25, 'NaiveOR+': 23} | 2s
+p=4 d=0.3 q=0.3 Rc=0.0 N=400: true LW=5.41 NaiveO=8.28 NaiveOR=8.87 NaiveOR+=8.53 | false graphs {'LW': 0, 'NaiveO': 33, 'NaiveOR': 79, 'NaiveOR+': 45} | 3s
+p=4 d=0.3 q=0.3 Rc=0.5 N=400: true LW=4.83 NaiveO=8.21 NaiveOR=9.10 NaiveOR+=8.78 | false graphs {'LW': 0, 'NaiveO': 45, 'NaiveOR': 118, 'NaiveOR+': 84} | 4s
+p=4 d=0.5 q=0.0 Rc=0.0 N=400: true LW=7.67 NaiveO=7.67 NaiveOR=7.67 NaiveOR+=7.67 | false graphs {'LW': 0, 'NaiveO': 0, 'NaiveOR': 0, 'NaiveOR+': 0} | 1s
+p=4 d=0.5 q=0.0 Rc=0.5 N=400: true LW=7.30 NaiveO=7.30 NaiveOR=7.30 NaiveOR+=7.30 | false graphs {'LW': 0, 'NaiveO': 0, 'NaiveOR': 0, 'NaiveOR+': 0} | 1s
+p=4 d=0.5 q=0.1 Rc=0.0 N=400: true LW=5.80 NaiveO=6.78 NaiveOR=6.93 NaiveOR+=6.90 | false graphs {'LW': 0, 'NaiveO': 9, 'NaiveOR': 22, 'NaiveOR+': 12} | 2s
+p=4 d=0.5 q=0.1 Rc=0.5 N=400: true LW=6.35 NaiveO=7.25 NaiveOR=7.50 NaiveOR+=7.49 | false graphs {'LW': 0, 'NaiveO': 9, 'NaiveOR': 36, 'NaiveOR+': 32} | 2s
+p=4 d=0.5 q=0.3 Rc=0.0 N=400: true LW=2.90 NaiveO=4.96 NaiveOR=5.93 NaiveOR+=5.39 | false graphs {'LW': 0, 'NaiveO': 35, 'NaiveOR': 111, 'NaiveOR+': 47} | 3s
+p=4 d=0.5 q=0.3 Rc=0.5 N=400: true LW=2.75 NaiveO=5.02 NaiveOR=6.38 NaiveOR+=5.76 | false graphs {'LW': 0, 'NaiveO': 45, 'NaiveOR': 162, 'NaiveOR+': 88} | 3s
+p=5 d=0.3 q=0.0 Rc=0.0 N=100: true LW=19.84 NaiveO=19.84 NaiveOR=19.84 NaiveOR+=19.84 | false graphs {'LW': 0, 'NaiveO': 0, 'NaiveOR': 0, 'NaiveOR+': 0} | 1s
+p=5 d=0.3 q=0.0 Rc=0.5 N=100: true LW=18.83 NaiveO=18.83 NaiveOR=18.83 NaiveOR+=18.83 | false graphs {'LW': 0, 'NaiveO': 0, 'NaiveOR': 0, 'NaiveOR+': 0} | 1s
+p=5 d=0.3 q=0.1 Rc=0.0 N=100: true LW=14.67 NaiveO=17.45 NaiveOR=17.60 NaiveOR+=17.49 | false graphs {'LW': 0, 'NaiveO': 7, 'NaiveOR': 7, 'NaiveOR+': 7} | 2s
+p=5 d=0.3 q=0.1 Rc=0.5 N=100: true LW=13.38 NaiveO=16.92 NaiveOR=17.35 NaiveOR+=17.40 | false graphs {'LW': 0, 'NaiveO': 11, 'NaiveOR': 19, 'NaiveOR+': 18} | 2s
+p=5 d=0.3 q=0.3 Rc=0.0 N=100: true LW=6.27 NaiveO=14.25 NaiveOR=16.05 NaiveOR+=15.45 | false graphs {'LW': 0, 'NaiveO': 27, 'NaiveOR': 47, 'NaiveOR+': 36} | 4s
+p=5 d=0.3 q=0.3 Rc=0.5 N=100: true LW=6.10 NaiveO=14.50 NaiveOR=15.79 NaiveOR+=15.32 | false graphs {'LW': 0, 'NaiveO': 20, 'NaiveOR': 44, 'NaiveOR+': 30} | 4s
+p=5 d=0.5 q=0.0 Rc=0.0 N=100: true LW=14.33 NaiveO=14.33 NaiveOR=14.33 NaiveOR+=14.33 | false graphs {'LW': 0, 'NaiveO': 0, 'NaiveOR': 0, 'NaiveOR+': 0} | 1s
+p=5 d=0.5 q=0.0 Rc=0.5 N=100: true LW=13.07 NaiveO=13.07 NaiveOR=13.07 NaiveOR+=13.07 | false graphs {'LW': 0, 'NaiveO': 0, 'NaiveOR': 0, 'NaiveOR+': 0} | 1s
+p=5 d=0.5 q=0.1 Rc=0.0 N=100: true LW=9.15 NaiveO=12.25 NaiveOR=12.63 NaiveOR+=12.51 | false graphs {'LW': 0, 'NaiveO': 8, 'NaiveOR': 12, 'NaiveOR+': 11} | 2s
+p=5 d=0.5 q=0.1 Rc=0.5 N=100: true LW=7.63 NaiveO=10.75 NaiveOR=11.84 NaiveOR+=11.54 | false graphs {'LW': 0, 'NaiveO': 7, 'NaiveOR': 20, 'NaiveOR+': 16} | 2s
+p=5 d=0.5 q=0.3 Rc=0.0 N=100: true LW=2.55 NaiveO=7.28 NaiveOR=9.46 NaiveOR+=8.23 | false graphs {'LW': 0, 'NaiveO': 24, 'NaiveOR': 56, 'NaiveOR+': 32} | 4s
+p=5 d=0.5 q=0.3 Rc=0.5 N=100: true LW=3.49 NaiveO=8.74 NaiveOR=10.66 NaiveOR+=10.05 | false graphs {'LW': 0, 'NaiveO': 20, 'NaiveOR': 54, 'NaiveOR+': 33} | 4s
+totals over MNAR cells: {'LW': {'false': 0, 'true': 25562.0}, 'NaiveO': {'false': 317, 'true': 35169.0}, 'NaiveOR': {'false': 822, 'true': 37887.0}, 'NaiveOR+': {'false': 522, 'true': 36799.0}}
+subsumed by the declared rule: {'NaiveOR': False, 'NaiveOR+': False}
+control q=0, graphs with a false claim: {'LW': 0, 'NaiveO': 0, 'NaiveOR': 0, 'NaiveOR+': 0}

@@ -64,3 +64,13 @@ Dữ liệu y sinh/cohort gần như luôn thiếu. Test-wise deletion giữ đ�
 ## Decision
 
 **Conditional (backup).** Failure có thật ở oracle level; kill test thuần lý thuyết và rẻ. Rủi ro chính: rule chỉ là m-separation chuẩn.
+
+## Cập nhật 2026-11-06 (append, không sửa phần trên)
+
+Kill test đã chạy, xem [`T4_kill_test_vi.md`](../../../archive/2026-11_t4_selection_indexed/T4_kill_test_vi.md).
+
+- **Đính chính:** M1 Appendix 10.1 chỉ giải thích vì sao R1 có thể hỏng với heuristic; không có đồ thị phản ví dụ tường minh. Các dòng "[Verified, M1 §10.1]" ở trên cần đọc theo nghĩa này.
+- **Quyết định theo card này: NO-GO** cho mục tiêu giữ đúng target với luật cục bộ chỉ dùng CI giữa biến O (có phản ví dụ).
+- **Hướng hẹp hơn còn lại:** T4-L, GO có điều kiện, chờ user.
+- **Cập nhật sau pilot (2026-11-06):** T4-L cho NO-GO theo luật đã khai báo, chờ user xác nhận đóng. Xem [`T4L_pilot_report_vi.md`](../../../archive/2026-11_t4_selection_indexed/T4L_pilot_report_vi.md).
+- **Đóng 2026-11-07:** user quyết định đóng T4-L. Toàn bộ báo cáo T4 đã chuyển vào `archive/2026-11_t4_selection_indexed/`. Xem X27, X29 trong `RESEARCH_HISTORY_vi.md`.

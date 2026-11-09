@@ -1,0 +1,22 @@
+{
+ "V1": {
+  "queries": 31387,
+  "mismatch": 0,
+  "steps_gt1": 1183
+ },
+ "V2": {
+  "graphs": 400,
+  "lift_differs_from_lw": 0,
+  "lw_false": 0,
+  "pp_false": 0,
+  "naive_false": 91,
+  "flag_false": 0
+ },
+ "V3": {
+  "A": 1.0,
+  "B": 0.99,
+  "D": 1.0
+ },
+ "pass_V1": true,
+ "pass_V2": true
+}

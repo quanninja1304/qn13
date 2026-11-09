@@ -1,0 +1,39 @@
+mixed n=1000 rows=178: Complete=13.0/70.1/attr 0.0 Naive=13.2/69.2/attr 2.1 LW=15.5/68.6/attr 4.8 M1=13.1/69.0/attr 2.1 LiftG1=13.5/68.8/attr 2.2 LiftG2=13.9/68.5/attr 2.4 | 12s
+   M1: target sep 307, wrongly dep 0.042 | target dep 691, wrongly sep 0.897
+   LiftG1: target sep 307, wrongly dep 0.003 | target dep 691, wrongly sep 0.961
+   LiftG2: target sep 307, wrongly dep 0.013 | target dep 691, wrongly sep 0.854
+mixed n=4000 rows=707: Complete=8.8/68.0/attr 0.0 Naive=10.5/69.9/attr 3.2 LW=14.2/69.9/attr 6.9 M1=12.1/68.8/attr 5.1 LiftG1=12.2/69.1/attr 5.2 LiftG2=14.4/69.2/attr 7.7 | 30s
+   M1: target sep 193, wrongly dep 0.016 | target dep 758, wrongly sep 0.860
+   LiftG1: target sep 193, wrongly dep 0.010 | target dep 758, wrongly sep 0.821
+   LiftG2: target sep 193, wrongly dep 0.031 | target dep 758, wrongly sep 0.636
+mixed n=20000 rows=3595: Complete=7.7/70.3/attr 0.0 Naive=8.6/70.6/attr 2.5 LW=11.3/70.3/attr 5.7 M1=11.4/71.4/attr 5.9 LiftG1=11.2/70.2/attr 5.5 LiftG2=12.4/69.6/attr 7.7 | 132s
+   M1: target sep 304, wrongly dep 0.049 | target dep 635, wrongly sep 0.753
+   LiftG1: target sep 304, wrongly dep 0.020 | target dep 635, wrongly sep 0.646
+   LiftG2: target sep 304, wrongly dep 0.095 | target dep 635, wrongly sep 0.389
+add n=1000 rows=176: Complete=12.4/70.0/attr 0.0 Naive=13.5/69.0/attr 3.1 LW=15.5/69.0/attr 5.9 M1=13.9/69.4/attr 3.5 LiftG1=14.1/67.6/attr 4.1 LiftG2=14.1/68.6/attr 3.8 | 6s
+   M1: target sep 184, wrongly dep 0.054 | target dep 808, wrongly sep 0.938
+   LiftG1: target sep 184, wrongly dep 0.038 | target dep 808, wrongly sep 0.749
+   LiftG2: target sep 184, wrongly dep 0.054 | target dep 808, wrongly sep 0.823
+--- resumed run for the remaining cells
+cells already done: [('add', 1000), ('mixed', 1000), ('mixed', 4000), ('mixed', 20000)]
+add n=4000 rows=717: Complete=9.1/70.3/attr 0.0 Naive=9.2/69.7/attr 2.0 LW=11.4/71.1/attr 5.1 M1=9.5/72.0/attr 2.7 LiftG1=9.2/69.1/attr 3.4 LiftG2=10.2/70.7/attr 3.4 | 15s
+   M1: target sep 180, wrongly dep 0.061 | target dep 794, wrongly sep 0.935
+   LiftG1: target sep 180, wrongly dep 0.033 | target dep 794, wrongly sep 0.592
+   LiftG2: target sep 180, wrongly dep 0.017 | target dep 794, wrongly sep 0.674
+add n=20000 rows=3648: Complete=11.0/68.4/attr 0.0 Naive=12.4/68.7/attr 2.9 LW=14.2/68.8/attr 5.3 M1=13.6/69.1/attr 4.2 LiftG1=14.6/65.2/attr 7.6 LiftG2=14.8/65.9/attr 8.2 | 110s
+   M1: target sep 175, wrongly dep 0.046 | target dep 731, wrongly sep 0.885
+   LiftG1: target sep 175, wrongly dep 0.051 | target dep 731, wrongly sep 0.302
+   LiftG2: target sep 175, wrongly dep 0.057 | target dep 731, wrongly sep 0.334
+add3 n=1000 rows=190: Complete=12.3/67.6/attr 0.0 Naive=12.7/67.2/attr 2.5 LW=16.1/68.0/attr 5.5 M1=13.0/67.2/attr 2.8 LiftG1=13.7/65.9/attr 5.0 LiftG2=13.6/67.8/attr 4.6 | 8s
+   M1: target sep 170, wrongly dep 0.024 | target dep 810, wrongly sep 0.909
+   LiftG1: target sep 170, wrongly dep 0.018 | target dep 810, wrongly sep 0.511
+   LiftG2: target sep 170, wrongly dep 0.018 | target dep 810, wrongly sep 0.584
+add3 n=4000 rows=751: Complete=12.2/69.0/attr 0.0 Naive=13.1/68.6/attr 3.3 LW=16.0/68.0/attr 5.8 M1=13.9/67.9/attr 4.4 LiftG1=14.5/63.4/attr 6.5 LiftG2=14.5/65.8/attr 6.4 | 24s
+   M1: target sep 198, wrongly dep 0.030 | target dep 755, wrongly sep 0.836
+   LiftG1: target sep 198, wrongly dep 0.020 | target dep 755, wrongly sep 0.266
+   LiftG2: target sep 198, wrongly dep 0.045 | target dep 755, wrongly sep 0.302
+add3 n=20000 rows=3596: Complete=9.0/67.7/attr 0.0 Naive=12.1/70.1/attr 4.2 LW=16.9/65.5/attr 9.8 M1=13.5/68.3/attr 6.9 LiftG1=17.0/62.4/attr 12.8 LiftG2=15.9/63.7/attr 10.3 | 151s
+   M1: target sep 158, wrongly dep 0.038 | target dep 749, wrongly sep 0.712
+   LiftG1: target sep 158, wrongly dep 0.032 | target dep 749, wrongly sep 0.180
+   LiftG2: target sep 158, wrongly dep 0.152 | target dep 749, wrongly sep 0.175
+finished 307.7231652736664

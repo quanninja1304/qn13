@@ -1,0 +1,12 @@
+0 0
+10 3
+20 6
+30 9
+40 12
+50 15
+Complete3 {'false': 0.0, 'true': 61.533, 'graphs_false': 0.0, 'edges': 15.133}
+LW3 {'false': 0.0, 'true': 20.733, 'graphs_false': 0.0, 'edges': 23.25}
+Naive3 {'false': 3.383, 'true': 58.0, 'graphs_false': 0.617, 'edges': 18.2}
+LWall {'false': 0.0, 'true': 21.167, 'graphs_false': 0.0, 'edges': 21.4}
+Naiveall {'false': 3.7, 'true': 59.333, 'graphs_false': 0.617, 'edges': 17.2}
+truncation contributes by the declared reading: False
