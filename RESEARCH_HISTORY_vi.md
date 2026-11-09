@@ -1,7 +1,7 @@
 # Lịch sử chuyển dịch nghiên cứu (Research pivot log)
 
 > **Đọc file này trước khi đề xuất bất kỳ hướng mới nào.** Mục đích là tránh làm lại những gì đã bị bác bỏ, đã có prior art hoặc đã bị gác lại có lý do.
-> Cập nhật lần cuối: **2026-11-04**. Quy tắc bảo trì ở §6: **append-only**. Không sửa phán quyết cũ; nếu đảo quyết định thì thêm một mục mới tham chiếu mục cũ.
+> Cập nhật lần cuối: **2026-11-07**. Quy tắc bảo trì ở §6: **append-only**. Không sửa phán quyết cũ; nếu đảo quyết định thì thêm một mục mới tham chiếu mục cũ.
 > Mọi tài liệu gốc vẫn còn nguyên trong repo. Các hướng cũ nằm ở [`archive/`](archive/README.md), hướng hiện tại ở [`reports/`](reports/README.md) và [`research/`](research/README.md).
 
 ## 0. Cách đọc nhãn trạng thái
@@ -30,6 +30,15 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
 | P4 | 03/11 | **Hướng C: dcFCI pruning** + đánh giá phê bình | Backtracking với pruning T1–T3 có đóng góp không? | T1–T3 **SUBSUMED** (kiến thức nền + CSP); đề xuất D1–D4; khuyến nghị reframe tối đa 4–6 tuần | [đặc tả C](archive/2026-10_dcfci_direction_c/dcfci_pruning_formulation_and_profiling_2026-11-03_vi.md), [đánh giá C](archive/2026-10_dcfci_direction_c/direction_c_critical_reassessment_2026-11-03_vi.md) |
 | P5 | 03/11 | **Research reset** + reassessment A–J | Định vị lại: problem-driven methodology; không neo vào dcFCI/D1–D4 | D1–D4 và dcFCI pruning **DEPRIORITIZED** (không khôi phục vì sunk cost). Chọn **A′** (primary, conditional), **T4** (backup); C-S thứ ba; B′ hạ cấp | [`AGENTS.md`](AGENTS.md), [`research/`](research/README.md), [reassessment](reports/reassessment_2026-11-03_vi/00_final_reassessment_vi.md) |
 | P6 | 04/11 | **Review độc lập A′** (3 phase) | A′ có đúng toán, có nghĩa thống kê, có mới không? | Framing gốc **REFUTED/STOP**. Reformulation R1/R2 **ACTIVE (REFORMULATE)**. RG0 PASS; gate tiếp theo RG1/RG2 | [`reports/aprime_review_2026-11-04/`](reports/aprime_review_2026-11-04/A1_review_handoff.md) |
+| P7 | 04/11 | **RG1: chứng minh R1/R2** | R1 có chứng minh đầy đủ và có power không? | Validity có chứng minh. Bản seminorm toàn cục **REFUTED về power** (T(f) ≡ 0 khi có mô hình mù), sửa thành ridge + χ² có trọng số (đều khi K cố định). Trong lớp η ≤ β, pointwise không phân biệt được R1. Rà soát bởi agent AI: `PASS WITH CORRECTIONS`, đã áp dụng; **user duyệt PASS có điều kiện 05/11; chưa có người rà; RG2 chưa chạy** | [`RG1_R1_proof_vi.md`](reports/aprime_review_2026-11-04/RG1_R1_proof_vi.md) |
+| P8 | 05/11 | **RG3 + S1 (phép thử rẻ trước RG2)** | R1 có lợi thế và có kịch bản có nội dung không? | Không dừng theo tiêu chí khai báo trước, tín hiệu yếu. Hybrid không có lợi thế; T có gain 1.2–2.9 lần; S1 đạt 2/761 ở h = 3; cơ chế có lẽ là whitening toàn vector. Chưa so với hộp whitening | [`RG3_S1_report_vi.md`](reports/aprime_review_2026-11-04/RG3_S1_report_vi.md) |
+| P9 | 06/11 | **RG3b: T so với hộp whitening** | Hình dạng χ² có cần thiết không? | Không có khác biệt rõ theo luật khai báo trước; T nhỉnh hơn nhẹ ở K = 24, gần hòa ở K = 70; ít nhất một thủ tục hơn BL1. Whitening dạng hộp gần như không thêm gì so với MaxT đơn giản. Khuyến nghị của agent: chuyển sang T4 | [`RG3b_report_vi.md`](reports/aprime_review_2026-11-04/RG3b_report_vi.md) |
+| P10 | 06/11 | **User quyết định chuyển sang T4** | Giữ A′ làm hướng chính hay kiểm tra T4? | A′ **DEPRIORITIZED** làm hướng chính: thủ tục đúng và có lợi hơn Bonferroni, nhưng lợi thế nhỏ, chưa thấy cơ chế mới. RG2 không chạy. T4 **ACTIVE**, bắt đầu bằng kill test lý thuyết | [card T4](reports/reassessment_2026-11-03_vi/topic_cards/T4_selection_indexed_premises_missingness_vi.md) |
+| P11 | 06/11 | **Kill test T4** | Có giữ được target M1 bằng luật cục bộ không? Regime-indexed FCI có phải cơ chế không? | Card gốc **NO-GO** với truy vấn giữa biến O. Luật theo regime đúng nhưng lợi ích chủ yếu đến từ phép tách đơn giản. Nảy sinh **T4-L** (lift bằng kiểm định chỉ báo): positive ở họ cộng tính, fragile ở họ tương tác, toán lõi không mới. **GO có điều kiện** tới audit và pilot thuật toán, chờ user | [`T4_kill_test_vi.md`](archive/2026-11_t4_selection_indexed/T4_kill_test_vi.md) |
+| P12 | 06/11 | **Audit văn liệu T4-L** | Đã có ai dùng phép test chỉ báo làm bước xác nhận CI trong discovery chưa? | Tiêu chí no-go **không bị kích hoạt** trong giới hạn sàng lọc. Novelty **hạ xuống**: toán đã có (Didelez 2010 Thm 6), tính testable, dạng test và pretest cũng đã có. Baseline FCI có chỉ báo không thay thế được T4-L ở oracle. Pilot thuật toán chờ user | [`T4L_literature_audit_vi.md`](archive/2026-11_t4_selection_indexed/T4L_literature_audit_vi.md) |
+| P13 | 06/11 | **Pilot thuật toán T4-L** | LiftG2 có giảm claim sai so với M1 mà giữ claim đúng không? | **NO-GO theo K8:** tỉ lệ sai 1.06 [1.02, 1.10], Naive và các baseline khác hòa hoặc thắng. Chẩn đoán post hoc một phần: lỗi nền chiếm phần lớn, tiến gần target listwise không giúp claim về DAG. Chờ user xác nhận đóng; **chưa có backup** | [`T4L_pilot_report_vi.md`](archive/2026-11_t4_selection_indexed/T4L_pilot_report_vi.md) |
+| P14 | 07/11 | **User đóng T4-L** | Có đóng T4-L sau NO-GO và chẩn đoán đủ 9 ô không? | T4-L **REFUTED** theo framing đã thử; card T4 gốc NO-GO. Tài liệu chuyển vào `archive/`. Không còn hướng ACTIVE, chưa có backup | [`archive/2026-11_t4_selection_indexed/`](archive/2026-11_t4_selection_indexed/) |
+| P15 | 07/11 | **User đặt lại quy trình: dữ liệu trước** | Gap nào nhìn thấy được trên dữ liệu uy tín, thay vì bắt đầu từ chứng minh toán? | Pilot trên Causal Chamber và Sachs. Ứng viên chính **C1** (mất cạnh mạnh do đo lường dư thừa khi có latent), **Conditional**, chờ phép thử R1 với BOSS-FCI, GFCI, FCIT. Dự phòng **C2**. Chưa có cơ chế mới | [`00_data_first_gap_report_vi.md`](reports/data_first_gap_2026-11-07/00_data_first_gap_report_vi.md) |
 
 ---
 
@@ -68,6 +77,53 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
   5. Phần "off-diagonal" là GLS/minimum-distance cổ điển (Browne 1984).
 - **Còn sống:** R1 (chứng nhận đồng thời ancestral feature bằng projection, ngưỡng χ²_rank; valid pointwise) và R2 (η-profile). Novelty hẹp: bước projection là lập luận của Wang–Kolar–Drton (JASA 2026) Lemma 3.
 
+### P6 → P7: RG1 giữ validity nhưng đổi định nghĩa R1
+- Chi tiết và chứng minh ở [`RG1_R1_proof_vi.md`](reports/aprime_review_2026-11-04/RG1_R1_proof_vi.md).
+  1. **Validity có chứng minh đầy đủ** (joint CLT dạng đóng, V1 pointwise, V2 đều trên compact).
+  2. **Bản seminorm toàn cục Σ⁺ + χ²_rank của contract §7 rỗng nghĩa khi M_¬f chứa mô hình mù:** inf đi theo null Σ, T(f) ≡ 0 với mọi dữ liệu. K > rank một mình không đủ. Ở p = 4, K = 24 có 178/185 pattern mù. Vì R_n ⊋ A_n chứa các điểm không đạt được.
+  3. **Sửa:** Ω̂ = (Σ̂ + λ_nI)⁻¹ với ngưỡng χ² có trọng số. Valid đều khi p, K cố định, không cần ước lượng rank, T(f) → ∞. Ở K lớn lệch nặng nếu λ quá nhỏ. Kỹ thuật thuộc họ regularized Wald (Dufour–Valéry), không mới.
+  4. **"Valid pointwise" không phải điểm mạnh:** thresholding nhất quán đạt FWER → 0, power → 1. Trong lớp η ≤ β, regime duy nhất R1 có thể có nội dung là √nη < 2t_K, và **chưa có kịch bản nào cho thấy nội dung đó**. Vì vậy R2 không phải phần phụ (đảo nhận định ở readiness §11.4), nhưng cũng chưa có bằng chứng nó hữu ích.
+  5. **Ngưỡng chiếu χ²_r bị trội** bởi ngưỡng valid theo từng mô hình. Lợi từ R² yếu đi dưới metric ridge và không phải của riêng χ². RG3 phải đo R² và số tọa độ khác nhau của đối thủ gần nhất.
+  6. **Rà soát độc lập bởi agent AI:** `PASS WITH CORRECTIONS` ([báo cáo](reports/aprime_review_2026-11-04/RG1_independent_review_vi.md)); các định lý đứng được, các kết luận rút ra bị thu hẹp.
+
+### P10 → P11: kill test T4 (06/11)
+
+- **Vì sao đổi:** phản ví dụ cho thấy không luật cục bộ nào chỉ dùng CI giữa biến O giữ được target listwise của M1. Regime-indexed FCI đúng (0 vi phạm oracle), nhưng phần lớn claim thêm chỉ cần phép tách.
+- **Học được:** chỉ báo thiếu luôn quan sát được nên phép test chỉ báo làm được trên hàng đủ U. Ở họ cộng tính, phụ thuộc do selection là bậc hai còn phụ thuộc với chỉ báo là bậc nhất; ở họ tương tác thứ tự đảo lại. Lift1 giảm định hướng sai rất mạnh ở họ đầu, gần bằng naive ở họ sau.
+- **Tự sửa:** phép đo PP so với LW đầu tiên bị lệch (tỉ lệ > 1 khi q = 0); đã thêm đối chứng LWu và K5 trước lần chạy đầy đủ. Card T4 ghi M1 §10.1 có ví dụ, thực tế không có đồ thị tường minh.
+- **Bằng chứng:** [`T4_kill_test_vi.md`](archive/2026-11_t4_selection_indexed/T4_kill_test_vi.md).
+
+### P11 → P12: audit văn liệu T4-L (06/11)
+
+- **Vì sao làm:** bước 1 của điều kiện đi tiếp ở kill test.
+- **Học được:** điều tôi gọi là Mệnh đề L đã có trong Didelez et al. 2010 Theorem 6. Test chỉ báo cũng đã có trong kinh tế lượng (attrition), và logic pretest rồi xóa dữ liệu đã có trong Ji et al. 2023. Phần chưa tìm thấy chỉ còn: dùng làm bước xác nhận trong FCI có latent, và so sánh power theo bậc hiệu ứng.
+- **Tự sửa:** bản đầu của phép thử baseline tạo cạnh giả R_i–O_i, bị đối chứng q = 0 phát hiện; số của bản đó đã bỏ.
+- **Giới hạn:** sàng lọc trích dẫn chỉ trên tiêu đề và tóm tắt; năm bài gần chưa đọc được toàn văn.
+- **Bằng chứng:** [`T4L_literature_audit_vi.md`](archive/2026-11_t4_selection_indexed/T4L_literature_audit_vi.md).
+
+### P12 → P13: pilot thuật toán T4-L (06/11)
+
+- **Vì sao đổi:** lợi thế lớn ở mức một bộ ba biến không còn ở FCI đầy đủ. LiftG2 tăng nhẹ claim sai so với M1, kể cả ở cơ chế cộng tính.
+- **Học được:** M1 thật sự không đạt target listwise ở finite sample và lift khớp target tốt hơn, nhưng khớp target hơn không giảm claim sai về DAG. Naive có ít claim sai quy cho missing data nhất. Có thể target listwise không phải thứ đáng tiến tới. (Suy luận từ 4/9 ô post hoc.)
+- **Tự sửa:** không có lỗi code làm đổi kết luận. Đã ghi rõ: FCI tự viết chưa đối chiếu thư viện, trường `flag_false` không được tính, ngưỡng K8 chưa được user chốt.
+- **Chưa loại trừ:** MNAR rất mạnh, vì ô b × 3 bị dừng do thiếu RAM.
+- **Bằng chứng:** [`T4L_pilot_report_vi.md`](archive/2026-11_t4_selection_indexed/T4L_pilot_report_vi.md).
+
+### P13 → P14: đóng T4-L (07/11)
+
+- **Vì sao đóng:** NO-GO theo K8; tăng liều MNAR không đảo kết quả mà làm lift tệ hơn; toán lõi đã có từ Didelez 2010.
+- **Học được:** ở mô phỏng này, target listwise đúng ở oracle nhưng chỉ còn khoảng một phần ba số claim, và các phương pháp còn rất xa nó ở n đã thử. Lỗi nền chủ yếu do sai số CI ở finite sample.
+- **Giới hạn của phán quyết:** dựa trên mô phỏng tuyến tính Gauss do agent thiết kế, FCI tự viết chưa đối chiếu với thư viện, chưa ai rà độc lập các chứng minh; ngưỡng K8 do agent đề xuất và user không chỉnh trước khi đóng.
+- **Bằng chứng:** [`T4L_pilot_report_vi.md`](archive/2026-11_t4_selection_indexed/T4L_pilot_report_vi.md).
+
+### P14 → P15: quy trình dữ liệu trước (07/11)
+
+- **Vì sao đổi:** user đánh giá lối đi từ chứng minh toán học khó tiếp cận và kém khả quan; muốn gap được chứng minh tồn tại trên dữ liệu uy tín, đồng thời vẫn đủ mạnh về ý nghĩa khoa học.
+- **Học được:** trên Chamber, FCI mất 14/21 cạnh mạnh nhưng nhận đúng 3 cặp confounded; BOSS giữ 21/21 nhưng không nói được về confounding. Precision giảm theo n chủ yếu do sai dạng hàm, không phải phụ thuộc residual như agent dự đoán. Chấm lại benchmark gần như không đổi thứ hạng.
+- **Tự sửa:** ba dự đoán của agent bị dữ liệu bác bỏ hoặc không ủng hộ (E6, E7, E1b); đều được ghi trong báo cáo.
+- **Giới hạn:** một hệ vật lý; lớp phương pháp lai chưa chạy; E3 phần Sachs chưa xong do hệ thống dừng vì thiếu RAM.
+- **Bằng chứng:** [`00_data_first_gap_report_vi.md`](reports/data_first_gap_2026-11-07/00_data_first_gap_report_vi.md).
+
 ---
 
 ## 3. Sổ đăng ký "KHÔNG LÀM LẠI" (do-not-redo registry)
@@ -91,6 +147,20 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
 | X15 | Quy ước pseudo-inverse có support (P5) cho near-duplicate queries | REFUTED | Gán +∞ cho mô hình đúng ở 100% replicate | toy §4.2 | — |
 | X16 | Chỉ dùng duplicate-invariance làm điểm khác ACI | SUBSUMED | ACI + dedup đạt cùng tính chất | contract v2 P5 | — |
 | X17 | So sánh hiệu năng chỉ dựa trên SHD/argmax PAG cho dependence-aware scoring | REFUTED như kỳ vọng lợi ích | BSC-D: thứ tự PAG "almost always the same" | bscd.pdf tr. 13–14 | — |
+| X18 | **R1 với seminorm toàn cục Σ⁺ (quy ước C-c) + χ²_rank** làm thủ tục chứng nhận | REFUTED | Valid nhưng rỗng nghĩa: T(f) ≡ 0 khi M_¬f chứa mô hình mù (p = 4, K = 24: 178/185 pattern mù) | [RG1 Thm 4](reports/aprime_review_2026-11-04/RG1_R1_proof_vi.md) | Dùng tập đạt được A_n (R3), hoặc seminorm theo khối từng mô hình |
+| X19 | "Valid pointwise với η_n → 0" làm điểm khác biệt của R1 | SUBSUMED | Thresholding nhất quán đạt FWER → 0, power → 1 | RG1 Mệnh đề 7; Robins et al. 2003 | Chỉ khi nhắm regime cục bộ √nη < 2t_K |
+| X20 | Σ̂⁺ không cắt rank, hoặc Σ⁻¹ oracle, với ngưỡng χ² gần điểm rớt rank | REFUTED | Giới hạn không phải χ²: 0.017 (bảo thủ) và 0.06–0.09 (anti-conservative) | RG1 Mệnh đề 3, §8.1 | Q chứa mọi query biên thì rank hằng |
+| X21 | η*(f) không kèm cận trên η̄ | REFUTED (định nghĩa) | Cả f lẫn ¬f đều có η* hữu hạn | RG1 Thm 7(c) | — |
+| X22 | Hybrid (Wald khối I + hộp phía D) làm thủ tục chính của R1 | REFUTED như ứng viên chính | Gain = 1 so với box ở mọi ô RG3 | [RG3 §2](reports/aprime_review_2026-11-04/RG3_S1_report_vi.md) | Đối thủ khó nhất không còn nằm ở phía D |
+| X23 | Giữ đúng target listwise của M1 bằng luật cục bộ chỉ dùng CI giữa biến O | REFUTED | Cặp DAG giống nhau ở mọi regime không chứa T nhưng khác target listwise | [T4 §4](archive/2026-11_t4_selection_indexed/T4_kill_test_vi.md) | Không áp dụng nếu dùng truy vấn chỉ báo, xem T4-L |
+| X24 | Ghép premise từ các regime khác nhau rồi kết luận thuần, không xác nhận | REFUTED | R0, R1, R4 ngây thơ cho claim sai: 395/1761, 457/1674, 16/1610 | [T4 §4](archive/2026-11_t4_selection_indexed/T4_kill_test_vi.md) | Bản theo regime thì đúng |
+| X25 | Lấy regime-indexed FCI làm cơ chế trung tâm của bài | DEPRIORITIZED | Bổ đề đơn giản; PP/SepOnly chỉ 1.04–1.21 ở p = 6, 7 (gần 1.00–1.06 ở p = 4, 5), đạt 1.10 chỉ ở đồ thị dày; quy về FCI trên tập con | [T4 §4](archive/2026-11_t4_selection_indexed/T4_kill_test_vi.md) | Vẫn dùng được làm lớp nền |
+| X26 | Trình bày lift bằng chỉ báo như kết quả toán mới | REFUTED | Chính là Didelez et al. 2010 Theorem 6, áp dụng có điều kiện trên S_U; chiều test-wise có ở Witte Lemma 6 | [Audit §1–2](archive/2026-11_t4_selection_indexed/T4L_literature_audit_vi.md) | Không bác bỏ việc dùng nó làm thủ tục; chỉ bác bỏ tuyên bố novelty về toán |
+| X27 | T4-L: thay bước xác nhận listwise của FCI bằng chuỗi kiểm định chỉ báo | NO-GO theo K8, chờ user xác nhận đóng | Sai 1.06 lần M1; LW, Naive, Flag, MI, FCI-R hòa hoặc thắng | [Pilot §1](archive/2026-11_t4_selection_indexed/T4L_pilot_report_vi.md) | Nếu xem lại: phải có bằng chứng mới về MNAR rất mạnh, hoặc đổi target khỏi listwise |
+| X28 | Đánh giá phương pháp missing-data trong FCI mà không có đối chứng dữ liệu đầy đủ | Bài học phương pháp | Dữ liệu đầy đủ đã có 8–13 claim sai mỗi đồ thị; phần do missing data chỉ 2–8 | [Pilot §4](archive/2026-11_t4_selection_indexed/T4L_pilot_report_vi.md) | Luôn đo lỗi nền trước |
+| X29 | Đóng T4-L theo quyết định của user (cập nhật X27) | REFUTED theo framing đã thử; phần toán SUBSUMED (X26) | Pilot §1 và §4 đủ 9 ô | [Pilot](archive/2026-11_t4_selection_indexed/T4L_pilot_report_vi.md) | Mở lại chỉ khi có bằng chứng mới mâu thuẫn trực tiếp, ví dụ dữ liệu thật hoặc mô phỏng độc lập cho thấy lift giảm claim sai so với M1. Câu hỏi "chọn target nào dưới missing data" là câu hỏi khác, chưa được audit, không bị đóng ở đây |
+| X30 | Giả thuyết: precision giảm theo n trên Chamber chủ yếu do phụ thuộc residual giữa sensor | REFUTED theo L5 | Knock-out: bỏ phụ thuộc residual nhưng giữ phi tuyến vẫn giảm .23; tuyến tính hóa chỉ giảm .017 | [E6](reports/data_first_gap_2026-11-07/E6_summary.json) | Không áp dụng cho ba cặp `ir_i`–`vis_i`, vốn là phụ thuộc thật |
+| X31 | Kiểm toán benchmark thật sẽ đảo thứ hạng thuật toán, làm đề tài độc lập | DEPRIORITIZED | Chấm lại trên Chamber: Spearman .89–1.00; chỉ đổi điểm tuyệt đối. Post hoc, một hệ | [E7](reports/data_first_gap_2026-11-07/E7_outputs.json) | Có hệ khác cho thấy đảo thứ hạng thật |
 
 **Chưa bị bác bỏ, chỉ chưa kiểm tra:** ứng viên A/B của review 30/10 (LLM feedback loop, calibration consensus→disputed); T4 (selection-indexed premises dưới missing data; backup); C-S (coordinated-shift breakdown radius); K2–K4 của kill test.
 
@@ -108,11 +178,18 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
 
 ---
 
-## 5. Trạng thái hiện tại (04/11/2026)
+## 5. Trạng thái hiện tại (07/11/2026)
 
-- **ACTIVE:** A′ reformulated, gồm R1 (*simultaneous certified ancestral assertions* cho MAG có latent, từ vector CI statistics, ngưỡng χ²_rank, valid pointwise với η_n → 0) và R2 (η-profile cho guarantee đồng đều).
-- **Gate tiếp theo:** RG1 (chứng minh) và **RG2 (kill test: power của R1 so với Bonferroni IUT và Chang-style resampling)**. Nếu RG2 âm thì dừng A′, chuyển sang T4.
-- **Backup:** T4.
+- **Từ 07/11: không có hướng ACTIVE và chưa có backup.** T4-L đã đóng theo quyết định của user (X29). Các dòng bên dưới là trạng thái lúc ghi, giữ lại theo quy tắc append-only. Việc kế tiếp chưa được quyết định.
+- **ACTIVE từ 06/11: T4.** Phần A′ bên dưới là trạng thái khi dừng. A′ reformulated, gồm R1 (*simultaneous certified ancestral assertions* cho MAG có latent, từ vector CI statistics, metric ridge với λ khai báo theo K, ngưỡng valid theo từng mô hình) và R2 (η-profile kèm η̄, là phần mang nội dung của bảo đảm). Định nghĩa theo [RG1](reports/aprime_review_2026-11-04/RG1_R1_proof_vi.md) §10.1; bản χ²_rank + seminorm đã bị bác bỏ (X18).
+- **RG1:** đã qua một lượt rà soát bởi agent AI (`PASS WITH CORRECTIONS`), các sửa chữa đã áp dụng; user duyệt PASS có điều kiện ngày 2026-11-05; chưa có người rà.
+- **Quyết định của user (06/11):** A′ không còn là hướng chính, chuyển sang T4. A′ chỉ DEPRIORITIZED, không bị bác bỏ; phần đã làm đủ cho một ghi chú phương pháp ngắn nếu cần. Xem [RG3b](reports/aprime_review_2026-11-04/RG3b_report_vi.md).
+- **Đang kiểm tra:** T4 (selection-indexed premises dưới missing data), kill test lý thuyết R0/R4. **Chưa có backup mới.**
+- **Cập nhật 06/11 sau kill test:** T4 theo card gốc NO-GO; **T4-L** (lift bằng kiểm định chỉ báo) GO có điều kiện, bước kế là audit văn liệu rồi pilot mức thuật toán, **chờ user quyết định**. Theo luật khai báo trước, cơ chế phụ thuộc vào mô hình chỉ báo đúng. Chưa có người rà các chứng minh. Xem [`T4_kill_test_vi.md`](archive/2026-11_t4_selection_indexed/T4_kill_test_vi.md). **Chưa có backup mới.**
+- **Cập nhật 06/11 sau audit:** no-go không bị kích hoạt, nhưng novelty hẹp (X26). Kỳ vọng hạ xuống một bài phương pháp ngắn. Khuyến nghị: chạy pilot thuật toán và tìm song song hướng dự phòng, **chờ user quyết định**. Xem [`T4L_literature_audit_vi.md`](archive/2026-11_t4_selection_indexed/T4L_literature_audit_vi.md).
+- **Cập nhật 06/11 sau pilot:** T4-L **NO-GO theo K8** (X27), chờ user xác nhận đóng. T4 không còn ứng viên đang chạy. **Chưa có backup.** Xem [`T4L_pilot_report_vi.md`](archive/2026-11_t4_selection_indexed/T4L_pilot_report_vi.md).
+- **Cập nhật 06/11 sau chẩn đoán đủ 9 ô:** tăng liều MNAR không đảo kết quả. Sửa cách đọc: target listwise không có hại ở oracle (0 claim sai) nhưng rất nghèo (20.7 so với 61.5 claim đúng), và ở n đã thử các phương pháp còn rất xa nó. Việc cắt tập điều kiện không phải nguyên nhân ở oracle. Câu hỏi có thể đáng xem: chọn target nào, chưa kiểm tra văn liệu. Xem [`T4L_pilot_report_vi.md`](archive/2026-11_t4_selection_indexed/T4L_pilot_report_vi.md) §4.
+- **Cập nhật 07/11, quy trình dữ liệu trước:** chưa có hướng ACTIVE đã cam kết. Ứng viên **C1** ở trạng thái `Conditional`; bước kế là R1 (chạy BOSS-FCI, GFCI, FCIT trên Chamber) và đọc các bài ưu tiên 1. **Chờ user quyết định.** Xem [`00_data_first_gap_report_vi.md`](reports/data_first_gap_2026-11-07/00_data_first_gap_report_vi.md).
 
 ---
 

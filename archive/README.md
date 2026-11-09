@@ -6,6 +6,7 @@ Tài liệu trong thư mục này được **giữ nguyên văn**, không xóa. 
 |---|---|---|---|
 | [`2026-09_safe_imperfect_priors/`](2026-09_safe_imperfect_priors/) | 18/09 – 21/10/2026 | Kill test K0 PASS, K1 PASS (decision), K2–K4 NOT_RUN. Certified Blockwise ICD: **PAUSED** | `proposal/` đề cương 01/02/02a · `handoff/` bàn giao 01–15 (kill test, portfolio, Sprint 0, C0–C2) · `research_notes/` portfolio 4 vòng, OP-PDS, block-ICD contracts, Sprint-0 semantics · `reports/` checkpoint 19/10 (kèm figures), dossier, amendment, addendum A-001 |
 | [`2026-10_dcfci_direction_c/`](2026-10_dcfci_direction_c/) | 30/10 – 03/11/2026 | **SUBSUMED / DEPRIORITIZED** (reset 03/11) | Review literature/gap 30/10 (ứng viên A/B/C), đặc tả dcFCI pruning T1–T3, đánh giá phê bình Hướng C (D1–D4) |
+| [`2026-11_t4_selection_indexed/`](2026-11_t4_selection_indexed/) | 06/11 – 07/11/2026 | T4 theo card gốc **NO-GO**; T4-L **REFUTED** theo framing đã thử (X27, X29), phần toán **SUBSUMED** (X26) | Kill test, audit văn liệu, pilot mức thuật toán và chẩn đoán; script, log, số liệu. Card T4 vẫn ở `reports/reassessment_2026-11-03_vi/topic_cards/` |
 
 ## Những gì **không** chuyển vào archive (vì code phụ thuộc đường dẫn)
 
