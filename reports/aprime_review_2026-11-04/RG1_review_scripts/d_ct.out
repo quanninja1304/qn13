@@ -1,0 +1,19 @@
+n dags 25 patterns 11
+=== D1 misspecified eta>2beta: X->Z strong, Y->Z weak. truth collider; eta=0.2 fixed (outside P_n); FWER counts false ancestral features
+200 beta=0.022 sqrt(n)beta=0.3 sqrt(n)eta=2.8 {'R1': np.float64(0.82), 'R1raw': np.float64(0.822), 'CT': 0.565, 'BL1': np.float64(0.123), 'empty': 0.002, 'wrongCT': 0.605, 'emptyBL': 0.0, 'tp_R1': np.float64(0.428), 'tp_CT': 0.308, 'tp_BL1': np.float64(0.096)}
+500 beta=0.022 sqrt(n)beta=0.5 sqrt(n)eta=4.5 {'R1': np.float64(0.93), 'R1raw': np.float64(1.0), 'CT': 0.83, 'BL1': np.float64(0.922), 'empty': 0.07, 'wrongCT': 0.832, 'emptyBL': 0.063, 'tp_R1': np.float64(0.465), 'tp_CT': 0.415, 'tp_BL1': np.float64(0.47)}
+1000 beta=0.022 sqrt(n)beta=0.7 sqrt(n)eta=6.3 {'R1': np.float64(0.815), 'R1raw': np.float64(1.0), 'CT': 0.918, 'BL1': np.float64(0.805), 'empty': 0.185, 'wrongCT': 0.918, 'emptyBL': 0.195, 'tp_R1': np.float64(0.408), 'tp_CT': 0.459, 'tp_BL1': np.float64(0.402)}
+2000 beta=0.022 sqrt(n)beta=1.0 sqrt(n)eta=8.9 {'R1': np.float64(0.61), 'R1raw': np.float64(1.0), 'CT': 0.983, 'BL1': np.float64(0.603), 'empty': 0.39, 'wrongCT': 0.983, 'emptyBL': 0.397, 'tp_R1': np.float64(0.305), 'tp_CT': 0.492, 'tp_BL1': np.float64(0.302)}
+5000 beta=0.022 sqrt(n)beta=1.6 sqrt(n)eta=14.1 {'R1': np.float64(0.19), 'R1raw': np.float64(1.0), 'CT': 1.0, 'BL1': np.float64(0.165), 'empty': 0.81, 'wrongCT': 1.0, 'emptyBL': 0.835, 'tp_R1': np.float64(0.095), 'tp_CT': 0.5, 'tp_BL1': np.float64(0.082)}
+10000 beta=0.022 sqrt(n)beta=2.2 sqrt(n)eta=20.0 {'R1': np.float64(0.013), 'R1raw': np.float64(1.0), 'CT': 1.0, 'BL1': np.float64(0.01), 'empty': 0.987, 'wrongCT': 1.0, 'emptyBL': 0.99, 'tp_R1': np.float64(0.007), 'tp_CT': 0.5, 'tp_BL1': np.float64(0.005)}
+20000 beta=0.022 sqrt(n)beta=3.2 sqrt(n)eta=28.3 {'R1': np.float64(0.0), 'R1raw': np.float64(1.0), 'CT': 1.0, 'BL1': np.float64(0.0), 'empty': 1.0, 'wrongCT': 1.0, 'emptyBL': 1.0, 'tp_R1': np.float64(0.0), 'tp_CT': 0.5, 'tp_BL1': np.float64(0.0)}
+50000 beta=0.022 sqrt(n)beta=5.0 sqrt(n)eta=44.7 {'R1': np.float64(0.0), 'R1raw': np.float64(1.0), 'CT': 1.0, 'BL1': np.float64(0.0), 'empty': 1.0, 'wrongCT': 1.0, 'emptyBL': 1.0, 'tp_R1': np.float64(0.0), 'tp_CT': 0.5, 'tp_BL1': np.float64(0.0)}
+200000 beta=0.022 sqrt(n)beta=10.0 sqrt(n)eta=89.4 {'R1': np.float64(0.0), 'R1raw': np.float64(1.0), 'CT': 1.0, 'BL1': np.float64(0.0), 'empty': 1.0, 'wrongCT': 1.0, 'emptyBL': 1.0, 'tp_R1': np.float64(0.0), 'tp_CT': 0.5, 'tp_BL1': np.float64(0.0)}
+=== D2 same SCM, eta<=beta control eta=0.04
+5000 {'R1': np.float64(0.18), 'R1raw': np.float64(0.24), 'CT': 0.018, 'BL1': np.float64(0.002), 'empty': 0.06, 'wrongCT': 0.145, 'emptyBL': 0.0, 'tp_R1': np.float64(0.225), 'tp_CT': 0.459, 'tp_BL1': np.float64(0.136), 'beta': np.float64(0.022)}
+50000 {'R1': np.float64(0.0), 'R1raw': np.float64(1.0), 'CT': 0.0, 'BL1': np.float64(0.0), 'empty': 1.0, 'wrongCT': 0.0, 'emptyBL': 0.905, 'tp_R1': np.float64(0.0), 'tp_CT': 0.67, 'tp_BL1': np.float64(0.095), 'beta': np.float64(0.022)}
+200000 {'R1': np.float64(0.0), 'R1raw': np.float64(1.0), 'CT': 0.0, 'BL1': np.float64(0.0), 'empty': 1.0, 'wrongCT': 0.0, 'emptyBL': 1.0, 'tp_R1': np.float64(0.0), 'tp_CT': 0.82, 'tp_BL1': np.float64(0.0), 'beta': np.float64(0.022)}
+=== D3 replicate chain local h=2, also collider h=2 from the doc: b tuned so min coordinate=h/sqrt(2000)
+chain h 2 b=0.214 {'R1': np.float64(0.0), 'R1raw': np.float64(0.0), 'CT': 0.135, 'BL1': np.float64(0.0), 'empty': 0.0, 'wrongCT': 0.325, 'emptyBL': 0.0, 'beta': np.float64(0.045)}
+chain h 3 b=0.263 {'R1': np.float64(0.005), 'R1raw': np.float64(0.005), 'CT': 0.059, 'BL1': np.float64(0.005), 'empty': 0.0, 'wrongCT': 0.145, 'emptyBL': 0.0, 'beta': np.float64(0.067)}
+chain h 4 b=0.306 {'R1': np.float64(0.002), 'R1raw': np.float64(0.002), 'CT': 0.013, 'BL1': np.float64(0.001), 'empty': 0.0, 'wrongCT': 0.039, 'emptyBL': 0.0, 'beta': np.float64(0.089)}

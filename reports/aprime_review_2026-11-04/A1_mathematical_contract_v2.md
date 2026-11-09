@@ -400,3 +400,14 @@ Nói cách khác, **phần "dependence-aware" tự nó không phải đóng góp
 | # | Ngày | Gate / sự kiện | Kết quả | Bằng chứng | Quyết định | Người chốt |
 |---|---|---|---|---|---|---|
 | 5 | 2026-11-04 | Day 1 independent mathematical audit | P1, P5, P6 PROVED (có sửa); P2, P3, P7 VALID WITH MODIFICATION; P4 công thức đúng, diễn giải bị bác bỏ một phần; (A1-b) Σ PD **sai** (CE1, CE2); D không calibrated | `reports/aprime_review_2026-11-04/A1_mathematical_contract_v2.md` | Day 2 = TOY-WITH-CAVEATS | agent (chưa có user duyệt) |
+
+## 11b. ERRATUM 2026-11-04 (RG1, `RG1_R1_proof_vi.md`)
+
+Các phát biểu sau của contract này được sửa. Bản gốc giữ nguyên để truy vết.
+
+- **§7 R1, ghi chú "R1 tránh được B1 cho validity… cái giá là mất thông tin ngoài range":** validity đúng, nhưng cái giá là **toàn bộ power**. Với seminorm toàn cục, d(z, m) = 0 với mọi z cho mọi m thỏa (B1)–(B2) (RG1 Thm 4); K > rank Σ là chưa đủ. Không dùng C-c toàn cục làm thủ tục.
+- **§2.4 C-d "kết quả do quy ước quyết định":** quyết định bởi **tốc độ của λ_n**. Với nλ_n → ∞ thì valid đều khi p, K cố định (RG1 Thm 3, Nhận xét 3.5); ở hữu hạn mẫu λ phải đủ lớn so với K. Toy Day-2 dùng nλ ≤ 1 ở các dòng FAR lớn.
+- **§4-P2 "cần Σ PD":** không cần khi dùng ridge, nhờ đường chéo của Σ̂ + λ_nI bị chặn (RG1 Mệnh đề 5, Thm 5).
+- **§2.4 Mệnh đề R:** mạnh hơn, rank Σ bằng số chiều span các gradient, và = d khi Q chứa mọi query biên (RG1 Mệnh đề 2).
+- **§7 R2:** η*(f) phải báo cáo cùng cận trên η̄ (RG1 Thm 7c).
+- **§10b:** phát biểu pointwise đúng và đã có chứng minh, nhưng thresholding nhất quán đạt tốt hơn, nên không phải điểm mạnh của R1 (RG1 Mệnh đề 7).

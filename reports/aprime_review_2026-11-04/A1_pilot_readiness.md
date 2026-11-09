@@ -228,3 +228,23 @@ Xem `A1_missing_references_register.md`. Tóm tắt các quyết định bị ch
 - Nếu R1 không vượt BL9 và BL1 (Bonferroni IUT) về power ở cùng validity, thì **STOP**.
 
 **Quyết định cập nhật:** vẫn **REFORMULATE**, **bỏ HOLD FOR SOURCE**. Gate tiếp theo là **RG1 (chứng minh R1 pointwise + rank-aware)** và **RG2 (toy power: R1 so với BL1, BL2)**. Cả hai không cần MAG enumeration, nên rẻ. RG2 là kill test thực sự: nếu dependence-aware projection không có power hơn Bonferroni, toàn bộ hướng A′ nên dừng.
+
+---
+
+## 12. Addendum 2026-11-04 — kết quả RG1 (`RG1_R1_proof_vi.md`)
+
+**RG1: đã qua một lượt rà soát độc lập bởi agent AI (`PASS WITH CORRECTIONS`, `RG1_independent_review_vi.md`), các sửa chữa đã áp dụng; user duyệt PASS có điều kiện ngày 2026-11-05 (cần người đọc Thm 3, Thm 4 trước khi dùng cho bài báo).** User cũng cho phép liệt kê DAG/MAG quy mô nhỏ cho RG3 và S1, thay cho lời dặn ở §10. Các điểm làm thay đổi memo này:
+
+1. **§0 mục 2 ("tránh được vấn đề rank nhờ seminorm cùng ngưỡng χ²_rank") được thay thế.** Validity của seminorm toàn cục đúng nhưng rỗng nghĩa: T(f) ≡ 0 khi M_¬f chứa mô hình thỏa (B1)–(B2) (RG1 Thm 4); K > rank một mình không đủ. Dùng metric ridge + χ² có trọng số (Thm 3), λ khai báo theo K; seminorm theo khối là ứng viên còn mở.
+2. **§11 mục 4 được đảo lại, trong lớp η ≤ β.** Pointwise không phân biệt được R1, vì thresholding nhất quán đạt FWER → 0, power → 1 (Mệnh đề 7). Nội dung của R1, nếu có, nằm ở bảo đảm có điều kiện theo η, tức R2 (Thm 7); chưa có bằng chứng nó hữu ích.
+3. **§9 RG2 cần đặc tả lại** theo RG1 §10.4: regime h = √nη < 2t_K, lưới R², thêm R1′ và các đối thủ valid dạng hộp theo mô hình. Không chạy RG2 theo đặc tả cũ, vì R1 chiếu có thể thua vì lý do đã biết trước (Mệnh đề 5, 8), và kết luận STOP khi đó sẽ không kiểm tra đúng ứng viên tốt nhất. Đối thủ phải có contrast sau whitening, và phải dựng được kịch bản CT vượt α mà R1 có power dương.
+4. **§9 RG3:** đại lượng cần đo cụ thể là phân bố R²_{k|I(m*)} và số tọa độ khác nhau giữa truth và đối thủ gần nhất. Tính giải tích được bằng RG1 (2.1).
+5. **Quyết định vẫn là REFORMULATE, chưa GO.** Không có bằng chứng power mới. RG1 chỉ loại bỏ một thủ tục sai và làm rõ regime cần đo.
+
+## 13. Addendum 2026-11-05: RG3 và S1 (`RG3_S1_report_vi.md`)
+
+Theo tiêu chí khai báo trước, A′ không bị dừng, nhưng tín hiệu yếu và lý do đã đổi: hybrid không có lợi thế; thống kê T có gain cỡ 1.2–2.9 lần cỡ mẫu trong RG3; kiểm chứng trên dữ liệu cho R1 hơn BL1 0.12 ở n = 500 và n = 2000 với khoảng tin cậy rộng; S1 đạt ở 2 trong 761 cặp, đều ở h = 3. ENC_range ≈ 1 gợi ý cơ chế là whitening toàn vector, không phải hình dạng χ². **Bước tiếp đề xuất: so T với hộp sau whitening trên toàn vector trước khi chạy RG2. User chưa quyết định.** Quyết định vẫn là REFORMULATE, chưa GO.
+
+## 14. Addendum 2026-11-06: T so với hộp whitening (`RG3b_report_vi.md`)
+
+40 SCM mới, p = 4, K = 24. Theo luật khai báo trước: không có khác biệt rõ giữa T và hộp whitening; ít nhất một trong hai hơn BL1. T nhỉnh hơn nhất quán (+0.04 đến +0.06) nhưng không đạt ngưỡng; gần hòa ở K = 70. Hộp whitening gần như không thêm gì so với MaxT đơn giản ở n ≥ 1000, nên suy luận "cơ chế là whitening" không được ủng hộ. **Khuyến nghị của agent: không đầu tư tiếp A′ như hướng chính, chuyển sang T4. User chưa quyết định.**

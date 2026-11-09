@@ -1,0 +1,12 @@
+n=1000 h=0 a=0.0000: P(d2>c_I)=0.048 P(d2>c_bar)=0.019 P(d2>c_n)=0.013 | mean c_I=3.59 c_bar=4.88 c_n=5.46 frac c_bar>c_n=0.000 SE=0.0044
+n=1000 h=1 a=0.0317: P(d2>c_I)=0.066 P(d2>c_bar)=0.031 P(d2>c_n)=0.021 | mean c_I=3.60 c_bar=4.87 c_n=5.51 frac c_bar>c_n=0.000 SE=0.0044
+n=1000 h=2 a=0.0633: P(d2>c_I)=0.087 P(d2>c_bar)=0.036 P(d2>c_n)=0.026 | mean c_I=3.74 c_bar=4.90 c_n=5.61 frac c_bar>c_n=0.000 SE=0.0044
+n=1000 h=3 a=0.0947: P(d2>c_I)=0.090 P(d2>c_bar)=0.047 P(d2>c_n)=0.037 | mean c_I=3.80 c_bar=4.98 c_n=5.55 frac c_bar>c_n=0.000 SE=0.0044
+n=1000 h=5 a=0.1570: P(d2>c_I)=0.101 P(d2>c_bar)=0.044 P(d2>c_n)=0.028 | mean c_I=3.55 c_bar=4.95 c_n=5.54 frac c_bar>c_n=0.000 SE=0.0044
+n=1000 h=8 a=0.2481: P(d2>c_I)=0.110 P(d2>c_bar)=0.058 P(d2>c_n)=0.034 | mean c_I=3.93 c_bar=5.12 c_n=5.87 frac c_bar>c_n=0.000 SE=0.0044
+n=1000 h=14 a=0.4164: P(d2>c_I)=0.076 P(d2>c_bar)=0.042 P(d2>c_n)=0.024 | mean c_I=4.45 c_bar=5.53 c_n=6.31 frac c_bar>c_n=0.000 SE=0.0044
+n=5000 h=1 a=0.0141: P(d2>c_I)=0.062 P(d2>c_bar)=0.029 P(d2>c_n)=0.016 | mean c_I=3.67 c_bar=4.92 c_n=5.62 frac c_bar>c_n=0.000 SE=0.0044
+n=5000 h=3 a=0.0424: P(d2>c_I)=0.089 P(d2>c_bar)=0.046 P(d2>c_n)=0.029 | mean c_I=3.84 c_bar=4.98 c_n=5.74 frac c_bar>c_n=0.000 SE=0.0044
+n=5000 h=5 a=0.0706: P(d2>c_I)=0.100 P(d2>c_bar)=0.050 P(d2>c_n)=0.034 | mean c_I=3.78 c_bar=5.04 c_n=5.85 frac c_bar>c_n=0.000 SE=0.0044
+n=5000 h=8 a=0.1127: P(d2>c_I)=0.088 P(d2>c_bar)=0.048 P(d2>c_n)=0.033 | mean c_I=3.85 c_bar=5.12 c_n=5.82 frac c_bar>c_n=0.000 SE=0.0044
+n=5000 h=14 a=0.1955: P(d2>c_I)=0.091 P(d2>c_bar)=0.047 P(d2>c_n)=0.030 | mean c_I=4.14 c_bar=5.35 c_n=6.11 frac c_bar>c_n=0.000 SE=0.0044

@@ -1,0 +1,211 @@
+
+=== P: eta > beta (M1) ===
+P eta=0.2 beta=0.022 n=200: FWER CT=0.547 R1=0.810 R1raw=0.810 BL1=0.158 | cert CT=0.304 R1=0.426 BL1=0.113 | empty=0.000
+P eta=0.2 beta=0.022 n=500: FWER CT=0.803 R1=0.907 R1raw=1.000 BL1=0.910 | cert CT=0.409 R1=0.453 BL1=0.476 | empty=0.093
+P eta=0.2 beta=0.022 n=1000: FWER CT=0.922 R1=0.838 R1raw=1.000 BL1=0.833 | cert CT=0.461 R1=0.419 BL1=0.417 | empty=0.162
+P eta=0.2 beta=0.022 n=2000: FWER CT=0.988 R1=0.640 R1raw=1.000 BL1=0.618 | cert CT=0.494 R1=0.320 BL1=0.309 | empty=0.360
+P eta=0.2 beta=0.022 n=5000: FWER CT=1.000 R1=0.185 R1raw=1.000 BL1=0.158 | cert CT=0.500 R1=0.092 BL1=0.079 | empty=0.815
+P eta=0.2 beta=0.022 n=10000: FWER CT=1.000 R1=0.003 R1raw=1.000 BL1=0.000 | cert CT=0.500 R1=0.002 BL1=0.000 | empty=0.997
+P eta=0.2 beta=0.022 n=20000: FWER CT=1.000 R1=0.000 R1raw=1.000 BL1=0.000 | cert CT=0.500 R1=0.000 BL1=0.000 | empty=1.000
+P eta=0.2 beta=0.022 n=50000: FWER CT=1.000 R1=0.000 R1raw=1.000 BL1=0.000 | cert CT=0.500 R1=0.000 BL1=0.000 | empty=1.000
+P eta=0.04 beta=0.022 n=1000: FWER CT=0.138 R1=0.000 R1raw=0.000 BL1=0.000 | cert CT=0.305 R1=0.000 BL1=0.000 | empty=0.000
+P eta=0.04 beta=0.022 n=5000: FWER CT=0.020 R1=0.162 R1raw=0.218 BL1=0.003 | cert CT=0.453 R1=0.199 BL1=0.144 | empty=0.057
+P eta=0.04 beta=0.022 n=20000: FWER CT=0.000 R1=0.000 R1raw=0.990 BL1=0.000 | cert CT=0.608 R1=0.008 BL1=0.545 | empty=0.990
+P eta=0.04 beta=0.022 n=50000: FWER CT=0.000 R1=0.000 R1raw=1.000 BL1=0.000 | cert CT=0.725 R1=0.000 BL1=0.105 | empty=1.000
+P eta=0.04 beta=0.022 n=100000: FWER CT=0.000 R1=0.000 R1raw=1.000 BL1=0.000 | cert CT=0.753 R1=0.000 BL1=0.000 | empty=1.000
+P chain h=1.0: FWER CT=0.2121
+P chain h=2.0: FWER CT=0.1280
+P chain h=3.0: FWER CT=0.0474
+P chain h=4.0: FWER CT=0.0141
+P chain h=6.0: FWER CT=0.0005
+PASS P.R1 with abstain can far exceed alpha when eta > 2 beta  [0.9066666666666666]
+PASS P.CT stays wrong at large n when eta > 2 beta, R1 recovers through empty C_n  [CT 1.000, R1 0.000]
+--- check P done in 40.1s
+
+=== Q: oracle and plain pinv on rank-drop paths (M7), predictions for section 8.1 ===
+{'V0 a=b=0: U^2+(wv)^2/(w^2+v^2)': 0.017038, 'oracle a=1/sqrt(n), b=0: U^2+(wv)^2': 0.1246825, 'V0 a=1/sqrt(n), b=0': 0.0187035, 'oracle a=b=1/sqrt(n): U^2+(wv-1)^2/2': 0.09043, 'V0 a=b=1/sqrt(n)': 0.060482}
+Q a=c/sqrt(n) c=0.05: oracle=0.7649 (limit 0.7688) pinv=0.0177 ridge=0.0501 trunc=0.0502
+Q a=c/sqrt(n) c=0.1: oracle=0.6310 (limit 0.6342) pinv=0.0180 ridge=0.0483 trunc=0.0482
+Q a=c/sqrt(n) c=0.25: oracle=0.3990 (limit 0.3981) pinv=0.0176 ridge=0.0507 trunc=0.0508
+Q a=c/sqrt(n) c=0.5: oracle=0.2310 (limit 0.2267) pinv=0.0179 ridge=0.0498 trunc=0.0498
+Q a=c/sqrt(n) c=1.0: oracle=0.1297 (limit 0.1247) pinv=0.0195 ridge=0.0498 trunc=0.0499
+Q a=b=c/sqrt(n) c=1.0: oracle=0.0926 pinv=0.0616 (limit 0.0605) ridge=0.0494 trunc=0.0495
+Q a=b=c/sqrt(n) c=1.5: oracle=0.0721 pinv=0.0909 (limit 0.0898) ridge=0.0464 trunc=0.0463
+Q a=b=c/sqrt(n) c=2.0: oracle=0.0630 pinv=0.0888 (limit 0.0887) ridge=0.0505 trunc=0.0505
+Q a=b=c/sqrt(n) c=3.0: oracle=0.0561 pinv=0.0722 (limit 0.0734) ridge=0.0493 trunc=0.0493
+--- check Q done in 39.2s
+
+=== R: size of W_n at large K (M2) ===
+R K=70 identity n=200: ridge n^-1/3=0.123 .5=0.072 2=0.055 | trunc=0.046 | block=0.046 (|I|=70) | 13s
+R K=70 identity n=500: ridge n^-1/3=0.091 .5=0.059 2=0.054 | trunc=0.052 | block=0.052 (|I|=70) | 13s
+R K=70 identity n=1000: ridge n^-1/3=0.067 .5=0.049 2=0.043 | trunc=0.044 | block=0.044 (|I|=70) | 11s
+R K=70 identity n=5000: ridge n^-1/3=0.056 .5=0.051 2=0.049 | trunc=0.051 | block=0.051 (|I|=70) | 13s
+R K=70 chain .4 n=200: ridge n^-1/3=0.117 .5=0.075 2=0.056 | trunc=0.054 | block=0.061 (|I|=25) | 9s
+R K=70 chain .4 n=500: ridge n^-1/3=0.073 .5=0.053 2=0.048 | trunc=0.048 | block=0.052 (|I|=25) | 9s
+R K=70 chain .4 n=1000: ridge n^-1/3=0.070 .5=0.053 2=0.049 | trunc=0.051 | block=0.050 (|I|=25) | 10s
+R K=70 chain .4 n=5000: ridge n^-1/3=0.055 .5=0.049 2=0.049 | trunc=0.049 | block=0.051 (|I|=25) | 10s
+R K=165 identity n=200: ridge n^-1/3=0.222 .5=0.104 2=0.064 | trunc=0.051 | block=0.051 (|I|=165) | 16s
+R K=165 identity n=500: ridge n^-1/3=0.135 .5=0.080 2=0.058 | trunc=0.053 | block=0.053 (|I|=165) | 16s
+R K=165 identity n=1000: ridge n^-1/3=0.098 .5=0.059 2=0.055 | trunc=0.052 | block=0.052 (|I|=165) | 17s
+R K=165 identity n=5000: ridge n^-1/3=0.076 .5=0.062 2=0.059 | trunc=0.058 | block=0.058 (|I|=165) | 17s
+R K=165 chain .4 n=200: ridge n^-1/3=0.186 .5=0.084 2=0.055 | trunc=0.047 | block=0.050 (|I|=65) | 13s
+R K=165 chain .4 n=500: ridge n^-1/3=0.140 .5=0.076 2=0.063 | trunc=0.059 | block=0.057 (|I|=65) | 13s
+R K=165 chain .4 n=1000: ridge n^-1/3=0.086 .5=0.058 2=0.053 | trunc=0.049 | block=0.049 (|I|=65) | 13s
+R K=165 chain .4 n=5000: ridge n^-1/3=0.057 .5=0.040 2=0.039 | trunc=0.037 | block=0.044 (|I|=65) | 13s
+R K=616 identity n=200: ridge n^-1/3=0.660 .5=0.340 2=0.160 | trunc=0.087 | block=0.087 (|I|=616) | 30s
+R K=616 identity n=1000: ridge n^-1/3=0.347 .5=0.140 2=0.087 | trunc=0.073 | block=0.073 (|I|=616) | 28s
+R K=616 chain .4 n=200: ridge n^-1/3=0.660 .5=0.300 2=0.107 | trunc=0.073 | block=0.053 (|I|=266) | 21s
+R K=616 chain .4 n=1000: ridge n^-1/3=0.280 .5=0.107 2=0.073 | trunc=0.067 | block=0.073 (|I|=266) | 20s
+--- check R done in 304.3s
+
+=== T: true FWER at large K, bracketed (M2) ===
+family p=5: K=70, patterns=7452, built in 10s
+local family p=5 [(0, 1), (1, 2)]: DAGs=180, patterns=112
+local family p=5 [(0, 2), (1, 2)]: DAGs=195, patterns=107
+local family p=5 [(0, 1), (2, 3)]: DAGs=194, patterns=119
+local family p=6 [(0, 1), (1, 2)]: DAGs=417, patterns=255
+local family p=6 [(0, 2), (1, 2)]: DAGs=443, patterns=230
+T K=70 all DAGs | two edges .5 (fixed) n=200 lam=n^-1/3 sqrt(n)beta=6.81 faithful=True reps=400: P(W>c)=0.110 FWER in [0.000,0.000] | 2s
+T K=70 all DAGs | two edges .5 (fixed) n=500 lam=n^-1/3 sqrt(n)beta=10.76 faithful=True reps=400: P(W>c)=0.060 FWER in [0.000,0.000] | 2s
+T K=70 all DAGs | two edges .5 (fixed) n=1000 lam=n^-1/3 sqrt(n)beta=15.22 faithful=True reps=400: P(W>c)=0.062 FWER in [0.000,0.000] | 2s
+T K=70 all DAGs | two edges .5 (fixed) n=5000 lam=n^-1/3 sqrt(n)beta=34.03 faithful=True reps=400: P(W>c)=0.058 FWER in [0.000,0.000] | 2s
+T K=70 local DAGs depth 2 | chain3 local h=3 n=500 lam=n^-1/3 sqrt(n)beta=3.00 faithful=True reps=400: P(W>c)=0.083 FWER in [0.000,0.015] | 60s
+T K=70 local DAGs depth 2 | collider3 local h=3 n=500 lam=n^-1/3 sqrt(n)beta=3.00 faithful=True reps=400: P(W>c)=0.092 FWER in [0.000,0.018] | 55s
+T K=70 local DAGs depth 2 | two edges local h=3 n=500 lam=n^-1/3 sqrt(n)beta=3.00 faithful=True reps=400: P(W>c)=0.085 FWER in [0.000,0.028] | 61s
+T K=70 local DAGs depth 2 | chain3 local h=6 n=500 lam=n^-1/3 sqrt(n)beta=6.00 faithful=True reps=400: P(W>c)=0.077 FWER in [0.000,0.000] | 2s
+T K=70 local DAGs depth 2 | collider3 local h=6 n=500 lam=n^-1/3 sqrt(n)beta=6.00 faithful=True reps=400: P(W>c)=0.083 FWER in [0.000,0.000] | 2s
+T K=70 local DAGs depth 2 | two edges local h=6 n=500 lam=n^-1/3 sqrt(n)beta=6.00 faithful=True reps=400: P(W>c)=0.072 FWER in [0.003,0.003] | 2s
+T K=70 local DAGs depth 2 | chain3 local h=3 n=1000 lam=n^-1/3 sqrt(n)beta=3.00 faithful=True reps=400: P(W>c)=0.062 FWER in [0.000,0.022] | 53s
+T K=70 local DAGs depth 2 | chain3 local h=3 n=1000 lam=2 sqrt(n)beta=3.00 faithful=True reps=400: P(W>c)=0.043 FWER in [0.000,0.010] | 30s
+T K=70 local DAGs depth 2 | collider3 local h=3 n=1000 lam=n^-1/3 sqrt(n)beta=3.00 faithful=True reps=400: P(W>c)=0.087 FWER in [0.000,0.018] | 47s
+T K=70 local DAGs depth 2 | collider3 local h=3 n=1000 lam=2 sqrt(n)beta=3.00 faithful=True reps=400: P(W>c)=0.040 FWER in [0.000,0.003] | 24s
+T K=70 local DAGs depth 2 | two edges local h=3 n=1000 lam=n^-1/3 sqrt(n)beta=3.00 faithful=True reps=400: P(W>c)=0.077 FWER in [0.000,0.052] | 66s
+T K=70 local DAGs depth 2 | two edges local h=3 n=1000 lam=2 sqrt(n)beta=3.00 faithful=True reps=400: P(W>c)=0.018 FWER in [0.000,0.010] | 10s
+T K=70 local DAGs depth 2 | chain3 local h=6 n=1000 lam=n^-1/3 sqrt(n)beta=6.00 faithful=True reps=400: P(W>c)=0.043 FWER in [0.000,0.000] | 2s
+T K=70 local DAGs depth 2 | collider3 local h=6 n=1000 lam=n^-1/3 sqrt(n)beta=6.00 faithful=True reps=400: P(W>c)=0.087 FWER in [0.000,0.000] | 2s
+T K=70 local DAGs depth 2 | two edges local h=6 n=1000 lam=n^-1/3 sqrt(n)beta=6.00 faithful=True reps=400: P(W>c)=0.035 FWER in [0.000,0.000] | 2s
+T K=70 local DAGs depth 2 | chain3 local h=3 n=5000 lam=n^-1/3 sqrt(n)beta=3.00 faithful=True reps=400: P(W>c)=0.055 FWER in [0.000,0.015] | 39s
+T K=70 local DAGs depth 2 | collider3 local h=3 n=5000 lam=n^-1/3 sqrt(n)beta=3.00 faithful=True reps=400: P(W>c)=0.050 FWER in [0.000,0.005] | 31s
+T K=70 local DAGs depth 2 | two edges local h=3 n=5000 lam=n^-1/3 sqrt(n)beta=3.00 faithful=True reps=400: P(W>c)=0.045 FWER in [0.000,0.020] | 31s
+T K=70 local DAGs depth 2 | chain3 local h=6 n=5000 lam=n^-1/3 sqrt(n)beta=6.00 faithful=True reps=400: P(W>c)=0.058 FWER in [0.000,0.000] | 2s
+T K=70 local DAGs depth 2 | collider3 local h=6 n=5000 lam=n^-1/3 sqrt(n)beta=6.00 faithful=True reps=400: P(W>c)=0.072 FWER in [0.000,0.000] | 2s
+T K=70 local DAGs depth 2 | two edges local h=6 n=5000 lam=n^-1/3 sqrt(n)beta=6.00 faithful=True reps=400: P(W>c)=0.048 FWER in [0.000,0.000] | 2s
+T K=165 local DAGs depth 2 | chain3 local h=3 n=500 lam=n^-1/3 sqrt(n)beta=3.00 faithful=True reps=121: P(W>c)=0.132 FWER in [0.000,0.050] | 183s
+T K=165 local DAGs depth 2 | collider3 local h=3 n=500 lam=n^-1/3 sqrt(n)beta=3.00 faithful=True reps=169: P(W>c)=0.130 FWER in [0.000,0.030] | 181s
+T K=165 local DAGs depth 2 | chain3 local h=3 n=1000 lam=n^-1/3 sqrt(n)beta=3.00 faithful=True reps=160: P(W>c)=0.087 FWER in [0.000,0.031] | 190s
+T K=165 local DAGs depth 2 | collider3 local h=3 n=1000 lam=n^-1/3 sqrt(n)beta=3.00 faithful=True reps=171: P(W>c)=0.111 FWER in [0.000,0.041] | 184s
+--- check T done in 1292.1s
+
+=== U: required h^2 for 90% power, one added-independence competitor (M3) ===
+U K=6, r=3, |I'|=2, lambda=0.10, R2=0.00, h2_R1_projection=15.92, h2_hybrid_chi2=14.70, h2_BL1=15.36, h2_per_model_Bonf=14.28, h2_whitened_contrast=14.28, h2_NP_bound=8.56, c_projection=7.44, c_hybrid=6.68
+U K=6, r=3, |I'|=2, lambda=0.10, R2=0.10, h2_R1_projection=14.50, h2_hybrid_chi2=13.39, h2_BL1=15.36, h2_per_model_Bonf=14.28, h2_whitened_contrast=12.87, h2_NP_bound=7.71, c_projection=7.44, c_hybrid=6.69
+U K=6, r=3, |I'|=2, lambda=0.10, R2=0.25, h2_R1_projection=12.47, h2_hybrid_chi2=11.33, h2_BL1=15.36, h2_per_model_Bonf=14.28, h2_whitened_contrast=10.74, h2_NP_bound=6.42, c_projection=7.44, c_hybrid=6.54
+U K=6, r=3, |I'|=2, lambda=0.10, R2=0.50, h2_R1_projection=8.93, h2_hybrid_chi2=7.83, h2_BL1=15.36, h2_per_model_Bonf=14.28, h2_whitened_contrast=7.20, h2_NP_bound=4.28, c_projection=7.44, c_hybrid=6.26
+U K=6, r=3, |I'|=2, lambda=0.10, R2=0.75, h2_R1_projection=5.39, h2_hybrid_chi2=4.42, h2_BL1=15.36, h2_per_model_Bonf=14.28, h2_whitened_contrast=3.66, h2_NP_bound=2.14, c_projection=7.44, c_hybrid=5.78
+U K=6, r=3, |I'|=2, lambda=0.10, R2=0.90, h2_R1_projection=3.23, h2_hybrid_chi2=2.42, h2_BL1=15.36, h2_per_model_Bonf=14.28, h2_whitened_contrast=1.53, h2_NP_bound=0.86, c_projection=7.44, c_hybrid=5.27
+U K=6, r=3, |I'|=2, lambda=0.10, R2=0.99, h2_R1_projection=1.76, h2_hybrid_chi2=1.16, h2_BL1=15.36, h2_per_model_Bonf=14.28, h2_whitened_contrast=0.26, h2_NP_bound=0.09, c_projection=7.44, c_hybrid=4.81
+U K=6, r=3, |I'|=2, lambda=0.50, R2=0.00, h2_R1_projection=17.70, h2_hybrid_chi2=14.78, h2_BL1=15.36, h2_per_model_Bonf=14.28, h2_whitened_contrast=14.28, h2_NP_bound=8.56, c_projection=6.24, c_hybrid=4.91
+U K=6, r=3, |I'|=2, lambda=0.50, R2=0.10, h2_R1_projection=16.59, h2_hybrid_chi2=13.62, h2_BL1=15.36, h2_per_model_Bonf=14.28, h2_whitened_contrast=13.01, h2_NP_bound=7.71, c_projection=6.24, c_hybrid=4.82
+U K=6, r=3, |I'|=2, lambda=0.50, R2=0.25, h2_R1_projection=15.07, h2_hybrid_chi2=12.11, h2_BL1=15.36, h2_per_model_Bonf=14.28, h2_whitened_contrast=11.11, h2_NP_bound=6.42, c_projection=6.24, c_hybrid=4.69
+U K=6, r=3, |I'|=2, lambda=0.50, R2=0.50, h2_R1_projection=12.43, h2_hybrid_chi2=9.51, h2_BL1=15.36, h2_per_model_Bonf=14.28, h2_whitened_contrast=7.93, h2_NP_bound=4.28, c_projection=6.24, c_hybrid=4.45
+U K=6, r=3, |I'|=2, lambda=0.50, R2=0.75, h2_R1_projection=9.62, h2_hybrid_chi2=6.92, h2_BL1=15.36, h2_per_model_Bonf=14.28, h2_whitened_contrast=4.76, h2_NP_bound=2.14, c_projection=6.24, c_hybrid=4.21
+U K=6, r=3, |I'|=2, lambda=0.50, R2=0.90, h2_R1_projection=7.79, h2_hybrid_chi2=5.34, h2_BL1=15.36, h2_per_model_Bonf=14.28, h2_whitened_contrast=2.86, h2_NP_bound=0.86, c_projection=6.24, c_hybrid=4.09
+U K=6, r=3, |I'|=2, lambda=0.50, R2=0.99, h2_R1_projection=6.39, h2_hybrid_chi2=4.21, h2_BL1=15.36, h2_per_model_Bonf=14.28, h2_whitened_contrast=1.71, h2_NP_bound=0.09, c_projection=6.24, c_hybrid=4.06
+U K=18, r=6, |I'|=2, lambda=0.10, R2=0.00, h2_R1_projection=23.19, h2_hybrid_chi2=14.77, h2_BL1=18.26, h2_per_model_Bonf=14.28, h2_whitened_contrast=14.28, h2_NP_bound=8.56, c_projection=12.15, c_hybrid=6.72
+U K=18, r=6, |I'|=2, lambda=0.10, R2=0.10, h2_R1_projection=21.18, h2_hybrid_chi2=13.40, h2_BL1=18.26, h2_per_model_Bonf=14.28, h2_whitened_contrast=12.87, h2_NP_bound=7.71, c_projection=12.15, c_hybrid=6.67
+U K=18, r=6, |I'|=2, lambda=0.10, R2=0.25, h2_R1_projection=18.12, h2_hybrid_chi2=11.27, h2_BL1=18.26, h2_per_model_Bonf=14.28, h2_whitened_contrast=10.74, h2_NP_bound=6.42, c_projection=12.15, c_hybrid=6.54
+U K=18, r=6, |I'|=2, lambda=0.10, R2=0.50, h2_R1_projection=13.11, h2_hybrid_chi2=7.84, h2_BL1=18.26, h2_per_model_Bonf=14.28, h2_whitened_contrast=7.20, h2_NP_bound=4.28, c_projection=12.15, c_hybrid=6.25
+U K=18, r=6, |I'|=2, lambda=0.10, R2=0.75, h2_R1_projection=7.99, h2_hybrid_chi2=4.42, h2_BL1=18.26, h2_per_model_Bonf=14.28, h2_whitened_contrast=3.66, h2_NP_bound=2.14, c_projection=12.15, c_hybrid=5.78
+U K=18, r=6, |I'|=2, lambda=0.10, R2=0.90, h2_R1_projection=4.90, h2_hybrid_chi2=2.41, h2_BL1=18.26, h2_per_model_Bonf=14.28, h2_whitened_contrast=1.53, h2_NP_bound=0.86, c_projection=12.15, c_hybrid=5.23
+U K=18, r=6, |I'|=2, lambda=0.10, R2=0.99, h2_R1_projection=2.80, h2_hybrid_chi2=1.17, h2_BL1=18.26, h2_per_model_Bonf=14.28, h2_whitened_contrast=0.26, h2_NP_bound=0.09, c_projection=12.15, c_hybrid=4.83
+U K=18, r=6, |I'|=2, lambda=0.50, R2=0.00, h2_R1_projection=26.84, h2_hybrid_chi2=14.78, h2_BL1=18.26, h2_per_model_Bonf=14.28, h2_whitened_contrast=14.28, h2_NP_bound=8.56, c_projection=10.73, c_hybrid=4.93
+U K=18, r=6, |I'|=2, lambda=0.50, R2=0.10, h2_R1_projection=25.36, h2_hybrid_chi2=13.74, h2_BL1=18.26, h2_per_model_Bonf=14.28, h2_whitened_contrast=13.01, h2_NP_bound=7.71, c_projection=10.73, c_hybrid=4.86
+U K=18, r=6, |I'|=2, lambda=0.50, R2=0.25, h2_R1_projection=23.10, h2_hybrid_chi2=12.09, h2_BL1=18.26, h2_per_model_Bonf=14.28, h2_whitened_contrast=11.11, h2_NP_bound=6.42, c_projection=10.73, c_hybrid=4.70
+U K=18, r=6, |I'|=2, lambda=0.50, R2=0.50, h2_R1_projection=19.24, h2_hybrid_chi2=9.44, h2_BL1=18.26, h2_per_model_Bonf=14.28, h2_whitened_contrast=7.93, h2_NP_bound=4.28, c_projection=10.73, c_hybrid=4.42
+U K=18, r=6, |I'|=2, lambda=0.50, R2=0.75, h2_R1_projection=15.26, h2_hybrid_chi2=6.91, h2_BL1=18.26, h2_per_model_Bonf=14.28, h2_whitened_contrast=4.76, h2_NP_bound=2.14, c_projection=10.73, c_hybrid=4.21
+U K=18, r=6, |I'|=2, lambda=0.50, R2=0.90, h2_R1_projection=12.67, h2_hybrid_chi2=5.38, h2_BL1=18.26, h2_per_model_Bonf=14.28, h2_whitened_contrast=2.86, h2_NP_bound=0.86, c_projection=10.73, c_hybrid=4.12
+U K=18, r=6, |I'|=2, lambda=0.50, R2=0.99, h2_R1_projection=10.77, h2_hybrid_chi2=4.16, h2_BL1=18.26, h2_per_model_Bonf=14.28, h2_whitened_contrast=1.71, h2_NP_bound=0.09, c_projection=10.73, c_hybrid=4.01
+U K=24, r=6, |I'|=3, lambda=0.10, R2=0.00, h2_R1_projection=22.19, h2_hybrid_chi2=16.43, h2_BL1=19.01, h2_per_model_Bonf=15.36, h2_whitened_contrast=15.36, h2_NP_bound=8.56, c_projection=12.27, c_hybrid=8.51
+U K=24, r=6, |I'|=3, lambda=0.10, R2=0.10, h2_R1_projection=20.34, h2_hybrid_chi2=14.91, h2_BL1=19.01, h2_per_model_Bonf=15.36, h2_whitened_contrast=13.84, h2_NP_bound=7.71, c_projection=12.27, c_hybrid=8.41
+U K=24, r=6, |I'|=3, lambda=0.10, R2=0.25, h2_R1_projection=17.40, h2_hybrid_chi2=12.68, h2_BL1=19.01, h2_per_model_Bonf=15.36, h2_whitened_contrast=11.56, h2_NP_bound=6.42, c_projection=12.27, c_hybrid=8.36
+U K=24, r=6, |I'|=3, lambda=0.10, R2=0.50, h2_R1_projection=12.56, h2_hybrid_chi2=8.95, h2_BL1=19.01, h2_per_model_Bonf=15.36, h2_whitened_contrast=7.75, h2_NP_bound=4.28, c_projection=12.27, c_hybrid=8.19
+U K=24, r=6, |I'|=3, lambda=0.10, R2=0.75, h2_R1_projection=7.65, h2_hybrid_chi2=5.13, h2_BL1=19.01, h2_per_model_Bonf=15.36, h2_whitened_contrast=3.94, h2_NP_bound=2.14, c_projection=12.27, c_hybrid=7.71
+U K=24, r=6, |I'|=3, lambda=0.10, R2=0.90, h2_R1_projection=4.68, h2_hybrid_chi2=2.91, h2_BL1=19.01, h2_per_model_Bonf=15.36, h2_whitened_contrast=1.65, h2_NP_bound=0.86, c_projection=12.27, c_hybrid=7.28
+U K=24, r=6, |I'|=3, lambda=0.10, R2=0.99, h2_R1_projection=2.71, h2_hybrid_chi2=1.53, h2_BL1=19.01, h2_per_model_Bonf=15.36, h2_whitened_contrast=0.28, h2_NP_bound=0.09, c_projection=12.27, c_hybrid=6.90
+U K=24, r=6, |I'|=3, lambda=0.50, R2=0.00, h2_R1_projection=26.61, h2_hybrid_chi2=16.43, h2_BL1=19.01, h2_per_model_Bonf=15.36, h2_whitened_contrast=15.36, h2_NP_bound=8.56, c_projection=11.20, c_hybrid=6.25
+U K=24, r=6, |I'|=3, lambda=0.50, R2=0.10, h2_R1_projection=25.09, h2_hybrid_chi2=15.24, h2_BL1=19.01, h2_per_model_Bonf=15.36, h2_whitened_contrast=14.00, h2_NP_bound=7.71, c_projection=11.20, c_hybrid=6.15
+U K=24, r=6, |I'|=3, lambda=0.50, R2=0.25, h2_R1_projection=22.91, h2_hybrid_chi2=13.64, h2_BL1=19.01, h2_per_model_Bonf=15.36, h2_whitened_contrast=11.95, h2_NP_bound=6.42, c_projection=11.20, c_hybrid=6.04
+U K=24, r=6, |I'|=3, lambda=0.50, R2=0.50, h2_R1_projection=19.16, h2_hybrid_chi2=10.93, h2_BL1=19.01, h2_per_model_Bonf=15.36, h2_whitened_contrast=8.54, h2_NP_bound=4.28, c_projection=11.20, c_hybrid=5.84
+U K=24, r=6, |I'|=3, lambda=0.50, R2=0.75, h2_R1_projection=15.16, h2_hybrid_chi2=8.16, h2_BL1=19.01, h2_per_model_Bonf=15.36, h2_whitened_contrast=5.12, h2_NP_bound=2.14, c_projection=11.20, c_hybrid=5.64
+U K=24, r=6, |I'|=3, lambda=0.50, R2=0.90, h2_R1_projection=12.63, h2_hybrid_chi2=6.48, h2_BL1=19.01, h2_per_model_Bonf=15.36, h2_whitened_contrast=3.07, h2_NP_bound=0.86, c_projection=11.20, c_hybrid=5.53
+U K=24, r=6, |I'|=3, lambda=0.50, R2=0.99, h2_R1_projection=10.84, h2_hybrid_chi2=5.26, h2_BL1=19.01, h2_per_model_Bonf=15.36, h2_whitened_contrast=1.84, h2_NP_bound=0.09, c_projection=11.20, c_hybrid=5.43
+U K=70, r=10, |I'|=3, lambda=0.10, R2=0.00, h2_R1_projection=30.70, h2_hybrid_chi2=16.35, h2_BL1=21.77, h2_per_model_Bonf=15.36, h2_whitened_contrast=15.36, h2_NP_bound=8.56, c_projection=18.08, c_hybrid=8.45
+U K=70, r=10, |I'|=3, lambda=0.10, R2=0.10, h2_R1_projection=28.04, h2_hybrid_chi2=14.89, h2_BL1=21.77, h2_per_model_Bonf=15.36, h2_whitened_contrast=13.84, h2_NP_bound=7.71, c_projection=18.08, c_hybrid=8.44
+U K=70, r=10, |I'|=3, lambda=0.10, R2=0.25, h2_R1_projection=24.07, h2_hybrid_chi2=12.58, h2_BL1=21.77, h2_per_model_Bonf=15.36, h2_whitened_contrast=11.56, h2_NP_bound=6.42, c_projection=18.08, c_hybrid=8.30
+U K=70, r=10, |I'|=3, lambda=0.10, R2=0.50, h2_R1_projection=17.42, h2_hybrid_chi2=8.89, h2_BL1=21.77, h2_per_model_Bonf=15.36, h2_whitened_contrast=7.75, h2_NP_bound=4.28, c_projection=18.08, c_hybrid=8.15
+U K=70, r=10, |I'|=3, lambda=0.10, R2=0.75, h2_R1_projection=10.74, h2_hybrid_chi2=5.15, h2_BL1=21.77, h2_per_model_Bonf=15.36, h2_whitened_contrast=3.94, h2_NP_bound=2.14, c_projection=18.08, c_hybrid=7.74
+U K=70, r=10, |I'|=3, lambda=0.10, R2=0.90, h2_R1_projection=6.66, h2_hybrid_chi2=2.92, h2_BL1=21.77, h2_per_model_Bonf=15.36, h2_whitened_contrast=1.65, h2_NP_bound=0.86, c_projection=18.08, c_hybrid=7.29
+U K=70, r=10, |I'|=3, lambda=0.10, R2=0.99, h2_R1_projection=3.97, h2_hybrid_chi2=1.53, h2_BL1=21.77, h2_per_model_Bonf=15.36, h2_whitened_contrast=0.28, h2_NP_bound=0.09, c_projection=18.08, c_hybrid=6.92
+U K=70, r=10, |I'|=3, lambda=0.50, R2=0.00, h2_R1_projection=37.94, h2_hybrid_chi2=16.48, h2_BL1=21.77, h2_per_model_Bonf=15.36, h2_whitened_contrast=15.36, h2_NP_bound=8.56, c_projection=17.05, c_hybrid=6.27
+U K=70, r=10, |I'|=3, lambda=0.50, R2=0.10, h2_R1_projection=35.88, h2_hybrid_chi2=15.29, h2_BL1=21.77, h2_per_model_Bonf=15.36, h2_whitened_contrast=14.00, h2_NP_bound=7.71, c_projection=17.05, c_hybrid=6.16
+U K=70, r=10, |I'|=3, lambda=0.50, R2=0.25, h2_R1_projection=32.81, h2_hybrid_chi2=13.62, h2_BL1=21.77, h2_per_model_Bonf=15.36, h2_whitened_contrast=11.95, h2_NP_bound=6.42, c_projection=17.05, c_hybrid=6.04
+U K=70, r=10, |I'|=3, lambda=0.50, R2=0.50, h2_R1_projection=27.60, h2_hybrid_chi2=10.93, h2_BL1=21.77, h2_per_model_Bonf=15.36, h2_whitened_contrast=8.54, h2_NP_bound=4.28, c_projection=17.05, c_hybrid=5.86
+U K=70, r=10, |I'|=3, lambda=0.50, R2=0.75, h2_R1_projection=22.21, h2_hybrid_chi2=8.18, h2_BL1=21.77, h2_per_model_Bonf=15.36, h2_whitened_contrast=5.12, h2_NP_bound=2.14, c_projection=17.05, c_hybrid=5.64
+U K=70, r=10, |I'|=3, lambda=0.50, R2=0.90, h2_R1_projection=18.73, h2_hybrid_chi2=6.49, h2_BL1=21.77, h2_per_model_Bonf=15.36, h2_whitened_contrast=3.07, h2_NP_bound=0.86, c_projection=17.05, c_hybrid=5.54
+U K=70, r=10, |I'|=3, lambda=0.50, R2=0.99, h2_R1_projection=16.38, h2_hybrid_chi2=5.25, h2_BL1=21.77, h2_per_model_Bonf=15.36, h2_whitened_contrast=1.84, h2_NP_bound=0.09, c_projection=17.05, c_hybrid=5.42
+U K=70, r=10, |I'|=6, lambda=0.10, R2=0.00, h2_R1_projection=27.21, h2_hybrid_chi2=20.02, h2_BL1=21.77, h2_per_model_Bonf=17.20, h2_whitened_contrast=17.20, h2_NP_bound=8.56, c_projection=18.08, c_hybrid=13.16
+U K=70, r=10, |I'|=6, lambda=0.10, R2=0.10, h2_R1_projection=24.87, h2_hybrid_chi2=18.23, h2_BL1=21.77, h2_per_model_Bonf=17.20, h2_whitened_contrast=15.49, h2_NP_bound=7.71, c_projection=18.08, c_hybrid=13.13
+U K=70, r=10, |I'|=6, lambda=0.10, R2=0.25, h2_R1_projection=21.31, h2_hybrid_chi2=15.49, h2_BL1=21.77, h2_per_model_Bonf=17.20, h2_whitened_contrast=12.93, h2_NP_bound=6.42, c_projection=18.08, c_hybrid=13.04
+U K=70, r=10, |I'|=6, lambda=0.10, R2=0.50, h2_R1_projection=15.47, h2_hybrid_chi2=11.03, h2_BL1=21.77, h2_per_model_Bonf=17.20, h2_whitened_contrast=8.67, h2_NP_bound=4.28, c_projection=18.08, c_hybrid=12.83
+U K=70, r=10, |I'|=6, lambda=0.10, R2=0.75, h2_R1_projection=9.51, h2_hybrid_chi2=6.59, h2_BL1=21.77, h2_per_model_Bonf=17.20, h2_whitened_contrast=4.41, h2_NP_bound=2.14, c_projection=18.08, c_hybrid=12.55
+U K=70, r=10, |I'|=6, lambda=0.10, R2=0.90, h2_R1_projection=5.90, h2_hybrid_chi2=3.91, h2_BL1=21.77, h2_per_model_Bonf=17.20, h2_whitened_contrast=1.85, h2_NP_bound=0.86, c_projection=18.08, c_hybrid=12.20
+U K=70, r=10, |I'|=6, lambda=0.10, R2=0.99, h2_R1_projection=3.57, h2_hybrid_chi2=2.25, h2_BL1=21.77, h2_per_model_Bonf=17.20, h2_whitened_contrast=0.31, h2_NP_bound=0.09, c_projection=18.08, c_hybrid=11.90
+U K=70, r=10, |I'|=6, lambda=0.50, R2=0.00, h2_R1_projection=34.57, h2_hybrid_chi2=20.05, h2_BL1=21.77, h2_per_model_Bonf=17.20, h2_whitened_contrast=17.20, h2_NP_bound=8.56, c_projection=17.04, c_hybrid=9.65
+U K=70, r=10, |I'|=6, lambda=0.50, R2=0.10, h2_R1_projection=32.69, h2_hybrid_chi2=18.80, h2_BL1=21.77, h2_per_model_Bonf=17.20, h2_whitened_contrast=15.67, h2_NP_bound=7.71, c_projection=17.04, c_hybrid=9.60
+U K=70, r=10, |I'|=6, lambda=0.50, R2=0.25, h2_R1_projection=29.84, h2_hybrid_chi2=16.86, h2_BL1=21.77, h2_per_model_Bonf=17.20, h2_whitened_contrast=13.37, h2_NP_bound=6.42, c_projection=17.04, c_hybrid=9.47
+U K=70, r=10, |I'|=6, lambda=0.50, R2=0.50, h2_R1_projection=25.10, h2_hybrid_chi2=13.83, h2_BL1=21.77, h2_per_model_Bonf=17.20, h2_whitened_contrast=9.55, h2_NP_bound=4.28, c_projection=17.04, c_hybrid=9.35
+U K=70, r=10, |I'|=6, lambda=0.50, R2=0.75, h2_R1_projection=20.17, h2_hybrid_chi2=10.61, h2_BL1=21.77, h2_per_model_Bonf=17.20, h2_whitened_contrast=5.73, h2_NP_bound=2.14, c_projection=17.04, c_hybrid=9.11
+U K=70, r=10, |I'|=6, lambda=0.50, R2=0.90, h2_R1_projection=17.07, h2_hybrid_chi2=8.66, h2_BL1=21.77, h2_per_model_Bonf=17.20, h2_whitened_contrast=3.44, h2_NP_bound=0.86, c_projection=17.04, c_hybrid=8.98
+U K=70, r=10, |I'|=6, lambda=0.50, R2=0.99, h2_R1_projection=15.04, h2_hybrid_chi2=7.44, h2_BL1=21.77, h2_per_model_Bonf=17.20, h2_whitened_contrast=2.06, h2_NP_bound=0.09, c_projection=17.04, c_hybrid=8.92
+--- check U done in 41.2s
+
+=== V: Thm 3 under n*lambda -> infinity only (M8) ===
+V Q2 n=1000 a=0: ridge n^-3/4=0.0438 n^-1/3=0.0466
+V Q2 n=1000 a=n^-1/2: ridge n^-3/4=0.0455 n^-1/3=0.0497
+V Q2 n=1000 a=n^-3/8: ridge n^-3/4=0.0425 n^-1/3=0.0500
+V Q2 n=1000 a=0.3: ridge n^-3/4=0.0477 n^-1/3=0.0502
+V K=24 n=1000: ridge n^-3/4=0.1508 n^-1/3=0.0600
+V Q2 n=5000 a=0: ridge n^-3/4=0.0470 n^-1/3=0.0496
+V Q2 n=5000 a=n^-1/2: ridge n^-3/4=0.0468 n^-1/3=0.0498
+V Q2 n=5000 a=n^-3/8: ridge n^-3/4=0.0479 n^-1/3=0.0513
+V Q2 n=5000 a=0.3: ridge n^-3/4=0.0512 n^-1/3=0.0480
+V K=24 n=5000: ridge n^-3/4=0.1172 n^-1/3=0.0508
+V Q2 n=20000 a=0: ridge n^-3/4=0.0511 n^-1/3=0.0520
+V Q2 n=20000 a=n^-1/2: ridge n^-3/4=0.0492 n^-1/3=0.0511
+V Q2 n=20000 a=n^-3/8: ridge n^-3/4=0.0470 n^-1/3=0.0500
+V Q2 n=20000 a=0.3: ridge n^-3/4=0.0508 n^-1/3=0.0522
+V K=24 n=20000: ridge n^-3/4=0.1104 n^-1/3=0.0604
+V Q2 n=100000 a=0: ridge n^-3/4=0.0541 n^-1/3=0.0548
+V Q2 n=100000 a=n^-1/2: ridge n^-3/4=0.0468 n^-1/3=0.0482
+V Q2 n=100000 a=n^-3/8: ridge n^-3/4=0.0527 n^-1/3=0.0550
+V Q2 n=100000 a=0.3: ridge n^-3/4=0.0541 n^-1/3=0.0525
+V K=24 n=100000: ridge n^-3/4=0.0748 n^-1/3=0.0428
+--- check V done in 86.1s
+
+=== W: necessary condition for blindness, block seminorm, chi-bar (M4, Thm 6c) ===
+{'K': 18, 'rank': 6, 'patterns': 137, 'blind': 99, 'patterns_with_|D|>r': 127, 'blind_without_|D|>r': 0}
+PASS W.|D|>r is necessary for blindness, K=18
+{'K': 24, 'rank': 6, 'patterns': 185, 'blind': 178, 'patterns_with_|D|>r': 178, 'blind_without_|D|>r': 0}
+PASS W.|D|>r is necessary for blindness, K=24
+PASS W.block seminorm sees the violation  [1600.0]
+W.LFC {'sign': (1.0, 1.0), 'q_sigma': 5.866269317887707, 'P(reject) at c_bar': 0.041075, 'P(reject) at own q_sigma': 0.053825}
+W.LFC {'sign': (1.0, -1.0), 'q_sigma': 6.410137993735248, 'P(reject) at c_bar': 0.053375, 'P(reject) at own q_sigma': 0.053975}
+W.LFC {'sign': (-1.0, 1.0), 'q_sigma': 6.4409796034097, 'P(reject) at c_bar': 0.052875, 'P(reject) at own q_sigma': 0.052875}
+W.LFC {'sign': (-1.0, -1.0), 'q_sigma': 5.932496495058217, 'P(reject) at c_bar': 0.038675, 'P(reject) at own q_sigma': 0.0505}
+PASS W.chi-bar reaches alpha at the worst vertex and never exceeds it  [[0.0411, 0.0534, 0.0529, 0.0387]]
+W.Gaussian {'h': 2.0, 'b': 0.216292268872795, 'c_bar': 7.203999047733987, 'c_I_pointwise': np.float64(3.5589822150859467), 'P(reject m*) chi-bar': 0.005666666666666667, 'P(reject m*) pointwise threshold': np.float64(0.063), 'reps': 3000}
+W.Gaussian {'h': 4.0, 'b': 0.31295665332986905, 'c_bar': 7.407762645652258, 'c_I_pointwise': np.float64(3.5589822150859467), 'P(reject m*) chi-bar': 0.005666666666666667, 'P(reject m*) pointwise threshold': np.float64(0.07666666666666666), 'reps': 3000}
+W.Gaussian {'h': 8.0, 'b': 0.463755271987481, 'c_bar': 7.3802300769272735, 'c_I_pointwise': np.float64(3.5589822150859467), 'P(reject m*) chi-bar': 0.005666666666666667, 'P(reject m*) pointwise threshold': np.float64(0.07733333333333334), 'reps': 3000}
+--- check W done in 21.4s
+
+Wrote D:\REsearch\causal multi-agent\safety_prior\reports\aprime_review_2026-11-04\RG1_followup_outputs.json  runtime 1824.5s  PASS=6 FAIL=0

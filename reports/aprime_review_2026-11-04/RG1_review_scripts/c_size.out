@@ -1,0 +1,24 @@
+=== C1: K=2^m conditioning subsets of m independent Z, R=I (Sigma=11^T rank 1) ; predicted null term K m/(4 n lam)
+m=3 K=8 n=100: lam=0.215 nlam=22 pred null=0.28 | ridge size=0.039 trunc=0.047 (rhat 1.0) SE=0.003
+m=3 K=8 n=200: lam=0.171 nlam=34 pred null=0.18 | ridge size=0.049 trunc=0.055 (rhat 1.0) SE=0.003
+m=3 K=8 n=500: lam=0.126 nlam=63 pred null=0.10 | ridge size=0.049 trunc=0.052 (rhat 1.0) SE=0.003
+m=3 K=8 n=1000: lam=0.100 nlam=100 pred null=0.06 | ridge size=0.047 trunc=0.048 (rhat 1.0) SE=0.003
+m=3 K=8 n=5000: lam=0.058 nlam=292 pred null=0.02 | ridge size=0.042 trunc=0.043 (rhat 1.0) SE=0.003
+m=3 K=8 n=20000: lam=0.037 nlam=737 pred null=0.01 | ridge size=0.048 trunc=0.048 (rhat 1.0) SE=0.003
+m=5 K=32 n=100: lam=0.215 nlam=22 pred null=1.86 | ridge size=0.017 trunc=0.035 (rhat 1.7) SE=0.003
+m=5 K=32 n=200: lam=0.171 nlam=34 pred null=1.17 | ridge size=0.024 trunc=0.047 (rhat 1.2) SE=0.003
+m=5 K=32 n=500: lam=0.126 nlam=63 pred null=0.63 | ridge size=0.042 trunc=0.059 (rhat 1.0) SE=0.003
+m=5 K=32 n=1000: lam=0.100 nlam=100 pred null=0.40 | ridge size=0.038 trunc=0.050 (rhat 1.0) SE=0.003
+m=5 K=32 n=5000: lam=0.058 nlam=292 pred null=0.14 | ridge size=0.050 trunc=0.052 (rhat 1.0) SE=0.003
+m=5 K=32 n=20000: lam=0.037 nlam=737 pred null=0.05 | ridge size=0.042 trunc=0.048 (rhat 1.0) SE=0.003
+m=6 K=64 n=100: lam=0.215 nlam=22 pred null=4.46 | ridge size=0.008 trunc=0.015 (rhat 3.3) SE=0.004
+m=6 K=64 n=200: lam=0.171 nlam=34 pred null=2.81 | ridge size=0.011 trunc=0.025 (rhat 2.1) SE=0.004
+m=6 K=64 n=500: lam=0.126 nlam=63 pred null=1.52 | ridge size=0.018 trunc=0.042 (rhat 1.2) SE=0.004
+m=6 K=64 n=1000: lam=0.100 nlam=100 pred null=0.96 | ridge size=0.028 trunc=0.048 (rhat 1.0) SE=0.004
+m=6 K=64 n=5000: lam=0.058 nlam=292 pred null=0.33 | ridge size=0.044 trunc=0.054 (rhat 1.0) SE=0.004
+m=6 K=64 n=20000: lam=0.037 nlam=737 pred null=0.13 | ridge size=0.047 trunc=0.051 (rhat 1.0) SE=0.004
+m=8 K=256 n=100: lam=0.215 nlam=22 pred null=23.76 | ridge size=0.001 trunc=0.001 (rhat 7.4) SE=0.006
+m=8 K=256 n=200: lam=0.171 nlam=34 pred null=14.97 | ridge size=0.001 trunc=0.001 (rhat 6.3) SE=0.006
+m=8 K=256 n=500: lam=0.126 nlam=63 pred null=8.13 | ridge size=0.005 trunc=0.008 (rhat 4.5) SE=0.006
+m=8 K=256 n=1000: lam=0.100 nlam=100 pred null=5.12 | ridge size=0.006 trunc=0.019 (rhat 3.0) SE=0.006
+m=8 K=256 n=5000: lam=0.058 nlam=292 pred null=1.75 | ridge size=0.020 trunc=0.045 (rhat 1.1) SE=0.006

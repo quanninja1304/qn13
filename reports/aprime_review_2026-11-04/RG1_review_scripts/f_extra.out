@@ -1,0 +1,68 @@
+=== F1 ridge size near boundary of PD cone: equi rho, K=6 and p=4 K=24; n small
+p=3 K=6 equi=0.9 lmin=0.100 n=50: ridge size=0.060 SE=0.003
+p=3 K=6 equi=0.9 lmin=0.100 n=100: ridge size=0.053 SE=0.003
+p=3 K=6 equi=0.9 lmin=0.100 n=200: ridge size=0.053 SE=0.003
+p=3 K=6 equi=0.9 lmin=0.100 n=1000: ridge size=0.057 SE=0.003
+p=3 K=6 equi=0.9 lmin=0.100 n=5000: ridge size=0.045 SE=0.003
+p=3 K=6 equi=0.99 lmin=0.010 n=50: ridge size=0.055 SE=0.003
+p=3 K=6 equi=0.99 lmin=0.010 n=100: ridge size=0.056 SE=0.003
+p=3 K=6 equi=0.99 lmin=0.010 n=200: ridge size=0.052 SE=0.003
+p=3 K=6 equi=0.99 lmin=0.010 n=1000: ridge size=0.043 SE=0.003
+p=3 K=6 equi=0.99 lmin=0.010 n=5000: ridge size=0.053 SE=0.003
+p=3 K=6 equi=0.999 lmin=0.001 n=50: ridge size=0.056 SE=0.003
+p=3 K=6 equi=0.999 lmin=0.001 n=100: ridge size=0.054 SE=0.003
+p=3 K=6 equi=0.999 lmin=0.001 n=200: ridge size=0.050 SE=0.003
+p=3 K=6 equi=0.999 lmin=0.001 n=1000: ridge size=0.049 SE=0.003
+p=3 K=6 equi=0.999 lmin=0.001 n=5000: ridge size=0.044 SE=0.003
+p=4 K=24 equi=0.9 lmin=0.100 n=50: ridge size=0.092 SE=0.004
+p=4 K=24 equi=0.9 lmin=0.100 n=100: ridge size=0.072 SE=0.004
+p=4 K=24 equi=0.9 lmin=0.100 n=200: ridge size=0.056 SE=0.004
+p=4 K=24 equi=0.9 lmin=0.100 n=1000: ridge size=0.048 SE=0.004
+p=4 K=24 equi=0.9 lmin=0.100 n=5000: ridge size=0.046 SE=0.004
+p=4 K=24 equi=0.99 lmin=0.010 n=50: ridge size=0.095 SE=0.004
+p=4 K=24 equi=0.99 lmin=0.010 n=100: ridge size=0.069 SE=0.004
+p=4 K=24 equi=0.99 lmin=0.010 n=200: ridge size=0.054 SE=0.004
+p=4 K=24 equi=0.99 lmin=0.010 n=1000: ridge size=0.048 SE=0.004
+p=4 K=24 equi=0.99 lmin=0.010 n=5000: ridge size=0.050 SE=0.004
+p=4 K=24 equi=0.999 lmin=0.001 n=50: ridge size=0.091 SE=0.004
+p=4 K=24 equi=0.999 lmin=0.001 n=100: ridge size=0.077 SE=0.004
+p=4 K=24 equi=0.999 lmin=0.001 n=200: ridge size=0.068 SE=0.004
+p=4 K=24 equi=0.999 lmin=0.001 n=1000: ridge size=0.051 SE=0.004
+p=4 K=24 equi=0.999 lmin=0.001 n=5000: ridge size=0.044 SE=0.004
+=== F2 drifting eigen near lam on several blocks: Q= {X_i _|_ Y | , X_i _|_ Y | Z_i}, i=1..q, a=sqrt(2lam) each. K=2q
+q=2 K=4 n=100 a=sqrt(2lam)(0.656): ridge size=0.056 SE=0.003
+q=2 K=4 n=100 a=1/sqrt n(0.100): ridge size=0.046 SE=0.003
+q=2 K=4 n=100 a=0(0.000): ridge size=0.050 SE=0.003
+q=2 K=4 n=200 a=sqrt(2lam)(0.585): ridge size=0.051 SE=0.003
+q=2 K=4 n=200 a=1/sqrt n(0.071): ridge size=0.050 SE=0.003
+q=2 K=4 n=200 a=0(0.000): ridge size=0.053 SE=0.003
+q=2 K=4 n=1000 a=sqrt(2lam)(0.447): ridge size=0.051 SE=0.003
+q=2 K=4 n=1000 a=1/sqrt n(0.032): ridge size=0.046 SE=0.003
+q=2 K=4 n=1000 a=0(0.000): ridge size=0.043 SE=0.003
+q=2 K=4 n=5000 a=sqrt(2lam)(0.342): ridge size=0.050 SE=0.003
+q=2 K=4 n=5000 a=1/sqrt n(0.014): ridge size=0.043 SE=0.003
+q=2 K=4 n=5000 a=0(0.000): ridge size=0.044 SE=0.003
+q=4 K=8 n=100 a=sqrt(2lam)(0.656): ridge size=0.056 SE=0.003
+q=4 K=8 n=100 a=1/sqrt n(0.100): ridge size=0.052 SE=0.003
+q=4 K=8 n=100 a=0(0.000): ridge size=0.056 SE=0.003
+q=4 K=8 n=200 a=sqrt(2lam)(0.585): ridge size=0.050 SE=0.003
+q=4 K=8 n=200 a=1/sqrt n(0.071): ridge size=0.047 SE=0.003
+q=4 K=8 n=200 a=0(0.000): ridge size=0.047 SE=0.003
+q=4 K=8 n=1000 a=sqrt(2lam)(0.447): ridge size=0.059 SE=0.003
+q=4 K=8 n=1000 a=1/sqrt n(0.032): ridge size=0.052 SE=0.003
+q=4 K=8 n=1000 a=0(0.000): ridge size=0.049 SE=0.003
+q=4 K=8 n=5000 a=sqrt(2lam)(0.342): ridge size=0.052 SE=0.003
+q=4 K=8 n=5000 a=1/sqrt n(0.014): ridge size=0.058 SE=0.003
+q=4 K=8 n=5000 a=0(0.000): ridge size=0.052 SE=0.003
+q=8 K=16 n=100 a=sqrt(2lam)(0.656): ridge size=0.065 SE=0.003
+q=8 K=16 n=100 a=1/sqrt n(0.100): ridge size=0.057 SE=0.003
+q=8 K=16 n=100 a=0(0.000): ridge size=0.058 SE=0.003
+q=8 K=16 n=200 a=sqrt(2lam)(0.585): ridge size=0.054 SE=0.003
+q=8 K=16 n=200 a=1/sqrt n(0.071): ridge size=0.054 SE=0.003
+q=8 K=16 n=200 a=0(0.000): ridge size=0.069 SE=0.003
+q=8 K=16 n=1000 a=sqrt(2lam)(0.447): ridge size=0.059 SE=0.003
+q=8 K=16 n=1000 a=1/sqrt n(0.032): ridge size=0.054 SE=0.003
+q=8 K=16 n=1000 a=0(0.000): ridge size=0.054 SE=0.003
+q=8 K=16 n=5000 a=sqrt(2lam)(0.342): ridge size=0.044 SE=0.003
+q=8 K=16 n=5000 a=1/sqrt n(0.014): ridge size=0.048 SE=0.003
+q=8 K=16 n=5000 a=0(0.000): ridge size=0.048 SE=0.003

@@ -62,3 +62,22 @@ Kỳ vọng: 192 PASS, 0 FAIL. Output: `A1_toy_outputs.json`.
 - **Erratum:** R1 valid *pointwise* với η_n → 0. η chỉ cần cho guarantee uniform (contract §10b).
 - Baseline mới BL9: Chang-style resampling chuyển sang feature.
 - **Gate tiếp theo:** RG1 (chứng minh) + RG2 (toy power so với Bonferroni/BL9). RG2 là kill test.
+
+## Cập nhật RG1 (2026-11-04)
+
+Chi tiết: `RG1_R1_proof_vi.md`. Tái lập: `python -P -E RG1_numeric_checks.py` (khoảng 25 phút; kỳ vọng 211 PASS, 0 FAIL). Rà soát: `RG1_independent_review_vi.md` (`PASS WITH CORRECTIONS`). Đo lại sau rà soát: `python -P -E RG1_followup_checks.py` (khoảng 30 phút; K = 616 tốn nhiều RAM, lần đầu từng bị hệ thống dừng).
+
+- **Validity của R1 đã có chứng minh đầy đủ.** Joint CLT và Σ dạng đóng (Lemma 1); V1 cắt rank pointwise (Thm 2); V2 ridge + χ² có trọng số đều trên compact, không cần ước lượng rank (Thm 3).
+- **Bản seminorm + χ²_rank ghi ở trên và ở contract §7 rỗng nghĩa:** T(f) ≡ 0 khi M_¬f chứa mô hình mù (Thm 4). Ở p = 4, K = 24, chỉ cần M chứa DAG 2 cạnh là 24/24 feature tổ tiên không chứng nhận được. Đừng cài bản này.
+- **Pointwise không phân biệt được R1:** thresholding nhất quán đạt tốt hơn (Mệnh đề 7). Chỉ regime √nη < 2t_K mới có thể có nội dung. R2 không còn là phần phụ (Thm 7).
+- **Ngưỡng theo từng MAG trội ngưỡng chiếu** (Thm 6). Kết quả ở đối thủ một tọa độ phụ thuộc R²_{k|I} (Mệnh đề 8).
+- **Đã có một lượt rà soát bởi agent AI; các sửa chữa đã áp dụng (§12 của file đó). Chưa có người rà; user duyệt PASS có điều kiện ngày 2026-11-05.** RG2 chưa chạy; đề xuất đặc tả mới ở §10.4.
+- **Đính chính sau rà soát:** "K > rank" không đủ cho blindness; "regime duy nhất" chỉ trong lớp η ≤ β; ridge lệch nặng ở K lớn với λ = n^{-1/3}; chưa có kịch bản CT vượt α mà R1 có power dương.
+
+## Cập nhật RG3 + S1 (2026-11-05)
+
+RG1 được user duyệt PASS có điều kiện. Chi tiết phép thử: `RG3_S1_report_vi.md`. Tái lập: `python -P -E RG3_S1_checks.py` (khoảng 1.8 giờ). **Bước tiếp đề xuất, chưa duyệt:** so T với hộp sau whitening trên toàn vector, trên SCM mới.
+
+## Cập nhật RG3b (2026-11-06)
+
+Chi tiết: `RG3b_report_vi.md`. Tái lập: `python -P -E RG3b_T_vs_whitened_box.py` (khoảng 1.5–2 giờ, cần vài GB RAM trống; có `--resume`). **Lưu ý:** số T ở K = 70 trong `RG3b_outputs.json` là cận dưới lỏng; dùng `RG3b_k70_recheck.json`. Khuyến nghị: chuyển sang T4, chờ user quyết định.
