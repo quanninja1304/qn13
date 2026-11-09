@@ -1,0 +1,197 @@
+family p=4 K=24 latent=True: patterns=209, 1s
+SIZE K=24 innov lam=0.1: n=500: max 0.398, n=1000: max 0.240, n=2000: max 0.157
+SIZE K=24 innov lam=0.25: n=500: max 0.129, n=1000: max 0.088, n=2000: max 0.074
+SIZE K=24 innov lam=0.5: n=500: max 0.071, n=1000: max 0.067, n=2000: max 0.060
+SIZE K=24 innov lam=1.0: n=500: max 0.055, n=1000: max 0.062, n=2000: max 0.056
+SIZE K=24 innov lam=2.0: n=500: max 0.052, n=1000: max 0.061, n=2000: max 0.054
+SIZE K=24 zca lam=0.1: n=500: max 0.060, n=1000: max 0.061, n=2000: max 0.057
+SIZE K=24 zca lam=0.25: n=500: max 0.054, n=1000: max 0.061, n=2000: max 0.054
+SIZE K=24 zca lam=0.5: n=500: max 0.054, n=1000: max 0.061, n=2000: max 0.054
+SIZE K=24 zca lam=1.0: n=500: max 0.053, n=1000: max 0.061, n=2000: max 0.054
+SIZE K=24 zca lam=2.0: n=500: max 0.054, n=1000: max 0.061, n=2000: max 0.054
+SIZE K=70 innov lam=0.1: n=1000: max 0.810, n=5000: max 0.404
+SIZE K=70 innov lam=0.25: n=1000: max 0.343, n=5000: max 0.152
+SIZE K=70 innov lam=0.5: n=1000: max 0.153, n=5000: max 0.094
+SIZE K=70 innov lam=1.0: n=1000: max 0.084, n=5000: max 0.067
+SIZE K=70 innov lam=2.0: n=1000: max 0.058, n=5000: max 0.059
+SIZE K=70 zca lam=0.1: n=1000: max 0.088, n=5000: max 0.068
+SIZE K=70 zca lam=0.25: n=1000: max 0.060, n=5000: max 0.061
+SIZE K=70 zca lam=0.5: n=1000: max 0.056, n=5000: max 0.057
+SIZE K=70 zca lam=1.0: n=1000: max 0.056, n=5000: max 0.056
+SIZE K=70 zca lam=2.0: n=1000: max 0.053, n=5000: max 0.055
+lambda_W chosen before any power was measured: {24: {'innov': 1.0, 'zca': 0.1}, 70: {'innov': 2.0, 'zca': 0.25}} flags: {'24_innov': False, '24_zca': False, '70_innov': False, '70_zca': False} | 776s
+P scm=0 n=500 reps=34 beta=0.128 cert T=1.00 W_innov=0.91 W_zca=0.91 BoxMaxT=0.08 BL1=0.00 | 123s | total 899s
+P scm=0 n=1000 reps=47 beta=0.128 cert T=0.94 W_innov=1.00 W_zca=1.00 BoxMaxT=0.91 BL1=0.88 | 120s | total 899s
+P scm=0 n=2000 reps=52 beta=0.128 cert T=1.00 W_innov=0.98 W_zca=0.98 BoxMaxT=0.98 BL1=1.00 | 122s | total 899s
+P scm=1 n=500 reps=48 beta=0.214 cert T=0.96 W_innov=0.94 W_zca=0.94 BoxMaxT=0.96 BL1=0.96 | 120s | total 1016s
+P scm=1 n=1000 reps=50 beta=0.214 cert T=0.96 W_innov=0.98 W_zca=0.98 BoxMaxT=0.94 BL1=1.00 | 120s | total 1018s
+P scm=1 n=2000 reps=50 beta=0.214 cert T=0.98 W_innov=1.00 W_zca=1.00 BoxMaxT=0.98 BL1=0.98 | 122s | total 1021s
+P scm=2 n=500 reps=60 beta=0.098 cert T=0.07 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 3s | total 1021s
+P scm=2 n=1000 reps=60 beta=0.098 cert T=0.87 W_innov=0.09 W_zca=0.12 BoxMaxT=0.21 BL1=0.01 | 12s | total 1030s
+P scm=2 n=2000 reps=60 beta=0.098 cert T=1.00 W_innov=1.00 W_zca=1.00 BoxMaxT=0.99 BL1=0.98 | 23s | total 1043s
+P scm=3 n=500 reps=60 beta=0.078 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 4s | total 1043s
+P scm=3 n=1000 reps=60 beta=0.078 cert T=0.84 W_innov=0.00 W_zca=0.03 BoxMaxT=0.00 BL1=0.00 | 27s | total 1051s
+P scm=3 n=2000 reps=60 beta=0.078 cert T=1.00 W_innov=0.95 W_zca=0.98 BoxMaxT=0.70 BL1=0.58 | 63s | total 1093s
+P scm=4 n=500 reps=23 beta=0.271 cert T=0.96 W_innov=0.96 W_zca=0.87 BoxMaxT=0.96 BL1=0.96 | 125s | total 1168s
+P scm=4 n=1000 reps=22 beta=0.271 cert T=1.00 W_innov=0.95 W_zca=0.95 BoxMaxT=0.95 BL1=1.00 | 123s | total 1174s
+P scm=4 n=2000 reps=22 beta=0.271 cert T=0.95 W_innov=1.00 W_zca=0.95 BoxMaxT=1.00 BL1=1.00 | 123s | total 1216s
+P scm=5 n=500 reps=60 beta=0.047 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 4s | total 1216s
+P scm=5 n=1000 reps=60 beta=0.047 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 4s | total 1216s
+P scm=5 n=2000 reps=60 beta=0.047 cert T=0.17 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 6s | total 1216s
+P scm=6 n=500 reps=60 beta=0.159 cert T=0.97 W_innov=0.82 W_zca=0.82 BoxMaxT=0.76 BL1=0.63 | 63s | total 1238s
+P scm=6 n=1000 reps=60 beta=0.159 cert T=1.00 W_innov=1.00 W_zca=1.00 BoxMaxT=1.00 BL1=1.00 | 46s | total 1238s
+P scm=6 n=2000 reps=60 beta=0.159 cert T=0.98 W_innov=1.00 W_zca=1.00 BoxMaxT=0.97 BL1=0.97 | 48s | total 1264s
+P scm=7 n=500 reps=60 beta=0.032 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 2s | total 1264s
+P scm=7 n=1000 reps=60 beta=0.032 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 2s | total 1264s
+P scm=7 n=2000 reps=60 beta=0.032 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 2s | total 1264s
+# --- resumed run ---
+family p=4 K=24 latent=True: patterns=209, 0s
+SIZE K=24 innov lam=0.1: n=500: max 0.398, n=1000: max 0.240, n=2000: max 0.157
+SIZE K=24 innov lam=0.25: n=500: max 0.129, n=1000: max 0.088, n=2000: max 0.074
+SIZE K=24 innov lam=0.5: n=500: max 0.071, n=1000: max 0.067, n=2000: max 0.060
+SIZE K=24 innov lam=1.0: n=500: max 0.055, n=1000: max 0.062, n=2000: max 0.056
+SIZE K=24 innov lam=2.0: n=500: max 0.052, n=1000: max 0.061, n=2000: max 0.054
+SIZE K=24 zca lam=0.1: n=500: max 0.060, n=1000: max 0.061, n=2000: max 0.057
+SIZE K=24 zca lam=0.25: n=500: max 0.054, n=1000: max 0.061, n=2000: max 0.054
+SIZE K=24 zca lam=0.5: n=500: max 0.054, n=1000: max 0.061, n=2000: max 0.054
+SIZE K=24 zca lam=1.0: n=500: max 0.053, n=1000: max 0.061, n=2000: max 0.054
+SIZE K=24 zca lam=2.0: n=500: max 0.054, n=1000: max 0.061, n=2000: max 0.054
+SIZE K=70 innov lam=0.1: n=1000: max 0.810, n=5000: max 0.404
+SIZE K=70 innov lam=0.25: n=1000: max 0.343, n=5000: max 0.152
+SIZE K=70 innov lam=0.5: n=1000: max 0.153, n=5000: max 0.094
+SIZE K=70 innov lam=1.0: n=1000: max 0.084, n=5000: max 0.067
+SIZE K=70 innov lam=2.0: n=1000: max 0.058, n=5000: max 0.059
+SIZE K=70 zca lam=0.1: n=1000: max 0.088, n=5000: max 0.068
+SIZE K=70 zca lam=0.25: n=1000: max 0.060, n=5000: max 0.061
+SIZE K=70 zca lam=0.5: n=1000: max 0.056, n=5000: max 0.057
+SIZE K=70 zca lam=1.0: n=1000: max 0.056, n=5000: max 0.056
+SIZE K=70 zca lam=2.0: n=1000: max 0.053, n=5000: max 0.055
+lambda_W chosen before any power was measured: {24: {'innov': 1.0, 'zca': 0.1}, 70: {'innov': 2.0, 'zca': 0.25}} flags: {'24_innov': False, '24_zca': False, '70_innov': False, '70_zca': False} | 0s
+primary: 24 jobs reused, 96 to run
+P scm=8 n=500 reps=24 beta=0.193 cert T=0.95 W_innov=0.95 W_zca=0.95 BoxMaxT=0.93 BL1=0.83 | 123s | total 126s
+P scm=8 n=1000 reps=25 beta=0.193 cert T=0.95 W_innov=0.92 W_zca=0.92 BoxMaxT=0.92 BL1=0.99 | 121s | total 126s
+P scm=8 n=2000 reps=25 beta=0.193 cert T=0.96 W_innov=0.96 W_zca=0.96 BoxMaxT=0.96 BL1=1.00 | 124s | total 127s
+P scm=9 n=500 reps=60 beta=0.079 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 2s | total 127s
+P scm=9 n=1000 reps=60 beta=0.079 cert T=0.01 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 2s | total 127s
+P scm=9 n=2000 reps=60 beta=0.079 cert T=0.38 W_innov=0.02 W_zca=0.03 BoxMaxT=0.52 BL1=0.38 | 4s | total 131s
+P scm=10 n=500 reps=38 beta=0.151 cert T=0.95 W_innov=0.97 W_zca=0.97 BoxMaxT=0.75 BL1=0.42 | 122s | total 249s
+P scm=10 n=1000 reps=57 beta=0.151 cert T=1.00 W_innov=0.96 W_zca=0.96 BoxMaxT=0.96 BL1=1.00 | 120s | total 249s
+P scm=10 n=2000 reps=60 beta=0.151 cert T=0.97 W_innov=0.97 W_zca=0.97 BoxMaxT=0.97 BL1=0.97 | 120s | total 251s
+P scm=11 n=500 reps=60 beta=0.057 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 3s | total 251s
+P scm=11 n=1000 reps=60 beta=0.057 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 2s | total 251s
+P scm=11 n=2000 reps=60 beta=0.057 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 2s | total 253s
+P scm=12 n=500 reps=24 beta=0.604 cert T=0.92 W_innov=1.00 W_zca=1.00 BoxMaxT=1.00 BL1=1.00 | 120s | total 371s
+P scm=12 n=1000 reps=24 beta=0.604 cert T=0.92 W_innov=0.96 W_zca=0.96 BoxMaxT=0.96 BL1=1.00 | 125s | total 375s
+P scm=12 n=2000 reps=24 beta=0.604 cert T=1.00 W_innov=1.00 W_zca=1.00 BoxMaxT=1.00 BL1=1.00 | 121s | total 375s
+P scm=13 n=500 reps=38 beta=0.130 cert T=1.00 W_innov=1.00 W_zca=1.00 BoxMaxT=0.24 BL1=0.00 | 120s | total 491s
+P scm=13 n=1000 reps=57 beta=0.130 cert T=0.96 W_innov=0.95 W_zca=0.95 BoxMaxT=0.91 BL1=0.95 | 120s | total 494s
+P scm=13 n=2000 reps=60 beta=0.130 cert T=0.98 W_innov=0.92 W_zca=0.92 BoxMaxT=0.92 BL1=0.97 | 121s | total 497s
+P scm=14 n=500 reps=37 beta=0.115 cert T=0.13 W_innov=0.01 W_zca=0.01 BoxMaxT=0.00 BL1=0.00 | 124s | total 615s
+P scm=14 n=1000 reps=14 beta=0.115 cert T=0.41 W_innov=0.91 W_zca=0.91 BoxMaxT=0.89 BL1=0.57 | 120s | total 615s
+P scm=14 n=2000 reps=24 beta=0.115 cert T=0.96 W_innov=0.92 W_zca=0.92 BoxMaxT=0.92 BL1=0.96 | 124s | total 620s
+P scm=15 n=500 reps=42 beta=0.382 cert T=0.98 W_innov=0.95 W_zca=0.98 BoxMaxT=0.95 BL1=1.00 | 121s | total 736s
+P scm=15 n=1000 reps=42 beta=0.382 cert T=0.95 W_innov=0.95 W_zca=0.95 BoxMaxT=0.95 BL1=0.95 | 121s | total 736s
+P scm=15 n=2000 reps=41 beta=0.382 cert T=0.98 W_innov=0.98 W_zca=0.98 BoxMaxT=0.98 BL1=1.00 | 123s | total 743s
+P scm=16 n=500 reps=60 beta=0.071 cert T=0.02 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 8s | total 743s
+P scm=16 n=1000 reps=60 beta=0.071 cert T=0.54 W_innov=0.05 W_zca=0.06 BoxMaxT=0.00 BL1=0.00 | 55s | total 791s
+P scm=16 n=2000 reps=40 beta=0.071 cert T=0.67 W_innov=0.58 W_zca=0.57 BoxMaxT=0.56 BL1=0.09 | 121s | total 864s
+P scm=17 n=500 reps=24 beta=0.277 cert T=1.00 W_innov=1.00 W_zca=1.00 BoxMaxT=1.00 BL1=1.00 | 121s | total 865s
+P scm=17 n=1000 reps=25 beta=0.277 cert T=0.96 W_innov=0.96 W_zca=0.96 BoxMaxT=0.96 BL1=0.96 | 123s | total 914s
+P scm=17 n=2000 reps=24 beta=0.277 cert T=0.88 W_innov=0.88 W_zca=0.88 BoxMaxT=0.88 BL1=1.00 | 123s | total 988s
+P scm=18 n=500 reps=39 beta=0.144 cert T=1.00 W_innov=0.92 W_zca=0.92 BoxMaxT=0.65 BL1=0.15 | 123s | total 988s
+P scm=18 n=1000 reps=59 beta=0.144 cert T=0.97 W_innov=0.97 W_zca=0.97 BoxMaxT=0.97 BL1=0.96 | 120s | total 1034s
+P scm=18 n=2000 reps=60 beta=0.144 cert T=0.93 W_innov=0.95 W_zca=0.95 BoxMaxT=0.93 BL1=0.98 | 118s | total 1106s
+P scm=19 n=500 reps=60 beta=0.082 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 3s | total 1106s
+P scm=19 n=1000 reps=60 beta=0.082 cert T=0.54 W_innov=0.02 W_zca=0.02 BoxMaxT=0.00 BL1=0.00 | 14s | total 1106s
+P scm=19 n=2000 reps=60 beta=0.082 cert T=0.97 W_innov=0.89 W_zca=0.89 BoxMaxT=0.78 BL1=0.64 | 22s | total 1106s
+P scm=20 n=500 reps=60 beta=0.036 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 10s | total 1106s
+P scm=20 n=1000 reps=60 beta=0.036 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 22s | total 1106s
+P scm=20 n=2000 reps=60 beta=0.036 cert T=0.01 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 31s | total 1106s
+P scm=21 n=500 reps=43 beta=0.554 cert T=0.98 W_innov=0.98 W_zca=0.98 BoxMaxT=0.95 BL1=0.98 | 122s | total 1178s
+P scm=21 n=1000 reps=42 beta=0.554 cert T=0.93 W_innov=0.90 W_zca=0.90 BoxMaxT=0.90 BL1=0.93 | 120s | total 1187s
+P scm=21 n=2000 reps=41 beta=0.554 cert T=1.00 W_innov=1.00 W_zca=1.00 BoxMaxT=1.00 BL1=1.00 | 120s | total 1226s
+P scm=22 n=500 reps=60 beta=0.239 cert T=0.98 W_innov=0.99 W_zca=0.99 BoxMaxT=0.98 BL1=0.99 | 112s | total 1291s
+P scm=22 n=1000 reps=60 beta=0.239 cert T=1.00 W_innov=1.00 W_zca=1.00 BoxMaxT=0.98 BL1=1.00 | 110s | total 1297s
+P scm=22 n=2000 reps=60 beta=0.239 cert T=0.95 W_innov=0.95 W_zca=0.95 BoxMaxT=0.92 BL1=0.93 | 114s | total 1339s
+P scm=23 n=500 reps=43 beta=0.324 cert T=1.00 W_innov=0.98 W_zca=0.98 BoxMaxT=0.98 BL1=1.00 | 123s | total 1413s
+P scm=23 n=1000 reps=42 beta=0.324 cert T=1.00 W_innov=0.95 W_zca=0.98 BoxMaxT=0.95 BL1=0.98 | 122s | total 1419s
+P scm=23 n=2000 reps=41 beta=0.324 cert T=1.00 W_innov=0.93 W_zca=0.95 BoxMaxT=0.93 BL1=1.00 | 121s | total 1461s
+P scm=24 n=500 reps=60 beta=0.049 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 2s | total 1461s
+P scm=24 n=1000 reps=60 beta=0.049 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 3s | total 1461s
+P scm=24 n=2000 reps=60 beta=0.049 cert T=0.06 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 4s | total 1461s
+P scm=25 n=500 reps=60 beta=0.055 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 2s | total 1461s
+P scm=25 n=1000 reps=60 beta=0.055 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 2s | total 1461s
+P scm=25 n=2000 reps=60 beta=0.055 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 2s | total 1461s
+P scm=26 n=500 reps=60 beta=0.328 cert T=0.98 W_innov=1.00 W_zca=1.00 BoxMaxT=0.98 BL1=1.00 | 110s | total 1532s
+P scm=26 n=1000 reps=60 beta=0.328 cert T=0.97 W_innov=0.98 W_zca=0.98 BoxMaxT=0.97 BL1=1.00 | 111s | total 1535s
+P scm=26 n=2000 reps=60 beta=0.328 cert T=0.98 W_innov=0.98 W_zca=0.98 BoxMaxT=0.97 BL1=0.98 | 114s | total 1574s
+P scm=27 n=500 reps=60 beta=0.080 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 2s | total 1574s
+P scm=27 n=1000 reps=60 beta=0.080 cert T=0.01 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 3s | total 1574s
+P scm=27 n=2000 reps=60 beta=0.080 cert T=0.33 W_innov=0.12 W_zca=0.11 BoxMaxT=0.50 BL1=0.42 | 4s | total 1574s
+P scm=28 n=500 reps=60 beta=0.050 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 2s | total 1574s
+P scm=28 n=1000 reps=60 beta=0.050 cert T=0.03 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 4s | total 1574s
+P scm=28 n=2000 reps=60 beta=0.050 cert T=0.90 W_innov=0.44 W_zca=0.58 BoxMaxT=0.00 BL1=0.00 | 96s | total 1635s
+P scm=29 n=500 reps=60 beta=0.033 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 1s | total 1635s
+P scm=29 n=1000 reps=60 beta=0.033 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 1s | total 1635s
+P scm=29 n=2000 reps=60 beta=0.033 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 1s | total 1635s
+P scm=30 n=500 reps=58 beta=0.107 cert T=0.61 W_innov=0.26 W_zca=0.25 BoxMaxT=0.00 BL1=0.00 | 120s | total 1667s
+P scm=30 n=1000 reps=41 beta=0.107 cert T=0.70 W_innov=0.63 W_zca=0.62 BoxMaxT=0.68 BL1=0.42 | 121s | total 1696s
+P scm=30 n=2000 reps=60 beta=0.107 cert T=0.99 W_innov=0.98 W_zca=0.97 BoxMaxT=0.99 BL1=0.98 | 115s | total 1750s
+P scm=31 n=500 reps=60 beta=0.016 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 1s | total 1750s
+P scm=31 n=1000 reps=60 beta=0.016 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 1s | total 1750s
+P scm=31 n=2000 reps=60 beta=0.016 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 1s | total 1750s
+P scm=32 n=500 reps=42 beta=0.320 cert T=1.00 W_innov=0.98 W_zca=0.98 BoxMaxT=0.98 BL1=0.98 | 121s | total 1792s
+P scm=32 n=1000 reps=41 beta=0.320 cert T=1.00 W_innov=0.98 W_zca=0.98 BoxMaxT=0.98 BL1=0.98 | 121s | total 1817s
+P scm=32 n=2000 reps=42 beta=0.320 cert T=0.95 W_innov=0.95 W_zca=0.95 BoxMaxT=0.93 BL1=0.95 | 122s | total 1872s
+P scm=33 n=500 reps=25 beta=0.517 cert T=0.96 W_innov=1.00 W_zca=1.00 BoxMaxT=1.00 BL1=1.00 | 123s | total 1916s
+P scm=33 n=1000 reps=24 beta=0.517 cert T=0.96 W_innov=0.96 W_zca=0.96 BoxMaxT=0.96 BL1=0.96 | 122s | total 1939s
+P scm=33 n=2000 reps=25 beta=0.517 cert T=0.96 W_innov=0.92 W_zca=0.92 BoxMaxT=0.92 BL1=0.92 | 122s | total 1995s
+P scm=34 n=500 reps=25 beta=0.370 cert T=1.00 W_innov=0.96 W_zca=0.96 BoxMaxT=0.96 BL1=1.00 | 123s | total 2039s
+P scm=34 n=1000 reps=24 beta=0.370 cert T=1.00 W_innov=1.00 W_zca=1.00 BoxMaxT=1.00 BL1=1.00 | 125s | total 2064s
+P scm=34 n=2000 reps=24 beta=0.370 cert T=1.00 W_innov=1.00 W_zca=1.00 BoxMaxT=1.00 BL1=1.00 | 121s | total 2115s
+P scm=35 n=500 reps=60 beta=0.026 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 1s | total 2115s
+P scm=35 n=1000 reps=60 beta=0.026 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 1s | total 2115s
+P scm=35 n=2000 reps=60 beta=0.026 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 2s | total 2115s
+P scm=36 n=500 reps=25 beta=0.439 cert T=0.92 W_innov=0.88 W_zca=0.88 BoxMaxT=0.88 BL1=0.92 | 121s | total 2165s
+P scm=36 n=1000 reps=24 beta=0.439 cert T=0.92 W_innov=0.92 W_zca=0.92 BoxMaxT=0.92 BL1=0.92 | 123s | total 2187s
+P scm=36 n=2000 reps=23 beta=0.439 cert T=1.00 W_innov=1.00 W_zca=1.00 BoxMaxT=0.96 BL1=1.00 | 122s | total 2237s
+P scm=37 n=500 reps=60 beta=0.104 cert T=0.84 W_innov=0.23 W_zca=0.29 BoxMaxT=0.00 BL1=0.00 | 105s | total 2270s
+P scm=37 n=1000 reps=37 beta=0.104 cert T=1.00 W_innov=1.00 W_zca=1.00 BoxMaxT=0.78 BL1=0.41 | 120s | total 2307s
+P scm=37 n=2000 reps=60 beta=0.104 cert T=0.97 W_innov=0.95 W_zca=0.95 BoxMaxT=0.93 BL1=0.98 | 112s | total 2349s
+P scm=38 n=500 reps=60 beta=0.018 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 2s | total 2349s
+P scm=38 n=1000 reps=60 beta=0.018 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 2s | total 2349s
+P scm=38 n=2000 reps=60 beta=0.018 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 2s | total 2349s
+P scm=39 n=500 reps=60 beta=0.010 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 2s | total 2349s
+P scm=39 n=1000 reps=60 beta=0.010 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 2s | total 2349s
+P scm=39 n=2000 reps=60 beta=0.010 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 2s | total 2349s
+S1 {'edges': [[0, 3], [1, 2]], 'conf': None, 'h': 3.0, 'FWER_CT_earlier': 0.0711} reps=181 cert T=0.84 W_innov=0.68 W_zca=0.70 BoxMaxT=0.56 BL1=0.00 FWER T=0.017 W_innov=0.017 W_zca=0.017 BoxMaxT=0.017 BL1=0.000 amb T=0.16 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00
+S1 {'edges': [[0, 2], [1, 2], [3, 0], [3, 1], [3, 2]], 'conf': [0, 2], 'h': 3.0, 'FWER_CT_earlier': 0.0626} reps=200 cert T=0.61 W_innov=0.09 W_zca=0.11 BoxMaxT=0.12 BL1=0.00 FWER T=0.000 W_innov=0.000 W_zca=0.000 BoxMaxT=0.000 BL1=0.000 amb T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00
+K70 scm=0 n=1000 reps=30 beta=0.010 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 2s
+K70 scm=0 n=5000 reps=30 beta=0.010 cert T=0.00 W_innov=0.00 W_zca=0.00 BoxMaxT=0.00 BL1=0.00 | 9s
+K70 scm=1 n=1000 reps=30 beta=0.046 cert T=0.30 W_innov=0.29 W_zca=0.31 BoxMaxT=0.28 BL1=0.27 | 33s
+K70 scm=1 n=5000 reps=18 beta=0.046 cert T=0.48 W_innov=1.00 W_zca=1.00 BoxMaxT=0.65 BL1=0.29 | 213s
+K70 scm=2 n=1000 reps=22 beta=0.186 cert T=0.95 W_innov=0.95 W_zca=0.95 BoxMaxT=0.91 BL1=0.95 | 205s
+K70 scm=2 n=5000 reps=22 beta=0.186 cert T=1.00 W_innov=0.86 W_zca=0.91 BoxMaxT=0.86 BL1=1.00 | 209s
+K70 scm=3 n=1000 reps=19 beta=0.098 cert T=0.17 W_innov=1.00 W_zca=1.00 BoxMaxT=0.39 BL1=0.00 | 206s
+K70 scm=3 n=5000 reps=30 beta=0.098 cert T=1.00 W_innov=1.00 W_zca=1.00 BoxMaxT=1.00 BL1=1.00 | 180s
+K70 scm=4 n=1000 reps=30 beta=0.059 cert T=0.38 W_innov=0.30 W_zca=0.35 BoxMaxT=0.46 BL1=0.39 | 45s
+K70 scm=4 n=5000 reps=30 beta=0.059 cert T=1.00 W_innov=1.00 W_zca=1.00 BoxMaxT=1.00 BL1=0.99 | 131s
+K70 scm=5 n=1000 reps=30 beta=0.030 cert T=0.14 W_innov=0.14 W_zca=0.14 BoxMaxT=0.15 BL1=0.14 | 26s
+K70 scm=5 n=5000 reps=20 beta=0.030 cert T=0.37 W_innov=0.48 W_zca=0.57 BoxMaxT=0.14 BL1=0.14 | 206s
+K70 scm=6 n=1000 reps=30 beta=0.012 cert T=0.05 W_innov=0.07 W_zca=0.05 BoxMaxT=0.14 BL1=0.11 | 10s
+K70 scm=6 n=5000 reps=30 beta=0.012 cert T=0.22 W_innov=0.22 W_zca=0.22 BoxMaxT=0.22 BL1=0.22 | 77s
+K70 scm=7 n=1000 reps=20 beta=0.158 cert T=0.00 W_innov=0.95 W_zca=0.95 BoxMaxT=0.95 BL1=0.95 | 201s
+K70 scm=7 n=5000 reps=26 beta=0.158 cert T=1.00 W_innov=1.00 W_zca=1.00 BoxMaxT=0.96 BL1=1.00 | 200s
+K70 scm=8 n=1000 reps=22 beta=0.159 cert T=0.23 W_innov=0.92 W_zca=0.92 BoxMaxT=0.90 BL1=0.97 | 202s
+K70 scm=8 n=5000 reps=30 beta=0.159 cert T=1.00 W_innov=1.00 W_zca=1.00 BoxMaxT=1.00 BL1=1.00 | 199s
+K70 scm=9 n=1000 reps=30 beta=0.186 cert T=0.97 W_innov=0.97 W_zca=0.97 BoxMaxT=0.97 BL1=1.00 | 200s
+K70 scm=9 n=5000 reps=30 beta=0.186 cert T=1.00 W_innov=1.00 W_zca=1.00 BoxMaxT=1.00 BL1=1.00 | 196s
+K70 scm=10 n=1000 reps=30 beta=0.002 cert T=0.17 W_innov=0.17 W_zca=0.17 BoxMaxT=0.17 BL1=0.17 | 5s
+K70 scm=10 n=5000 reps=30 beta=0.002 cert T=0.17 W_innov=0.17 W_zca=0.17 BoxMaxT=0.18 BL1=0.17 | 3s
+K70 scm=11 n=1000 reps=21 beta=0.120 cert T=0.00 W_innov=0.97 W_zca=0.97 BoxMaxT=0.93 BL1=0.83 | 202s
+K70 scm=11 n=5000 reps=28 beta=0.120 cert T=1.00 W_innov=1.00 W_zca=1.00 BoxMaxT=1.00 BL1=1.00 | 205s
+SUMMARY n=500, SCMs=40, mean_reps=48.800, cert_T=0.504, FWER_T=0.001, ambiguous_T=0.010, cert_W_innov=0.467, FWER_W_innov=0.000, ambiguous_W_innov=0.002, cert_W_zca=0.467, FWER_W_zca=0.000, ambiguous_W_zca=0.004, cert_BoxMaxT=0.399, FWER_BoxMaxT=0.000, ambiguous_BoxMaxT=0.000, cert_BL1=0.370, FWER_BL1=0.000, ambiguous_BL1=0.000, size_T=0.066, size_W_innov=0.055, size_W_zca=0.060, diff_T-W_innov=0.037, se_T-W_innov=0.018, diff_T-W_zca=0.037, se_T-W_zca=0.017, diff_T-BL1=0.134, se_T-BL1=0.048, diff_W_innov-BL1=0.097, se_W_innov-BL1=0.040, diff_T-BoxMaxT=0.104, se_T-BoxMaxT=0.039, diff_W_innov-BoxMaxT=0.067, se_W_innov-BoxMaxT=0.029
+SUMMARY n=1000, SCMs=40, mean_reps=48.925, cert_T=0.583, FWER_T=0.000, ambiguous_T=0.023, cert_W_innov=0.525, FWER_W_innov=0.000, ambiguous_W_innov=0.001, cert_W_zca=0.527, FWER_W_zca=0.000, ambiguous_W_zca=0.001, cert_BoxMaxT=0.517, FWER_BoxMaxT=0.001, ambiguous_BoxMaxT=0.000, cert_BL1=0.497, FWER_BL1=0.000, ambiguous_BL1=0.000, size_T=0.055, size_W_innov=0.054, size_W_zca=0.055, diff_T-W_innov=0.058, se_T-W_innov=0.036, diff_T-W_zca=0.056, se_T-W_zca=0.035, diff_T-BL1=0.086, se_T-BL1=0.038, diff_W_innov-BL1=0.028, se_W_innov-BL1=0.018, diff_T-BoxMaxT=0.066, se_T-BoxMaxT=0.034, diff_W_innov-BoxMaxT=0.008, se_W_innov-BoxMaxT=0.007
+SUMMARY n=2000, SCMs=40, mean_reps=49.950, cert_T=0.671, FWER_T=0.000, ambiguous_T=0.000, cert_W_innov=0.630, FWER_W_innov=0.000, ambiguous_W_innov=0.001, cert_W_zca=0.633, FWER_W_zca=0.000, ambiguous_W_zca=0.000, cert_BoxMaxT=0.626, FWER_BoxMaxT=0.001, ambiguous_BoxMaxT=0.000, cert_BL1=0.616, FWER_BL1=0.000, ambiguous_BL1=0.000, size_T=0.054, size_W_innov=0.054, size_W_zca=0.055, diff_T-W_innov=0.041, se_T-W_innov=0.016, diff_T-W_zca=0.038, se_T-W_zca=0.013, diff_T-BL1=0.055, se_T-BL1=0.030, diff_W_innov-BL1=0.014, se_W_innov-BL1=0.024, diff_T-BoxMaxT=0.045, se_T-BoxMaxT=0.025, diff_W_innov-BoxMaxT=0.004, se_W_innov-BoxMaxT=0.021
+VERDICT {'T_vs_W': 'no clear difference', 'neither_beats_BL1': False, 'T_clear_at_n': 0, 'W_clear_at_n': 0, 'T_valid': False, 'W_valid': True}
+runtime 4355.0s
