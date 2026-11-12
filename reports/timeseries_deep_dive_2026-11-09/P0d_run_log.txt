@@ -1,0 +1,22 @@
+near<=30_far>=150 {'candidate_pairs_near': 3051, 'candidate_pairs_far': 47550, 'sampled_near': 100, 'sampled_far': 100, 'units_with_>=1_dwd_station_per_chain_within_10km': 131, 'units_with_>=1_dwd_station_per_chain_within_20km': 200}
+near<=50_far>=150 {'candidate_pairs_near': 7495, 'candidate_pairs_far': 47550, 'sampled_near': 100, 'sampled_far': 100, 'units_with_>=1_dwd_station_per_chain_within_10km': 139, 'units_with_>=1_dwd_station_per_chain_within_20km': 200}
+{
+  "n_chains_after_missing_filter": 427,
+  "n_disconnected_pairs": 82170,
+  "near<=30_far>=150": {
+    "candidate_pairs_near": 3051,
+    "candidate_pairs_far": 47550,
+    "sampled_near": 100,
+    "sampled_far": 100,
+    "units_with_>=1_dwd_station_per_chain_within_10km": 131,
+    "units_with_>=1_dwd_station_per_chain_within_20km": 200
+  },
+  "near<=50_far>=150": {
+    "candidate_pairs_near": 7495,
+    "candidate_pairs_far": 47550,
+    "sampled_near": 100,
+    "sampled_far": 100,
+    "units_with_>=1_dwd_station_per_chain_within_10km": 139,
+    "units_with_>=1_dwd_station_per_chain_within_20km": 200
+  }
+}

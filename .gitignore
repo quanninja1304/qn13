@@ -35,3 +35,12 @@ Desktop.ini
 
 # Shard worker runtime state (pid files and logs from K1 runs); kept locally, not versioned
 /worker_logs/
+
+# Secrets: API keys live only in local .env files
+.env
+.env.*
+*.env
+
+# Large or third-party-derived run outputs: regenerate with the scripts next to them
+reports/**/P*_results.jsonl
+reports/timeseries_deep_dive_2026-11-09/P1_units.json

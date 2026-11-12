@@ -1,0 +1,542 @@
+{
+ "n_units": 19,
+ "units": [
+  {
+   "unit": "asia_1",
+   "network": "asia",
+   "hide_seed": 1,
+   "n_observed": 6,
+   "latent": [
+    "either",
+    "smoke"
+   ],
+   "pairs_available": {
+    "D": 6,
+    "B": 2,
+    "I": 2,
+    "N": 5
+   },
+   "pairs_sampled": {
+    "D": 5,
+    "B": 2,
+    "I": 2,
+    "N": 5
+   }
+  },
+  {
+   "unit": "cancer_1",
+   "network": "cancer",
+   "hide_seed": 1,
+   "n_observed": 3,
+   "latent": [
+    "Cancer",
+    "Pollution"
+   ],
+   "pairs_available": {
+    "D": 2,
+    "B": 1,
+    "I": 0,
+    "N": 0
+   },
+   "pairs_sampled": {
+    "D": 2,
+    "B": 1,
+    "I": 0,
+    "N": 0
+   }
+  },
+  {
+   "unit": "earthquake_1",
+   "network": "earthquake",
+   "hide_seed": 1,
+   "n_observed": 3,
+   "latent": [
+    "Alarm",
+    "Earthquake"
+   ],
+   "pairs_available": {
+    "D": 2,
+    "B": 1,
+    "I": 0,
+    "N": 0
+   },
+   "pairs_sampled": {
+    "D": 2,
+    "B": 1,
+    "I": 0,
+    "N": 0
+   }
+  },
+  {
+   "unit": "earthquake_2",
+   "network": "earthquake",
+   "hide_seed": 2,
+   "n_observed": 3,
+   "latent": [
+    "Alarm",
+    "Burglary"
+   ],
+   "pairs_available": {
+    "D": 2,
+    "B": 1,
+    "I": 0,
+    "N": 0
+   },
+   "pairs_sampled": {
+    "D": 2,
+    "B": 1,
+    "I": 0,
+    "N": 0
+   }
+  },
+  {
+   "unit": "survey_1",
+   "network": "survey",
+   "hide_seed": 1,
+   "n_observed": 4,
+   "latent": [
+    "E",
+    "T"
+   ],
+   "pairs_available": {
+    "D": 4,
+    "B": 1,
+    "I": 0,
+    "N": 1
+   },
+   "pairs_sampled": {
+    "D": 4,
+    "B": 1,
+    "I": 0,
+    "N": 1
+   }
+  },
+  {
+   "unit": "survey_2",
+   "network": "survey",
+   "hide_seed": 2,
+   "n_observed": 4,
+   "latent": [
+    "A",
+    "E"
+   ],
+   "pairs_available": {
+    "D": 4,
+    "B": 1,
+    "I": 1,
+    "N": 0
+   },
+   "pairs_sampled": {
+    "D": 4,
+    "B": 1,
+    "I": 1,
+    "N": 0
+   }
+  },
+  {
+   "unit": "survey_3",
+   "network": "survey",
+   "hide_seed": 3,
+   "n_observed": 4,
+   "latent": [
+    "E",
+    "S"
+   ],
+   "pairs_available": {
+    "D": 4,
+    "B": 1,
+    "I": 1,
+    "N": 0
+   },
+   "pairs_sampled": {
+    "D": 4,
+    "B": 1,
+    "I": 1,
+    "N": 0
+   }
+  },
+  {
+   "unit": "sachs_1",
+   "network": "sachs",
+   "hide_seed": 1,
+   "n_observed": 8,
+   "latent": [
+    "PKA",
+    "PKC",
+    "Plcg"
+   ],
+   "pairs_available": {
+    "D": 7,
+    "B": 9,
+    "I": 0,
+    "N": 12
+   },
+   "pairs_sampled": {
+    "D": 7,
+    "B": 9,
+    "I": 0,
+    "N": 9
+   }
+  },
+  {
+   "unit": "child_1",
+   "network": "child",
+   "hide_seed": 1,
+   "n_observed": 15,
+   "latent": [
+    "CardiacMixing",
+    "Disease",
+    "HypoxiaInO2",
+    "LungParench",
+    "Sick"
+   ],
+   "pairs_available": {
+    "D": 18,
+    "B": 41,
+    "I": 5,
+    "N": 41
+   },
+   "pairs_sampled": {
+    "D": 15,
+    "B": 25,
+    "I": 5,
+    "N": 15
+   }
+  },
+  {
+   "unit": "insurance_1",
+   "network": "insurance",
+   "hide_seed": 1,
+   "n_observed": 20,
+   "latent": [
+    "Accident",
+    "Age",
+    "CarValue",
+    "DrivingSkill",
+    "MakeModel",
+    "Mileage",
+    "RuggedAuto"
+   ],
+   "pairs_available": {
+    "D": 61,
+    "B": 31,
+    "I": 19,
+    "N": 79
+   },
+   "pairs_sampled": {
+    "D": 15,
+    "B": 15,
+    "I": 15,
+    "N": 15
+   }
+  },
+  {
+   "unit": "insurance_2",
+   "network": "insurance",
+   "hide_seed": 2,
+   "n_observed": 20,
+   "latent": [
+    "Accident",
+    "Age",
+    "CarValue",
+    "MakeModel",
+    "RiskAversion",
+    "RuggedAuto",
+    "SocioEcon"
+   ],
+   "pairs_available": {
+    "D": 48,
+    "B": 102,
+    "I": 13,
+    "N": 27
+   },
+   "pairs_sampled": {
+    "D": 15,
+    "B": 17,
+    "I": 13,
+    "N": 15
+   }
+  },
+  {
+   "unit": "insurance_3",
+   "network": "insurance",
+   "hide_seed": 3,
+   "n_observed": 20,
+   "latent": [
+    "Accident",
+    "CarValue",
+    "DrivingSkill",
+    "MakeModel",
+    "RuggedAuto",
+    "SocioEcon",
+    "VehicleYear"
+   ],
+   "pairs_available": {
+    "D": 56,
+    "B": 55,
+    "I": 19,
+    "N": 60
+   },
+   "pairs_sampled": {
+    "D": 15,
+    "B": 15,
+    "I": 15,
+    "N": 15
+   }
+  },
+  {
+   "unit": "alarm_1",
+   "network": "alarm",
+   "hide_seed": 1,
+   "n_observed": 27,
+   "latent": [
+    "ERRCAUTER",
+    "HR",
+    "HYPOVOLEMIA",
+    "INTUBATION",
+    "KINKEDTUBE",
+    "LVEDVOLUME",
+    "LVFAILURE",
+    "TPR",
+    "VENTALV",
+    "VENTLUNG"
+   ],
+   "pairs_available": {
+    "D": 30,
+    "B": 26,
+    "I": 87,
+    "N": 208
+   },
+   "pairs_sampled": {
+    "D": 15,
+    "B": 15,
+    "I": 15,
+    "N": 15
+   }
+  },
+  {
+   "unit": "alarm_2",
+   "network": "alarm",
+   "hide_seed": 2,
+   "n_observed": 27,
+   "latent": [
+    "ARTCO2",
+    "ERRCAUTER",
+    "HR",
+    "INTUBATION",
+    "KINKEDTUBE",
+    "LVFAILURE",
+    "PULMEMBOLUS",
+    "VENTALV",
+    "VENTLUNG",
+    "VENTTUBE"
+   ],
+   "pairs_available": {
+    "D": 33,
+    "B": 24,
+    "I": 65,
+    "N": 229
+   },
+   "pairs_sampled": {
+    "D": 15,
+    "B": 15,
+    "I": 15,
+    "N": 15
+   }
+  },
+  {
+   "unit": "alarm_3",
+   "network": "alarm",
+   "hide_seed": 3,
+   "n_observed": 27,
+   "latent": [
+    "ARTCO2",
+    "HR",
+    "HYPOVOLEMIA",
+    "INTUBATION",
+    "KINKEDTUBE",
+    "LVEDVOLUME",
+    "LVFAILURE",
+    "PULMEMBOLUS",
+    "TPR",
+    "VENTALV"
+   ],
+   "pairs_available": {
+    "D": 40,
+    "B": 33,
+    "I": 73,
+    "N": 205
+   },
+   "pairs_sampled": {
+    "D": 15,
+    "B": 15,
+    "I": 15,
+    "N": 15
+   }
+  },
+  {
+   "unit": "hailfinder_1",
+   "network": "hailfinder",
+   "hide_seed": 1,
+   "n_observed": 42,
+   "latent": [
+    "AreaMeso_ALS",
+    "AreaMoDryAir",
+    "CapInScen",
+    "CldShadeConv",
+    "CldShadeOth",
+    "CompPlFcst",
+    "InsChange",
+    "InsInMt",
+    "MvmtFeatures",
+    "N34StarFcst",
+    "OutflowFrMt",
+    "RaoContMoist",
+    "Scenario",
+    "WndHodograph"
+   ],
+   "pairs_available": {
+    "D": 59,
+    "B": 109,
+    "I": 79,
+    "N": 614
+   },
+   "pairs_sampled": {
+    "D": 15,
+    "B": 15,
+    "I": 15,
+    "N": 15
+   }
+  },
+  {
+   "unit": "hailfinder_2",
+   "network": "hailfinder",
+   "hide_seed": 2,
+   "n_observed": 42,
+   "latent": [
+    "AMInstabMt",
+    "AreaMeso_ALS",
+    "Boundaries",
+    "CldShadeOth",
+    "CombMoisture",
+    "CompPlFcst",
+    "InsChange",
+    "InsInMt",
+    "LLIW",
+    "MeanRH",
+    "Scenario",
+    "SfcWndShfDis",
+    "WindFieldMt",
+    "WndHodograph"
+   ],
+   "pairs_available": {
+    "D": 70,
+    "B": 84,
+    "I": 132,
+    "N": 575
+   },
+   "pairs_sampled": {
+    "D": 15,
+    "B": 15,
+    "I": 15,
+    "N": 15
+   }
+  },
+  {
+   "unit": "hailfinder_3",
+   "network": "hailfinder",
+   "hide_seed": 3,
+   "n_observed": 42,
+   "latent": [
+    "AreaMeso_ALS",
+    "CldShadeConv",
+    "CldShadeOth",
+    "CompPlFcst",
+    "IRCloudCover",
+    "InsInMt",
+    "MeanRH",
+    "N34StarFcst",
+    "R5Fcst",
+    "SatContMoist",
+    "ScenRel3_4",
+    "ScenRelAMIns",
+    "Scenario",
+    "WndHodograph"
+   ],
+   "pairs_available": {
+    "D": 69,
+    "B": 96,
+    "I": 88,
+    "N": 608
+   },
+   "pairs_sampled": {
+    "D": 15,
+    "B": 15,
+    "I": 15,
+    "N": 15
+   }
+  },
+  {
+   "unit": "hepar2_1",
+   "network": "hepar2",
+   "hide_seed": 1,
+   "n_observed": 52,
+   "latent": [
+    "ChHepatitis",
+    "Cirrhosis",
+    "Hyperbilirubinemia",
+    "PBC",
+    "RHepatitis",
+    "Steatosis",
+    "THepatitis",
+    "age",
+    "alcoholism",
+    "bilirubin",
+    "choledocholithotomy",
+    "encephalopathy",
+    "gallstones",
+    "hepatotoxic",
+    "hospital",
+    "sex",
+    "surgery",
+    "vh_amn"
+   ],
+   "pairs_available": {
+    "D": 91,
+    "B": 628,
+    "I": 67,
+    "N": 540
+   },
+   "pairs_sampled": {
+    "D": 15,
+    "B": 15,
+    "I": 15,
+    "N": 15
+   }
+  }
+ ],
+ "token_stats": {
+  "KEEP|Q-GRAPH": {
+   "calls": 19,
+   "input_tokens": 3415,
+   "max_input": 332
+  },
+  "KEEP|Q-PAIR": {
+   "calls": 726,
+   "input_tokens": 197008,
+   "max_input": 381
+  },
+  "PSEUDO|Q-GRAPH": {
+   "calls": 19,
+   "input_tokens": 3143,
+   "max_input": 303
+  },
+  "PSEUDO|Q-PAIR": {
+   "calls": 726,
+   "input_tokens": 177563,
+   "max_input": 327
+  }
+ },
+ "sum_true_edges_over_units": 695,
+ "prompts_file": "artifacts\\llm_prior_p17\\pa_prompts.jsonl"
+}

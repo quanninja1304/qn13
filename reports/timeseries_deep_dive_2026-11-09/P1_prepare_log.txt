@@ -1,0 +1,15 @@
+units 200 stations needed 230
+dwd 0 / 230
+dwd 25 / 230
+dwd 50 / 230
+retry stundenwerte_RR_01694_19950901_20251231_hist.zip 0 RemoteDisconnected
+dwd 75 / 230
+dwd 100 / 230
+dwd 125 / 230
+dwd 150 / 230
+dwd 175 / 230
+dwd 200 / 230
+retry stundenwerte_RR_07419_20061201_20251231_hist.zip 0 RemoteDisconnected
+dwd 225 / 230
+retry stundenwerte_RR_13712_20080901_20251231_hist.zip 0 RemoteDisconnected
+done; missing dwd files: []

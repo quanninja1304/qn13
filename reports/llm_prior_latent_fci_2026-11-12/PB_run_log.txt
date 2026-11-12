@@ -1,0 +1,19 @@
+graphs total 419 to run 419
+graphs done 25
+graphs done 50
+graphs done 75
+graphs done 100
+graphs done 125
+graphs done 150
+graphs done 175
+graphs done 200
+graphs done 225
+graphs done 250
+graphs done 275
+graphs done 300
+graphs done 325
+graphs done 350
+graphs done 375
+graphs done 400
+all graphs finished
+exit=0

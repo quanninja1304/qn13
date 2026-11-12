@@ -1,0 +1,53 @@
+{
+  "product_files": [
+    "rivers_bavaria.p",
+    "rivers_east_germany.p",
+    "rivers_flood.p",
+    "rivers_meta_east_germany.csv",
+    "rivers_ts_east_germany.csv"
+  ],
+  "east_graph": {
+    "nodes": 666,
+    "edges": 651,
+    "nodes_with_>1_successor": 26
+  },
+  "P0a": {
+    "confounder_3": {
+      "paper_table6": 24,
+      "code_variant_count": 24,
+      "code_variant_contains_confounder": true,
+      "paper_variant_count": 106
+    },
+    "confounder_5": {
+      "paper_table6": 361,
+      "code_variant_count": 361,
+      "code_variant_contains_confounder": true,
+      "paper_variant_count": 1170
+    }
+  },
+  "P0c_missing": {
+    "n_series": 666,
+    "n_steps": 175296,
+    "frac_series_missing_gt_10pct": 0.24474474474474475,
+    "median_missing": 0.03783315078495801
+  },
+  "P0c_disconnected_chain_pairs_sampled": {
+    "n_pairs": 71098,
+    "le_30km": 2037,
+    "le_50km": 5196,
+    "ge_150km": 40933,
+    "quantiles_km": [
+      39.67817466804569,
+      105.23074156470922,
+      169.19196117481738,
+      237.13223516885677,
+      323.75236711503425
+    ]
+  },
+  "P0b_dwd_hourly": {
+    "active_stations_2019_2023": 1250,
+    "river_nodes_with_station_le_10km": 0.6876876876876877,
+    "river_nodes_with_station_le_20km": 0.9984984984984985,
+    "median_km_to_nearest": 7.623390831644511
+  }
+}

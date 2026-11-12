@@ -1,0 +1,4 @@
+T1 n 1986 | injection contradicts data-oriented mark: 0.73 | lands only on circles: 0.27 | among propagating (n=799): contradicts 0.844, detectable by either check 0.844
+T2 n 786 | injection contradicts data-oriented mark: 0.585 | lands only on circles: 0.148 | among propagating (n=141): contradicts 0.993, detectable by either check 0.993
+T3 n 1986 | injection contradicts data-oriented mark: 0.207 | lands only on circles: 0.257 | among propagating (n=505): contradicts 0.398, detectable by either check 0.398
+T5 n 1999 | injection contradicts data-oriented mark: 0.0 | lands only on circles: 0.0 | among propagating (n=117): contradicts 0.000, detectable by either check 1.000

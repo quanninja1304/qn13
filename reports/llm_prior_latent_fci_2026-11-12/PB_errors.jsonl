@@ -1,0 +1,6 @@
+{"graph_id": "insurance_1", "status": "timeout", "key": {"source": "bnlearn", "graph_id": "insurance_1", "seed": 20262087, "network": "insurance", "hide_seed": 1}}
+{"graph_id": "insurance_2", "status": "timeout", "key": {"source": "bnlearn", "graph_id": "insurance_2", "seed": 20262094, "network": "insurance", "hide_seed": 2}}
+{"graph_id": "insurance_3", "status": "timeout", "key": {"source": "bnlearn", "graph_id": "insurance_3", "seed": 20262101, "network": "insurance", "hide_seed": 3}}
+{"graph_id": "alarm_3", "status": "timeout", "key": {"source": "bnlearn", "graph_id": "alarm_3", "seed": 20261658, "network": "alarm", "hide_seed": 3}}
+{"graph_id": "hailfinder_1", "status": "timeout", "key": {"source": "bnlearn", "graph_id": "hailfinder_1", "seed": 20262165, "network": "hailfinder", "hide_seed": 1}}
+{"graph_id": "hepar2_1", "status": "timeout", "key": {"source": "bnlearn", "graph_id": "hepar2_1", "seed": 20261697, "network": "hepar2", "hide_seed": 1}}

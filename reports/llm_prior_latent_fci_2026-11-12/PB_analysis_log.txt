@@ -1,0 +1,7 @@
+{
+ "n_records": 11612,
+ "n_graph_errors_or_timeouts": 6
+}
+RB0 {"n_baseline": 413, "baseline_not_equal_ref": [], "baseline_with_errors": [], "T6_T7_with_errors": [], "pass": true}
+RB2 {"n_graphs": 400, "graphs_with_T2": 270, "type_means": {"T1": 1.06, "T2": 0.18839506172839507, "T3": 0.6126666666666667, "T4": 0.0, "T5": 0.0765, "T6": 0.0, "T7": 0.0}, "argmax": "T3", "DeltaL": -0.44733333333333336, "ci95": [-0.5335041666666667, -0.3640000000000001], "verdict": "NO LATENT-SPECIFIC HARM"}
+RB3 {"n_propagating": 646, "silent_share": 0.7863777089783281, "by_type": {"T2": 0.02127659574468085, "T3": 1.0}, "verdict": "SILENT"}

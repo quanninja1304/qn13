@@ -1,7 +1,7 @@
 # Lịch sử chuyển dịch nghiên cứu (Research pivot log)
 
 > **Đọc file này trước khi đề xuất bất kỳ hướng mới nào.** Mục đích là tránh làm lại những gì đã bị bác bỏ, đã có prior art hoặc đã bị gác lại có lý do.
-> Cập nhật lần cuối: **2026-11-07**. Quy tắc bảo trì ở §6: **append-only**. Không sửa phán quyết cũ; nếu đảo quyết định thì thêm một mục mới tham chiếu mục cũ.
+> Cập nhật lần cuối: **2026-11-12**. Quy tắc bảo trì ở §6: **append-only**. Không sửa phán quyết cũ; nếu đảo quyết định thì thêm một mục mới tham chiếu mục cũ.
 > Mọi tài liệu gốc vẫn còn nguyên trong repo. Các hướng cũ nằm ở [`archive/`](archive/README.md), hướng hiện tại ở [`reports/`](reports/README.md) và [`research/`](research/README.md).
 
 ## 0. Cách đọc nhãn trạng thái
@@ -39,6 +39,8 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
 | P13 | 06/11 | **Pilot thuật toán T4-L** | LiftG2 có giảm claim sai so với M1 mà giữ claim đúng không? | **NO-GO theo K8:** tỉ lệ sai 1.06 [1.02, 1.10], Naive và các baseline khác hòa hoặc thắng. Chẩn đoán post hoc một phần: lỗi nền chiếm phần lớn, tiến gần target listwise không giúp claim về DAG. Chờ user xác nhận đóng; **chưa có backup** | [`T4L_pilot_report_vi.md`](archive/2026-11_t4_selection_indexed/T4L_pilot_report_vi.md) |
 | P14 | 07/11 | **User đóng T4-L** | Có đóng T4-L sau NO-GO và chẩn đoán đủ 9 ô không? | T4-L **REFUTED** theo framing đã thử; card T4 gốc NO-GO. Tài liệu chuyển vào `archive/`. Không còn hướng ACTIVE, chưa có backup | [`archive/2026-11_t4_selection_indexed/`](archive/2026-11_t4_selection_indexed/) |
 | P15 | 07/11 | **User đặt lại quy trình: dữ liệu trước** | Gap nào nhìn thấy được trên dữ liệu uy tín, thay vì bắt đầu từ chứng minh toán? | Pilot trên Causal Chamber và Sachs. Ứng viên chính **C1** (mất cạnh mạnh do đo lường dư thừa khi có latent), **Conditional**, chờ phép thử R1 với BOSS-FCI, GFCI, FCIT. Dự phòng **C2**. Chưa có cơ chế mới | [`00_data_first_gap_report_vi.md`](reports/data_first_gap_2026-11-07/00_data_first_gap_report_vi.md) |
+| P16 | 09–12/11 | **Đi vòng: finance (bỏ trong ngày) rồi time-series TS-G1 trên CausalRivers** | Confounding ẩn do mưa có đo được trên dữ liệu sông thật không; LPCMCI có sửa được không? | Lỗi sampler Confounder của CausalRivers **xác nhận bằng đếm lại** (24/361 = Bảng 6 của bài). Pilot P1 (2400 job): R1 đạt (0.31), R2 **không đạt**, R3 = **GAP-A ở mức tin cậy thấp**, còn bốn giải thích thay thế A1–A4 chưa loại trừ. User chuyển hướng 12/11 sau khi đọc một tài liệu tham khảo nội bộ; TS-G1 **DEPRIORITIZED** (X32) | [`P1_results_vi.md`](reports/timeseries_deep_dive_2026-11-09/P1_results_vi.md), [deep dive](reports/timeseries_deep_dive_2026-11-09/00_ts_causal_discovery_deep_dive_vi.md), [audit gap (2)](reports/timeseries_deep_dive_2026-11-09/G2_prior_art_audit_vi.md) |
+| P17 | 12/11 | **Mở lại hướng LLM-prior + FCI có biến ẩn với framing mới** | FCI lấy gì từ một guess của LLM dưới biến ẩn, và guess sai gây hại theo cách nào không thể có dưới causal sufficiency? | Kế hoạch và luật đọc cho hai pilot P-A (lỗi LLM theo loại cặp D/B/I/N) và P-B (lan truyền guess sai có kiểu trong FCI oracle) đã viết, **chờ user duyệt**. X1 và X5 **vẫn đóng**. **ACTIVE (conditional)** | [`00_plan_vi.md`](reports/llm_prior_latent_fci_2026-11-12/00_plan_vi.md), [`PA_PB_reading_rules_vi.md`](reports/llm_prior_latent_fci_2026-11-12/PA_PB_reading_rules_vi.md) |
 
 ---
 
@@ -124,6 +126,26 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
 - **Giới hạn:** một hệ vật lý; lớp phương pháp lai chưa chạy; E3 phần Sachs chưa xong do hệ thống dừng vì thiếu RAM.
 - **Bằng chứng:** [`00_data_first_gap_report_vi.md`](reports/data_first_gap_2026-11-07/00_data_first_gap_report_vi.md).
 
+### P15 → P16: đi vòng qua finance và chuỗi thời gian (09–12/11)
+
+- **Vì sao:** user muốn dataset và hướng có đóng góp cao; sáu bài toán tài chính được quét rồi bỏ trong ngày; chọn causal discovery chuỗi thời gian; TS-G1 (mưa là confounder ẩn có thể lộ hoặc giấu trên CausalRivers) được chọn làm chính, luật đọc khóa 10/11 trước khi chạy.
+- **Học được:** (1) sampler Confounder của CausalRivers không bao giờ bỏ nút confounder, và đếm lại cho thấy Bảng 3 của bài chấm trên fork quan sát đầy đủ; (2) có dependence giả giảm theo khoảng cách giữa các sông không nối nhau (PCMCI+ 0.48 ở gần so với 0.14 ở xa), nhưng proxy mưa không giải thích được nó (R2 không đạt); (3) LPCMCI đưa ra claim tổ tiên sai **nhiều hơn** PCMCI+ và tệ hơn nữa khi lộ mưa (0.67 → 0.88); (4) về quy trình: pilot thiết kế dạng chuỗi cổng go/no-go nên mọi nhánh trừ một đều là "dừng", và đòn bẩy (proxy mưa cách 20 km) quá yếu để tách nguồn confounding.
+- **Tự sửa:** hai đơn vị có proxy mưa trùng hệt gây `LinAlgError`; sửa thành một biến mưa chung và ghi §8 trước khi xem metric. Một lần chạy dừng với mã lỗi 4 không rõ lý do, đã chạy tiếp.
+- **Bằng chứng:** [`P1_results_vi.md`](reports/timeseries_deep_dive_2026-11-09/P1_results_vi.md), [`TS_G1_reading_rules_vi.md`](reports/timeseries_deep_dive_2026-11-09/TS_G1_reading_rules_vi.md) §8, [`G2_prior_art_audit_vi.md`](reports/timeseries_deep_dive_2026-11-09/G2_prior_art_audit_vi.md).
+
+### P16 → P17: đọc một tài liệu tham khảo nội bộ, chẩn đoán lại quy trình tìm gap (12/11)
+
+- **Vì sao đổi:** user đánh giá các hướng agent tìm được không đáng đi sâu và đưa một tài liệu tham khảo nội bộ (không công khai) để chẩn đoán. Bài học rút ra: một đóng góp không cần phương pháp mới nếu có một phép tách đo được trong cùng đơn vị, một cơ chế trả lời "vì sao", một cảnh báo phương pháp luận và một lần tính lại benchmark.
+- **Học được, về quy trình:** (1) câu hỏi phải có giá trị ở mọi nhánh kết quả, không phải chuỗi cổng cho một phương pháp tương lai; (2) đóng góp kiểu "phát hiện + cơ chế + audit" là hợp lệ, trong khi X31 và yêu cầu "novel mechanism" trong AGENTS.md đã lọc bỏ đúng loại này; (3) hỏi "vì sao" thay vì "có không"; (4) đòn bẩy phải là thứ kiểm soát hoàn toàn; (5) gap mạnh là **phép giao** hai hiện tượng đã biết chưa ai đo cùng lúc, không phải ô trống trong bảng phân loại. Kết quả bất ngờ (lỗi CausalRivers, LPCMCI tệ hơn khi lộ confounder) đã bị xếp dưới kết quả theo kế hoạch.
+- **Quyết định của user:** chiến lược "cải thiện những gì đã có, đọc limitation" được chấp nhận với điều kiện chỉ lấy hai loại limitation (thiết kế không tách được hai thứ; câu hỏi "vì sao" chưa trả lời). Chọn giao điểm **LLM làm prior cho causal discovery có biến ẩn, baseline FCI**. Mentor đặt câu hỏi về "độ tự nhiên" của việc chèn LLM vào FCI; phân tích và framing mới ở [`00_plan_vi.md`](reports/llm_prior_latent_fci_2026-11-12/00_plan_vi.md) §1.2.
+- **Chưa quyết:** nới X31 hay không; user chưa trả lời.
+
+### P17: ranh giới với hướng cũ (12/11)
+
+- Hướng 18/09–21/10 được mở lại **không** theo framing scheduler. X1 (đổi thứ tự CI query làm đóng góp chính) và X5 (LLM + latent discovery như gap) vẫn SUBSUMED. Con số K1 (23% với oracle, chỉ FAS) được dùng làm bằng chứng rằng trần của framing "tối ưu" đã đo và không đủ.
+- Framing mới: đo **lỗi của LLM theo loại cặp của MAG** (D/B/I/N) và **lan truyền guess sai có kiểu** trong FCI, kèm tính phát hiện được từ dữ liệu. Phương pháp chỉ là hệ quả nếu hai pilot cùng dương.
+- Ràng buộc kỹ thuật đã kiểm trong mã: `BackgroundKnowledge` của causal-learn xóa cạnh khi hai chiều đều forbidden và không giữ cạnh required trong FAS, nên P-B phải tự chèn dấu đầu mút.
+
 ---
 
 ## 3. Sổ đăng ký "KHÔNG LÀM LẠI" (do-not-redo registry)
@@ -161,8 +183,13 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
 | X29 | Đóng T4-L theo quyết định của user (cập nhật X27) | REFUTED theo framing đã thử; phần toán SUBSUMED (X26) | Pilot §1 và §4 đủ 9 ô | [Pilot](archive/2026-11_t4_selection_indexed/T4L_pilot_report_vi.md) | Mở lại chỉ khi có bằng chứng mới mâu thuẫn trực tiếp, ví dụ dữ liệu thật hoặc mô phỏng độc lập cho thấy lift giảm claim sai so với M1. Câu hỏi "chọn target nào dưới missing data" là câu hỏi khác, chưa được audit, không bị đóng ở đây |
 | X30 | Giả thuyết: precision giảm theo n trên Chamber chủ yếu do phụ thuộc residual giữa sensor | REFUTED theo L5 | Knock-out: bỏ phụ thuộc residual nhưng giữ phi tuyến vẫn giảm .23; tuyến tính hóa chỉ giảm .017 | [E6](reports/data_first_gap_2026-11-07/E6_summary.json) | Không áp dụng cho ba cặp `ir_i`–`vis_i`, vốn là phụ thuộc thật |
 | X31 | Kiểm toán benchmark thật sẽ đảo thứ hạng thuật toán, làm đề tài độc lập | DEPRIORITIZED | Chấm lại trên Chamber: Spearman .89–1.00; chỉ đổi điểm tuyệt đối. Post hoc, một hệ | [E7](reports/data_first_gap_2026-11-07/E7_outputs.json) | Có hệ khác cho thấy đảo thứ hạng thật |
+| X32 | TS-G1 (confounding ẩn do mưa trên CausalRivers) và khoảng trống (2) "confounder cục bộ, thay đổi theo thời gian" làm hướng phương pháp | DEPRIORITIZED | P1 cho GAP-A nhưng R2 không đạt và A1–A4 (bộ nhớ dài hơn τ_max, ParCorr sai mô hình, artefact nội suy, lỗi topology) chưa loại trừ; FNETS chưa kiểm; user chuyển hướng 12/11 | [`P1_results_vi.md`](reports/timeseries_deep_dive_2026-11-09/P1_results_vi.md), [`G2_prior_art_audit_vi.md`](reports/timeseries_deep_dive_2026-11-09/G2_prior_art_audit_vi.md) | Chạy P2 theo §6 của P1_results (τ_max dài, mưa tích lũy, test phi tuyến, bỏ đoạn nội suy, lọc chain, baseline khử nhân tố) với luật đọc mới |
 
 **Chưa bị bác bỏ, chỉ chưa kiểm tra:** ứng viên A/B của review 30/10 (LLM feedback loop, calibration consensus→disputed); T4 (selection-indexed premises dưới missing data; backup); C-S (coordinated-shift breakdown radius); K2–K4 của kill test.
+
+**Nới X31 (12/11, quyết định của user):** X31 chỉ còn nghĩa "audit benchmark **đơn lẻ** không đủ làm đề tài". Một bài gồm **phép đo có đối chứng + cơ chế giải thích + audit**, không có thuật toán mới, là đích hợp lệ của dự án (mẫu: một tài liệu tham khảo nội bộ; phân tích ở [`00_plan_vi.md`](reports/llm_prior_latent_fci_2026-11-12/00_plan_vi.md) §1.2). Phán quyết cũ của X31 và bằng chứng E7 giữ nguyên, không bị xóa.
+
+**Bổ sung 12/11 vào danh sách chưa kiểm tra:** P2 của TS-G1 (A1–A4, FNETS); bốn giả thuyết của P17 (H-type, H-prop, H-silent, H-fix), đang chờ pilot P-A và P-B. Lỗi sampler Confounder của CausalRivers đã xác nhận nhưng **chưa báo cho tác giả** theo quyết định của user.
 
 ---
 
@@ -190,6 +217,9 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
 - **Cập nhật 06/11 sau pilot:** T4-L **NO-GO theo K8** (X27), chờ user xác nhận đóng. T4 không còn ứng viên đang chạy. **Chưa có backup.** Xem [`T4L_pilot_report_vi.md`](archive/2026-11_t4_selection_indexed/T4L_pilot_report_vi.md).
 - **Cập nhật 06/11 sau chẩn đoán đủ 9 ô:** tăng liều MNAR không đảo kết quả. Sửa cách đọc: target listwise không có hại ở oracle (0 claim sai) nhưng rất nghèo (20.7 so với 61.5 claim đúng), và ở n đã thử các phương pháp còn rất xa nó. Việc cắt tập điều kiện không phải nguyên nhân ở oracle. Câu hỏi có thể đáng xem: chọn target nào, chưa kiểm tra văn liệu. Xem [`T4L_pilot_report_vi.md`](archive/2026-11_t4_selection_indexed/T4L_pilot_report_vi.md) §4.
 - **Cập nhật 07/11, quy trình dữ liệu trước:** chưa có hướng ACTIVE đã cam kết. Ứng viên **C1** ở trạng thái `Conditional`; bước kế là R1 (chạy BOSS-FCI, GFCI, FCIT trên Chamber) và đọc các bài ưu tiên 1. **Chờ user quyết định.** Xem [`00_data_first_gap_report_vi.md`](reports/data_first_gap_2026-11-07/00_data_first_gap_report_vi.md).
+- **Cập nhật 09–12/11:** C1 không được theo đuổi (user đổi phạm vi). Finance quét rồi bỏ. TS-G1 trên CausalRivers chạy xong P1: GAP-A ở mức tin cậy thấp; **DEPRIORITIZED** theo quyết định user 12/11 (X32). Xem [`P1_results_vi.md`](reports/timeseries_deep_dive_2026-11-09/P1_results_vi.md).
+- **Cập nhật 12/11, ACTIVE (conditional): P17.** Hướng LLM-prior + FCI có biến ẩn, framing "FCI lấy gì từ một guess của LLM dưới biến ẩn". Kế hoạch và luật đọc P-A/P-B đã viết, **chờ user duyệt** và điền ba tham số (danh sách LLM, trần chi phí, cho phép tải bnlearn). X1 và X5 vẫn đóng. Quyết định D1 dự kiến chậm nhất 30/11. Xem [`00_plan_vi.md`](reports/llm_prior_latent_fci_2026-11-12/00_plan_vi.md).
+- **Cập nhật 12/11, P-B xong:** luật đọc khóa; P-B cho **NO LATENT-SPECIFIC HARM**. Đảo chiều lan nhiều nhất; các kiểu lỗi đặc thù biến ẩn lan ít hơn. H-prop bị bác bỏ. Phát hiện phụ: (1) `dag2pag` của causal-learn 0.1.4.8 không sound (79 claim sai trên 40 đồ thị); (2) bất đối xứng: guess "↔ thành →" gần như luôn bị dữ liệu bắt, guess "→ thành ↔" phần lớn im lặng. P-A **chưa chạy được** vì cả hai API key chưa có số dư khả dụng. Theo bảng quyết định: nếu P-A xác nhận H-type thì phần phương pháp NO-GO ở oracle, P-A thành phát hiện riêng, cần chạy P-B mẫu hữu hạn trước khi đóng; nếu không thì đóng hướng. Xem [`PB_results_vi.md`](reports/llm_prior_latent_fci_2026-11-12/PB_results_vi.md).
 
 ---
 
