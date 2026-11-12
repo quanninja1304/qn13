@@ -234,3 +234,6 @@ INCONCLUSIVE ở một trong hai được xử lý như nhánh âm cho quyết �
   21. **Prompt cuối cùng:** `artifacts/llm_prior_p17/pa_prompts.jsonl`, 1 490 prompt mỗi họ, SHA-256 `f1603796285a13ae34eda41e1f27505ec6cfa729646fb4cbdcfdc3fbdcbb76b6`. Sinh tất định bởi `PA_prompts.py`.
   22. **Kiểm kênh 13/11:** OpenAI gpt-4.1-mini-2025-04-14 trả lời được; Llama 3.3 70B qua OpenRouter, nhà cung cấp CoreWeave, trả lời được; DeepSeek V4.1-Flash-1017 qua OpenRouter, nhà cung cấp DeepSeek, reasoning tắt, trả lời bằng 1 token (sau khi user bật "Allow paid endpoints that train on request data"). API gốc DeepSeek vẫn 0 USD.
   23. **Pipeline phân tích** đã chạy thử trên dữ liệu giả sinh từ đáp án đúng (FP_B = 0, Q-PAIR đọc được 100%); output thử đã xóa. Commit chứa mã chạy và mã phân tích: ghi ở mục kế tiếp.
+  24. **Commit trước lời gọi đầu tiên:** `31afdbe` trên nhánh `docs/p17-llm-prior-plan` (PA_prompts.py, PA_run.py, PA_analysis.py, luật đọc tới mục 23).
+  25. **Kênh DeepSeek:** API gốc vẫn 0 USD lúc bắt đầu chạy, nên dùng **OpenRouter, nhà cung cấp DeepSeek** (`deepseek_openrouter` trong PA_run.py) cho toàn bộ họ này.
+  26. **Trần chi phí mỗi họ** (dưới trần chung 40 USD): OpenAI 1.0 USD, DeepSeek 0.5 USD, Llama 1.0 USD.
