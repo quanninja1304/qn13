@@ -33,8 +33,14 @@ FAMILIES = {
     "llama": {"base_url": "https://openrouter.ai/api/v1", "key": "OPENROUTER_API_KEY", "model": "meta-llama/llama-3.3-70b-instruct",
               "extra": {"provider": {"order": ["CoreWeave"], "allow_fallbacks": False}}, "seed": 20261112, "price": (0.71, 0.71)},
 }
-MAX_TOKENS = {"Q-GRAPH": 3000, "Q-PAIR": 5}
-LETTER = re.compile(r"^\W*\(?([a-eA-E])\b")
+MAX_TOKENS = {"Q-GRAPH": 3000, "Q-PAIR": 600}  # Q-PAIR was 5 in v1 (rules section 7, item 27)
+ANSWER = re.compile(r"ANSWER\s*:\s*\**\s*\(?\s*([a-eA-E])\b", re.I)
+
+
+def pair_letter(text):
+    """Last 'ANSWER: x' line in the reply, or None."""
+    hits = ANSWER.findall(text or "")
+    return hits[-1].lower() if hits else None
 EDGE = re.compile(r"^\s*[-*\d.)]*\s*`?([^`\s][^`]*?)`?\s*->\s*`?([^`]*?)`?\s*$")
 
 
@@ -53,7 +59,7 @@ def parse_ok(fmt, text):
     if text is None:
         return False
     if fmt == "Q-PAIR":
-        return LETTER.match(text.strip()) is not None
+        return pair_letter(text) is not None
     lines = [ln for ln in text.splitlines() if ln.strip()]
     ok = [ln for ln in lines if EDGE.match(ln)]
     return bool(ok) and len(ok) >= 0.9 * len(lines)

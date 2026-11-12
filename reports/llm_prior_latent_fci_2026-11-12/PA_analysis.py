@@ -28,7 +28,7 @@ from p17_common import classify_pairs, mag_from_dag, parse_bif  # noqa: E402
 
 FAMILIES = ["openai", "deepseek", "llama"]
 SEED, B = 20261112, 2000
-LETTER = re.compile(r"^\W*\(?([a-eA-E])\b")
+ANSWER = re.compile(r"ANSWER\s*:\s*\**\s*\(?\s*([a-eA-E])\b", re.I)  # Q-PAIR v2 (rules section 7, item 27)
 EDGE = re.compile(r"^\s*[-*\d.)]*\s*`?([^`\s][^`]*?)`?\s*->\s*`?([^`]*?)`?\s*$")
 
 
@@ -128,11 +128,11 @@ def main():
                 m[p["cond"]][p["unit"]] = {"FP_B": fp("B"), "FP_N": fp("N"), "FP_I": fp("I"),
                                            "TP_D": tp / nD if nD else None, "Rev_D": rev / nD if nD else None}
             else:
-                mt = LETTER.match((r["text"] or "").strip())
+                hits = ANSWER.findall(r["text"] or "")
                 parse["Q-PAIR"][1] += 1
-                parse["Q-PAIR"][0] += mt is not None
-                if mt:
-                    pair_ans[p["cond"]][p["unit"]][p["true_class"]].append(mt.group(1).lower())
+                parse["Q-PAIR"][0] += bool(hits)
+                if hits:
+                    pair_ans[p["cond"]][p["unit"]][p["true_class"]].append(hits[-1].lower())
         res["parse_rate"] = {k: (v[0] / v[1] if v[1] else None) for k, v in parse.items()}
         res["RA0"] = {k: (v is not None and v >= 0.9) for k, v in res["parse_rate"].items()}
 

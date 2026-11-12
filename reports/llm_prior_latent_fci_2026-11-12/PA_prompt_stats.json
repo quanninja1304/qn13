@@ -523,8 +523,8 @@
   },
   "KEEP|Q-PAIR": {
    "calls": 726,
-   "input_tokens": 197008,
-   "max_input": 381
+   "input_tokens": 211528,
+   "max_input": 401
   },
   "PSEUDO|Q-GRAPH": {
    "calls": 19,
@@ -533,8 +533,8 @@
   },
   "PSEUDO|Q-PAIR": {
    "calls": 726,
-   "input_tokens": 177563,
-   "max_input": 327
+   "input_tokens": 192083,
+   "max_input": 347
   }
  },
  "sum_true_edges_over_units": 695,

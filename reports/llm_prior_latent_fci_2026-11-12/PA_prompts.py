@@ -53,8 +53,9 @@ Q_PAIR = (
     "(c) One of them causes the other only indirectly, through other variables in the list.\n"
     "(d) Neither causes the other, but they share a common cause that is not in the list.\n"
     "(e) They are not causally related.\n\n"
-    "Answer with a single letter: a, b, c, d or e."
-)
+    "You may reason briefly first. End your reply with a final line of the form `ANSWER: x`, where x is one of "
+    "a, b, c, d or e."
+)  # v2 (13/11): v1 ended with "Answer with a single letter: a, b, c, d or e." and failed RA0 (rules section 7, item 27)
 
 VOWELS, CONS = "aeiou", "bcdfghjklmnprstvwz"
 
