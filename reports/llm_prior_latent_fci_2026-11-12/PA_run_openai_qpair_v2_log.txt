@@ -1,0 +1,16 @@
+family=openai model=gpt-4.1-mini-2025-04-14 todo=1452 already_done=38 spent_so_far=$0.0195 cap=$2.0
+  100 calls, spent $0.0662, parse {'Q-GRAPH': [0, 0], 'Q-PAIR': [98, 100]}
+  200 calls, spent $0.1141, parse {'Q-GRAPH': [0, 0], 'Q-PAIR': [198, 200]}
+  300 calls, spent $0.1622, parse {'Q-GRAPH': [0, 0], 'Q-PAIR': [298, 300]}
+  400 calls, spent $0.2070, parse {'Q-GRAPH': [0, 0], 'Q-PAIR': [398, 400]}
+  500 calls, spent $0.2539, parse {'Q-GRAPH': [0, 0], 'Q-PAIR': [498, 500]}
+  600 calls, spent $0.2986, parse {'Q-GRAPH': [0, 0], 'Q-PAIR': [598, 600]}
+  700 calls, spent $0.3476, parse {'Q-GRAPH': [0, 0], 'Q-PAIR': [698, 700]}
+  800 calls, spent $0.3971, parse {'Q-GRAPH': [0, 0], 'Q-PAIR': [798, 800]}
+  900 calls, spent $0.4469, parse {'Q-GRAPH': [0, 0], 'Q-PAIR': [898, 900]}
+  1000 calls, spent $0.4976, parse {'Q-GRAPH': [0, 0], 'Q-PAIR': [998, 1000]}
+  1100 calls, spent $0.5445, parse {'Q-GRAPH': [0, 0], 'Q-PAIR': [1098, 1100]}
+  1200 calls, spent $0.5966, parse {'Q-GRAPH': [0, 0], 'Q-PAIR': [1198, 1200]}
+  1300 calls, spent $0.6471, parse {'Q-GRAPH': [0, 0], 'Q-PAIR': [1298, 1300]}
+  1400 calls, spent $0.6981, parse {'Q-GRAPH': [0, 0], 'Q-PAIR': [1398, 1400]}
+finished: calls=1452 spent_total=$0.7197 parse(ok,total)={'Q-GRAPH': [0, 0], 'Q-PAIR': [1450, 1452]}

@@ -1,0 +1,16 @@
+family=llama model=meta-llama/llama-3.3-70b-instruct todo=1488 already_done=2 spent_so_far=$0.0002 cap=$1.0
+  100 calls, spent $0.0124, parse {'Q-GRAPH': [12, 12], 'Q-PAIR': [2, 88]}
+  200 calls, spent $0.0275, parse {'Q-GRAPH': [15, 15], 'Q-PAIR': [2, 185]}
+  300 calls, spent $0.0436, parse {'Q-GRAPH': [17, 17], 'Q-PAIR': [2, 283]}
+  400 calls, spent $0.0604, parse {'Q-GRAPH': [18, 18], 'Q-PAIR': [2, 382]}
+  500 calls, spent $0.0772, parse {'Q-GRAPH': [20, 20], 'Q-PAIR': [2, 480]}
+  600 calls, spent $0.0940, parse {'Q-GRAPH': [22, 22], 'Q-PAIR': [2, 578]}
+  700 calls, spent $0.1126, parse {'Q-GRAPH': [23, 23], 'Q-PAIR': [2, 677]}
+  800 calls, spent $0.1315, parse {'Q-GRAPH': [25, 25], 'Q-PAIR': [2, 775]}
+  900 calls, spent $0.1504, parse {'Q-GRAPH': [27, 27], 'Q-PAIR': [2, 873]}
+  1000 calls, spent $0.1694, parse {'Q-GRAPH': [28, 28], 'Q-PAIR': [2, 972]}
+  1100 calls, spent $0.1945, parse {'Q-GRAPH': [30, 30], 'Q-PAIR': [5, 1070]}
+  1200 calls, spent $0.2198, parse {'Q-GRAPH': [31, 31], 'Q-PAIR': [9, 1169]}
+  1300 calls, spent $0.2446, parse {'Q-GRAPH': [33, 33], 'Q-PAIR': [13, 1267]}
+  1400 calls, spent $0.2669, parse {'Q-GRAPH': [34, 34], 'Q-PAIR': [13, 1366]}
+finished: calls=1488 spent_total=$0.2903 parse(ok,total)={'Q-GRAPH': [36, 36], 'Q-PAIR': [13, 1452]}

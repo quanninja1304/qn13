@@ -1,0 +1,16 @@
+family=deepseek_openrouter model=deepseek/deepseek-v4.1-flash-1017 todo=1488 already_done=2 spent_so_far=$0.0001 cap=$0.5
+  100 calls, spent $0.0028, parse {'Q-GRAPH': [12, 13], 'Q-PAIR': [48, 87]}
+  200 calls, spent $0.0060, parse {'Q-GRAPH': [13, 15], 'Q-PAIR': [115, 185]}
+  300 calls, spent $0.0097, parse {'Q-GRAPH': [14, 17], 'Q-PAIR': [165, 283]}
+  400 calls, spent $0.0134, parse {'Q-GRAPH': [16, 19], 'Q-PAIR': [252, 381]}
+  500 calls, spent $0.0169, parse {'Q-GRAPH': [16, 20], 'Q-PAIR': [343, 480]}
+  600 calls, spent $0.0207, parse {'Q-GRAPH': [17, 22], 'Q-PAIR': [411, 578]}
+  700 calls, spent $0.0249, parse {'Q-GRAPH': [18, 24], 'Q-PAIR': [471, 676]}
+  800 calls, spent $0.0290, parse {'Q-GRAPH': [19, 25], 'Q-PAIR': [548, 775]}
+  900 calls, spent $0.0338, parse {'Q-GRAPH': [21, 27], 'Q-PAIR': [630, 873]}
+  1000 calls, spent $0.0378, parse {'Q-GRAPH': [21, 28], 'Q-PAIR': [706, 972]}
+  1100 calls, spent $0.0449, parse {'Q-GRAPH': [23, 30], 'Q-PAIR': [786, 1070]}
+  1200 calls, spent $0.0507, parse {'Q-GRAPH': [25, 32], 'Q-PAIR': [853, 1168]}
+  1300 calls, spent $0.0562, parse {'Q-GRAPH': [26, 33], 'Q-PAIR': [936, 1267]}
+  1400 calls, spent $0.0626, parse {'Q-GRAPH': [27, 35], 'Q-PAIR': [1025, 1365]}
+finished: calls=1488 spent_total=$0.0669 parse(ok,total)={'Q-GRAPH': [27, 36], 'Q-PAIR': [1107, 1452]}
