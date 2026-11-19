@@ -2,7 +2,7 @@
 
 > **Luật đọc:** [v2](PN1_reading_rules_vi.md) cộng [v2.1](PN1_rules_v2_1_amendment_vi.md). Cách đọc tác nghiệp của E2 được ghi vào §4 của v2.1 và commit (`fde4fa4`, 19/11 12:50) **trước khi** chạy `analyze_e2.py` và xem bất kỳ metric E2 nào.
 > **Phạm vi E2:** 80 hệ exploratory như E1. AVICI, CDFM, PC, GES: bốn kiểu đệm A, B, C, D × k ∈ {5, 10, 20, 30} (1 200 job mỗi thuật toán). FoundCause: lưới rút gọn đăng ký trước (A tại k ∈ {5, 10, 30}; B, C, D tại k = 20; 480 job).
-> **Nhãn:** [Verified-run] cho số liệu. Mọi diễn giải về cơ chế ở §5 là **giả thuyết**. Toàn bộ là **exploratory**: 18 phép thử chữ ký (3 model × 2 estimand × M1–M3), không kiểm soát familywise. Chỉ held-out mới xác nhận.
+> **Nhãn:** [Verified-run] cho số liệu. Mọi diễn giải về cơ chế ở §5 là **giả thuyết**. Toàn bộ là **exploratory**: 18 phép thử chữ ký (3 model × 2 estimand × M1–M3), trong đó chỉ **15 là khác nhau** vì hai estimand của AVICI trùng hệt nhau (không decoder riêng), nên không được coi là hai lần xác nhận độc lập; không kiểm soát familywise. Chỉ held-out mới xác nhận.
 > **Code và output:** `artifacts/n1_runs/pn1/{integrity_e2,analyze_e2}.py` → `artifacts/n1_runs/pn1_out/{integrity_e2,e2_<model>}.json` (git-ignored).
 
 ## 1. Kiểm toàn vẹn (đều đạt)
