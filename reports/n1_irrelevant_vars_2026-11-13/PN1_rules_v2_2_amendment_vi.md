@@ -124,3 +124,4 @@ Theo từng điều kiện: median Δp, Flips, H_NATIVE, H_FIXED, mốc PC/GES; 
 ## 6. Nhật ký thay đổi sau khóa (append-only)
 
 - 19/11/2026: khóa. Chưa có output model nào trên hệ held-out.
+- 20/11/2026, **đọc held-out** (không đổi luật; đọc bằng `analyze_held.py` đã đóng băng): cả ba model CHANGE MEANINGFUL, HARM ở hai estimand, BEYOND_CLASSICAL PASS ở hai estimand. AVICI M1 INCONCLUSIVE (−0.050 [−0.074, −0.024]); CDFM M2_FIXED INCONCLUSIVE (INCONCLUSIVE_H, phần Δp đạt); FoundCause B20 SIGN_CONFIRMED. RN5: AVICI INCONCLUSIVE, CDFM INCONCLUSIVE → không đạt "GO mechanism validation"; quyết định tiếp theo là của user. Ghi nhận: trường `target_sha` của manifest băm khối đích trước khi chuẩn hóa lại (khác định nghĩa của runner); mã băm input khớp ở mọi output; không sửa code. Chi tiết: [`PN1_HELD_results_vi.md`](PN1_HELD_results_vi.md).
