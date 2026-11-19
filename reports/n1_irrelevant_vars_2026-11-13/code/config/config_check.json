@@ -1,0 +1,166 @@
+{
+ "er1-lin-gauss.yaml": {
+  "sha256": "535c91b22b7a99dbb0d83123e6830ecb4bbd6a1a12c80e29f822562de4df2da5",
+  "rows": [
+   {
+    "d": 5,
+    "expected": 5,
+    "mean_edges": 5.6,
+    "min": 2,
+    "max": 8,
+    "acyclic": true,
+    "zero_edge_graphs": 0
+   },
+   {
+    "d": 10,
+    "expected": 10,
+    "mean_edges": 10.45,
+    "min": 7,
+    "max": 15,
+    "acyclic": true,
+    "zero_edge_graphs": 0
+   },
+   {
+    "d": 20,
+    "expected": 20,
+    "mean_edges": 19.35,
+    "min": 14,
+    "max": 26,
+    "acyclic": true,
+    "zero_edge_graphs": 0
+   },
+   {
+    "d": 30,
+    "expected": 30,
+    "mean_edges": 30.45,
+    "min": 23,
+    "max": 44,
+    "acyclic": true,
+    "zero_edge_graphs": 0
+   }
+  ]
+ },
+ "er1-rff-gauss.yaml": {
+  "sha256": "5d71da6195bcaaccd44f9340f261706967af46a28d218dab10eaf1e84b1387c4",
+  "rows": [
+   {
+    "d": 5,
+    "expected": 5,
+    "mean_edges": 5.6,
+    "min": 2,
+    "max": 8,
+    "acyclic": true,
+    "zero_edge_graphs": 0
+   },
+   {
+    "d": 10,
+    "expected": 10,
+    "mean_edges": 10.45,
+    "min": 7,
+    "max": 15,
+    "acyclic": true,
+    "zero_edge_graphs": 0
+   },
+   {
+    "d": 20,
+    "expected": 20,
+    "mean_edges": 19.35,
+    "min": 14,
+    "max": 26,
+    "acyclic": true,
+    "zero_edge_graphs": 0
+   },
+   {
+    "d": 30,
+    "expected": 30,
+    "mean_edges": 30.45,
+    "min": 23,
+    "max": 44,
+    "acyclic": true,
+    "zero_edge_graphs": 0
+   }
+  ]
+ },
+ "er2-lin-gauss.yaml": {
+  "sha256": "e2bbb21388ae2d4bdac40110c08748ead0f823e2eea1996d3c763fb0d86b19fd",
+  "rows": [
+   {
+    "d": 5,
+    "expected": 9.9,
+    "mean_edges": 9.85,
+    "min": 9,
+    "max": 10,
+    "acyclic": true,
+    "zero_edge_graphs": 0
+   },
+   {
+    "d": 10,
+    "expected": 20,
+    "mean_edges": 20.85,
+    "min": 15,
+    "max": 27,
+    "acyclic": true,
+    "zero_edge_graphs": 0
+   },
+   {
+    "d": 20,
+    "expected": 40,
+    "mean_edges": 39.85,
+    "min": 34,
+    "max": 50,
+    "acyclic": true,
+    "zero_edge_graphs": 0
+   },
+   {
+    "d": 30,
+    "expected": 60,
+    "mean_edges": 59.8,
+    "min": 46,
+    "max": 73,
+    "acyclic": true,
+    "zero_edge_graphs": 0
+   }
+  ]
+ },
+ "er2-rff-gauss.yaml": {
+  "sha256": "7953a0a20c784d51c8de2718fa76ec81bf8ca7bc77cc4f5fe33e7c2b66335f8d",
+  "rows": [
+   {
+    "d": 5,
+    "expected": 9.9,
+    "mean_edges": 9.85,
+    "min": 9,
+    "max": 10,
+    "acyclic": true,
+    "zero_edge_graphs": 0
+   },
+   {
+    "d": 10,
+    "expected": 20,
+    "mean_edges": 20.85,
+    "min": 15,
+    "max": 27,
+    "acyclic": true,
+    "zero_edge_graphs": 0
+   },
+   {
+    "d": 20,
+    "expected": 40,
+    "mean_edges": 39.85,
+    "min": 34,
+    "max": 50,
+    "acyclic": true,
+    "zero_edge_graphs": 0
+   },
+   {
+    "d": 30,
+    "expected": 60,
+    "mean_edges": 59.8,
+    "min": 46,
+    "max": 73,
+    "acyclic": true,
+    "zero_edge_graphs": 0
+   }
+  ]
+ }
+}

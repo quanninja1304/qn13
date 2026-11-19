@@ -83,6 +83,8 @@ Ba điểm trên là cơ sở thiết kế bước sau (can thiệp vào model),
 
 ## 6. Đề xuất đóng băng cho held-out (cần user duyệt trước khi chạy)
 
+> **Cập nhật 19/11/2026:** user duyệt có chỉnh lý; bản thay thế là [v2.2](PN1_rules_v2_2_amendment_vi.md). Thay đổi so với đề xuất dưới đây: AVICI, CDFM, PC, GES đọc trên **80 hệ** lồng nhau, vì với 24 hệ AVICI M1 chỉ có khoảng 0.55 khả năng đạt luật. FoundCause chạy 24 hệ với cả **B20** (nhánh phụ, kiểm dấu). M2 của CDFM có ba nhánh PASS / CONTRARY / INCONCLUSIVE. Bảng dưới đây giữ nguyên làm hồ sơ.
+
 Theo đề xuất mặc định đã ghi trước khi xem số (§4 v2.1, mục 6): **mọi chữ ký đạt đều đi tiếp, không chọn**. Held-out = 24 hệ (3 mỗi ô), seed theo `SETS['HELD']` trong `common.py`, adapter và số luồng như E1/E2, nối đệm sau như cũ.
 
 | Model | Lead (đã đóng băng: dấu, estimand) | Điều kiện held-out (luôn gồm k = 0) | Lệnh gọi | Thời gian ước tính |
