@@ -1,0 +1,64 @@
+{
+  "purpose": "installation checks only, no research pilot run",
+  "checks": {
+    "imports": {
+      "check": "imports",
+      "purpose": "installation_smoke_only",
+      "status": "passed",
+      "versions": {
+        "jax": "0.4.38",
+        "jaxlib": "0.4.38",
+        "torch": "2.15.0+cpu",
+        "numpy": "1.26.4",
+        "avici": "1.0.7",
+        "cdfm-base": "0.1.0",
+        "dm-haiku": "0.0.13",
+        "optax": "0.2.4",
+        "tensorflow": "2.18.0"
+      },
+      "jax_devices": [
+        "TFRT_CPU_0"
+      ],
+      "torch_cuda_build": null,
+      "rss_bytes_at_end": 403886080,
+      "seconds": 22.239214099943638
+    },
+    "avici": {
+      "check": "avici",
+      "purpose": "installation_smoke_only",
+      "status": "passed",
+      "output_shape": [
+        3,
+        3
+      ],
+      "finite": true,
+      "rss_bytes_at_end": 353263616,
+      "seconds": 10.578023800160736
+    },
+    "cdfm": {
+      "check": "cdfm",
+      "purpose": "installation_smoke_only",
+      "status": "passed",
+      "output_shape": [
+        3,
+        3
+      ],
+      "finite": true,
+      "rss_bytes_at_end": 360910848,
+      "seconds": 6.043201299849898
+    },
+    "foundcause": {
+      "check": "foundcause",
+      "purpose": "installation_smoke_only",
+      "status": "passed",
+      "parameters": 138986803,
+      "output_shape": [
+        3,
+        3
+      ],
+      "finite": true,
+      "rss_bytes_at_end": 888897536,
+      "seconds": 24.36583499982953
+    }
+  }
+}

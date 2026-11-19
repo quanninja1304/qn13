@@ -1,0 +1,142 @@
+{
+  "avici_revision": "3bcf141a2d016d17d8b4d217de74e7e2a95afbef",
+  "cdfm_revision": "fd3ac4f72e617c9b2165082493f2494c9f980d04",
+  "foundcause_release": "checkpoint-2026-11",
+  "files": [
+    {
+      "path": "artifacts/n1_models_cpu/checkpoints/avici/scm-v0/checkpoint_0300000.pkl",
+      "source_url": "https://huggingface.co/larslorch/avici/resolve/3bcf141a2d016d17d8b4d217de74e7e2a95afbef/scm-v0/checkpoint_0300000.pkl",
+      "bytes": 68376008,
+      "sha256": "f783e9f5310cb73c59a349b1b9a73f8720736b036c051928d626b242eda9cbde",
+      "publisher_sha256": "f783e9f5310cb73c59a349b1b9a73f8720736b036c051928d626b242eda9cbde",
+      "status": "downloaded_and_hashed",
+      "publisher_hash_verified": true
+    },
+    {
+      "path": "artifacts/n1_models_cpu/checkpoints/avici/scm-v0/config.yaml",
+      "source_url": "https://huggingface.co/larslorch/avici/resolve/3bcf141a2d016d17d8b4d217de74e7e2a95afbef/scm-v0/config.yaml",
+      "bytes": 4742,
+      "sha256": "fb727794e6cff25b56abbc166526a9e682ba3c1ab72cd3bf21cf005b397588bb",
+      "publisher_sha256": null,
+      "status": "downloaded_and_hashed"
+    },
+    {
+      "path": "artifacts/n1_models_cpu/checkpoints/avici/scm-v0/kwargs.json",
+      "source_url": "https://huggingface.co/larslorch/avici/resolve/3bcf141a2d016d17d8b4d217de74e7e2a95afbef/scm-v0/kwargs.json",
+      "bytes": 4240,
+      "sha256": "61d31ad3de014968a0fd6070de6c21d3eb98411c1b657b2781275753b50e20a9",
+      "publisher_sha256": null,
+      "status": "downloaded_and_hashed"
+    },
+    {
+      "path": "artifacts/n1_models_cpu/checkpoints/avici/neurips-linear/checkpoint_0300000.pkl",
+      "source_url": "https://huggingface.co/larslorch/avici/resolve/3bcf141a2d016d17d8b4d217de74e7e2a95afbef/neurips-linear/checkpoint_0300000.pkl",
+      "bytes": 68380115,
+      "sha256": "5ab5802c59fdf2f2910c824a75c25edda8969f2a9e5f907939d7e09633b537d6",
+      "publisher_sha256": "5ab5802c59fdf2f2910c824a75c25edda8969f2a9e5f907939d7e09633b537d6",
+      "status": "downloaded_and_hashed",
+      "publisher_hash_verified": true
+    },
+    {
+      "path": "artifacts/n1_models_cpu/checkpoints/avici/neurips-linear/config.yaml",
+      "source_url": "https://huggingface.co/larslorch/avici/resolve/3bcf141a2d016d17d8b4d217de74e7e2a95afbef/neurips-linear/config.yaml",
+      "bytes": 925,
+      "sha256": "6853fb89f74f851ddc37fddd2ed668823b10b3a662e80c4ee81c467e34b632a5",
+      "publisher_sha256": null,
+      "status": "downloaded_and_hashed"
+    },
+    {
+      "path": "artifacts/n1_models_cpu/checkpoints/avici/neurips-linear/kwargs.json",
+      "source_url": "https://huggingface.co/larslorch/avici/resolve/3bcf141a2d016d17d8b4d217de74e7e2a95afbef/neurips-linear/kwargs.json",
+      "bytes": 6561,
+      "sha256": "67d1b817d03e0a3dd5599258d9b49968ed73fad855487815c556d8da6b15b05a",
+      "publisher_sha256": null,
+      "status": "downloaded_and_hashed"
+    },
+    {
+      "path": "artifacts/n1_models_cpu/checkpoints/avici/neurips-rff/checkpoint_0300000.pkl",
+      "source_url": "https://huggingface.co/larslorch/avici/resolve/3bcf141a2d016d17d8b4d217de74e7e2a95afbef/neurips-rff/checkpoint_0300000.pkl",
+      "bytes": 68380115,
+      "sha256": "a0069f0e115b0653e76a4abe0fc8994cfb5607eed2bbeaf91468108c74b790b7",
+      "publisher_sha256": "a0069f0e115b0653e76a4abe0fc8994cfb5607eed2bbeaf91468108c74b790b7",
+      "status": "downloaded_and_hashed",
+      "publisher_hash_verified": true
+    },
+    {
+      "path": "artifacts/n1_models_cpu/checkpoints/avici/neurips-rff/config.yaml",
+      "source_url": "https://huggingface.co/larslorch/avici/resolve/3bcf141a2d016d17d8b4d217de74e7e2a95afbef/neurips-rff/config.yaml",
+      "bytes": 1023,
+      "sha256": "479cb5065668e23e8e679fed239bcbc18b49e5ef78e2172c0767cd25761906ca",
+      "publisher_sha256": null,
+      "status": "downloaded_and_hashed"
+    },
+    {
+      "path": "artifacts/n1_models_cpu/checkpoints/avici/neurips-rff/kwargs.json",
+      "source_url": "https://huggingface.co/larslorch/avici/resolve/3bcf141a2d016d17d8b4d217de74e7e2a95afbef/neurips-rff/kwargs.json",
+      "bytes": 6543,
+      "sha256": "c7a6b038ef1b462cc2be20b45dbf220f09e45c11a0cedbd6568159b044d2b621",
+      "publisher_sha256": null,
+      "status": "downloaded_and_hashed"
+    },
+    {
+      "path": "artifacts/n1_models_cpu/checkpoints/avici/neurips-grn/checkpoint_0300000.pkl",
+      "source_url": "https://huggingface.co/larslorch/avici/resolve/3bcf141a2d016d17d8b4d217de74e7e2a95afbef/neurips-grn/checkpoint_0300000.pkl",
+      "bytes": 68380115,
+      "sha256": "1da4fa60e8147f0b17c99c3bcd513d2871f837d6f9771e72e473cf8d5ef368dc",
+      "publisher_sha256": "1da4fa60e8147f0b17c99c3bcd513d2871f837d6f9771e72e473cf8d5ef368dc",
+      "status": "downloaded_and_hashed",
+      "publisher_hash_verified": true
+    },
+    {
+      "path": "artifacts/n1_models_cpu/checkpoints/avici/neurips-grn/config.yaml",
+      "source_url": "https://huggingface.co/larslorch/avici/resolve/3bcf141a2d016d17d8b4d217de74e7e2a95afbef/neurips-grn/config.yaml",
+      "bytes": 1110,
+      "sha256": "3b1ae5e05b1e9661a132ee6cc7729ad91c7e6d45f77da91ec4867fbd4e64e48f",
+      "publisher_sha256": null,
+      "status": "downloaded_and_hashed"
+    },
+    {
+      "path": "artifacts/n1_models_cpu/checkpoints/avici/neurips-grn/kwargs.json",
+      "source_url": "https://huggingface.co/larslorch/avici/resolve/3bcf141a2d016d17d8b4d217de74e7e2a95afbef/neurips-grn/kwargs.json",
+      "bytes": 6573,
+      "sha256": "2a42888b60710d7de7cec1c81db840add02f509b7582686cb207b6644a0c7cb6",
+      "publisher_sha256": null,
+      "status": "downloaded_and_hashed"
+    },
+    {
+      "path": "artifacts/n1_models_cpu/checkpoints/cdfm/model.safetensors",
+      "source_url": "https://huggingface.co/DMIRLAB/CDFM/resolve/fd3ac4f72e617c9b2165082493f2494c9f980d04/model.safetensors",
+      "bytes": 38707144,
+      "sha256": "937047358da5368af6e38b99beac1d8b3b789afb8c9c4c857767eb67e07eb760",
+      "publisher_sha256": "937047358da5368af6e38b99beac1d8b3b789afb8c9c4c857767eb67e07eb760",
+      "status": "downloaded_and_hashed",
+      "publisher_hash_verified": true
+    },
+    {
+      "path": "artifacts/n1_models_cpu/checkpoints/cdfm/config.json",
+      "source_url": "https://huggingface.co/DMIRLAB/CDFM/resolve/fd3ac4f72e617c9b2165082493f2494c9f980d04/config.json",
+      "bytes": 717,
+      "sha256": "4787703699634465ddcb286c446c927a78be0502bb1eba3f68d1546258e2befd",
+      "publisher_sha256": null,
+      "status": "downloaded_and_hashed"
+    },
+    {
+      "path": "artifacts/n1_models_cpu/checkpoints/cdfm/README.md",
+      "source_url": "https://huggingface.co/DMIRLAB/CDFM/resolve/fd3ac4f72e617c9b2165082493f2494c9f980d04/README.md",
+      "bytes": 5675,
+      "sha256": "9996debd184f5518fb6ab0d05538fcc9b958c7df11bf05e3173c6947c6ad4b79",
+      "publisher_sha256": null,
+      "status": "downloaded_and_hashed"
+    },
+    {
+      "path": "artifacts/n1_models_cpu/checkpoints/foundcause/checkpoint.pt",
+      "source_url": "https://github.com/amazon-science/foundcause/releases/download/checkpoint-2026-11/checkpoint.pt",
+      "bytes": 556069081,
+      "sha256": "703defa18043514873fe2a487f6b4498c0492a978c77bba1376f4e02f31edc04",
+      "publisher_sha256": "703defa18043514873fe2a487f6b4498c0492a978c77bba1376f4e02f31edc04",
+      "status": "downloaded_and_hashed"
+    }
+  ],
+  "total_bytes": 868330687,
+  "publisher_lfs_hashes_verified": true
+}

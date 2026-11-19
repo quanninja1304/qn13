@@ -1,0 +1,229 @@
+{
+  "created": "2026-11-13",
+  "purpose": "Source provenance for research shortlist; downloaded PDFs plus existing local sources and web sources. Reading depth is specified in the evidence matrix.",
+  "experiments_run": false,
+  "pdf_sources": [
+    {
+      "id": "AID",
+      "url": "https://raw.githubusercontent.com/mlresearch/v244/main/assets/henckel24a/henckel24a.pdf",
+      "pages": 30,
+      "sha256": "cd2cbb28afe2d066b7d10691daf19648f9c4ead21c6bef99ca9752ff1ca1798e",
+      "status": "downloaded",
+      "matrix_id": "P09",
+      "cache_path": "artifacts/research_reset_2026-11-13/sources/AID.pdf",
+      "reading_scope": "Targeted sections; see evidence matrix. Not a complete proof audit."
+    },
+    {
+      "id": "GAC",
+      "url": "https://jmlr.org/papers/volume18/16-319/16-319.pdf",
+      "pages": 62,
+      "sha256": "6030540bb09e1097924026140e1c3e8a6a96933a18c865df6bcc23495279947a",
+      "status": "downloaded",
+      "matrix_id": "P10",
+      "cache_path": "artifacts/research_reset_2026-11-13/sources/GAC.pdf",
+      "reading_scope": "Targeted sections; see evidence matrix. Not a complete proof audit."
+    },
+    {
+      "id": "SD",
+      "url": "https://raw.githubusercontent.com/mlresearch/v258/main/assets/wahl25b/wahl25b.pdf",
+      "pages": 24,
+      "sha256": "8c41e47604fa0dcb26f4644e61534e5dac1900ddd94f0a87cbc06ece8ab005f7",
+      "status": "downloaded",
+      "matrix_id": "P11",
+      "cache_path": "artifacts/research_reset_2026-11-13/sources/SD.pdf",
+      "reading_scope": "Targeted sections; see evidence matrix. Not a complete proof audit."
+    },
+    {
+      "id": "FID",
+      "url": "https://arxiv.org/pdf/2510.25037",
+      "pages": 18,
+      "sha256": "7ca5a3742e806b6f5ac6af8f3c0513183e46749b2065e67e1f6e799161310cfb",
+      "status": "downloaded",
+      "matrix_id": "P12",
+      "cache_path": "artifacts/research_reset_2026-11-13/sources/FID.pdf",
+      "reading_scope": "Targeted sections; see evidence matrix. Not a complete proof audit."
+    },
+    {
+      "id": "PAGcauses",
+      "url": "https://proceedings.mlr.press/v202/wang23ag/wang23ag.pdf",
+      "pages": 28,
+      "sha256": "4e359dd5e1a70fbf53a8aad2d79b85d67d2c9ce6214178bc4adafcbd226a5bc3",
+      "status": "downloaded",
+      "matrix_id": "P13",
+      "cache_path": "artifacts/research_reset_2026-11-13/sources/PAGcauses.pdf",
+      "reading_scope": "Targeted sections; see evidence matrix. Not a complete proof audit."
+    },
+    {
+      "id": "AVICI",
+      "url": "https://arxiv.org/pdf/2205.12934",
+      "pages": 28,
+      "sha256": "1f651843a912a23c9c9574cf38c154f22751513c0c78a1c3a1894907a685ff32",
+      "status": "downloaded",
+      "matrix_id": "P02",
+      "cache_path": "artifacts/research_reset_2026-11-13/sources/AVICI.pdf",
+      "reading_scope": "Targeted sections; see evidence matrix. Not a complete proof audit."
+    },
+    {
+      "id": "Demystify",
+      "url": "https://arxiv.org/pdf/2405.16924",
+      "pages": 30,
+      "sha256": "073ba16cd6098243e1d2e380c60fd0c4069b9c2520b7ac49ba034c537af216c7",
+      "status": "downloaded",
+      "matrix_id": "P03",
+      "cache_path": "artifacts/research_reset_2026-11-13/sources/Demystify.pdf",
+      "reading_scope": "Targeted sections; see evidence matrix. Not a complete proof audit."
+    },
+    {
+      "id": "R2sort",
+      "url": "https://arxiv.org/pdf/2303.18211",
+      "pages": 23,
+      "sha256": "45cf68cb771f0732854607e17dc3ac4c2d6fd855083576ffbbfc687abf80a707",
+      "status": "downloaded",
+      "matrix_id": "P06",
+      "cache_path": "artifacts/research_reset_2026-11-13/sources/R2sort.pdf",
+      "reading_scope": "Targeted sections; see evidence matrix. Not a complete proof audit."
+    },
+    {
+      "id": "TabCausal",
+      "url": "https://arxiv.org/pdf/2605.31156",
+      "pages": 30,
+      "sha256": "ace0f3219936fb742ab7a44fa008592dbd105556975906ff1f5095ccd414e75f",
+      "status": "downloaded",
+      "matrix_id": "P04",
+      "cache_path": "artifacts/research_reset_2026-11-13/sources/TabCausal.pdf",
+      "reading_scope": "Targeted sections; see evidence matrix. Not a complete proof audit."
+    },
+    {
+      "id": "SelfCompatibility",
+      "url": "https://proceedings.mlr.press/v238/faller24a/faller24a.pdf",
+      "pages": 40,
+      "sha256": "d1f9f9869a2bd015e629c0687b6ce249acf288aaf7236a6fc225ad6abfc496d4",
+      "status": "downloaded",
+      "matrix_id": "P07",
+      "cache_path": "artifacts/research_reset_2026-11-13/sources/SelfCompatibility.pdf",
+      "reading_scope": "Targeted sections; see evidence matrix. Not a complete proof audit."
+    },
+    {
+      "id": "Measurement",
+      "url": "https://ceur-ws.org/Vol-1792/paper1.pdf",
+      "pages": 7,
+      "sha256": "7ec2ba610fe75ef7978d5b8a2f7c280a5da6d27f611b40188eb9637edb1428e5",
+      "status": "downloaded",
+      "matrix_id": "P15",
+      "cache_path": "artifacts/research_reset_2026-11-13/sources/Measurement.pdf",
+      "reading_scope": "Targeted sections; see evidence matrix. Not a complete proof audit."
+    },
+    {
+      "id": "TIN",
+      "url": "https://arxiv.org/pdf/2210.11021",
+      "pages": 35,
+      "sha256": "f6943cc016cbdc2c3ff344bc3960fc0e120a121a3c9b7fb6b1ab7cc9f66edeaf",
+      "status": "downloaded",
+      "matrix_id": "P17",
+      "cache_path": "artifacts/research_reset_2026-11-13/sources/TIN.pdf",
+      "reading_scope": "Targeted sections; see evidence matrix. Not a complete proof audit."
+    },
+    {
+      "id": "YangME",
+      "url": "https://arxiv.org/pdf/2407.19426",
+      "pages": 42,
+      "sha256": "339fb6af46033f69562e50d8b56b5d52235772e80efdf0232ce4b947c05af62f",
+      "status": "downloaded",
+      "matrix_id": "P18",
+      "cache_path": "artifacts/research_reset_2026-11-13/sources/YangME.pdf",
+      "reading_scope": "Targeted sections; see evidence matrix. Not a complete proof audit."
+    },
+    {
+      "id": "ContrastiveVI",
+      "url": "https://arxiv.org/pdf/2411.08072",
+      "pages": 15,
+      "sha256": "cce9ce80da5d1479f8dade4da42fcdfd0efb984aa9735655290090a30ac5271c",
+      "status": "downloaded",
+      "matrix_id": "P21",
+      "cache_path": "artifacts/research_reset_2026-11-13/sources/ContrastiveVI.pdf",
+      "reading_scope": "Targeted sections; see evidence matrix. Not a complete proof audit."
+    },
+    {
+      "id": "PerturbProxyIV",
+      "url": "https://arxiv.org/pdf/2601.01830",
+      "pages": 37,
+      "sha256": "86fbf6954e0b4fdb9ade14d507cd255bff150e66c7f738dd2025f7e08853380c",
+      "status": "downloaded",
+      "matrix_id": "P23",
+      "cache_path": "artifacts/research_reset_2026-11-13/sources/PerturbProxyIV.pdf",
+      "reading_scope": "Targeted sections; see evidence matrix. Not a complete proof audit."
+    },
+    {
+      "id": "Internal-ref",
+      "local": "(không công khai)",
+      "pages": 27,
+      "sha256": "(bỏ)",
+      "status": "local extracted",
+      "matrix_id": "P01",
+      "reading_scope": "Targeted sections; see evidence matrix. Not a complete proof audit."
+    },
+    {
+      "id": "Arena",
+      "local": "docs\\papers\\causalarena.pdf",
+      "pages": 47,
+      "sha256": "16635ab33e94e3b4a11dc5f419940cf6cf3ea74026f2118f915bd13ad4d3335f",
+      "status": "local extracted",
+      "matrix_id": "P05",
+      "reading_scope": "Targeted sections; see evidence matrix. Not a complete proof audit."
+    },
+    {
+      "id": "CausalBench",
+      "local": "docs\\papers\\CausalBench.pdf",
+      "pages": 20,
+      "sha256": "a7e3f6b36e68afbefe6a4dfe791c40747e0161a93f923f506a8b96be05e319de",
+      "status": "local extracted",
+      "matrix_id": "P19",
+      "reading_scope": "Targeted sections; see evidence matrix. Not a complete proof audit."
+    },
+    {
+      "id": "FCIT",
+      "local": "docs\\papers\\Efficient Latent Variable Causal Discovery.pdf",
+      "pages": 45,
+      "sha256": "6902f213a4cac369bbd490a278ca67bf2035e68d107334a96cbde233d008e16c",
+      "status": "local extracted",
+      "matrix_id": "P14",
+      "reading_scope": "Targeted sections; see evidence matrix. Not a complete proof audit."
+    },
+    {
+      "id": "CausalBench_published",
+      "matrix_id": "P19",
+      "local": "docs/papers/A large-scale benchmark for network inference from single-cell perturbation data.pdf",
+      "url": "https://doi.org/10.1038/s42003-025-07764-y",
+      "pages": 18,
+      "sha256": "1d01c2f07755cb373c0a448a2110afc7761e732b6f5f4b3187ec0f2ae24ad9a1",
+      "status": "existing local PDF, targeted reading"
+    }
+  ],
+  "additional_core_web_sources": [
+    {
+      "matrix_id": "P08",
+      "url": "https://ceur-ws.org/Vol-1792/paper5.pdf",
+      "status": "web primary source; see matrix for access and reading limits"
+    },
+    {
+      "matrix_id": "P16",
+      "url": "https://auai.org/uai2018/proceedings/papers/208.pdf",
+      "status": "web primary source; see matrix for access and reading limits"
+    },
+    {
+      "matrix_id": "P20",
+      "url": "https://doi.org/10.1038/s41588-021-00778-2",
+      "status": "web primary source; see matrix for access and reading limits"
+    },
+    {
+      "matrix_id": "P22",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11906366/",
+      "status": "web primary source; see matrix for access and reading limits"
+    },
+    {
+      "matrix_id": "P24",
+      "url": "https://doi.org/10.1038/s42256-024-00964-x",
+      "status": "web primary source; see matrix for access and reading limits"
+    }
+  ]
+}

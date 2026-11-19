@@ -1,0 +1,40 @@
+diff --git a/avici/buffer.py b/avici/buffer.py
+index 60521c9..902cfe1 100644
+--- a/avici/buffer.py
++++ b/avici/buffer.py
+@@ -1,7 +1,21 @@
+ import time
+ import math
+ import numpy as onp
+-import pyarrow.plasma as plasma
++try:
++    import pyarrow.plasma as plasma
++except ModuleNotFoundError as exc:
++    if exc.name not in {"pyarrow.plasma", "pyarrow._plasma"}:
++        raise
++
++    class _UnavailablePlasma:
++        def __getattr__(self, name):
++            raise RuntimeError(
++                "AVICI asynchronous training buffers require pyarrow.plasma, "
++                "which is unavailable in the Windows wheel. Pretrained inference "
++                "and synchronous simulate_data do not use Plasma."
++            )
++
++    plasma = _UnavailablePlasma()
+ 
+ from typing import NamedTuple, Any
+ from avici.utils.data import onp_subbatch
+diff --git a/avici/pretrain.py b/avici/pretrain.py
+index a9bb5a0..50cd8d1 100644
+--- a/avici/pretrain.py
++++ b/avici/pretrain.py
+@@ -233,7 +233,7 @@ def load_pretrained(download=None, force_download=False, checkpoint_dir=None, ca
+         assert root_path.is_dir(), "The provided checkpoint_dir is not a directory. You should specify the path to " \
+                                     f"a folder that contains the model `.pkl` (and `{CHECKPOINT_KWARGS}`), " \
+                                     "not the path to the `.pkl` alone."
+-        assert (root_path.parent / CHECKPOINT_KWARGS).exists(), f"The provided checkpoint_dir `{checkpoint_dir}` " \
++        assert (root_path / CHECKPOINT_KWARGS).exists(), f"The provided checkpoint_dir `{checkpoint_dir}` " \
+                                     f"does not contain the file `{CHECKPOINT_KWARGS}`, which is required. "
+         print(f"Loading local checkpoint from `{root_path}`")
+ 
