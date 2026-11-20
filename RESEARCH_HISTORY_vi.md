@@ -246,6 +246,17 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
   - **User chốt:** exploratory 40 hệ; held-out 80 hệ là kế hoạch ban đầu, cỡ mẫu chốt sau exploratory; biên ±1.5 cạnh cho hiệu ứng trung bình; nhánh R dùng Fisher-z cho tuyến tính, HSIC cho RFF, với Bonferroni; bộ sinh lồng nhau giữ nguyên họ RFF của AVICI.
   - **Đính chính:** phân rã theo m0 là kế toán, không phải nguyên nhân; con số gộp của AVICI che hai họ ngược chiều; ở CDFM, dấu của B − A phụ thuộc cách chọn ngưỡng.
   - **Bản nháp luật (chưa khóa):** bộ sinh đệm lồng nhau, contrast REP, L1-END, L2, 11 giả thuyết định trước, quy trình chọn α cho R trên DEV2, 11 cổng DEV. Chi tiết: [`PN2_rules_exploratory_vi.md`](reports/n2_context_mechanism_2026-11-20/PN2_rules_exploratory_vi.md).
+- **Cập nhật 20/11, khóa luật P-N2 exploratory v1** (review thứ ba của user), trước khi có output P-N2 nào:
+  - **α:** riêng cho Fisher-z và HSIC.
+  - **k0:** không tính vào J, nhưng chất lượng tại k0 trước/sau R là bắt buộc.
+  - **PC/GES:** chạy tại k0, e = 0, e = e_T, e = 3.
+  - **HSIC:** dùng cho cả hai họ, chỉ để đo sàng lọc.
+  - **HELD2:** tối đa 5 giả thuyết, Holm ở mức 0.05 trên p-value đã khóa.
+  - **Ba chỉnh sửa:**
+    - G8 kiểm quyết định tại ngưỡng Bonferroni thật, còn G9 chỉ là kiểm chẩn đoán (α_HSIC là mức danh nghĩa);
+    - tách "R làm giảm thay đổi" khỏi "R sửa được lỗi";
+    - giả thuyết chỉ xét theo REP, L1-END ngược dấu là "hình dạng khác dự đoán".
+  - **Bước kế:** code và DEV2.
 
 ---
 
