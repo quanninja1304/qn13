@@ -20,7 +20,7 @@
    - khối đệm có cấu trúc (B) làm đổi việc chọn cạnh ở khối đích **khác nhau giữa các model**:
      - Theo F1: AVICI tệ hơn với B; CDFM và FoundCause đỡ hơn. Dấu này lặp lại ở held-out.
      - Theo số cạnh: AVICI và CDFM cùng chiều (ít cạnh hơn với B); FoundCause ngược lại.
-     - Phân tích hậu nghiệm ([PN1_HELD_posthoc_rank_level_vi.md](PN1_HELD_posthoc_rank_level_vi.md)) cho thấy chênh lệch F1 giữa AVICI và CDFM chủ yếu đến từ điểm xuất phát (ở k0, AVICI dự đoán thiếu cạnh, CDFM dự đoán thừa) và từ ngưỡng NATIVE của CDFM. Nó không cho thấy hai cơ chế ngược nhau đã được xác lập.
+     - Phân tích hậu nghiệm ([PN1_HELD_posthoc_rank_level_vi.md](PN1_HELD_posthoc_rank_level_vi.md)) cho thấy chênh lệch F1 giữa AVICI và CDFM chủ yếu đến từ điểm xuất phát (ở k0, AVICI dự đoán thiếu cạnh, CDFM dự đoán thừa). Ở CDFM, việc đổi ngưỡng NATIVE góp thêm một phần, nhưng dấu của contrast B − A phụ thuộc cách chọn ngưỡng. Dữ liệu không cho thấy hai cơ chế ngược nhau, và cũng không cho thấy hai model cùng cơ chế.
    - prior mật độ gắn với d trong bộ sinh huấn luyện đã được xác minh trên tài liệu (§3), nhưng **chưa** có phép thử trực tiếp. Riêng số biến không giải thích hết hiện tượng, vì A và B đã khác nhau ở cùng D.
 5. **Hai rủi ro cho tính đáng kể của bài:**
    - (a) một bước tiền xử lý cổ điển rẻ (sàng lọc phụ thuộc biên, tách thành phần liên thông, chạy model trên từng thành phần) có thể xóa phần lớn mức hại.
@@ -63,16 +63,16 @@
 | Mạng nơ-ron và PFN cho dữ liệu bảng tệ đi với feature vô thông tin (bài toán dự đoán) | **Verified** | Grinsztajn §5.3; TabPFN §B.3.2 | Hu & Ghelichi 2026: ROC-AUC của TabPFN không giảm khi tổng số feature tăng từ 4 lên 512 (2 feature có thông tin) hoặc khi thêm tới 128 feature tương quan | Trích trong related work |
 | AVICI `scm-v0` và CDFM được huấn luyện với số cạnh/nút ∈ {1, 2, 3}, d tới 100 | **Verified** | config `scm-v0.yaml`; CDFM §5.4 | Phân phối số cạnh thực tế còn phụ thuộc họ đồ thị | — |
 | FoundCause: đường DoWhy (dùng với xác suất 0.5ζ) sinh đồ thị liên thông với q = min(q0, k/(Dtot − 1)) | **Verified** | FoundCause v2 App. G, G.1 | Bộ sinh đa dạng nhận cùng q, nhưng mật độ thực tế và tính liên thông không được nêu; "∝ 1/(D − 1)" chỉ khi trần chặn | Nếu FoundCause vào P-N2: đọc App. I–J, đo mật độ thực tế bằng mã nếu có |
-| CDFM có bias độ thưa toàn cục và ngưỡng NATIVE phụ thuộc log D | **Verified** | CDFM §5.3; mã | Bias là hằng; logD như nhau ở A20 và B20. Khác biệt A–B phải đi qua xác suất (biểu diễn phụ thuộc dữ liệu) hoặc các đặc trưng toàn ma trận của bộ chọn ngưỡng. Hậu nghiệm: ngưỡng NATIVE tăng khi có đệm, nhiều nhất ở B (+0.154) | Đọc CDFM theo NATIVE, FROZEN và FIXED riêng |
-| AVICI và CDFM có cơ chế ngược chiều với đệm có cấu trúc | **Chưa xác lập** | Held-out §4; phân tích hậu nghiệm | F1 ngược chiều, nhưng số cạnh cùng chiều (ít hơn với B); ở cùng số cạnh: AVICI B ≈ A, CDFM B kém A | P-N2 đo số cạnh và thứ hạng, không chỉ F1 |
+| CDFM có bias độ thưa toàn cục và ngưỡng NATIVE phụ thuộc log D | **Verified** | CDFM §5.3; mã | Bias là hằng; logD như nhau ở A20 và B20. Khác biệt A–B phải đi qua xác suất (biểu diễn phụ thuộc dữ liệu) hoặc các đặc trưng toàn ma trận của bộ chọn ngưỡng. Hậu nghiệm: ngưỡng NATIVE tăng khi có đệm, nhiều nhất ở B (+0.154). Việc đổi ngưỡng đóng góp +0.047 F1 vào contrast B − A, nhưng ở FIXED 0.5 thì B vẫn tốt hơn A (+0.034): đây là tương tác điểm × ngưỡng | Đọc CDFM theo NATIVE, FROZEN và FIXED riêng |
+| AVICI và CDFM có cơ chế ngược chiều với đệm có cấu trúc | **Chưa xác lập** | Held-out §4; phân tích hậu nghiệm | F1 ngược chiều, nhưng số cạnh cùng chiều (ít hơn với B); ở cùng số cạnh: con số gộp của AVICI gần 0 nhưng che hai chiều ngược nhau (tuyến tính +0.052, RFF −0.036); CDFM B kém A | P-N2 đo số cạnh và thứ hạng, không chỉ F1, theo từng họ |
 | Hại của N1 do model học được "d lớn thì mỗi cặp ít khả năng có cạnh" | **Hypothesis H1'** | Suy từ prior đã xác minh | Không giải thích được khác biệt A–B ở cùng D. L1 giữ D cố định nên **không** kiểm H1'. Trong mạng của cả hai model không có đầu vào d tường minh; D chỉ vào qua số token trong attention, nên ở mức mạng, H1' khó tách khỏi pha loãng attention. Với CDFM, D còn vào qua logD của bộ chọn ngưỡng | Kiểm trực tiếp cần đổi D mà giữ nội dung khối đệm, hoặc can thiệp vào logD của bộ chọn ngưỡng CDFM; chưa thiết kế |
 | Với FoundCause, cột cô lập nằm ngoài vùng huấn luyện | **Hypothesis H3** | Đường DoWhy không có nút cô lập (mỗi nút không gốc có ít nhất 1 cha; đồ thị liên thông). Hậu nghiệm: B gần như trả lại k0 (H = 0.020), A hại 0.093 | Đường DoWhy chỉ dùng với xác suất 0.5ζ; bộ sinh đa dạng chưa rõ; variable dropout che biến (thiếu dữ liệu), không tạo cột độc lập | L1 tại e_P = 0 so với e_P > 0, đọc theo số nút đệm cô lập |
 | Đòn bẩy "có cạnh khác có tương quan" tách được bằng dữ liệu | **Bị bác (suy luận toán)** ở hệ tuyến tính Gauss | Khối DAG tuyến tính Gauss và phân phối Gauss cùng hiệp phương sai là **một** phân phối | Chỉ hệ RFF mới tách được phần nào | Thay bằng đòn bẩy cường độ L2 |
-| Sàng lọc phụ thuộc biên rồi chạy model theo thành phần liên thông xóa phần lớn hại | **Hypothesis** | Hiểu biết cổ điển; Aliferis 2010; divide-and-conquer CD | Với d_T = 20, k = 20 có 400 cặp chéo; ở α = 0.05 không hiệu chỉnh, kỳ vọng khoảng 20 phát hiện giả dưới độc lập, đủ để nối hai khối. Hiệu chỉnh quá chặt lại có thể tách mất cạnh yếu trong đích | Nhánh R ở §5: ngưỡng khóa trên DEV, đo lỗi gộp và lỗi tách |
+| Sàng lọc phụ thuộc biên rồi chạy model theo thành phần liên thông xóa phần lớn hại | **Hypothesis** | Hiểu biết cổ điển; Aliferis 2010; divide-and-conquer CD | Với d_T = 20, k = 20 có 400 cặp chéo; ở α = 0.05 không hiệu chỉnh, kỳ vọng khoảng 20 phát hiện giả dưới độc lập, đủ để nối hai khối. Hiệu chỉnh quá chặt lại có thể tách mất cạnh yếu trong đích | Nhánh R ở §5: Fisher-z / HSIC, Bonferroni; α chọn trên DEV theo tiêu chí J; đo lỗi gộp và lỗi tách, đo thời gian |
 
 ## 4. So sánh failure mode
 
-Phân tích hậu nghiệm ([PN1_HELD_posthoc_rank_level_vi.md](PN1_HELD_posthoc_rank_level_vi.md)) tách hại thành hai phần, xuất hiện ở những ô khác nhau.
+Phân tích hậu nghiệm ([PN1_HELD_posthoc_rank_level_vi.md](PN1_HELD_posthoc_rank_level_vi.md)) phân rã hại theo mốc m0 thành hai phần. Đây là phân rã kế toán, không phải hai nguyên nhân độc lập; đổi mốc thì tỉ lệ đổi.
 
 - **Phần thứ hạng** (cạnh đúng không còn được xếp trên cạnh sai) chiếm phần lớn ở AVICI-A và gần như toàn bộ ở CDFM-B.
 - **Phần số cạnh** (mức điểm, hiệu chỉnh, ngưỡng) chiếm phần lớn ở AVICI-B và CDFM-A.
@@ -105,7 +105,12 @@ Cần phân biệt hai trường hợp, vì chúng dẫn tới hai cách sửa k
 - **Thiết lập:** k = 20, khối đích giữ nguyên từng bit; số cạnh/nút của khối đệm e_P ∈ {0, 0.5, 1, 2, 3}.
 - **Ghép cặp randomness giữa các mức:**
   - dùng chung ma trận nhiễu, thứ tự topo và trọng số cho mỗi cạnh ứng viên; tập cạnh lồng nhau (e_P = 0.5 ⊂ 1 ⊂ 2 ⊂ 3);
-  - bộ sinh của AVICI không cho lồng tập cạnh, nên cần bộ sinh riêng cho khối đệm; với RFF cần dạng cộng theo từng cha;
+  - bộ sinh của AVICI rút tham số và nhiễu theo thứ tự phụ thuộc đồ thị, nên cần bộ sinh riêng cho khối đệm. Bộ sinh này **giữ nguyên họ cơ chế** của AVICI (RFF đa biến, tuyến tính):
+    - sinh trước thứ tự topo và một ma trận uniform chung, chọn cạnh bằng ngưỡng p_e = 2e/(k − 1);
+    - sinh trước tham số cho mọi cha ứng viên;
+    - ở mỗi mức chỉ lấy tọa độ của các cha đang có cạnh.
+
+    Chi tiết ở [luật P-N2](../n2_context_mechanism_2026-11-20/PN2_rules_exploratory_vi.md) §3;
   - kiểm trên DEV trước khi khóa.
 - **Ghi lại** số cạnh đệm thực tế và số nút đệm cô lập. Với ER ở k = 20, tỉ lệ nút cô lập vào khoảng 36%, 12%, 1% và dưới 0.1% ở e_P = 0.5, 1, 2, 3.
 - **L1 kiểm gì:** đổi cấu trúc thống kê của khối đệm ở cùng D có làm đổi output của khối đích không, và theo hướng nào.
@@ -113,7 +118,7 @@ Cần phân biệt hai trường hợp, vì chúng dẫn tới hai cách sửa k
   - Đổi số cạnh đệm đồng thời đổi mức phụ thuộc, độ dư thừa và hình dạng phân phối chung. Một đường liều–đáp ứng rõ chỉ xác lập độ nhạy với cấu trúc khối đệm, chưa quy được nguyên nhân cho prior huấn luyện.
 - **Hướng dự đoán:** sinh hậu nghiệm từ held-out của P-N1, nên phải kiểm trên seed mới.
   - AVICI: số cạnh khối đích giảm khi e_P tăng; phần thứ hạng đổi theo họ (tuyến tính: B xếp hạng tốt hơn A; RFF: kém hơn).
-  - CDFM: ngưỡng NATIVE tăng và số cạnh NATIVE giảm khi e_P tăng; ở ngưỡng FROZEN, phần thứ hạng xấu đi, rõ nhất ở RFF.
+  - CDFM: ngưỡng NATIVE tăng và số cạnh NATIVE giảm khi e_P tăng. Thứ hạng (top-m0, AUROC, AP) xấu đi, rõ nhất ở RFF. Dấu của F1 phụ thuộc cách chọn ngưỡng, nên F1 không phải giả thuyết chính.
   - FoundCause (bước sau): số cạnh tăng khi e_P tăng. Nếu H3 đúng, hại giảm mạnh từ e_P = 0 sang e_P nhỏ và đi theo số nút đệm cô lập.
 
 **L2: cường độ phụ thuộc trong khối đệm.**
@@ -127,8 +132,10 @@ Cần phân biệt hai trường hợp, vì chúng dẫn tới hai cách sửa k
 **R: sàng lọc và tách thành phần (bắt buộc, chạy sớm).**
 
 - **R-data:**
-  - kiểm phụ thuộc biên từng cặp: Fisher-z cho tuyến tính; một phép kiểm phi tham số cho RFF, chọn trên DEV;
-  - hiệu chỉnh đa kiểm định, α khóa trên DEV;
+  - kiểm phụ thuộc biên từng cặp: Fisher-z cho tuyến tính; HSIC cho RFF, Spearman làm đối chứng rẻ;
+  - Bonferroni là bản chính, BH báo thêm. α chọn trên DEV theo tiêu chí J ở luật P-N2.
+    - p-value của HSIC lấy theo xấp xỉ gamma. Với 999 hoán vị, p-value nhỏ nhất là 10⁻³, không đạt ngưỡng Bonferroni 0.05/780 ≈ 6.4 × 10⁻⁵ khi D = 40.
+    - Thời gian đo trên DEV; chưa coi nhánh R là rẻ;
   - tách thành phần liên thông rồi chạy model trên từng thành phần.
 - **Báo:** H sau R; lỗi gộp (biến đệm bị gộp vào thành phần chứa biến đích); lỗi tách (cạnh thật của đích bị chia sang hai thành phần).
 - **Đối chứng:**
@@ -153,13 +160,13 @@ Cần phân biệt hai trường hợp, vì chúng dẫn tới hai cách sửa k
   - e_P = 3 so với e_P = 0;
   - xu hướng trên cả năm mức, để không bỏ sót đường không đơn điệu;
   - áp cho số cạnh, phần thứ hạng và F1.
-- **Ngưỡng thực tiễn:** giữ 0.03 cho F1, nhưng chỉ gọi là "phẳng" khi CI nằm trong ±0.03. Ước lượng điểm nhỏ mà CI rộng thì là INCONCLUSIVE. Số cạnh cần một biên riêng, chốt khi viết luật.
+- **Ngưỡng thực tiễn:** giữ 0.03 cho F1, nhưng chỉ gọi là "phẳng" khi CI nằm trong ±0.03. Ước lượng điểm nhỏ mà CI rộng thì là INCONCLUSIVE. Với số cạnh: hiệu ứng **trung bình theo hệ**, trong từng model và họ dữ liệu, được coi là nhỏ về thực tiễn khi toàn bộ CI nằm trong [−1.5, +1.5] cạnh. Đây là lựa chọn thực tiễn cho phạm vi này, không phải tiêu chuẩn thống kê phổ quát, và không có nghĩa "số cạnh không đổi ở mỗi hệ". Báo kèm trung bình |Δ|, số cặp đổi trạng thái, và kết quả theo d_T.
 - **Đọc TP và FP**, không chỉ F1, vì F1 ít đổi vẫn có thể che việc TP và FP cùng đổi mạnh.
 - **Phạm vi của kết quả pilot:** chỉ quyết ngân sách cho đòn bẩy đó. Nó **không** bác failure của N1 đã lặp lại, và không đổi nhãn INCONCLUSIVE của P-N1.
 
 **Dữ liệu, model, chi phí.**
 
-- **Dữ liệu:** tập exploratory mới và held-out mới, với seed base mới. Không dùng lại EXP/HELD của P-N1 để xác nhận. Luật P-N2 và held-out được khóa trước khi chạy.
+- **Dữ liệu:** tập exploratory mới và held-out mới, với seed base mới. Không dùng lại EXP/HELD của P-N1 để xác nhận. Luật exploratory (40 hệ) được khóa trước khi chạy. Cỡ mẫu và luật held-out (kế hoạch ban đầu 80 hệ) chốt sau exploratory, trước khi sinh hay chạy held-out.
 - **Model:**
   - Pilot đầu với AVICI và CDFM, khoảng vài phút đến một giờ mỗi lưới.
   - FoundCause vào bước sau với ít điều kiện chọn trước (khoảng 6 phút mỗi lệnh gọi), đặc biệt để kiểm chiều tăng số cạnh.
@@ -176,12 +183,15 @@ Cần phân biệt hai trường hợp, vì chúng dẫn tới hai cách sửa k
 
 Tên nghiên cứu là **P-N2**, theo đúng tên review dùng; thư mục đề xuất là `reports/n2_context_mechanism_2026-11-20/`.
 
-**Còn phải chốt khi viết luật P-N2:**
+**Đã quyết thêm** (review thứ hai của user, cùng ngày):
 
-- cỡ mẫu exploratory và held-out;
-- biên thực tiễn cho số cạnh;
-- phép kiểm phụ thuộc cho RFF trong R, và cách hiệu chỉnh đa kiểm định;
-- bộ sinh khối đệm lồng nhau, kiểm trên DEV.
+- exploratory 40 hệ;
+- 80 hệ held-out là kế hoạch ban đầu; cỡ mẫu và luật held-out chốt sau exploratory, dùng phương sai ước lượng từ exploratory;
+- biên ±1.5 cạnh cho hiệu ứng trung bình;
+- nhánh R: Fisher-z cho tuyến tính, HSIC cho RFF, Bonferroni là bản chính;
+- bộ sinh lồng nhau giữ nguyên họ RFF hiện tại.
+
+Thiết kế chi tiết và các điểm còn mở nằm trong [bản nháp luật P-N2](../n2_context_mechanism_2026-11-20/PN2_rules_exploratory_vi.md).
 
 ## 7. Nhật ký đính chính (20/11, sau review của user)
 
@@ -200,3 +210,14 @@ Tên nghiên cứu là **P-N2**, theo đúng tên review dùng; thư mục đề
 | 11 | §3, §5 R | "sàng lọc (ví dụ Fisher-z từng cặp)" | Thêm R-data/R-oracle, rủi ro đa kiểm định (400 cặp chéo × 0.05 ≈ 20 cạnh giả), lỗi gộp/tách, R tại k0 | Review |
 
 Điều kiện dừng cũ cũng xuất hiện ở [báo cáo held-out §5](PN1_HELD_results_vi.md); ở đó đã thêm ghi chú đính chính trỏ về §5 của file này.
+
+**Lần 2 (20/11, sau review thứ hai của user):**
+
+| # | Chỗ | Bản trước | Sửa thành | Căn cứ |
+|---|---|---|---|---|
+| 12 | §1.4, §3 | Chênh F1 AVICI/CDFM "đến từ điểm xuất phát và từ ngưỡng NATIVE của CDFM"; "ở cùng số cạnh: AVICI B ≈ A" | Ngưỡng chỉ góp thêm một phần; dấu B − A ở CDFM phụ thuộc cách chọn ngưỡng (FIXED 0.5: B vẫn tốt hơn). Con số gộp của AVICI che hai họ ngược chiều | Review thứ hai; [hậu nghiệm](PN1_HELD_posthoc_rank_level_vi.md) Bảng 3, Bảng 5 |
+| 13 | §4 | Hai phần hại "xuất hiện ở những ô khác nhau" | Phân rã kế toán theo mốc m0, không phải hai nguyên nhân | Review thứ hai |
+| 14 | §5 L1 | "với RFF cần dạng cộng theo từng cha" | Giữ nguyên họ RFF đa biến của AVICI; lồng nhau bằng ma trận uniform chung và tham số sinh trước cho mọi cha ứng viên | Review thứ hai; mã `avici/synthetic/rff.py`, `linear.py`, `graph.py`, `utils.py` |
+| 15 | §5 hướng dự đoán | CDFM: "ở ngưỡng FROZEN, phần thứ hạng xấu đi" | FROZEN không đo thuần thứ hạng; thứ hạng đo bằng top-m0, AUROC, AP | Review thứ hai |
+| 16 | §5 R, đọc kết quả, dữ liệu; §6 | Phép kiểm RFF "chọn trên DEV"; biên số cạnh "chốt sau"; "luật held-out khóa trước khi chạy" | HSIC (xấp xỉ gamma) + Bonferroni; biên ±1.5 cho hiệu ứng trung bình; held-out chốt sau exploratory | Review thứ hai |
+| 17 | Tin nhắn chat 20/11 | "40 hệ cho CI khoảng ±0.02" | Con số đó là cho contrast gộp. Phân tích riêng từng họ, 40 hệ (20 mỗi họ) cho nửa độ rộng CI khoảng ±0.026 đến ±0.048 trên F1 ở top-m0, theo phương sai của P-N1 | Review thứ hai; tính lại từ Bảng 3 của hậu nghiệm |

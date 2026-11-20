@@ -239,9 +239,13 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
   - L1 giữ D cố định nên không kiểm prior gắn với d. Mask attention toàn phần chỉ là đối chứng kênh. Điều kiện dừng thay bằng contrast định trước kèm CI.
   - **Hậu nghiệm trên held-out (mô tả, không đổi nhãn):**
     - Khi đổi A → B, AVICI và CDFM đều dự đoán ít cạnh hơn (−4.9 và −10.4). F1 ngược chiều vì ở k0 AVICI dự đoán thiếu cạnh còn CDFM dự đoán thừa.
-    - Khi giữ số cạnh như k0: AVICI B ≈ A, CDFM B kém A, FoundCause B tốt hơn A.
-    - Ngưỡng NATIVE của CDFM tăng mạnh với B.
+    - Khi giữ số cạnh như k0: con số gộp của AVICI gần 0 nhưng hai họ ngược chiều (tuyến tính +0.052, RFF −0.036); CDFM B kém A; FoundCause B tốt hơn A.
+    - Ngưỡng NATIVE của CDFM tăng mạnh với B. Việc đổi ngưỡng góp +0.047 F1 vào B − A, nhưng ở ngưỡng cố định 0.5 thì B vẫn tốt hơn A, nên ngưỡng không phải nguyên nhân duy nhất (đính chính lần 2).
   - Câu hỏi P-N2 đặt lại theo số cạnh và thứ hạng; pilot AVICI + CDFM. Chi tiết: [`PN1_HELD_posthoc_rank_level_vi.md`](reports/n1_irrelevant_vars_2026-11-13/PN1_HELD_posthoc_rank_level_vi.md).
+- **Cập nhật 20/11, review thứ hai của user; bản nháp luật P-N2 cho pha exploratory:**
+  - **User chốt:** exploratory 40 hệ; held-out 80 hệ là kế hoạch ban đầu, cỡ mẫu chốt sau exploratory; biên ±1.5 cạnh cho hiệu ứng trung bình; nhánh R dùng Fisher-z cho tuyến tính, HSIC cho RFF, với Bonferroni; bộ sinh lồng nhau giữ nguyên họ RFF của AVICI.
+  - **Đính chính:** phân rã theo m0 là kế toán, không phải nguyên nhân; con số gộp của AVICI che hai họ ngược chiều; ở CDFM, dấu của B − A phụ thuộc cách chọn ngưỡng.
+  - **Bản nháp luật (chưa khóa):** bộ sinh đệm lồng nhau, contrast REP, L1-END, L2, 11 giả thuyết định trước, quy trình chọn α cho R trên DEV2, 11 cổng DEV. Chi tiết: [`PN2_rules_exploratory_vi.md`](reports/n2_context_mechanism_2026-11-20/PN2_rules_exploratory_vi.md).
 
 ---
 
