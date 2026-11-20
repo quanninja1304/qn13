@@ -88,6 +88,12 @@ Thay đổi so với k = 0 (NATIVE, trung bình mỗi hệ, held-out):
 - **Điều kiện dừng đề xuất:** nếu pilot mật độ đệm ở AVICI và CDFM, chạy trên tập exploratory mới, không cho đường liều–đáp ứng rõ theo số cạnh đệm (hiệu < 0.03 trên toàn dải), thì giả thuyết mật độ bị loại cho hai model đó. Khi đó N1 nên dừng ở lựa chọn 1.
 - Trước khi viết luật cho pilot đó, cần một lượt prior art tập trung vào "amortized / foundation causal discovery + irrelevant hoặc independent variables". Không viết bài cho đến khi lượt này xong.
 
+> **Đính chính 20/11, sau review của user** (số liệu và nhãn ở trên không đổi):
+> 1. **Điều kiện dừng** ở trên được thay. Pilot cơ chế dùng contrast định trước, đọc kèm CI. Kết quả pilot chỉ quyết ngân sách cho đòn bẩy đó, không bác failure đã lặp lại ([kiểm prior art §5](N1_prior_art_recheck_2026-11-20_vi.md)).
+> 2. **Đòn bẩy "thay số cạnh trong khối đệm ở k cố định"** không kiểm trực tiếp giả thuyết "model ước lượng mật độ từ toàn bảng" hay prior gắn với d. Nó kiểm độ nhạy với cấu trúc khối đệm ở cùng D.
+> 3. **Đòn bẩy "thay tương quan biên"** không tách được ở hệ tuyến tính Gauss; đã thay bằng đòn bẩy cường độ.
+> 4. **Câu "ba model phản ứng với đệm có cấu trúc theo hai chiều ngược nhau"** chỉ đúng ở F1. Ở số cạnh, AVICI và CDFM cùng chiều: cả hai dự đoán ít cạnh hơn với B ([phân tích hậu nghiệm](PN1_HELD_posthoc_rank_level_vi.md)).
+
 ## 6. Giới hạn
 
 - FoundCause chỉ có 24 hệ (12 tuyến tính): CI của BEYOND_CLASSICAL rộng (+0.085 [+0.009, +0.169]).
