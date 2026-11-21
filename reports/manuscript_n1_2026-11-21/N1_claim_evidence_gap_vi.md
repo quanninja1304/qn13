@@ -57,7 +57,7 @@
      - **phép đổi riêng X:** giữ T và P ở e = 0, chỉ lấy khối X từ e_T; đo ngưỡng và số cạnh khối đích;
      - phần do điểm (S) và phần do ngưỡng (T), **báo riêng, giữ dấu**;
      - xác suất trung bình của khối chéo; với khối đệm, tách cặp không-cạnh và cặp có cạnh (sửa giới hạn của C6).
-   - **Luật:** [P-N4 v0](../n4_cdfm_threshold_path_2026-11-21/PN4_rules_vi.md), **nháp, chưa khóa**. Theo quyết định của user ngày 21/11 (lượt 3):
+   - **Luật:** [P-N4 v1](../n4_cdfm_threshold_path_2026-11-21/PN4_rules_vi.md), **đã khóa** ngày 21/11 (v0 cộng ba chỉnh sửa của user: SE = 0 thành DEGENERATE với p = 1; hồ sơ power trong `design/`; G5 đối chiếu giá trị đầy đủ). Theo quyết định của user ngày 21/11 (lượt 3):
      - bốn giả thuyết cho mỗi k: (a) điểm khối chéo giảm; (b) ngưỡng NATIVE tăng; (x) chỉ đổi khối chéo thì ngưỡng tăng và số cạnh đích giảm, đếm trên điểm đích ở e = 0; (c) phần do ngưỡng chiếm phần lớn;
      - tiêu chí (c): μ_T < −1.5, μ_(T+S) < 0 và μ_(T−S) < 0. Hai điều sau tương đương μ_T < −|μ_S|. CI tính trực tiếp trên từng contrast của cùng các hệ. Kết luận áp cho trung bình, không cho từng hệ. Mốc phân rã giữ ở e = 0;
      - (x) và (c) là giả thuyết tổng hợp, với p bằng giá trị lớn nhất của các thành phần. Holm 0.05 trên cả 8 giả thuyết của hai k; đọc riêng từng k;

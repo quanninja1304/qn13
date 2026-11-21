@@ -1,6 +1,6 @@
-# P-N4: kiểm chứng đường ảnh hưởng qua bộ chọn ngưỡng của CDFM trên seed mới (luật v0, nháp, 21/11/2026)
+# P-N4: kiểm chứng đường ảnh hưởng qua bộ chọn ngưỡng của CDFM trên seed mới (luật v1, khóa ngày 21/11/2026)
 
-> **Trạng thái:** **v0, NHÁP, CHƯA KHÓA.** Khóa bằng một commit kèm push trên nhánh công khai sau khi user duyệt. Việc khóa làm trước khi sinh bất kỳ input P-N4 nào, kể cả DEV4. Sau khi khóa, mọi thay đổi chỉ được ghi thêm vào §11 kèm lý do, và không được dựa trên metric đã thấy.
+> **Trạng thái:** **v1, ĐÃ KHÓA** bằng commit chứa dòng này. Commit được push trên nhánh công khai trước khi sinh bất kỳ input P-N4 nào, kể cả DEV4. v1 là bản nháp v0 (`7745a29`) cộng ba chỉnh sửa và một câu, theo duyệt của user ngày 21/11 (§11). Sau khi khóa, mọi thay đổi chỉ được ghi thêm vào §11 kèm lý do, và không được dựa trên metric đã thấy.
 > **Nguồn:**
 >
 > - gap 1 của [bảng claim](../manuscript_n1_2026-11-21/N1_claim_evidence_gap_vi.md) §2;
@@ -20,7 +20,11 @@
 2. Viết code dưới dạng file mới trong `artifacts/n4_runs/pn4/` (git-ignored).
    - Import nguyên trạng các module đã đóng băng: `common.py` (P-N1) và `common2.py` (P-N2).
    - Các hàm của bộ chọn ngưỡng được chép từ `partA_cdfm.py` (P-N3), vì file đó chạy toàn bộ phân tích ngay khi được import. Bản chép phải tái lập kết quả cũ (cổng G3, G4).
-3. Chạy các cổng khả thi (§8) trên DEV4 và trên output cũ. Đóng băng code: snapshot `code/` kèm `SHA256SUMS`, cổng kiểm ở đầu và cuối lượt chạy. Commit, push.
+3. Chạy các cổng khả thi (§8) trên DEV4 và trên output cũ. Đóng băng code **cùng các phụ thuộc được dùng**:
+   - snapshot `code/` kèm `SHA256SUMS`, gồm code mới và bản chép của `common.py`, `common2.py`;
+   - mã băm của các file nguồn gói `cdfm` và của checkpoint CDFM, được cổng kiểm đối chiếu ở đầu và cuối lượt chạy.
+
+   Commit, push.
 4. Chạy P-N4. Input chỉ được sinh ra lúc chạy, sau bước 3.
 5. Kiểm hoàn tất (§7), rồi mới đọc kết quả bằng code đã đóng băng.
 
@@ -35,7 +39,7 @@
 - **Khối đệm:** bộ sinh lồng nhau của P-N2 (`pad_params`, `pad_graph`, `pad_data` trong `common2.py`), với s = 1, ở hai mức e = 0 và e = e_T của ô.
   - k = 20: gọi đúng `padding2` của P-N2, không đổi gì.
   - k = 40: cùng ba hàm, với tham số k = 40. Khi đó p_e = min(2e/39, 0.99).
-  - Luồng ngẫu nhiên giữ khóa `SeedSequence([seed, 20261120, 2])` cho cả hai k. Vì vậy, với cùng một hệ, khối đệm k = 20 và k = 40 rút từ cùng một luồng và không độc lập với nhau. Cả hai đều độc lập với khối đích theo cách sinh. Mọi so sánh giữa hai k chỉ là mô tả.
+  - Luồng ngẫu nhiên giữ khóa `SeedSequence([seed, 20261120, 2])` cho cả hai k. Vì vậy, với cùng một hệ, khối đệm k = 20 và k = 40 rút từ cùng một luồng và không độc lập với nhau. Cả hai đều độc lập với khối đích theo cách sinh.
 - **Input mỗi hệ** (năm input):
   - k0;
   - k = 20 với e = 0 và với e = e_T;
@@ -110,7 +114,7 @@ Mỗi giả thuyết được đọc riêng cho từng k ∈ {20, 40}. Tổng c�
    - dự đoán dương: t = θ̂ / SE;
    - dự đoán âm: t = −θ̂ / SE;
    - thành phần μ_T < −1.5: t = (−1.5 − θ̂) / SE.
-   - Trường hợp suy biến SE = 0: p = 0 nếu θ̂ nằm hẳn về phía dự đoán so với mốc, ngược lại p = 1. Trường hợp này được báo riêng.
+   - **Trường hợp suy biến SE = 0:** ghi nhãn **DEGENERATE**, dùng p = 1 trong Holm, và không xác nhận thành phần đó. Giả thuyết tổng hợp chứa thành phần đó vì vậy cũng không được xác nhận. Lý do: phương sai mẫu bằng 0 chưa chứng minh phương sai quần thể bằng 0. Quy tắc này chỉ áp cho P-N4; kết quả của các pha cũ giữ nguyên.
 
 **Giả thuyết tổng hợp:** p của giả thuyết là giá trị lớn nhất trong các p của thành phần (kiểm intersection–union). Với N4-x: p = max(p_D3a, p_D3b). Với N4-c: p = max(p_T, p_(T+S), p_(T−S)).
 
@@ -162,14 +166,17 @@ Không có nhãn "bác bỏ giả thuyết". Nếu θ̂ của một thành phầ
   - S′ = m(Đ¹, τ¹) − m(Đ⁰, τ¹);
   - T′ = m(Đ⁰, τ¹) − m(Đ⁰, τ⁰).
 - **Chất lượng:** F1 skeleton NATIVE ở k0, e = 0 và e = e_T cho từng k; H = F1(k0) − F1(e = 0) ở k = 20 và ở k = 40.
-- **So sánh hai k:** hiệu k = 40 − k = 20 của mọi biến đo ở §2, ghép cặp theo hệ.
+- **So sánh hai k:** hiệu k = 40 − k = 20 của mọi biến đo ở §2, ghép cặp theo hệ. Phép so này chỉ là mô tả vì nó được chọn nằm ngoài bộ giả thuyết chính, không phải vì hai khối đệm phụ thuộc nhau. Một phép so ghép cặp vẫn có thể kiểm định nếu được thiết kế trước.
 - **Không tính trong P-N4:** FROZEN, FIXED, ngưỡng cục bộ và nhánh R. Đó là phần của gap 3, có luật riêng. Output xác suất của P-N4 chỉ được gap 3 dùng lại theo luật đã khóa của gap 3.
 
 ## 6. Cỡ mẫu (khóa) và căn cứ
 
 **Chốt 80 hệ, 20 mỗi ô.**
 
-**Căn cứ.** Tính lại trên output đã đóng băng của HELD2 (60 hệ RFF, 15 mỗi ô). Đây là phép tính mô tả, chỉ để thiết kế. Script ở thư mục tạm, không thuộc repo.
+**Căn cứ.** Tính lại trên output đã đóng băng của HELD2 (60 hệ RFF, 15 mỗi ô) và EXP2. Đây là phép tính mô tả, chỉ để thiết kế. Hồ sơ thiết kế nằm ở [`design/`](design/):
+
+- [`pn4_design_inputs.py`](design/pn4_design_inputs.py) → [`pn4_design_inputs.json`](design/pn4_design_inputs.json): trung bình, độ lệch chuẩn và cỡ theo ô của mọi biến đo ở §2;
+- [`pn4_power.py`](design/pn4_power.py) → [`pn4_power.json`](design/pn4_power.json): power theo kịch bản.
 
 - Phép tính tái lập đúng các số đã báo của HELD2:
   - D2 = +0.1745 [+0.1586, +0.1905], khớp HC1;
@@ -184,7 +191,13 @@ Không có nhãn "bác bỏ giả thuyết". Nếu θ̂ của một thành phầ
   - 80% số hệ có T_i < −|S_i|; 90% số hệ có D3b_i < 0.
 - Trên EXP2 (20 hệ RFF), cùng phép tính cho D3a = +0.108 [+0.090, +0.126] và D3b = −13.75 [−19.75, −7.75].
 
-**Power** của từng thành phần, kiểm một phía ở mức 0.05/8 (mức chặt nhất của Holm), với độ lệch chuẩn theo ô của HELD2:
+**Power** của từng thành phần, kiểm một phía ở mức 0.05/8 (mức chặt nhất của Holm). Cách tính là **xấp xỉ noncentral-t**:
+
+- SE lấy từ độ lệch chuẩn theo ô của HELD2, nhân hệ số tăng độ lệch chuẩn của kịch bản; df theo Welch–Satterthwaite;
+- độ lệch của thống kê là hướng × (θ − mốc) / SE, với θ là trung bình của HELD2 nhân hệ số co hiệu ứng của kịch bản;
+- cận dưới power của giả thuyết tổng hợp là 1 − Σ(1 − power của từng thành phần).
+
+Đây là xấp xỉ dựa trên trung bình và phương sai của HELD2, cùng giả định co hiệu ứng và tăng phương sai. Nó không phải power tính trực tiếp từ toàn bộ phân phối thực nghiệm, và không bảo đảm power ở k = 40.
 
 | Kịch bản | n mỗi ô | D3b | T (< −1.5) | T + S | T − S | D1, D2, D3a |
 |---|---|---|---|---|---|---|
@@ -193,9 +206,8 @@ Không có nhãn "bác bỏ giả thuyết". Nếu θ̂ của một thành phầ
 | Hiệu ứng giảm một nửa, độ lệch chuẩn × 1.5 | **20** | **0.99** | **1.00** | **0.96** | **0.96** | **1.00** |
 
 - Ở k = 20, cỡ 15 mỗi ô đã đủ. k = 40 chưa có dữ liệu nào, nên kịch bản bi quan (hiệu ứng giảm một nửa, độ lệch chuẩn tăng 1.5 lần) là căn cứ chọn cỡ mẫu.
-- Với 15 hệ mỗi ô, power của N4-c trong kịch bản đó chỉ có cận dưới khoảng 0.75 (1 − Σ phần thiếu của ba thành phần). Với 20 hệ mỗi ô, cận dưới khoảng 0.93.
+- Trong kịch bản đó, cận dưới power của N4-c là 0.748 với 15 hệ mỗi ô và 0.926 với 20 hệ mỗi ô. Của N4-x là 0.938 và 0.987. User đã tính lại cận dưới của N4-c và khớp.
 - Chi phí thêm của 20 hệ so với 15 hệ khoảng 15–20 phút.
-- Đây là tính toán dưới phân phối thực nghiệm của HELD2, không phải power của quần thể thật.
 
 ## 7. Kiểm hoàn tất trước khi đọc (khóa)
 
@@ -218,7 +230,7 @@ Script kiểm là một file riêng, nằm trong snapshot.
 | G2 | Ở k = 40, trên DEV4: khối đệm sinh riêng trùng khối đệm trong bảng ghép; tham số như nhau giữa hai mức; đồ thị đúng là U < p_e; khớp phép tính gốc của AVICI như cổng G6 của P-N2; ghi số cạnh đệm và số nút cô lập; khối đích trùng từng bit với k0 | trùng từng bit; sai lệch tương đối ≤ 1e-9 |
 | G3 | Bộ chọn ngưỡng chép lại tái tạo ngưỡng đã lưu trên output HELD2 và DEV4 | sai lệch tuyệt đối ≤ 1e-12 |
 | G4 | Code đọc tái lập số cũ: HELD2 (D2, S, T, D3a, D3b như §6) và P-N3 phần A trên EXP2 (Δℓ +0.855, φ của khối chéo +0.513, số cạnh 43.8, 30.6, 35.9, 25.5, 26.5) | trùng tới số chữ số đã báo |
-| G5 | Code kiểm định tái lập θ̂, t, df, p của HC1 trên HELD2 (22.39; 27.5; 1.6e-19) | khớp tuyệt đối |
+| G5 | Code kiểm định tái lập các giá trị **đầy đủ** của HC1 trong `held2_held2_reading.json`: θ̂, SE, df, t, CI và p. Kèm bốn ca kiểm: (i) p tổng hợp bằng giá trị lớn nhất của các thành phần; (ii) Holm dừng ở lần không bác bỏ đầu tiên, kể cả khi một p phía sau nhỏ hơn ngưỡng của nó; (iii) SE = 0 cho DEGENERATE, p = 1, không xác nhận, và giả thuyết tổng hợp chứa nó cũng không; (iv) mốc dịch tính đúng t = (−1.5 − θ̂) / SE | θ̂, SE, df, t, CI: \|Δ\| ≤ 1e-10 · max(1, \|giá trị gốc\|). p: sai số tương đối ≤ 1e-9. Bốn ca kiểm cho đúng kết quả định trước |
 | G6 | CDFM tất định ở D = 50 và D = 60: chạy lại 2 input DEV4 | trùng từng bit |
 | G7 | Thời gian chạy CDFM ở D = 30, 40, 50, 60; ước tính tổng | báo user trước khi chạy nếu ước tính vượt 3 giờ |
 | G8 | Bộ nhớ của CDFM ở D = 60 | ghi peak RSS; dừng và báo nếu không chạy được |
@@ -246,4 +258,11 @@ Output DEV4 chỉ dùng cho các cổng này. Không tính contrast nào trên D
 
 ## 11. Nhật ký (append-only sau khi khóa)
 
-- **v0, 21/11/2026:** bản nháp, theo quyết định của user ngày 21/11 (tiêu chí (c), dự đoán trực tiếp về khối chéo, đọc riêng từng k).
+- **v0, 21/11/2026 (`7745a29`):** bản nháp, theo quyết định của user ngày 21/11 (tiêu chí (c), dự đoán trực tiếp về khối chéo, đọc riêng từng k).
+- **v1, 21/11/2026 (khóa):** user duyệt thiết kế với 80 hệ và cho GO sau ba chỉnh sửa, không cần thêm vòng duyệt. Các thay đổi so với v0:
+  1. **§4, SE = 0:** thay "p = 0 nếu đúng chiều" bằng DEGENERATE, p = 1 trong Holm, không xác nhận. Kết quả các pha cũ giữ nguyên.
+  2. **§6, power:** lưu script và bảng đầu vào/kết quả vào `design/`. Ghi rõ đây là xấp xỉ noncentral-t từ trung bình và phương sai của HELD2, với giả định co hiệu ứng và tăng phương sai, không phải power tính từ toàn bộ phân phối thực nghiệm.
+  3. **§8, G5:** đối chiếu với các giá trị đầy đủ trong `held2_held2_reading.json` theo dung sai đã khóa; p rất nhỏ dùng sai số tương đối. Thêm các ca kiểm cho p tổng hợp, bước dừng Holm và SE = 0.
+  4. **Một câu ở §1 và §5:** so sánh giữa hai k là mô tả vì được chọn ngoài bộ giả thuyết chính, không phải vì hai khối đệm phụ thuộc nhau.
+  5. **§0, bước 3:** đóng băng cả các phụ thuộc được dùng (theo trình tự user duyệt).
+  - **Trình tự đã duyệt:** sửa luật, khóa và push, viết code, chạy G1–G8, đóng băng code cùng phụ thuộc, rồi chạy. Nếu các cổng đạt và ước tính không vượt 3 giờ thì không cần xin lại quyết định chạy.
