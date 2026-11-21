@@ -1,0 +1,219 @@
+{
+ "G1": {
+  "pass_": true,
+  "n": 16
+ },
+ "G2": {
+  "pass_": true,
+  "alone_vs_table": true,
+  "params_same": true,
+  "graph_U_lt_p": true,
+  "target_bitwise": true,
+  "fidelity_maxrel": 7.800981591733579e-15,
+  "n_inputs": 16,
+  "padding_stats": [
+   {
+    "sys": "DEV4-c1-r0",
+    "e": 0,
+    "n_edges": 0,
+    "n_isolated": 40
+   },
+   {
+    "sys": "DEV4-c1-r0",
+    "e": 1,
+    "n_edges": 50,
+    "n_isolated": 4
+   },
+   {
+    "sys": "DEV4-c1-r1",
+    "e": 0,
+    "n_edges": 0,
+    "n_isolated": 40
+   },
+   {
+    "sys": "DEV4-c1-r1",
+    "e": 1,
+    "n_edges": 39,
+    "n_isolated": 8
+   },
+   {
+    "sys": "DEV4-c3-r0",
+    "e": 0,
+    "n_edges": 0,
+    "n_isolated": 40
+   },
+   {
+    "sys": "DEV4-c3-r0",
+    "e": 2,
+    "n_edges": 72,
+    "n_isolated": 0
+   },
+   {
+    "sys": "DEV4-c3-r1",
+    "e": 0,
+    "n_edges": 0,
+    "n_isolated": 40
+   },
+   {
+    "sys": "DEV4-c3-r1",
+    "e": 2,
+    "n_edges": 75,
+    "n_isolated": 0
+   },
+   {
+    "sys": "DEV4-c5-r0",
+    "e": 0,
+    "n_edges": 0,
+    "n_isolated": 40
+   },
+   {
+    "sys": "DEV4-c5-r0",
+    "e": 1,
+    "n_edges": 43,
+    "n_isolated": 4
+   },
+   {
+    "sys": "DEV4-c5-r1",
+    "e": 0,
+    "n_edges": 0,
+    "n_isolated": 40
+   },
+   {
+    "sys": "DEV4-c5-r1",
+    "e": 1,
+    "n_edges": 27,
+    "n_isolated": 11
+   },
+   {
+    "sys": "DEV4-c7-r0",
+    "e": 0,
+    "n_edges": 0,
+    "n_isolated": 40
+   },
+   {
+    "sys": "DEV4-c7-r0",
+    "e": 2,
+    "n_edges": 91,
+    "n_isolated": 1
+   },
+   {
+    "sys": "DEV4-c7-r1",
+    "e": 0,
+    "n_edges": 0,
+    "n_isolated": 40
+   },
+   {
+    "sys": "DEV4-c7-r1",
+    "e": 2,
+    "n_edges": 98,
+    "n_isolated": 0
+   }
+  ]
+ },
+ "G3": {
+  "pass_": true,
+  "max_abs": 3.3306690738754696e-16,
+  "n_outputs": 200
+ },
+ "G4": {
+  "pass_": true,
+  "checks": {
+   "HELD2_D1_vs_design": true,
+   "HELD2_D2_vs_design": true,
+   "HELD2_D3a_vs_design": true,
+   "HELD2_D3b_vs_design": true,
+   "HELD2_S_vs_design": true,
+   "HELD2_T_vs_design": true,
+   "HELD2_TpS_vs_design": true,
+   "HELD2_TmS_vs_design": true,
+   "HELD2_S_vs_held2_reading": true,
+   "HELD2_T_vs_held2_reading": true,
+   "HELD2_native_count_consistent": true,
+   "EXP2_d_logit_vs_partA": true,
+   "EXP2_phi_T_vs_partA": true,
+   "EXP2_phi_P_vs_partA": true,
+   "EXP2_phi_X_vs_partA": true,
+   "EXP2_count_000_eT_vs_partA": true,
+   "EXP2_count_001_eT_vs_partA": true,
+   "EXP2_count_010_eT_vs_partA": true,
+   "EXP2_count_011_eT_vs_partA": true,
+   "EXP2_count_111_eT_vs_partA": true,
+   "EXP2_S_vs_partA": true,
+   "EXP2_T_vs_partA": true,
+   "EXP2_native_count_consistent": true
+  }
+ },
+ "G5": {
+  "pass_": true,
+  "checks": {
+   "HC1_theta": true,
+   "HC1_se": true,
+   "HC1_df": true,
+   "HC1_t": true,
+   "HC1_ci": true,
+   "HC1_p_relative": true,
+   "case_i_composite_max": true,
+   "case_ii_holm_stop": true,
+   "case_iii_degenerate": true,
+   "case_iv_shifted_bound": true
+  },
+  "HC1_recomputed": {
+   "theta": 0.17454332636519398,
+   "se": 0.007796226834567379,
+   "df": 27.5397866033954,
+   "t": 22.388179573135726,
+   "p_one_sided": 1.6474206042669744e-19,
+   "ci95": [
+    0.15856144808149492,
+    0.19052520464889305
+   ]
+  },
+  "HC1_reference": {
+   "theta": 0.17454332636519398,
+   "se": 0.007796226834567379,
+   "df": 27.5397866033954,
+   "t": 22.388179573135726,
+   "p_one_sided": 1.6474206042669744e-19,
+   "ci95": [
+    0.15856144808149492,
+    0.19052520464889305
+   ]
+  }
+ },
+ "G6": {
+  "pass_": true,
+  "checks": {
+   "DEV4-c1-r0__k40_e0__D50": true,
+   "DEV4-c5-r0__k40_e1__D60": true
+  }
+ },
+ "G7": {
+  "pass_": true,
+  "median_runtime_s_by_D": {
+   "10": 2.33,
+   "20": 4.33,
+   "30": 6.635,
+   "40": 8.64,
+   "50": 11.21,
+   "60": 13.695
+  },
+  "n_inputs_by_D": {
+   "10": 40,
+   "30": 80,
+   "50": 80,
+   "20": 40,
+   "40": 80,
+   "60": 80
+  },
+  "estimate_s": 3888.8800000000006,
+  "n_failed_DEV4": 0
+ },
+ "G8": {
+  "pass_": true,
+  "peak_wset_mb_max": 678.6,
+  "peak_wset_mb_at_D60": 678.6,
+  "available_ram_mb": 941.0
+ },
+ "all_pass": true,
+ "failed": []
+}

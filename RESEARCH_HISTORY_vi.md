@@ -353,6 +353,7 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
   - **Nháp luật P-N4 v0** (chưa khóa): CDFM RFF, seed base 440000, k = 20 (lặp lại) và k = 40 (mở rộng), 80 hệ. Bốn giả thuyết mỗi k, gồm một giả thuyết trực tiếp về khối chéo; Holm 0.05 trên cả 8.
   - Chi tiết: [`PN4_rules_vi.md`](reports/n4_cdfm_threshold_path_2026-11-21/PN4_rules_vi.md), [`N1_claim_evidence_gap_vi.md`](reports/manuscript_n1_2026-11-21/N1_claim_evidence_gap_vi.md).
 - **Cập nhật 21/11, khóa luật P-N4 v1:** user duyệt 80 hệ và ba chỉnh sửa (SE = 0 thành DEGENERATE với p = 1; hồ sơ power trong `design/`, xấp xỉ noncentral-t; G5 đối chiếu giá trị đầy đủ của HELD2 theo dung sai đã khóa). Chưa sinh input P-N4 nào. Chi tiết: [`PN4_rules_vi.md`](reports/n4_cdfm_threshold_path_2026-11-21/PN4_rules_vi.md) §11.
+- **Cập nhật 21/11, cổng P-N4 đạt, đóng băng code:** G1–G8 đạt trên DEV4 (base 450000) và output cũ. Code đọc tái lập HC1 trùng từng bit; ước tính chạy khoảng 1.1 giờ. Snapshot gồm cả phụ thuộc (`common.py`, `common2.py`, YAML; mã băm của nguồn `cdfm`, `avici` và checkpoint). Chi tiết: [`PN4_rules_vi.md`](reports/n4_cdfm_threshold_path_2026-11-21/PN4_rules_vi.md) §11, [`checks/gates4.json`](reports/n4_cdfm_threshold_path_2026-11-21/checks/gates4.json).
 
 ---
 

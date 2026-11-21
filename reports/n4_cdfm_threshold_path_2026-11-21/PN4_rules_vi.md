@@ -266,3 +266,24 @@ Output DEV4 chỉ dùng cho các cổng này. Không tính contrast nào trên D
   4. **Một câu ở §1 và §5:** so sánh giữa hai k là mô tả vì được chọn ngoài bộ giả thuyết chính, không phải vì hai khối đệm phụ thuộc nhau.
   5. **§0, bước 3:** đóng băng cả các phụ thuộc được dùng (theo trình tự user duyệt).
   - **Trình tự đã duyệt:** sửa luật, khóa và push, viết code, chạy G1–G8, đóng băng code cùng phụ thuộc, rồi chạy. Nếu các cổng đạt và ước tính không vượt 3 giờ thì không cần xin lại quyết định chạy.
+  - **Mốc khóa:** `05b6945`, push lúc 2026-11-21T13:52:57Z (GitHub activity API).
+- **Đóng băng code, 21/11/2026,** trước khi sinh bất kỳ input P-N4 nào.
+  - **Code mới** trong `artifacts/n4_runs/pn4/`: `common4.py`, `selector4.py` (chép từ `partA_cdfm.py`), `stats4.py`, `measures4.py`, `run4.py`, `gates4.py`, `analyze4.py`, `completeness4.py`, `verify_freeze4.py`, `freeze4.py`, `run_pn4.sh`.
+  - **Snapshot** [`code/`](code/):
+    - `SHA256SUMS` có 15 file: 11 file code và 4 phụ thuộc (`common.py`, hai YAML của các ô RFF, `common2.py`). Bốn phụ thuộc khớp mã băm của snapshot P-N1 và P-N2;
+    - `DEPS_SHA256.json` có 44 mã băm (nguồn gói `cdfm` và `avici`, checkpoint CDFM) cùng phiên bản gói.
+  - **Cách cài đặt τ⁰, τ¹** (làm rõ, không đổi luật): dùng ngưỡng NATIVE mà CDFM lưu trong output, tức chính `suggest_threshold` của CDFM. Ngưỡng của ma trận lai dùng bản chép. G3 xác nhận hai cách trùng nhau.
+  - **DEV4** (base 450000, 8 hệ, 40 lần chạy CDFM, 0 lỗi), chỉ dùng cho cổng.
+  - **Cả tám cổng đạt** ([`checks/gates4.json`](checks/gates4.json)):
+    - G1: 16/16 input k = 20 của đường sinh tổng quát trùng từng bit với `padding2` và `assemble2`.
+    - G2: ở k = 40, trên 16 input: khối đệm sinh riêng trùng khối đệm trong bảng ghép; tham số như nhau giữa hai mức; đồ thị đúng là U < p_e; khối đích trùng từng bit. Sai lệch tương đối so với code AVICI tối đa 7.8e-15. Số cạnh đệm ở e_T là 27–50 (e = 1) và 72–98 (e = 2).
+    - G3: bộ chọn ngưỡng chép lại tái tạo ngưỡng đã lưu trên 200 output (EXP2, HELD2, DEV4), sai lệch tối đa 3.3e-16.
+    - G4: đạt cả 23 phép đối chiếu. Gồm: HELD2 (tám biến đo so với hồ sơ thiết kế; S và T so với `held2_held2_reading.json`); P-N3 phần A trên EXP2 (Δℓ, φ của ba nhóm, các số cạnh 43.8, 30.6, 35.9, 25.5, 26.5, S và T); số cạnh NATIVE từ ma trận kề khớp quy tắc m(A, τ).
+    - G5: θ̂, SE, df, t, CI và p của HC1 trùng từng bit với giá trị đầy đủ; bốn ca kiểm cho đúng kết quả định trước.
+    - G6: CDFM tất định ở D = 50 và D = 60, trùng từng bit.
+    - G7: thời gian trung vị mỗi lần chạy là 2.3 s (D = 10), 4.3 s (20), 6.6 s (30), 8.6 s (40), 11.2 s (50), 13.7 s (60). Ước tính tổng 3 889 s, khoảng 1.1 giờ, dưới 3 giờ.
+    - G8: bộ nhớ đỉnh 679 MB ở D = 60; RAM trống khoảng 0.94 GB lúc đo.
+  - **Kiểm code đọc, không xem số:**
+    - `analyze4.py --set DEV4 --smoke` chạy hết đường đọc (8 giả thuyết, Holm, phần mô tả) mà không ghi hay in giá trị contrast nào;
+    - `completeness4.py --set DEV4` chạy đúng: 40 output, 0 lỗi, 0 lệch mã băm, tái tạo ngưỡng sai lệch tối đa 2.2e-16. Nó chỉ báo thiếu cổng đóng băng, đúng như dự kiến.
+    - Hai tùy chọn `--smoke` (chạy hết đường đọc) và `--set DEV4` (cho kiểm hoàn tất) được thêm trước khi đóng băng, chỉ để kiểm code.
