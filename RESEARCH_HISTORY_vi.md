@@ -341,6 +341,11 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
   - Nhánh can thiệp V0/KO của AVICI: **NO-GO**, giữ kết quả âm.
   - N1: **GO viết bản thảo**, trước hết là bảng claim–bằng chứng–phần còn thiếu, kèm cập nhật prior art. Kỳ vọng Q1 chưa chốt.
   - Hậu kiểm KO-all trên 40 input: tối đa 2.06e-6, nhưng giữ nguyên cạnh, skeleton và thứ hạng. V0-8 chỉ vừa vượt ngưỡng sàng lọc.
+- **Cập nhật 21/11, bắt đầu bản thảo N1:**
+  - **Prior art:** lặp lại tìm kiếm khớp chính xác, vẫn không thấy nguồn trực tiếp. Thêm MambaPFN (11/2026), CaTs, TabCausal và Montagna et al. (TMLR 2025) vào related work.
+  - **Bảng claim (C1–C10)** kèm mức bằng chứng; năm phần còn thiếu xếp theo ưu tiên: CDFM trên seed mới cùng một cấu hình ngoài phạm vi, kiểm nhất quán trên dữ liệu thật không cần ground truth, so sánh cách sửa, phạm vi model, gom phần thống kê.
+  - **Khung bài** 8 mục.
+  - Chi tiết: [`reports/manuscript_n1_2026-11-21/`](reports/manuscript_n1_2026-11-21/).
   - Chi tiết: [`PN2_EXP2_results_vi.md`](reports/n2_context_mechanism_2026-11-20/PN2_EXP2_results_vi.md).
 
 ---
