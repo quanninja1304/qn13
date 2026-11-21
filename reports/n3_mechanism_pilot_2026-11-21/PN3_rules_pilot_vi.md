@@ -146,3 +146,17 @@ Khóa dự đoán trong một luật mới, rồi chạy trên seed mới (base 
     3. KO-all chỉ là kiểm tra kỹ thuật. Nhãn "chuẩn hóa" chỉ theo lớp, kèm CI của chênh lệch ghép cặp. Thay "kênh nội dung" bằng "nhạy với đường value", và "hỗn hợp" bằng "chưa phân biệt được".
     4. CDFM: dùng Shapley khi nói "chiếm phần lớn"; "ngưỡng cục bộ" là chính sách phản thực riêng; mọi đối chiếu ghép cặp tính trên EXP2.
     5. B1 kiểm cả giá trị trọng số; thêm B3 (no-op khi không có đệm), B4 (định danh lớp), B5 (thời gian kể cả JIT).
+- **Kiểm khả thi và gate, 21/11/2026** (trước khi đóng băng; chưa tính contrast nào của pilot).
+  - **Lần chạy gate đầu tiên không đạt B2.**
+    - Nguyên nhân: `InferenceModel.infer_edge_logprobs` có jit riêng, với `self` là đối số tĩnh dùng chung. Vì vậy mọi instance `AVICIModel` mới đều dùng lại bản trace PLAIN đầu tiên, và can thiệp không được áp. B3 đạt một cách giả.
+    - Sửa: mỗi cấu hình dùng một bản sao `InferenceModel` riêng, và thêm chốt chặn: lần gọi đầu của một instance với một hình dạng input phải trace, nếu không thì báo lỗi.
+    - Kết quả lần đó bị bỏ. Một thư mục output lạc (`artifacts/n2_runs/pn3_out/`, do lệnh `import *` ghi đè biến đường dẫn) đã bị xóa.
+  - **Lần chạy gate sau khi sửa: đạt hết.**
+    - B0: PLAIN trùng từng bit với output gốc trên 6 input.
+    - B1: 334 lá tham số, trùng tên, hình dạng và giá trị.
+    - B2: dưới KO-all, xác suất khối đích lệch k0 tối đa 4.8e-7 đến 5.4e-7.
+    - B3: ở k0, V0-all và KO-all trùng từng bit với PLAIN, với trace thật.
+    - B4: 16 lần gọi, 8 lớp theo trục biến, độ dài trục đúng.
+    - B5: biên dịch khoảng 6 giây, chạy khoảng 4.2 giây; ước tính 1.06 giờ.
+  - **Gate A0** (chỉ phần tái tạo ngưỡng): 40 ma trận EXP2 RFF, sai lệch tối đa 3.3e-16.
+  - **Đóng băng:** snapshot ở [`code/`](code/) kèm `SHA256SUMS`.

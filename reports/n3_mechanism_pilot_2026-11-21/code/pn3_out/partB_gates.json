@@ -1,0 +1,222 @@
+{
+ "B1": {
+  "n_leaves": 334,
+  "same_structure": true,
+  "same_values": true
+ },
+ "B0": [
+  {
+   "sys": "EXP2-c0-r0",
+   "cond": "k0",
+   "bitwise": true,
+   "max_abs": 0.0
+  },
+  {
+   "sys": "EXP2-c0-r0",
+   "cond": "e0",
+   "bitwise": true,
+   "max_abs": 0.0
+  },
+  {
+   "sys": "EXP2-c0-r0",
+   "cond": "e1",
+   "bitwise": true,
+   "max_abs": 0.0
+  },
+  {
+   "sys": "EXP2-c2-r0",
+   "cond": "k0",
+   "bitwise": true,
+   "max_abs": 0.0
+  },
+  {
+   "sys": "EXP2-c2-r0",
+   "cond": "e0",
+   "bitwise": true,
+   "max_abs": 0.0
+  },
+  {
+   "sys": "EXP2-c2-r0",
+   "cond": "e2",
+   "bitwise": true,
+   "max_abs": 0.0
+  }
+ ],
+ "B4": [
+  {
+   "D": 10,
+   "n_calls": 16,
+   "n_variable_axis": 8,
+   "axis_lengths_ok": true
+  },
+  {
+   "D": 30,
+   "n_calls": 16,
+   "n_variable_axis": 8,
+   "axis_lengths_ok": true
+  }
+ ],
+ "B2": [
+  {
+   "sys": "EXP2-c0-r0",
+   "cond": "e0",
+   "max_abs_target_vs_k0": 4.76837158203125e-07
+  },
+  {
+   "sys": "EXP2-c0-r0",
+   "cond": "e1",
+   "max_abs_target_vs_k0": 4.76837158203125e-07
+  },
+  {
+   "sys": "EXP2-c2-r0",
+   "cond": "e0",
+   "max_abs_target_vs_k0": 5.364418029785156e-07
+  },
+  {
+   "sys": "EXP2-c2-r0",
+   "cond": "e2",
+   "max_abs_target_vs_k0": 5.364418029785156e-07
+  }
+ ],
+ "B3": [
+  {
+   "mode": "KO",
+   "sys": "EXP2-c0-r0",
+   "bitwise_vs_plain": true
+  },
+  {
+   "mode": "KO",
+   "sys": "EXP2-c2-r0",
+   "bitwise_vs_plain": true
+  },
+  {
+   "mode": "V0",
+   "sys": "EXP2-c0-r0",
+   "bitwise_vs_plain": true
+  },
+  {
+   "mode": "V0",
+   "sys": "EXP2-c2-r0",
+   "bitwise_vs_plain": true
+  }
+ ],
+ "B5": {
+  "first_call_s": 10.18,
+  "cached_call_s": 4.21,
+  "compile_s_est": 5.97,
+  "estimate_hours": 1.06,
+  "over_3h": false,
+  "timing": [
+   {
+    "cfg": "PLAIN",
+    "D": 10,
+    "seconds": 6.82,
+    "traced": true
+   },
+   {
+    "cfg": "PLAIN",
+    "D": 30,
+    "seconds": 9.33,
+    "traced": true
+   },
+   {
+    "cfg": "PLAIN",
+    "D": 30,
+    "seconds": 3.78,
+    "traced": false
+   },
+   {
+    "cfg": "PLAIN",
+    "D": 10,
+    "seconds": 1.4,
+    "traced": false
+   },
+   {
+    "cfg": "PLAIN",
+    "D": 30,
+    "seconds": 3.75,
+    "traced": false
+   },
+   {
+    "cfg": "PLAIN",
+    "D": 30,
+    "seconds": 3.81,
+    "traced": false
+   },
+   {
+    "cfg": "KO-all",
+    "D": 10,
+    "seconds": 6.73,
+    "traced": true
+   },
+   {
+    "cfg": "KO-all",
+    "D": 30,
+    "seconds": 9.21,
+    "traced": true
+   },
+   {
+    "cfg": "KO-all",
+    "D": 30,
+    "seconds": 3.78,
+    "traced": false
+   },
+   {
+    "cfg": "KO-all",
+    "D": 10,
+    "seconds": 1.38,
+    "traced": false
+   },
+   {
+    "cfg": "KO-all",
+    "D": 30,
+    "seconds": 4.01,
+    "traced": false
+   },
+   {
+    "cfg": "KO-all",
+    "D": 30,
+    "seconds": 4.34,
+    "traced": false
+   },
+   {
+    "cfg": "V0-all",
+    "D": 10,
+    "seconds": 6.85,
+    "traced": true
+   },
+   {
+    "cfg": "V0-all",
+    "D": 30,
+    "seconds": 9.16,
+    "traced": true
+   },
+   {
+    "cfg": "V0-all",
+    "D": 30,
+    "seconds": 4.11,
+    "traced": false
+   },
+   {
+    "cfg": "V0-all",
+    "D": 10,
+    "seconds": 1.55,
+    "traced": false
+   },
+   {
+    "cfg": "V0-all",
+    "D": 30,
+    "seconds": 4.22,
+    "traced": false
+   },
+   {
+    "cfg": "V0-all",
+    "D": 30,
+    "seconds": 4.2,
+    "traced": false
+   }
+  ]
+ },
+ "ok": true,
+ "failed": []
+}

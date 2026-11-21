@@ -323,6 +323,10 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
   - Shapley cho phần A;
   - thêm gate B3–B5.
   - **Bước kế:** kiểm khả thi và gate, đóng băng code, chạy pilot.
+- **Cập nhật 21/11, kiểm khả thi P-N3 và đóng băng code:**
+  - Lần gate đầu lộ lỗi cache jit lồng nhau: can thiệp không được áp, B3 đạt giả. Đã sửa bằng một bản sao `InferenceModel` cho mỗi cấu hình và chốt chặn trace cũ.
+  - Sau khi sửa, B0–B5 đều đạt; A0 sai lệch 3.3e-16.
+  - Snapshot ở `reports/n3_mechanism_pilot_2026-11-21/code/`. **Bước kế:** chạy pilot.
   - Chi tiết: [`PN2_EXP2_results_vi.md`](reports/n2_context_mechanism_2026-11-20/PN2_EXP2_results_vi.md).
 
 ---
