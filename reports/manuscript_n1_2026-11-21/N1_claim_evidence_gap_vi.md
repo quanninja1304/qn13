@@ -18,6 +18,12 @@
 > - **Gom thống kê trong lúc viết:** mỗi bảng ghi bộ dữ liệu, giả thuyết đã khóa, phép kiểm và mức bằng chứng.
 > - Bản sửa này chỉ đổi cách viết claim và kế hoạch; **số liệu không đổi**. Nhật ký ở §4.
 >
+> **Quyết định của user (21/11, lượt 3):**
+>
+> - Bản thảo chưa công khai. Nhánh công khai cho luật mới xuất phát từ `e4d5396`.
+> - Đồng ý tiêu chí (c), theo cách hiểu chính xác ghi ở gap 1.
+> - GO viết luật gap 1, kèm giả thuyết trực tiếp về khối chéo.
+>
 > **Mức bằng chứng:**
 >
 > - **XÁC NHẬN:** kiểm trên dữ liệu held-out theo luật đã khóa;
@@ -29,10 +35,10 @@
 
 | # | Claim (dạng sẽ viết trong bài) | Mức | Bằng chứng chính | Phần còn thiếu, rủi ro |
 |---|---|---|---|---|
-| C1 | Thêm 20 cột độc lập vào một bảng có khối đích cố định làm ba mô hình causal discovery học sẵn đổi output trên khối đích và giảm F1 skeleton. Mức giảm lớn hơn của PC/GES trên cùng hệ tuyến tính | **XÁC NHẬN** (P-N1 RN5, held-out) | H tại k = 20: AVICI 0.068 [0.047, 0.091]; CDFM 0.085 [0.067, 0.104]; FoundCause 0.093 [0.052, 0.138]. BEYOND_CLASSICAL PASS ở mọi estimand. PC khoảng 0.000, GES ≤ 0.005 ([held-out P-N1](../n1_irrelevant_vars_2026-11-13/PN1_HELD_results_vi.md) §2–§3) | Phạm vi: dữ liệu tổng hợp ER, n = 500, d_T ∈ {10, 20}, k ≤ 30; mỗi model một checkpoint. FoundCause chỉ có 24 hệ. Chưa có kiểm tính nhất quán trên dữ liệu thật (gap 2) |
+| C1 | Thêm 20 cột độc lập vào một bảng có khối đích cố định làm ba mô hình causal discovery học sẵn đổi output trên khối đích và giảm F1 skeleton. Mức giảm lớn hơn của PC/GES trên cùng hệ tuyến tính | **XÁC NHẬN** (P-N1 RN5, held-out) | H tại k = 20: AVICI 0.068 [0.047, 0.091]; CDFM 0.085 [0.067, 0.104]; FoundCause 0.093 [0.052, 0.138]. BEYOND_CLASSICAL PASS ở mọi estimand. Trên hệ tuyến tính, nơi đối chứng đúng giả định: PC 0.000; GES 0.009 trên 40 hệ, 0.034 trên 12 hệ của FoundCause ([held-out P-N1](../n1_irrelevant_vars_2026-11-13/PN1_HELD_results_vi.md) §2–§3; số theo hệ tuyến tính tính lại từ `held_*.json`) | Phạm vi: dữ liệu tổng hợp ER, n = 500, d_T ∈ {10, 20}, k ≤ 30; mỗi model một checkpoint. FoundCause chỉ có 24 hệ. Chưa có kiểm tính nhất quán trên dữ liệu thật (gap 2) |
 | C2 | Ở pha exploratory, mức hại tăng theo số cột thêm vào ở cả ba model. Ở held-out chỉ có kết quả hai đầu cho CDFM | EXPLORATORY (P-N1 E2); held-out chỉ có kết quả hai đầu của CDFM | E2, kiểu A, H_NATIVE ở k = 5 / 10 / 20 / 30: AVICI 0.023 / 0.042 / 0.075 / 0.100; CDFM 0.014 / 0.036 / 0.064 / 0.093; FoundCause 0.008 / 0.017 / 0.064 / 0.095 ([E2](../n1_irrelevant_vars_2026-11-13/PN1_E2_results_vi.md) §3). Held-out, CDFM, kiểu A, 80 hệ: median theo hệ của Δp(30) − Δp(5) = +0.064 [0.057, 0.074], với Δp là trung bình \|p(k) − p(k0)\| trên các cặp của khối đích (phần Δp của M2) | Kết quả hai đầu **không chứng minh** tăng đơn điệu. Điều kiện "median Δp không giảm qua k = 5, 10, 20, 30" của luật M2 chỉ xét ước lượng điểm, không phải phép kiểm. Held-out không kiểm H theo k, và chỉ có CDFM. Claim rộng giữ ở mức exploratory |
 | C3 | Ở cùng D, đệm có cấu trúc (e = e_T) so với đệm độc lập (e = 0) làm đổi quyết định trên khối đích theo các chiều xác định | **XÁC NHẬN về dấu** (P-N2 HELD2, Holm 0.05, 5/5) | HA1: AVICI tuyến tính Δm −6.05 [−8.18, −3.92]. HA2: AVICI RFF −1.93 [−2.85, −1.02]. HC1: ngưỡng CDFM RFF +0.175 [+0.159, +0.191]. HA5: top-m0 AVICI RFF −0.027. HC4: AUROC CDFM RFF −0.014 ([HELD2](../n2_context_mechanism_2026-11-20/PN2_HELD2_results_vi.md) §2) | Chỉ HA1 và HC1 vượt biên thực tiễn; HC4 nhỏ theo biên; HA2, HA5 UNCLEAR. Đã thấy hiệu ứng thu nhỏ từ EXP2 sang HELD2 |
-| C4 | Chỉ đọc F1 có thể gây hiểu nhầm. Khi đổi A → B, AVICI và CDFM cùng dự đoán ít cạnh hơn, nhưng F1 đi ngược chiều. AVICI bỏ cạnh đúng và cạnh sai với số lượng gần nhau, và F1 giảm; CDFM bỏ chủ yếu cạnh sai, và F1 tăng | MÔ TẢ (P-N1 hậu nghiệm); cùng chiều ở HELD2 (mô tả, ngoài bộ Holm) | P-N1 held-out, B − A, NATIVE, 80 hệ: AVICI ΔTP −2.31, ΔFP −2.59 (Δm −4.9), ΔF1 −0.050 [−0.074, −0.024]; CDFM ΔTP −2.21, ΔFP −8.21 (Δm −10.4), ΔF1 +0.036 [+0.015, +0.057]. ΔTP, ΔFP là hiệu của các trung bình so với k0 ([held-out](../n1_irrelevant_vars_2026-11-13/PN1_HELD_results_vi.md) §4). Phân rã theo mốc m0: phần thứ hạng AVICI +0.008 [−0.014, +0.031], CDFM −0.026 [−0.041, −0.012]; phần số cạnh, lấy hiệu, khoảng −0.058 và +0.061 (sai số làm tròn ±0.001) ([hậu nghiệm](../n1_irrelevant_vars_2026-11-13/PN1_HELD_posthoc_rank_level_vi.md) Bảng 1–2). HELD2, REP: AVICI tuyến tính TP −2.45, FP −3.60, F1 −0.049; CDFM RFF TP −3.33, FP −12.23, F1 +0.030 | Phân rã là kế toán theo mốc m0, không phải nguyên nhân. Riêng số cạnh ở k0 (AVICI 17.5, CDFM 33.0, cạnh thật 22.4) **không đủ** giải thích chiều của F1: chiều này phụ thuộc vào việc cạnh bị bỏ là cạnh đúng hay cạnh sai. Không quy nguyên nhân chỉ cho việc dự đoán thiếu hay thừa. CI của ΔTP, ΔFP cho B − A chưa tính; tính được từ output đã đóng băng, không cần chạy lại |
+| C4 | Chỉ đọc F1 có thể gây hiểu nhầm. Khi đổi A → B, AVICI và CDFM cùng dự đoán ít cạnh hơn, nhưng F1 đi ngược chiều. AVICI bỏ cạnh đúng và cạnh sai với số lượng gần nhau, và F1 giảm; CDFM bỏ chủ yếu cạnh sai, và F1 tăng | MÔ TẢ (P-N1 hậu nghiệm); cùng chiều ở HELD2 (mô tả, ngoài bộ Holm) | P-N1 held-out, B − A, NATIVE, 80 hệ: AVICI ΔTP −2.31 [−2.95, −1.67], ΔFP −2.59 [−3.98, −1.45] (Δm −4.9), ΔF1 −0.050 [−0.074, −0.024]; CDFM ΔTP −2.21 [−3.15, −1.22], ΔFP −8.21 [−11.93, −4.81] (Δm −10.4), ΔF1 +0.036 [+0.015, +0.057]. CI của ΔTP, ΔFP: bootstrap ghép cặp của P-N1 (2000 lần, seed 20261114) trên các hàng theo hệ của `held_*.json`; user tính, agent tái lập khớp; mô tả, chưa hiệu chỉnh đa kiểm định. Phân rã theo mốc m0: phần thứ hạng AVICI +0.008 [−0.014, +0.031], CDFM −0.026 [−0.041, −0.012]; phần số cạnh, lấy hiệu, khoảng −0.058 và +0.061 (sai số làm tròn ±0.001) ([hậu nghiệm](../n1_irrelevant_vars_2026-11-13/PN1_HELD_posthoc_rank_level_vi.md) Bảng 1–2). HELD2, REP: AVICI tuyến tính TP −2.45, FP −3.60, F1 −0.049; CDFM RFF TP −3.33, FP −12.23, F1 +0.030 | Phân rã là kế toán theo mốc m0, không phải nguyên nhân. Riêng số cạnh ở k0 (AVICI 17.5, CDFM 33.0, cạnh thật 22.4) **không đủ** giải thích chiều của F1: chiều này phụ thuộc vào việc cạnh bị bỏ là cạnh đúng hay cạnh sai. Không quy nguyên nhân chỉ cho việc dự đoán thiếu hay thừa |
 | C5 | Ở CDFM RFF, **theo phép phân rã lấy ngưỡng e = 0 làm mốc**, phần lớn mức giảm số cạnh NATIVE trên khối đích nằm ở phần do ngưỡng | MÔ TẢ trên HELD2 (phân rã ghi sẵn trong luật HELD2 §4, ngoài bộ Holm); HC1 XÁC NHẬN | HELD2: Δm NATIVE −15.57; phần do ngưỡng −17.87 [−19.86, −15.87], phần do điểm +2.30 [−0.15, +4.75]. EXP2: −17.25 và +2.00 (tổng −15.25) | Phân rã theo mốc đã chọn, không phải nguyên nhân, và **không loại trừ** mọi ảnh hưởng của điểm khối đích: CI của phần do điểm rộng, thứ hạng vẫn giảm (HC4), và đổi mốc sẽ đổi hai phần. Tỉ lệ phần do ngưỡng trên tổng ở đây khoảng 115%, vì phần do điểm ngược dấu. Vì vậy "phần lớn" phải định nghĩa không qua tỉ lệ (gap 1) |
 | C6 | Bộ chọn ngưỡng tăng ngưỡng chủ yếu qua đặc trưng `mean`, với trọng số âm. Khi đệm có cấu trúc, xác suất trung bình của các cặp chéo (đích × đệm, đều là không-cạnh theo thiết kế) giảm. Khối chéo đóng góp lớn nhất vào Δℓ ở cấu hình này | EXPLORATORY (P-N3 phần A, EXP2, 20 hệ RFF) | Δℓ +0.855 [+0.679, +1.032]; Shapley khối chéo +0.513 (60%), khối đệm +0.352 (41%), khối đích −0.010. Trọng số `mean` −8.56. Xác suất trung bình của khối chéo 0.362 → 0.189 (mô tả hậu nghiệm) ([P-N3](../n3_mechanism_pilot_2026-11-21/PN3_results_vi.md) §1) | **Chưa kiểm trên seed mới.** Trung bình của khối đệm (0.546 → 0.405) **gộp cả cạnh thật** của khối đệm ở e_T, nên không dùng được để kết luận về riêng các cặp không-cạnh của khối đệm; chỉ khối chéo cho kết luận về không-cạnh. Thứ hạng giữa khối chéo và khối đệm phụ thuộc cấu hình, vì tỉ lệ số cặp chéo/đệm là 2·d_T/(k − 1). Chưa giải thích vì sao CDFM cho các cặp chéo điểm cao hơn khi đệm độc lập |
 | C7 | Ở AVICI: số cạnh giảm rõ ở cả hai họ; ở RFF có mất thứ hạng; ở tuyến tính, thay đổi thứ hạng chưa rõ | XÁC NHẬN (HA1, HA2, HA5), MÔ TẢ (thứ hạng ở tuyến tính) | Như C3. AUROC ở tuyến tính +0.027 [+0.011, +0.044] ở HELD2, nhưng không thuộc bộ kiểm | Ở tuyến tính, không được claim chiều của thứ hạng |
@@ -51,17 +57,13 @@
      - **phép đổi riêng X:** giữ T và P ở e = 0, chỉ lấy khối X từ e_T; đo ngưỡng và số cạnh khối đích;
      - phần do điểm (S) và phần do ngưỡng (T), **báo riêng, giữ dấu**;
      - xác suất trung bình của khối chéo; với khối đệm, tách cặp không-cạnh và cặp có cạnh (sửa giới hạn của C6).
-   - **Dự đoán khóa trước khi chạy** (đề xuất, chốt ở luật gap 1):
-     - (a) xác suất trung bình của khối chéo giảm khi đệm có cấu trúc;
-     - (b) ngưỡng NATIVE tăng;
-     - (c) phần do ngưỡng chiếm phần lớn mức đổi số cạnh NATIVE. Tiêu chí không dùng tỉ lệ, vì tỉ lệ vượt 100% khi phần do điểm ngược dấu (C5). Cả ba điều phải đạt:
-       - CI của T nằm trọn dưới −1.5 cạnh;
-       - CI của T + S (tức Δm ròng) nằm trọn dưới 0;
-       - CI của T − S nằm trọn dưới 0.
-
-       Hai điều sau cùng nhau nghĩa là |T̄| > |S̄| với T̄ < 0.
-     - **Không** khóa "khối chéo luôn đứng đầu". Tỉ lệ số cặp chéo/đệm là 2·d_T/(k − 1); ở k = 40 là 0.51 (d_T = 10) và 1.03 (d_T = 20), nên lợi thế về số lượng của khối chéo gần như mất.
-   - **Quy trình:** viết luật riêng; khóa và push trước khi sinh dữ liệu, như P-N2 và P-N3. Phép kiểm và cỡ mẫu chốt ở luật đó.
+   - **Luật:** [P-N4 v0](../n4_cdfm_threshold_path_2026-11-21/PN4_rules_vi.md), **nháp, chưa khóa**. Theo quyết định của user ngày 21/11 (lượt 3):
+     - bốn giả thuyết cho mỗi k: (a) điểm khối chéo giảm; (b) ngưỡng NATIVE tăng; (x) chỉ đổi khối chéo thì ngưỡng tăng và số cạnh đích giảm, đếm trên điểm đích ở e = 0; (c) phần do ngưỡng chiếm phần lớn;
+     - tiêu chí (c): μ_T < −1.5, μ_(T+S) < 0 và μ_(T−S) < 0. Hai điều sau tương đương μ_T < −|μ_S|. CI tính trực tiếp trên từng contrast của cùng các hệ. Kết luận áp cho trung bình, không cho từng hệ. Mốc phân rã giữ ở e = 0;
+     - (x) và (c) là giả thuyết tổng hợp, với p bằng giá trị lớn nhất của các thành phần. Holm 0.05 trên cả 8 giả thuyết của hai k; đọc riêng từng k;
+     - cỡ mẫu đề xuất 80 hệ (20 mỗi ô RFF), theo power tính từ HELD2.
+   - **Không** khóa "khối chéo luôn đứng đầu". Tỉ lệ số cặp chéo/đệm là 2·d_T/(k − 1); ở k = 40 là 0.51 (d_T = 10) và 1.03 (d_T = 20), nên lợi thế về số lượng của khối chéo gần như mất.
+   - **Quy trình:** user duyệt v0, rồi khóa và push trước khi sinh dữ liệu, như P-N2 và P-N3.
 2. **Gap 2: yêu cầu nhất quán cần kiểm tra trên dữ liệu thật.**
    - **Logic:** cột thêm vào là cột tổng hợp, độc lập với khối thật theo thiết kế. Quan hệ thật trong khối thật vì vậy không đổi. Nhưng một bộ ước lượng hữu hạn mẫu không bắt buộc cho output trùng hệt. Vì không có ground truth, phép thử chỉ đo **độ bất ổn**, không đo độ chính xác.
    - **Yêu cầu thiết kế:**
@@ -119,3 +121,11 @@ Số liệu không đổi. Bản trước là `b62b8da`.
 | 8 | §2 gap 3 | So R, ngưỡng cục bộ, ngưỡng cố định, MambaPFN | Bảng thông tin mỗi cách dùng; ngưỡng cục bộ và FROZEN là đối chứng; bỏ MambaPFN khỏi so sánh |
 | 9 | §2 | "xếp theo ưu tiên (đề xuất, chờ user quyết)" | Thứ tự user đã chốt: gap 1 → dữ liệu thật → cách sửa → thêm model; gom thống kê trong lúc viết |
 | 10 | §3 mục 8 | "no internal mechanism" | Câu limitations theo đúng diễn đạt của user |
+
+**Lượt 3 (21/11, sau review của user):**
+
+| # | Chỗ | Bản trước (`e4d5396`) | Sửa thành |
+|---|---|---|---|
+| 11 | C1 | "PC khoảng 0.000, GES ≤ 0.005": số gộp cả hệ RFF, nơi GES sai giả định | Số trên hệ tuyến tính: PC 0.000; GES 0.009 (40 hệ) và 0.034 (12 hệ của FoundCause). User tính, agent tái lập từ `held_*.json` |
+| 12 | C4 | "CI của ΔTP, ΔFP cho B − A chưa tính" | Thêm CI bootstrap (mô tả, chưa hiệu chỉnh đa kiểm định). User tính, agent tái lập khớp |
+| 13 | §2 gap 1 | Dự đoán (a), (b), (c) đề xuất; "phép kiểm và cỡ mẫu chốt ở luật đó" | Trỏ sang luật P-N4 v0 (nháp): thêm giả thuyết trực tiếp về khối chéo; (c) theo cách hiểu chính xác của user; Holm trên 8 giả thuyết; 80 hệ |

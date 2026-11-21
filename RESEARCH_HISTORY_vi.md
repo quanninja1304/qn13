@@ -347,6 +347,11 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
   - **Khung bài** 8 mục.
   - Chi tiết: [`reports/manuscript_n1_2026-11-21/`](reports/manuscript_n1_2026-11-21/).
   - Chi tiết: [`PN2_EXP2_results_vi.md`](reports/n2_context_mechanism_2026-11-20/PN2_EXP2_results_vi.md).
+- **Cập nhật 21/11, sửa bảng claim theo review và nháp luật P-N4 (gap 1):**
+  - Bảng claim và ghi chú prior art sửa theo review của user; số liệu không đổi. CaTs là ICLR 2026 (đã kiểm trang proceedings); MambaPFN chỉ ở related work; Montagna et al. chỉ là khung diễn giải. Đã push `e4d5396` cùng `b62b8da`.
+  - Lượt sau: C1 dùng số trên hệ tuyến tính (GES 0.009 trên 40 hệ, 0.034 trên 12 hệ của FoundCause); C4 thêm CI cho ΔTP/ΔFP. Bản thảo tiếng Anh chưa công khai.
+  - **Nháp luật P-N4 v0** (chưa khóa): CDFM RFF, seed base 440000, k = 20 (lặp lại) và k = 40 (mở rộng), 80 hệ. Bốn giả thuyết mỗi k, gồm một giả thuyết trực tiếp về khối chéo; Holm 0.05 trên cả 8.
+  - Chi tiết: [`PN4_rules_vi.md`](reports/n4_cdfm_threshold_path_2026-11-21/PN4_rules_vi.md), [`N1_claim_evidence_gap_vi.md`](reports/manuscript_n1_2026-11-21/N1_claim_evidence_gap_vi.md).
 
 ---
 
