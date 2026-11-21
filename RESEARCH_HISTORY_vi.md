@@ -354,6 +354,10 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
   - Chi tiết: [`PN4_rules_vi.md`](reports/n4_cdfm_threshold_path_2026-11-21/PN4_rules_vi.md), [`N1_claim_evidence_gap_vi.md`](reports/manuscript_n1_2026-11-21/N1_claim_evidence_gap_vi.md).
 - **Cập nhật 21/11, khóa luật P-N4 v1:** user duyệt 80 hệ và ba chỉnh sửa (SE = 0 thành DEGENERATE với p = 1; hồ sơ power trong `design/`, xấp xỉ noncentral-t; G5 đối chiếu giá trị đầy đủ của HELD2 theo dung sai đã khóa). Chưa sinh input P-N4 nào. Chi tiết: [`PN4_rules_vi.md`](reports/n4_cdfm_threshold_path_2026-11-21/PN4_rules_vi.md) §11.
 - **Cập nhật 21/11, cổng P-N4 đạt, đóng băng code:** G1–G8 đạt trên DEV4 (base 450000) và output cũ. Code đọc tái lập HC1 trùng từng bit; ước tính chạy khoảng 1.1 giờ. Snapshot gồm cả phụ thuộc (`common.py`, `common2.py`, YAML; mã băm của nguồn `cdfm`, `avici` và checkpoint). Chi tiết: [`PN4_rules_vi.md`](reports/n4_cdfm_threshold_path_2026-11-21/PN4_rules_vi.md) §11, [`checks/gates4.json`](reports/n4_cdfm_threshold_path_2026-11-21/checks/gates4.json).
+- **Cập nhật 21–22/11, kết quả P-N4 (xác nhận, 80 hệ, k = 20 và k = 40):** chạy dưới đóng băng `159479d`, 56 phút; kiểm hoàn tất đạt.
+  - **Cả tám giả thuyết CONFIRMED** (Holm 0.05): ở cả hai k, điểm khối chéo giảm, ngưỡng tăng, chỉ đổi khối chéo đã làm ngưỡng tăng và mất cạnh đích, và phần do ngưỡng chiếm phần lớn mức đổi trung bình (mốc e = 0).
+  - **Mô tả:** ở k = 40, khối đệm đóng góp nhiều nhất (65%), không còn là khối chéo. Cặp không-cạnh của khối đệm cũng giảm điểm, còn cạnh thật của khối đệm tăng điểm. Phần do ngưỡng vượt phần do điểm ở 81% và 89% số hệ.
+  - Chi tiết: [`PN4_results_vi.md`](reports/n4_cdfm_threshold_path_2026-11-21/PN4_results_vi.md).
 
 ---
 

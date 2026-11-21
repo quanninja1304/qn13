@@ -1,0 +1,67 @@
+[
+ {
+  "label": "pre_commit_check",
+  "time_local": "2026-11-21T23:55:05",
+  "freeze_commit": "",
+  "remote_branches": [],
+  "head": "05b69453b079785d1c6f59e0b59b0d6a6c206764",
+  "sha256sums_sha": "ba96bae998c7c05b359b67051130f363450f2c7af38bb6e6421b0db269780330",
+  "deps_sha": "c28c7b526cbe6235164101b09de90b2b70cbcc986468e5304c979638083a1301",
+  "n_files": 15,
+  "n_dependency_files": 44,
+  "python": "3.11.16",
+  "ok": false,
+  "problems": [
+   "uncommitted changes in snapshot: ?? reports/n4_cdfm_threshold_path_2026-11-21/code/",
+   "SHA256SUMS is not committed"
+  ]
+ },
+ {
+  "label": "pn4_start",
+  "time_local": "2026-11-21T23:56:25",
+  "freeze_commit": "159479d37439cda20f78100a1c25a82b041cb78b",
+  "remote_branches": [
+   "origin/docs/n1-pilot"
+  ],
+  "head": "159479d37439cda20f78100a1c25a82b041cb78b",
+  "sha256sums_sha": "ba96bae998c7c05b359b67051130f363450f2c7af38bb6e6421b0db269780330",
+  "deps_sha": "c28c7b526cbe6235164101b09de90b2b70cbcc986468e5304c979638083a1301",
+  "n_files": 15,
+  "n_dependency_files": 44,
+  "python": "3.11.16",
+  "ok": true,
+  "problems": []
+ },
+ {
+  "label": "pn4_end",
+  "time_local": "2026-11-22T00:52:13",
+  "freeze_commit": "159479d37439cda20f78100a1c25a82b041cb78b",
+  "remote_branches": [
+   "origin/docs/n1-pilot"
+  ],
+  "head": "159479d37439cda20f78100a1c25a82b041cb78b",
+  "sha256sums_sha": "ba96bae998c7c05b359b67051130f363450f2c7af38bb6e6421b0db269780330",
+  "deps_sha": "c28c7b526cbe6235164101b09de90b2b70cbcc986468e5304c979638083a1301",
+  "n_files": 15,
+  "n_dependency_files": 44,
+  "python": "3.11.16",
+  "ok": true,
+  "problems": []
+ },
+ {
+  "label": "pre_read_check",
+  "time_local": "2026-11-22T00:52:53",
+  "freeze_commit": "159479d37439cda20f78100a1c25a82b041cb78b",
+  "remote_branches": [
+   "origin/docs/n1-pilot"
+  ],
+  "head": "159479d37439cda20f78100a1c25a82b041cb78b",
+  "sha256sums_sha": "ba96bae998c7c05b359b67051130f363450f2c7af38bb6e6421b0db269780330",
+  "deps_sha": "c28c7b526cbe6235164101b09de90b2b70cbcc986468e5304c979638083a1301",
+  "n_files": 15,
+  "n_dependency_files": 44,
+  "python": "3.11.16",
+  "ok": true,
+  "problems": []
+ }
+]

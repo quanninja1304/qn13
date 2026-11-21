@@ -1,0 +1,23 @@
+{
+ "set": "PN4",
+ "n_outputs": 400,
+ "log_lines": 400,
+ "failed_in_log": 0,
+ "input_sha_mismatches": 0,
+ "systems_with_target_sha_mismatch": 0,
+ "selector_reproduction_max_abs": 4.440892098500626e-16,
+ "freeze_gate": {
+  "pn4_start": {
+   "ok": true,
+   "freeze_commit": "159479d37439cda20f78100a1c25a82b041cb78b",
+   "time_local": "2026-11-21T23:56:25"
+  },
+  "pn4_end": {
+   "ok": true,
+   "freeze_commit": "159479d37439cda20f78100a1c25a82b041cb78b",
+   "time_local": "2026-11-22T00:52:13"
+  }
+ },
+ "ok": true,
+ "problems": []
+}

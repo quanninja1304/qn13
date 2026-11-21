@@ -48,7 +48,7 @@
 
 ## 2. Phần còn thiếu, theo thứ tự user đã chốt
 
-1. **Gap 1: kiểm chứng bổ sung cho CDFM, trước khi chốt bài** (không chặn việc viết).
+1. **Gap 1: kiểm chứng bổ sung cho CDFM, trước khi chốt bài** (không chặn việc viết). **Đã chạy ngày 21/11: cả tám giả thuyết CONFIRMED** (Holm 0.05), ở cả k = 20 và k = 40. Ở k = 40, khối đệm đóng góp nhiều hơn khối chéo. Cặp không-cạnh của khối đệm cũng giảm điểm. Xem [kết quả P-N4](../n4_cdfm_threshold_path_2026-11-21/PN4_results_vi.md); bảng claim (C5, C6) sẽ cập nhật sau khi user xem kết quả.
    - **Dữ liệu:** seed mới, base 440000. Giữ n = 500 và họ đồ thị ER; họ cơ chế RFF như P-N3 phần A. Hai cấu hình:
      - k = 20: mốc lặp lại phần A trên seed mới;
      - k = 40: cấu hình ngoài phạm vi hiện tại. Không mở đồng thời n hay SF.
