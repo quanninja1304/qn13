@@ -1,6 +1,6 @@
-# P-N2 HELD2: luật xác nhận (bản nháp v0, chưa khóa, 21/11/2026)
+# P-N2 HELD2: luật xác nhận (v1, khóa ngày 21/11/2026)
 
-> **Trạng thái:** **NHÁP, chưa khóa.** Luật chỉ có hiệu lực sau khi user duyệt, commit và push. Việc đó phải xảy ra trước khi bất kỳ input HELD2 nào được sinh ra. Sau khi khóa, mọi thay đổi chỉ được ghi thêm vào §9 kèm lý do, và không được dựa trên metric đã thấy.
+> **Trạng thái:** **v1, ĐÃ KHÓA** bằng commit chứa dòng này. Commit được push trước khi bất kỳ input HELD2 nào được sinh ra. Nội dung là bản nháp v0 (`71a584f`), được user duyệt nguyên trạng ngày 21/11. Sau khi khóa, mọi thay đổi chỉ được ghi thêm vào §9 kèm lý do, và không được dựa trên metric đã thấy.
 > **Nguồn:**
 >
 > - luật exploratory [v1](PN2_rules_exploratory_vi.md) (§10 quy định HELD2);
@@ -134,4 +134,5 @@ Snapshot mới ở `code_held2/`, gồm cả các file phụ thuộc không đ�
 
 ## 9. Nhật ký (append-only sau khi khóa)
 
-- **v0, 21/11/2026:** bản nháp, theo quyết định của user ngày 21/11.
+- **v0, 21/11/2026 (`71a584f`):** bản nháp, theo quyết định của user ngày 21/11.
+- **v1, 21/11/2026 (khóa):** user duyệt v0 nguyên trạng ("đồng ý, khóa luật HELD2 rồi viết code và chạy"). Nội dung §0–§8 không đổi.
