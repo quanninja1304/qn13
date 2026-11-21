@@ -89,7 +89,7 @@
 - **Lớp 8, tức lớp theo trục biến cuối cùng,** là nơi can thiệp có tác động lớn nhất.
   - Với V0-8, hiệu ứng nhỏ đi; với KO-8, hiệu ứng lớn gấp đôi.
   - Chênh lệch ghép cặp KO-8 − V0-8 là −6.30 [−8.01, −4.59]: ở lớp này, triệt value với loại khỏi mẫu số cho kết quả khác nhau rõ.
-  - Nhưng cả hai đều kéo theo suy giảm F1 ở e_T, nên không được diễn giải thành cơ chế.
+  - Cả hai đều **không đạt tiêu chí sàng lọc** về chất lượng ở e_T, nên không được diễn giải thành cơ chế. Với V0-8, mức giảm chỉ vừa vượt ngưỡng: −0.0313 [−0.0639, +0.0012] *(sửa ở hậu kiểm, §6)*.
 - **V0-all** xóa phần lớn hiệu ứng, nhưng cùng lúc làm F1 giảm khoảng 0.2. Cách đọc phù hợp: triệt value của đệm ở mọi lớp mà vẫn giữ mẫu số đã làm hỏng biểu diễn của khối đích. Đó không phải bằng chứng về kênh nội dung.
 - **Cảnh báo về rò rỉ:** can thiệp theo lớp không loại trừ thông tin đã truyền qua ở các lớp trước (Geva et al. 2023).
 
@@ -119,4 +119,36 @@
 2. **Mở rộng có chọn lọc** trước khi viết: một k khác, một n khác, họ đồ thị SF.
    - Với CDFM, có thể khóa một dự đoán cụ thể từ Phần A: khối chéo đóng góp phần lớn Δℓ.
    - Với AVICI, chưa có dự đoán cơ chế để khóa.
-3. **Không nên** tiếp tục dò attention của AVICI bằng các can thiệp cùng loại. Pilot cho thấy các can thiệp mạnh đều làm hỏng dự đoán, nên cần một thiết kế khác (ví dụ thay key mà không đổi value, hoặc probing) nếu muốn đi tiếp.
+3. **Không nên** tiếp tục dò attention của AVICI bằng các can thiệp cùng loại. Các can thiệp xóa được nhiều hiệu ứng nhất đều không đạt tiêu chí sàng lọc về chất lượng; riêng V0-8 chỉ vừa vượt ngưỡng. Đây không phải bằng chứng chắc chắn rằng mọi can thiệp mạnh đều phá dự đoán. Nếu muốn đi tiếp thì cần một thiết kế khác, ví dụ thay key mà không đổi value, hoặc probing. *(sửa ở hậu kiểm, §6)*
+
+
+## 6. Hậu kiểm và quyết định (21/11, sau review của user)
+
+User đã kiểm lại: 760 output, không lỗi, 40/40 PLAIN trùng từng bit, đúng 38 lần trace. Các contrast số cạnh và phân loại của Phần B đều khớp. Agent tính lại và xác nhận hai điểm dưới đây.
+
+- **KO-all trên đủ 40 input** (hậu kiểm, ngoài gate):
+  - 34/40 input có sai lệch xác suất trên khối đích so với k0 vượt 1e-6, tối đa 2.06e-6;
+  - cả 40/40 giữ nguyên cạnh có hướng, skeleton và thứ hạng skeleton.
+
+  Gate B2 giữ nguyên kết quả trên tập kiểm ban đầu (4 input, tối đa 5.4e-7). Ngưỡng 1e-6 không được sửa sau khi xem số. Sai lệch cỡ 1e-6 phù hợp với sai số làm tròn float32 khi số key khác nhau (suy luận).
+- **V0-8:** mức giảm F1 ở e_T là −0.0313 [−0.0639, +0.0012], chỉ vừa vượt ngưỡng điểm −0.03. Nhãn "chưa phân biệt được" vẫn đúng luật, nhưng cách viết đúng là "không đạt tiêu chí sàng lọc", không phải bằng chứng chắc chắn rằng can thiệp đó phá dự đoán.
+
+**Quyết định của user:**
+
+| Phần | Quyết định |
+|---|---|
+| Dò tiếp V0/KO của AVICI | **NO-GO** theo luật hiện tại; giữ kết quả âm và giới hạn của phép can thiệp |
+| N1 nói chung | **GO viết bản thảo**. Failure đã được kiểm trên dữ liệu mới; CDFM có đường ảnh hưởng cụ thể qua bộ chọn ngưỡng |
+| Gửi bài với kỳ vọng Q1 | Chưa chốt; đánh giá novelty và mức độ khái quát sau khi dựng bản thảo |
+
+**Định hướng câu chuyện:**
+
+- Trọng tâm: kết luận về khối đích phụ thuộc vào các biến độc lập được thêm vào. Cần phân biệt thay đổi điểm và thứ hạng với thay đổi do bộ chọn ngưỡng.
+- R là cách giảm tác động có đánh đổi chất lượng; hiện vẫn là bằng chứng phụ.
+- Nguyên lý nhất quán khi thay tập biến đã có tiền lệ (Self-Compatibility, AISTATS 2024). Đóng góp phải nằm ở failure cụ thể, đường ảnh hưởng đã cô lập và phạm vi hiệu quả của cách sửa.
+
+**Nếu cần bổ sung trước khi gửi:**
+
+- Ưu tiên kiểm CDFM trên seed mới và một cấu hình ngoài phạm vi hiện tại. Không mở đồng thời cả k, n và SF.
+- **Không khóa dự đoán "X luôn chiếm phần lớn" khi đổi k:** tỉ lệ số cặp X/P là 2·d_T/(k − 1), nên khi k tăng, lợi thế về số lượng của X giảm.
+- Dự đoán đáng kiểm hơn: điểm của khối chéo giảm khi đệm có cấu trúc, và thay đổi đó vẫn ảnh hưởng đáng kể tới ngưỡng và quyết định trong khối đích. Vị trí đứng đầu của X có thể phụ thuộc cấu hình.

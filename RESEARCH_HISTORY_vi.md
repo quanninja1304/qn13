@@ -337,6 +337,10 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
     - Mọi lớp là "chưa phân biệt được".
   - **Theo điểm dừng:** kết luận AVICI giữ ở mức "kênh thay đổi"; bước tiếp là mở rộng có chọn lọc hoặc viết bài.
   - Chi tiết: [`PN3_results_vi.md`](reports/n3_mechanism_pilot_2026-11-21/PN3_results_vi.md).
+- **Cập nhật 21/11, quyết định sau pilot:**
+  - Nhánh can thiệp V0/KO của AVICI: **NO-GO**, giữ kết quả âm.
+  - N1: **GO viết bản thảo**, trước hết là bảng claim–bằng chứng–phần còn thiếu, kèm cập nhật prior art. Kỳ vọng Q1 chưa chốt.
+  - Hậu kiểm KO-all trên 40 input: tối đa 2.06e-6, nhưng giữ nguyên cạnh, skeleton và thứ hạng. V0-8 chỉ vừa vượt ngưỡng sàng lọc.
   - Chi tiết: [`PN2_EXP2_results_vi.md`](reports/n2_context_mechanism_2026-11-20/PN2_EXP2_results_vi.md).
 
 ---
