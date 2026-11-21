@@ -74,27 +74,35 @@ Mỗi cột là Y(điều kiện) − Y(e = 0). Cột e = 3 là L1-END; cột s 
 
 ## 4. Đọc (suy luận từ exploratory, chưa xác nhận)
 
-1. **AVICI tuyến tính: dịch mức mà không đổi thứ hạng.**
-   - Đệm có cấu trúc làm AVICI dự đoán ít hơn khoảng 4 cạnh. AUROC và F1 ở top-m0 gần như không đổi.
-   - Hiệu ứng gần như **đủ ngay ở mức yếu nhất**: −3.30 ở e = 0.5 (ở mức này, DEV2 vẫn còn khoảng 36% nút đệm cô lập) và −3.55 ở s = 0.25. Hiệu ứng không tăng thêm theo mật độ hay cường độ.
-   - Model có vẻ phản ứng với việc *có* cột đệm phụ thuộc nhau hay không, không phải với lượng phụ thuộc.
+1. **AVICI tuyến tính: số cạnh giảm rõ; thay đổi thứ hạng chưa rõ.** *(sửa ở đính chính 21/11, §10)*
+   - Đệm có cấu trúc làm AVICI dự đoán ít hơn khoảng 4 cạnh.
+   - Thứ hạng: F1 ở top-m0 có REP −0.002 [−0.031, +0.027] và AUROC +0.012 [−0.012, +0.037]. Cả hai là UNCLEAR theo biên ±0.03, nên **không** được viết là "thứ hạng không đổi". Chiều cải thiện thứ hạng của P-N1 chưa tái lập được.
+   - Ước lượng điểm gợi ý dạng "bậc": −3.30 ở e = 0.5 (ở mức này, DEV2 vẫn còn khoảng 36% nút đệm cô lập) và −3.55 ở s = 0.25, gần bằng mức ở e = 2–3. Đây mới là gợi ý từ đường ước lượng, chưa được kiểm trực tiếp.
 2. **AVICI RFF: dịch mức và mất thứ hạng, tăng dần theo liều.**
    - Số cạnh giảm dần: −1.65 → −3.15 → −3.70 → −4.15 khi e tăng; −1.50 → −3.60 khi s tăng.
    - F1 ở top-m0 cũng giảm dần, tới −0.054 ở e = 3.
-3. **CDFM RFF: phần giảm số cạnh ở NATIVE đến từ ngưỡng.**
-   - Ngưỡng tăng khoảng 0.12–0.17 và số cạnh NATIVE giảm khoảng 11–16. Trong khi đó, giữ ngưỡng của k0 (FROZEN) thì số cạnh gần như không đổi (+1.4 đến +3.3).
-   - Bên cạnh đó có mất thứ hạng thật: AUROC giảm khoảng 0.02–0.04, F1 ở top-m0 giảm tới −0.058.
-   - F1 NATIVE gần như không đổi, vì ngưỡng tăng loại bớt cạnh sai, bù cho phần mất thứ hạng.
-   - Cả ngưỡng lẫn số cạnh đều gần đủ ngay ở e = 0.5 và s = 0.25, tức cũng có dạng "bậc".
+3. **CDFM RFF: vai trò của ngưỡng được ủng hộ mạnh.** *(sửa ở đính chính 21/11, §10)*
+   - Ngưỡng tăng khoảng 0.12–0.17 và số cạnh NATIVE giảm khoảng 11–16.
+   - **Phân rã hậu nghiệm ở REP**, lấy ngưỡng của e = 0 làm mốc, tính lại trên output:
+     - đổi điểm, giữ ngưỡng đó: +2.00 cạnh;
+     - rồi đổi sang ngưỡng của đệm có cấu trúc: −17.25 cạnh;
+     - tổng: −15.25 cạnh.
+   - Phân rã này theo mốc đã chọn. Nó ủng hộ việc ngưỡng là phần đóng góp lớn vào mức giảm ròng, nhưng không giải thích vì sao model đổi điểm hay đổi ngưỡng.
+   - Với ngưỡng của k0 (FROZEN), REP là +1.95 [−1.15, +5.40]: chưa đạt tương đương. Vì vậy không được viết "số cạnh gần như không đổi".
+   - Bên cạnh đó có mất thứ hạng: AUROC giảm khoảng 0.02–0.04, F1 ở top-m0 giảm tới −0.058.
+   - F1 NATIVE gần như không đổi. Một cách giải thích là ngưỡng tăng loại bớt cạnh sai, bù cho phần mất thứ hạng (suy luận).
+   - Ước lượng điểm của ngưỡng và số cạnh đã gần đủ ngay ở e = 0.5 và s = 0.25. Đó mới là gợi ý dạng "bậc", chưa được kiểm trực tiếp.
 4. **CDFM tuyến tính: không đơn điệu, ngoài dự đoán.**
    - Ngưỡng tăng ở e = 0.5 (+0.065) rồi trở về mức cũ ở e = 2–3.
    - Ở s = 0.25, số cạnh NATIVE **tăng** 10 cạnh, đi cùng ngưỡng giảm (−0.041). Ở s = 0.5 và s = 1, hiệu ứng nhỏ lại.
    - Ở FROZEN và FIXED, số cạnh giảm theo mật độ (L1-END −8.05 và −13.5).
    - Đây là pattern mới, sinh từ EXP2, có thể là ứng viên giả thuyết mới.
 5. **Chung:** hai model đều phản ứng với cấu trúc của khối đệm ở cùng D, nhưng qua các kênh khác nhau theo họ dữ liệu:
-   - mức điểm (AVICI tuyến tính);
-   - mức điểm và thứ hạng (AVICI RFF);
+   - số cạnh, còn thay đổi thứ hạng chưa rõ (AVICI tuyến tính);
+   - số cạnh và thứ hạng (AVICI RFF);
    - ngưỡng toàn bảng và thứ hạng (CDFM RFF).
+
+   Cơ chế bên trong model chưa được xác lập.
 
    L1 không quy được nguyên nhân cho prior huấn luyện (§1 của luật).
 
@@ -107,7 +115,9 @@ Mỗi cột là Y(điều kiện) − Y(e = 0). Cột e = 3 là L1-END; cột s 
 | CDFM tuyến tính | −0.019 [−0.032, −0.007] NU | −0.019 NU | UNCLEAR | như AVICI | 6.1% | 2.9–3.0 s |
 | CDFM RFF | +0.009 [−0.009, +0.028] 0S | +0.005 đến +0.009 0S | **YES** (cả 7 điều kiện) | như AVICI | 5.0% | 3.6–3.8 s |
 
-- **R làm giảm thay đổi:** mọi contrast R-* của Y chính đều SMALL, gần như bằng 0. Lý do: sàng lọc gần như luôn tách đúng khối đệm, nên model thấy cùng một tập thành phần đích ở mọi điều kiện có đệm.
+- **R đưa các contrast trung bình xuống dưới biên đã chọn** *(sửa ở đính chính 21/11, §10)*: mọi contrast R-* của Y chính đều SMALL.
+  - Lý do: sàng lọc gần như luôn tách đúng khối đệm, nên model thường thấy cùng một tập thành phần đích ở mọi điều kiện có đệm.
+  - **Trung bình SMALL không có nghĩa bất biến ở từng hệ.** Ở REP sau R, CDFM tuyến tính có một hệ đổi 7 cạnh (`EXP2-c4-r1`). AVICI đổi 2 cạnh trên chính hệ đó, và CDFM RFF có một hệ đổi 1 cạnh.
   - Các ô mà contrast gốc LARGE còn contrast R SMALL:
     - AVICI tuyến tính: Δm (REP), F1 (L1-END);
     - AVICI RFF: Δm, F1, top-m0, AP;
@@ -155,7 +165,7 @@ So sánh, cùng các hệ đó: AVICI có ΔF1 ở L1-END là −0.084.
    - Ước lượng của EXP2 có thể lạc quan, vì giả thuyết được chọn theo chính dữ liệu này. Ở P-N1, hiệu ứng M1 đã thu nhỏ ở held-out.
    - Nếu hiệu ứng thu nhỏ 30%, n cần tăng khoảng 2 lần; khi đó HA2 cần khoảng 57 hệ mỗi họ, nhiều hơn 40 hệ của kế hoạch 80.
    - **HELD2 chỉ cần chạy các input mà giả thuyết dùng:** REP cần k0, e = 0 và e = e_T, tức 3 input mỗi hệ thay vì 8 + R. Nhờ vậy có thể tăng cỡ mẫu mà chi phí không tăng nhiều.
-3. **Nhánh R:** đã đọc ở §5. Khung của bài theo luật là "failure + cơ chế + cách sửa rẻ" (§10.3). Đó vẫn là kết quả có ích.
+3. **Nhánh R:** đã đọc ở §5. "Failure + cơ chế + cách sửa rẻ" (§10.3) là hướng phát triển hợp lý. Tuy vậy, cơ chế bên trong model chưa được xác lập; HELD2 chỉ xác nhận các hiệu ứng REP được chọn.
 4. **Bước sau:** theo §10.4, can thiệp attention và FoundCause đã đủ điều kiện mở, vì có hiệu ứng LARGE và có giả thuyết CONSISTENT.
 
 ## 8. Đề xuất của agent (để user quyết)
@@ -167,7 +177,9 @@ So sánh, cùng các hệ đó: AVICI có ΔF1 ở L1-END là −0.084.
   - HC4: CDFM RFF mất AUROC; không phụ thuộc mốc m0.
 
   Bỏ HC2, vì nó phần lớn là hệ quả của HC1. Nếu muốn kiểm pattern không đơn điệu của CDFM tuyến tính ở s = 0.25, thay HC4 bằng giả thuyết mới đó.
-- **Cỡ mẫu:** ưu tiên 120 hệ (60 mỗi họ), chỉ chạy k0, e = 0 và e = e_T, để còn power nếu hiệu ứng thu nhỏ. Chi phí ước tính thô dưới 2 giờ; con số chính xác sẽ đo khi viết luật HELD2.
+- **Cỡ mẫu:** ưu tiên 120 hệ (60 mỗi họ), chỉ chạy k0, e = 0 và e = e_T, để còn power nếu hiệu ứng thu nhỏ.
+  - Cỡ này hợp để kiểm dấu, chưa bảo đảm hiệu ứng vượt biên thực tiễn (1.5 cạnh, 0.03).
+  - Chi phí: dự trù 2–3 giờ nếu chạy cả R. Theo tính toán của user từ thời gian từng job EXP2: khoảng 1.45 giờ cho nhánh thường và 0.67 giờ cho R, chưa tính chi phí phụ. Bản trước ghi "dưới 2 giờ".
 - **Có thể kiểm thêm nhánh R trên HELD2,** dưới dạng mô tả, không tính vào 5 giả thuyết Holm.
 
 ## 9. Giới hạn
@@ -176,3 +188,23 @@ So sánh, cùng các hệ đó: AVICI có ΔF1 ở L1-END là −0.084.
 - Một kích thước đệm (k = 20), một họ đồ thị (ER), n = 500, hai checkpoint.
 - α_HSIC là mức danh nghĩa.
 - Code đọc chưa từng thấy dữ liệu thật; không có ground truth ngoài dữ liệu tổng hợp.
+
+## 10. Đính chính diễn giải và quyết định (21/11, sau review của user)
+
+Số liệu, nhãn exploratory và code đã đóng băng giữ nguyên. User đã tính lại bảng giả thuyết từ dữ liệu từng hệ: 7/11 CONSISTENT, 4 INCONCLUSIVE, không có CONTRARY, khớp với §2.
+
+| # | Chỗ | Bản trước | Sửa thành | Căn cứ |
+|---|---|---|---|---|
+| 1 | §4.1, §4.5 | "AVICI tuyến tính: dịch mức mà không đổi thứ hạng"; hiệu ứng "đủ ngay ở mức yếu nhất" | Số cạnh giảm rõ; thay đổi thứ hạng chưa rõ (cả hai metric là UNCLEAR); chưa tái lập chiều cải thiện của P-N1. Dạng "bậc" mới là gợi ý từ đường ước lượng | Review; §2, §3 |
+| 2 | §4.3 | "Phần giảm số cạnh ở NATIVE đến từ ngưỡng"; "FROZEN thì số cạnh gần như không đổi" | Vai trò của ngưỡng được ủng hộ mạnh, qua phân rã hậu nghiệm với mốc là ngưỡng của e = 0: điểm +2.00, ngưỡng −17.25, tổng −15.25. FROZEN chưa đạt tương đương | Review; agent tính lại trên output và khớp |
+| 3 | §5 | "R xóa mọi thay đổi do đệm" (bản trước và commit message `3f100a9`) | R đưa các contrast trung bình xuống dưới biên đã chọn. Trung bình SMALL không có nghĩa bất biến ở từng hệ: có một hệ CDFM đổi 7 cạnh | Review; agent kiểm từng hệ |
+| 4 | §7.3, §8 | Khung bài "failure + cơ chế + cách sửa rẻ"; chi phí HELD2 "dưới 2 giờ" | Hướng phát triển hợp lý, nhưng cơ chế bên trong model chưa được xác lập. Chi phí dự trù 2–3 giờ nếu chạy cả R. 120 hệ là để kiểm dấu, chưa bảo đảm vượt biên thực tiễn | Review |
+
+**Quyết định của user cho HELD2:**
+
+- **Năm giả thuyết:** HA1, HA2, HC1, HA5, HC4.
+  - Giữ HC4 để kiểm mất thứ hạng ở CDFM bằng một metric không phụ thuộc m0.
+  - Chưa đưa pattern không đơn điệu của CDFM tuyến tính vào, vì pattern đó cần định nghĩa contrast riêng.
+- **Cỡ mẫu:** 120 hệ (15 mỗi ô, 60 mỗi họ), chạy k0, e = 0 và e = e_T.
+- **Nhánh R:** chạy trên cùng 120 hệ, là phân tích phụ. Báo CI, giá tại k0, chất lượng sau R, lỗi gộp và lỗi tách. Không gọi kết quả R là đã được xác nhận bằng bộ năm phép kiểm Holm.
+- **Cách tính p-value:** chốt trong luật HELD2, trước khi khóa. Hướng của user là kiểm trung bình contrast một phía với sai số chuẩn phản ánh các ô thiết kế, rồi Holm 0.05 trên đúng năm giả thuyết. Không mặc định sign-flip là phép kiểm chính xác.

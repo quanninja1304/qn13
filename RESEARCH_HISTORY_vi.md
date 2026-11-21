@@ -271,15 +271,24 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
 - **Cập nhật 21/11, EXP2 của P-N2 (exploratory, 40 hệ):** chạy dưới đóng băng `fddfadd`; kiểm hoàn tất đạt (1 440 output, 0 lỗi, mã băm input khớp, cổng đầu và cuối lượt đều `ok`).
   - **Giả thuyết:** 7/11 CONSISTENT, không có CONTRARY.
     - AVICI dự đoán ít hơn khoảng 4 cạnh ở cả hai họ (LARGE).
-    - Ngưỡng của CDFM RFF tăng khoảng 0.16 (LARGE), kéo số cạnh NATIVE giảm khoảng 15. Ở ngưỡng k0, số cạnh gần như không đổi, nên phần giảm này đến từ ngưỡng.
+    - Ngưỡng của CDFM RFF tăng khoảng 0.16 (LARGE), số cạnh NATIVE giảm khoảng 15. Phân rã hậu nghiệm (mốc là ngưỡng của e = 0): phần do điểm +2.00, phần do ngưỡng −17.25. Ngưỡng là phần đóng góp lớn, nhưng điều đó chưa giải thích vì sao model đổi điểm hay đổi ngưỡng.
     - Mất thứ hạng ở RFF cho cả hai model.
   - **Không lặp lại:** pattern "AVICI tuyến tính xếp hạng tốt hơn với đệm có cấu trúc".
-  - **Dạng đáp ứng:** AVICI tuyến tính và CDFM RFF có dạng bậc, gần đủ ngay ở mức yếu nhất. AVICI RFF tăng dần theo liều. CDFM tuyến tính không đơn điệu (s = 0.25: +10 cạnh).
+  - **Dạng đáp ứng:**
+    - Ước lượng điểm gợi ý dạng bậc ở AVICI tuyến tính và CDFM RFF; điều này chưa được kiểm trực tiếp.
+    - AVICI RFF tăng dần theo liều.
+    - CDFM tuyến tính không đơn điệu (s = 0.25: +10 cạnh).
+    - Ở AVICI tuyến tính, thay đổi thứ hạng chưa rõ (UNCLEAR).
   - **Nhánh R:** sàng lọc gần như luôn tách đúng khối đệm.
-    - R xóa mọi thay đổi do đệm.
+    - R đưa các contrast trung bình xuống dưới biên đã chọn. Điều đó không có nghĩa bất biến ở từng hệ: có một hệ CDFM đổi 7 cạnh.
     - Là cách sửa có ích ở RFF; UNCLEAR ở tuyến tính, vì giá tách chính khối đích làm F1 giảm khoảng 0.02.
   - **Mốc cổ điển:** PC bất biến, GES gần bất biến.
-  - **Đề xuất:** HELD2 với 5 giả thuyết (HA1, HA2, HC1, HA5, HC4), khoảng 120 hệ, chỉ chạy k0, e = 0 và e = e_T. User quyết.
+  - **User chốt HELD2:**
+    - 5 giả thuyết: HA1, HA2, HC1, HA5, HC4.
+    - 120 hệ (15 mỗi ô), chạy k0, e = 0 và e = e_T; chi phí dự trù 2–3 giờ.
+    - Nhánh R là phân tích phụ.
+    - p-value: kiểm trung bình một phía, sai số chuẩn theo ô thiết kế, Holm 0.05; chốt trong luật HELD2.
+  - Diễn giải đã đính chính (§10 của báo cáo).
   - Chi tiết: [`PN2_EXP2_results_vi.md`](reports/n2_context_mechanism_2026-11-20/PN2_EXP2_results_vi.md).
 
 ---
