@@ -268,6 +268,19 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
   - **Thay đổi code:** thêm lệnh giữ máy thức trong runner.
   - **Bước kế:** chờ user duyệt chạy EXP2.
   - Chi tiết: §13 của [`PN2_rules_exploratory_vi.md`](reports/n2_context_mechanism_2026-11-20/PN2_rules_exploratory_vi.md).
+- **Cập nhật 21/11, EXP2 của P-N2 (exploratory, 40 hệ):** chạy dưới đóng băng `fddfadd`; kiểm hoàn tất đạt (1 440 output, 0 lỗi, mã băm input khớp, cổng đầu và cuối lượt đều `ok`).
+  - **Giả thuyết:** 7/11 CONSISTENT, không có CONTRARY.
+    - AVICI dự đoán ít hơn khoảng 4 cạnh ở cả hai họ (LARGE).
+    - Ngưỡng của CDFM RFF tăng khoảng 0.16 (LARGE), kéo số cạnh NATIVE giảm khoảng 15. Ở ngưỡng k0, số cạnh gần như không đổi, nên phần giảm này đến từ ngưỡng.
+    - Mất thứ hạng ở RFF cho cả hai model.
+  - **Không lặp lại:** pattern "AVICI tuyến tính xếp hạng tốt hơn với đệm có cấu trúc".
+  - **Dạng đáp ứng:** AVICI tuyến tính và CDFM RFF có dạng bậc, gần đủ ngay ở mức yếu nhất. AVICI RFF tăng dần theo liều. CDFM tuyến tính không đơn điệu (s = 0.25: +10 cạnh).
+  - **Nhánh R:** sàng lọc gần như luôn tách đúng khối đệm.
+    - R xóa mọi thay đổi do đệm.
+    - Là cách sửa có ích ở RFF; UNCLEAR ở tuyến tính, vì giá tách chính khối đích làm F1 giảm khoảng 0.02.
+  - **Mốc cổ điển:** PC bất biến, GES gần bất biến.
+  - **Đề xuất:** HELD2 với 5 giả thuyết (HA1, HA2, HC1, HA5, HC4), khoảng 120 hệ, chỉ chạy k0, e = 0 và e = e_T. User quyết.
+  - Chi tiết: [`PN2_EXP2_results_vi.md`](reports/n2_context_mechanism_2026-11-20/PN2_EXP2_results_vi.md).
 
 ---
 

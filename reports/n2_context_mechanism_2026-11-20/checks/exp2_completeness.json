@@ -1,0 +1,26 @@
+{
+ "avici_plain": 320,
+ "avici_R": 320,
+ "cdfm_plain": 320,
+ "cdfm_R": 320,
+ "pc": 80,
+ "ges": 80,
+ "total_outputs": 1440,
+ "failed_jobs_in_logs": 0,
+ "input_sha_mismatches": 0,
+ "screen_variant_rows": 1120,
+ "freeze_gate": {
+  "exp2_start": {
+   "ok": true,
+   "freeze_commit": "fddfadd6340bef2079fa7cfb7b0b007e54142bce",
+   "time_local": "2026-11-21T09:17:04"
+  },
+  "exp2_end": {
+   "ok": true,
+   "freeze_commit": "fddfadd6340bef2079fa7cfb7b0b007e54142bce",
+   "time_local": "2026-11-21T11:53:52"
+  }
+ },
+ "ok": true,
+ "problems": []
+}
