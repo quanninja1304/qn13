@@ -316,6 +316,13 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
     - Phần B: V0 và knockout ở cả 8 lớp và từng lớp theo trục biến của AVICI tuyến tính.
     - Gate tái lập trùng từng bit; kiểm phá khả năng dự đoán; điểm dừng theo user.
   - Chi tiết: [`reports/n3_mechanism_pilot_2026-11-21/`](reports/n3_mechanism_pilot_2026-11-21/).
+- **Cập nhật 21/11, khóa luật P-N3 v1** (pilot trên EXP2, theo năm chỉnh sửa của user):
+  - cổng chất lượng chỉ gắn cờ suy giảm;
+  - a_I tính theo mức giảm độ lớn, với bootstrap ghép cặp;
+  - KO-all chỉ là kiểm tra kỹ thuật; nhãn được đổi thành "nhạy với…";
+  - Shapley cho phần A;
+  - thêm gate B3–B5.
+  - **Bước kế:** kiểm khả thi và gate, đóng băng code, chạy pilot.
   - Chi tiết: [`PN2_EXP2_results_vi.md`](reports/n2_context_mechanism_2026-11-20/PN2_EXP2_results_vi.md).
 
 ---
