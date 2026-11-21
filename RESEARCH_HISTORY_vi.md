@@ -308,6 +308,14 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
   - **Chưa xác lập:** cơ chế bên trong model.
   - **Bước kế:** user chọn giữa can thiệp attention, mở rộng độ bền, hoặc viết báo cáo phát hiện.
   - Chi tiết: [`PN2_HELD2_results_vi.md`](reports/n2_context_mechanism_2026-11-20/PN2_HELD2_results_vi.md).
+- **Cập nhật 21/11, đã push kết quả HELD2 cùng đính chính; user chọn pilot cơ chế phạm vi hẹp:**
+  - **Đầu mối của user** (đã kiểm lại): bộ chọn ngưỡng của CDFM là hàm logistic của 10 thống kê toàn ma trận, tái tạo được với sai lệch 3e-16. Ở REP trên HELD2 RFF, logit ngưỡng tăng +0.926; riêng hạng tử `mean` góp +1.107; `logD` góp 0.
+  - **Prior art về chẩn đoán attention:** Gu et al. ICLR 2025; Fesser et al. preprint 2026; Value Zeroing (EACL 2023); attention knockout (EMNLP 2023). Chưa có bằng chứng N1 là attention sink.
+  - **Bản nháp luật P-N3 (chưa khóa):**
+    - Phần A: giai thừa 2³ trên ma trận điểm đưa vào bộ chọn ngưỡng của CDFM, cùng phản thực "ngưỡng cục bộ".
+    - Phần B: V0 và knockout ở cả 8 lớp và từng lớp theo trục biến của AVICI tuyến tính.
+    - Gate tái lập trùng từng bit; kiểm phá khả năng dự đoán; điểm dừng theo user.
+  - Chi tiết: [`reports/n3_mechanism_pilot_2026-11-21/`](reports/n3_mechanism_pilot_2026-11-21/).
   - Chi tiết: [`PN2_EXP2_results_vi.md`](reports/n2_context_mechanism_2026-11-20/PN2_EXP2_results_vi.md).
 
 ---

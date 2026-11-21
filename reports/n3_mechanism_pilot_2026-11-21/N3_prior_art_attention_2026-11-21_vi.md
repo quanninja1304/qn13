@@ -1,0 +1,17 @@
+# Prior art cho pilot cơ chế P-N3: attention và can thiệp (21/11/2026)
+
+> **Mục đích:** cập nhật prior art trước khi khóa pilot cơ chế, theo đề nghị của user. Lượt này chỉ kiểm các nguồn trực tiếp liên quan tới **cách chẩn đoán** (attention mass so với đóng góp value; can thiệp chặn cạnh attention).
+> **Mức đọc:** [V-search], tức kiểm qua trang proceedings, abstract và kết quả tìm kiếm; chưa đọc toàn văn.
+> **Lưu ý:** **chưa có bằng chứng** nào cho thấy hiện tượng N1 là attention sink. Các nguồn dưới đây là tiền lệ phương pháp và nguồn đối chiếu, không phải giải thích cho N1.
+
+| Nguồn | Trạng thái | Nội dung liên quan | Hệ quả cho pilot |
+|---|---|---|---|
+| **Gu et al.**, "When Attention Sink Emerges in Language Models: An Empirical View"; [ICLR 2025 (Spotlight)](https://proceedings.iclr.cc/paper_files/paper/2025/hash/f1b04face60081b689ba740d39ea8f37-Abstract-Conference.html); [arXiv 2410.10781](https://arxiv.org/abs/2410.10781) | Có bình duyệt | Sink hoạt động giống **bias phía key**: giữ phần điểm attention thừa, có thể không mang thông tin và không đóng góp vào value. Hiện tượng gắn một phần với chuẩn hóa softmax; attention sigmoid không chuẩn hóa ngăn sink xuất hiện (ở model tới 1B) | Attention mass không đồng nghĩa đóng góp value. Can thiệp cần tách mẫu số (chuẩn hóa) khỏi tổng value |
+| **Fesser, Jacobs, Fel, Keller, Kakade**, "A Unifying View of Attention Sinks"; [arXiv 2606.08105](https://arxiv.org/abs/2606.08105) (6/2026) | Preprint. Bản HTML/PDF có tiêu đề phụ khác bản trên trang abstract; chưa rõ có phải hai phiên bản | Cùng một hình dạng sink có thể đến từ hai cơ chế: **adaptive nop** (dồn attention vào token rỗng để triệt cập nhật) và **broadcast** (tổng hợp rồi phát lại thông tin toàn cục). Có kiểm vai trò nhân quả trên ViT | Biểu hiện attention giống nhau không xác định cơ chế; cần can thiệp phân biệt được các lời giải thích |
+| **Mohebbi, Zuidema, Chrupała, Alishahi**, "Quantifying Context Mixing in Transformers"; [EACL 2023](https://aclanthology.org/2023.eacl-main.245) (tr. 3378–3400); [arXiv 2301.12971](https://arxiv.org/abs/2301.12971) | Có bình duyệt | **Value Zeroing:** zero value vector của một token, giữ nguyên trọng số attention, rồi đo thay đổi biểu diễn | Can thiệp "triệt value của đệm, giữ mẫu số" của pilot là một dạng value zeroing. Không được claim là phương pháp mới |
+| **Geva, Bastings, Filippova, Globerson**, "Dissecting Recall of Factual Associations in Auto-Regressive Language Models"; [EMNLP 2023](https://aclanthology.org/2023.emnlp-main.751) (tr. 12216–12235); [arXiv 2304.14767](https://arxiv.org/abs/2304.14767) | Có bình duyệt | **Attention knockout:** chặn cạnh attention giữa hai vị trí ở các lớp chọn trước. Tác giả nêu giới hạn: chặn ở một lớp không ngăn thông tin đã truyền qua ở các lớp trước | Mask theo lớp của pilot là attention knockout. Khi đọc kết quả theo lớp phải tính tới rò rỉ qua lớp trước |
+
+**Kết luận cho thiết kế:**
+
+- Phương pháp của pilot (value zeroing, attention knockout theo lớp) đã có tiền lệ. Phần có thể đóng góp là áp chúng lên model causal discovery học sẵn, với phép thử "thêm khối đệm" có đáp án biết trước, và đo bằng contrast REP đã được xác nhận ở HELD2.
+- **Kênh ngưỡng của CDFM không cần can thiệp attention:** bộ chọn ngưỡng là hàm logistic công khai của 10 thống kê toàn ma trận (`cdfm/utils.py`, hàm `suggest_threshold`; CDFM §5.3). Câu hỏi ở đó là phần nào của ma trận điểm đẩy ngưỡng lên.
