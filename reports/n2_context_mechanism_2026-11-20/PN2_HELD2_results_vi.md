@@ -31,7 +31,7 @@ Kiểm một phía trên trung bình contrast REP cân bằng theo ô, sai số 
 | HA5 | AVICI, RFF, F1 ở top-m0 | NEG | −0.027 [−0.044, −0.009] | 3.10 (52.1) | 0.0016 | 4, 0.0250 | **CONFIRMED** | UNCLEAR |
 | HC4 | CDFM, RFF, AUROC | NEG | −0.014 [−0.025, −0.003] | 2.51 (36.4) | 0.0083 | 5, 0.0500 | **CONFIRMED** | SMALL |
 
-- **Độ nhạy:** CI bootstrap phân tầng của cả năm giả thuyết đều loại 0 theo chiều dự đoán, nên cho cùng kết luận với phép kiểm t:
+- **Kiểm tra độ nhạy** (không phải căn cứ xác nhận; quyết định xác nhận chỉ đến từ phép kiểm đã khóa và Holm): CI bootstrap phân tầng của cả năm giả thuyết đều loại 0 theo chiều dự đoán, cùng chiều với phép kiểm t:
 
   | ID | CI bootstrap phân tầng |
   |---|---|
@@ -72,7 +72,7 @@ Kiểm một phía trên trung bình contrast REP cân bằng theo ô, sai số 
 Hai quan sát mô tả, **không** được tính là xác nhận:
 
 - **AVICI tuyến tính:** AUROC và AP có dấu dương. Đây là chiều mà P-N1 từng thấy, còn EXP2 không lặp lại được (HA3, HA4 khi đó INCONCLUSIVE). Pattern này không nằm trong năm giả thuyết, nên chỉ được ghi nhận, không được claim.
-- **CDFM RFF:** với ngưỡng của k0, số cạnh **tăng** (+5.07), tức điểm dịch lên. Ngưỡng NATIVE tăng còn mạnh hơn, nên số cạnh NATIVE giảm 15.6, chủ yếu là cạnh sai (FP −12.2). F1 NATIVE vì vậy tăng nhẹ.
+- **CDFM RFF:** với ngưỡng của k0, có thêm cặp vượt ngưỡng (số cạnh +5.07). Điều này chưa chứng minh toàn bộ phân phối điểm dịch lên. Ngưỡng NATIVE tăng mạnh, nên số cạnh NATIVE giảm 15.6, chủ yếu là cạnh sai (FP −12.2). F1 NATIVE tăng nhẹ. *(Câu này sửa ngày 21/11, xem §7.)*
 
 **Phân rã ngưỡng ở CDFM** (luật §4; mốc là ngưỡng của e = 0; theo mốc đã chọn, không phải nguyên nhân):
 
@@ -121,3 +121,12 @@ Hai quan sát mô tả, **không** được tính là xác nhận:
   1. **Bước can thiệp attention** (luật v1 §10.4 đã mở), để tìm đường truyền bên trong AVICI và CDFM: mask theo lớp; tách đóng góp value khỏi mẫu số softmax.
   2. **Mở rộng độ bền** trước khi viết: kích thước đệm k khác, họ đồ thị khác (SF), n khác; FoundCause.
   3. **Viết báo cáo phát hiện** với phạm vi hiện có. Trước đó cần lặp lại tìm kiếm prior art, như đã ghi ở sổ claim.
+
+## 7. Đính chính diễn giải (21/11, sau review của user)
+
+Số liệu và nhãn không đổi. User đã tính lại năm ước lượng, CI, p-value và Holm, và kết quả khớp: cả năm CONFIRMED. User cũng xác nhận chín file đóng băng khớp mã băm.
+
+| # | Chỗ | Bản trước | Sửa thành |
+|---|---|---|---|
+| 1 | §3, CDFM RFF | "với ngưỡng của k0, số cạnh tăng (+5.07), tức điểm dịch lên" | "có thêm cặp vượt ngưỡng k0". Điều đó chưa chứng minh toàn bộ phân phối điểm dịch lên |
+| 2 | §2 | "Độ nhạy: … cho cùng kết luận với phép kiểm t" | "Kiểm tra độ nhạy". Quyết định xác nhận chỉ đến từ phép kiểm đã khóa và Holm |

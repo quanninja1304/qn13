@@ -302,7 +302,7 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
     - HA5: AVICI RFF mất thứ hạng (top-m0), −0.027, cỡ UNCLEAR;
     - HC4: AUROC của CDFM RFF giảm, −0.014, nhỏ theo biên.
   - **Mô tả:**
-    - Ở CDFM RFF, phân rã theo mốc ngưỡng e = 0 cho phần do ngưỡng −17.9 và phần do điểm +2.3; với ngưỡng k0, số cạnh tăng 5.1.
+    - Ở CDFM RFF, phân rã theo mốc ngưỡng e = 0 cho phần do ngưỡng −17.9 và phần do điểm +2.3. Với ngưỡng k0, có thêm 5.1 cặp vượt ngưỡng; điều này chưa chứng minh toàn bộ phân phối điểm dịch lên.
     - AUROC của AVICI tuyến tính có dấu dương. Pattern này không nằm trong bộ kiểm, nên không được claim.
   - **Nhánh R (phân tích phụ):** mọi contrast REP sau R đều SMALL. Là cách sửa có ích ở 3/4 ô; UNCLEAR ở CDFM tuyến tính. Không bất biến ở từng hệ (một hệ đổi 11 cạnh).
   - **Chưa xác lập:** cơ chế bên trong model.
