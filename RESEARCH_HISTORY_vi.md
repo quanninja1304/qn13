@@ -289,6 +289,11 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
     - Nhánh R là phân tích phụ.
     - p-value: kiểm trung bình một phía, sai số chuẩn theo ô thiết kế, Holm 0.05; chốt trong luật HELD2.
   - Diễn giải đã đính chính (§10 của báo cáo).
+- **Cập nhật 21/11, khóa luật HELD2 của P-N2 và đóng băng code:**
+  - **Luật v1:** commit `7bc8ba0`, push lúc 2026-11-21T06:28:11Z. Đây là bản nháp v0 user duyệt nguyên trạng.
+  - **Phép kiểm:** năm giả thuyết REP (HA1, HA2, HC1, HA5, HC4), kiểm t một phía trên trung bình cân bằng theo ô, sai số chuẩn phân tầng, df Welch–Satterthwaite, rồi Holm 0.05. Nhánh R là phân tích phụ.
+  - **Code HELD2:** toàn file mới; phụ thuộc không đổi. Code đọc kiểm trên EXP2 tái lập đúng năm ước lượng REP. Snapshot ở `code_held2/`.
+  - **Bước kế:** chạy 120 hệ (dự trù 2–3 giờ), kiểm hoàn tất, rồi đọc.
   - Chi tiết: [`PN2_EXP2_results_vi.md`](reports/n2_context_mechanism_2026-11-20/PN2_EXP2_results_vi.md).
 
 ---

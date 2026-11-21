@@ -136,3 +136,14 @@ Snapshot mới ở `code_held2/`, gồm cả các file phụ thuộc không đ�
 
 - **v0, 21/11/2026 (`71a584f`):** bản nháp, theo quyết định của user ngày 21/11.
 - **v1, 21/11/2026 (khóa):** user duyệt v0 nguyên trạng ("đồng ý, khóa luật HELD2 rồi viết code và chạy"). Nội dung §0–§8 không đổi.
+- **Đóng băng code HELD2, 21/11/2026,** trước khi sinh bất kỳ input HELD2 nào.
+  - **Code:** `held2.py`, `run2_held2.py`, `analyze_held2.py`, `held2_completeness.py`, `verify_freeze_held2.py`, `run_held2.sh`, đều là file mới. `run2_held2.py` là bản chép của `run2.py`, chỉ giới hạn danh sách job.
+  - **Phụ thuộc không đổi:** `common2.py`, `screen.py`, `alpha.json`, với mã băm trùng snapshot của `fddfadd`.
+  - **Danh sách job:** 120 hệ, 360 job mỗi model mỗi nhánh; seed 430000–437014, không trùng DEV2 hay EXP2.
+  - **Kiểm code đọc trên EXP2 (§7):**
+    - Năm ước lượng điểm trùng REP của EXP2: −3.95, −3.90, +0.1590, −0.0400, −0.0389.
+    - Phân rã ngưỡng của CDFM RFF tái lập +2.00 / −17.25.
+    - θ̂, SE, df, t, p của HA1 tính lại độc lập khớp tuyệt đối.
+
+    p-value trên EXP2 chỉ dùng để kiểm code.
+  - **Snapshot:** [`code_held2/`](code_held2/) kèm `SHA256SUMS`.
