@@ -92,6 +92,10 @@ Trung bình **|Δ số cạnh|** (B − A) lớn hơn nhiều so với Δ trung 
    - Nếu phép thử có đối chứng xác nhận hai trường hợp này, chúng sẽ cần hai cách sửa khác nhau. Phân rã này chưa đủ để kết luận điều đó.
 4. **CDFM: ngưỡng có đóng góp rõ, nhưng không phải nguyên nhân duy nhất** (Bảng 5).
    - Ngưỡng NATIVE tăng khi có đệm, mạnh nhất ở B (+0.154). Điều này khớp với việc `suggest_threshold` tính đặc trưng trên toàn ma trận D×D.
+   - *(Bổ sung 21/11 từ [P-N3 phần A](../n3_mechanism_pilot_2026-11-21/PN3_results_vi.md))* Chiều cụ thể là:
+     - khi đệm có cấu trúc, xác suất trung bình **toàn ma trận giảm**, chủ yếu do điểm của các cặp chéo giảm;
+     - trọng số của `mean` là âm (−8.56), nên ngưỡng tăng;
+     - đó không phải "cạnh của khối đệm đẩy điểm lên".
    - So với ngưỡng của k0, việc đổi ngưỡng đóng góp +0.047 [+0.025, +0.071] F1 vào contrast B − A. Phần lớn đóng góp này nằm ở RFF (+0.082).
    - Dấu của contrast B − A còn phụ thuộc cách chọn ngưỡng:
      - FIXED 0.5: B vẫn tốt hơn A (+0.034), kể cả khi không có ngưỡng thích nghi;
@@ -131,3 +135,4 @@ Trung bình **|Δ số cạnh|** (B − A) lớn hơn nhiều so với Δ trung 
 | 2 | §1, §3 mục 3, §5 | "Hai loại hại xuất hiện ở những ô khác nhau ... dẫn tới hai cách sửa khác nhau" | Phân rã kế toán theo mốc m0, không phải hai nguyên nhân độc lập. FROZEN không phải phép đo thuần thứ hạng | Review thứ hai |
 | 2 | §3 mục 2 | "với AVICI, B ≈ A (+0.008)" | Con số gộp che hai chiều ngược nhau (tuyến tính +0.052, RFF −0.036); không phải bằng chứng thứ hạng không đổi | Review thứ hai; Bảng 3 |
 | 2 | §2, §4 | (không có) | Thêm trung bình \|Δ số cạnh\|. Biến đo P-N2 gồm \|Δ\|, số cặp đổi trạng thái, tách theo d_T | Review thứ hai (CDFM tuyến tính: Δ −1.9, \|Δ\| 10.5) |
+| 3 (21/11) | §3 mục 4 | Bản đầu (`9dbb072`) viết "các cạnh riêng của khối đệm B đẩy phân phối điểm lên"; câu này đã bỏ ở lần 2 | Chiều ngược lại. Khi đệm có cấu trúc, xác suất trung bình ở khối đệm (0.546 → 0.405) và khối chéo (0.362 → 0.189) giảm, nên trung bình toàn ma trận giảm; trọng số âm của `mean` làm ngưỡng tăng | P-N3 phần A, EXP2 RFF |

@@ -1,0 +1,44 @@
+[
+ {
+  "label": "post_freeze_check",
+  "time_local": "2026-11-21T15:54:33",
+  "freeze_commit": "7fbd635d576e8c0f7ebad02db946ffe9112d71b6",
+  "remote_branches": [
+   "origin/docs/n1-pilot"
+  ],
+  "head": "7fbd635d576e8c0f7ebad02db946ffe9112d71b6",
+  "sha256sums_sha": "a969ebaec7d081fa727dee4e2962244f7894671c9631a4db8725e6737fad83d0",
+  "n_files": 9,
+  "python": "3.11.16",
+  "ok": true,
+  "problems": []
+ },
+ {
+  "label": "pn3_start",
+  "time_local": "2026-11-21T15:54:42",
+  "freeze_commit": "7fbd635d576e8c0f7ebad02db946ffe9112d71b6",
+  "remote_branches": [
+   "origin/docs/n1-pilot"
+  ],
+  "head": "7fbd635d576e8c0f7ebad02db946ffe9112d71b6",
+  "sha256sums_sha": "a969ebaec7d081fa727dee4e2962244f7894671c9631a4db8725e6737fad83d0",
+  "n_files": 9,
+  "python": "3.11.16",
+  "ok": true,
+  "problems": []
+ },
+ {
+  "label": "pn3_end",
+  "time_local": "2026-11-21T17:09:07",
+  "freeze_commit": "7fbd635d576e8c0f7ebad02db946ffe9112d71b6",
+  "remote_branches": [
+   "origin/docs/n1-pilot"
+  ],
+  "head": "7fbd635d576e8c0f7ebad02db946ffe9112d71b6",
+  "sha256sums_sha": "a969ebaec7d081fa727dee4e2962244f7894671c9631a4db8725e6737fad83d0",
+  "n_files": 9,
+  "python": "3.11.16",
+  "ok": true,
+  "problems": []
+ }
+]

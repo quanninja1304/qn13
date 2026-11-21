@@ -327,6 +327,16 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
   - Lần gate đầu lộ lỗi cache jit lồng nhau: can thiệp không được áp, B3 đạt giả. Đã sửa bằng một bản sao `InferenceModel` cho mỗi cấu hình và chốt chặn trace cũ.
   - Sau khi sửa, B0–B5 đều đạt; A0 sai lệch 3.3e-16.
   - Snapshot ở `reports/n3_mechanism_pilot_2026-11-21/code/`. **Bước kế:** chạy pilot.
+- **Cập nhật 21/11, kết quả pilot P-N3 (exploratory, EXP2):** chạy dưới đóng băng `7fbd635`; hoàn tất đạt.
+  - **CDFM RFF (phần A):**
+    - Shapley: khối chéo đóng góp +0.513 (60%), khối đệm +0.352 (41%), khối đích khoảng 0. Dự đoán "P chiếm phần lớn" không được ủng hộ.
+    - Mô tả: khi đệm có cấu trúc, điểm của các cặp không-cạnh ngoài khối đích giảm, nên trung bình toàn ma trận giảm; vì trọng số của `mean` là âm (−8.56), ngưỡng tăng. Điều này đính chính một suy luận cũ có chiều ngược lại.
+  - **AVICI tuyến tính (phần B):** không có ứng viên.
+    - KO-all chỉ là kiểm tra kỹ thuật.
+    - V0-all xóa 82% hiệu ứng nhưng làm F1 giảm khoảng 0.2. V0-8 xóa 59% và KO-8 làm hiệu ứng lớn gấp đôi; cả hai đều có cờ suy giảm.
+    - Mọi lớp là "chưa phân biệt được".
+  - **Theo điểm dừng:** kết luận AVICI giữ ở mức "kênh thay đổi"; bước tiếp là mở rộng có chọn lọc hoặc viết bài.
+  - Chi tiết: [`PN3_results_vi.md`](reports/n3_mechanism_pilot_2026-11-21/PN3_results_vi.md).
   - Chi tiết: [`PN2_EXP2_results_vi.md`](reports/n2_context_mechanism_2026-11-20/PN2_EXP2_results_vi.md).
 
 ---
