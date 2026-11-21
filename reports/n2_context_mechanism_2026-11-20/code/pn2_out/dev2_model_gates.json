@@ -1,0 +1,81 @@
+{
+ "rules": "P-N2 v1 (commit 5c2c76c)",
+ "set": "DEV2",
+ "G10": {
+  "avici": {
+   "tau_from_PN1": 0.0,
+   "rerun_max_abs_diff": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "oracle_vs_k0_max_abs_diff": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "pass_": true
+  },
+  "cdfm": {
+   "tau_from_PN1": 0.0,
+   "rerun_max_abs_diff": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "oracle_vs_k0_max_abs_diff": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "pass_": true
+  }
+ },
+ "G11": {
+  "avici_plain": {
+   "n": 128,
+   "total_s": 593.8,
+   "mean_s": 4.64,
+   "errors": 0
+  },
+  "avici_R": {
+   "n": 128,
+   "total_s": 359.0,
+   "mean_s": 2.8,
+   "errors": 0
+  },
+  "cdfm_plain": {
+   "n": 128,
+   "total_s": 26691.1,
+   "mean_s": 208.52,
+   "errors": 0
+  },
+  "cdfm_R": {
+   "n": 128,
+   "total_s": 451.7,
+   "mean_s": 3.53,
+   "errors": 0
+  },
+  "pc": {
+   "n": 32,
+   "total_s": 21.3,
+   "max_s": 3.0
+  },
+  "ges": {
+   "n": 32,
+   "total_s": 970.4,
+   "max_s": 272.77
+  },
+  "screening_tables": {
+   "fisherz": 0.1,
+   "hsic": 137.8,
+   "spearman": 0.8
+  },
+  "EXP2_estimate_hours": 20.3,
+  "EXP2_over_12h": true
+ }
+}

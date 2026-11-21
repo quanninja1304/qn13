@@ -365,3 +365,37 @@ Output model trên DEV2 chỉ dùng cho các cổng ở đây. Nếu có tính c
   - **§3, §6:** REP chỉ lặp lại hiệu ứng trung bình, vì ghép cặp làm phân phối hiệu theo từng cặp khác P-N1.
   - **§3, G4:** Z rút một lần ngoài vòng lặp nút, với thứ tự gọi `rng_P` được ghi rõ. Phép kiểm 1e-12 của G4 làm trên float64 trước ép kiểu; hai bí danh dùng chung input float32.
   - **§4, G11:** PC/GES chạy cả trên DEV2 để đo thời gian.
+- **DEV2, 20–21/11/2026** (luật v1, commit `5c2c76c`). Cổng dữ liệu chạy trước; job model chạy từ 17:16 UTC ngày 20/11 đến 01:23 UTC ngày 21/11.
+  - **G1–G7 đạt.**
+    - Khối đích trùng từng bit ở cả 112 input có đệm; khối đệm sinh riêng trùng khối đệm trong bảng ghép.
+    - Lồng nhau và tham số như nhau ở mọi mức (16/16 hệ).
+    - s = 1 trùng từng bit với e = 2. s = 0 lệch tối đa 1.06e-13 so với e = 0 (float64).
+    - Khớp phép tính gốc của AVICI, sai lệch tương đối tối đa 5.2e-15. Đồ thị dùng để sinh đúng là U < p_e.
+    - Số cạnh đệm thực tế trung bình 9.4, 19.6, 40.0, 60.4 ở e = 0.5, 1, 2, 3; số nút cô lập 7.2, 2.4, 0.4, 0.1.
+  - **G5 (mô tả):** ở e = 0, trung bình |ρ| của cặp đệm là 0.033–0.039, so với 0.035 ± 0.002 của khối Gauss độc lập dùng làm tham chiếu.
+  - **G8 đạt:** 14 580 cặp; |Δp| tối đa 6.2e-15; quyết định bác bỏ trùng 100% tại mọi ngưỡng Bonferroni thật; không có cặp sát ngưỡng.
+  - **G9 (chẩn đoán), không chạm điều kiện dừng.**
+    - **Fisher-z:**
+      - Tỉ lệ bác bỏ theo cặp ở mức 0.05 là 0.045 (e = 0) và 0.050 (đệm có cấu trúc).
+      - Không input nào có cạnh chéo giả, ở mọi α: 0/8 hệ ở e = 0 (Clopper–Pearson 95% [0, 0.37], cận trên một phía 0.31), và 0/48 input có cấu trúc.
+    - **HSIC:**
+      - Tỉ lệ theo cặp ở mức 0.05 là 0.044 và 0.046; ở mức 0.01 là 0.012 và 0.014; ở mức 0.001 là 0.0029 và 0.0040.
+      - **Đuôi dễ dãi:** ở mức 0.001, tỉ lệ thực tế gấp 3–4 lần mức danh nghĩa.
+      - Có ít nhất một cạnh chéo giả trong một input:
+        - ở α = 0.01: 0/8 (e = 0) và 1/48 (có cấu trúc, 0.021 [0, 0.062]);
+        - ở α = 0.05: 1/8 và 6/48 (0.125 [0, 0.375]).
+    - Kết quả này đúng với giới hạn đã ghi ở §8.1: α_HSIC là mức danh nghĩa.
+  - **Chọn α (§8.4):**
+    - Fisher-z: J = 0.0507, 0.0382, 0.0382 ở α = 0.01, 0.05, 0.10. Hòa giữa 0.05 và 0.10, nên **α_Fz = 0.05**.
+    - HSIC: J = 0.043, 0.107, 0.124, nên **α_HSIC = 0.01**.
+    - Lỗi tách tại k0 (báo riêng): 2.8% cạnh thật (Fisher-z ở 0.05), 2.6% (HSIC ở 0.01).
+    - Biến thể, chỉ để thông tin: HSIC trên họ tuyến tính J = 0.069; Spearman trên RFF J = 0.102; BH J = 0.43 (Fisher-z) và 0.36 (HSIC).
+  - **G10 đạt:** chạy lại và R-oracle trùng từng bit với k0 ở cả hai model (τ = 0 như P-N1).
+  - **G11: ước tính tự động 20.3 giờ, vượt 12 giờ.**
+    - Nguyên nhân: một job CDFM (`DEV2-c5-r0`, s = 0.25) mất 25 743 giây. Máy vào chế độ ngủ từ 00:43 đến 07:52 giờ máy (nhật ký hệ thống: Kernel-Power 42 và Power-Troubleshooter 1). Job bắt đầu 7 giây trước khi máy ngủ và xong 6 giây sau khi máy thức.
+    - Chạy lại job đó mất 8.78 giây và cho output trùng từng bit (`probs`, adjacency, ngưỡng). Các job CDFM khác mất 2–12 giây.
+    - Thay thời gian của job đó bằng thời gian chạy lại, ước tính EXP2 khoảng 2.5 giờ.
+    - Theo G11, dừng và báo user trước EXP2.
+  - **Thay đổi code sau DEV2,** không ảnh hưởng phép tính: thêm lời gọi `SetThreadExecutionState` để giữ máy thức trong lúc runner chạy (`run2.py`, `run2_classical.py`, `screen_variants.py`). Lời gọi chỉ có hiệu lực trong tiến trình, không đổi cài đặt nguồn của máy.
+  - **Kiểm code đọc:** `analyze2.py` (AVICI, CDFM, cổ điển) và `screen_variants.py` đã chạy trên DEV2 để kiểm code: chạy hết, đúng cấu trúc, không có NaN, một giá trị F1 khớp khi tính độc lập. Số liệu contrast của DEV2 không được dùng để sửa luật.
+  - **Đóng băng cho EXP2:** snapshot ở [`code/`](code/) kèm `SHA256SUMS`; `verify_freeze2.py` chạy ở đầu và cuối EXP2.

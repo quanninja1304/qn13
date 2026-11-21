@@ -257,6 +257,17 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
     - tách "R làm giảm thay đổi" khỏi "R sửa được lỗi";
     - giả thuyết chỉ xét theo REP, L1-END ngược dấu là "hình dạng khác dự đoán".
   - **Bước kế:** code và DEV2.
+- **Cập nhật 21/11, DEV2 của P-N2 xong, đóng băng code trước EXP2:**
+  - **Cổng đạt:** G1–G8 và G10 đều đạt.
+    - Bộ sinh lồng nhau khớp phép tính gốc của AVICI.
+    - HSIC vector hóa khớp `KCI_UInd` trên 14 580 cặp, kể cả quyết định tại các ngưỡng Bonferroni thật.
+    - Kết quả tất định trùng từng bit.
+  - **α chọn theo J:** Fisher-z 0.05, HSIC 0.01.
+  - **G9 (chẩn đoán):** đuôi của HSIC dễ dãi, khoảng 3–4 lần mức danh nghĩa ở 0.001, nên α_HSIC chỉ là mức danh nghĩa.
+  - **G11:** ước tính tự động vượt 12 giờ vì máy ngủ 7.15 giờ giữa một job. Chạy lại job đó cho output trùng từng bit; ước tính thật khoảng 2.5 giờ.
+  - **Thay đổi code:** thêm lệnh giữ máy thức trong runner.
+  - **Bước kế:** chờ user duyệt chạy EXP2.
+  - Chi tiết: §13 của [`PN2_rules_exploratory_vi.md`](reports/n2_context_mechanism_2026-11-20/PN2_rules_exploratory_vi.md).
 
 ---
 
