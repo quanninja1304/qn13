@@ -294,6 +294,20 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
   - **Phép kiểm:** năm giả thuyết REP (HA1, HA2, HC1, HA5, HC4), kiểm t một phía trên trung bình cân bằng theo ô, sai số chuẩn phân tầng, df Welch–Satterthwaite, rồi Holm 0.05. Nhánh R là phân tích phụ.
   - **Code HELD2:** toàn file mới; phụ thuộc không đổi. Code đọc kiểm trên EXP2 tái lập đúng năm ước lượng REP. Snapshot ở `code_held2/`.
   - **Bước kế:** chạy 120 hệ (dự trù 2–3 giờ), kiểm hoàn tất, rồi đọc.
+- **Cập nhật 21/11, HELD2 của P-N2 (xác nhận, 120 hệ):** chạy dưới đóng băng `16ea97f`, 1 giờ 36 phút; kiểm hoàn tất đạt.
+  - **Holm 0.05 xác nhận cả năm giả thuyết về dấu:**
+    - HC1: ngưỡng của CDFM RFF tăng, +0.175, LARGE;
+    - HA1: AVICI tuyến tính dự đoán ít cạnh hơn, −6.05, LARGE;
+    - HA2: AVICI RFF dự đoán ít cạnh hơn, −1.93, cỡ UNCLEAR;
+    - HA5: AVICI RFF mất thứ hạng (top-m0), −0.027, cỡ UNCLEAR;
+    - HC4: AUROC của CDFM RFF giảm, −0.014, nhỏ theo biên.
+  - **Mô tả:**
+    - Ở CDFM RFF, phân rã theo mốc ngưỡng e = 0 cho phần do ngưỡng −17.9 và phần do điểm +2.3; với ngưỡng k0, số cạnh tăng 5.1.
+    - AUROC của AVICI tuyến tính có dấu dương. Pattern này không nằm trong bộ kiểm, nên không được claim.
+  - **Nhánh R (phân tích phụ):** mọi contrast REP sau R đều SMALL. Là cách sửa có ích ở 3/4 ô; UNCLEAR ở CDFM tuyến tính. Không bất biến ở từng hệ (một hệ đổi 11 cạnh).
+  - **Chưa xác lập:** cơ chế bên trong model.
+  - **Bước kế:** user chọn giữa can thiệp attention, mở rộng độ bền, hoặc viết báo cáo phát hiện.
+  - Chi tiết: [`PN2_HELD2_results_vi.md`](reports/n2_context_mechanism_2026-11-20/PN2_HELD2_results_vi.md).
   - Chi tiết: [`PN2_EXP2_results_vi.md`](reports/n2_context_mechanism_2026-11-20/PN2_EXP2_results_vi.md).
 
 ---
