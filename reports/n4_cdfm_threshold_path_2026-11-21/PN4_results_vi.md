@@ -43,7 +43,7 @@ Kiểm một phía trên trung bình cân bằng theo ô, sai số chuẩn phân
 
 - Không thành phần nào DEGENERATE, và không ước lượng nào ngược phía dự đoán.
 - **Kiểm tra độ nhạy** (không phải căn cứ xác nhận): CI bootstrap phân tầng của cả 14 thành phần đều nằm hẳn về phía dự đoán so với mốc. Ví dụ, T ở k = 20 có [−22.03, −16.84], và D3b ở k = 40 có [−18.96, −13.54].
-- Nhãn cỡ theo biên thực tiễn của luật §5 (1.5 cạnh; 0.03 cho ngưỡng và cho xác suất trung bình): cả 14 thành phần đều LARGE.
+- Nhãn cỡ theo biên thực tiễn của luật §5 (1.5 cạnh; 0.03 cho ngưỡng và cho xác suất trung bình): cả 14 thành phần đều LARGE. Đây là phân loại theo CI và biên đã chọn, không phải 14 kết luận riêng đã kiểm soát familywise. Bộ Holm chỉ gồm tám giả thuyết.
 
 **Câu được viết** (luật §9), cho cả k = 20 và k = 40:
 
@@ -74,7 +74,7 @@ Phần do ngưỡng lớn hơn phần do điểm ở đa số hệ, nhưng khôn
 | T | −17.25 | −17.87 | −19.24 |
 | Shapley khối chéo / khối đệm | 60% / 41% | — | 57% / 44% |
 
-Cột EXP2 và HELD2 là mô tả, tính lại trên output đã đóng băng ([`design/pn4_design_inputs.json`](design/pn4_design_inputs.json); P-N3 phần A). Trên seed mới, hiệu ứng có cùng chiều và cỡ tương đương hoặc lớn hơn; không thấy thu nhỏ. Phần do điểm ở k = 20 lần này gần 0, với CI chứa 0.
+Cột EXP2 và HELD2 là mô tả, tính lại trên output đã đóng băng ([`design/pn4_design_inputs.json`](design/pn4_design_inputs.json); P-N3 phần A). Trên seed mới, ước lượng điểm của D1, D2, D3a, D3b và T có cùng chiều, với cỡ bằng hoặc lớn hơn ở EXP2 và HELD2. Đây chỉ là so sánh ước lượng điểm; chưa có phép kiểm so sánh cỡ hiệu ứng giữa các pha. Phần do điểm ở k = 20 lần này gần 0, với CI chứa 0.
 
 ### 3.3 Nhóm nào của ma trận làm ngưỡng tăng
 
@@ -134,7 +134,7 @@ Chỉ đổi khối đệm làm ngưỡng tăng +0.108 [+0.096, +0.120] ở k = 
   - D3a: −0.037 [−0.043, −0.032]: hiệu ứng của riêng khối chéo lên ngưỡng nhỏ hơn;
   - S: +5.4 [+2.4, +8.5];
   - T: −6.8 [−9.3, −4.3];
-  - T + S: −1.4 [−4.2, +1.5]: mức đổi ròng số cạnh tương đương.
+  - T + S: −1.4 [−4.2, +1.5]. Chưa thấy chênh lệch rõ về mức đổi ròng số cạnh; kết quả này chưa chứng minh tương đương.
 - **Theo d_T:** mức đổi số cạnh lớn hơn nhiều ở d_T = 20, nơi có nhiều cặp đích hơn. Ví dụ, D3b ở k = 20 là −7.1 (d_T = 10) và −30.2 (d_T = 20). Ở cả hai k, cả bốn ô đều có D3b và T âm.
 
 ## 4. Không được nói
@@ -158,3 +158,13 @@ Chỉ đổi khối đệm làm ngưỡng tăng +0.108 [+0.096, +0.120] ở k = 
   - cơ chế của AVICI;
   - gap 2 (dữ liệu thật), gap 3 (so sánh cách sửa), gap 4 (thêm model).
 - **Bước tiếp theo thứ tự đã chốt:** gap 2, tức kiểm tính nhất quán trên dữ liệu thật. Cần user chọn và duyệt việc tải bộ dữ liệu.
+
+## 6. Đính chính diễn đạt (22/11, sau review của user)
+
+Số liệu và tám nhãn CONFIRMED không đổi. User đã tính lại các contrast chính từ output thô, cùng CI, p-value và Holm, và kết quả khớp toàn bộ. User cũng xác nhận snapshot và 44 file phụ thuộc khớp mã băm.
+
+| # | Chỗ | Bản trước (`70eb7c5`) | Sửa thành |
+|---|---|---|---|
+| 1 | §3.7, T + S giữa hai k | "mức đổi ròng số cạnh tương đương" | Chưa thấy chênh lệch rõ; kết quả này chưa chứng minh tương đương |
+| 2 | §3.2 | "hiệu ứng có cùng chiều và cỡ tương đương hoặc lớn hơn; không thấy thu nhỏ" | Chỉ nói về ước lượng điểm của D1, D2, D3a, D3b và T; chưa có phép kiểm so sánh cỡ hiệu ứng giữa các pha |
+| 3 | §2 | "cả 14 thành phần đều LARGE" | Đây là phân loại theo CI và biên, không phải 14 kết luận riêng đã kiểm soát familywise |
