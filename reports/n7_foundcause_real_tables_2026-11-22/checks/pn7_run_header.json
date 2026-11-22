@@ -1,0 +1,117 @@
+[
+ {
+  "label": "precheck",
+  "time_local": "2026-11-22T22:05:16",
+  "time_unix": 1795359916.9332793,
+  "freeze_commit": "82ef38cb2166915ab42477103fe16b6e7aec3802",
+  "remote_branches": [
+   "origin/docs/n1-pilot"
+  ],
+  "head": "82ef38cb2166915ab42477103fe16b6e7aec3802",
+  "sha256sums_sha": "e865107f86f62803f71a1a7baee250d8e1c3a0cfd915a7e2cf90e71ab2d9fe96",
+  "deps_sha": "f7e9766409ea80f66ebff00d8bad828811ae067195d71415d3795c3af5565f0a",
+  "n_files": 19,
+  "n_dependency_files": 219,
+  "data_sha": {
+   "sachs": "07087f7020995980f998b6683a85bb974b6e129cd4ce3a8cd55633ab79b814d0",
+   "wine_white": "76c3f809815c17c07212622f776311faeb31e87610d52c26d87d6e361b169836"
+  },
+  "data_ok": true,
+  "checkpoint_ok": true,
+  "python": "3.11.16",
+  "ok": true,
+  "problems": []
+ },
+ {
+  "label": "pn7_start_sachs",
+  "time_local": "2026-11-22T22:05:30",
+  "time_unix": 1795359930.9902573,
+  "freeze_commit": "82ef38cb2166915ab42477103fe16b6e7aec3802",
+  "remote_branches": [
+   "origin/docs/n1-pilot"
+  ],
+  "head": "82ef38cb2166915ab42477103fe16b6e7aec3802",
+  "sha256sums_sha": "e865107f86f62803f71a1a7baee250d8e1c3a0cfd915a7e2cf90e71ab2d9fe96",
+  "deps_sha": "f7e9766409ea80f66ebff00d8bad828811ae067195d71415d3795c3af5565f0a",
+  "n_files": 19,
+  "n_dependency_files": 219,
+  "data_sha": {
+   "sachs": "07087f7020995980f998b6683a85bb974b6e129cd4ce3a8cd55633ab79b814d0",
+   "wine_white": "76c3f809815c17c07212622f776311faeb31e87610d52c26d87d6e361b169836"
+  },
+  "data_ok": true,
+  "checkpoint_ok": true,
+  "python": "3.11.16",
+  "ok": true,
+  "problems": []
+ },
+ {
+  "label": "pn7_end_sachs",
+  "time_local": "2026-11-23T00:32:41",
+  "time_unix": 1795368761.702354,
+  "freeze_commit": "82ef38cb2166915ab42477103fe16b6e7aec3802",
+  "remote_branches": [
+   "origin/docs/n1-pilot"
+  ],
+  "head": "82ef38cb2166915ab42477103fe16b6e7aec3802",
+  "sha256sums_sha": "e865107f86f62803f71a1a7baee250d8e1c3a0cfd915a7e2cf90e71ab2d9fe96",
+  "deps_sha": "f7e9766409ea80f66ebff00d8bad828811ae067195d71415d3795c3af5565f0a",
+  "n_files": 19,
+  "n_dependency_files": 219,
+  "data_sha": {
+   "sachs": "07087f7020995980f998b6683a85bb974b6e129cd4ce3a8cd55633ab79b814d0",
+   "wine_white": "76c3f809815c17c07212622f776311faeb31e87610d52c26d87d6e361b169836"
+  },
+  "data_ok": true,
+  "checkpoint_ok": true,
+  "python": "3.11.16",
+  "ok": true,
+  "problems": []
+ },
+ {
+  "label": "pn7_start_wine",
+  "time_local": "2026-11-23T00:32:43",
+  "time_unix": 1795368763.0800335,
+  "freeze_commit": "82ef38cb2166915ab42477103fe16b6e7aec3802",
+  "remote_branches": [
+   "origin/docs/n1-pilot"
+  ],
+  "head": "82ef38cb2166915ab42477103fe16b6e7aec3802",
+  "sha256sums_sha": "e865107f86f62803f71a1a7baee250d8e1c3a0cfd915a7e2cf90e71ab2d9fe96",
+  "deps_sha": "f7e9766409ea80f66ebff00d8bad828811ae067195d71415d3795c3af5565f0a",
+  "n_files": 19,
+  "n_dependency_files": 219,
+  "data_sha": {
+   "sachs": "07087f7020995980f998b6683a85bb974b6e129cd4ce3a8cd55633ab79b814d0",
+   "wine_white": "76c3f809815c17c07212622f776311faeb31e87610d52c26d87d6e361b169836"
+  },
+  "data_ok": true,
+  "checkpoint_ok": true,
+  "python": "3.11.16",
+  "ok": true,
+  "problems": []
+ },
+ {
+  "label": "pn7_end_wine",
+  "time_local": "2026-11-23T02:46:45",
+  "time_unix": 1795376805.486663,
+  "freeze_commit": "82ef38cb2166915ab42477103fe16b6e7aec3802",
+  "remote_branches": [
+   "origin/docs/n1-pilot"
+  ],
+  "head": "82ef38cb2166915ab42477103fe16b6e7aec3802",
+  "sha256sums_sha": "e865107f86f62803f71a1a7baee250d8e1c3a0cfd915a7e2cf90e71ab2d9fe96",
+  "deps_sha": "f7e9766409ea80f66ebff00d8bad828811ae067195d71415d3795c3af5565f0a",
+  "n_files": 19,
+  "n_dependency_files": 219,
+  "data_sha": {
+   "sachs": "07087f7020995980f998b6683a85bb974b6e129cd4ce3a8cd55633ab79b814d0",
+   "wine_white": "76c3f809815c17c07212622f776311faeb31e87610d52c26d87d6e361b169836"
+  },
+  "data_ok": true,
+  "checkpoint_ok": true,
+  "python": "3.11.16",
+  "ok": true,
+  "problems": []
+ }
+]

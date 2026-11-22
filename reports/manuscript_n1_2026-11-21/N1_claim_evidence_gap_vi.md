@@ -144,6 +144,9 @@
      - Tham chiếu bốn base ở k0 đo biến động của toàn bộ lịch suy luận. Nó không phải đối chứng riêng cho hoán vị cột, không phải ngưỡng, và không được lấy trừ khỏi flips.
      - Chỉ k = 20. D ∈ [2, 50] là dải huấn luyện được công bố (đã xác minh ở FoundCause v2), không phải giới hạn kỹ thuật.
      - P-N7 không mở rộng kết luận về cơ chế ngưỡng của CDFM hay cách sửa R-L sang FoundCause.
+   - **P-N7 đã chạy xong (23/11), chờ user duyệt:** [PN7_results_vi.md](../n7_foundcause_real_tables_2026-11-22/PN7_results_vi.md).
+     - P7-1W (Wine) CONFIRMED; P7-1S (Sachs) NOT_CONFIRMED, trong family Holm riêng của P-N7.
+     - C11 chưa đổi. Báo cáo §4 đề xuất câu mới, giữ riêng bằng chứng của P-N5 và P-N7.
 5. **Gom thống kê trong lúc viết** (không phải bước riêng):
    - mỗi bảng của bài ghi bộ dữ liệu (P-N1 EXP/HELD, EXP2, HELD2), giả thuyết đã khóa (file luật), phép kiểm và mức bằng chứng;
    - bảng các pha và cổng toàn vẹn đưa vào appendix;
@@ -215,3 +218,4 @@ Số liệu không đổi. Bản trước là `b62b8da`.
 | 31 | §3, mục 8–9 | "Mitigation and its scope (C9)" | Mục 8 dùng C13–C15; limitations thêm giá ở k0, CDFM tuyến tính chưa xác nhận, và bác bỏ chéo vượt cận danh nghĩa |
 | 32 | §2 gap 4 | "FoundCause mới ở mức P-N1" | Thêm quyết định GO thiết kế thu gọn và trỏ tới nháp P-N7 v0 (C11 cho FoundCause); chưa khóa |
 | 33 | §2 gap 4 | "Nháp luật P-N7 v0 … chờ user duyệt" | Luật v1 đã khóa (lượt 7): phương án B; phạm vi của P7-1; input dùng lại; tham chiếu lịch chỉ để mô tả |
+| 34 | §2 gap 4 | "Luật P-N7 v1 đã khóa" | Thêm dòng trạng thái: P-N7 đã chạy xong (Wine CONFIRMED, Sachs NOT_CONFIRMED); C11 chưa đổi, chờ user duyệt |

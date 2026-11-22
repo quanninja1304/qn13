@@ -1,0 +1,48 @@
+{
+ "set": "PN7",
+ "schedule_source": {
+  "ok": true,
+  "counts": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "positions": [
+   5432,
+   6216,
+   6501,
+   6655
+  ]
+ },
+ "n_jobs": 54,
+ "inputs_checked": 54,
+ "row_index_inputs": 40,
+ "pn7_sachs_adapter42_max_abs_diff": 0.0,
+ "pn7_wine_adapter42_max_abs_diff": 0.0,
+ "freeze_gate": {
+  "sachs": {
+   "start": {
+    "ok": true,
+    "time_local": "2026-11-22T22:05:30"
+   },
+   "end": {
+    "ok": true,
+    "time_local": "2026-11-23T00:32:41"
+   }
+  },
+  "wine": {
+   "start": {
+    "ok": true,
+    "time_local": "2026-11-23T00:32:43"
+   },
+   "end": {
+    "ok": true,
+    "time_local": "2026-11-23T02:46:45"
+   }
+  }
+ },
+ "ok": true,
+ "problems": [],
+ "n_problems": 0
+}

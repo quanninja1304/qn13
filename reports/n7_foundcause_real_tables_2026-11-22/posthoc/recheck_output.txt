@@ -1,0 +1,17 @@
+FoundCause output files on the tables read: 54 (expected 54)
+
+[sachs] input hashes match Study 4: True (21/21); k0 rerun bitwise: True; adapter at base 42 max deviation 0 (<= 1e-06: True)
+  m0 7; flips FC mean 0.25 [min 0, max 1]; max(PC, GES) mean 0.20; dm mean +0.25; dp mean 0.0401
+  contrast D_r: mean +0.0500 CI95 [-0.2331, +0.3331] t 0.3697 p 0.3578 degenerate False; +/0/- 4/13/3
+  schedule reference at k0 (flips vs base 42): {1042: 0, 2042: 0, 3042: 0, 4042: 0}; mean 0.00; max 0
+  vs reading: values equal True; mean True; p True; schedule True; m0 True
+
+[wine] input hashes match Study 4: True (21/21); k0 rerun bitwise: True; adapter at base 42 max deviation 0 (<= 1e-06: True)
+  m0 8; flips FC mean 16.00 [min 11, max 21]; max(PC, GES) mean 0.10; dm mean +15.60; dp mean 0.1357
+  contrast D_r: mean +15.9000 CI95 [+14.5092, +17.2908] t 23.9273 p 5.98e-16 degenerate False; +/0/- 20/0/0
+  schedule reference at k0 (flips vs base 42): {1042: 0, 2042: 1, 3042: 0, 4042: 1}; mean 0.50; max 1
+  vs reading: values equal True; mean True; p True; schedule True; m0 True
+
+Holm 0.05 over the two hypotheses (step-down):
+  P7-1W: p 5.98e-16 vs 0.0250 -> CONFIRMED (reading: CONFIRMED)
+  P7-1S: p 0.3578 vs 0.0500 -> NOT_CONFIRMED (reading: NOT_CONFIRMED)

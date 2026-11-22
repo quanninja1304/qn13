@@ -466,6 +466,24 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
   - G2: output FoundCause trên một input DEV của P-N1 trùng từng bit với output đã lưu ngày 13/11, nên cấu hình trùng P-N1.
   - Ước tính 2.77 giờ mỗi lượt và 5.54 giờ cho hai lượt.
   - Không chạy FoundCause trên bảng thật trước khi đóng băng. Chi tiết: [`PN7_rules_vi.md`](reports/n7_foundcause_real_tables_2026-11-22/PN7_rules_vi.md) §12, [`checks/gates7.json`](reports/n7_foundcause_real_tables_2026-11-22/checks/gates7.json).
+- **Cập nhật 23/11, kết quả P-N7 (gap 4, FoundCause trên hai bảng thật):** hai lượt chạy dưới đóng băng `82ef38c`: Sachs 2.45 giờ, Wine 2.23 giờ, đều dưới mốc dừng 3 giờ.
+  - **Toàn vẹn:**
+    - cổng đóng băng đạt ở đầu và cuối cả hai lượt;
+    - kiểm hoàn tất đạt: 54/54 job, input khớp P-N5, chỉ số hàng trùng nhau, chạy lại k0 trùng từng bit, adapter ở base 42 lệch 0;
+    - kiểm lại độc lập, viết trước khi đọc output chính, khớp hoàn toàn.
+  - **Holm (family riêng, hai giả thuyết):**
+    - P7-1W (Wine) CONFIRMED: E_r[D_r] = +15.90 [+14.51, +17.29], 20/20 lần sinh dương;
+    - P7-1S (Sachs) NOT_CONFIRMED: +0.05 [−0.23, +0.33].
+  - **Mô tả:**
+    - ở Wine, FoundCause thêm trung bình 15.6 cạnh trên 55 cặp (m0 = 8);
+    - ở Sachs, skeleton hầu như không đổi (flips 0.25, đối chứng cổ điển 0.20), dù xác suất cạnh có đổi (Δp 0.040);
+    - tham chiếu lịch ở k0: nhiều nhất 1 cặp.
+  - **Ghi chú quy trình:** lần chạy thử đầu của script kiểm lại đã in giá trị của bảng thay thế DEV7, trong khi G7 chỉ cho kiểm cấu trúc. Không quyết định nào phụ thuộc các giá trị đó.
+  - **Chờ user duyệt:** cập nhật C11 (giữ riêng bằng chứng của P-N5 và P-N7) và §7 của bản thảo. Chi tiết: [`PN7_results_vi.md`](reports/n7_foundcause_real_tables_2026-11-22/PN7_results_vi.md).
+- **Cập nhật 23/11, rà prior art có ghi ngày:** [`N1_prior_art_search_2026-11-22_vi.md`](reports/manuscript_n1_2026-11-21/N1_prior_art_search_2026-11-22_vi.md).
+  - Không bài nào nối biến độc lập vào một input cố định của model causal discovery học sẵn.
+  - Đã đọc Appendix I–J của FoundCause v2. Thí nghiệm gần nhất là một đối chứng trả lại các biến bị ẩn; các biến đó là nguyên nhân chung của các cặp được chấm, nên đáp án trên các cặp ấy thay đổi.
+  - Bài mới gần nhất về tinh thần là Kim et al. (TMLR 2025): chạy model trên các tập con biến ngẫu nhiên rồi lấy trung bình; không đo output khi nối cột.
 
 ---
 
