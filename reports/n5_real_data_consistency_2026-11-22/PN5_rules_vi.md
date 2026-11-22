@@ -274,3 +274,37 @@ Chỉ đọc kết quả khi tất cả các điều sau đều đạt:
     - mã băm `idx`;
     - định nghĩa DEV5.
   - **Trình tự đã duyệt:** khóa và push luật, rồi G1–G7, đóng băng, và chạy P-N5 trong phạm vi đã nêu.
+  - **Mốc khóa:** `99197d8`, push lúc 2026-11-22T05:28:35Z (GitHub activity API).
+- **Đóng băng code, 22/11/2026,** trước khi chạy bất kỳ model nào trên hai bảng thật.
+  - **Code mới** trong `artifacts/n5_runs/pn5/`: `common5.py`, `stats5.py`, `measures5.py`, `classical5.py`, `prep5.py`, `run5.py`, `gates5.py`, `analyze5.py`, `completeness5.py`, `verify_freeze5.py`, `freeze5.py`, `run_pn5.sh`.
+  - **Snapshot** [`code/`](code/):
+    - `SHA256SUMS` có 15 file: 12 file code và 3 phụ thuộc (`common.py`, `er2-rff-gauss.yaml` của bảng thay thế, `common2.py`). Ba phụ thuộc khớp mã băm của snapshot P-N1 và P-N2.
+    - `DEPS_SHA256.json` có 155 mã băm: nguồn gói `cdfm`, `avici` và `causallearn`; checkpoint của CDFM và AVICI; hai file dữ liệu. Kèm mã băm của manifest dữ liệu và phiên bản gói.
+  - **Làm rõ cách cài đặt, không đổi luật:**
+    - `prep5.py` tính X_R một lần và lưu lại (§1).
+    - Runner từ chối chạy nếu X_R tính lại khác bản đã lưu.
+    - PC và GES chạy trong một tiến trình con riêng, để dừng được ở giới hạn 900 giây (§3).
+  - **Sửa code trước khi đóng băng:** trong `gates5.py`, một khóa của G3 trùng tên tham số và làm script dừng. Chỉ đổi tên khóa; không đổi phép kiểm nào.
+  - **DEV5** (bảng thay thế, base 470000, 2 lần sinh): 42 lần chạy (AVICI 11, CDFM 11, PC 11, GES 9), 0 lỗi. Output chỉ dùng cho cổng.
+  - **Cả bảy cổng đạt** ([`checks/gates5.json`](checks/gates5.json)):
+    - G1:
+      - SHA-256 hai file khớp manifest; đúng kích thước và tên cột;
+      - `idx` tái lập và khớp mã băm ở §1;
+      - Sachs có 0 hàng dư; Wine có 10 hàng dư, tức 490 vector khác nhau;
+      - X_R float32, mỗi cột có |trung bình| ≤ 6.4e-9 và |độ lệch chuẩn − 1| ≤ 7.8e-9;
+      - bản lưu khớp.
+    - G2:
+      - trên 40 seed, ở k = 20 đường sinh tổng quát trùng từng bit với `padding2` (80 khối);
+      - ở k = 40, tham số như nhau giữa hai lần gọi, và đồ thị đúng là U < p_e;
+      - e = 0 cho đồ thị rỗng;
+      - sai lệch tương đối so với code RFF của AVICI tối đa 5.7e-15;
+      - số cạnh đệm ở e = 2 là 29–54 (k = 20) và 55–96 (k = 40).
+    - G3: cả 162 input (81 mỗi bảng) đạt. Khối thật trùng từng bit với X_R, khối đệm trùng từng bit với output bộ sinh, và 162 mã băm input đều khác nhau ([`checks/inputs5.json`](checks/inputs5.json)).
+    - G4: `analyze5.py --set DEV5 --smoke` chạy hết đường đọc mà không in hay ghi giá trị. `completeness5.py --set DEV5` chỉ báo thiếu cổng đóng băng, đúng như dự kiến.
+    - G5: t ghép cặp khớp `scipy.stats.ttest_1samp` (t ≤ 1e-12, p tương đối ≤ 1e-9). Các ca SE = 0, bước dừng Holm, contrast max, loại timeout và đếm dấu cho đúng kết quả định trước.
+    - G6: cả bốn thuật toán trùng từng bit khi chạy lại k0 và một input D = 51.
+    - G7: ước tính 1.83 giờ cho 616 job, dưới 3 giờ.
+      - Ước tính dùng trung vị thời gian của DEV5, gồm cả thời gian biên dịch của AVICI, nên nghiêng về phía cao.
+      - Trên DEV5, GES ở D = 31 có cấu trúc mất khoảng 12 s (1 luồng), so với 3.8 s trong bảng ngân sách (2 luồng). CDFM ở D = 51 mất khoảng 22 s, so với 15.8 s.
+      - Bộ nhớ đỉnh: AVICI 1.04 GB, CDFM 0.64 GB, PC 0.19 GB, GES 0.09 GB.
+  - Theo trình tự user đã duyệt: các cổng đạt và ước tính không vượt 3 giờ, nên chạy P-N5 sau khi push commit đóng băng.

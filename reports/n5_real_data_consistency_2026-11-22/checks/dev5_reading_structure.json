@@ -1,0 +1,111 @@
+{
+ "set": "DEV5",
+ "smoke": true,
+ "hypothesis_ids": [
+  "P5-1X-A",
+  "P5-1X-C",
+  "P5-2X-20",
+  "P5-2X-40"
+ ],
+ "n_hypotheses": 4,
+ "hypothesis_fields": [
+  "alg",
+  "bound",
+  "ci95",
+  "components",
+  "degenerate",
+  "df",
+  "direction",
+  "estimand",
+  "estimate_opposite_side",
+  "holm_rank",
+  "holm_threshold",
+  "label",
+  "mean",
+  "n",
+  "n_above",
+  "n_at",
+  "n_below",
+  "n_distinct",
+  "p_one_sided",
+  "sd",
+  "se",
+  "sign",
+  "size",
+  "t",
+  "table",
+  "values"
+ ],
+ "structure": {
+  "set": "str",
+  "rules": "str",
+  "n_draws": "int",
+  "holm_fwer": "float",
+  "descriptive": {
+   "avici": {
+    "standin": "dict[4]"
+   },
+   "cdfm": {
+    "standin": "dict[4]"
+   },
+   "pc": {
+    "standin": "dict[4]"
+   },
+   "ges": {
+    "standin": "dict[3]"
+   }
+  },
+  "p51_style_other_conditions": {
+   "standin": {
+    "k20_e2": "dict[2]",
+    "k40_e0": "dict[2]",
+    "k40_e2": "dict[2]"
+   }
+  },
+  "pair_change_frequency": {
+   "standin": {
+    "avici": "dict[4]",
+    "cdfm": "dict[4]",
+    "pc": "dict[4]",
+    "ges": "dict[3]"
+   }
+  },
+  "paired_differences": {
+   "avici": {
+    "standin": "dict[4]"
+   },
+   "cdfm": {
+    "standin": "dict[4]"
+   },
+   "pc": {
+    "standin": "dict[4]"
+   },
+   "ges": {
+    "standin": "dict[4]"
+   }
+  },
+  "timeouts": {
+   "avici": {
+    "standin": "dict[4]"
+   },
+   "cdfm": {
+    "standin": "dict[4]"
+   },
+   "pc": {
+    "standin": "dict[4]"
+   },
+   "ges": {
+    "standin": "dict[3]"
+   }
+  },
+  "context": {
+   "standin": {
+    "avici": "dict[1]",
+    "cdfm": "dict[3]",
+    "pc": "dict[1]",
+    "ges": "dict[1]",
+    "table": "dict[7]"
+   }
+  }
+ }
+}

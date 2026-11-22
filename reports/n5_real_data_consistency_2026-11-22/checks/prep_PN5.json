@@ -1,0 +1,48 @@
+{
+ "sachs": {
+  "XR_sha": "4e51d4698711f191448779d5aba73cebd4e413112a8a23f065a91757d739c9e3",
+  "idx_sha": "c2914a4f8500a51f73bea0903d2ad437ec094a6699dc206a5ac3d09ba6ce9916",
+  "n_total": 853,
+  "shape": [
+   500,
+   11
+  ],
+  "n_excess_duplicates_in_selection": 0,
+  "names": [
+   "Raf",
+   "Mek",
+   "Plcg",
+   "PIP2",
+   "PIP3",
+   "Erk",
+   "Akt",
+   "PKA",
+   "PKC",
+   "P38",
+   "Jnk"
+  ]
+ },
+ "wine": {
+  "XR_sha": "9cd901fb252fe6c4f926cb80147d0033f4c2dffa984cd6c632d588a5f9034dd5",
+  "idx_sha": "1335a9a588b6d5e3262cd9fc1616df60af02dabde6da4f7a6a5de0298bc8e9d5",
+  "n_total": 4898,
+  "shape": [
+   500,
+   11
+  ],
+  "n_excess_duplicates_in_selection": 10,
+  "names": [
+   "fixed acidity",
+   "volatile acidity",
+   "citric acid",
+   "residual sugar",
+   "chlorides",
+   "free sulfur dioxide",
+   "total sulfur dioxide",
+   "density",
+   "pH",
+   "sulphates",
+   "alcohol"
+  ]
+ }
+}

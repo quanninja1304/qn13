@@ -1,0 +1,70 @@
+{
+ "set": "DEV5",
+ "n_jobs": 42,
+ "per_algorithm": {
+  "avici": {
+   "jobs": 11,
+   "ok": 11,
+   "timeout": 0,
+   "error": 0,
+   "budget_stop": 0,
+   "timeouts": [],
+   "reruns_bitwise_identical": {
+    "standin__k0 vs rerun": true,
+    "standin__k40_e0__r00 vs rerun": true
+   }
+  },
+  "cdfm": {
+   "jobs": 11,
+   "ok": 11,
+   "timeout": 0,
+   "error": 0,
+   "budget_stop": 0,
+   "timeouts": [],
+   "reruns_bitwise_identical": {
+    "standin__k0 vs rerun": true,
+    "standin__k40_e0__r00 vs rerun": true
+   }
+  },
+  "pc": {
+   "jobs": 11,
+   "ok": 11,
+   "timeout": 0,
+   "error": 0,
+   "budget_stop": 0,
+   "timeouts": [],
+   "reruns_bitwise_identical": {
+    "standin__k0 vs rerun": true,
+    "standin__k40_e0__r00 vs rerun": true
+   }
+  },
+  "ges": {
+   "jobs": 9,
+   "ok": 9,
+   "timeout": 0,
+   "error": 0,
+   "budget_stop": 0,
+   "timeouts": [],
+   "reruns_bitwise_identical": {
+    "standin__k0 vs rerun": true,
+    "standin__k40_e0__r00 vs rerun": true
+   }
+  }
+ },
+ "XR": {
+  "standin": {
+   "recomputed": "2fc47faf9d66c6186c6e62ab803a492fba06c53c84a206728c711e65c862b19c",
+   "saved": "2fc47faf9d66c6186c6e62ab803a492fba06c53c84a206728c711e65c862b19c",
+   "gate_record": "2fc47faf9d66c6186c6e62ab803a492fba06c53c84a206728c711e65c862b19c"
+  }
+ },
+ "freeze_gate": {
+  "pn5_start": null,
+  "pn5_end": null
+ },
+ "ok": false,
+ "problems": [
+  "freeze gate pn5_start missing or not ok",
+  "freeze gate pn5_end missing or not ok"
+ ]
+}

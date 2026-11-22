@@ -1,0 +1,25 @@
+{
+ "standin": {
+  "XR_sha": "2fc47faf9d66c6186c6e62ab803a492fba06c53c84a206728c711e65c862b19c",
+  "idx_sha": "0c3fc3e2e8b0514136a044efedc6d6aa32df05e1f58c8cca9cc665e1521f4c8c",
+  "n_total": 500,
+  "shape": [
+   500,
+   11
+  ],
+  "n_excess_duplicates_in_selection": 0,
+  "names": [
+   "V0",
+   "V1",
+   "V2",
+   "V3",
+   "V4",
+   "V5",
+   "V6",
+   "V7",
+   "V8",
+   "V9",
+   "V10"
+  ]
+ }
+}

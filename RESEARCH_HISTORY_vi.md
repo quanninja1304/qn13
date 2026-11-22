@@ -366,6 +366,7 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
   - Chỉnh sửa quan trọng nhất: sửa lỗi chuẩn hóa hai lần. Input là [X_R | P], không chuẩn hóa lại toàn bảng.
   - Các chỉnh sửa khác: lý do chọn normal-score (trích Harris & Drton 2013); ý nghĩa của P5-1 và giới hạn của phép kiểm; luật timeout thống nhất và theo dõi mốc 3 giờ trong lượt chạy; số hàng dư của Wine.
   - Chưa chạy model nào trên hai bảng thật. Chi tiết: [`PN5_rules_vi.md`](reports/n5_real_data_consistency_2026-11-22/PN5_rules_vi.md) §12.
+- **Cập nhật 22/11, cổng P-N5 đạt, đóng băng code:** G1–G7 đạt (DEV5 là bảng thay thế tổng hợp; không chạy model nào trên bảng thật). Cả 162 input có khối thật trùng từng bit với X_R. Ước tính 1.83 giờ cho 616 job. Snapshot gồm phụ thuộc và mã băm của hai file dữ liệu. Chi tiết: [`PN5_rules_vi.md`](reports/n5_real_data_consistency_2026-11-22/PN5_rules_vi.md) §12, [`checks/gates5.json`](reports/n5_real_data_consistency_2026-11-22/checks/gates5.json).
 
 ---
 
