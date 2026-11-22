@@ -1,0 +1,55 @@
+{
+ "rule": "J = merged/k + split/|E_T| on A20 and S20, mean over both families; ties to the smaller level",
+ "table": {
+  "RL|1e-05": {
+   "mean_J": 0.07052602853135975,
+   "n_inputs": 32,
+   "merged_mean": 0.0,
+   "split_mean": 1.625,
+   "k0_split_mean": 1.625,
+   "inputs_with_merge": 0
+  },
+  "RL|0.0001": {
+   "mean_J": 0.06411155484714923,
+   "n_inputs": 32,
+   "merged_mean": 0.0,
+   "split_mean": 1.4375,
+   "k0_split_mean": 1.4375,
+   "inputs_with_merge": 0
+  },
+  "RL|0.001": {
+   "mean_J": 0.1176829834185778,
+   "n_inputs": 32,
+   "merged_mean": 1.3125,
+   "split_mean": 1.25,
+   "k0_split_mean": 1.25,
+   "inputs_with_merge": 6
+  },
+  "RH|0.001": {
+   "mean_J": 0.08528297297580419,
+   "n_inputs": 32,
+   "merged_mean": 0.0,
+   "split_mean": 1.8125,
+   "k0_split_mean": 1.625,
+   "inputs_with_merge": 0
+  },
+  "RH|0.01": {
+   "mean_J": 0.07052602853135975,
+   "n_inputs": 32,
+   "merged_mean": 0.0,
+   "split_mean": 1.625,
+   "k0_split_mean": 1.5625,
+   "inputs_with_merge": 0
+  },
+  "RH|0.05": {
+   "mean_J": 0.07052602853135975,
+   "n_inputs": 32,
+   "merged_mean": 0.0,
+   "split_mean": 1.625,
+   "k0_split_mean": 1.25,
+   "inputs_with_merge": 0
+  }
+ },
+ "alpha_L": 0.0001,
+ "alpha_H": 0.01
+}

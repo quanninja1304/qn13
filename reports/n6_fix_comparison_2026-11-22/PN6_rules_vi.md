@@ -255,3 +255,32 @@ Bảng thật: σ_f(c), φ_f(c) và φ_f(k0), tức độ lệch ở k0 nếu s�
     - R-B không chạy lại và chỉ là số tham khảo;
     - không thêm k = 40 ở dữ liệu tổng hợp.
   - **Ghi chú cho sau P-N6, không thuộc thiết kế này:** HSIC có thể kém Fisher-z ở quan hệ tuyến tính. Một phép kiểm từng cặp kết hợp Fisher-z và HSIC, mỗi phép ở α_L/2, vẫn chỉ dùng input và giữ quyết định cục bộ. Nếu P6-1 ở hệ tuyến tính không được xác nhận, đây là ứng viên cho bước sau.
+  - **Mốc khóa:** `678f55f`, push lúc 2026-11-22T09:32:14Z (GitHub activity API), cùng `71de72f` và `c3dd77b`.
+- **Đóng băng code, 22/11/2026,** trước khi sinh input held-out nào và trước khi chạy model nào trên hai bảng thật.
+  - **Code mới** trong `artifacts/n6_runs/pn6/`: `common6.py`, `run6.py`, `measures6.py`, `stats6.py`, `alpha6.py`, `analyze6.py`, `completeness6.py`, `gates6.py`, `verify_freeze6.py`, `freeze6.py`, `run_dev6.sh`, `run_pn6.sh`.
+  - **Snapshot** [`code/`](code/):
+    - `SHA256SUMS` gồm 12 file code và 11 phụ thuộc. Các phụ thuộc là `common.py`, `metrics.py` và bốn file cấu hình của P-N1; `common2.py` và `screen.py` của P-N2; `common4.py` và `selector4.py` của P-N4; `common5.py` của P-N5. Mỗi phụ thuộc khớp mã băm trong snapshot gốc của nó.
+    - `DEPS_SHA256.json` gồm: nguồn gói `cdfm` và `avici`; checkpoint của CDFM và AVICI; hai file dữ liệu; bốn output plain k0 của P-N5 dùng cho φ trên bảng thật; `alpha6.json`. Thêm mã băm của manifest dữ liệu và của `inputs5.json`, cùng phiên bản gói.
+  - **Làm rõ cách cài đặt, không đổi luật:**
+    - p-value HSIC tính một lần cho mỗi input và lưu lại; R-L, R-H và cả hai model dùng chung. Runner kiểm mã băm input trước khi dùng p-value đã lưu.
+    - Thứ tự chạy: p-value; plain (AVICI, CDFM); R-L (AVICI, CDFM); R-H (AVICI, CDFM). Trong mỗi biến thể R, dữ liệu tổng hợp chạy trước, rồi tới bảng thật.
+    - Mốc cho φ trên bảng thật là output plain k0 đã có của P-N5; mã băm của chúng được đóng băng.
+  - **DEV6** (16 hệ, base 490000): 48 lần tính p-value và 250 job mỗi model (plain, R-L, R-H, pipeline chạy mọi thành phần, R-oracle, chạy lại); 0 lỗi. Không chạy model nào trên bảng thật. Output chỉ dùng cho cổng.
+  - **Chọn α bằng J** (G3; không dùng output model; [`checks/alpha6.json`](checks/alpha6.json)):
+    - R-L: J = 0.0705 ở 10⁻⁵, **0.0641 ở 10⁻⁴**, 0.1177 ở 10⁻³ (có gộp nhầm ở 6 input). Chọn **α_L = 10⁻⁴**.
+    - R-H: J = 0.0853 ở 0.001, 0.0705 ở 0.01 và ở 0.05. Hòa, nên chọn mức nhỏ hơn: **α_H = 0.01**.
+    - Mô tả từ cùng bảng: với R-L, số cạnh đích bị tách ở k0 bằng số đó khi có đệm, ở cả ba mức. Với R-H, có đệm thì bị tách nhiều hơn k0, ví dụ 1.63 so với 1.56 ở 0.01, và 1.63 so với 1.25 ở 0.05.
+  - **Cả chín cổng đạt** ([`checks/gates6.json`](checks/gates6.json)):
+    - G1: 48 input DEV6 sinh lại trùng từng bit, khối đích của input có đệm trùng k0; 82 input bảng thật khớp `inputs5.json` của P-N5.
+    - G2: 1 184/7 520 phần tử p-value của khối đích lệch so với k0, tối đa 2.05e−15, trong dung sai 1e−12. Quyết định R-L trùng chính xác ở cả ba mức; `p_hsic` tính lại trùng từng bit.
+    - G3: có bản ghi chọn α.
+    - G4: phát biểu có điều kiện của R-L đúng từng bit ở cả 32 input có đệm thỏa điều kiện, cho mỗi model. R-oracle trùng plain ở k0 từng bit, ở 4 input × 2 model.
+    - G5: bộ chọn ngưỡng chép lại tái lập ngưỡng NATIVE của CDFM, lệch tối đa 3.3e−16; ngưỡng cục bộ ở k0 bằng NATIVE.
+    - G6: sáu ca kiểm của code thống kê đều đúng.
+    - G7: code đọc chạy hết trên DEV6 (6 giả thuyết, 18 nhóm mô tả). Kiểm hoàn tất DEV6 đạt: 336 job; quyết định R-L trùng k0 ở 32/32 input; phát biểu có điều kiện đúng từng bit ở 64/64 trường hợp.
+    - G8: chạy lại trùng từng bit (2 input × 3 biến thể × 2 model).
+    - G9:
+      - ước tính 2.6 giờ cho lượt chính (trung vị DEV6 × số job, × 1.10 + 300 s), dưới 3 giờ;
+      - bộ nhớ đỉnh: AVICI 1.44 GB, CDFM 0.62 GB;
+      - pipeline chạy mọi thành phần trên DEV6: các thành phần không chứa biến đích thêm 92 s vào 104 s thời gian model của R-L với AVICI, và 61 s vào 136 s với CDFM.
+  - Theo trình tự user đã duyệt: các cổng đạt và ước tính không vượt 3 giờ, nên chạy P-N6 sau khi push commit đóng băng.

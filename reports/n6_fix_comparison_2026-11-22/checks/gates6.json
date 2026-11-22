@@ -1,0 +1,155 @@
+{
+ "gates": {
+  "G1": {
+   "ok": true,
+   "n_dev_inputs": 48,
+   "problems": [],
+   "n_real_inputs": 82,
+   "real_mismatch": []
+  },
+  "G2": {
+   "ok": true,
+   "max_abs_dp": 2.0539125955565396e-15,
+   "elements_differing": 1184,
+   "elements": 7520,
+   "decision_mismatch": [],
+   "p_hsic_reproducible": true
+  },
+  "G3": {
+   "ok": true,
+   "alpha_L": 0.0001,
+   "alpha_H": 0.01,
+   "table": {
+    "RL|1e-05": {
+     "mean_J": 0.07052602853135975,
+     "n_inputs": 32,
+     "merged_mean": 0.0,
+     "split_mean": 1.625,
+     "k0_split_mean": 1.625,
+     "inputs_with_merge": 0
+    },
+    "RL|0.0001": {
+     "mean_J": 0.06411155484714923,
+     "n_inputs": 32,
+     "merged_mean": 0.0,
+     "split_mean": 1.4375,
+     "k0_split_mean": 1.4375,
+     "inputs_with_merge": 0
+    },
+    "RL|0.001": {
+     "mean_J": 0.1176829834185778,
+     "n_inputs": 32,
+     "merged_mean": 1.3125,
+     "split_mean": 1.25,
+     "k0_split_mean": 1.25,
+     "inputs_with_merge": 6
+    },
+    "RH|0.001": {
+     "mean_J": 0.08528297297580419,
+     "n_inputs": 32,
+     "merged_mean": 0.0,
+     "split_mean": 1.8125,
+     "k0_split_mean": 1.625,
+     "inputs_with_merge": 0
+    },
+    "RH|0.01": {
+     "mean_J": 0.07052602853135975,
+     "n_inputs": 32,
+     "merged_mean": 0.0,
+     "split_mean": 1.625,
+     "k0_split_mean": 1.5625,
+     "inputs_with_merge": 0
+    },
+    "RH|0.05": {
+     "mean_J": 0.07052602853135975,
+     "n_inputs": 32,
+     "merged_mean": 0.0,
+     "split_mean": 1.625,
+     "k0_split_mean": 1.25,
+     "inputs_with_merge": 0
+    }
+   }
+  },
+  "G4": {
+   "ok": true,
+   "conditional_inputs": {
+    "avici": 32,
+    "cdfm": 32
+   },
+   "conditional_failures": [],
+   "oracle_failures": []
+  },
+  "G5": {
+   "ok": true,
+   "max_abs_threshold_diff": 3.3306690738754696e-16,
+   "local_k0_mismatch": []
+  },
+  "G6": {
+   "ok": true,
+   "cases": {
+    "single_cell_vs_ttest": 1.0,
+    "stratified_vs_formula": 1.0,
+    "ni_p_is_max": true,
+    "degenerate": true,
+    "holm_stop": true,
+    "clopper_pearson_vs_scipy": true
+   }
+  },
+  "G7": {
+   "ok": true,
+   "analyze_smoke": "SMOKE OK 6 hypotheses; 18 descriptive groups; 0 real-table groups",
+   "analyze_err": "",
+   "completeness_rc": 0,
+   "completeness_tail": "{\n \"set\": \"DEV6\",\n \"n_jobs\": 336,\n \"rl\": {\n  \"padded_inputs\": 32,\n  \"decisions_same\": 32,\n  \"conditional_inputs\": 64,\n  \"conditional_bitwise\": 64\n },\n \"freeze_gate\": null,\n \"ok\": true,\n \"n_problems\": 0\n}"
+  },
+  "G8": {
+   "ok": true,
+   "failures": []
+  },
+  "G9": {
+   "ok": true,
+   "estimate_s": 9356.3,
+   "estimate_h": 2.6,
+   "parts_s": {
+    "pvals": 219.7,
+    "avici|plain": 1338.0,
+    "avici|RL": 912.2,
+    "avici|RH": 1043.4,
+    "cdfm|plain": 2273.6,
+    "cdfm|RL": 1235.4,
+    "cdfm|RH": 1210.8
+   },
+   "peak_wset_mb": {
+    "avici": 1443.6,
+    "cdfm": 624.4
+   },
+   "full_pipeline_dev6": {
+    "avici|fullRL": {
+     "target_components_s": 104.3,
+     "other_components_s": 92.0,
+     "n_other_components": 28,
+     "n_jobs": 48
+    },
+    "avici|fullRH": {
+     "target_components_s": 113.7,
+     "other_components_s": 82.0,
+     "n_other_components": 29,
+     "n_jobs": 48
+    },
+    "cdfm|fullRL": {
+     "target_components_s": 136.4,
+     "other_components_s": 60.9,
+     "n_other_components": 28,
+     "n_jobs": 48
+    },
+    "cdfm|fullRH": {
+     "target_components_s": 135.1,
+     "other_components_s": 60.4,
+     "n_other_components": 29,
+     "n_jobs": 48
+    }
+   }
+  }
+ },
+ "ok": true
+}

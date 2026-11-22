@@ -1,0 +1,1740 @@
+{
+ "set": "str",
+ "rules": "str",
+ "hypotheses": {
+  "P6-1A-lin": {
+   "kind": "str",
+   "model": "str",
+   "fam": "str",
+   "margin": "float",
+   "Q0": {
+    "estimate": "float",
+    "se": "float",
+    "n_cells": "list",
+    "bound": "float",
+    "degenerate": "bool",
+    "df": "float",
+    "t": "float",
+    "p": "float",
+    "ci95": "list",
+    "sign": "str",
+    "size": "str"
+   },
+   "QA20": {
+    "estimate": "float",
+    "se": "float",
+    "n_cells": "list",
+    "bound": "float",
+    "degenerate": "bool",
+    "df": "float",
+    "t": "float",
+    "p": "float",
+    "ci95": "list",
+    "sign": "str",
+    "size": "str"
+   },
+   "p": "float",
+   "degenerate": "bool",
+   "holm_rank": "int",
+   "holm_threshold": "float",
+   "label": "str"
+  },
+  "P6-1A-rff": {
+   "kind": "str",
+   "model": "str",
+   "fam": "str",
+   "margin": "float",
+   "Q0": {
+    "estimate": "float",
+    "se": "float",
+    "n_cells": "list",
+    "bound": "float",
+    "degenerate": "bool",
+    "df": "float",
+    "t": "float",
+    "p": "float",
+    "ci95": "list",
+    "sign": "str",
+    "size": "str"
+   },
+   "QA20": {
+    "estimate": "float",
+    "se": "float",
+    "n_cells": "list",
+    "bound": "float",
+    "degenerate": "bool",
+    "df": "float",
+    "t": "float",
+    "p": "float",
+    "ci95": "list",
+    "sign": "str",
+    "size": "str"
+   },
+   "p": "float",
+   "degenerate": "bool",
+   "holm_rank": "int",
+   "holm_threshold": "float",
+   "label": "str"
+  },
+  "P6-1C-lin": {
+   "kind": "str",
+   "model": "str",
+   "fam": "str",
+   "margin": "float",
+   "Q0": {
+    "estimate": "float",
+    "se": "float",
+    "n_cells": "list",
+    "bound": "float",
+    "degenerate": "bool",
+    "df": "float",
+    "t": "float",
+    "p": "float",
+    "ci95": "list",
+    "sign": "str",
+    "size": "str"
+   },
+   "QA20": {
+    "estimate": "float",
+    "se": "float",
+    "n_cells": "list",
+    "bound": "float",
+    "degenerate": "bool",
+    "df": "float",
+    "t": "float",
+    "p": "float",
+    "ci95": "list",
+    "sign": "str",
+    "size": "str"
+   },
+   "p": "float",
+   "degenerate": "bool",
+   "holm_rank": "int",
+   "holm_threshold": "float",
+   "label": "str"
+  },
+  "P6-1C-rff": {
+   "kind": "str",
+   "model": "str",
+   "fam": "str",
+   "margin": "float",
+   "Q0": {
+    "estimate": "float",
+    "se": "float",
+    "n_cells": "list",
+    "bound": "float",
+    "degenerate": "bool",
+    "df": "float",
+    "t": "float",
+    "p": "float",
+    "ci95": "list",
+    "sign": "str",
+    "size": "str"
+   },
+   "QA20": {
+    "estimate": "float",
+    "se": "float",
+    "n_cells": "list",
+    "bound": "float",
+    "degenerate": "bool",
+    "df": "float",
+    "t": "float",
+    "p": "float",
+    "ci95": "list",
+    "sign": "str",
+    "size": "str"
+   },
+   "p": "float",
+   "degenerate": "bool",
+   "holm_rank": "int",
+   "holm_threshold": "float",
+   "label": "str"
+  },
+  "P6-2C-lin": {
+   "kind": "str",
+   "model": "str",
+   "fam": "str",
+   "estimate": "float",
+   "se": "float",
+   "n_cells": "list",
+   "bound": "float",
+   "degenerate": "bool",
+   "df": "float",
+   "t": "float",
+   "p": "float",
+   "ci95": "list",
+   "sign": "str",
+   "size": "str",
+   "phi_frozen": "float",
+   "phi_RL": "float",
+   "holm_rank": "int",
+   "holm_threshold": "float",
+   "label": "str"
+  },
+  "P6-2C-rff": {
+   "kind": "str",
+   "model": "str",
+   "fam": "str",
+   "estimate": "float",
+   "se": "float",
+   "n_cells": "list",
+   "bound": "float",
+   "degenerate": "bool",
+   "df": "float",
+   "t": "float",
+   "p": "float",
+   "ci95": "list",
+   "sign": "str",
+   "size": "str",
+   "phi_frozen": "float",
+   "phi_RL": "float",
+   "holm_rank": "int",
+   "holm_threshold": "float",
+   "label": "str"
+  }
+ },
+ "descriptive": {
+  "avici|lin|plain": {
+   "Q0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_k0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "share_sigma_pos_A20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "share_sigma_pos_S20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "worst_abs_dm": "int"
+  },
+  "avici|lin|RL": {
+   "Q0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_k0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "share_sigma_pos_A20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "share_sigma_pos_S20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "worst_abs_dm": "int"
+  },
+  "avici|lin|RH": {
+   "Q0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_k0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "share_sigma_pos_A20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "share_sigma_pos_S20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "worst_abs_dm": "int"
+  },
+  "avici|rff|plain": {
+   "Q0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_k0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "share_sigma_pos_A20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "share_sigma_pos_S20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "worst_abs_dm": "int"
+  },
+  "avici|rff|RL": {
+   "Q0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_k0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "share_sigma_pos_A20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "share_sigma_pos_S20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "worst_abs_dm": "int"
+  },
+  "avici|rff|RH": {
+   "Q0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_k0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "share_sigma_pos_A20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "share_sigma_pos_S20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "worst_abs_dm": "int"
+  },
+  "cdfm|lin|plain": {
+   "Q0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_k0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "share_sigma_pos_A20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "share_sigma_pos_S20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "worst_abs_dm": "int"
+  },
+  "cdfm|lin|RL": {
+   "Q0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_k0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "share_sigma_pos_A20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "share_sigma_pos_S20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "worst_abs_dm": "int"
+  },
+  "cdfm|lin|RH": {
+   "Q0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_k0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "share_sigma_pos_A20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "share_sigma_pos_S20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "worst_abs_dm": "int"
+  },
+  "cdfm|lin|FIXED": {
+   "Q0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_k0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "share_sigma_pos_A20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "share_sigma_pos_S20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "worst_abs_dm": "int"
+  },
+  "cdfm|lin|FROZEN": {
+   "Q0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_k0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "share_sigma_pos_A20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "share_sigma_pos_S20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "worst_abs_dm": "int"
+  },
+  "cdfm|lin|LOCAL": {
+   "Q0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_k0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "share_sigma_pos_A20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "share_sigma_pos_S20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "worst_abs_dm": "int"
+  },
+  "cdfm|rff|plain": {
+   "Q0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_k0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "share_sigma_pos_A20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "share_sigma_pos_S20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "worst_abs_dm": "int"
+  },
+  "cdfm|rff|RL": {
+   "Q0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_k0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "share_sigma_pos_A20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "share_sigma_pos_S20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "worst_abs_dm": "int"
+  },
+  "cdfm|rff|RH": {
+   "Q0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_k0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "share_sigma_pos_A20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "share_sigma_pos_S20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "worst_abs_dm": "int"
+  },
+  "cdfm|rff|FIXED": {
+   "Q0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_k0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "share_sigma_pos_A20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "share_sigma_pos_S20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "worst_abs_dm": "int"
+  },
+  "cdfm|rff|FROZEN": {
+   "Q0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_k0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "share_sigma_pos_A20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "share_sigma_pos_S20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "worst_abs_dm": "int"
+  },
+  "cdfm|rff|LOCAL": {
+   "Q0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "Q_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "G_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_k0": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "phi_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "sigma_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_A20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "dm_S20": {
+    "estimate": "float",
+    "ci95": "list",
+    "label": "tuple"
+   },
+   "share_sigma_pos_A20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "share_sigma_pos_S20": {
+    "k": "int",
+    "n": "int",
+    "ci95": "list"
+   },
+   "worst_abs_dm": "int"
+  }
+ },
+ "screening": {
+  "avici|lin|RL|k0": {
+   "merged_mean": "float",
+   "split_mean": "float",
+   "false_cross_mean": "float",
+   "n_mixed": "int"
+  },
+  "avici|lin|RL|A20": {
+   "merged_mean": "float",
+   "split_mean": "float",
+   "false_cross_mean": "float",
+   "n_mixed": "int"
+  },
+  "avici|lin|RL|S20": {
+   "merged_mean": "float",
+   "split_mean": "float",
+   "false_cross_mean": "float",
+   "n_mixed": "int"
+  },
+  "avici|lin|RH|k0": {
+   "merged_mean": "float",
+   "split_mean": "float",
+   "false_cross_mean": "float",
+   "n_mixed": "int"
+  },
+  "avici|lin|RH|A20": {
+   "merged_mean": "float",
+   "split_mean": "float",
+   "false_cross_mean": "float",
+   "n_mixed": "int"
+  },
+  "avici|lin|RH|S20": {
+   "merged_mean": "float",
+   "split_mean": "float",
+   "false_cross_mean": "float",
+   "n_mixed": "int"
+  },
+  "avici|lin|RL|A20|sigma_by_mixing": {
+   "mixed": {
+    "n": "int",
+    "sigma_pos": "int"
+   },
+   "not_mixed": {
+    "n": "int",
+    "sigma_pos": "int"
+   }
+  },
+  "avici|lin|RL|S20|sigma_by_mixing": {
+   "mixed": {
+    "n": "int",
+    "sigma_pos": "int"
+   },
+   "not_mixed": {
+    "n": "int",
+    "sigma_pos": "int"
+   }
+  },
+  "avici|rff|RL|k0": {
+   "merged_mean": "float",
+   "split_mean": "float",
+   "false_cross_mean": "float",
+   "n_mixed": "int"
+  },
+  "avici|rff|RL|A20": {
+   "merged_mean": "float",
+   "split_mean": "float",
+   "false_cross_mean": "float",
+   "n_mixed": "int"
+  },
+  "avici|rff|RL|S20": {
+   "merged_mean": "float",
+   "split_mean": "float",
+   "false_cross_mean": "float",
+   "n_mixed": "int"
+  },
+  "avici|rff|RH|k0": {
+   "merged_mean": "float",
+   "split_mean": "float",
+   "false_cross_mean": "float",
+   "n_mixed": "int"
+  },
+  "avici|rff|RH|A20": {
+   "merged_mean": "float",
+   "split_mean": "float",
+   "false_cross_mean": "float",
+   "n_mixed": "int"
+  },
+  "avici|rff|RH|S20": {
+   "merged_mean": "float",
+   "split_mean": "float",
+   "false_cross_mean": "float",
+   "n_mixed": "int"
+  },
+  "avici|rff|RL|A20|sigma_by_mixing": {
+   "mixed": {
+    "n": "int",
+    "sigma_pos": "int"
+   },
+   "not_mixed": {
+    "n": "int",
+    "sigma_pos": "int"
+   }
+  },
+  "avici|rff|RL|S20|sigma_by_mixing": {
+   "mixed": {
+    "n": "int",
+    "sigma_pos": "int"
+   },
+   "not_mixed": {
+    "n": "int",
+    "sigma_pos": "int"
+   }
+  },
+  "cdfm|lin|RL|k0": {
+   "merged_mean": "float",
+   "split_mean": "float",
+   "false_cross_mean": "float",
+   "n_mixed": "int"
+  },
+  "cdfm|lin|RL|A20": {
+   "merged_mean": "float",
+   "split_mean": "float",
+   "false_cross_mean": "float",
+   "n_mixed": "int"
+  },
+  "cdfm|lin|RL|S20": {
+   "merged_mean": "float",
+   "split_mean": "float",
+   "false_cross_mean": "float",
+   "n_mixed": "int"
+  },
+  "cdfm|lin|RH|k0": {
+   "merged_mean": "float",
+   "split_mean": "float",
+   "false_cross_mean": "float",
+   "n_mixed": "int"
+  },
+  "cdfm|lin|RH|A20": {
+   "merged_mean": "float",
+   "split_mean": "float",
+   "false_cross_mean": "float",
+   "n_mixed": "int"
+  },
+  "cdfm|lin|RH|S20": {
+   "merged_mean": "float",
+   "split_mean": "float",
+   "false_cross_mean": "float",
+   "n_mixed": "int"
+  },
+  "cdfm|lin|RL|A20|sigma_by_mixing": {
+   "mixed": {
+    "n": "int",
+    "sigma_pos": "int"
+   },
+   "not_mixed": {
+    "n": "int",
+    "sigma_pos": "int"
+   }
+  },
+  "cdfm|lin|RL|S20|sigma_by_mixing": {
+   "mixed": {
+    "n": "int",
+    "sigma_pos": "int"
+   },
+   "not_mixed": {
+    "n": "int",
+    "sigma_pos": "int"
+   }
+  },
+  "cdfm|rff|RL|k0": {
+   "merged_mean": "float",
+   "split_mean": "float",
+   "false_cross_mean": "float",
+   "n_mixed": "int"
+  },
+  "cdfm|rff|RL|A20": {
+   "merged_mean": "float",
+   "split_mean": "float",
+   "false_cross_mean": "float",
+   "n_mixed": "int"
+  },
+  "cdfm|rff|RL|S20": {
+   "merged_mean": "float",
+   "split_mean": "float",
+   "false_cross_mean": "float",
+   "n_mixed": "int"
+  },
+  "cdfm|rff|RH|k0": {
+   "merged_mean": "float",
+   "split_mean": "float",
+   "false_cross_mean": "float",
+   "n_mixed": "int"
+  },
+  "cdfm|rff|RH|A20": {
+   "merged_mean": "float",
+   "split_mean": "float",
+   "false_cross_mean": "float",
+   "n_mixed": "int"
+  },
+  "cdfm|rff|RH|S20": {
+   "merged_mean": "float",
+   "split_mean": "float",
+   "false_cross_mean": "float",
+   "n_mixed": "int"
+  },
+  "cdfm|rff|RL|A20|sigma_by_mixing": {
+   "mixed": {
+    "n": "int",
+    "sigma_pos": "int"
+   },
+   "not_mixed": {
+    "n": "int",
+    "sigma_pos": "int"
+   }
+  },
+  "cdfm|rff|RL|S20|sigma_by_mixing": {
+   "mixed": {
+    "n": "int",
+    "sigma_pos": "int"
+   },
+   "not_mixed": {
+    "n": "int",
+    "sigma_pos": "int"
+   }
+  }
+ },
+ "real_tables": {},
+ "n_systems": "int"
+}

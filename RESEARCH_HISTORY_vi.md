@@ -405,6 +405,13 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
     3. G2 so p-value với dung sai 1e−12, vì phép nhân ma trận trong HSIC lệch ở mức 1e−15; quyết định vẫn phải trùng chính xác.
     4. Hồ sơ power tính trực tiếp trên từng hệ của HELD2. Power cho P6-1C-lin khoảng 0.21 nếu giá giống R-B.
   - Agent tính lại các số của user (độ lệch HSIC; φ của FROZEN và R-B) và ra cùng số. Chưa sinh input P-N6 nào. Chi tiết: [`PN6_rules_vi.md`](reports/n6_fix_comparison_2026-11-22/PN6_rules_vi.md) §12.
+- **Cập nhật 22/11, cổng P-N6 đạt, đóng băng code:**
+  - α chọn bằng J trên DEV6, không dùng output model: α_L = 10⁻⁴ và α_H = 0.01.
+  - G1–G9 đạt:
+    - p-value của khối đích lệch tối đa 2.05e−15 khi có đệm, và quyết định của R-L trùng chính xác;
+    - phát biểu có điều kiện của R-L đúng từng bit ở mọi input DEV6 thỏa điều kiện;
+    - ước tính 2.6 giờ cho lượt chính.
+  - Không chạy model nào trên bảng thật trước khi đóng băng. Chi tiết: [`PN6_rules_vi.md`](reports/n6_fix_comparison_2026-11-22/PN6_rules_vi.md) §12, [`checks/gates6.json`](reports/n6_fix_comparison_2026-11-22/checks/gates6.json).
 
 ---
 

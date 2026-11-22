@@ -1,0 +1,14 @@
+{
+ "set": "DEV6",
+ "n_jobs": 336,
+ "rl": {
+  "padded_inputs": 32,
+  "decisions_same": 32,
+  "conditional_inputs": 64,
+  "conditional_bitwise": 64
+ },
+ "freeze_gate": null,
+ "ok": true,
+ "problems": [],
+ "n_problems": 0
+}
