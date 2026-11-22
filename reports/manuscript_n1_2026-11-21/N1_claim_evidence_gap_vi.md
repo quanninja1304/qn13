@@ -100,11 +100,13 @@
      - k = 0, 20, 40; đệm Gauss và đệm ER–RFF có cấu trúc, độc lập; 20 lần sinh đệm mỗi điều kiện;
      - báo Δp, số cặp đổi trạng thái, Δm, |Δm|, ngưỡng và số cạnh tại k0; không gọi thay đổi là giảm độ chính xác;
      - các lần sinh đệm đo biến thiên có điều kiện trên bảng thật đã cố định, không phải 20 bộ dữ liệu thật độc lập.
-3. **Gap 3: so sánh cách sửa, ghi rõ thông tin mỗi cách dùng.**
+3. **Gap 3: so sánh cách sửa, ghi rõ thông tin mỗi cách dùng.** **Nháp luật P-N6 v0** (22/11, chưa khóa): [PN6_rules_vi.md](../n6_fix_comparison_2026-11-22/PN6_rules_vi.md).
+   - Bản nháp sửa dòng R trong bảng dưới: R của P-N2 còn dùng họ cơ chế để chọn phép kiểm (Fisher-z cho hệ tuyến tính, HSIC cho RFF).
+   - Bản nháp tách cách này thành R-B và đề xuất hai biến thể chỉ dùng input: R-H (Bonferroni trên toàn bảng) và R-L (mức cố định mỗi cặp, bất biến theo cấu trúc trên phân hoạch đích).
 
    | Cách | Thông tin dùng | Vai trò |
    |---|---|---|
-   | R (sàng lọc rồi chạy theo thành phần) | chỉ dữ liệu input; không biết khối nào là đích | cách sửa ứng viên |
+   | R (sàng lọc rồi chạy theo thành phần) | dữ liệu input, và họ cơ chế để chọn phép kiểm; không biết khối nào là đích | cách sửa ứng viên |
    | FIXED 0.5 | không dùng thêm thông tin; bỏ bộ chọn ngưỡng của CDFM | đối chứng decoder |
    | Ngưỡng cục bộ của CDFM | biết khối đích: đặc trưng ngưỡng chỉ tính trên khối đích | **đối chứng**, không ngang hàng với R |
    | FROZEN | dùng lần chạy k0 trên riêng khối đích | **đối chứng**, không ngang hàng với R |
@@ -177,3 +179,4 @@ Số liệu không đổi. Bản trước là `b62b8da`.
 | 22 | C12 (mới) | — | Ngưỡng CDFM trên bảng thật: câu claim nêu rõ Wine ở cả hai k, Sachs chỉ ở k = 40; Sachs k = 20 giữ NOT_CONFIRMED |
 | 23 | §2 gap 2 | "bảng claim sẽ cập nhật sau khi user xem kết quả" | User đã duyệt; trỏ tới phân rã thăm dò |
 | 24 | §3 | "Failure (C1, C2)"; "The real-data consistency check is open" | Mục 4 ghi "on synthetic data"; thêm mục 7 cho hai bảng thật (C11, C12); limitations: hai bảng, đo độ bất ổn, không đo độ chính xác |
+| 25 | §2 gap 3, dòng R | "chỉ dữ liệu input" | "dữ liệu input, và họ cơ chế để chọn phép kiểm". Agent phát hiện khi soạn P-N6 (`run2.py` chọn Fisher-z hay HSIC theo họ). Đây là sửa về sự kiện; các phép so mới ở P-N6 còn chờ user duyệt |

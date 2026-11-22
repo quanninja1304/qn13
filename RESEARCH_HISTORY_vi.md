@@ -390,6 +390,14 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
     - Sachs k = 40: T −10.45, S +10.95, tức hai phần bù nhau. Với mốc đảo, T′ −0.45 và S′ +0.95.
     - Đây là phân rã kế toán phụ thuộc mốc, chưa phải hai nguyên nhân tách biệt. Chi tiết: [`PN5_decomposition_exploratory_vi.md`](reports/n5_real_data_consistency_2026-11-22/PN5_decomposition_exploratory_vi.md).
   - Bước tiếp: phần dữ liệu thật trong bản thảo (nhánh riêng), rồi luật P-N6 (gap 3, so sánh cách sửa).
+- **Cập nhật 22/11, bản thảo v0.3 (nhánh riêng) và nháp luật P-N6 v0 (gap 3):**
+  - Bản thảo v0.3 trên nhánh riêng: §7 mới về hai bảng thật. Từ "failure" và "harm" chỉ còn dùng cho dữ liệu tổng hợp.
+  - **Nháp P-N6 v0** (chưa khóa; chưa sinh input, chưa chạy model): [`PN6_rules_vi.md`](reports/n6_fix_comparison_2026-11-22/PN6_rules_vi.md).
+    - Phát hiện khi soạn: R của P-N2 dùng họ cơ chế để chọn phép kiểm, nên không phải "chỉ dùng input". Bảng thông tin ở gap 3 đã được sửa.
+    - Đề xuất hai cách sửa chỉ dùng input. R-H dùng Bonferroni trên toàn bảng, nên quyết định giữa hai biến đích phụ thuộc D: ở EXP2, 1/20 hệ bị tách thêm khi có 20 cột Gauss. R-L dùng mức cố định mỗi cặp, nên phân hoạch đích giống hệt nhau ở mọi k, và đường đổi duy nhất còn lại là gộp nhầm.
+    - Sáu giả thuyết đề xuất: TOST cho mức khôi phục F1 ở A20 (4), và R so với FROZEN ở S20 cho CDFM (2).
+    - Power ước tính cho ô CDFM tuyến tính chỉ khoảng 0.14 nếu giá giống R của HELD2.
+    - Chờ user quyết sáu điểm ở §12.
 
 ---
 
