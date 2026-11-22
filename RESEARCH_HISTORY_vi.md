@@ -439,6 +439,21 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
     - ở mục đóng băng P-N6, "không chạy model nào trên bảng thật" nghĩa là chưa chạy R-L hay R-H của P-N6; output plain đã có từ P-N5.
   - **Kế toán F1 hậu nghiệm** (user tính, agent tính lại): với CDFM tuyến tính, khoảng −0.008 ở cặp bị tách và −0.015 đến −0.016 trong thành phần, tùy thứ tự thay thế. Đây là kế toán, chưa phải nguyên nhân.
   - **Bước tiếp:** hoàn thiện bản thảo (§8 về cách sửa, bản đầy đủ, rà claim còn thiếu bằng chứng); thiết kế thu gọn cho gap 4 nếu thêm model kiểm được một claim cụ thể, đo ngân sách trước lượt chính; nghiên cứu ngưỡng theo thành phần là hướng tiếp nối, chưa mở pha mới.
+- **Cập nhật 22/11, bản thảo v0.4 (nhánh riêng), rà claim, nháp luật P-N7 v0 (gap 4):**
+  - **Bản thảo v0.4** (nhánh riêng):
+    - §8 viết lại quanh Study 5: chi phí ở k0, độ ổn định sau sửa, rủi ro gộp nhầm;
+    - cách sửa cũ đổi tên thành R-B;
+    - tóm tắt, đóng góp 6, Bảng 1, giới hạn và phụ lục A–B cập nhật theo.
+  - **Rà claim trên bản đầy đủ** (chi tiết ở nhánh riêng):
+    - khoảng hở lớn nhất là độ phủ model: FoundCause chỉ có ở Study 1, 24 hệ, và TabCausal chưa thử;
+    - còn vài câu cần đối chiếu nguồn gốc: dải huấn luyện của FoundCause và mười tài liệu gắn [verify];
+    - một câu động cơ chưa có trích dẫn;
+    - dải tham số cơ chế so với `scm-v0` đã đối chiếu với config của tác giả và nằm trong dải huấn luyện.
+  - **Nháp P-N7 v0** (chưa khóa, chưa chạy): [`PN7_rules_vi.md`](reports/n7_foundcause_real_tables_2026-11-22/PN7_rules_vi.md).
+    - Nội dung: FoundCause trên hai bảng thật của P-N5, tức kiểm C11 cho model thứ ba.
+    - Thiết kế dùng lại input, phép kiểm và output PC/GES đã đóng băng; thêm tham chiếu nhiễu lịch ensemble như P-N1.
+    - Ngân sách ước tính từ log P-N1: tách mỗi bảng một lượt với 20 lần sinh thì 2.57 giờ mỗi lượt. Chạy cả hai bảng trong một lượt chỉ vừa mốc 3 giờ với 10 lần sinh.
+    - Chờ user chọn phương án.
 
 ---
 

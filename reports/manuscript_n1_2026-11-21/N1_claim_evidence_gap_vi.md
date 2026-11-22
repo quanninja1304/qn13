@@ -136,6 +136,12 @@
 4. **Gap 4: phạm vi model.**
    - FoundCause mới ở mức P-N1.
    - TabCausal: checkpoint `tabcausal-base.pt` có sẵn trong bản clone ở máy, chưa cài ([manifest](../n1_irrelevant_vars_2026-11-13/DATA_MANIFEST_vi.md) §1). Chỉ dùng cho C1, nếu cài được trong venv riêng.
+   - **GO cho thiết kế thu gọn** (user, 22/11, lượt 6), với điều kiện thêm model kiểm được một claim cụ thể. Ngân sách phải đo trước lượt chính. Gap 4 không chặn việc viết.
+   - **Nháp luật P-N7 v0** (22/11, chưa khóa, chờ user duyệt): [PN7_rules_vi.md](../n7_foundcause_real_tables_2026-11-22/PN7_rules_vi.md).
+     - Nội dung: FoundCause trên hai bảng thật của P-N5, tức kiểm C11 cho model thứ ba.
+     - Có tham chiếu nhiễu lịch ensemble, như τ_sched ở P-N1.
+     - Chỉ k = 20, vì k = 40 cho D = 51, ngoài dải mà tác giả công bố.
+     - Phương án ngân sách chờ user chọn.
 5. **Gom thống kê trong lúc viết** (không phải bước riêng):
    - mỗi bảng của bài ghi bộ dữ liệu (P-N1 EXP/HELD, EXP2, HELD2), giả thuyết đã khóa (file luật), phép kiểm và mức bằng chứng;
    - bảng các pha và cổng toàn vẹn đưa vào appendix;
@@ -205,3 +211,4 @@ Số liệu không đổi. Bản trước là `b62b8da`.
 | 29 | C9 | "Chưa so với các cách sửa khác theo thông tin mỗi cách dùng (gap 3)" | Giữ nhãn cũ; ghi R-B dùng họ cơ chế; dẫn sang C13–C15 |
 | 30 | §2 gap 3 | "chờ user duyệt" | Đã đóng (lượt 6); phép kiểm kết hợp chưa làm để giữ phạm vi bài, ứng viên chưa bị bác bỏ |
 | 31 | §3, mục 8–9 | "Mitigation and its scope (C9)" | Mục 8 dùng C13–C15; limitations thêm giá ở k0, CDFM tuyến tính chưa xác nhận, và bác bỏ chéo vượt cận danh nghĩa |
+| 32 | §2 gap 4 | "FoundCause mới ở mức P-N1" | Thêm quyết định GO thiết kế thu gọn và trỏ tới nháp P-N7 v0 (C11 cho FoundCause); chưa khóa |
