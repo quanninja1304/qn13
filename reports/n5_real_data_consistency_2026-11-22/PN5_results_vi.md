@@ -279,3 +279,16 @@ Số liệu và tám nhãn không đổi. User đã tính độc lập từ outp
 | 1 | §6 | "Failure của N1, tức output trên khối đích đổi khi thêm cột độc lập, xuất hiện trên cả hai bảng" | "Độ bất ổn trước việc thêm biến độc lập xuất hiện trên cả hai bảng". P-N5 chưa chứng minh tác hại về độ chính xác |
 | 2 | §4 | Phép kiểm dấu "hỏi chiều của trung vị" và "không dựa vào xấp xỉ t" | Kiểm tra dấu hậu nghiệm cho cùng mẫu hình 7/8, bổ sung bằng chứng về tính nhất quán của hướng thay đổi; nhãn xác nhận về trung bình vẫn dựa trên phép kiểm đã khóa. Vì bỏ các lần sinh bằng 0, phép này kiểm xác suất dấu dương trong các lần sinh khác 0, không trực tiếp kiểm trung bình; khi có ties, không diễn đạt là "trung vị dương" |
 | 3 | §2 và §5, đi kèm #2 | "§4 kiểm thêm bằng phép kiểm dấu" | "§4 báo thêm một kiểm tra dấu hậu nghiệm về tính nhất quán của hướng thay đổi"; §5 thêm hai câu không được viết, khớp với #1 và #2 |
+
+## 8. Sau review: bảng claim và phân rã thăm dò (22/11)
+
+- **Bảng claim:** user duyệt các cập nhật, giữ ranh giới bằng chứng.
+  - C1 tách phần giảm F1 trên dữ liệu tổng hợp khỏi độ đổi skeleton trên bảng thật.
+  - C3 có ghi chú hậu nghiệm, chỉ về số cạnh của AVICI.
+  - Hai claim mới: C11 (skeleton, 4/4) và C12 (ngưỡng; Wine ở cả hai k, Sachs chỉ ở k = 40).
+  - Chi tiết: [bảng claim](../manuscript_n1_2026-11-21/N1_claim_evidence_gap_vi.md).
+- **Phân rã thăm dò** (EXPLORATORY, không chạy model mới):
+  - Theo mốc e = 0, phần do ngưỡng và phần do điểm ở Sachs k = 40 là −10.45 và +10.95; hai phần bù nhau.
+  - Với mốc đảo, hai phần còn −0.45 và +0.95.
+  - Wine phù hợp với mẫu hình C5 ở cả hai mốc.
+  - Chi tiết: [PN5_decomposition_exploratory_vi.md](PN5_decomposition_exploratory_vi.md).

@@ -377,6 +377,19 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
     - Ở Sachs, số cạnh NATIVE của CDFM gần như không đổi dù ngưỡng tăng, trong khi số cạnh theo FIXED tăng mạnh.
   - **Hậu nghiệm:** phép kiểm dấu cho cùng cách chia 7/8.
   - Mọi suy luận có điều kiện trên hai bảng đã cố định; P-N5 không nói gì về độ chính xác. Bảng claim chờ user xem kết quả. Chi tiết: [`PN5_results_vi.md`](reports/n5_real_data_consistency_2026-11-22/PN5_results_vi.md).
+- **Cập nhật 22/11, user duyệt P-N5; bảng claim và phân rã thăm dò:**
+  - User tính lại độc lập từ output thô (160 contrast, CI, t, p, nhãn Holm) và mã băm (15 file đóng băng, 155 phụ thuộc): đều khớp.
+  - Đã push kết quả (`dab19eb`) cùng commit đính chính diễn đạt (`2f668b3`, lúc 07:36:08Z). Hai chỗ sửa: "độ bất ổn trước việc thêm biến độc lập", không phải "failure"; kiểm tra dấu hậu nghiệm chỉ bổ sung bằng chứng về tính nhất quán của hướng thay đổi.
+  - **Bảng claim:**
+    - C1 tách phần giảm F1 (dữ liệu tổng hợp) khỏi độ đổi skeleton trên bảng thật.
+    - C3 có ghi chú hậu nghiệm về số cạnh của AVICI.
+    - C5 có thêm phân rã ở mức EXPLORATORY.
+    - Thêm C11 (skeleton, 4/4) và C12 (ngưỡng CDFM: Wine ở cả hai k, Sachs chỉ ở k = 40).
+  - **Phân rã thăm dò** (mốc e = 0, không chạy model mới):
+    - Wine k = 20: T −19.70, S +0.60. Wine k = 40: T −23.85, S +6.45. Cả hai khớp mẫu hình C5, ở cả hai mốc.
+    - Sachs k = 40: T −10.45, S +10.95, tức hai phần bù nhau. Với mốc đảo, T′ −0.45 và S′ +0.95.
+    - Đây là phân rã kế toán phụ thuộc mốc, chưa phải hai nguyên nhân tách biệt. Chi tiết: [`PN5_decomposition_exploratory_vi.md`](reports/n5_real_data_consistency_2026-11-22/PN5_decomposition_exploratory_vi.md).
+  - Bước tiếp: phần dữ liệu thật trong bản thảo (nhánh riêng), rồi luật P-N6 (gap 3, so sánh cách sửa).
 
 ---
 
