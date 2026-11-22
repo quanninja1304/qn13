@@ -137,11 +137,13 @@
    - FoundCause mới ở mức P-N1.
    - TabCausal: checkpoint `tabcausal-base.pt` có sẵn trong bản clone ở máy, chưa cài ([manifest](../n1_irrelevant_vars_2026-11-13/DATA_MANIFEST_vi.md) §1). Chỉ dùng cho C1, nếu cài được trong venv riêng.
    - **GO cho thiết kế thu gọn** (user, 22/11, lượt 6), với điều kiện thêm model kiểm được một claim cụ thể. Ngân sách phải đo trước lượt chính. Gap 4 không chặn việc viết.
-   - **Nháp luật P-N7 v0** (22/11, chưa khóa, chờ user duyệt): [PN7_rules_vi.md](../n7_foundcause_real_tables_2026-11-22/PN7_rules_vi.md).
-     - Nội dung: FoundCause trên hai bảng thật của P-N5, tức kiểm C11 cho model thứ ba.
-     - Có tham chiếu nhiễu lịch ensemble, như τ_sched ở P-N1.
-     - Chỉ k = 20, vì k = 40 cho D = 51, ngoài dải mà tác giả công bố.
-     - Phương án ngân sách chờ user chọn.
+   - **Luật P-N7 v1 đã khóa** (22/11, lượt 7): [PN7_rules_vi.md](../n7_foundcause_real_tables_2026-11-22/PN7_rules_vi.md).
+     - Nội dung: FoundCause trên hai bảng thật của P-N5, tức kiểm C11 cho model thứ ba. Phương án B: mỗi bảng đủ 20 lần sinh, hai lượt.
+     - P7-1 kiểm độ bất ổn của toàn bộ pipeline mặc định, có điều kiện trên lịch base 42. Nó không tách tác động của thông tin cột thêm vào khỏi thay đổi tính toán nội bộ khi D đổi.
+     - Input là input của P-N5 được dùng lại, không phải held-out mới. Hai giả thuyết là một family Holm riêng.
+     - Tham chiếu bốn base ở k0 đo biến động của toàn bộ lịch suy luận. Nó không phải đối chứng riêng cho hoán vị cột, không phải ngưỡng, và không được lấy trừ khỏi flips.
+     - Chỉ k = 20. D ∈ [2, 50] là dải huấn luyện được công bố (đã xác minh ở FoundCause v2), không phải giới hạn kỹ thuật.
+     - P-N7 không mở rộng kết luận về cơ chế ngưỡng của CDFM hay cách sửa R-L sang FoundCause.
 5. **Gom thống kê trong lúc viết** (không phải bước riêng):
    - mỗi bảng của bài ghi bộ dữ liệu (P-N1 EXP/HELD, EXP2, HELD2), giả thuyết đã khóa (file luật), phép kiểm và mức bằng chứng;
    - bảng các pha và cổng toàn vẹn đưa vào appendix;
@@ -212,3 +214,4 @@ Số liệu không đổi. Bản trước là `b62b8da`.
 | 30 | §2 gap 3 | "chờ user duyệt" | Đã đóng (lượt 6); phép kiểm kết hợp chưa làm để giữ phạm vi bài, ứng viên chưa bị bác bỏ |
 | 31 | §3, mục 8–9 | "Mitigation and its scope (C9)" | Mục 8 dùng C13–C15; limitations thêm giá ở k0, CDFM tuyến tính chưa xác nhận, và bác bỏ chéo vượt cận danh nghĩa |
 | 32 | §2 gap 4 | "FoundCause mới ở mức P-N1" | Thêm quyết định GO thiết kế thu gọn và trỏ tới nháp P-N7 v0 (C11 cho FoundCause); chưa khóa |
+| 33 | §2 gap 4 | "Nháp luật P-N7 v0 … chờ user duyệt" | Luật v1 đã khóa (lượt 7): phương án B; phạm vi của P7-1; input dùng lại; tham chiếu lịch chỉ để mô tả |

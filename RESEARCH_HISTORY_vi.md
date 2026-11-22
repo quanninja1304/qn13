@@ -454,6 +454,13 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
     - Thiết kế dùng lại input, phép kiểm và output PC/GES đã đóng băng; thêm tham chiếu nhiễu lịch ensemble như P-N1.
     - Ngân sách ước tính từ log P-N1: tách mỗi bảng một lượt với 20 lần sinh thì 2.57 giờ mỗi lượt. Chạy cả hai bảng trong một lượt chỉ vừa mốc 3 giờ với 10 lần sinh.
     - Chờ user chọn phương án.
+- **Cập nhật 22/11, khóa luật P-N7 v1 (gap 4):** user chọn phương án B (hai bảng, mỗi bảng 20 lần sinh, hai lượt) và duyệt trước lượt chính nếu các cổng đạt và mỗi lượt không vượt 3 giờ.
+  - **Ba chỉnh sửa:**
+    1. Tham chiếu bốn base đo biến động của toàn bộ lịch suy luận (mẫu con hàng, hoán vị cột, nhiễu tie-break). Nó chỉ để mô tả: không là ngưỡng, không lấy trừ khỏi flips.
+    2. P7-1 kiểm độ bất ổn của toàn bộ pipeline mặc định, có điều kiện trên base 42. Input là input của P-N5 được dùng lại, không phải held-out mới, và hai giả thuyết là một family Holm riêng.
+    3. Adapter không đạt thì dừng. Thêm phép kiểm chỉ số hàng giữa k0 và mọi input có đệm, không cần chạy model.
+  - **Làm rõ:** D ∈ [2, 50] đã được user xác minh ở FoundCause v2 (§2, Appendix G). Đó là dải huấn luyện được công bố, không phải giới hạn kỹ thuật.
+  - **Bản thảo:** user duyệt các sửa của bản rà, và thu hẹp tiêu đề ngay, không phụ thuộc kết quả P-N7. Chưa thêm TabCausal hay mở nghiên cứu mới cho gap 4.
 
 ---
 
