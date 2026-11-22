@@ -59,7 +59,7 @@ Phép kiểm theo luật §5: t ghép cặp một phía qua 20 lần sinh (df = 
   - còn lại là UNCLEAR.
   - P5-1S-C là UNCLEAR vì CI [0.84, 1.76] chứa biên 1 cặp. P5-2S-20 là UNCLEAR, không phải SMALL, vì cận dưới −0.0310 vượt −0.03 một chút.
   - CI và nhãn cỡ là mô tả; Holm không bảo vệ chúng đồng thời.
-- **Mức rời rạc** (luật §5): P5-1S-A chỉ có 4 giá trị khác nhau qua 20 lần sinh, và P5-1S-C có 5 giá trị, trong đó có 3 lần sinh bằng 0. Vì vậy phép t ở các giả thuyết này là xấp xỉ. §4 kiểm thêm bằng phép kiểm dấu; phép kiểm dấu không thay nhãn đã khóa.
+- **Mức rời rạc** (luật §5): P5-1S-A chỉ có 4 giá trị khác nhau qua 20 lần sinh, và P5-1S-C có 5 giá trị, trong đó có 3 lần sinh bằng 0. Vì vậy phép t ở các giả thuyết này là xấp xỉ. §4 báo thêm một kiểm tra dấu hậu nghiệm về tính nhất quán của hướng thay đổi. Kiểm tra này không thay nhãn đã khóa, và không thay thế phép kiểm về trung bình.
 
 ### 2.1 P5-1: ý nghĩa và bốn thành phần
 
@@ -207,12 +207,16 @@ Phép kiểm theo luật §5: t ghép cặp một phía qua 20 lần sinh (df = 
 
 Script: [`posthoc/posthoc_pn5.py`](posthoc/posthoc_pn5.py); output: [`posthoc/posthoc_output.txt`](posthoc/posthoc_output.txt). Các kiểm tra này được làm sau khi đã thấy kết quả và không thuộc luật đã khóa.
 
-- **Phép kiểm dấu,** nhị thức chính xác, một phía, bỏ các lần sinh bằng 0. Mục đích là kiểm giới hạn đã ghi ở luật §5: phép t là xấp xỉ khi flips rời rạc.
+- **Kiểm tra dấu hậu nghiệm** (`binomtest`, nhị thức chính xác, một phía; bỏ các lần sinh có contrast bằng 0):
   - Sáu giả thuyết có 20/0/0: p = 9.5e-7.
   - P5-1S-C (17 dương, 3 bằng 0): p = 7.6e-6.
   - P5-2S-20 (9 dương, 11 âm): p = 0.75.
-  - Holm 0.05 trên tám p-value này cho đúng cách chia 7/8 như phép t.
-  - Phép kiểm dấu hỏi một câu khác: chiều của trung vị qua các lần sinh, không phải chiều của trung bình. Nó không dựa vào xấp xỉ t. Nhãn chính thức vẫn là nhãn của phép t đã khóa.
+  - Holm 0.05 trên tám p-value này cho cùng mẫu hình 7/8.
+  - **Cách đọc:** kiểm tra dấu hậu nghiệm cho cùng mẫu hình 7/8, bổ sung bằng chứng về tính nhất quán của hướng thay đổi. Nhãn xác nhận về trung bình vẫn dựa trên phép kiểm đã khóa.
+  - **Giới hạn:**
+    - Vì các lần sinh bằng 0 bị bỏ, phép này kiểm xác suất dấu dương trong các lần sinh khác 0, không trực tiếp kiểm trung bình.
+    - Nó không chứng minh rằng kết luận về trung bình độc lập với xấp xỉ t.
+    - Khi có giá trị bằng nhau (ties), cũng không nên diễn đạt nó đơn giản là "trung vị dương".
 - **Số cạnh của AVICI,** m(có cấu trúc) − m(Gauss) trong cùng lần sinh:
 
   | Bảng | k = 20 [CI 95%]; +/0/− | k = 40 [CI 95%]; +/0/− |
@@ -239,12 +243,13 @@ Script: [`posthoc/posthoc_pn5.py`](posthoc/posthoc_pn5.py); output: [`posthoc/po
 - "Bộ chọn ngưỡng chi phối mức đổi trên bảng thật" (như C5). Phép phân rã của P-N4 chưa chạy trên P-N5; ở Sachs, số cạnh NATIVE gần như không đổi, trong khi số cạnh theo FIXED tăng mạnh.
 - "Normal-score làm giả định của PC và GES đúng" (luật §1).
 - Bất kỳ điều gì về FoundCause; model này không chạy ở P-N5.
-- Dùng phép kiểm dấu ở §4 làm căn cứ cho nhãn.
+- Dùng kiểm tra dấu ở §4 làm căn cứ cho nhãn, hay nói rằng nó chứng minh kết luận về trung bình không phụ thuộc xấp xỉ t.
+- Gọi độ đổi trên bảng thật là "tác hại" hay "failure" về độ chính xác.
 
 ## 6. Ý nghĩa cho bài và bước tiếp (để user quyết)
 
 - **Gap 2 có kết quả xác nhận, có điều kiện trên hai bảng thật đã cố định:**
-  - Failure của N1, tức output trên khối đích đổi khi thêm cột độc lập, xuất hiện trên cả hai bảng và ở cả hai model.
+  - Độ bất ổn trước việc thêm biến độc lập xuất hiện trên cả hai bảng và ở cả hai model: output trên khối thật đổi khi thêm cột độc lập. P-N5 chưa chứng minh tác hại về độ chính xác.
   - Ở điều kiện chuẩn của P-N1 (20 cột Gauss), mức đổi vượt đối chứng cổ điển đổi nhiều hơn ở từng lần sinh (P5-1, 4/4).
   - Kết quả này bổ sung cho phần "đổi output" của C1. Nó không bổ sung cho phần F1, vì không có ground truth.
 - **N4-b trên bảng thật: 3/4 ô.** Bài phải ghi rõ ngoại lệ ở Sachs k = 20.
@@ -264,3 +269,13 @@ Script: [`posthoc/posthoc_pn5.py`](posthoc/posthoc_pn5.py); output: [`posthoc/po
      - Nhãn sẽ là EXPLORATORY, vì kết quả P-N5 đã được xem.
      - Phép này giúp trả lời vì sao Sachs khác Wine.
   3. Theo thứ tự đã chốt: gap 3, so sánh cách sửa (R, FIXED, ngưỡng cục bộ, FROZEN, R-oracle). Cần luật P-N6 mới.
+
+## 7. Đính chính diễn đạt (22/11, sau review của user)
+
+Số liệu và tám nhãn không đổi. User đã tính độc lập từ output thô: 160 contrast, CI, t, p và nhãn Holm đều khớp. Mã băm của 15 file đóng băng và 155 phụ thuộc cũng khớp.
+
+| # | Chỗ | Bản trước (`dab19eb`) | Sửa thành |
+|---|---|---|---|
+| 1 | §6 | "Failure của N1, tức output trên khối đích đổi khi thêm cột độc lập, xuất hiện trên cả hai bảng" | "Độ bất ổn trước việc thêm biến độc lập xuất hiện trên cả hai bảng". P-N5 chưa chứng minh tác hại về độ chính xác |
+| 2 | §4 | Phép kiểm dấu "hỏi chiều của trung vị" và "không dựa vào xấp xỉ t" | Kiểm tra dấu hậu nghiệm cho cùng mẫu hình 7/8, bổ sung bằng chứng về tính nhất quán của hướng thay đổi; nhãn xác nhận về trung bình vẫn dựa trên phép kiểm đã khóa. Vì bỏ các lần sinh bằng 0, phép này kiểm xác suất dấu dương trong các lần sinh khác 0, không trực tiếp kiểm trung bình; khi có ties, không diễn đạt là "trung vị dương" |
+| 3 | §2 và §5, đi kèm #2 | "§4 kiểm thêm bằng phép kiểm dấu" | "§4 báo thêm một kiểm tra dấu hậu nghiệm về tính nhất quán của hướng thay đổi"; §5 thêm hai câu không được viết, khớp với #1 và #2 |
