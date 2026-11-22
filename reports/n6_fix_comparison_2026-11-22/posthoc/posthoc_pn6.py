@@ -12,7 +12,11 @@ P-N1 generator only for the true target graphs, and the cached HSIC p-values for
   5. Real tables: the R-L and R-H partition at k0, and the parts of phi(k0); sigma > 0 draws versus mixing.
   6. CDFM, R-L at k0, pairs inside a component: anchor-dependent accounting with the plain k0 threshold tau0 as the
      anchor. "score part" = the R-L component probabilities read at tau0, against plain k0; "threshold part" = the
-     R-L per-component NATIVE reading against that tau0 reading. An accounting split, not two separate causes.
+     R-L per-component NATIVE reading against that tau0 reading. An accounting split, not two separate causes. The
+     two flip counts are Hamming distances of two substitution steps and do not add up to the total (a pair can flip
+     and flip back); the signed dFP parts do add up.
+  7. F1 accounting of Q0 under R-L (added after the user's review): substitute the R-L k0 states into plain k0 on one
+     pair type first (split pairs, or pairs inside a component), then on the other; both orders.
 
 usage: python -I posthoc_pn6.py <artifacts dir> <output json>
 """
@@ -77,6 +81,12 @@ def mean(x):
     return float(np.mean(x)) if len(x) else None
 
 
+def f1_vec(s, t):
+    """F1 of upper-triangle skeleton vector s against true vector t (rules §4: 0 when there is no true positive)."""
+    tp, fp, fn = int((t & s).sum()), int((~t & s).sum()), int((t & ~s).sum())
+    return 0.0 if tp == 0 else 2 * tp / (2 * tp + fp + fn)
+
+
 res = dict(note='POST-HOC descriptive; not in the locked rules; no test', alpha=ALPHA)
 
 # ---------------------------------------------------------------- 1, 2, 3, 4 on the synthetic systems
@@ -135,6 +145,14 @@ for ci in range(8):
             pp['dTP_within'].append(int((s0 & true)[~is_cross].sum()) - int((p0 & true)[~is_cross].sum()))
             pp['dFP_within'].append(int((s0 & ~true)[~is_cross].sum()) - int((p0 & ~true)[~is_cross].sum()))
             pp['n_target_components_k0'].append(len(set(lab0[:dT].tolist())))
+            f1 = lambda s: f1_vec(s, true)
+            s_cross_first = np.where(is_cross, s0, p0)          # split pairs replaced first
+            s_within_first = np.where(is_cross, p0, s0)         # pairs inside a component replaced first
+            pp['F1_Q0'].append(f1(s0) - f1(p0))
+            pp['F1_cross_first__cross'].append(f1(s_cross_first) - f1(p0))
+            pp['F1_cross_first__within'].append(f1(s0) - f1(s_cross_first))
+            pp['F1_within_first__within'].append(f1(s_within_first) - f1(p0))
+            pp['F1_within_first__cross'].append(f1(s0) - f1(s_within_first))
             if model == 'cdfm':
                 o0 = load(model, f'{sid}__k0__RL')
                 tau0 = float(load(model, f'{sid}__k0__plain')['threshold'])

@@ -1,6 +1,6 @@
 # P-N6: kết quả so sánh cách sửa, gap 3 (22/11/2026)
 
-> **Luật:** [P-N6 v1](PN6_rules_vi.md), khóa ở commit `678f55f` (push lúc 2026-11-22T09:32:14Z). Code đóng băng cùng các phụ thuộc và hai mức α ở `98266e7` (push lúc 10:20:14Z). Lúc đó chưa sinh input held-out nào và chưa chạy model nào trên hai bảng thật.
+> **Luật:** [P-N6 v1](PN6_rules_vi.md), khóa ở commit `678f55f` (push lúc 2026-11-22T09:32:14Z). Code đóng băng cùng các phụ thuộc và hai mức α ở `98266e7` (push lúc 10:20:14Z). Lúc đó chưa sinh input held-out nào, và chưa chạy R-L hay R-H của P-N6 trên hai bảng thật. Output plain trên hai bảng đã có từ P-N5.
 > **Chạy:** 2 930 job, gồm 442 lần tính p-value HSIC, và cho mỗi model AVICI và CDFM: 360 job plain, 442 job R-L, 442 job R-H. Thời gian: 10:21:23 đến 12:40:03 UTC ngày 22/11 (2 giờ 18 phút 40 giây).
 > **Đọc:** bằng `analyze6.py` đã đóng băng, sau khi kiểm hoàn tất đạt (§1).
 > **Nhãn:**
@@ -28,11 +28,13 @@
 - **Chỗ hỏng còn lại của R-L là gộp nhầm.**
   - A20: 11/120 hệ có gộp, mỗi hệ đúng 1 cột.
   - S20: 12/120 hệ có gộp, nhưng mỗi hệ kéo theo 15–20 cột, tức gần như cả khối đệm.
-  - Số cặp chéo bị bác bỏ cao hơn mức kỳ vọng danh nghĩa (§9.4).
+  - Số cặp chéo bị bác bỏ cao hơn cận trên danh nghĩa của kỳ vọng, tức cận đúng khi p-value hợp lệ (§9.4).
 - **R-H** trộn ít hơn R-L nhưng tách thêm cạnh đích khi có đệm. Tỉ lệ hệ có σ > 0 của R-H cao hơn R-L ở cả 8 nhóm model × họ × input.
-- **Hậu nghiệm:** giá ở k0 của CDFM tuyến tính nằm chủ yếu bên trong các thành phần, không ở cặp bị tách.
-  - Lấy τ(k0) làm mốc, phần tăng cạnh sai trùng với việc CDFM chọn ngưỡng thấp hơn trên thành phần nhỏ.
-  - Phép kiểm kết hợp ghi ở luật §12 chỉ tác động trực tiếp lên phần nhỏ hơn, tức các cặp bị tách.
+- **Hậu nghiệm:** với CDFM tuyến tính, phần lớn giá ở k0 nằm bên trong các thành phần, không ở cặp bị tách.
+  - Kế toán F1 (user tính, agent tính lại): khoảng −0.008 ở cặp bị tách và −0.015 đến −0.016 trong thành phần, tùy thứ tự thay thế.
+  - Lấy τ(k0) làm mốc, phần tăng cạnh sai trong thành phần trùng với việc CDFM chọn ngưỡng thấp hơn trên thành phần nhỏ.
+  - Đây là kế toán, chưa xác định nguyên nhân. Nó không cho thấy phép kiểm kết hợp ở luật §12 chỉ xử lý phần nhỏ của vấn đề, vì đổi phân hoạch sẽ đổi cả input, điểm và ngưỡng bên trong thành phần.
+  - Chưa làm phép kiểm đó là để giữ phạm vi bài, không phải vì ứng viên đã bị bác bỏ.
 
 ## 1. Hoàn tất và toàn vẹn (đạt hết)
 
@@ -54,7 +56,7 @@ Script đóng băng `completeness6.py` (luật §7) cho `ok: true`, không có v
 - **Ngân sách:** 8 320 s (2.31 giờ) tính từ mốc `pn6_start`, dưới mốc 3 giờ. G9 đã ước tính 2.6 giờ.
 - **Bộ nhớ đỉnh** (đỉnh tích lũy của từng tiến trình):
   - AVICI: plain 1.27 GB, R-L 2.01 GB, R-H 1.78 GB. CDFM: 0.63–0.64 GB.
-  - Đỉnh của AVICI ở R-L **vượt số đo DEV6** (1.44 GB). Bộ nhớ không phải điều kiện của cổng, và lượt chạy không lỗi.
+  - Đỉnh của AVICI ở R-L **vượt số đo DEV6** (1.44 GB). Bộ nhớ không phải điều kiện của cổng, lượt chạy không lỗi, và mức này không làm mất tính hợp lệ của lượt chạy.
   - Đỉnh rơi vào input S20 của hệ `PN6-c6-r5`, nơi cả 40 cột thành một thành phần.
   - Suy luận chưa kiểm: đỉnh tăng theo bậc vì JAX biên dịch lại cho mỗi cỡ thành phần mới.
 - **Kiểm lại độc lập** (agent; [`posthoc/recheck_pn6.py`](posthoc/recheck_pn6.py), output ở [`posthoc/recheck_output.txt`](posthoc/recheck_output.txt)):
@@ -216,13 +218,21 @@ Tính từ output plain, không chạy thêm model. Ở k0, FROZEN và ngưỡng
 
 CI đầy đủ ở [`checks/pn6_reading.json`](checks/pn6_reading.json). Trừ Q0 = 0 theo cách dựng của FROZEN và ngưỡng cục bộ, mọi Q và G của ba đối chứng trong bảng đều có CI không chứa 0.
 
-- **FROZEN và ngưỡng cục bộ** dùng nhiều thông tin hơn R-L.
-  - **Ở S20,** φ của chúng là 17–23 cặp, ngang hoặc lớn hơn plain (14–18). Vậy ở đệm có cấu trúc, chặn kênh ngưỡng không làm giảm số cặp đổi trạng thái so với plain, vì điểm của khối đích vẫn đổi (luật §5).
-  - **Ở A20,** trên hệ RFF, φ của chúng thấp hơn plain (13.05 và 15.80 so với 20.63). Trên hệ tuyến tính thì ngang hoặc lớn hơn plain (18.45 và 24.82 so với 19.03).
-  - Ở mọi ô, φ của chúng lớn hơn φ của R-L (4.8–9.3 cặp).
-  - Δm của FROZEN dương ở cả bốn ô, từ +6.7 đến +16.4 cạnh: với ngưỡng cũ, có nhiều cặp vượt ngưỡng hơn.
-- **Ở S20,** F1 của FROZEN và ngưỡng cục bộ thấp hơn plain ở cả hai họ (G từ −0.023 đến −0.059). Ở A20 trên hệ RFF, cả hai lại tăng F1 (+0.052 và +0.030).
-- **FIXED 0.5** kém ở mọi thước đo, ngay từ k0 (Q0 −0.094 và −0.120).
+- **FROZEN và ngưỡng cục bộ** dùng nhiều thông tin hơn R-L, theo hai cách khác nhau.
+  - Chỉ **FROZEN** cố định ngưỡng, ở τ(k0).
+  - **Ngưỡng cục bộ** vẫn tính lại ngưỡng, từ điểm của khối đích. Nó chỉ bỏ điểm của các cặp ngoài khối đích khỏi bộ chọn ngưỡng.
+- **Ở S20:**
+  - φ của FROZEN là 18.00 (tuyến tính) và 17.32 (RFF), ngang hoặc lớn hơn plain (17.72 và 14.03). Cố định ngưỡng không làm giảm số cặp đổi trạng thái so với plain, vì điểm của khối đích vẫn đổi (luật §5);
+  - φ của ngưỡng cục bộ là 21.17 và 22.83, lớn hơn plain.
+- **Ở A20:**
+  - trên hệ RFF, φ của cả hai thấp hơn plain: 13.05 và 15.80 so với 20.63;
+  - trên hệ tuyến tính, φ ngang hoặc lớn hơn plain: 18.45 và 24.82 so với 19.03.
+- **So với R-L:** ở mọi ô, φ của cả hai lớn hơn φ của R-L (4.8–9.3 cặp).
+- **Δm của FROZEN** dương ở cả bốn ô, từ +6.7 đến +16.4 cạnh: ở ngưỡng cũ, có nhiều cặp vượt ngưỡng hơn.
+- **F1:** ở S20, F1 của FROZEN và ngưỡng cục bộ thấp hơn plain ở cả hai họ (G từ −0.023 đến −0.059). Ở A20 trên hệ RFF, cả hai lại tăng F1 (+0.052 và +0.030).
+- **FIXED 0.5:**
+  - F1 thấp nhất và φ (so với output ban đầu) lớn nhất trong mọi cách đọc, ở mọi ô, ngay từ k0 (Q0 −0.094 và −0.120; φ(k0) 20.32 và 25.32);
+  - không phải thước đo nào cũng kém nhất: tỉ lệ hệ đổi output là 58/60 ở hệ tuyến tính, thấp hơn plain (60/60); σ(A20) ở hệ tuyến tính là 16.90, thấp hơn plain (19.03).
 - P6-2 chỉ so φ ở S20. Bảng này không cho phép viết rằng FROZEN vô dụng.
 
 ## 7. Bảng thật (mô tả; không có thước đo chất lượng)
@@ -293,26 +303,48 @@ Bảng dưới là trung bình qua 60 hệ mỗi họ. ΔTP và ΔFP là chênh 
 - **CDFM tuyến tính:**
   - trong thành phần, cạnh sai tăng 3.07;
   - ở cặp bị tách, R-L vừa mất 0.63 cạnh đúng vừa bớt 0.92 cạnh sai.
-- **Hệ quả cho ghi chú ở luật §12** (phép kiểm kết hợp Fisher-z và HSIC, mỗi phép ở α_L/2):
-  - điều kiện kích hoạt đã xảy ra, vì P6-1C-lin không được xác nhận;
-  - nhưng một phép kiểm mạnh hơn chỉ tác động trực tiếp lên phần cặp bị tách, và phần đó vừa có lợi vừa có hại cho F1;
-  - vì vậy hậu nghiệm này không ủng hộ ưu tiên ứng viên đó;
-  - tác động gián tiếp, qua thành phần to hơn, chưa biết.
+
+**Kế toán F1 của Q0** (thêm sau review của user; user tính, agent tính lại và ra cùng số).
+
+- Cách tính: thay trạng thái của R-L ở k0 vào plain ở k0, trên một loại cặp trước rồi loại kia, theo cả hai thứ tự.
+- Trung bình qua 60 hệ. Mỗi thứ tự cộng lại đúng Q0.
+
+| Model, họ | Q0 | Cặp bị tách trước: tách / trong | Trong thành phần trước: trong / tách |
+|---|---|---|---|
+| AVICI, tuyến tính | +0.0198 | −0.0102 / +0.0300 | +0.0303 / −0.0104 |
+| AVICI, RFF | −0.0069 | −0.0069 / +0.0001 | +0.0003 / −0.0072 |
+| CDFM, tuyến tính | −0.0235 | −0.0078 / −0.0157 | −0.0154 / −0.0082 |
+| CDFM, RFF | −0.0014 | −0.0005 / −0.0008 | −0.0015 / +0.0002 |
+
+- **CDFM tuyến tính:** khoảng −0.008 ở cặp bị tách và −0.015 đến −0.016 trong thành phần. Ước lượng điểm khớp với nhận xét rằng phần trong thành phần lớn hơn.
+- **Hai nhóm khác:**
+  - với AVICI tuyến tính, phần trong thành phần dương (+0.030) và lớn hơn phần mất ở cặp bị tách;
+  - với AVICI RFF, gần như toàn bộ Q0 nằm ở cặp bị tách.
+- Đây vẫn là kế toán hậu nghiệm, chưa xác định nguyên nhân.
+
+**Hệ quả cho ghi chú ở luật §12** (phép kiểm kết hợp Fisher-z và HSIC, mỗi phép ở α_L/2):
+
+- điều kiện kích hoạt đã xảy ra, vì P6-1C-lin không được xác nhận;
+- kế toán ở trên **không** đủ để đánh giá ứng viên này, vì hai lẽ:
+  - đổi phân hoạch sẽ đổi cả input, điểm và ngưỡng bên trong các thành phần, chứ không chỉ các cặp bị tách;
+  - chia α_L/2 cho mỗi phép kiểm có thể vừa thêm vừa bỏ liên kết so với HSIC ở α_L, nên phép kết hợp không tự động "mạnh hơn";
+- chưa làm phép kiểm này lúc này là để giữ phạm vi bài; ứng viên chưa bị bác bỏ.
 
 ### 9.2 CDFM: kế toán bên trong thành phần, lấy τ(k0) làm mốc
 
 Đây là phân rã kế toán phụ thuộc mốc, chưa phải hai nguyên nhân tách biệt:
 
-- **phần điểm:** xác suất của R-L đọc ở τ(k0) của plain, so với plain ở k0;
-- **phần ngưỡng:** cách đọc NATIVE theo từng thành phần, so với cách đọc ở τ(k0).
+- **bước 1 (phần điểm):** xác suất của R-L đọc ở τ(k0) của plain, so với plain ở k0;
+- **bước 2 (phần ngưỡng):** cách đọc NATIVE theo từng thành phần, so với cách đọc ở τ(k0).
 
 Chưa tính với mốc đảo.
 
-| Họ | Cạnh trong thành phần: plain / R-L ở τ(k0) / R-L NATIVE | Flips: phần điểm / phần ngưỡng | ΔFP: phần điểm / phần ngưỡng | Hệ bị tách có gọi model | Ngưỡng thành phần − τ(k0), trên các hệ đó |
+| Họ | Cạnh trong thành phần: plain / R-L ở τ(k0) / R-L NATIVE | Số flips ở hai bước thay thế: plain → R-L ở τ(k0) / R-L ở τ(k0) → R-L NATIVE | ΔFP: phần điểm / phần ngưỡng | Hệ bị tách có gọi model | Ngưỡng thành phần − τ(k0), trên các hệ đó |
 |---|---|---|---|---|---|
 | tuyến tính | 36.40 / 32.25 / 39.98 | 7.52 / 7.73 | −2.42 / +5.48 | 42/60 | −0.153 (thấp hơn ở 42/42; khoảng −0.489 đến −0.020) |
 | RFF | 27.52 / 25.70 / 27.52 | 3.85 / 2.32 | −1.22 / +1.22 | 38/60 | −0.157 (thấp hơn ở 32/38; khoảng −0.425 đến +0.016) |
 
+- **Hai số flips là khoảng cách Hamming của hai bước thay thế** và không cộng thành tổng số flips trong thành phần (6.82 và 3.53 ở §9.1). Một cặp có thể đổi ở bước đầu rồi đổi lại ở bước sau. Phân rã có dấu của ΔFP thì cộng được: −2.42 + 5.48 = +3.07, đúng bằng ΔFP trong thành phần ở §9.1.
 - **Hệ tuyến tính:** theo mốc này, cạnh sai tăng trong thành phần nằm ở phần ngưỡng (+5.48), còn phần điểm lại bớt cạnh sai (−2.42). Trên thành phần nhỏ hơn bảng gốc, CDFM chọn ngưỡng NATIVE thấp hơn τ(k0) ở mọi hệ tuyến tính bị tách.
 - **Ví dụ xấu nhất,** hệ `PN6-c6-r12` (d_T = 20, e_T = 2, tuyến tính):
   - R-L ở k0 tách đúng một biến ra;
@@ -332,17 +364,17 @@ Chưa tính với mốc đảo.
 - Khớp cảnh báo ở luật §1: với đệm có cấu trúc, một cạnh nối giả có thể kéo gần cả khối đệm vào thành phần đích.
 - Khi mọi cột thuộc một thành phần, input của model trùng input của plain (cùng cột, cùng thứ tự), nên theo cấu trúc output của R-L ở input đó trùng plain.
   - Đã kiểm trực tiếp: output trùng plain từng bit ở 170/170 trường hợp (model × cách × input) mà cả bảng là một thành phần.
-  - Trong số đó, 4 trường hợp là input S20 bị gộp đủ 20 cột: 3 với R-L, 1 với R-H; còn lại là input k0.
-  - Ở các input đó, cách sửa không còn tác dụng.
+  - Trong số đó, 8 trường hợp là input S20 bị gộp đủ 20 cột: 4 cặp input × cách sửa (3 với R-L, 1 với R-H), nhân hai model. 162 trường hợp còn lại là input k0.
+  - Ở 4 cặp input × cách sửa đó, cách sửa không còn tác dụng.
 
-### 9.4 Cặp chéo bị bác bỏ so với mức kỳ vọng danh nghĩa
+### 9.4 Cặp chéo bị bác bỏ so với cận trên danh nghĩa
 
-Kỳ vọng danh nghĩa là mức kỳ vọng nếu p-value hợp lệ (luật §1):
+Nếu từng p-value hợp lệ, mức mỗi cặp nhân số cặp chéo là **cận trên** của số bác bỏ nhầm kỳ vọng (luật §1). Cận này không nhất thiết bằng kỳ vọng: với p-value bảo thủ, kỳ vọng nhỏ hơn cận.
 
 - R-L: α_L · d_T · k mỗi hệ;
 - R-H: α_H / (D(D − 1)/2) · d_T · k mỗi hệ.
 
-| Cách | Họ | Input | Quan sát (tổng 60 hệ) | Kỳ vọng danh nghĩa | Tỉ số | Hệ có ≥ 1 |
+| Cách | Họ | Input | Quan sát (tổng 60 hệ) | Cận trên danh nghĩa | Quan sát / cận | Hệ có ≥ 1 |
 |---|---|---|---|---|---|---|
 | R-L | tuyến tính | A20 | 3 | 1.80 | 1.7 | 3 |
 | R-L | tuyến tính | S20 | 11 | 1.80 | 6.1 | 5 |
@@ -420,9 +452,17 @@ Theo luật §9, cộng thêm các mục từ kết quả này:
 - số hậu nghiệm ở §9 như kết quả đã xác nhận;
 - "giá ở k0 của CDFM là do ngưỡng" như một quan hệ nhân quả: đó là kế toán theo một mốc;
 - "R-L rẻ hơn plain" ngoài phạm vi đã đo (DEV6; D ≤ 40; n = 500);
-- "phép kiểm kết hợp Fisher-z và HSIC sẽ sửa được P6-1C-lin".
+- về phép kiểm kết hợp Fisher-z và HSIC:
+  - "sẽ sửa được P6-1C-lin";
+  - "đã bị bác bỏ", hay "chỉ xử lý phần nhỏ của vấn đề";
+  - "mạnh hơn HSIC ở α_L";
+- "FROZEN và ngưỡng cục bộ đều chặn kênh ngưỡng": chỉ FROZEN cố định ngưỡng;
+- "FIXED kém ở mọi thước đo";
+- số flips ở hai bước thay thế (§9.2) như hai phần cộng thành tổng.
 
 ## 12. Hệ quả và bước tiếp (đề xuất; chờ user quyết)
+
+> **Cập nhật sau review:** user đã duyệt kết quả, đóng gap 3 và duyệt C13–C15 với cách viết khác bảng đề xuất dưới đây. Bản chính thức nằm ở [bảng claim](../manuscript_n1_2026-11-21/N1_claim_evidence_gap_vi.md); quyết định ghi ở §13. Bảng và danh sách dưới đây giữ nguyên làm bản ghi đề xuất ban đầu; riêng bước 3 đã được làm mềm theo review.
 
 **Bảng claim:** chưa thêm claim nào. Ba dòng đề xuất:
 
@@ -442,5 +482,38 @@ Ngoài ra, C9 (R của HELD2) sẽ trỏ sang P-N6 cho biến thể chỉ dùng 
 2. **Dự phòng, nếu user muốn xử lý CDFM tuyến tính:** một nghiên cứu mới nhắm vào cách đọc ngưỡng theo thành phần của CDFM, không phải phép kiểm sàng lọc (§9.1–§9.2).
    - Phải có luật mới, khóa trước, và seed held-out mới, vì ý tưởng này nảy ra sau khi xem P6-1C-lin.
    - Chưa có ứng viên cụ thể nào chỉ dùng input mà không phụ thuộc tập cột.
-3. **Không khuyến nghị lúc này:** phép kiểm kết hợp Fisher-z và HSIC (luật §12). Hậu nghiệm cho thấy nó chỉ chạm trực tiếp phần nhỏ của giá ở k0 (§9.1).
+3. **Chưa làm lúc này:** phép kiểm kết hợp Fisher-z và HSIC (luật §12).
+   - Lý do: giữ phạm vi bài.
+   - Ứng viên chưa bị bác bỏ: kế toán ở §9.1 không đủ để đánh giá nó.
 4. **Có cơ sở nhưng tốn compute:** hiệu chỉnh p-value HSIC để giảm gộp nhầm, ví dụ permutation cho các cặp gần ngưỡng (§9.4). Chỉ nên làm nếu gộp nhầm trở thành điểm chính của bài.
+
+## 13. Sau review của user (22/11)
+
+**Quyết định:**
+
+- Duyệt kết quả P-N6 và **đóng gap 3**.
+- User tái tính sáu phép kiểm, CI và nhãn 5/6, và xác nhận các kiểm tra 320/320 và 572/572. Mã băm của 23 file đóng băng và 54 phụ thuộc cũng khớp.
+- Duyệt push `2f013d6` cùng một commit đính chính. Các chỗ sửa không đổi kết quả chính.
+- **C13–C15** được duyệt với cách viết của user và đã vào [bảng claim](../manuscript_n1_2026-11-21/N1_claim_evidence_gap_vi.md):
+  - C13 không mở rộng sang S20;
+  - C14 là giữ gần output ban đầu hơn, không phải xác nhận độ chính xác cao hơn;
+  - C15 tách tính chất bất biến có điều kiện của thuật toán khỏi tần suất gộp nhầm và đánh đổi quan sát được; 572/572 là kiểm tra cài đặt, không phải kết luận thống kê mới.
+- C9 của HELD2 giữ nhãn cũ và dẫn sang C13–C15.
+- **Phép kiểm kết hợp Fisher-z và HSIC:** chưa làm, để giữ phạm vi bài; ứng viên chưa bị bác bỏ (§9.1).
+- **Bước tiếp:**
+  - hoàn thiện bản thảo trước khi mở nghiên cứu mới: cập nhật claim, viết §8, ghép bản thảo đầy đủ và rà xem claim nào còn thiếu bằng chứng;
+  - GO cho thiết kế thu gọn của gap 4, nếu việc thêm model kiểm được một claim cụ thể; đo ngân sách trước lượt chạy chính; gap 4 không chặn việc viết;
+  - giữ nghiên cứu ngưỡng theo thành phần làm hướng tiếp nối, chưa mở thành pha mới.
+
+**Nhật ký đính chính.** Nhãn và số liệu của sáu giả thuyết không đổi.
+
+| # | Chỗ | Trước | Sau |
+|---|---|---|---|
+| 1 | Mở đầu | "chưa chạy model nào trên hai bảng thật" | "chưa chạy R-L hay R-H của P-N6 trên hai bảng thật"; output plain đã có từ P-N5 |
+| 2 | §6 | Gọi cả FROZEN lẫn ngưỡng cục bộ là "chặn kênh ngưỡng" | Chỉ FROZEN cố định ngưỡng; ngưỡng cục bộ tính lại ngưỡng từ điểm của khối đích |
+| 3 | §6 | "FIXED 0.5 kém ở mọi thước đo" | F1 thấp nhất và φ lớn nhất. Tỉ lệ hệ đổi output không luôn cao hơn plain (58/60 so với 60/60 ở hệ tuyến tính) |
+| 4 | §9.2 | "Flips: phần điểm / phần ngưỡng" | "Số flips ở hai bước thay thế". Hai khoảng cách Hamming không cộng thành tổng; ΔFP có dấu thì cộng được |
+| 5 | §9.3 | "4 trường hợp là input S20 …; còn lại là input k0" | 8 trường hợp (4 cặp input × cách sửa, nhân hai model); 162 là input k0 |
+| 6 | §0, §9.4 | "Kỳ vọng danh nghĩa" | "Cận trên danh nghĩa" của kỳ vọng, đúng khi p-value hợp lệ; không nhất thiết bằng kỳ vọng |
+| 7 | §0, §9.1, §11, §12 | Phép kiểm kết hợp "chỉ tác động trực tiếp lên phần nhỏ hơn"; "không khuyến nghị" | Chưa đủ cơ sở để kết luận như vậy. Đổi phân hoạch đổi cả input, điểm và ngưỡng trong thành phần, và mức α/2 có thể vừa thêm vừa bỏ liên kết. Dừng nhánh này để giữ phạm vi bài. Thêm kế toán F1 (user tính, agent tính lại) |
+| 8 | §1 | Bộ nhớ đỉnh 2.01 GB | Giữ số đo thật; nói rõ mức này không làm mất tính hợp lệ; giải thích về JAX vẫn là suy luận |

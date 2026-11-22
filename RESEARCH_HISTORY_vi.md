@@ -431,6 +431,14 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
     - lấy τ(k0) làm mốc, phần đó trùng với việc CDFM chọn ngưỡng thấp hơn trên thành phần nhỏ (42/42 hệ bị tách);
     - vì vậy, phép kiểm kết hợp Fisher-z và HSIC chỉ tác động trực tiếp lên phần nhỏ hơn.
   - **Đề xuất:** đóng gap 3 sau khi user duyệt, rồi chuyển sang gap 4. Bảng claim chờ user xem kết quả. Chi tiết: [`PN6_results_vi.md`](reports/n6_fix_comparison_2026-11-22/PN6_results_vi.md).
+- **Cập nhật 22/11, user duyệt P-N6; đóng gap 3:**
+  - User tái tính sáu phép kiểm, CI và nhãn 5/6, và xác nhận 320/320, 572/572 cùng mã băm của 23 file đóng băng và 54 phụ thuộc. Push kết quả (`2f013d6`) cùng một commit đính chính; nhãn và số liệu không đổi.
+  - **Bảng claim:** thêm C13 (F1 tại k0 và A20, 3/4; không mở rộng sang S20), C14 (tại S20, R-L giữ gần output ban đầu hơn FROZEN; không phải độ chính xác) và C15 (bất biến có điều kiện, tách khỏi tần suất gộp nhầm và đánh đổi). C9 giữ nhãn cũ và dẫn sang các claim mới.
+  - **Đính chính mục trước** (append-only):
+    - câu "phép kiểm kết hợp Fisher-z và HSIC chỉ tác động trực tiếp lên phần nhỏ hơn" chưa đủ cơ sở, vì đổi phân hoạch đổi cả input, điểm và ngưỡng trong thành phần, và mức α/2 có thể vừa thêm vừa bỏ liên kết. Chưa làm phép kiểm này là để giữ phạm vi bài; ứng viên chưa bị bác bỏ;
+    - ở mục đóng băng P-N6, "không chạy model nào trên bảng thật" nghĩa là chưa chạy R-L hay R-H của P-N6; output plain đã có từ P-N5.
+  - **Kế toán F1 hậu nghiệm** (user tính, agent tính lại): với CDFM tuyến tính, khoảng −0.008 ở cặp bị tách và −0.015 đến −0.016 trong thành phần, tùy thứ tự thay thế. Đây là kế toán, chưa phải nguyên nhân.
+  - **Bước tiếp:** hoàn thiện bản thảo (§8 về cách sửa, bản đầy đủ, rà claim còn thiếu bằng chứng); thiết kế thu gọn cho gap 4 nếu thêm model kiểm được một claim cụ thể, đo ngân sách trước lượt chính; nghiên cứu ngưỡng theo thành phần là hướng tiếp nối, chưa mở pha mới.
 
 ---
 

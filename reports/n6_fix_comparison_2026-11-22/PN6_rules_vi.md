@@ -284,3 +284,4 @@ Bảng thật: σ_f(c), φ_f(c) và φ_f(k0), tức độ lệch ở k0 nếu s�
       - bộ nhớ đỉnh: AVICI 1.44 GB, CDFM 0.62 GB;
       - pipeline chạy mọi thành phần trên DEV6: các thành phần không chứa biến đích thêm 92 s vào 104 s thời gian model của R-L với AVICI, và 61 s vào 136 s với CDFM.
   - Theo trình tự user đã duyệt: các cổng đạt và ước tính không vượt 3 giờ, nên chạy P-N6 sau khi push commit đóng băng.
+- **Làm rõ cách viết, 22/11/2026, sau lượt chính** (theo review của user; không đổi thiết kế, không dựa trên output): ở mục đóng băng, "trước khi chạy model nào trên hai bảng thật" và "Không chạy model nào trên bảng thật" nghĩa là chưa chạy R-L hay R-H của P-N6 trên hai bảng thật. Output plain trên hai bảng đã có từ P-N5 và là mốc của φ (§2). Kết quả: [PN6_results_vi.md](PN6_results_vi.md).
