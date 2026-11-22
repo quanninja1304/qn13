@@ -101,10 +101,13 @@
      - báo Δp, số cặp đổi trạng thái, Δm, |Δm|, ngưỡng và số cạnh tại k0; không gọi thay đổi là giảm độ chính xác;
      - các lần sinh đệm đo biến thiên có điều kiện trên bảng thật đã cố định, không phải 20 bộ dữ liệu thật độc lập.
 3. **Gap 3: so sánh cách sửa, ghi rõ thông tin mỗi cách dùng.** **Luật P-N6 v1 đã khóa** (22/11): [PN6_rules_vi.md](../n6_fix_comparison_2026-11-22/PN6_rules_vi.md).
+   - **Kết quả lượt chính** (22/11, chờ user duyệt): [PN6_results_vi.md](../n6_fix_comparison_2026-11-22/PN6_results_vi.md).
+     - 5/6 CONFIRMED. P6-1C-lin (CDFM, tuyến tính) là NOT_CONFIRMED.
+     - Bảng claim sẽ cập nhật sau khi user xem kết quả. Đề xuất C13–C15 ở §12 của báo cáo.
    - User chọn R-L làm cách sửa chính, giữ R-H để so sánh, 120 hệ; bảng thật chỉ mô tả.
    - P6-1 dùng phép kiểm không kém quá biên (0.03) cho cả giá ở k0 lẫn mức ở A20; P6-2 so R-L với FROZEN ở đệm có cấu trúc.
    - Bản nháp sửa dòng R trong bảng dưới: R của P-N2 còn dùng họ cơ chế để chọn phép kiểm (Fisher-z cho hệ tuyến tính, HSIC cho RFF).
-   - Bản nháp tách cách này thành R-B và đề xuất hai biến thể chỉ dùng input: R-H (Bonferroni trên toàn bảng) và R-L (mức cố định mỗi cặp, bất biến theo cấu trúc trên phân hoạch đích).
+   - Bản nháp tách cách này thành R-B và đề xuất hai biến thể chỉ dùng input: R-H (Bonferroni trên toàn bảng) và R-L (mức cố định mỗi cặp). Với R-L, quyết định giữa các cặp đích không phụ thuộc số cột thêm vào. Output trên khối đích chỉ được giữ nguyên khi không có thành phần nào trộn đích với đệm (phát biểu có điều kiện, luật v1 §1).
 
    | Cách | Thông tin dùng | Vai trò |
    |---|---|---|
@@ -182,3 +185,5 @@ Số liệu không đổi. Bản trước là `b62b8da`.
 | 23 | §2 gap 2 | "bảng claim sẽ cập nhật sau khi user xem kết quả" | User đã duyệt; trỏ tới phân rã thăm dò |
 | 24 | §3 | "Failure (C1, C2)"; "The real-data consistency check is open" | Mục 4 ghi "on synthetic data"; thêm mục 7 cho hai bảng thật (C11, C12); limitations: hai bảng, đo độ bất ổn, không đo độ chính xác |
 | 25 | §2 gap 3, dòng R | "chỉ dữ liệu input" | "dữ liệu input, và họ cơ chế để chọn phép kiểm". Agent phát hiện khi soạn P-N6 (`run2.py` chọn Fisher-z hay HSIC theo họ). Đây là sửa về sự kiện; các phép so mới ở P-N6 còn chờ user duyệt |
+| 26 | §2 gap 3 | "R-L (mức cố định mỗi cặp, bất biến theo cấu trúc trên phân hoạch đích)" | Quyết định giữa các cặp đích không phụ thuộc số cột thêm vào; output chỉ giữ nguyên khi không có trộn đích với đệm. Câu cũ còn sót từ nháp v0; luật v1 đã sửa theo review của user |
+| 27 | §2 gap 3 | — | Thêm trạng thái lượt chính P-N6 và trỏ tới kết quả. Chưa thêm claim; claim chờ user duyệt |

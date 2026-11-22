@@ -412,6 +412,25 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
     - phát biểu có điều kiện của R-L đúng từng bit ở mọi input DEV6 thỏa điều kiện;
     - ước tính 2.6 giờ cho lượt chính.
   - Không chạy model nào trên bảng thật trước khi đóng băng. Chi tiết: [`PN6_rules_vi.md`](reports/n6_fix_comparison_2026-11-22/PN6_rules_vi.md) §12, [`checks/gates6.json`](reports/n6_fix_comparison_2026-11-22/checks/gates6.json).
+- **Cập nhật 22/11, kết quả P-N6 (gap 3, so sánh cách sửa):** chạy dưới đóng băng `98266e7`, 2 giờ 19 phút.
+  - **Kiểm hoàn tất đạt:**
+    - 2 930/2 930 job `ok`;
+    - quyết định của R-L giữa các cặp đích trùng k0 ở 320/320 input có đệm;
+    - phát biểu có điều kiện đúng từng bit ở 572/572 trường hợp;
+    - agent kiểm lại độc lập và khớp.
+  - **5/6 CONFIRMED** (Holm 0.05):
+    - P6-1 (3/4): R-L không làm giảm F1 trung bình quá 0.03 so với output ban đầu, ở k0 và ở A20, với AVICI (tuyến tính, RFF) và CDFM (RFF);
+    - P6-1C-lin NOT_CONFIRMED: Q0 −0.024 [−0.042, −0.005], đúng ô mà power đã báo trước là yếu;
+    - P6-2 (2/2): ở S20, R-L lệch khỏi output ban đầu của CDFM ít hơn FROZEN (9.27 so với 18.00 cặp; 6.98 so với 17.32).
+  - **Mô tả:**
+    - R-L đổi output ngay ở k0 (φ(k0) là 4–8 cặp ở 3/4 nhóm), nhưng σ = 0 ở mọi input không trộn;
+    - trộn xảy ra ở 11/120 hệ với A20 (1 cột mỗi hệ) và 12/120 hệ với S20 (15–20 cột);
+    - R-H trộn ít hơn nhưng tách thêm khi có đệm, nên có nhiều hệ có σ > 0 hơn.
+  - **Hậu nghiệm:**
+    - giá ở k0 của CDFM tuyến tính nằm chủ yếu trong các thành phần;
+    - lấy τ(k0) làm mốc, phần đó trùng với việc CDFM chọn ngưỡng thấp hơn trên thành phần nhỏ (42/42 hệ bị tách);
+    - vì vậy, phép kiểm kết hợp Fisher-z và HSIC chỉ tác động trực tiếp lên phần nhỏ hơn.
+  - **Đề xuất:** đóng gap 3 sau khi user duyệt, rồi chuyển sang gap 4. Bảng claim chờ user xem kết quả. Chi tiết: [`PN6_results_vi.md`](reports/n6_fix_comparison_2026-11-22/PN6_results_vi.md).
 
 ---
 

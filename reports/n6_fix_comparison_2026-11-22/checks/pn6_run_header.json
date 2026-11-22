@@ -1,0 +1,68 @@
+[
+ {
+  "label": "precheck",
+  "time_local": "2026-11-22T17:21:15",
+  "time_unix": 1795342875.7035036,
+  "freeze_commit": "98266e76808d00b7eb9f9b6c6399d5cd5e1988da",
+  "remote_branches": [
+   "origin/docs/n1-pilot"
+  ],
+  "head": "98266e76808d00b7eb9f9b6c6399d5cd5e1988da",
+  "sha256sums_sha": "55dd00d08855fac5dd62f0ac8957830a05f8bc73925e2683fb6b618e4fddbb88",
+  "deps_sha": "485005e19a05f6f6ce3415764b527c45499b64a94e2b5ffc23fe280416bc9acd",
+  "n_files": 23,
+  "n_dependency_files": 54,
+  "data_sha": {
+   "sachs": "07087f7020995980f998b6683a85bb974b6e129cd4ce3a8cd55633ab79b814d0",
+   "wine_white": "76c3f809815c17c07212622f776311faeb31e87610d52c26d87d6e361b169836"
+  },
+  "data_ok": true,
+  "python": "3.11.16",
+  "ok": true,
+  "problems": []
+ },
+ {
+  "label": "pn6_start",
+  "time_local": "2026-11-22T17:21:23",
+  "time_unix": 1795342883.9579163,
+  "freeze_commit": "98266e76808d00b7eb9f9b6c6399d5cd5e1988da",
+  "remote_branches": [
+   "origin/docs/n1-pilot"
+  ],
+  "head": "98266e76808d00b7eb9f9b6c6399d5cd5e1988da",
+  "sha256sums_sha": "55dd00d08855fac5dd62f0ac8957830a05f8bc73925e2683fb6b618e4fddbb88",
+  "deps_sha": "485005e19a05f6f6ce3415764b527c45499b64a94e2b5ffc23fe280416bc9acd",
+  "n_files": 23,
+  "n_dependency_files": 54,
+  "data_sha": {
+   "sachs": "07087f7020995980f998b6683a85bb974b6e129cd4ce3a8cd55633ab79b814d0",
+   "wine_white": "76c3f809815c17c07212622f776311faeb31e87610d52c26d87d6e361b169836"
+  },
+  "data_ok": true,
+  "python": "3.11.16",
+  "ok": true,
+  "problems": []
+ },
+ {
+  "label": "pn6_end",
+  "time_local": "2026-11-22T19:40:03",
+  "time_unix": 1795351203.7312047,
+  "freeze_commit": "98266e76808d00b7eb9f9b6c6399d5cd5e1988da",
+  "remote_branches": [
+   "origin/docs/n1-pilot"
+  ],
+  "head": "98266e76808d00b7eb9f9b6c6399d5cd5e1988da",
+  "sha256sums_sha": "55dd00d08855fac5dd62f0ac8957830a05f8bc73925e2683fb6b618e4fddbb88",
+  "deps_sha": "485005e19a05f6f6ce3415764b527c45499b64a94e2b5ffc23fe280416bc9acd",
+  "n_files": 23,
+  "n_dependency_files": 54,
+  "data_sha": {
+   "sachs": "07087f7020995980f998b6683a85bb974b6e129cd4ce3a8cd55633ab79b814d0",
+   "wine_white": "76c3f809815c17c07212622f776311faeb31e87610d52c26d87d6e361b169836"
+  },
+  "data_ok": true,
+  "python": "3.11.16",
+  "ok": true,
+  "problems": []
+ }
+]

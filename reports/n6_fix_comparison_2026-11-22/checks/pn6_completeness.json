@@ -1,0 +1,25 @@
+{
+ "set": "PN6",
+ "n_jobs": 2930,
+ "rl": {
+  "padded_inputs": 320,
+  "decisions_same": 320,
+  "conditional_inputs": 572,
+  "conditional_bitwise": 572
+ },
+ "freeze_gate": {
+  "pn6_start": {
+   "ok": true,
+   "freeze_commit": "98266e76808d00b7eb9f9b6c6399d5cd5e1988da",
+   "time_local": "2026-11-22T17:21:23"
+  },
+  "pn6_end": {
+   "ok": true,
+   "freeze_commit": "98266e76808d00b7eb9f9b6c6399d5cd5e1988da",
+   "time_local": "2026-11-22T19:40:03"
+  }
+ },
+ "ok": true,
+ "problems": [],
+ "n_problems": 0
+}

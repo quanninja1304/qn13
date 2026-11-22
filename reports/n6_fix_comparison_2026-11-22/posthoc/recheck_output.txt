@@ -1,0 +1,14 @@
+== hypotheses (recheck vs frozen reading)
+P6-1A-lin: Q0 +0.0198 [-0.0049, +0.0446] p 0.000136 | QA20 +0.0197 [-0.0051, +0.0444] p 0.000142 | p 0.000142 rank 4 CONFIRMED (frozen: CONFIRMED, p 0.000142)
+P6-1A-rff: Q0 -0.0069 [-0.0172, +0.0035] p 3.78e-05 | QA20 -0.0069 [-0.0173, +0.0035] p 4e-05 | p 4e-05 rank 3 CONFIRMED (frozen: CONFIRMED, p 4e-05)
+P6-1C-lin: Q0 -0.0235 [-0.0423, -0.0048] p 0.246 | QA20 -0.0221 [-0.0413, -0.0028] p 0.205 | p 0.246 rank 6 NOT_CONFIRMED (frozen: NOT_CONFIRMED, p 0.246)
+P6-1C-rff: Q0 -0.0014 [-0.0195, +0.0168] p 0.00156 | QA20 -0.0029 [-0.0214, +0.0156] p 0.00282 | p 0.00282 rank 5 CONFIRMED (frozen: CONFIRMED, p 0.00282)
+P6-2C-lin: diff +8.733 [+5.927, +11.540] p 1.08e-06 rank 2 CONFIRMED (frozen: CONFIRMED, p 1.08e-06)
+P6-2C-rff: diff +10.333 [+8.141, +12.526] p 7.55e-10 rank 1 CONFIRMED (frozen: CONFIRMED, p 7.55e-10)
+
+== agreement with the frozen reading
+max |difference| by category: {'desc_ci': 3.55e-15, 'desc_est': 0.0, 'hyp_ci': 3.55e-15, 'hyp_est': 0.0, 'hyp_p': 8.67e-19, 'real': 0.0, 'screen': 0.0, 'share_ci': 1.39e-17}
+hypothesis label or Holm-rank mismatches: 0
+descriptive size-label mismatches: 0 | share k/n mismatches: 0 | worst |dm| mismatches: 0
+screening count mismatches: 0 | real-table mismatches: 0
+saved partitions that differ from the partition rebuilt from cached p-values: 0
