@@ -398,6 +398,13 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
     - Sáu giả thuyết đề xuất: TOST cho mức khôi phục F1 ở A20 (4), và R so với FROZEN ở S20 cho CDFM (2).
     - Power ước tính cho ô CDFM tuyến tính chỉ khoảng 0.14 nếu giá giống R của HELD2.
     - Chờ user quyết sáu điểm ở §12.
+- **Cập nhật 22/11, khóa luật P-N6 v1 (gap 3):** user chọn R-L làm cách sửa chính và R-H để so sánh, không chạy lại R-B, 120 hệ; bảng thật chỉ mô tả; không thêm k = 40 tổng hợp.
+  - **Bốn chỉnh sửa:**
+    1. P6-1 đổi từ TOST sang phép kiểm không kém quá biên, cho cả giá ở k0 lẫn mức ở A20.
+    2. Phát biểu bất biến của R-L thành phát biểu có điều kiện: phân hoạch toàn bảng vẫn có thể đổi qua đường đích–đệm–đích. Công thức rủi ro tính số cặp chéo bị bác bỏ nhầm, không phải số cột bị gộp.
+    3. G2 so p-value với dung sai 1e−12, vì phép nhân ma trận trong HSIC lệch ở mức 1e−15; quyết định vẫn phải trùng chính xác.
+    4. Hồ sơ power tính trực tiếp trên từng hệ của HELD2. Power cho P6-1C-lin khoảng 0.21 nếu giá giống R-B.
+  - Agent tính lại các số của user (độ lệch HSIC; φ của FROZEN và R-B) và ra cùng số. Chưa sinh input P-N6 nào. Chi tiết: [`PN6_rules_vi.md`](reports/n6_fix_comparison_2026-11-22/PN6_rules_vi.md) §12.
 
 ---
 
