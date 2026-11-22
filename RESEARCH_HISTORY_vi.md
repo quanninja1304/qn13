@@ -358,6 +358,10 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
   - **Cả tám giả thuyết CONFIRMED** (Holm 0.05): ở cả hai k, điểm khối chéo giảm, ngưỡng tăng, chỉ đổi khối chéo đã làm ngưỡng tăng và mất cạnh đích, và phần do ngưỡng chiếm phần lớn mức đổi trung bình (mốc e = 0).
   - **Mô tả:** ở k = 40, khối đệm đóng góp nhiều nhất (65%), không còn là khối chéo. Cặp không-cạnh của khối đệm cũng giảm điểm, còn cạnh thật của khối đệm tăng điểm. Phần do ngưỡng vượt phần do điểm ở 81% và 89% số hệ.
   - Chi tiết: [`PN4_results_vi.md`](reports/n4_cdfm_threshold_path_2026-11-21/PN4_results_vi.md).
+- **Cập nhật 22/11, user duyệt P-N4; bắt đầu gap 2 (P-N5, dữ liệu thật):**
+  - Đã push kết quả P-N4 (`70eb7c5`) cùng commit sửa diễn đạt (`0469d7d`). C5 và C6a nâng thành XÁC NHẬN trong phạm vi P-N4; C6b giữ mô tả.
+  - Dữ liệu user chọn: Sachs CD3/CD28 (Zenodo `10.5281/zenodo.7681811`, MaRDI; 853 × 11; md5 khớp nguồn) và UCI Wine Quality, rượu trắng (DOI `10.24432/C56S3T`; 4 898 × 11 biến dùng; 937 hàng trùng). Đã tải vào `artifacts/data_real/` (git-ignored), lập manifest nguồn và mã băm. Chưa chạy model nào trên hai bảng này.
+  - Chi tiết: [`DATA_MANIFEST_vi.md`](reports/n5_real_data_consistency_2026-11-22/DATA_MANIFEST_vi.md).
 
 ---
 

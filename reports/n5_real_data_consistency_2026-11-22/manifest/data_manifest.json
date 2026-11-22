@@ -1,0 +1,259 @@
+{
+ "note": "Sources and hashes of the P-N5 real tables; data under artifacts/data_real/ (git-ignored), never committed.",
+ "sachs": {
+  "source": {
+   "repository": "Zenodo",
+   "record": "https://zenodo.org/records/7681811",
+   "doi": "10.5281/zenodo.7681811",
+   "concept_doi": "10.5281/zenodo.7679091",
+   "title": "Sachs: Protein and Phospholipids Expressions",
+   "creator": "Mathematical Research Data Initiative (MaRDI)",
+   "published": "2023-02-26",
+   "license": "CC BY 4.0",
+   "derived_from": "Sachs et al., Science 2005, doi 10.1126/science.1105809",
+   "download_url": "https://zenodo.org/api/records/7681811/files/sachs.zip/content"
+  },
+  "archive": {
+   "file": "sachs.zip",
+   "bytes": 454496,
+   "md5": "d50ccd7f88bb3705bcf6eda3978bcc41",
+   "sha256": "42d3c5eef7804ce065dec7e16edebb606e0e5b4ae6298310e55e1ca053b959b2",
+   "md5_published_by_zenodo": "d50ccd7f88bb3705bcf6eda3978bcc41",
+   "members": [
+    "sachs_description.html",
+    "sachs_description.Rmd",
+    "GroundTruth.csv",
+    "Data Files/",
+    "Data Files/b2camp.csv",
+    "Data Files/cd3cd28.csv",
+    "Data Files/cd3cd28_aktinhib.csv",
+    "Data Files/cd3cd28icam2_ly.csv",
+    "Data Files/cd3cd28_icam2.csv",
+    "Data Files/pma.csv",
+    "Data Files/cd3cd28icam2_u0126.csv",
+    "Data Files/cd3cd28_g0076.csv",
+    "Data Files/cd3cd28icam2_psit.csv",
+    "Data Files/cd3cd28_psitect.csv",
+    "Data Files/cd3cd28_ly.csv",
+    "Data Files/cd3cd28_u0126.csv",
+    "Data Files/cd3cd28icam2_g0076.csv",
+    "Data Files/cd3cd28icam2_aktinhib.csv"
+   ],
+   "md5_matches_zenodo": true
+  },
+  "member_used": {
+   "name": "Data Files/cd3cd28.csv",
+   "bytes": 44448,
+   "sha256": "07087f7020995980f998b6683a85bb974b6e129cd4ce3a8cd55633ab79b814d0",
+   "header_all": [
+    "Raf",
+    "Mek",
+    "Plcg",
+    "PIP2",
+    "PIP3",
+    "Erk",
+    "Akt",
+    "PKA",
+    "PKC",
+    "P38",
+    "Jnk"
+   ],
+   "variables_used": [
+    "Raf",
+    "Mek",
+    "Plcg",
+    "PIP2",
+    "PIP3",
+    "Erk",
+    "Akt",
+    "PKA",
+    "PKC",
+    "P38",
+    "Jnk"
+   ],
+   "dropped": [],
+   "n_rows": 853,
+   "n_cols_used": 11,
+   "all_finite": true,
+   "min": [
+    1.61,
+    1.0,
+    1.0,
+    1.11,
+    1.0,
+    1.0,
+    1.7,
+    1.95,
+    1.0,
+    1.53,
+    1.0
+   ],
+   "max": [
+    552.0,
+    389.0,
+    167.0,
+    843.0,
+    764.0,
+    2571.0,
+    3555.0,
+    4491.0,
+    106.0,
+    170.0,
+    343.0
+   ],
+   "n_unique": [
+    275,
+    253,
+    269,
+    367,
+    323,
+    331,
+    280,
+    276,
+    326,
+    249,
+    366
+   ],
+   "n_zero": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "duplicate_rows_all_columns": 0,
+   "duplicate_rows_used_columns": 0
+  },
+  "not_used": "the 13 other condition files, GroundTruth.csv and the description files (not extracted)"
+ },
+ "wine_white": {
+  "source": {
+   "repository": "UCI Machine Learning Repository",
+   "dataset_id": 186,
+   "page": "https://archive.ics.uci.edu/dataset/186/wine+quality",
+   "doi": "10.24432/C56S3T",
+   "title": "Wine Quality",
+   "license": "CC BY 4.0 (dataset page)",
+   "creators": [
+    "Paulo Cortez",
+    "A. Cerdeira",
+    "F. Almeida",
+    "T. Matos",
+    "J. Reis"
+   ],
+   "intro_paper": "Cortez et al., Modeling wine preferences by data mining from physicochemical properties, Decision Support Systems, 2009",
+   "download_url": "https://archive.ics.uci.edu/static/public/186/wine+quality.zip"
+  },
+  "archive": {
+   "file": "wine_quality.zip",
+   "bytes": 91353,
+   "md5": "0ddfa7a9379510fe7ff88b9930e3c332",
+   "sha256": "3ed56667f4b828242bd732d7d1dd7f2861e54432239d7fa63877014cbb0304d4",
+   "checksum_published_by_source": null,
+   "members": [
+    "winequality-red.csv",
+    "winequality-white.csv",
+    "winequality.names"
+   ]
+  },
+  "member_used": {
+   "name": "winequality-white.csv",
+   "bytes": 264426,
+   "sha256": "76c3f809815c17c07212622f776311faeb31e87610d52c26d87d6e361b169836",
+   "header_all": [
+    "fixed acidity",
+    "volatile acidity",
+    "citric acid",
+    "residual sugar",
+    "chlorides",
+    "free sulfur dioxide",
+    "total sulfur dioxide",
+    "density",
+    "pH",
+    "sulphates",
+    "alcohol",
+    "quality"
+   ],
+   "variables_used": [
+    "fixed acidity",
+    "volatile acidity",
+    "citric acid",
+    "residual sugar",
+    "chlorides",
+    "free sulfur dioxide",
+    "total sulfur dioxide",
+    "density",
+    "pH",
+    "sulphates",
+    "alcohol"
+   ],
+   "dropped": [
+    "quality"
+   ],
+   "n_rows": 4898,
+   "n_cols_used": 11,
+   "all_finite": true,
+   "min": [
+    3.8,
+    0.08,
+    0.0,
+    0.6,
+    0.009,
+    2.0,
+    9.0,
+    0.98711,
+    2.72,
+    0.22,
+    8.0
+   ],
+   "max": [
+    14.2,
+    1.1,
+    1.66,
+    65.8,
+    0.346,
+    289.0,
+    440.0,
+    1.03898,
+    3.82,
+    1.08,
+    14.2
+   ],
+   "n_unique": [
+    68,
+    125,
+    87,
+    310,
+    160,
+    132,
+    251,
+    890,
+    103,
+    79,
+    103
+   ],
+   "n_zero": [
+    0,
+    0,
+    19,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "duplicate_rows_all_columns": 937,
+   "duplicate_rows_used_columns": 937
+  },
+  "not_used": "winequality-red.csv and winequality.names (not extracted)"
+ }
+}
