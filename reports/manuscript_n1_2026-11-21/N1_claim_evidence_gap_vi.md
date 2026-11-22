@@ -71,7 +71,10 @@
      - cỡ mẫu đề xuất 80 hệ (20 mỗi ô RFF), theo power tính từ HELD2.
    - **Không** khóa "khối chéo luôn đứng đầu". Tỉ lệ số cặp chéo/đệm là 2·d_T/(k − 1); ở k = 40 là 0.51 (d_T = 10) và 1.03 (d_T = 20), nên lợi thế về số lượng của khối chéo gần như mất.
    - **Quy trình:** user duyệt v0, rồi khóa và push trước khi sinh dữ liệu, như P-N2 và P-N3.
-2. **Gap 2: yêu cầu nhất quán cần kiểm tra trên dữ liệu thật.**
+2. **Gap 2: yêu cầu nhất quán cần kiểm tra trên dữ liệu thật.** **Đã chạy ngày 22/11 (P-N5): 7/8 giả thuyết CONFIRMED** (Holm 0.05; có điều kiện trên hai bảng đã cố định).
+   - Trên cả hai bảng, khi thêm 20 cột Gauss, skeleton khối thật của AVICI và CDFM đổi nhiều hơn max(PC, GES) theo từng lần sinh (4/4).
+   - Ngưỡng CDFM cao hơn khi đệm có cấu trúc ở Wine (k = 20 và 40) và ở Sachs (k = 40); Sachs k = 20 NOT_CONFIRMED.
+   - Xem [kết quả P-N5](../n5_real_data_consistency_2026-11-22/PN5_results_vi.md). Bảng claim (C1, C3, C5 và claim mới cho dữ liệu thật) sẽ cập nhật sau khi user xem kết quả.
    - **Logic:** cột thêm vào là cột tổng hợp, độc lập với khối thật theo thiết kế. Quan hệ thật trong khối thật vì vậy không đổi. Nhưng một bộ ước lượng hữu hạn mẫu không bắt buộc cho output trùng hệt. Vì không có ground truth, phép thử chỉ đo **độ bất ổn**, không đo độ chính xác.
    - **Yêu cầu thiết kế:**
      - giữ nguyên khối thật và tiền xử lý; khối thật trùng từng bit giữa các input;

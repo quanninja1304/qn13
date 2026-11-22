@@ -1,0 +1,52 @@
+# recheck_pn5.py (independent re-computation of the eight hypotheses from raw outputs)
+P5-1S-A: mean +2.650000 (reading +2.650000) t 13.542729 (reading 13.542729) p 1.637e-11 (reading 1.637e-11) values_equal True +/0/- 20/0/0
+P5-1S-C: mean +1.300000 (reading +1.300000) t 5.940178 (reading 5.940178) p 5.099e-06 (reading 5.099e-06) values_equal True +/0/- 17/3/0
+P5-2S-20: mean -0.006969 (reading -0.006969) t -0.605736 (reading -0.605736) p 0.7241 (reading 0.7241) values_equal True +/0/- 9/0/11
+P5-2S-40: mean +0.125069 (reading +0.125069) t 11.755145 (reading 11.755145) p 1.834e-10 (reading 1.834e-10) values_equal True +/0/- 20/0/0
+P5-1W-A: mean +5.300000 (reading +5.300000) t 4.816087 (reading 4.816087) p 6.002e-05 (reading 6.002e-05) values_equal True +/0/- 20/0/0
+P5-1W-C: mean +10.900000 (reading +10.900000) t 20.855453 (reading 20.855453) p 7.427e-15 (reading 7.427e-15) values_equal True +/0/- 20/0/0
+P5-2W-20: mean +0.180286 (reading +0.180286) t 18.106783 (reading 18.106783) p 9.63e-14 (reading 9.63e-14) values_equal True +/0/- 20/0/0
+P5-2W-40: mean +0.191030 (reading +0.191030) t 36.614607 (reading 36.614607) p 2.184e-19 (reading 2.184e-19) values_equal True +/0/- 20/0/0
+Holm #1 P5-2W-40 p 2.18e-19 thr 0.00625 -> CONFIRMED (reading CONFIRMED)
+Holm #2 P5-1W-C p 7.43e-15 thr 0.00714 -> CONFIRMED (reading CONFIRMED)
+Holm #3 P5-2W-20 p 9.63e-14 thr 0.00833 -> CONFIRMED (reading CONFIRMED)
+Holm #4 P5-1S-A p 1.64e-11 thr 0.01000 -> CONFIRMED (reading CONFIRMED)
+Holm #5 P5-2S-40 p 1.83e-10 thr 0.01250 -> CONFIRMED (reading CONFIRMED)
+Holm #6 P5-1S-C p 5.1e-06 thr 0.01667 -> CONFIRMED (reading CONFIRMED)
+Holm #7 P5-1W-A p 6e-05 thr 0.02500 -> CONFIRMED (reading CONFIRMED)
+Holm #8 P5-2S-20 p 0.724 thr 0.05000 -> NOT_CONFIRMED (reading NOT_CONFIRMED)
+sachs m0 {'avici': 4, 'cdfm': 9, 'pc': 7, 'ges': 5} reading {'avici': 4, 'cdfm': 9, 'pc': 7, 'ges': 5} thr0 0.750989 k0 rerun identical {'avici': True, 'cdfm': True, 'pc': True, 'ges': True}
+wine m0 {'avici': 5, 'cdfm': 38, 'pc': 16, 'ges': 23} reading {'avici': 5, 'cdfm': 38, 'pc': 16, 'ges': 23} thr0 0.493276 k0 rerun identical {'avici': True, 'cdfm': True, 'pc': True, 'ges': True}
+
+# posthoc_pn5.py (post-hoc checks outside the locked rules)
+(1) exact sign test, one-sided, zeros dropped
+  P5-1S-A: +20 -0 0:0 p = 9.54e-07
+  P5-1S-C: +17 -0 0:3 p = 7.63e-06
+  P5-2S-20: +9 -11 0:0 p = 0.748
+  P5-2S-40: +20 -0 0:0 p = 9.54e-07
+  P5-1W-A: +20 -0 0:0 p = 9.54e-07
+  P5-1W-C: +20 -0 0:0 p = 9.54e-07
+  P5-2W-20: +20 -0 0:0 p = 9.54e-07
+  P5-2W-40: +20 -0 0:0 p = 9.54e-07
+  Holm #1 P5-1S-A p 9.54e-07 thr 0.00625 reject (locked t-test label: CONFIRMED)
+  Holm #2 P5-2S-40 p 9.54e-07 thr 0.00714 reject (locked t-test label: CONFIRMED)
+  Holm #3 P5-1W-A p 9.54e-07 thr 0.00833 reject (locked t-test label: CONFIRMED)
+  Holm #4 P5-1W-C p 9.54e-07 thr 0.01000 reject (locked t-test label: CONFIRMED)
+  Holm #5 P5-2W-20 p 9.54e-07 thr 0.01250 reject (locked t-test label: CONFIRMED)
+  Holm #6 P5-2W-40 p 9.54e-07 thr 0.01667 reject (locked t-test label: CONFIRMED)
+  Holm #7 P5-1S-C p 7.63e-06 thr 0.02500 reject (locked t-test label: CONFIRMED)
+  Holm #8 P5-2S-20 p 0.748 thr 0.05000 keep (locked t-test label: NOT_CONFIRMED)
+(2) avici NATIVE target-skeleton size m
+  sachs: m0 4; k20_e0 mean 1.15 [min 0, max 3] m=0 in 3, k20_e2 mean 0.10 [min 0, max 1] m=0 in 18, k40_e0 mean 0.70 [min 0, max 4] m=0 in 13, k40_e2 mean 0.00 [min 0, max 0] m=0 in 20
+    m(structured) - m(Gaussian), k = 20: mean -1.05 CI95_t [-1.47, -0.63] +/0/- 1/2/17
+    m(structured) - m(Gaussian), k = 40: mean -0.70 CI95_t [-1.25, -0.15] +/0/- 0/13/7
+  wine: m0 5; k20_e0 mean 8.90 [min 3, max 19] m=0 in 0, k20_e2 mean 3.70 [min 1, max 5] m=0 in 0, k40_e0 mean 9.00 [min 3, max 15] m=0 in 0, k40_e2 mean 2.65 [min 0, max 5] m=0 in 5
+    m(structured) - m(Gaussian), k = 20: mean -5.20 CI95_t [-7.30, -3.10] +/0/- 1/1/18
+    m(structured) - m(Gaussian), k = 40: mean -6.35 CI95_t [-8.25, -4.45] +/0/- 0/2/18
+(3) cdfm NATIVE target-skeleton size m
+  sachs: m0 9; k20_e0 mean 9.50 [min 6, max 11] m=0 in 0, k20_e2 mean 9.55 [min 6, max 20] m=0 in 0, k40_e0 mean 8.60 [min 6, max 11] m=0 in 0, k40_e2 mean 9.10 [min 5, max 15] m=0 in 0
+    m(structured) - m(Gaussian), k = 20: mean +0.05 CI95_t [-1.74, +1.84] +/0/- 4/3/13
+    m(structured) - m(Gaussian), k = 40: mean +0.50 CI95_t [-1.34, +2.34] +/0/- 9/4/7
+  wine: m0 38; k20_e0 mean 40.20 [min 30, max 50] m=0 in 0, k20_e2 mean 21.10 [min 13, max 31] m=0 in 0, k40_e0 mean 41.20 [min 35, max 46] m=0 in 0, k40_e2 mean 23.80 [min 13, max 41] m=0 in 0
+    m(structured) - m(Gaussian), k = 20: mean -19.10 CI95_t [-23.21, -14.99] +/0/- 0/0/20
+    m(structured) - m(Gaussian), k = 40: mean -17.40 CI95_t [-20.99, -13.81] +/0/- 1/0/19

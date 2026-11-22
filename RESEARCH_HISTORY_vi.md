@@ -367,6 +367,16 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
   - Các chỉnh sửa khác: lý do chọn normal-score (trích Harris & Drton 2013); ý nghĩa của P5-1 và giới hạn của phép kiểm; luật timeout thống nhất và theo dõi mốc 3 giờ trong lượt chạy; số hàng dư của Wine.
   - Chưa chạy model nào trên hai bảng thật. Chi tiết: [`PN5_rules_vi.md`](reports/n5_real_data_consistency_2026-11-22/PN5_rules_vi.md) §12.
 - **Cập nhật 22/11, cổng P-N5 đạt, đóng băng code:** G1–G7 đạt (DEV5 là bảng thay thế tổng hợp; không chạy model nào trên bảng thật). Cả 162 input có khối thật trùng từng bit với X_R. Ước tính 1.83 giờ cho 616 job. Snapshot gồm phụ thuộc và mã băm của hai file dữ liệu. Chi tiết: [`PN5_rules_vi.md`](reports/n5_real_data_consistency_2026-11-22/PN5_rules_vi.md) §12, [`checks/gates5.json`](reports/n5_real_data_consistency_2026-11-22/checks/gates5.json).
+- **Cập nhật 22/11, kết quả P-N5 (gap 2, hai bảng thật):** chạy dưới đóng băng `b1a9f29`, 80 phút. Kiểm hoàn tất đạt: 616/616 job `ok`, 0 timeout.
+  - **7/8 CONFIRMED** (Holm 0.05):
+    - P5-1 (4/4): trên Sachs và Wine, khi thêm 20 cột Gauss, skeleton khối thật của AVICI và CDFM đổi nhiều hơn max(PC, GES) theo từng lần sinh.
+    - P5-2 (3/4): ngưỡng CDFM cao hơn khi đệm có cấu trúc ở Wine (k = 20 và 40) và ở Sachs (k = 40). Sachs k = 20 NOT_CONFIRMED: −0.007 [−0.031, +0.017].
+  - **Mô tả:**
+    - PC và GES đổi tối đa 1 cặp ở mọi lần sinh.
+    - AVICI có skeleton rất thưa ở k0 (4 và 5 cạnh). Trên Sachs, 40 cột có cấu trúc xóa cả 4 cạnh ở cả 20 lần sinh.
+    - Ở Sachs, số cạnh NATIVE của CDFM gần như không đổi dù ngưỡng tăng, trong khi số cạnh theo FIXED tăng mạnh.
+  - **Hậu nghiệm:** phép kiểm dấu cho cùng cách chia 7/8.
+  - Mọi suy luận có điều kiện trên hai bảng đã cố định; P-N5 không nói gì về độ chính xác. Bảng claim chờ user xem kết quả. Chi tiết: [`PN5_results_vi.md`](reports/n5_real_data_consistency_2026-11-22/PN5_results_vi.md).
 
 ---
 

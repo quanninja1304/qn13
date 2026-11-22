@@ -1,0 +1,84 @@
+{
+ "set": "PN5",
+ "n_jobs": 616,
+ "per_algorithm": {
+  "avici": {
+   "jobs": 164,
+   "ok": 164,
+   "timeout": 0,
+   "error": 0,
+   "budget_stop": 0,
+   "timeouts": [],
+   "reruns_bitwise_identical": {
+    "sachs__k0 vs rerun": true,
+    "wine__k0 vs rerun": true
+   }
+  },
+  "cdfm": {
+   "jobs": 164,
+   "ok": 164,
+   "timeout": 0,
+   "error": 0,
+   "budget_stop": 0,
+   "timeouts": [],
+   "reruns_bitwise_identical": {
+    "sachs__k0 vs rerun": true,
+    "wine__k0 vs rerun": true
+   }
+  },
+  "pc": {
+   "jobs": 164,
+   "ok": 164,
+   "timeout": 0,
+   "error": 0,
+   "budget_stop": 0,
+   "timeouts": [],
+   "reruns_bitwise_identical": {
+    "sachs__k0 vs rerun": true,
+    "wine__k0 vs rerun": true
+   }
+  },
+  "ges": {
+   "jobs": 124,
+   "ok": 124,
+   "timeout": 0,
+   "error": 0,
+   "budget_stop": 0,
+   "timeouts": [],
+   "reruns_bitwise_identical": {
+    "sachs__k0 vs rerun": true,
+    "wine__k0 vs rerun": true
+   }
+  }
+ },
+ "XR": {
+  "sachs": {
+   "recomputed": "4e51d4698711f191448779d5aba73cebd4e413112a8a23f065a91757d739c9e3",
+   "saved": "4e51d4698711f191448779d5aba73cebd4e413112a8a23f065a91757d739c9e3",
+   "gate_record": "4e51d4698711f191448779d5aba73cebd4e413112a8a23f065a91757d739c9e3"
+  },
+  "wine": {
+   "recomputed": "9cd901fb252fe6c4f926cb80147d0033f4c2dffa984cd6c632d588a5f9034dd5",
+   "saved": "9cd901fb252fe6c4f926cb80147d0033f4c2dffa984cd6c632d588a5f9034dd5",
+   "gate_record": "9cd901fb252fe6c4f926cb80147d0033f4c2dffa984cd6c632d588a5f9034dd5"
+  }
+ },
+ "data_files": {
+  "sachs": true,
+  "wine": true
+ },
+ "freeze_gate": {
+  "pn5_start": {
+   "ok": true,
+   "freeze_commit": "b1a9f29519c8c0f5340a1dcac1f5d25384211fdd",
+   "time_local": "2026-11-22T12:48:27"
+  },
+  "pn5_end": {
+   "ok": true,
+   "freeze_commit": "b1a9f29519c8c0f5340a1dcac1f5d25384211fdd",
+   "time_local": "2026-11-22T14:08:50"
+  }
+ },
+ "ok": true,
+ "problems": []
+}

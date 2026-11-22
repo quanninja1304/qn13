@@ -1,0 +1,68 @@
+[
+ {
+  "label": "precheck",
+  "time_local": "2026-11-22T12:48:19",
+  "time_unix": 1795326499.1685445,
+  "freeze_commit": "b1a9f29519c8c0f5340a1dcac1f5d25384211fdd",
+  "remote_branches": [
+   "origin/docs/n1-pilot"
+  ],
+  "head": "b1a9f29519c8c0f5340a1dcac1f5d25384211fdd",
+  "sha256sums_sha": "98f49821bd688b2956fba9ffed79d65d64a761100a9df1b8301b0e73057a7ebc",
+  "deps_sha": "657932e17fab1cb01fb83188115f93e0a254c0a58126a7f8b36867d188275032",
+  "n_files": 15,
+  "n_dependency_files": 155,
+  "data_sha": {
+   "sachs": "07087f7020995980f998b6683a85bb974b6e129cd4ce3a8cd55633ab79b814d0",
+   "wine_white": "76c3f809815c17c07212622f776311faeb31e87610d52c26d87d6e361b169836"
+  },
+  "data_ok": true,
+  "python": "3.11.16",
+  "ok": true,
+  "problems": []
+ },
+ {
+  "label": "pn5_start",
+  "time_local": "2026-11-22T12:48:27",
+  "time_unix": 1795326507.8766274,
+  "freeze_commit": "b1a9f29519c8c0f5340a1dcac1f5d25384211fdd",
+  "remote_branches": [
+   "origin/docs/n1-pilot"
+  ],
+  "head": "b1a9f29519c8c0f5340a1dcac1f5d25384211fdd",
+  "sha256sums_sha": "98f49821bd688b2956fba9ffed79d65d64a761100a9df1b8301b0e73057a7ebc",
+  "deps_sha": "657932e17fab1cb01fb83188115f93e0a254c0a58126a7f8b36867d188275032",
+  "n_files": 15,
+  "n_dependency_files": 155,
+  "data_sha": {
+   "sachs": "07087f7020995980f998b6683a85bb974b6e129cd4ce3a8cd55633ab79b814d0",
+   "wine_white": "76c3f809815c17c07212622f776311faeb31e87610d52c26d87d6e361b169836"
+  },
+  "data_ok": true,
+  "python": "3.11.16",
+  "ok": true,
+  "problems": []
+ },
+ {
+  "label": "pn5_end",
+  "time_local": "2026-11-22T14:08:50",
+  "time_unix": 1795331330.5455678,
+  "freeze_commit": "b1a9f29519c8c0f5340a1dcac1f5d25384211fdd",
+  "remote_branches": [
+   "origin/docs/n1-pilot"
+  ],
+  "head": "b1a9f29519c8c0f5340a1dcac1f5d25384211fdd",
+  "sha256sums_sha": "98f49821bd688b2956fba9ffed79d65d64a761100a9df1b8301b0e73057a7ebc",
+  "deps_sha": "657932e17fab1cb01fb83188115f93e0a254c0a58126a7f8b36867d188275032",
+  "n_files": 15,
+  "n_dependency_files": 155,
+  "data_sha": {
+   "sachs": "07087f7020995980f998b6683a85bb974b6e129cd4ce3a8cd55633ab79b814d0",
+   "wine_white": "76c3f809815c17c07212622f776311faeb31e87610d52c26d87d6e361b169836"
+  },
+  "data_ok": true,
+  "python": "3.11.16",
+  "ok": true,
+  "problems": []
+ }
+]
