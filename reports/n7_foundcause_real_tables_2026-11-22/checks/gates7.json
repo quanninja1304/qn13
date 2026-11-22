@@ -1,0 +1,120 @@
+{
+ "gates": {
+  "G1": {
+   "ok": true,
+   "dev_mismatch": [],
+   "n_real_inputs": 42,
+   "real_mismatch": []
+  },
+  "G2": {
+   "ok": true,
+   "input_matches_p1_log": true,
+   "max_abs_diff": {
+    "probs": 0.0,
+    "adj_native": 0.0,
+    "agreement": 0.0,
+    "threshold": 0.0,
+    "C": 0.0
+   }
+  },
+  "G3": {
+   "ok": true
+  },
+  "G3b": {
+   "ok": true,
+   "max_abs_diff": {
+    "probs": 0.0,
+    "agreement": 0.0,
+    "adj_native": 0.0
+   },
+   "tolerance": 1e-06
+  },
+  "G3c": {
+   "ok": true,
+   "source": {
+    "ok": true,
+    "counts": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "positions": [
+     5432,
+     6216,
+     6501,
+     6655
+    ]
+   },
+   "n_padded_inputs": 42,
+   "n_take": 450
+  },
+  "G4": {
+   "ok": true
+  },
+  "G5": {
+   "ok": true,
+   "detail": {
+    "P5-1S-A": true,
+    "P5-1S-C": true,
+    "P5-1W-A": true,
+    "P5-1W-C": true
+   }
+  },
+  "G6": {
+   "ok": true,
+   "cases": {
+    "t_vs_scipy": 8.673617379884035e-18,
+    "degenerate": true,
+    "holm": [
+     {
+      "a": [
+       1,
+       0.025,
+       true
+      ],
+      "b": [
+       2,
+       0.05,
+       true
+      ]
+     },
+     {
+      "a": [
+       1,
+       0.025,
+       false
+      ],
+      "b": [
+       2,
+       0.05,
+       false
+      ]
+     }
+    ]
+   }
+  },
+  "G7": {
+   "ok": true,
+   "analyze_smoke": "SMOKE OK 1 hypothesis; tables ['standin']",
+   "analyze_err": "",
+   "completeness_rc": 0,
+   "completeness_tail": "{\n \"set\": \"DEV7\",\n \"schedule_source\": {\n  \"ok\": true,\n  \"counts\": [\n   1,\n   1,\n   1,\n   1\n  ],\n  \"positions\": [\n   5432,\n   6216,\n   6501,\n   6655\n  ]\n },\n \"n_jobs\": 7,\n \"inputs_checked\": 7,\n \"row_index_inputs\": 2,\n \"dev7_adapter42_max_abs_diff\": 0.0,\n \"freeze_gate\": null,\n \"ok\": true,\n \"n_problems\": 0\n}"
+  },
+  "G8": {
+   "ok": true,
+   "median_s_D11": 174.79000000000002,
+   "median_s_D31": 378.84000000000003,
+   "calls_D11": 7,
+   "calls_D31": 20,
+   "estimate_s_per_run": 9980.4,
+   "estimate_h_per_run": 2.77,
+   "estimate_h_two_runs": 5.54,
+   "peak_wset_mb": 2086.0,
+   "g2_runtime_s": [
+    150.91
+   ]
+  }
+ },
+ "ok": true
+}

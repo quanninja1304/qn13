@@ -1,0 +1,128 @@
+{
+ "set": "str",
+ "rules": "str",
+ "hypotheses": {
+  "P7-1X": {
+   "table": "str",
+   "n": "int",
+   "mean": "float",
+   "sd": "float",
+   "se": "float",
+   "df": "int",
+   "t": "float",
+   "p": "float",
+   "ci95": [
+    "float64"
+   ],
+   "degenerate": "bool",
+   "sign_size": [
+    "str"
+   ],
+   "holm_rank": "int",
+   "holm_threshold": "float",
+   "label": "str"
+  }
+ },
+ "tables": {
+  "standin": {
+   "table": "str",
+   "n_draws": "int",
+   "m0_fc": "int",
+   "k0_dropped": [],
+   "k0_n_duplicates": "int",
+   "rows": [
+    {
+     "r": "int",
+     "flips_fc": "int",
+     "flips_pc": "int",
+     "flips_ges": "int",
+     "max_pc_ges": "int",
+     "dm_fc": "int",
+     "dp_fc": "float",
+     "flips_avici": "int",
+     "flips_cdfm": "int",
+     "dropped": [],
+     "n_duplicates": "int"
+    }
+   ],
+   "contrast_values": [
+    "int"
+   ],
+   "contrast": {
+    "n": "int",
+    "mean": "float",
+    "sd": "float",
+    "se": "float",
+    "df": "int",
+    "t": "float",
+    "p": "float",
+    "ci95": [
+     "float64"
+    ],
+    "degenerate": "bool"
+   },
+   "flips_fc": {
+    "n": "int",
+    "mean": "float",
+    "median": "float",
+    "min": "float",
+    "max": "float",
+    "q1": "float",
+    "q3": "float"
+   },
+   "max_pc_ges": {
+    "n": "int",
+    "mean": "float",
+    "median": "float",
+    "min": "float",
+    "max": "float",
+    "q1": "float",
+    "q3": "float"
+   },
+   "dm_fc": {
+    "n": "int",
+    "mean": "float",
+    "median": "float",
+    "min": "float",
+    "max": "float",
+    "q1": "float",
+    "q3": "float"
+   },
+   "dp_fc": {
+    "n": "int",
+    "mean": "float",
+    "median": "float",
+    "min": "float",
+    "max": "float",
+    "q1": "float",
+    "q3": "float"
+   },
+   "flips_avici_p5": {
+    "n": "int",
+    "mean": "float",
+    "median": "float",
+    "min": "float",
+    "max": "float",
+    "q1": "float",
+    "q3": "float"
+   },
+   "flips_cdfm_p5": {
+    "n": "int",
+    "mean": "float",
+    "median": "float",
+    "min": "float",
+    "max": "float",
+    "q1": "float",
+    "q3": "float"
+   },
+   "schedule_reference": {
+    "values": {
+     "1042": "int"
+    },
+    "mean": "float",
+    "max": "int",
+    "note": "str"
+   }
+  }
+ }
+}

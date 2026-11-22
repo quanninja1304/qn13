@@ -1,0 +1,26 @@
+{
+ "set": "DEV7",
+ "schedule_source": {
+  "ok": true,
+  "counts": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "positions": [
+   5432,
+   6216,
+   6501,
+   6655
+  ]
+ },
+ "n_jobs": 7,
+ "inputs_checked": 7,
+ "row_index_inputs": 2,
+ "dev7_adapter42_max_abs_diff": 0.0,
+ "freeze_gate": null,
+ "ok": true,
+ "problems": [],
+ "n_problems": 0
+}

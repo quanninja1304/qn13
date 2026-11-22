@@ -461,6 +461,11 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
     3. Adapter không đạt thì dừng. Thêm phép kiểm chỉ số hàng giữa k0 và mọi input có đệm, không cần chạy model.
   - **Làm rõ:** D ∈ [2, 50] đã được user xác minh ở FoundCause v2 (§2, Appendix G). Đó là dải huấn luyện được công bố, không phải giới hạn kỹ thuật.
   - **Bản thảo:** user duyệt các sửa của bản rà, và thu hẹp tiêu đề ngay, không phụ thuộc kết quả P-N7. Chưa thêm TabCausal hay mở nghiên cứu mới cho gap 4.
+- **Cập nhật 22/11, cổng P-N7 đạt, đóng băng code:**
+  - DEV7 trên bảng thay thế: 7 lần gọi FoundCause, 0 lỗi. Cả mười cổng G1–G8 đạt, gồm G3b và G3c.
+  - G2: output FoundCause trên một input DEV của P-N1 trùng từng bit với output đã lưu ngày 13/11, nên cấu hình trùng P-N1.
+  - Ước tính 2.77 giờ mỗi lượt và 5.54 giờ cho hai lượt.
+  - Không chạy FoundCause trên bảng thật trước khi đóng băng. Chi tiết: [`PN7_rules_vi.md`](reports/n7_foundcause_real_tables_2026-11-22/PN7_rules_vi.md) §12, [`checks/gates7.json`](reports/n7_foundcause_real_tables_2026-11-22/checks/gates7.json).
 
 ---
 

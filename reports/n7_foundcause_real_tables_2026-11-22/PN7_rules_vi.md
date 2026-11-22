@@ -213,3 +213,20 @@ DEV7 dùng bảng thay thế mô phỏng `standin` (d = 11) và hai lần sinh �
     - P-N7 không mở rộng kết luận về cơ chế CDFM hay cách sửa R-L sang FoundCause;
     - G5 kiểm bộ đối chứng bằng cách so hiệu theo lần sinh với 20 giá trị đã báo của P5-1, ở cả AVICI và CDFM;
     - user tính lại ngân sách (khoảng 5.13 giờ cho hai lượt) và các số power tham chiếu.
+  - **Mốc khóa:** `7bc40f8`, push lúc 2026-11-22T14:28:20Z (GitHub activity API), cùng `125ce6f`.
+- **Đóng băng code, 22/11/2026,** trước khi có output FoundCause nào trên hai bảng thật.
+  - **Code mới** trong `artifacts/n7_runs/pn7/`: `common7.py`, `run7.py`, `stats7.py`, `analyze7.py`, `completeness7.py`, `gates7.py`, `verify_freeze7.py`, `freeze7.py`, `run_dev7.sh`, `run_pn7.sh`.
+  - **Snapshot** [`code/`](code/):
+    - `SHA256SUMS` gồm 10 file code và 9 phụ thuộc. Các phụ thuộc là `common.py`, `metrics.py`, `fc_adapter.py` và bốn file cấu hình của P-N1, `common2.py` của P-N2, `common5.py` của P-N5. Mỗi phụ thuộc phải khớp mã băm trong snapshot gốc của nó.
+    - `DEPS_SHA256.json` có 219 mã băm: nguồn gói `foundcause` và `avici`; checkpoint FoundCause (khớp manifest checkpoint của P-N1); hai file dữ liệu; output P-N5 của PC, GES, AVICI và CDFM trên đúng các input; đọc kết quả và log DEV5 của P-N5; output và log DEV của P-N1 dùng cho G2. Thêm mã băm của manifest dữ liệu, `inputs5.json`, manifest checkpoint, cùng phiên bản gói.
+  - **DEV7** (bảng thay thế `standin`, base 470000): 7 lần gọi FoundCause, 0 lỗi, 1 612 s. Không chạm hai bảng thật.
+  - **Cả mười cổng đạt** ([`checks/gates7.json`](checks/gates7.json)):
+    - G1: input DEV7 khớp log DEV5; 42/42 input bảng thật khớp `inputs5.json`.
+    - G2: chạy lại input `DEV-c0-r0` ở k0 của P-N1; output trùng từng bit với output đã lưu của P-N1, độ lệch 0 ở `probs`, `adj_native`, `agreement`, `threshold` và `C`. Cấu hình vì vậy trùng P-N1.
+    - G3: chạy lại k0 trùng từng bit. G3b: adapter ở base 42 trùng API, độ lệch 0. G3c: dòng mã về lịch đúng như mô tả; chỉ số hàng (450/500) trùng giữa k0 và cả 42 input có đệm.
+    - G4: cách đọc skeleton khớp `metrics.skel_native`.
+    - G5: bộ đối chứng tái lập chính xác 20 giá trị P5-1 ở cả hai bảng và hai model.
+    - G6: các ca kiểm của code thống kê đều đúng.
+    - G7: code đọc chạy hết trên DEV7, kể cả nhánh tham chiếu lịch; kiểm hoàn tất DEV7 đạt.
+    - G8: trung vị 174.8 s mỗi lần gọi ở D = 11 và 378.8 s ở D = 31. Ước tính 2.77 giờ mỗi lượt (27 lần gọi, × 1.10 + 300 s), dưới 3 giờ; hai lượt 5.54 giờ. Bộ nhớ đỉnh 2.09 GB.
+  - Theo trình tự user đã duyệt: các cổng đạt và ước tính mỗi lượt không vượt 3 giờ, nên chạy hai lượt chính sau khi push commit đóng băng.
