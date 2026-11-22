@@ -360,8 +360,12 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
   - Chi tiết: [`PN4_results_vi.md`](reports/n4_cdfm_threshold_path_2026-11-21/PN4_results_vi.md).
 - **Cập nhật 22/11, user duyệt P-N4; bắt đầu gap 2 (P-N5, dữ liệu thật):**
   - Đã push kết quả P-N4 (`70eb7c5`) cùng commit sửa diễn đạt (`0469d7d`). C5 và C6a nâng thành XÁC NHẬN trong phạm vi P-N4; C6b giữ mô tả.
-  - Dữ liệu user chọn: Sachs CD3/CD28 (Zenodo `10.5281/zenodo.7681811`, MaRDI; 853 × 11; md5 khớp nguồn) và UCI Wine Quality, rượu trắng (DOI `10.24432/C56S3T`; 4 898 × 11 biến dùng; 937 hàng trùng). Đã tải vào `artifacts/data_real/` (git-ignored), lập manifest nguồn và mã băm. Chưa chạy model nào trên hai bảng này.
+  - Dữ liệu user chọn: Sachs CD3/CD28 (Zenodo `10.5281/zenodo.7681811`, MaRDI; 853 × 11; md5 khớp nguồn) và UCI Wine Quality, rượu trắng (DOI `10.24432/C56S3T`; 4 898 × 11 biến dùng; 937 hàng dư sau khi loại trùng). Đã tải vào `artifacts/data_real/` (git-ignored), lập manifest nguồn và mã băm. Chưa chạy model nào trên hai bảng này.
   - Chi tiết: [`DATA_MANIFEST_vi.md`](reports/n5_real_data_consistency_2026-11-22/DATA_MANIFEST_vi.md).
+- **Cập nhật 22/11, khóa luật P-N5 v1 (gap 2):** user duyệt bốn quyết định (normal-score cho cả hai bảng; tám giả thuyết, Holm 0.05; bỏ GES ở k = 40 có cấu trúc; giữ hàng trùng của Wine) và năm chỉnh sửa.
+  - Chỉnh sửa quan trọng nhất: sửa lỗi chuẩn hóa hai lần. Input là [X_R | P], không chuẩn hóa lại toàn bảng.
+  - Các chỉnh sửa khác: lý do chọn normal-score (trích Harris & Drton 2013); ý nghĩa của P5-1 và giới hạn của phép kiểm; luật timeout thống nhất và theo dõi mốc 3 giờ trong lượt chạy; số hàng dư của Wine.
+  - Chưa chạy model nào trên hai bảng thật. Chi tiết: [`PN5_rules_vi.md`](reports/n5_real_data_consistency_2026-11-22/PN5_rules_vi.md) §12.
 
 ---
 

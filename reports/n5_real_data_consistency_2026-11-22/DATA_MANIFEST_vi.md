@@ -31,7 +31,7 @@
 | Archive | `wine_quality.zip`, 91 353 byte; SHA-256 `3ed56667f4b828242bd732d7d1dd7f2861e54432239d7fa63877014cbb0304d4`. UCI không công bố checksum; mã băm do agent tính khi tải |
 | File dùng | `winequality-white.csv`, 264 426 byte, SHA-256 `76c3f809815c17c07212622f776311faeb31e87610d52c26d87d6e361b169836` |
 | Cấu trúc | 4 898 hàng × 12 cột, phân cách bằng `;`. **Dùng 11 biến lý–hóa**, bỏ cột `quality` |
-| Đặc điểm | Không thiếu giá trị. `citric acid` có giá trị 0. **937 hàng trùng hoàn toàn với một hàng khác** (trên cả 11 biến dùng) |
+| Đặc điểm | Không thiếu giá trị. `citric acid` có giá trị 0. **937 hàng dư sau khi loại trùng**, tức số hàng trừ số vector khác nhau, trên 11 biến dùng (trên cả 12 cột cũng là 937) |
 | Không dùng | `winequality-red.csv`, `winequality.names`; không giải nén |
 
 ## 3. Quy tắc dùng về sau
