@@ -267,3 +267,12 @@ Dữ liệu: base 510000, 2 hệ mỗi ô (16 hệ, r = 0, 1; chỉ số i = 15�
   - **hai chỉnh kỹ thuật của agent, không đổi giả thuyết hay phép kiểm:**
     - G1 thêm kiểm output không phụ thuộc file đồ thị. Phần B cần đồ thị toàn số 0, vì bảng thật không có ground truth; SEA chỉ dùng đồ thị để tính metric của chính nó;
     - cổng dùng 2 lần sinh đệm của DEV5 (r = 0, 1), đúng tập đã đóng băng của Study 4, thay cho "3 lần sinh" của v0.2.
+- **23/11/2026, cổng DEV (§6), chạy sau khi khóa v1, không đổi luật.** 94/94 job DEV đạt. Chi tiết: `checks/gates8.json`.
+  - G1 đạt: adapter đúng ở mọi output; chạy lại trùng từng bit; output không phụ thuộc file đồ thị.
+  - G2 đạt.
+  - **G3 PASS:** phân vị 95 của Δp khi hoán vị là 0.064, khi đổi seed là 0.075. Đây là chẩn đoán, không chứng minh equivariance. Không chạy nhánh đệm xen.
+  - **G4 PASS:** F1 trung bình ở k0 là 0.679 trên 8 hệ tuyến tính, so với 0.387 của đồ thị đầy đủ (PC 0.702, GES 0.826). Không có cờ.
+  - **G5:** ước tính A1 1.83 h, A2 1.83 h, A3 2.00 h, A4 2.00 h, B 1.69 h; tổng 9.3 h. Không lượt nào vượt 1.5 lần ước tính ở §8. A1 và A2 gần mốc dừng 2.1 h.
+  - Đo mỗi tiến trình: 21–27 s ở D = 10–20, khoảng 43 s ở D = 30–31, 65 s ở D = 40.
+  - Code đọc kết quả chạy đạt ở chế độ chỉ kiểm cấu trúc; `strat8` trùng hàm đóng băng của Study 2 (sai khác 0.0).
+  - Bước tiếp: đóng băng code và phụ thuộc, push, rồi chạy các lượt chính.

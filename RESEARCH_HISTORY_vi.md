@@ -519,6 +519,12 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
     - G3 có công thức hoán vị, và phép so của nhánh đệm xen được khóa trước.
     - §5 ghi công thức power với ngưỡng t và điều kiện SMALL đầy đủ.
     - Bước tiếp: viết code, chạy cổng DEV, đóng băng, rồi lượt chính.
+  - **Cổng DEV đạt** (94/94 job; [`checks/gates8.json`](reports/n8_sea_model_coverage_2026-11-23/checks/gates8.json)):
+    - G1, G2 đạt;
+    - G3 PASS (chẩn đoán hoán vị: 0.064 so với 0.075);
+    - G4 PASS (F1 ở k0 0.679 so với 0.387 của đồ thị đầy đủ);
+    - G5: ước tính 9.3 h cho lượt chính.
+    - Code và phụ thuộc đóng băng trong [`code/`](reports/n8_sea_model_coverage_2026-11-23/code/), rồi chạy lượt chính.
 
 ---
 

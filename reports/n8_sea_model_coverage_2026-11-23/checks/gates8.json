@@ -1,0 +1,190 @@
+{
+ "G1": {
+  "missing": [],
+  "adapter_fail": [],
+  "rerun_bitwise": true,
+  "graph_file_independent": true,
+  "ok": true
+ },
+ "G2": {
+  "ok": true,
+  "problems": []
+ },
+ "G3": {
+  "pass_": true,
+  "label": "PASS",
+  "q95_dp_perm": 0.06407507234162839,
+  "q95_dp_seed": 0.07476813803187153,
+  "rows": [
+   {
+    "sysid": "DEV8-c0-r0",
+    "dp_perm": 0.02346082946209612,
+    "dp_seed": 0.014294951302064065,
+    "flips_perm": 1,
+    "flips_seed": 3
+   },
+   {
+    "sysid": "DEV8-c1-r0",
+    "dp_perm": 0.02324458016826409,
+    "dp_seed": 0.02377919739875425,
+    "flips_perm": 3,
+    "flips_seed": 2
+   },
+   {
+    "sysid": "DEV8-c2-r0",
+    "dp_perm": 0.06807090904718886,
+    "dp_seed": 0.08458156723095776,
+    "flips_perm": 2,
+    "flips_seed": 5
+   },
+   {
+    "sysid": "DEV8-c3-r0",
+    "dp_perm": 0.03744764225589784,
+    "dp_seed": 0.052157299061784415,
+    "flips_perm": 2,
+    "flips_seed": 2
+   },
+   {
+    "sysid": "DEV8-c4-r0",
+    "dp_perm": 0.0340040484918494,
+    "dp_seed": 0.03551949846489486,
+    "flips_perm": 12,
+    "flips_seed": 12
+   },
+   {
+    "sysid": "DEV8-c5-r0",
+    "dp_perm": 0.010608749445562258,
+    "dp_seed": 0.011766023287782446,
+    "flips_perm": 3,
+    "flips_seed": 4
+   },
+   {
+    "sysid": "DEV8-c6-r0",
+    "dp_perm": 0.056654232745587535,
+    "dp_seed": 0.048434790881780924,
+    "flips_perm": 21,
+    "flips_seed": 14
+   },
+   {
+    "sysid": "DEV8-c7-r0",
+    "dp_perm": 0.03335063368002394,
+    "dp_seed": 0.056543198090711434,
+    "flips_perm": 7,
+    "flips_seed": 15
+   }
+  ],
+  "note": "diagnostic only; does not establish or refute permutation equivariance (rules \u00a76)"
+ },
+ "G4": {
+  "pass_": true,
+  "means": {
+   "f1_sea": 0.6789644548437617,
+   "f1_pc": 0.7023602944502052,
+   "f1_ges": 0.8264645312314803,
+   "f1_empty": 0.0,
+   "f1_complete": 0.3868420568021469
+  },
+  "rows": [
+   {
+    "sysid": "DEV8-c0-r0",
+    "f1_sea": 1.0,
+    "f1_pc": 1.0,
+    "f1_ges": 1.0,
+    "f1_empty": 0.0,
+    "f1_complete": 0.4210526315789474
+   },
+   {
+    "sysid": "DEV8-c0-r1",
+    "f1_sea": 0.6956521739130435,
+    "f1_pc": 0.7619047619047619,
+    "f1_ges": 0.6666666666666666,
+    "f1_empty": 0.0,
+    "f1_complete": 0.4482758620689655
+   },
+   {
+    "sysid": "DEV8-c2-r0",
+    "f1_sea": 0.875,
+    "f1_pc": 0.8148148148148148,
+    "f1_ges": 1.0,
+    "f1_empty": 0.0,
+    "f1_complete": 0.5
+   },
+   {
+    "sysid": "DEV8-c2-r1",
+    "f1_sea": 0.6792452830188679,
+    "f1_pc": 0.4,
+    "f1_ges": 0.8461538461538461,
+    "f1_empty": 0.0,
+    "f1_complete": 0.7142857142857143
+   },
+   {
+    "sysid": "DEV8-c4-r0",
+    "f1_sea": 0.509090909090909,
+    "f1_pc": 0.6857142857142857,
+    "f1_ges": 0.8,
+    "f1_empty": 0.0,
+    "f1_complete": 0.1990521327014218
+   },
+   {
+    "sysid": "DEV8-c4-r1",
+    "f1_sea": 0.8,
+    "f1_pc": 0.9090909090909091,
+    "f1_ges": 0.85,
+    "f1_empty": 0.0,
+    "f1_complete": 0.16425120772946858
+   },
+   {
+    "sysid": "DEV8-c6-r0",
+    "f1_sea": 0.4,
+    "f1_pc": 0.45161290322580644,
+    "f1_ges": 0.6610169491525424,
+    "f1_empty": 0.0,
+    "f1_complete": 0.38297872340425526
+   },
+   {
+    "sysid": "DEV8-c6-r1",
+    "f1_sea": 0.4727272727272727,
+    "f1_pc": 0.5957446808510638,
+    "f1_ges": 0.7878787878787878,
+    "f1_empty": 0.0,
+    "f1_complete": 0.2648401826484018
+   }
+  ],
+  "flag": null,
+  "needs_config_check": false,
+  "note": "limits interpretation only; P8-2 and P8-3 stay in the Holm family of six (rules \u00a76)"
+ },
+ "G5": {
+  "per_process_s_by_D": {
+   "10": 26.49230769230769,
+   "30": 42.7375,
+   "20": 21.545833333333334,
+   "40": 65.18125,
+   "11": 21.43,
+   "31": 43.55
+  },
+  "estimate_h": {
+   "A1": 1.830855769230775,
+   "A2": 1.830855769230775,
+   "A3": 1.9960671296296295,
+   "A4": 1.9960671296296295,
+   "B": 1.6863500000000038
+  },
+  "rules_estimate_h": {
+   "A1": 1.4,
+   "A2": 1.4,
+   "A3": 2.0,
+   "A4": 2.0,
+   "B": 1.7
+  },
+  "report_user": false,
+  "total_h": 9.340195797720813
+ },
+ "code": {
+  "strat8_vs_frozen_max_abs": 0.0,
+  "strat8_ok": true,
+  "analyze_dev_exit": 0,
+  "analyze_dev_ok": true
+ },
+ "ok_to_freeze": true
+}
