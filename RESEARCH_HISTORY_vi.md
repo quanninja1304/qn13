@@ -553,6 +553,14 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
     - "không xác lập rằng toàn bộ điều kiện thử nằm trong phân phối huấn luyện của SEA";
     - hai kết luận F1 chỉ áp dụng cho đệm Gauss A20.
   - **Bước tiếp:** push ba commit; cập nhật sổ claim, bản thảo và supplement.
+- **Cập nhật 23/11, push Study 7, thêm C16, đính chính hai số:**
+  - Push `86d39fe`, `bb4658e` và `6586ce0` lúc 2026-11-23T16:47:33Z (GitHub activity API).
+  - **Sổ claim** ([`N1_claim_evidence_gap_vi.md`](reports/manuscript_n1_2026-11-21/N1_claim_evidence_gap_vi.md)): thêm C16 theo câu của user; gap 4 thêm phần mở rộng Study 7, đã đóng; nhật ký sửa, dòng 38–40.
+  - **Đính chính số** (agent phát hiện khi đối chiếu từng ước lượng và CI với `pn8_reading.json`, trước khi đưa vào bản thảo):
+    - CI của P8-1 là [+5.06, +6.61], không phải [+5.06, +6.62] như ở mục kết quả P-N8 phía trên;
+    - CI của P8-4S ở cách đọc phụ là [−0.05, +0.15], không phải [−0.06, +0.16];
+    - cả hai do làm tròn hai lần từ bản in ba chữ số. Nhãn và Size không đổi. Báo cáo kết quả đã sửa tại chỗ và ghi ở §6.
+  - **Bước tiếp:** cập nhật bản thảo và supplement trên nhánh riêng.
 
 ---
 

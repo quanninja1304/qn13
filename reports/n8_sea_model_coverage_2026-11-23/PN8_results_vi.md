@@ -23,7 +23,7 @@
 
 | ID | Phần | Contrast | Ước lượng [CI 95%] | t (df) | p một phía | Holm (hạng, ngưỡng) | Label | Size |
 |---|---|---|---|---|---|---|---|---|
-| P8-1 | A, 120 hệ | Δ, A20 (Gauss) | +5.84 [+5.06, +6.62] cặp | 15.12 (44.7) | 1.7 × 10⁻¹⁹ | 1, 0.0083 | **CONFIRMED** | LARGE |
+| P8-1 | A, 120 hệ | Δ, A20 (Gauss) | +5.84 [+5.06, +6.61] cặp | 15.12 (44.7) | 1.7 × 10⁻¹⁹ | 1, 0.0083 | **CONFIRMED** | LARGE |
 | P8-1S | A, 120 hệ | Δ, S20 (có cấu trúc) | +4.50 [+3.86, +5.13] cặp | 14.19 (49.1) | 2.7 × 10⁻¹⁹ | 2, 0.0100 | **CONFIRMED** | LARGE |
 | P8-2 | A, 120 hệ | H = F1(k0) − F1(A20) | +0.049 [+0.035, +0.063] | 6.89 (89.1) | 3.8 × 10⁻¹⁰ | 4, 0.0167 | **CONFIRMED** | UNCLEAR |
 | P8-3 | A, 60 hệ tuyến tính | H_SEA − max(H_PC, H_GES) | +0.065 [+0.041, +0.088] | 5.57 (47.8) | 5.7 × 10⁻⁷ | 5, 0.0250 | **CONFIRMED** | UNCLEAR |
@@ -38,7 +38,7 @@
 
 **Câu đọc** (theo "Cách đọc" ở §4 của luật):
 
-- **P8-1:** "Trên 120 hệ tổng hợp held-out mới, sau khi thêm 20 cột Gauss độc lập, skeleton khối đích của SEA nằm xa các output k0 ở seed khác hơn so với output k0 cùng seed. Theo flips, mức chênh trung bình là 5.84 cặp (CI 95% 5.06–6.62; trung bình đều theo 8 ô). CI nằm trọn trên biên 1 cặp."
+- **P8-1:** "Trên 120 hệ tổng hợp held-out mới, sau khi thêm 20 cột Gauss độc lập, skeleton khối đích của SEA nằm xa các output k0 ở seed khác hơn so với output k0 cùng seed. Theo flips, mức chênh trung bình là 5.84 cặp (CI 95% 5.06–6.61; trung bình đều theo 8 ô). CI nằm trọn trên biên 1 cặp."
 - **P8-1S:** cùng câu, với 20 cột có cấu trúc: 4.50 cặp (3.86–5.13), CI nằm trọn trên biên.
 - **P8-2:** "Khi thêm 20 cột Gauss, F1 skeleton khối đích giảm ở mức dấu, trung bình 0.049 (0.035–0.063)." Kết quả không xác lập được rằng mức giảm vượt biên 0.05. Nó cũng không xác lập được rằng mức giảm nằm trong biên.
 - **P8-3:** "Trên 60 hệ tuyến tính, khi thêm 20 cột Gauss, F1 của SEA giảm nhiều hơn mức giảm lớn hơn trong hai đối chứng PC và GES, ở mức dấu: 0.065 (0.041–0.088)." Kết quả không xác lập được rằng mức chênh vượt 0.05.
@@ -137,7 +137,7 @@ Các số dưới đây lấy từ `pn8_reading.json`, theo các số đo mô t�
 | P8-1S | +7.02 [+5.31, +8.73] | 4.4 × 10⁻⁸ | LARGE |
 | P8-2 | +0.034 [+0.022, +0.045] | 5.7 × 10⁻⁸ | SMALL |
 | P8-3 | +0.031 [+0.010, +0.053] | 2.8 × 10⁻³ | UNCLEAR |
-| P8-4S | +0.05 [−0.06, +0.16] | 0.165 | SMALL |
+| P8-4S | +0.05 [−0.05, +0.15] | 0.165 | SMALL |
 | P8-4W | +4.38 [+3.61, +5.14] | 1.4 × 10⁻¹⁰ | LARGE |
 
 **Đọc bảng.** Các số liệu là fact đã đo. Mọi giải thích đều được đánh dấu là suy luận.
@@ -242,3 +242,8 @@ Các số dưới đây lấy từ `pn8_reading.json`, theo các số đo mô t�
   - §2 mục 6: câu về độ phủ đổi thành "Thứ tự quan sát không phù hợp với cách giải thích đơn giản rằng độ phủ càng giảm thì Δ càng tăng", kèm ghi chú rằng vai trò của độ phủ, hay tương tác với các yếu tố khác, chưa bị loại trừ;
   - giới hạn của C16, và để thống nhất là gạch đầu dòng tương ứng ở §3: "không in-distribution" đổi thành "không xác lập rằng toàn bộ điều kiện thử nằm trong phân phối huấn luyện của SEA", kèm RFF và khác biệt về số hàng và số biến;
   - §4: câu C16 của user; hai kết luận F1 chỉ áp dụng cho đệm Gauss A20; với đệm có cấu trúc, chỉ giả thuyết về Δ được xác nhận.
+
+- **Đính chính số sau khi push** (agent phát hiện ngày 23/11, khi kiểm có đích từng ước lượng và CI so với `pn8_reading.json` trước khi đưa vào bản thảo; chờ user duyệt push):
+  - CI của P8-1 là [+5.06, +6.61], không phải [+5.06, +6.62] (§0, bảng và câu đọc). Cận trên là 6.61499…; bản trước đã làm tròn hai lần từ bản in ba chữ số (6.615);
+  - CI của P8-4S ở cách đọc phụ là [−0.05, +0.15], không phải [−0.06, +0.16] (§2). Hai đầu là −0.0547 và +0.1547, cùng lỗi làm tròn hai lần;
+  - nhãn và Size không đổi: cận dưới 5.06 vẫn trên biên 1 cặp, và [−0.05, +0.15] vẫn nằm trong ±1 cặp. Các bảng mô tả ở §2 đã được so từng ô với `pn8_reading.json`: không có lệch khác.
