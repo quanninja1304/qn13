@@ -1,0 +1,30 @@
+{
+ "ok": true,
+ "runs": {
+  "A1": {
+   "planned": 212,
+   "ok": 212
+  },
+  "A2": {
+   "planned": 212,
+   "ok": 212
+  },
+  "A3": {
+   "planned": 212,
+   "ok": 212
+  },
+  "A4": {
+   "planned": 212,
+   "ok": 212
+  },
+  "B": {
+   "planned": 242,
+   "ok": 242
+  }
+ },
+ "freeze_commits": [
+  "9e902ed7b1e44f87832f6b1badd1e23ef20291f9"
+ ],
+ "problems": [],
+ "n_problems": 0
+}

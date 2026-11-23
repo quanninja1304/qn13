@@ -525,6 +525,20 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
     - G4 PASS (F1 ở k0 0.679 so với 0.387 của đồ thị đầy đủ);
     - G5: ước tính 9.3 h cho lượt chính.
     - Code và phụ thuộc đóng băng trong [`code/`](reports/n8_sea_model_coverage_2026-11-23/code/), rồi chạy lượt chính.
+- **Cập nhật 23/11, kết quả P-N8 (Study 7, SEA):** [`PN8_results_vi.md`](reports/n8_sea_model_coverage_2026-11-23/PN8_results_vi.md).
+  - **Chạy:** năm lượt dưới đóng băng `9e902ed`, tổng 6.75 h, không lượt nào chạm mốc dừng. Kiểm hoàn tất đạt: 1090/1090 job, 0 vấn đề. Script kiểm lại độc lập (`86d39fe`, viết trước khi đọc) khớp hoàn toàn với code đọc.
+  - **Holm 0.05 trên sáu giả thuyết, 5/6 CONFIRMED:**
+    - P8-1 (Δ, A20) +5.84 [+5.06, +6.62], LARGE;
+    - P8-1S (Δ, S20) +4.50 [+3.86, +5.13], LARGE;
+    - P8-2 (hại F1) +0.049 [+0.035, +0.063], UNCLEAR;
+    - P8-3 (hại vượt PC và GES, hệ tuyến tính) +0.065 [+0.041, +0.088], UNCLEAR;
+    - P8-4W (Wine) +5.88 [+4.82, +6.93], LARGE;
+    - P8-4S (Sachs) NOT_CONFIRMED, +0.18 [−0.07, +0.42], SMALL.
+  - **Mô tả:**
+    - thêm đệm chủ yếu làm SEA bỏ cạnh: 97/120 hệ, và ở Wine;
+    - mức hại tập trung ở ô d_T = 10, e_T = 2, tuyến tính (0.205; bảy ô còn lại trung bình 0.027, tính post hoc);
+    - với cách đọc phụ, P8-2 là SMALL; mọi contrast cùng chiều.
+  - **Chờ user duyệt:** claim C16 riêng cho Study 7, mục Study 7 trong bản thảo, và push `86d39fe` cùng commit kết quả.
 
 ---
 
