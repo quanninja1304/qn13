@@ -50,7 +50,7 @@
 >
 > - Duyệt kết quả P-N7 và **đóng gap 4**. User đã tính lại từ output thô: 40 contrast, CI, p-value và nhãn Holm đều khớp; mã băm code và phụ thuộc cũng đạt. Push `8d05651` và `b53ca72` (2026-11-23T00:55:44Z, GitHub activity API).
 > - Kết quả giữ nguyên: Wine CONFIRMED, Sachs NOT_CONFIRMED. Sachs giúp xác định giới hạn của phát hiện. Không mở thêm thí nghiệm cho gap này.
-> - `b53ca72` công bố bổ sung ba run header (Study 1 held-out, EXP2, HELD2), khớp từng byte với bản gốc. Đây là nhật ký máy được công bố bổ sung: lần push này **không** tạo bằng chứng thời gian bên ngoài cho các lượt chạy trước đó.
+> - `b53ca72` công bố bổ sung ba run header (Study 1 held-out, EXP2, HELD2), cùng nội dung với bản gốc (Git lưu với kết thúc dòng LF; bản checkout trên Windows trùng từng byte). Đây là nhật ký máy được công bố bổ sung: lần push này **không** tạo bằng chứng thời gian bên ngoài cho các lượt chạy trước đó.
 > - Cập nhật C11 theo câu của user.
 > - **Bước tiếp:** bản thảo v0.6 và S1–S3 trên nhánh riêng, rồi rà số liệu, claim và hình một lượt cuối. Phần thí nghiệm bắt buộc ở phạm vi hiện tại đã đủ.
 >

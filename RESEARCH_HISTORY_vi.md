@@ -488,7 +488,7 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
   - User đã tính lại từ output thô: 40 contrast, CI, p-value và nhãn Holm đều khớp; mã băm code và phụ thuộc cũng đạt.
   - Push `8d05651` và `b53ca72` lúc 2026-11-23T00:55:44Z (GitHub activity API).
   - Kết quả giữ nguyên: Wine CONFIRMED, Sachs NOT_CONFIRMED. Sachs giúp xác định giới hạn của phát hiện. Không mở thêm thí nghiệm.
-  - **`b53ca72`:** ba run header (Study 1 held-out, EXP2, HELD2), khớp từng byte với bản gốc trong output. Đây là nhật ký máy được công bố bổ sung; lần push ngày 23/11 **không** tạo bằng chứng thời gian bên ngoài cho các lượt chạy trước đó.
+  - **`b53ca72`:** ba run header (Study 1 held-out, EXP2, HELD2), cùng nội dung với bản gốc trong output: Git lưu file với kết thúc dòng LF, nên blob trùng bản gốc sau khi đổi CRLF thành LF, còn bản checkout trên Windows trùng từng byte với bản gốc. Đây là nhật ký máy được công bố bổ sung; lần push ngày 23/11 **không** tạo bằng chứng thời gian bên ngoài cho các lượt chạy trước đó.
   - C11 cập nhật theo câu của user ([sổ claim](reports/manuscript_n1_2026-11-21/N1_claim_evidence_gap_vi.md)). Bước tiếp: bản thảo v0.6 và supplement trên nhánh riêng, rồi rà số liệu, claim và hình.
 
 ---
