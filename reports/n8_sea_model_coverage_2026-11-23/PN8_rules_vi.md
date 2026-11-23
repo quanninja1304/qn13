@@ -1,10 +1,10 @@
-# P-N8: SEA trên phép thử khối đích cố định (luật v0.2, NHÁP, chưa khóa; 23/11/2026)
+# P-N8: SEA trên phép thử khối đích cố định (luật v1, ĐÃ KHÓA; 23/11/2026)
 
-> **Trạng thái:** nháp v0.2, viết theo các quyết định của user ngày 23/11, sau khi user đọc v0.1 và ghi chú bước 2.
+> **Trạng thái:** v1 ĐÃ KHÓA. User duyệt v0.2 ngày 23/11 kèm các sửa ở G3, G4 và §5; v1 = v0.2 cộng đúng các sửa đó (§10). Khóa bằng commit và push trước khi SEA chạy trên bất kỳ input nào của §2 hoặc của tập phát triển base 510000.
 >
 > - Chưa chạy SEA trên bất kỳ input nào của §2.
 > - Bước 1 (`PN8_pilot1_inputs_vi.md`) và bước 2 (`PN8_step2_feasibility_vi.md`) chỉ dùng dữ liệu phát triển, và là exploratory.
-> - Các thay đổi so với v0 và v0.1 nằm ở §9.
+> - Các thay đổi qua v0, v0.1, v0.2 và v1 nằm ở §10.
 >
 > **Vai trò:**
 >
@@ -23,7 +23,7 @@
 - **Δ đo gì và không đo gì:**
   - Δ là chênh lệch khoảng cách trung bình tới các output k0 tham chiếu (§3).
   - Nếu phân phối output theo seed không đổi khi thêm cột, thì E[Δ] = 0. **Chiều ngược lại không đúng.**
-  - Ví dụ một cạnh: ở k0, SEA dự đoán có cạnh ở 50% số seed. Sau khi thêm đệm, SEA luôn dự đoán có cạnh. Khoảng cách kỳ vọng từ mỗi loại output tới một output k0 độc lập đều là 0.5, nên Δ = 0, dù phân phối đã đổi rõ. Với nhiều cạnh, các thay đổi còn có thể bù nhau.
+  - Ví dụ một cạnh: ở k0, SEA dự đoán có cạnh ở 50% số seed. Sau khi thêm đệm, SEA luôn dự đoán có cạnh. Khoảng cách kỳ vọng từ mỗi loại output tới một output k0 độc lập đều là 0.5, nên E[Δ] = 0, dù phân phối đã đổi rõ. Giá trị Δ đo trên một số hữu hạn seed vẫn dao động quanh 0. Với nhiều cạnh, các thay đổi còn có thể bù nhau.
   - Vì vậy Δ **không** đo "độ ổn định sau khi loại nhiễu seed", và không cho kết luận về độ ổn định của toàn bộ phân phối output. Câu hỏi đó cần thiết kế khác và không thuộc bài này.
 - **Không kết luận được:**
   - kênh nào gây ra thay đổi: phân bổ lô, thống kê toàn cục, hay aggregator. Bước 1 chỉ đo phía input; muốn quy nguyên nhân cần can thiệp riêng;
@@ -141,38 +141,54 @@
   - Cột "dấu": hiệu ứng nhỏ nhất để phép kiểm một phía so với 0 đạt với xác suất 80%, ở mức Holm bảo thủ α/6.
   - Cột "LARGE": hiệu ứng cần để cận dưới CI 95% vượt biên M với xác suất 80%.
   - Phát hiện dấu khác 0 khác với kết luận hiệu ứng vượt biên thực tiễn.
-  - Xấp xỉ chuẩn.
   - SD 0.10 cho hại F1 lấy từ độ rộng CI của Study 1 cho AVICI, CDFM và FoundCause. Đó là các model tất định hoặc gần tất định; SD của SEA có thể lớn hơn.
+- **Công thức** (mô hình phân tầng đồng phương sai: cùng SD σ và cùng N = 15 trong mọi ô, C ô):
+  - phần A: SE = σ/√(C·N), ν = C·(N − 1). C = 8 cho P8-1, P8-1S, P8-2 (ν = 112); C = 4 cho P8-3 (ν = 56). Đây là df Welch–Satterthwaite khi các ô có cùng phương sai và cùng cỡ;
+  - phần B: SE = σ/√20, ν = 19;
+  - "dấu" = (t_{1−α/6, ν} + t_{0.80, ν}) · SE, với α = 0.05;
+  - "LARGE" = M + (t_{0.975, ν} + t_{0.80, ν}) · SE.
 
 | Giả thuyết | Đơn vị | SD giả định | Dấu | LARGE | M |
 |---|---|---|---|---|---|
 | P8-2 | 120 hệ, 8 ô | 0.10 | 0.030 | 0.076 | 0.05 |
 | P8-3 | 60 hệ, 4 ô | 0.10 | 0.043 | 0.087 | 0.05 |
-| P8-1, P8-1S | 120 hệ, 8 ô | 2 / 3 / 4 cặp | 0.60 / 0.90 / 1.19 | 1.51 / 1.77 / 2.03 | 1 |
-| P8-4S, P8-4W | 20 lần sinh | 2 / 3 cặp | 1.6 / 2.3 | 2.3 / 3.0 | 1 |
+| P8-1, P8-1S | 120 hệ, 8 ô | 2 / 3 / 4 cặp | 0.60 / 0.90 / 1.20 | 1.52 / 1.77 / 2.03 | 1 |
+| P8-4S, P8-4W | 20 lần sinh | 2 / 3 cặp | 1.56 / 2.34 | 2.32 / 2.98 | 1 |
 
-- Nhãn SMALL cho Δ cần nửa độ rộng CI dưới 1 cặp. Điều kiện: SD dưới khoảng 5.5 cặp ở phần A, và dưới khoảng 2.1 cặp ở phần B.
+- **Nhãn SMALL cho Δ** cần |Δ̂| + t_{0.975, ν} · SE < 1 cặp.
+  - SD dưới khoảng 5.5 cặp ở phần A, và dưới khoảng 2.1 cặp ở phần B, chỉ là điều kiện cần về độ rộng CI (khi Δ̂ = 0).
+  - Tâm CI còn phải đủ gần 0.
 
 ## 6. Cổng trên tập phát triển (tiêu chí ghi trước khi chạy)
 
-Dữ liệu: base 510000, 2 hệ mỗi ô (16 hệ, r = 0, 1), và 3 lần sinh đệm trên bảng thay thế DEV5. Mọi tiêu chí dưới đây được khóa cùng luật, trước khi chạy cổng.
+Dữ liệu: base 510000, 2 hệ mỗi ô (16 hệ, r = 0, 1; chỉ số i = 15·c + r như §2), và 2 lần sinh đệm Gauss k = 20 trên bảng thay thế DEV5 (r = 0, 1, đúng tập DEV5 đã đóng băng của Study 4). Mọi tiêu chí dưới đây được khóa cùng luật, trước khi chạy cổng.
 
 - **G1, adapter và lặp lại:**
-  - nhãn `true` khớp đồ thị đã ghi, và AUROC do SEA tính khớp AUROC tính lại, trên mọi output;
-  - chạy lại một input với cùng seed trong tiến trình mới cho output trùng từng bit.
+  - nhãn `true` khớp đồ thị đã ghi, và AUROC do SEA tính khớp AUROC tính lại, trên mọi output có cả cạnh và không cạnh;
+  - chạy lại một input với cùng seed trong tiến trình mới cho output trùng từng bit;
+  - **output không phụ thuộc file đồ thị:** một input DEV chạy hai lần với cùng seed, một lần với đồ thị thật và một lần với đồ thị toàn số 0, phải cho xác suất trùng từng bit. Bảng thật không có ground truth, nên phần B dùng đồ thị toàn số 0; kiểm này phải đạt trước. Ở phần B, kiểm adapter chỉ gồm bố cục của `true`, vì AUROC không xác định.
 
-  Không đạt → dừng, báo user.
+  Không đạt → dừng, báo user. Lỗi cấu hình hoặc adapter được sửa rồi chạy lại cổng; không tinh chỉnh theo ground truth.
 - **G2, khối đích và input:** khối đích trùng từng bit giữa các input của một hệ; mã băm input khớp input sinh lại. Không đạt → dừng.
 - **G3, chẩn đoán hoán vị cột** (8 hệ r = 0, input A20):
-  - ba lượt: input gốc ở seed a; cùng input với một hoán vị cột ngẫu nhiên (seed hoán vị ghi trước) ở seed a, output ánh xạ về thứ tự gốc; input gốc ở seed a′ = a + 500000;
+  - ba lượt: input gốc ở seed a; cùng input với một hoán vị cột ở seed a; input gốc ở seed a′ = a + 500000;
+  - hoán vị của hệ DEV i: π = `np.random.default_rng([20261123, 3, i]).permutation(D)`; input hoán vị là X[:, π]. Output được ánh xạ về thứ tự gốc bằng P_gốc[π[a], π[b]] = P_hoán vị[a, b];
   - Δp_perm = trung bình |P_perm − P| trên các cặp có thứ tự của khối đích; Δp_seed = trung bình |P(a′) − P(a)|. Báo cả flips;
   - **đạt** khi phân vị 95 qua 8 hệ của Δp_perm ≤ phân vị 95 của Δp_seed, như tiêu chí của FoundCause ở Study 1 (A5). Với 8 hệ, phân vị 95 (nội suy tuyến tính của numpy) gần giá trị lớn nhất;
   - đạt chỉ có nghĩa là mức đổi do hoán vị không vượt mức đổi do seed trên DEV. Đây là chẩn đoán, **không** chứng minh permutation equivariance;
-  - **không đạt** → nhãn `POSITION_SENSITIVE`, như Study 1. Lượt chính vẫn chạy với protocol chính (đệm nối sau, khối đích ở cùng chỉ số trong mọi input). Thêm một điều kiện độ nhạy, A20 với cột đệm xen ngẫu nhiên (seed ghi trước) ở seed a_i, trên r < 5 (40 hệ, khoảng 0.5 h), báo như mô tả. Đệm xen không được mô tả là đã loại confound vị trí.
+  - **không đạt** → nhãn `POSITION_SENSITIVE`, như Study 1, trình bày theo đúng nghĩa chẩn đoán này: không phải kết luận rằng SEA có hay không có tính equivariance. Lượt chính vẫn chạy với protocol chính (đệm nối sau, khối đích ở cùng chỉ số trong mọi input). Thêm một điều kiện độ nhạy trên 40 hệ (r < 5), khoảng 0.5 h:
+    - input: A20 của hệ i với cột xen ngẫu nhiên, π = `np.random.default_rng([20261123, 4, i]).permutation(D)`, chạy ở seed a_i;
+    - phép so, khóa trước: A20 đệm xen so với A20 nối sau, trên cùng dữ liệu và cùng seed suy luận a_i, sau khi ánh xạ output về thứ tự biến gốc. Báo flips và Δp trên khối đích, như mô tả;
+    - không có giả thuyết xác nhận nào cho nhánh này. Đệm xen không được mô tả là đã loại confound vị trí.
 - **G4, chất lượng ở k0** (8 hệ tuyến tính của DEV, ô 0, 2, 4, 6, r = 0, 1):
   - F1 skeleton ở k0 với cách đọc NATIVE, so với đồ thị rỗng, đồ thị đầy đủ, PC và GES trên cùng hệ;
   - **đạt** khi F1 trung bình của SEA lớn hơn F1 trung bình của đồ thị đầy đủ, như Study 1 (A10);
-  - **không đạt** → đối chiếu cấu hình với tài liệu của tác giả một lần, không chỉnh ngưỡng theo ground truth. Vẫn không đạt → nhãn `BASELINE_TOO_WEAK_FOR_THIS_HARM_TEST`. Khi đó P8-2 và P8-3 bị bỏ khỏi family trước lượt chính (Holm trên bốn giả thuyết còn lại), ghi vào §9 trước khi chạy. P8-1, P8-1S, P8-4S và P8-4W không đổi.
+  - **G4 dùng để giới hạn diễn giải, không loại giả thuyết.**
+  - **Không đạt** → đối chiếu cấu hình với tài liệu của tác giả một lần. Nếu phát hiện lỗi cấu hình hoặc adapter, sửa lỗi rồi chạy lại cổng; không tinh chỉnh theo ground truth.
+  - Nếu cấu hình đúng mà chất lượng vẫn yếu, ghi cờ `BASELINE_TOO_WEAK_FOR_THIS_HARM_TEST`. P8-2 và P8-3 vẫn được tính và báo cáo; Holm vẫn trên sáu giả thuyết.
+  - Khi có cờ, phần diễn giải nêu rõ khả năng phát hiện hại có thể bị giới hạn bởi F1 nền thấp, và không dùng NOT_CONFIRMED làm bằng chứng về khả năng chống chịu.
+  - G4 chỉ kiểm tám hệ tuyến tính, còn P8-2 gồm cả hệ RFF. Cờ này áp cho diễn giải của cả P8-2 và P8-3.
+  - Luật đã khóa của Study 1 (A10) giữ nguyên; cách xử lý này chỉ áp cho Study 7.
 - **G5, thời gian:** ước tính lượt chính từ thời gian đo ở cổng. Nếu vượt 1.5 lần ước tính ở §8 → báo user trước khi chạy.
 - Ngoài F1 ở k0 cho G4, cổng không đọc Δ, H hay bất kỳ contrast nào của §4 trên dữ liệu DEV. Code đọc kết quả được chạy thử trên output DEV ở chế độ chỉ kiểm cấu trúc, không in giá trị, như G7 của Study 6.
 
@@ -219,7 +235,7 @@ Dữ liệu: base 510000, 2 hệ mỗi ô (16 hệ, r = 0, 1), và 3 lần sinh 
 
 ## 9. Quy trình
 
-1. User review nháp này (v0.2).
+1. User review v0.2 (xong ngày 23/11, kèm các sửa ở §10).
 2. Khóa v1: commit và push trước khi SEA chạy trên bất kỳ input nào của §2 hoặc của tập phát triển base 510000.
 3. Viết code; chạy cổng G1–G5 trên tập phát triển. Đóng băng code cùng phụ thuộc; commit và push.
 4. Các lượt chính trong ngân sách; kiểm hoàn tất; đọc bằng code đã đóng băng; kiểm lại độc lập.
@@ -243,3 +259,11 @@ Dữ liệu: base 510000, 2 hệ mỗi ô (16 hệ, r = 0, 1), và 3 lần sinh 
   - **thêm vào cổng:** chẩn đoán hoán vị cột (G3) và chất lượng ở k0 (G4), với tiêu chí đạt và cách xử lý thất bại ghi trước;
   - **thêm giới hạn:** nguồn sinh dữ liệu của AVICI; khoảng huấn luyện của SEA (bài SEA §4.1, Appendix B.1: N = 10, 20, 100; Linear và NN; không có RFF); n = 500 bằng kích thước lô; thứ tự hai sampler trong code ngược với mô tả ở Appendix B.6;
   - **power:** bảng kịch bản theo SD giả định (§5); N = 15 chưa được chứng minh là đủ power.
+- **v1, 23/11/2026, KHÓA.** User duyệt v0.2: GO cho thiết kế; N = 15, M = 4 và cách diễn giải Δ được duyệt. v1 = v0.2 cộng đúng các sửa sau:
+  - **G4:** dùng để giới hạn diễn giải, không loại giả thuyết. Nếu cấu hình đúng mà chất lượng vẫn yếu, ghi cờ `BASELINE_TOO_WEAK_FOR_THIS_HARM_TEST`, vẫn tính và báo P8-2 và P8-3, Holm vẫn trên sáu giả thuyết. Không dùng NOT_CONFIRMED làm bằng chứng về khả năng chống chịu. Luật đã khóa của Study 1 giữ nguyên;
+  - **G3:** ghi công thức hoán vị; nhãn `POSITION_SENSITIVE` mang nghĩa chẩn đoán; khóa phép so của nhánh đệm xen (cùng dữ liệu, cùng seed suy luận, ánh xạ về thứ tự gốc, flips và Δp như mô tả, không có giả thuyết xác nhận);
+  - **§5:** ghi rõ công thức với ngưỡng t và df giả định, thay cho "xấp xỉ chuẩn"; số trong bảng tính lại theo công thức đó; điều kiện SMALL là |Δ̂| + t_{0.975, ν} · SE < 1, còn ngưỡng SD chỉ là điều kiện cần về độ rộng CI;
+  - **§0:** trong ví dụ một cạnh, viết E[Δ] = 0 thay cho Δ = 0;
+  - **hai chỉnh kỹ thuật của agent, không đổi giả thuyết hay phép kiểm:**
+    - G1 thêm kiểm output không phụ thuộc file đồ thị. Phần B cần đồ thị toàn số 0, vì bảng thật không có ground truth; SEA chỉ dùng đồ thị để tính metric của chính nó;
+    - cổng dùng 2 lần sinh đệm của DEV5 (r = 0, 1), đúng tập đã đóng băng của Study 4, thay cho "3 lần sinh" của v0.2.

@@ -514,6 +514,11 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
     - thêm vào cổng DEV: chẩn đoán hoán vị cột và chất lượng ở k0, với tiêu chí và cách xử lý thất bại ghi trước;
     - thêm giới hạn: dữ liệu tổng hợp sinh bằng simulator của AVICI (mất cân đối về nguồn sinh, không rõ lợi cho model nào); bài SEA (§4.1, App. B.1) huấn luyện với N = 10, 20, 100, cơ chế Linear và NN, không có RFF;
     - lượt chính ước tính 8.6 h CPU. N = 15 chưa được chứng minh là đủ power; bảng MDE là kịch bản theo SD giả định.
+  - **Luật v1 khóa** ([`PN8_rules_vi.md`](reports/n8_sea_model_coverage_2026-11-23/PN8_rules_vi.md)): v0.2 cộng các sửa của user.
+    - G4 chỉ giới hạn diễn giải: nếu chất lượng ở k0 yếu, gắn cờ và vẫn giữ Holm trên sáu giả thuyết.
+    - G3 có công thức hoán vị, và phép so của nhánh đệm xen được khóa trước.
+    - §5 ghi công thức power với ngưỡng t và điều kiện SMALL đầy đủ.
+    - Bước tiếp: viết code, chạy cổng DEV, đóng băng, rồi lượt chính.
 
 ---
 
