@@ -120,7 +120,7 @@ Số liệu đầy đủ ở [`checks/pn6_reading.json`](checks/pn6_reading.json
 | | R-L | 4.03 [2.81, 5.25] | 4.10 [2.88, 5.32] | 4.85 [3.48, 6.22] | 0.07 [−0.08, 0.21] | 1.45 [−0.04, 2.94] |
 | | R-H | 4.08 [2.81, 5.36] | 4.75 [3.35, 6.15] | 5.05 [3.51, 6.59] | 0.83 [0.03, 1.64] | 1.67 [0.14, 3.19] |
 | AVICI, RFF | plain | 0 | 2.33 [1.85, 2.82] | 5.23 [4.41, 6.05] | = φ | = φ |
-| | R-L | 0.85 [0.54, 1.17] | 0.88 [0.56, 1.21] | 1.55 [0.81, 2.29] | 0.03 [−0.02, 0.08] | 0.77 [0.05, 1.49] |
+| | R-L | 0.85 [0.53, 1.17] | 0.88 [0.56, 1.21] | 1.55 [0.81, 2.29] | 0.03 [−0.02, 0.08] | 0.77 [0.05, 1.49] |
 | | R-H | 0.82 [0.50, 1.13] | 0.87 [0.56, 1.18] | 1.22 [0.67, 1.77] | 0.15 [0.01, 0.29] | 0.57 [0.06, 1.08] |
 | CDFM, tuyến tính | plain | 0 | 19.03 [15.50, 22.57] | 17.72 [15.35, 20.08] | = φ | = φ |
 | | R-L | 8.37 [6.18, 10.55] | 8.32 [6.14, 10.50] | 9.27 [6.98, 11.55] | 0.18 [−0.11, 0.48] | 1.97 [−0.34, 4.27] |
@@ -517,3 +517,4 @@ Ngoài ra, C9 (R của HELD2) sẽ trỏ sang P-N6 cho biến thể chỉ dùng 
 | 6 | §0, §9.4 | "Kỳ vọng danh nghĩa" | "Cận trên danh nghĩa" của kỳ vọng, đúng khi p-value hợp lệ; không nhất thiết bằng kỳ vọng |
 | 7 | §0, §9.1, §11, §12 | Phép kiểm kết hợp "chỉ tác động trực tiếp lên phần nhỏ hơn"; "không khuyến nghị" | Chưa đủ cơ sở để kết luận như vậy. Đổi phân hoạch đổi cả input, điểm và ngưỡng trong thành phần, và mức α/2 có thể vừa thêm vừa bỏ liên kết. Dừng nhánh này để giữ phạm vi bài. Thêm kế toán F1 (user tính, agent tính lại) |
 | 8 | §1 | Bộ nhớ đỉnh 2.01 GB | Giữ số đo thật; nói rõ mức này không làm mất tính hợp lệ; giải thích về JAX vẫn là suy luận |
+| 9 | §3, bảng φ và σ, AVICI-RFF, R-L, φ(k0) | CI [0.54, 1.17] | [0.53, 1.17]: cận dưới trong `pn6_reading.json` là 0.5345, làm tròn thành 0.53. Lỗi làm tròn khi chép số, phát hiện ở lượt rà cuối ngày 23/11; nhãn và kết luận không đổi |
