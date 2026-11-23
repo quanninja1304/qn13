@@ -41,15 +41,15 @@
 - **P8-1:** "Trên 120 hệ tổng hợp held-out mới, sau khi thêm 20 cột Gauss độc lập, skeleton khối đích của SEA nằm xa các output k0 ở seed khác hơn so với output k0 cùng seed. Theo flips, mức chênh trung bình là 5.84 cặp (CI 95% 5.06–6.62; trung bình đều theo 8 ô). CI nằm trọn trên biên 1 cặp."
 - **P8-1S:** cùng câu, với 20 cột có cấu trúc: 4.50 cặp (3.86–5.13), CI nằm trọn trên biên.
 - **P8-2:** "Khi thêm 20 cột Gauss, F1 skeleton khối đích giảm ở mức dấu, trung bình 0.049 (0.035–0.063)." Kết quả không xác lập được rằng mức giảm vượt biên 0.05. Nó cũng không xác lập được rằng mức giảm nằm trong biên.
-- **P8-3:** "Trên 60 hệ tuyến tính, F1 của SEA giảm nhiều hơn mức giảm lớn hơn trong hai đối chứng PC và GES, ở mức dấu: 0.065 (0.041–0.088)." Kết quả không xác lập được rằng mức chênh vượt 0.05.
+- **P8-3:** "Trên 60 hệ tuyến tính, khi thêm 20 cột Gauss, F1 của SEA giảm nhiều hơn mức giảm lớn hơn trong hai đối chứng PC và GES, ở mức dấu: 0.065 (0.041–0.088)." Kết quả không xác lập được rằng mức chênh vượt 0.05.
 - **P8-4W:** "Trên bảng Wine, output khối đích sau khi thêm đệm nằm xa các output k0 tham chiếu hơn output k0 cùng seed: 5.88 cặp (4.82–6.93) trên 55 cặp." Cả 20 lần sinh đều dương.
 - **P8-4S:** "Trên bảng Sachs, giả thuyết không được xác nhận: 0.18 cặp (−0.07 đến 0.42)." CI nằm trong ±1 cặp (SMALL). Đây không phải phép kiểm tương đương, nên không thể viết rằng SEA ổn định trên Sachs.
 
-**Suy luận đúng chiều duy nhất từ Δ:**
+**Suy luận từ Δ dương** (chỉ đúng một chiều):
 
-- Nếu phân phối output theo seed không đổi thì E[Δ] = 0 (luật §0, §3). Vì vậy, khi E[Δ] > 0 được xác nhận ở P8-1, P8-1S và P8-4W, có thể kết luận rằng thêm đệm đã làm đổi phân phối output khối đích của SEA.
-- Ở phần A, kết luận này đúng cho trung bình đều theo ô. Nó không khẳng định điều đó cho từng ô hay từng hệ.
-- Chiều ngược lại không đúng. Ở Sachs, việc không xác nhận Δ > 0 không cho thấy phân phối output không đổi.
+- Với một input cố định, nếu phân phối skeleton khối đích qua seed không đổi khi thêm đệm thì E[Δ] = 0 (luật §0, §3). Vì vậy, Δ dương được xác nhận ở P8-1, P8-1S và P8-4W cho phép kết luận rằng thêm đệm đã làm đổi phân phối skeleton khối đích qua seed, có điều kiện trên input.
+- Ở phần A, kết luận dựa trên trung bình đều theo ô. Nó không xác nhận thay đổi cho từng ô hay từng hệ, và không phải phép kiểm phân phối đồ thị sau khi gộp tất cả các hệ.
+- Chiều ngược lại không đúng. Ở Sachs, việc không xác nhận Δ > 0 không cho thấy phân phối skeleton không đổi.
 
 ## 1. Tính toàn vẹn
 
@@ -159,14 +159,14 @@ Các số dưới đây lấy từ `pn8_reading.json`, theo các số đo mô t�
    - Cả sáu contrast cùng chiều với cách đọc chính.
    - Δ ở phần A lớn hơn (12.6 so với 5.8), chủ yếu do c2 và c6. Ở hai ô này, output k0 theo cách đọc phụ dày hơn nhiều; ví dụ ở c6 là 111 cạnh trên 190 cặp, so với 48.8 ở cách đọc chính.
    - Mức hại nhỏ hơn: CI của P8-2 là [0.022, 0.045], nằm trong biên 0.05 (SMALL); P8-3 còn 0.031 (UNCLEAR).
-   - **Suy luận:** dấu của các contrast không phụ thuộc cách đọc skeleton, nhưng độ lớn của mức hại thì có.
-5. **Sachs** (fact, kèm suy luận).
+   - Các ước lượng cùng dấu ở hai cách đọc skeleton đã thử, còn độ lớn của mức hại khác nhau giữa hai cách đọc. Nhận xét này không mở rộng sang mọi decoder.
+5. **Sachs** (fact).
    - Ở k0, SEA chỉ có 4–5 cạnh trên 55 cặp. Cả skeleton lẫn xác suất cạnh đều đổi ở mức gần với biến động do seed: Δp 0.012, so với 0.011.
-   - **Suy luận, chưa kiểm:** với output thưa như vậy, phép thử ở mức skeleton có ít chỗ để phát hiện thay đổi. Không gọi đây là ổn định.
+   - Skeleton thưa chỉ có ít cạnh để bỏ thêm, nhưng vẫn còn khoảng 50 cặp có thể thêm cạnh. Vì vậy, không suy ra rằng phép thử ở Sachs thiếu chỗ để phát hiện thay đổi nói chung. Không gọi kết quả này là ổn định.
 6. **S20 so với A20, đặt cạnh bước 1** (suy luận post hoc, chưa kiểm).
    - Ở bước 1 (hệ phát triển, chỉ đo phía input), đệm có cấu trúc làm độ phủ cặp đích giảm nhiều hơn đệm Gauss: còn 0.22 lần mức ở k0, so với 0.44 lần.
    - Ở lượt chính, S20 lại làm output đổi ít hơn A20: Δ 4.50 so với 5.84; mất 2.3 cạnh so với 5.4.
-   - Nếu độ phủ là kênh duy nhất, thứ tự này khó giải thích.
+   - Thứ tự quan sát không phù hợp với cách giải thích đơn giản rằng độ phủ càng giảm thì Δ càng tăng. Điều này chưa loại trừ vai trò của độ phủ, hay tương tác của độ phủ với các yếu tố khác.
    - Đây là đọc chéo giữa một pilot exploratory và kết quả chính, không phải một phép kiểm. Kênh gây ra thay đổi vẫn chưa được xác định (§0 của luật).
 7. **Đối chứng cổ điển** (fact).
    - Trên hệ tuyến tính, PC và GES gần như không đổi: flips 0.07 với PC và 0.60 với GES; H_PC −0.001, H_GES +0.004.
@@ -180,40 +180,65 @@ Các số dưới đây lấy từ `pn8_reading.json`, theo các số đo mô t�
 - Không so sánh SEA với AVICI, CDFM hay FoundCause như một phép kiểm, và không xếp hạng các model.
 - Không viết rằng SEA mất ít nhất 0.05 F1, hay mất khoảng 0.05 F1 như một mức chung.
 - Không viết về độ chính xác của SEA trên bảng thật.
-- Không gọi điều kiện thử là in-distribution với SEA: RFF không có trong dữ liệu huấn luyện; D = 30 và D = 40 không thuộc các kích thước đã công bố; n = 500 bằng kích thước lô.
+- Không viết rằng toàn bộ điều kiện thử nằm trong phân phối huấn luyện của SEA; điều này chưa được xác lập. Cụ thể: RFF không có trong các cơ chế huấn luyện; số biến sau khi thêm đệm (D = 30 và 40 ở phần A; 31 ở phần B) nằm giữa các kích thước đã công bố N = 10, 20, 100 nhưng không trùng; mỗi tập huấn luyện có 1000N hàng, còn ở đây n = 500, bằng kích thước lô.
 - Không viết rằng phần B là dữ liệu held-out mới.
 - Không viết rằng CI hay Size được Holm bảo vệ, hay rằng cách đọc phụ là một xác nhận.
 - Không viết rằng Δ đo độ ổn định sau khi loại nhiễu seed.
 
-## 4. Đề xuất cập nhật (chờ user duyệt; chưa sửa)
+## 4. Cập nhật đã duyệt (user, 23/11; chi tiết ở §6)
 
-**Sổ claim:** thêm một claim riêng, C16, cho Study 7. Không gộp vào C1 (ba model, dữ liệu tổng hợp) hay C11 (bảng thật).
+**Sổ claim, C16:** claim riêng cho Study 7. Không nhập vào C1 (ba model, dữ liệu tổng hợp) hay C11 (bảng thật).
 
-- **Câu đề xuất:**
-  - "Với SEA, một pipeline tổng hợp các ước lượng FCI trên tập con biến (một checkpoint, code đã phát hành), trên 120 hệ tổng hợp held-out mới, thêm 20 cột độc lập (Gauss hoặc có cấu trúc) đẩy skeleton khối đích ra xa các output k0 ở seed khác hơn output k0 cùng seed, với CI nằm trọn trên biên 1 cặp.
-  - F1 skeleton giảm ở mức dấu. Trên hệ tuyến tính, mức giảm này lớn hơn của PC và GES, cũng ở mức dấu.
-  - Trên hai bảng thật cố định của Study 4, kết quả về khoảng cách được xác nhận ở Wine, nhưng không được xác nhận ở Sachs (Study 7)."
-- **Trạng thái:** XÁC NHẬN 5/6 (Holm 0.05 trên 6 giả thuyết; family riêng).
+- **Câu (user duyệt):** "Với một checkpoint SEA tổng hợp các ước lượng FCI trên tập con biến, trên 120 hệ tổng hợp mới, việc thêm một khối 20 biến độc lập với khối đích — Gauss hoặc có cấu trúc nội bộ — làm tăng khoảng cách trung bình từ skeleton đích tới các output k0 tham chiếu. Với đệm Gauss, F1 skeleton giảm trung bình; trên các hệ tuyến tính, mức giảm vượt đối chứng PC/GES theo contrast đã khóa. Hai kết luận F1 được xác nhận về dấu, chưa xác lập vượt biên thực tiễn 0,05. Trên hai bảng thật cố định, kết quả về khoảng cách được xác nhận ở Wine, nhưng không được xác nhận ở Sachs."
+- **Trạng thái từng giả thuyết** (Holm 0.05 trên sáu giả thuyết, family riêng):
+  - P8-1 (Δ, A20): CONFIRMED, LARGE;
+  - P8-1S (Δ, S20): CONFIRMED, LARGE;
+  - P8-2 (F1, A20): CONFIRMED, UNCLEAR;
+  - P8-3 (F1 so với PC/GES, A20, hệ tuyến tính): CONFIRMED, UNCLEAR;
+  - P8-4W (Δ, Wine): CONFIRMED, LARGE;
+  - P8-4S (Δ, Sachs): NOT_CONFIRMED, SMALL.
 - **Giới hạn đi kèm:**
+  - hai kết luận về F1 (P8-2, P8-3) chỉ áp dụng cho đệm Gauss A20. Với đệm có cấu trúc, giả thuyết được xác nhận duy nhất là về Δ (P8-1S); mức giảm F1 ở S20 chỉ là mô tả;
   - một model và một checkpoint;
   - dữ liệu tổng hợp sinh bằng simulator của AVICI;
-  - điều kiện thử không in-distribution với SEA;
+  - không xác lập rằng toàn bộ điều kiện thử nằm trong phân phối huấn luyện của SEA. Cụ thể: RFF không có trong các cơ chế huấn luyện; mỗi tập huấn luyện có N = 10, 20 hoặc 100 biến và 1000N hàng, còn ở đây mỗi input có n = 500 hàng (bằng kích thước lô) và, sau khi thêm đệm, D = 30 hoặc 40 biến ở phần A, 31 ở phần B;
   - độ lớn mức hại là UNCLEAR, giảm xuống SMALL ở cách đọc phụ, và tập trung ở ô c2;
-  - Δ chỉ đọc được một chiều;
+  - Δ chỉ đọc được một chiều; kết quả trung bình ở phần A không xác nhận thay đổi cho từng hệ;
   - kênh gây thay đổi chưa xác định;
   - phần B dùng lại input của Study 4.
 
-**Bản thảo** (nhánh riêng, sau khi user duyệt):
+**Bản thảo** (nhánh riêng):
 
-- thêm mục Study 7 với bảng riêng: sáu hàng, hai cột Label và Size. Kèm đoạn đọc theo §0 của báo cáo này, và ghi chú về điều kiện huấn luyện của SEA cùng thứ tự sampler trong code so với bài;
-- phụ lục: cách đọc phụ, bảng theo ô, thông tin đóng băng và kiểm lại;
-- tóm tắt và phần đóng góp: user quyết có thêm một câu về Study 7 hay không;
-- tùy chọn, chờ user quyết: một câu mô tả rằng thay đổi ở SEA chủ yếu là bỏ cạnh. Nếu đặt câu này cạnh hướng thay đổi của các model khác, đó chỉ là mô tả từ các study tách riêng, không phải phép so.
+- mục Study 7 với bảng riêng: sáu hàng, hai cột Label và Size;
+- sự không đồng đều giữa các ô nằm trong văn bản chính: ô c2 đóng góp khoảng 52% mức giảm F1 trung bình; bảy ô còn lại trung bình 0.0269. Đây là mô tả hậu nghiệm;
+- bảng theo ô và cách đọc phụ ở phụ lục;
+- pattern của ô c2 và của độ phủ đưa vào phần thảo luận; không mở thêm lượt thí nghiệm;
+- tóm tắt: thêm câu của user về Study 7, không ghi số giả thuyết đạt;
+- tiêu đề không đếm số model. Câu mở đầu không mô tả cả bốn model như cùng dự đoán đồ thị trực tiếp từ toàn bảng. Kết quả Study 1 giữ phạm vi ba checkpoint ban đầu.
 
-**Push:** `86d39fe` và commit kết quả này đang ở dạng cục bộ, chờ user duyệt.
+**Push:** `86d39fe`, `bb4658e` và commit đính chính này (user duyệt).
 
 ## 5. File
 
 - [`checks/pn8_completeness.json`](checks/pn8_completeness.json), [`checks/pn8_reading.json`](checks/pn8_reading.json), [`checks/pn8_run_header.json`](checks/pn8_run_header.json): bản sao trùng từng byte của các file trong `artifacts/n8_runs/pn8_out/`.
 - [`posthoc/recheck_pn8.py`](posthoc/recheck_pn8.py) và [`posthoc/recheck_output.txt`](posthoc/recheck_output.txt).
 - Output thô (`.npz`) và log nằm trong `artifacts/n8_runs/pn8_out/`, không đưa vào git.
+
+## 6. Sau review của user (23/11)
+
+- **User kiểm lại:**
+  - tính lại Δ từ output `.npz`, tính lại các phép kiểm từ số liệu theo hệ và kiểm hạng Holm: khớp, sai khác số học tối đa khoảng 1.4 × 10⁻¹⁴;
+  - các log có đủ 1090 job `ok`; ba file kiểm trong `checks/` trùng từng byte với bản trong `artifacts/`.
+- **Quyết định:**
+  - đưa Study 7 vào bài và thêm C16 riêng, với câu ở §4;
+  - kết quả bổ sung bằng chứng cho một pipeline tổng hợp trên tập con; chưa xác định thêm cơ chế;
+  - đóng phần mở rộng SEA tại đây. Pattern của ô c2 và của độ phủ đưa vào phần thảo luận; chưa mở thêm lượt thí nghiệm;
+  - push `86d39fe`, `bb4658e` cùng commit đính chính này. Giữ lưu ý ở §1: thời điểm tạo script kiểm lại là thời điểm của một commit cục bộ, chưa có bằng chứng thời gian bên ngoài.
+- **Đính chính câu chữ trong commit này** (so với `bb4658e`):
+  - §0: suy luận từ Δ dương nói về phân phối skeleton qua seed, có điều kiện trên input. Kết quả trung bình ở phần A không xác nhận thay đổi cho từng hệ, và không phải phép kiểm phân phối đồ thị sau khi gộp tất cả các hệ;
+  - §0, câu đọc của P8-3: ghi rõ đệm Gauss;
+  - §2 mục 4: "dấu không phụ thuộc cách đọc skeleton" đổi thành "các ước lượng cùng dấu ở hai cách đọc skeleton đã thử"; không mở rộng sang mọi decoder;
+  - §2 mục 5: bỏ suy luận "ít chỗ để phát hiện thay đổi". Skeleton thưa chỉ có ít cạnh để bỏ thêm, nhưng vẫn có nhiều cặp để thêm cạnh;
+  - §2 mục 6: câu về độ phủ đổi thành "Thứ tự quan sát không phù hợp với cách giải thích đơn giản rằng độ phủ càng giảm thì Δ càng tăng", kèm ghi chú rằng vai trò của độ phủ, hay tương tác với các yếu tố khác, chưa bị loại trừ;
+  - giới hạn của C16, và để thống nhất là gạch đầu dòng tương ứng ở §3: "không in-distribution" đổi thành "không xác lập rằng toàn bộ điều kiện thử nằm trong phân phối huấn luyện của SEA", kèm RFF và khác biệt về số hàng và số biến;
+  - §4: câu C16 của user; hai kết luận F1 chỉ áp dụng cho đệm Gauss A20; với đệm có cấu trúc, chỉ giả thuyết về Δ được xác nhận.

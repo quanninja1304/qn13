@@ -539,6 +539,20 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
     - mức hại tập trung ở ô d_T = 10, e_T = 2, tuyến tính (0.205; bảy ô còn lại trung bình 0.027, tính post hoc);
     - với cách đọc phụ, P8-2 là SMALL; mọi contrast cùng chiều.
   - **Chờ user duyệt:** claim C16 riêng cho Study 7, mục Study 7 trong bản thảo, và push `86d39fe` cùng commit kết quả.
+- **Cập nhật 23/11, user duyệt Study 7 (SEA); đóng phần mở rộng SEA:**
+  - **User kiểm lại:** tính lại Δ từ output `.npz`, các phép kiểm và hạng Holm: khớp, sai khác số học tối đa khoảng 1.4 × 10⁻¹⁴. Log có đủ 1090 job `ok`; ba file kiểm trùng từng byte với bản trong `artifacts/`.
+  - **Quyết định:**
+    - đưa Study 7 vào bài; thêm claim C16 riêng theo câu của user, không nhập vào C1 hay C11;
+    - kết quả bổ sung bằng chứng cho một pipeline tổng hợp trên tập con; chưa xác định thêm cơ chế;
+    - không mở thêm lượt thí nghiệm. Pattern của ô c2 và của độ phủ đưa vào phần thảo luận.
+  - **Đính chính câu chữ** trong báo cáo kết quả (ghi ở §6 của [`PN8_results_vi.md`](reports/n8_sea_model_coverage_2026-11-23/PN8_results_vi.md)):
+    - suy luận từ Δ dương có điều kiện trên input, và không xác nhận thay đổi cho từng hệ;
+    - "cùng dấu ở hai cách đọc skeleton đã thử", không mở rộng sang mọi decoder;
+    - bỏ suy luận "ít chỗ để phát hiện thay đổi" ở Sachs;
+    - câu về độ phủ;
+    - "không xác lập rằng toàn bộ điều kiện thử nằm trong phân phối huấn luyện của SEA";
+    - hai kết luận F1 chỉ áp dụng cho đệm Gauss A20.
+  - **Bước tiếp:** push ba commit; cập nhật sổ claim, bản thảo và supplement.
 
 ---
 
