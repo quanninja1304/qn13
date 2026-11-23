@@ -561,6 +561,12 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
     - CI của P8-4S ở cách đọc phụ là [−0.05, +0.15], không phải [−0.06, +0.16];
     - cả hai do làm tròn hai lần từ bản in ba chữ số. Nhãn và Size không đổi. Báo cáo kết quả đã sửa tại chỗ và ghi ở §6.
   - **Bước tiếp:** cập nhật bản thảo và supplement trên nhánh riêng.
+- **Cập nhật 24/11, bản thảo v0.8 và supplement (nhánh riêng, không công khai):**
+  - Study 7 là một mục riêng với bảng riêng (Label và Size). Sự không đồng đều giữa các ô nằm trong văn bản chính; bảng theo ô và cách đọc phụ ở phụ lục; pattern của ô c2 và của độ phủ ở phần thảo luận.
+  - Tóm tắt thêm câu về SEA theo câu của user. Tiêu đề không đếm model; câu mở đầu không mô tả cả bốn model như cùng nhận toàn bảng làm một input. Kết quả Study 1 giữ phạm vi ba checkpoint.
+  - Các bảng mới được sinh trực tiếp từ `pn8_reading.json`, làm tròn half-up trên giá trị thập phân, để tránh lỗi làm tròn hai lần.
+  - Trước khi đưa SEA vào phần related work, agent đọc lại bài SEA (§4.1, §5.4, App. A.4, B.1, và tìm từ khóa trên toàn văn): không có thí nghiệm nào thêm biến độc lập vào một input cố định.
+  - Supplement S1–S4 cập nhật cho Study 7. Gói tái lập thêm bước kiểm lại Study 7 từ output thô: 8/8 bước PASS.
 
 ---
 
