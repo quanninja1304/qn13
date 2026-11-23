@@ -494,6 +494,26 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
   - Push `719627c`, `a39f7c1`, `0171999` lúc 2026-11-23T01:18:30Z (GitHub activity API). User xác nhận hai đính chính (kết thúc dòng LF/CRLF của run header; CI làm tròn trong báo cáo P-N6).
   - **Đính chính chữ, C11:** ở Wine, số cạnh của FoundCause *tăng ròng* trung bình 15.6 mỗi lần sinh (thêm 15.8, bỏ 0.2). Câu "thêm trung bình 15.6 cạnh" ở mục kết quả P-N7 phía trên cần hiểu là tăng ròng.
   - **Bước tiếp theo:** biên tập v0.7; dịch các phần luật quyết định kết luận sang tiếng Anh; đóng gói tái lập; đọc bản PDF. Phần thí nghiệm bắt buộc đã xong.
+- **Cập nhật 23/11, P-N8 (SEA) bước 1–2, theo đề xuất ba bước của user:** [`reports/n8_sea_model_coverage_2026-11-23/`](reports/n8_sea_model_coverage_2026-11-23/). Chỉ dùng dữ liệu phát triển; chưa có output SEA nào trên dữ liệu của luật.
+  - **Bước 1** (pilot không chạy mạng, EXPLORATORY): khi thêm 20 cột, độ phủ của cặp đích còn 0.44 lần (đệm Gauss) và 0.22 lần (đệm có cấu trúc) so với k0. Thống kê toàn cục trôi ít (khoảng 0.007).
+  - **Bước 2** (kiểm khả thi, commit `bfb507b`, checkpoint FCI, CPU):
+    - adapter đạt ở 11/11 input;
+    - chạy lại cùng seed trùng từng bit;
+    - output phụ thuộc thứ tự input khi nhiều input chung một file, vì seed được đặt một lần cho cả lượt;
+    - chỉ đổi seed đã làm skeleton đích đổi 2–4 cặp ở k0;
+    - 10–105 s mỗi input theo D; RAM tối đa 2.4 GB.
+  - **Nháp luật v0.1** (chưa khóa):
+    - mỗi input chạy riêng một tiến trình, seed ghi trước cho từng đơn vị;
+    - contrast chính Δ: chênh lệch khoảng cách trung bình tới các output k0 ở seed khác;
+    - contrast so với đối chứng cổ điển (như C11) chỉ còn là mô tả;
+    - ước tính 6.3 h CPU cho lượt chính.
+  - **User quyết, viết thành nháp v0.2 (chưa khóa):**
+    - thiết kế riêng cho SEA: 120 hệ mới (15 mỗi ô), M = 4 seed tham chiếu mỗi đơn vị; giữ P8-1S và P8-3; contrast cổ điển trên bảng thật chỉ mô tả; Study 7 có bảng riêng;
+    - **Δ chỉ đo khoảng cách tới các output k0 tham chiếu.** Phân phối không đổi thì E[Δ] = 0, nhưng E[Δ] = 0 không suy ra phân phối không đổi. SMALL không gọi là "ổn định"; Δ âm không có nghĩa là không có tác động. Bỏ cột Outcome; giữ Label và Size;
+    - biên của hại F1 là 0.05, như Study 1; đọc skeleton phụ 1 − P(không cạnh) > 0.5 là phân tích độ nhạy định trước;
+    - thêm vào cổng DEV: chẩn đoán hoán vị cột và chất lượng ở k0, với tiêu chí và cách xử lý thất bại ghi trước;
+    - thêm giới hạn: dữ liệu tổng hợp sinh bằng simulator của AVICI (mất cân đối về nguồn sinh, không rõ lợi cho model nào); bài SEA (§4.1, App. B.1) huấn luyện với N = 10, 20, 100, cơ chế Linear và NN, không có RFF;
+    - lượt chính ước tính 8.6 h CPU. N = 15 chưa được chứng minh là đủ power; bảng MDE là kịch bản theo SD giả định.
 
 ---
 
