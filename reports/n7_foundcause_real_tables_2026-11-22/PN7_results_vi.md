@@ -72,7 +72,7 @@
 **Đọc bảng (mô tả):**
 
 - **Wine:**
-  - flips gần như hoàn toàn đến từ cạnh được thêm vào. Δm trung bình +15.6 so với flips 16.0: số cạnh trên 55 cặp tăng từ 8 lên khoảng 24;
+  - flips gần như hoàn toàn đến từ cạnh được thêm vào: mỗi lần sinh trung bình thêm 15.8 cạnh (9–21) và bỏ 0.2 cạnh (0–2), tức tăng ròng 15.6 (Δm). Số cạnh trên 55 cặp tăng từ 8 lên khoảng 24;
   - cả 20 lần sinh đều có D_r ≥ 11.
 - **Sachs:**
   - xác suất cạnh có đổi (Δp trung bình 0.0401), nhưng skeleton hầu như không đổi;
@@ -116,3 +116,12 @@
 - [`checks/pn7_completeness.json`](checks/pn7_completeness.json), [`checks/pn7_reading.json`](checks/pn7_reading.json), [`checks/pn7_run_header.json`](checks/pn7_run_header.json): bản sao từ `artifacts/n7_runs/pn7_out/`.
 - [`posthoc/recheck_pn7.py`](posthoc/recheck_pn7.py) và [`posthoc/recheck_output.txt`](posthoc/recheck_output.txt).
 - Output thô (`.npz`) và log nằm trong `artifacts/n7_runs/pn7_out/` (không đưa vào git).
+
+## 6. Sau review của user (23/11)
+
+- **User duyệt kết quả** (lượt 8): đã tính lại từ output thô 40 contrast, CI, p-value và nhãn Holm; mã băm code và phụ thuộc đều đạt. Kết quả giữ nguyên: Wine CONFIRMED, Sachs NOT_CONFIRMED. Gap 4 đóng; không mở thêm thí nghiệm.
+- **Đính chính** (lượt 9):
+
+| # | Chỗ | Trước | Sau |
+|---|---|---|---|
+| 1 | §2, đọc bảng, Wine | "flips gần như hoàn toàn đến từ cạnh được thêm vào. Δm trung bình +15.6" | Tách rõ: trung bình thêm 15.8 cạnh và bỏ 0.2 cạnh mỗi lần sinh, tức tăng ròng 15.6; tính lại từ output thô |

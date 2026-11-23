@@ -490,6 +490,10 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
   - Kết quả giữ nguyên: Wine CONFIRMED, Sachs NOT_CONFIRMED. Sachs giúp xác định giới hạn của phát hiện. Không mở thêm thí nghiệm.
   - **`b53ca72`:** ba run header (Study 1 held-out, EXP2, HELD2), cùng nội dung với bản gốc trong output: Git lưu file với kết thúc dòng LF, nên blob trùng bản gốc sau khi đổi CRLF thành LF, còn bản checkout trên Windows trùng từng byte với bản gốc. Đây là nhật ký máy được công bố bổ sung; lần push ngày 23/11 **không** tạo bằng chứng thời gian bên ngoài cho các lượt chạy trước đó.
   - C11 cập nhật theo câu của user ([sổ claim](reports/manuscript_n1_2026-11-21/N1_claim_evidence_gap_vi.md)). Bước tiếp: bản thảo v0.6 và supplement trên nhánh riêng, rồi rà số liệu, claim và hình.
+- **Cập nhật 23/11, user duyệt push ba commit và chuyển sang biên tập bản thảo:**
+  - Push `719627c`, `a39f7c1`, `0171999` lúc 2026-11-23T01:18:30Z (GitHub activity API). User xác nhận hai đính chính (kết thúc dòng LF/CRLF của run header; CI làm tròn trong báo cáo P-N6).
+  - **Đính chính chữ, C11:** ở Wine, số cạnh của FoundCause *tăng ròng* trung bình 15.6 mỗi lần sinh (thêm 15.8, bỏ 0.2). Câu "thêm trung bình 15.6 cạnh" ở mục kết quả P-N7 phía trên cần hiểu là tăng ròng.
+  - **Bước tiếp theo:** biên tập v0.7; dịch các phần luật quyết định kết luận sang tiếng Anh; đóng gói tái lập; đọc bản PDF. Phần thí nghiệm bắt buộc đã xong.
 
 ---
 
