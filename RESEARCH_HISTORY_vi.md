@@ -575,6 +575,29 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
     - thêm giới hạn phạm vi cho một số câu kết luận: đường tác động của CDFM chỉ trên hệ RFF; cách sửa input-only chỉ trên dữ liệu tổng hợp, tại k = 0 và với đệm Gauss; bullet về SEA tách dữ liệu tổng hợp (hai loại đệm) khỏi bảng thật (chỉ đệm Gauss);
     - lượt prior-art cuối (7 truy vấn, 9 ứng viên, 3 bài đọc toàn văn bằng tìm từ khóa): không thấy nghiên cứu nào trả lời câu hỏi của bài trong các nguồn đã khảo sát. Thêm Kode (đệm cột 0 tới kích thước cố định, không phải phép thử với cột ngẫu nhiên) vào phần related work. Kết luận này không chứng minh bài là đầu tiên;
     - gói tái lập: giải nén ZIP vào thư mục độc lập và chạy 8/8 PASS. Gói kiểm số liệu và tính lại thống kê từ output đã lưu; nó không chạy lại thí nghiệm model.
+- **Cập nhật 25/11, mở lại một thí nghiệm có mục tiêu: P-N9 (Study 8), hiện tượng theo cỡ mẫu n.**
+  - **Đảo ngược một phần** quyết định "đóng phần thực nghiệm" ngày 24/11 (mục trên), vì có dữ kiện mới về n lúc huấn luyện của các model. Mọi thí nghiệm trước đều chạy ở n = 500, trong khi:
+    - AVICI `scm-v0` được huấn luyện trên các ví dụ 200 dòng;
+    - CDFM được huấn luyện với n trong [50, 4096];
+    - FoundCause được huấn luyện với 100–599 dòng;
+    - SEA được huấn luyện trên dữ liệu 1000N dòng với lô 500 dòng, nên ở n = 500 mọi lô dùng đúng cùng các dòng.
+  - **Quyết định của user**, sau khi agent phân tích hai phương án (giữ đóng, hoặc mở lại một thí nghiệm theo n):
+    - chạy cả bốn model, ở các mức n nằm trong hoặc khớp với chế độ huấn luyện của từng model;
+    - N = 120 hệ;
+    - STABLE định nghĩa theo từng mức n;
+    - giữ luật "hiện tượng còn" của Study 1;
+    - cổng DEV chỉ kiểm tính khả thi;
+    - chấp nhận mặc định của sáu điểm mở.
+  - **Tài liệu:** phân tích thiết kế [`PN9_n_grid_design_vi.md`](reports/n9_sample_size_2026-11-24/PN9_n_grid_design_vi.md); luật [`PN9_rules_vi.md`](reports/n9_sample_size_2026-11-24/PN9_rules_vi.md).
+  - **Luật v1 khóa** ở `5146c74`, push lúc 2026-11-24T17:58:41Z (GitHub activity API), trước khi sinh bất kỳ input nào của P-N9. Lượt push gồm `81a4cff`, `6f57e12`, `4c78fcd` và `5146c74`.
+  - **Agent tự sửa hai điểm trước khi khóa:**
+    - nhãn STABLE tính theo độ dốc chấp nhận cả đường chữ U, nên được thay bằng STABLE theo từng mức;
+    - ước tính thời gian của SEA trước đó dùng thời gian SEA tự ghi; nay dùng thời gian thật mỗi tiến trình, nên tăng từ 21,6 h lên 29 h. Tổng khoảng 97 h.
+  - **Bước tiếp:**
+    - viết code, chỉ trong file mới;
+    - chạy cổng DEV G1–G6;
+    - đóng băng code và push;
+    - chạy các lượt chính. FoundCause và SEA do user chạy trong PowerShell của mình.
 
 ---
 
