@@ -567,6 +567,14 @@ Nhãn chỉ phản ánh **quyết định của dự án tại thời điểm gh
   - Các bảng mới được sinh trực tiếp từ `pn8_reading.json`, làm tròn half-up trên giá trị thập phân, để tránh lỗi làm tròn hai lần.
   - Trước khi đưa SEA vào phần related work, agent đọc lại bài SEA (§4.1, §5.4, App. A.4, B.1, và tìm từ khóa trên toàn văn): không có thí nghiệm nào thêm biến độc lập vào một input cố định.
   - Supplement S1–S4 cập nhật cho Study 7. Gói tái lập thêm bước kiểm lại Study 7 từ output thô: 8/8 bước PASS.
+- **Cập nhật 24/11, user chốt phạm vi; hoàn thiện bản PDF:** user đánh giá bài đủ để hoàn thiện và nộp trong phạm vi hiện tại; đóng phần thực nghiệm, không chạy thêm thí nghiệm model.
+  - Push `9f25106`, `dde028a` và `4df5da3` lúc 2026-11-24T04:18:35Z (GitHub activity API). `4df5da3` sửa câu trong sổ claim về nơi ghi mã commit và thời điểm push, bằng commit thông thường; không viết lại lịch sử đã công khai.
+  - **Nhánh riêng, không công khai:**
+    - đồng bộ public → private; S3 dựng lại sau lần push;
+    - bản PDF được biên dịch và đọc từng trang. Các lỗi sửa trong bộ chuyển LaTeX: ký tự prime, nhãn có dấu gạch dưới, chỉ số dưới nhiều chữ cái, biến một chữ cái, số mũ và tổng có chỉ số, tiêu đề tài liệu tham khảo, độ rộng cột bảng. Kết quả: 0 lỗi, 0 tham chiếu chưa định nghĩa, 0 box tràn, 46 trang;
+    - thêm giới hạn phạm vi cho một số câu kết luận: đường tác động của CDFM chỉ trên hệ RFF; cách sửa input-only chỉ trên dữ liệu tổng hợp, tại k = 0 và với đệm Gauss; bullet về SEA tách dữ liệu tổng hợp (hai loại đệm) khỏi bảng thật (chỉ đệm Gauss);
+    - lượt prior-art cuối (7 truy vấn, 9 ứng viên, 3 bài đọc toàn văn bằng tìm từ khóa): không thấy nghiên cứu nào trả lời câu hỏi của bài trong các nguồn đã khảo sát. Thêm Kode (đệm cột 0 tới kích thước cố định, không phải phép thử với cột ngẫu nhiên) vào phần related work. Kết luận này không chứng minh bài là đầu tiên;
+    - gói tái lập: giải nén ZIP vào thư mục độc lập và chạy 8/8 PASS. Gói kiểm số liệu và tính lại thống kê từ output đã lưu; nó không chạy lại thí nghiệm model.
 
 ---
 
