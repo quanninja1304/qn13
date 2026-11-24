@@ -1,0 +1,17 @@
+alpha per component = 0.05/11 = 0.00455; one-sided z = 2.609; two-sided z = 2.838; N = 120
+== persistence (A1 at n = 200, C1 at n = 4000, S1 at n = 20000): test > 0 and estimate >= margin,
+   if the effect equals its n = 500 value
+  A1: 0.99
+  C1: 1.00
+  S1: 1.00
+== A2-diff (two-sided, H(500) - H(200) = 0) and A2-sim (TOST inside +-0.05, true difference 0)
+  rho=0.0: A2-diff |d|=0.03: 0.40  |d|=0.05: 0.93 | A2-sim 0.91
+  rho=0.5: A2-diff |d|=0.03: 0.80  |d|=0.05: 1.00 | A2-sim 1.00
+  rho=0.8: A2-diff |d|=0.03: 1.00  |d|=0.05: 1.00 | A2-sim 1.00
+== trend components: P(SHRINKS rejected), P(STABLE rejected)
+  cdfm       true=flat    c=0.0094/doubling: rho=0.0: SHRINKS 0.00, STABLE 0.93 | rho=0.5: SHRINKS 0.00, STABLE 1.00 | rho=0.8: SHRINKS 0.00, STABLE 1.00
+  cdfm       true=decline c=0.0094/doubling: rho=0.0: SHRINKS 0.94, STABLE 0.00 | rho=0.5: SHRINKS 1.00, STABLE 0.00 | rho=0.8: SHRINKS 1.00, STABLE 0.00
+  foundcause true=flat    c=0.0250/doubling: rho=0.0: SHRINKS 0.00, STABLE 0.76 | rho=0.5: SHRINKS 0.00, STABLE 1.00 | rho=0.8: SHRINKS 0.00, STABLE 1.00
+  foundcause true=decline c=0.0250/doubling: rho=0.0: SHRINKS 0.84, STABLE 0.00 | rho=0.5: SHRINKS 0.99, STABLE 0.00 | rho=0.8: SHRINKS 1.00, STABLE 0.00
+  sea        true=flat    c=0.1879/doubling: rho=0.0: SHRINKS 0.00, STABLE 0.00 | rho=0.5: SHRINKS 0.00, STABLE 0.00 | rho=0.8: SHRINKS 0.00, STABLE 0.61
+  sea        true=decline c=0.1879/doubling: rho=0.0: SHRINKS 1.00, STABLE 0.00 | rho=0.5: SHRINKS 1.00, STABLE 0.00 | rho=0.8: SHRINKS 1.00, STABLE 0.00
