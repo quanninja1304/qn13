@@ -203,3 +203,43 @@ Tổng khoảng 60 giờ chạy tuần tự, cộng thêm DEV gate. Các model k
 - **Tính lồng nhau của dữ liệu:**
   - n dòng đầu giống hệt nhau giữa các mức n;
   - khối đích giống hệt từng bit giữa input k = 0 và k = 20.
+
+## 10. Bổ sung 25/11: N = 120 và kiểm lại các nhãn
+
+**Quyết định của user (25/11):** N = 120 cho mọi model, tức 15 hệ mỗi ô. Bỏ quy tắc tăng N theo ρ ở mục 8.5.
+
+**Kiểm lại.** Script [design/pn9_n120_check.py](design/pn9_n120_check.py), output ở [design/pn9_n120_check_output.txt](design/pn9_n120_check_output.txt). Mô phỏng Monte Carlo giả định tương quan đều (compound symmetry) giữa các mức n, dùng SD đo ở n = 500.
+
+**1. Luật "hiện tượng còn" ở một mức n.** Giả định hiệu ứng thật bằng giá trị đo ở n = 500. Power của AVICI theo ba cách đọc luật:
+
+| Cách đọc luật | N = 80 | N = 120 |
+|---|---|---|
+| Luật của Study 1: ước lượng ≥ 0,05 và kiểm một phía > 0 | 0,96 | 0,99 |
+| Cận dưới của CI 95% > 0,05 | 0,44 | 0,60 |
+| Cận dưới > 0,05 ở mức Holm | 0,24 | 0,39 |
+
+CDFM và FoundCause đạt ≥ 0,93 theo cả ba cách đọc.
+
+**2. STABLE dựa trên độ dốc mù với hình chữ U.** Lấy một đường chữ U có độ dốc trung bình bằng 0 và hai đầu lệch khỏi mức giữa đúng bằng margin. Với CDFM, nhãn STABLE dựa trên độ dốc vẫn gán STABLE cho đường này với xác suất 0,92 (N = 80) và 0,99 (N = 120), ở ρ = 0.
+
+**Đề xuất (chờ user duyệt):** định nghĩa STABLE theo từng mức. Mọi tương phản giữa một mức n và mức neo n = 500 phải nằm trong ±margin, kiểm bằng TOST và intersection–union. Với định nghĩa này, đường chữ U nói trên luôn bị loại (xác suất gán STABLE 0,00).
+
+Power của STABLE theo từng mức khi đường thật phẳng:
+
+| Model | ρ | N = 80 | N = 120 |
+|---|---|---|---|
+| CDFM | 0 | 0,62 | 0,94 |
+| CDFM | 0,5 | 0,99 | 1,00 |
+| FoundCause | 0 | 0,40 | 0,81 |
+| FoundCause | 0,5 | 0,95 | 1,00 |
+
+**3. AVICI, nhãn SIMILAR.** Kiểm bằng TOST rằng H(500) − H(200) nằm trong ±0,05, khi hiệu thật bằng 0. Ở ρ = 0, power là 0,70 với N = 80 và 0,93 với N = 120.
+
+**4. SEA, xu hướng của Δ.** STABLE theo từng mức, với margin 1 cặp:
+
+- ρ ≤ 0,5: 0,00 ở cả N = 80 và N = 120;
+- ρ = 0,8: 0,19 với N = 80 và 0,68 với N = 120.
+
+Như vậy N = 120 không đủ để xác lập STABLE cho SEA, trừ khi ρ cao. Giả thuyết có thông tin của SEA là S1 (Δ còn ở n = 20.000), với power 1,00 ở cả hai mức N.
+
+**5. Phân tích theo ô.** Nửa độ rộng CI của H trong một ô là ±0,048–0,058 với 10 hệ mỗi ô, và ±0,039–0,048 với 15 hệ mỗi ô. Phân tích theo ô vì vậy vẫn chỉ là mô tả.

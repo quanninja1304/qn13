@@ -1,0 +1,27 @@
+== 1. Persistence at one n if the effect equals its n = 500 value
+  avici      N=80: Study 1 rule 0.96 | lower 95% bound > 0.05: 0.44 | lower bound > 0.05 at the Holm level: 0.24
+  avici      N=120: Study 1 rule 0.99 | lower 95% bound > 0.05: 0.60 | lower bound > 0.05 at the Holm level: 0.39
+  cdfm       N=80: Study 1 rule 1.00 | lower 95% bound > 0.05: 0.98 | lower bound > 0.05 at the Holm level: 0.93
+  cdfm       N=120: Study 1 rule 1.00 | lower 95% bound > 0.05: 1.00 | lower bound > 0.05 at the Holm level: 0.99
+  foundcause N=80: Study 1 rule 1.00 | lower 95% bound > 0.05: 0.98 | lower bound > 0.05 at the Holm level: 0.94
+  foundcause N=120: Study 1 rule 1.00 | lower 95% bound > 0.05: 1.00 | lower bound > 0.05 at the Holm level: 0.99
+== 2. STABLE labels by simulation (true curve flat, or U-shaped with zero mean slope)
+  cdfm       flat N=80: rho=0.0: slope-STABLE 0.98, level-STABLE 0.62 | rho=0.5: slope-STABLE 1.00, level-STABLE 0.99 | rho=0.8: slope-STABLE 1.00, level-STABLE 1.00
+  cdfm       flat N=120: rho=0.0: slope-STABLE 1.00, level-STABLE 0.94 | rho=0.5: slope-STABLE 1.00, level-STABLE 1.00 | rho=0.8: slope-STABLE 1.00, level-STABLE 1.00
+  cdfm       U    N=80: rho=0.0: slope-STABLE 0.92, level-STABLE 0.00 | rho=0.5: slope-STABLE 1.00, level-STABLE 0.00 | rho=0.8: slope-STABLE 1.00, level-STABLE 0.00
+  cdfm       U    N=120: rho=0.0: slope-STABLE 0.99, level-STABLE 0.00 | rho=0.5: slope-STABLE 1.00, level-STABLE 0.00 | rho=0.8: slope-STABLE 1.00, level-STABLE 0.00
+  foundcause flat N=80: rho=0.0: slope-STABLE 0.63, level-STABLE 0.40 | rho=0.5: slope-STABLE 0.98, level-STABLE 0.95 | rho=0.8: slope-STABLE 1.00, level-STABLE 1.00
+  foundcause flat N=120: rho=0.0: slope-STABLE 0.91, level-STABLE 0.81 | rho=0.5: slope-STABLE 1.00, level-STABLE 1.00 | rho=0.8: slope-STABLE 1.00, level-STABLE 1.00
+  foundcause U    N=80: rho=0.0: slope-STABLE 0.01, level-STABLE 0.00 | rho=0.5: slope-STABLE 0.01, level-STABLE 0.00 | rho=0.8: slope-STABLE 0.02, level-STABLE 0.00
+  foundcause U    N=120: rho=0.0: slope-STABLE 0.01, level-STABLE 0.00 | rho=0.5: slope-STABLE 0.01, level-STABLE 0.00 | rho=0.8: slope-STABLE 0.02, level-STABLE 0.00
+  sea_delta  flat N=80: rho=0.0: slope-STABLE 0.00, level-STABLE 0.00 | rho=0.5: slope-STABLE 0.02, level-STABLE 0.00 | rho=0.8: slope-STABLE 0.76, level-STABLE 0.19
+  sea_delta  flat N=120: rho=0.0: slope-STABLE 0.00, level-STABLE 0.00 | rho=0.5: slope-STABLE 0.28, level-STABLE 0.00 | rho=0.8: slope-STABLE 0.95, level-STABLE 0.68
+  sea_delta  U    N=80: rho=0.0: slope-STABLE 0.00, level-STABLE 0.00 | rho=0.5: slope-STABLE 0.01, level-STABLE 0.00 | rho=0.8: slope-STABLE 0.08, level-STABLE 0.00
+  sea_delta  U    N=120: rho=0.0: slope-STABLE 0.00, level-STABLE 0.00 | rho=0.5: slope-STABLE 0.04, level-STABLE 0.00 | rho=0.8: slope-STABLE 0.12, level-STABLE 0.00
+== 2d. AVICI SIMILAR: TOST of H(500) - H(200) inside +-0.05 (true difference 0)
+  N=80: rho=0.0: 0.70 | rho=0.5: 0.99 | rho=0.8: 1.00
+  N=120: rho=0.0: 0.93 | rho=0.5: 1.00 | rho=0.8: 1.00
+== 3. Per-cell CI half-width of H (1.96 * sd_within / sqrt(n per cell))
+  avici      10 per cell: +-0.056 | 15 per cell: +-0.045
+  cdfm       10 per cell: +-0.048 | 15 per cell: +-0.039
+  foundcause 10 per cell: +-0.058 | 15 per cell: +-0.048
