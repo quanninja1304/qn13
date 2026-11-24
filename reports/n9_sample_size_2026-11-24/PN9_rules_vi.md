@@ -1,6 +1,10 @@
-# P-N9: hiện tượng theo cỡ mẫu n (luật v0, NHÁP; 25/11/2026)
+# P-N9: hiện tượng theo cỡ mẫu n (luật v1, ĐÃ KHÓA; 25/11/2026)
 
-> **Trạng thái:** v0 nháp, **chưa khóa**. Chưa sinh input nào và chưa chạy model nào cho P-N9, kể cả trên tập phát triển.
+> **Trạng thái:** v1 **ĐÃ KHÓA**.
+>
+> - User duyệt v0 ngày 25/11 và chấp nhận mặc định của cả sáu điểm mở ở §11. v1 = v0 cộng đúng các quyết định đó (§10).
+> - Khóa bằng commit và push trước khi sinh bất kỳ input nào của P-N9, kể cả của tập phát triển.
+> - Lúc khóa, chưa sinh input nào và chưa chạy model nào cho P-N9.
 >
 > **Cơ sở:**
 >
@@ -20,7 +24,7 @@
 >
 > **Cam kết báo cáo:** nếu kiểm hoàn tất đạt, cả 11 thành phần ở §4 được báo cáo trong bài, kèm nhãn, bất kể chiều và độ lớn. Hình ở §4.4 được vẽ bằng code đọc đã đóng băng. Quyết định này không phụ thuộc kết quả.
 >
-> **Điểm còn mở trước khi khóa:** §11.
+> **Điểm mở:** đã quyết hết trước khi khóa, xem §11.
 
 ## 0. Câu hỏi và điều không thể kết luận
 
@@ -52,7 +56,7 @@
 - **So sánh giữa các model.** Bài không xếp hạng model. Hơn nữa, cùng một n mang nghĩa khác nhau với từng model.
 - **STABLE không có nghĩa là "không phụ thuộc n" hay "ổn định ở mọi n".** STABLE chỉ nói mọi mức đã thử nằm trong biên quanh mức ở n = 500 (§4).
 - **Với SEA, Δ chỉ đọc được một chiều,** như Study 7 §0: phân phối output không đổi thì E[Δ] = 0, nhưng chiều ngược lại không đúng. Điều này áp dụng ở mọi n.
-- **Khái quát** sang checkpoint khác, model khác, đệm có cấu trúc (nếu không thêm, xem §11), hay dữ liệu thật.
+- **Khái quát** sang checkpoint khác, model khác, đệm có cấu trúc (không thử, §11 O2), hay dữ liệu thật.
 
 ## 1. Model và cách chạy
 
@@ -372,8 +376,8 @@ Các con số này được điều chỉnh tương ứng nếu áp §6.1.
 
 ## 9. Quy trình
 
-1. User review v0.
-2. **Khóa v1:** commit và push trước khi sinh bất kỳ input nào của P-N9, kể cả của tập phát triển.
+1. User review v0 (xong ngày 25/11).
+2. **Khóa v1:** commit và push trước khi sinh bất kỳ input nào của P-N9, kể cả của tập phát triển (25/11).
 3. Viết code, chỉ trong file mới. Chạy cổng G1–G6.
 4. Đóng băng toàn bộ code cùng phụ thuộc, gồm cả code đọc và code vẽ hình; commit và push trước các lượt chính. Đây là bài học về thời điểm khóa ở Study 7: luật và phép kiểm khóa trước cổng, còn code đọc đóng băng cùng phần code còn lại sau cổng, trước các lượt chính.
 5. Chạy các lượt chính trong ngân sách. Kiểm hoàn tất. Đọc kết quả bằng code đã đóng băng. Kiểm lại độc lập bằng một script post hoc.
@@ -382,10 +386,17 @@ Các con số này được điều chỉnh tương ứng nếu áp §6.1.
 ## 10. Nhật ký (append-only sau khi khóa)
 
 - **v0, 25/11/2026:** nháp. Viết theo `PN9_n_grid_design_vi.md` và các quyết định của user ngày 24–25/11.
+- **v1, 25/11/2026, KHÓA.** User duyệt v0 và chấp nhận mặc định của cả sáu điểm ở §11. v1 = v0 cộng đúng các quyết định sau; không đổi gì khác:
+  - O1: không thêm thành phần thứ 12; họ Holm giữ 11 thành phần;
+  - O2: chỉ dùng đệm Gauss; không chạy đệm có cấu trúc;
+  - O3: giữ hai mức mô tả 100 và 1000 của AVICI;
+  - O4: không kiểm chất lượng ở k0 trên DEV; cổng chỉ kiểm tính khả thi;
+  - O5: không có thành phần GROWS;
+  - O6: A1, C1 và S1 dùng t phân tầng với Holm thay cho CI bootstrap 95% của Study 1.
 
-## 11. Điểm mở (cần user quyết trước khi khóa)
+## 11. Điểm mở (đã quyết ngày 25/11: user chấp nhận mặc định của cả sáu điểm)
 
-| # | Điểm mở | Đề xuất mặc định |
+| # | Điểm mở | Mặc định, đã được duyệt |
 |---|---|---|
 | O1 | **Thành phần thứ 12.** Ví dụ: H của SEA ở n = 20 000 theo dấu, hoặc hiện tượng còn ở n = 125 với FoundCause | không thêm, giữ 11 |
 | O2 | **Đệm có cấu trúc cho SEA, như S20 của Study 7.** Thêm một tiến trình mỗi hệ mỗi mức, ở D = d_T + 20 (43–65 s), tức khoảng 9 h; S20 chỉ để mô tả, không vào Holm | chỉ dùng đệm Gauss |
