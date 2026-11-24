@@ -170,7 +170,7 @@
 5. **Gom thống kê trong lúc viết** (không phải bước riêng):
    - mỗi bảng của bài ghi bộ dữ liệu (P-N1 EXP/HELD, EXP2, HELD2), giả thuyết đã khóa (file luật), phép kiểm và mức bằng chứng;
    - bảng các pha và cổng toàn vẹn đưa vào appendix;
-   - mã commit và thời điểm push để ở tài liệu bổ sung, vì bài có thể được review ẩn danh.
+   - mã commit và thời điểm push được ghi trong tài liệu bổ sung về nguồn gốc và tính toàn vẹn.
 
 ## 3. Khung bản thảo (tiếng Anh; bản nháp đang viết)
 
