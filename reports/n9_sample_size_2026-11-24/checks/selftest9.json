@@ -1,0 +1,373 @@
+{
+ "statistics": {
+  "pvalue_helpers_worst": 0.0,
+  "strat8_vs_frozen_study2_worst": 0.0,
+  "ok": true
+ },
+ "runners": {
+  "ok": true,
+  "by_runner": {
+   "avici": {
+    "refuses_without_header": true,
+    "refuses_failed_header": true,
+    "run_and_resume": [
+     0,
+     0,
+     2,
+     4
+    ],
+    "equal_to_dev_bitwise": true,
+    "no_part_files": true,
+    "budget_stop": true,
+    "refuses_invalid_output": true,
+    "refuses_broken_output": true,
+    "ok": true
+   },
+   "pc": {
+    "refuses_without_header": true,
+    "refuses_failed_header": true,
+    "run_and_resume": [
+     0,
+     0,
+     2,
+     4
+    ],
+    "equal_to_dev_bitwise": true,
+    "no_part_files": true,
+    "budget_stop": true,
+    "refuses_invalid_output": true,
+    "refuses_broken_output": true,
+    "ok": true
+   },
+   "ges": {
+    "refuses_without_header": true,
+    "refuses_failed_header": true,
+    "run_and_resume": [
+     0,
+     0,
+     2,
+     4
+    ],
+    "equal_to_dev_bitwise": true,
+    "no_part_files": true,
+    "budget_stop": true,
+    "refuses_invalid_output": true,
+    "refuses_broken_output": true,
+    "ok": true
+   },
+   "sea": {
+    "refuses_without_header": true,
+    "refuses_failed_header": true,
+    "run_and_resume": [
+     0,
+     0,
+     1,
+     2
+    ],
+    "equal_to_dev_bitwise": true,
+    "no_part_files": true,
+    "budget_stop": true,
+    "refuses_invalid_output": true,
+    "refuses_broken_output": true,
+    "ok": true
+   }
+  }
+ },
+ "completeness": {
+  "complete": {
+   "ok": true,
+   "problems": []
+  },
+  "planned": {
+   "avici": 968,
+   "cdfm": 1448,
+   "foundcause": 728,
+   "sea": 3608,
+   "pc": 1084,
+   "ges": 844
+  },
+  "planned_matches_rules": true,
+  "restored_passes": true,
+  "faults": {
+   "missing output": {
+    "detected": true,
+    "n_problems": 1,
+    "first": [
+     "avici R2: PN9-c1-r0__n200__A20 has 1 records or no output"
+    ]
+   },
+   "duplicate record": {
+    "detected": true,
+    "n_problems": 1,
+    "first": [
+     "pc R1: PN9-c0-r0__n100__k0 has 2 records or no output"
+    ]
+   },
+   "missing record": {
+    "detected": true,
+    "n_problems": 1,
+    "first": [
+     "ges R3: PN9-c4-r0__n200__A20 has 0 records or no output"
+    ]
+   },
+   "wrong input hash": {
+    "detected": true,
+    "n_problems": 1,
+    "first": [
+     "foundcause R3: PN9-c4-r1__n125__A20 input hash differs"
+    ]
+   },
+   "wrong level": {
+    "detected": true,
+    "n_problems": 1,
+    "first": [
+     "cdfm R1: PN9-c0-r0__n500__k0 level or seed differs from the plan"
+    ]
+   },
+   "wrong SEA seed": {
+    "detected": true,
+    "n_problems": 1,
+    "first": [
+     "sea R1: PN9-c0-r0__n500__k0__s750003 level or seed differs from the plan"
+    ]
+   },
+   "budget stop record": {
+    "detected": true,
+    "n_problems": 2,
+    "first": [
+     "sea R4: non-ok records ['PN9-c5-r0__n1000__k0__s757512']"
+    ]
+   },
+   "error record": {
+    "detected": true,
+    "n_problems": 2,
+    "first": [
+     "avici R1: non-ok records ['x']"
+    ]
+   },
+   "rerun differs": {
+    "detected": true,
+    "n_problems": 1,
+    "first": [
+     "cdfm R4: rerun PN9-c5-r0__n100__k0__rerun differs from PN9-c5-r0__n100__k0"
+    ]
+   },
+   "SEA layout": {
+    "detected": true,
+    "n_problems": 1,
+    "first": [
+     "sea R2: PN9-c1-r0__n1000__k0__s751514 adapter check"
+    ]
+   },
+   "SEA auc": {
+    "detected": true,
+    "n_problems": 1,
+    "first": [
+     "sea R3: PN9-c4-r0__n1000__k0__s756014 adapter check"
+    ]
+   },
+   "missing end header": {
+    "detected": true,
+    "n_problems": 1,
+    "first": [
+     "sea R2: missing or failed start/end freeze header"
+    ]
+   },
+   "failed start header": {
+    "detected": true,
+    "n_problems": 1,
+    "first": [
+     "ges R1: missing or failed start/end freeze header"
+    ]
+   },
+   "unplanned record": {
+    "detected": true,
+    "n_problems": 1,
+    "first": [
+     "pc R3: records of unplanned jobs ['unplanned']"
+    ]
+   }
+  },
+  "ok": true
+ },
+ "reading": {
+  "ok": true,
+  "scenarios": {
+   "effects": {
+    "refuses_without_completeness": true,
+    "refuses_if_failed": true,
+    "returncode": 0,
+    "labels": {
+     "A1": "PERSISTS",
+     "C1": "PRESENT_BELOW_MARGIN",
+     "S1": "PERSISTS",
+     "A2": "HIGHER",
+     "C2": "SHRINKS",
+     "F1": "STABLE",
+     "S2": "STABLE"
+    },
+    "n_descriptive_compared": 191,
+    "differences": [],
+    "n_differences": 0,
+    "planned_labels_missed": {},
+    "figures": [
+     "pn9_fig_flips.pdf",
+     "pn9_fig_flips.png",
+     "pn9_fig_linear.pdf",
+     "pn9_fig_linear.png",
+     "pn9_fig_main.pdf",
+     "pn9_fig_main.png",
+     "pn9_fig_sea_delta.pdf",
+     "pn9_fig_sea_delta.png"
+    ],
+    "ok": true
+   },
+   "null": {
+    "refuses_without_completeness": true,
+    "refuses_if_failed": true,
+    "returncode": 0,
+    "labels": {
+     "A1": "PRESENT_BELOW_MARGIN",
+     "C1": "PRESENT_BELOW_MARGIN",
+     "S1": "PRESENT_BELOW_MARGIN",
+     "A2": "SIMILAR",
+     "C2": "STABLE",
+     "F1": "STABLE",
+     "S2": "STABLE"
+    },
+    "n_descriptive_compared": 191,
+    "differences": [],
+    "n_differences": 0,
+    "planned_labels_missed": {},
+    "figures": [
+     "pn9_fig_flips.pdf",
+     "pn9_fig_flips.png",
+     "pn9_fig_linear.pdf",
+     "pn9_fig_linear.png",
+     "pn9_fig_main.pdf",
+     "pn9_fig_main.png",
+     "pn9_fig_sea_delta.pdf",
+     "pn9_fig_sea_delta.png"
+    ],
+    "ok": true
+   },
+   "ushape": {
+    "refuses_without_completeness": true,
+    "refuses_if_failed": true,
+    "returncode": 0,
+    "labels": {
+     "A1": "PERSISTS",
+     "C1": "PERSISTS",
+     "S1": "PERSISTS",
+     "A2": "LOWER",
+     "C2": "UNCLEAR",
+     "F1": "UNCLEAR",
+     "S2": "UNCLEAR"
+    },
+    "n_descriptive_compared": 191,
+    "differences": [],
+    "n_differences": 0,
+    "planned_labels_missed": {},
+    "figures": [
+     "pn9_fig_flips.pdf",
+     "pn9_fig_flips.png",
+     "pn9_fig_linear.pdf",
+     "pn9_fig_linear.png",
+     "pn9_fig_main.pdf",
+     "pn9_fig_main.png",
+     "pn9_fig_sea_delta.pdf",
+     "pn9_fig_sea_delta.png"
+    ],
+    "ok": true
+   },
+   "zero": {
+    "refuses_without_completeness": true,
+    "refuses_if_failed": true,
+    "returncode": 0,
+    "labels": {
+     "A1": "NOT_CONFIRMED",
+     "C1": "NOT_CONFIRMED",
+     "S1": "NOT_CONFIRMED",
+     "A2": "UNCLEAR",
+     "C2": "UNCLEAR",
+     "F1": "UNCLEAR",
+     "S2": "UNCLEAR"
+    },
+    "n_descriptive_compared": 191,
+    "differences": [],
+    "n_differences": 0,
+    "planned_labels_missed": {},
+    "figures": [
+     "pn9_fig_flips.pdf",
+     "pn9_fig_flips.png",
+     "pn9_fig_linear.pdf",
+     "pn9_fig_linear.png",
+     "pn9_fig_main.pdf",
+     "pn9_fig_main.png",
+     "pn9_fig_sea_delta.pdf",
+     "pn9_fig_sea_delta.png"
+    ],
+    "ok": true
+   },
+   "both": {
+    "refuses_without_completeness": true,
+    "refuses_if_failed": true,
+    "returncode": 0,
+    "labels": {
+     "A1": "PRESENT_BELOW_MARGIN",
+     "C1": "NOT_CONFIRMED",
+     "S1": "PRESENT_BELOW_MARGIN",
+     "A2": "SIMILAR + HIGHER",
+     "C2": "SHRINKS",
+     "F1": "SHRINKS",
+     "S2": "SHRINKS"
+    },
+    "n_descriptive_compared": 191,
+    "differences": [],
+    "n_differences": 0,
+    "planned_labels_missed": {},
+    "figures": [
+     "pn9_fig_flips.pdf",
+     "pn9_fig_flips.png",
+     "pn9_fig_linear.pdf",
+     "pn9_fig_linear.png",
+     "pn9_fig_main.pdf",
+     "pn9_fig_main.png",
+     "pn9_fig_sea_delta.pdf",
+     "pn9_fig_sea_delta.png"
+    ],
+    "ok": true
+   },
+   "noisy": {
+    "refuses_without_completeness": true,
+    "refuses_if_failed": true,
+    "returncode": 0,
+    "labels": {
+     "A1": "PERSISTS",
+     "C1": "PERSISTS",
+     "S1": "PERSISTS",
+     "A2": "UNCLEAR",
+     "C2": "STABLE",
+     "F1": "UNCLEAR",
+     "S2": "STABLE"
+    },
+    "n_descriptive_compared": 191,
+    "differences": [],
+    "n_differences": 0,
+    "planned_labels_missed": {},
+    "figures": [
+     "pn9_fig_flips.pdf",
+     "pn9_fig_flips.png",
+     "pn9_fig_linear.pdf",
+     "pn9_fig_linear.png",
+     "pn9_fig_main.pdf",
+     "pn9_fig_main.png",
+     "pn9_fig_sea_delta.pdf",
+     "pn9_fig_sea_delta.png"
+    ],
+    "ok": true
+   }
+  }
+ },
+ "ok": true
+}

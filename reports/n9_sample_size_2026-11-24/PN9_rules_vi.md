@@ -393,6 +393,24 @@ Các con số này được điều chỉnh tương ứng nếu áp §6.1.
   - O4: không kiểm chất lượng ở k0 trên DEV; cổng chỉ kiểm tính khả thi;
   - O5: không có thành phần GROWS;
   - O6: A1, C1 và S1 dùng t phân tầng với Holm thay cho CI bootstrap 95% của Study 1.
+- **Cổng DEV, 25/11/2026** (sau khóa v1, trước khi đóng băng code). Luật không đổi. Trên DEV không in hay xem giá trị nào của §3; chế độ kiểm cấu trúc của G6 tính chúng trong bộ nhớ nhưng chỉ in số đếm.
+  - **Kết quả:** G1–G6 đạt, ghi ở [checks/gates9.json](checks/gates9.json). Không áp phương án dự phòng nào của §6.1.
+    - G1: 288 input, hai lần dựng và một bản tính độc lập trùng nhau; 628 bản ghi có mã băm trùng khi so giữa các tiến trình; không hệ nào bị thay seed.
+    - G2: cả sáu model chạy lại trùng từng bit.
+    - G3, peak working set (ngưỡng 6144 MB): AVICI 2635; CDFM 1684; FoundCause 2449; SEA 1384; GES 251 MB.
+    - G5: AVICI, CDFM, FoundCause, PC, GES tái lập output của Study 1 trùng từng bit; SEA đạt kiểm nhãn `true`, AUC, đồ thị rỗng và tái lập Study 7.
+    - G6 đạt, nhưng trên DEV chỉ tính được 6/11 thành phần (DEV không có FoundCause ở n = 500 và không đủ mức, đủ seed của SEA). Phần còn lại được kiểm bằng selftest bên dưới.
+  - **G4:** tổng ước tính 75,8 h, dưới mốc 145,5 h. AVICI 1,2; CDFM 12,8; FoundCause 42,2; SEA 19,2; GES 0,3; PC 0,1 h. Lệch so với giả định ở §8: thời gian của CDFM tăng khoảng n^1,5, không tuyến tính (12,8 h thay vì 6,0 h); SEA nhanh hơn (19,2 h thay vì 29 h). FoundCause ở n = 500 lấy thời gian đo ở cổng (192,6 s ở D = 10; 532,7 s ở D = 40); ở D = 20 và 30, vốn không đo ở cổng, lấy trung vị Study 1 nhân 1,32, là mức chậm lớn nhất đo được.
+  - **Mốc dừng mỗi lượt** (1,5 × ước tính, làm tròn lên 0,1 h; R1/R2/R3/R4): AVICI 0,5/0,5/0,5/0,5; CDFM 3,9/3,9/5,8/5,8; FoundCause 13,9/13,9/17,9/17,9; SEA 6,3/6,3/8,1/8,1; PC 0,1 và GES 0,1/0,5 (chỉ R1, R3).
+  - **Sửa code trước khi đóng băng:**
+    1. runner: phép kiểm header của lượt chính khớp nhầm cả chế độ REPRO, làm DEV dừng một lần ở AVICI REPRO; sửa xong chạy tiếp, job đã xong được bỏ qua;
+    2. runner: lưu output nguyên tử; chỉ bỏ qua job khi output đọc được và mã băm input đúng (đúng chữ của §1; trước đó chỉ xem file có tồn tại);
+    3. code đọc: bổ sung Δp (§3), hình flips và panel SEA trong hình hệ tuyến tính (§4.4), vốn bị thiếu; sửa bố cục trục và chú giải;
+    4. G4: dùng thời gian đo ở cổng cho FoundCause ở n = 500; bản đầu dùng trung vị Study 1 và cho tổng 70,2 h.
+  - **Thêm ngoài luật, chỉ mô tả hoặc chỉ kiểm:**
+    - `flips_seed` và `dp_seed` của SEA (k0 so với k0 khác seed), như Study 7; không vào Holm;
+    - `selftest9.py`, ghi ở [checks/selftest9.json](checks/selftest9.json), chạy trên output tổng hợp với đồ thị ngẫu nhiên và trên input DEV, không sinh input held-out. Đạt: 6 kịch bản đọc khớp với một bản tính độc lập (11 thành phần, Holm, nhãn, 191 giá trị mô tả, ρ̂ ở mỗi kịch bản); kiểm hoàn tất đạt trên dữ liệu đủ và bắt được 14/14 lỗi cài sẵn; đường lượt chính của runner AVICI, PC, GES, SEA cho output trùng từng bit với DEV, từ chối khi thiếu hoặc hỏng header, chạy tiếp, dừng đúng mốc, từ chối output hỏng.
+    - Giới hạn của selftest: bản tính độc lập do cùng người viết nên không phát hiện được lỗi hiểu sai luật; đường lượt chính của FoundCause không được chạy thử (dùng chung `run9.py` với AVICI); tổ hợp nhãn SHRINKS + STABLE không xuất hiện trong sáu kịch bản.
 
 ## 11. Điểm mở (đã quyết ngày 25/11: user chấp nhận mặc định của cả sáu điểm)
 

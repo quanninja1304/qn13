@@ -1,0 +1,19 @@
+{
+ "pass_": true,
+ "rebuild_identical": true,
+ "independent_recomputation": true,
+ "target_block_identical": "asserted for every input",
+ "n_inputs": 288,
+ "levels": [
+  100,
+  125,
+  200,
+  500,
+  1000,
+  2000,
+  4000,
+  5000,
+  20000
+ ],
+ "rejections": {}
+}
