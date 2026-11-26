@@ -52,3 +52,13 @@
 ## 5. Nhật ký (append-only)
 
 - **26/11/2026.** User duyệt sửa đổi. Commit và push trước khi mở phiên mới của GES R1.
+- **26/11/2026, 07:16–07:43.** GES chạy theo bước 1–3 bằng `run_ges_amend1.py`:
+  - GES R1: phiên mới 17,3 s; 4 job còn lại `ok`; header kết thúc đạt.
+  - GES R3: một phiên 1547,4 s, dưới mốc 1800 s; 422/422 job `ok`; header kết thúc đạt.
+  - Tổng thời gian GES là 1938,0 s, dưới trần 6480 s. Không có lần dừng mới, nên `allowed_stops9.json` không đổi.
+  - Mọi header kiểm đóng băng của GES đều đạt, cùng commit đóng băng 044aa71.
+- **26/11/2026, 07:47.** Thêm `completeness9a.py` và bài test `test_completeness9a.py`:
+  - SHA-256 của `completeness9a.py`: `bee2b5c7d345db200c0f9dcff38daf35eade1937014c38423d30f64ae233ae6e`.
+  - SHA-256 của `test_completeness9a.py`: `2ab0123a5a3f9ddcff588740479835acbf7b86e8b1db2197ac706d191f9f87f5`.
+  - Bài test dùng dữ liệu tổng hợp với input giả và đường dẫn chuyển hướng, như phần kiểm hoàn tất của `selftest9.py`; không đọc output nào của P-N9. Kết quả ở `test_completeness9a.json`: 15/15 tình huống đạt. Cả 4 tình huống phải đạt đều đạt, và cả 11 tình huống có lỗi cài sẵn đều bị bắt.
+  - Chưa chạy kiểm hoàn tất trên output thật. Kiểm đóng băng ngay sau bài test (`pn9_precheck`, 07:47) đạt.

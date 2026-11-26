@@ -1,0 +1,155 @@
+{
+ "ok": true,
+ "cases": {
+  "complete data, no stop": {
+   "pass_": true,
+   "ok": true,
+   "rc": 0,
+   "frozen_ok": true,
+   "n_problems": 0,
+   "first": []
+  },
+  "one listed GES R1 stop": {
+   "pass_": true,
+   "ok": true,
+   "rc": 0,
+   "frozen_ok": false,
+   "n_problems": 0,
+   "first": []
+  },
+  "two listed GES R3 stops": {
+   "pass_": true,
+   "ok": true,
+   "rc": 0,
+   "frozen_ok": false,
+   "n_problems": 0,
+   "first": []
+  },
+  "listed stop of a rerun job, rerun identical": {
+   "pass_": true,
+   "ok": true,
+   "rc": 0,
+   "frozen_ok": false,
+   "n_problems": 0,
+   "first": []
+  },
+  "unlisted stop": {
+   "pass_": true,
+   "ok": false,
+   "rc": 1,
+   "frozen_ok": false,
+   "n_problems": 3,
+   "first": [
+    "budget stops in the logs [('ges', 'R1', 'PN9-c0-r0__n4000__k0', 373.3)] differ from the listed stops []",
+    "frozen-check problems not explained by the listed stops: ['ges R1: PN9-c0-r0__n4000__k0 has 2 records or no output', \"ges R1: non-ok records ['PN9-c0-r0__n4000__k0']\"]; expected but absent: []"
+   ]
+  },
+  "listed stop absent from the logs": {
+   "pass_": true,
+   "ok": false,
+   "rc": 1,
+   "frozen_ok": true,
+   "n_problems": 4,
+   "first": [
+    "budget stops in the logs [] differ from the listed stops [('ges', 'R1', 'PN9-c0-r0__n4000__k0', 373.3)]",
+    "ges R1: 1 successful start headers for 1 listed stops (expected 2)"
+   ]
+  },
+  "listed stop with another elapsed_s": {
+   "pass_": true,
+   "ok": false,
+   "rc": 1,
+   "frozen_ok": false,
+   "n_problems": 1,
+   "first": [
+    "budget stops in the logs [('ges', 'R1', 'PN9-c0-r0__n4000__k0', 373.3)] differ from the listed stops [('ges', 'R1', 'PN9-c0-r0__n4000__k0', 373.4)]"
+   ]
+  },
+  "no new start header after the stop": {
+   "pass_": true,
+   "ok": false,
+   "rc": 1,
+   "frozen_ok": false,
+   "n_problems": 1,
+   "first": [
+    "ges R1: 1 successful start headers for 1 listed stops (expected 2)"
+   ]
+  },
+  "stop plus an error record": {
+   "pass_": true,
+   "ok": false,
+   "rc": 1,
+   "frozen_ok": false,
+   "n_problems": 2,
+   "first": [
+    "frozen-check problems not explained by the listed stops: ['ges R1: PN9-c0-r0__n200__A20 has 2 records or no output', \"ges R1: non-ok records ['PN9-c0-r0__n4000__k0', 'PN9-c0-r0__n200__A20']\"]; expected but absent: [\"ges R1: non-ok records ['PN9-c0-r0__n4000__k0']\"]",
+    "ges_R1: 421 of 422 planned jobs verified"
+   ]
+  },
+  "stop without a later ok record": {
+   "pass_": true,
+   "ok": false,
+   "rc": 1,
+   "frozen_ok": false,
+   "n_problems": 2,
+   "first": [
+    "ges R1: PN9-c0-r0__n4000__k0 has 0 records besides its stops, not one ok record with an output",
+    "ges_R1: 421 of 422 planned jobs verified"
+   ]
+  },
+  "stop of another model (SEA)": {
+   "pass_": true,
+   "ok": false,
+   "rc": 1,
+   "frozen_ok": false,
+   "n_problems": 1,
+   "first": [
+    "listed stop outside GES R1 and R3: ('sea', 'R2', 'PN9-c1-r1__n5000__k0__s751631', 22000.0)"
+   ]
+  },
+  "wrong input hash on the job after the stop": {
+   "pass_": true,
+   "ok": false,
+   "rc": 1,
+   "frozen_ok": false,
+   "n_problems": 2,
+   "first": [
+    "ges R1: PN9-c0-r0__n4000__k0: input hash differs; output metadata differs from the record",
+    "ges_R1: 421 of 422 planned jobs verified"
+   ]
+  },
+  "rerun after a stop differs from the original": {
+   "pass_": true,
+   "ok": false,
+   "rc": 1,
+   "frozen_ok": false,
+   "n_problems": 2,
+   "first": [
+    "ges R1: PN9-c0-r0__n100__k0__rerun: rerun differs from PN9-c0-r0__n100__k0",
+    "ges_R1: 421 of 422 planned jobs verified"
+   ]
+  },
+  "stop plus an unrelated missing output": {
+   "pass_": true,
+   "ok": false,
+   "rc": 1,
+   "frozen_ok": false,
+   "n_problems": 2,
+   "first": [
+    "frozen-check problems not explained by the listed stops: ['avici R2: PN9-c1-r0__n200__A20 has 1 records or no output']; expected but absent: []",
+    "avici_R2: 241 of 242 planned jobs verified"
+   ]
+  },
+  "stop plus a failed end header": {
+   "pass_": true,
+   "ok": false,
+   "rc": 1,
+   "frozen_ok": false,
+   "n_problems": 2,
+   "first": [
+    "ges R1: last start or end header missing, failed or out of order",
+    "frozen-check problems not explained by the listed stops: ['ges R1: missing or failed start/end freeze header']; expected but absent: []"
+   ]
+  }
+ }
+}
