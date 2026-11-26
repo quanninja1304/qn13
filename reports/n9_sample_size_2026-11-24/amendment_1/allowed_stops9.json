@@ -1,0 +1,13 @@
+{
+ "amendment": "PN9 amendment 1 (PN9_amendment1_vi.md)",
+ "note": "budget stops accepted by completeness9a.py; GES R1 and R3 only; timing events, no metric",
+ "stops": [
+  {
+   "model": "ges",
+   "run": "R1",
+   "key": "PN9-c2-r14__n4000__k0",
+   "elapsed_s": 373.3,
+   "script_exit_local": "2026-11-26T03:18:36+07:00"
+  }
+ ]
+}
