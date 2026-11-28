@@ -1,0 +1,14 @@
+{
+ "amendment": "PN9 amendment 2 (PN9_amendment2_vi.md)",
+ "note": "error records accepted by completeness9b.py; SEA R3 only; a job timed out because the machine slept; no metric",
+ "records": [
+  {
+   "model": "sea",
+   "run": "R3",
+   "key": "PN9-c6-r8__n5000__A20__s740983",
+   "status": "error: exit timeout",
+   "wall_total_s": 23409.8,
+   "sleep_local": ["2026-11-28T07:35:28", "2026-11-28T14:04:44"]
+  }
+ ]
+}

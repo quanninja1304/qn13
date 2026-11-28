@@ -1,0 +1,215 @@
+{
+ "ok": true,
+ "cases": {
+  "complete data, nothing listed": {
+   "pass_": true,
+   "ok": true,
+   "rc": 0,
+   "frozen_ok": true,
+   "n_problems": 0,
+   "first": []
+  },
+  "real situation: GES R1 stop and SEA R3 timeout": {
+   "pass_": true,
+   "ok": true,
+   "rc": 0,
+   "frozen_ok": false,
+   "n_problems": 0,
+   "first": []
+  },
+  "one SEA R3 timeout": {
+   "pass_": true,
+   "ok": true,
+   "rc": 0,
+   "frozen_ok": false,
+   "n_problems": 0,
+   "first": []
+  },
+  "two SEA R3 timeouts": {
+   "pass_": true,
+   "ok": true,
+   "rc": 0,
+   "frozen_ok": false,
+   "n_problems": 0,
+   "first": []
+  },
+  "SEA R3 timeout of a rerun job, rerun identical": {
+   "pass_": true,
+   "ok": true,
+   "rc": 0,
+   "frozen_ok": false,
+   "n_problems": 0,
+   "first": []
+  },
+  "unlisted SEA timeout": {
+   "pass_": true,
+   "ok": false,
+   "rc": 1,
+   "frozen_ok": false,
+   "n_problems": 3,
+   "first": [
+    "non-ok records in the logs [('sea', 'R3', 'PN9-c6-r5__n5000__A20__s740953', 'error: exit timeout', 23409.8)] differ from the listed records []",
+    "frozen-check problems not explained by the listed records: ['sea R3: PN9-c6-r5__n5000__A20__s740953 has 2 records or no output', \"sea R3: non-ok records ['PN9-c6-r5__n5000__A20__s740953']\"]; expected but absent: []"
+   ]
+  },
+  "listed timeout absent from the logs": {
+   "pass_": true,
+   "ok": false,
+   "rc": 1,
+   "frozen_ok": true,
+   "n_problems": 4,
+   "first": [
+    "non-ok records in the logs [] differ from the listed records [('sea', 'R3', 'PN9-c6-r5__n5000__A20__s740953', 'error: exit timeout', 23409.8)]",
+    "sea R3: 1 successful start headers for 1 listed records (expected 2)"
+   ]
+  },
+  "listed timeout with another wall_total_s": {
+   "pass_": true,
+   "ok": false,
+   "rc": 1,
+   "frozen_ok": false,
+   "n_problems": 1,
+   "first": [
+    "non-ok records in the logs [('sea', 'R3', 'PN9-c6-r5__n5000__A20__s740953', 'error: exit timeout', 23409.8)] differ from the listed records [('sea', 'R3', 'PN9-c6-r5__n5000__A20__s740953', 'error: exit timeout', 23409.9)]"
+   ]
+  },
+  "no new start header after the timeout": {
+   "pass_": true,
+   "ok": false,
+   "rc": 1,
+   "frozen_ok": false,
+   "n_problems": 1,
+   "first": [
+    "sea R3: 1 successful start headers for 1 listed records (expected 2)"
+   ]
+  },
+  "SEA seed of the later record differs": {
+   "pass_": true,
+   "ok": false,
+   "rc": 1,
+   "frozen_ok": false,
+   "n_problems": 2,
+   "first": [
+    "sea R3: PN9-c6-r5__n5000__A20__s740953: SEA seed or adapter check",
+    "sea_R3: 901 of 902 planned jobs verified"
+   ]
+  },
+  "SEA adapter check of the later record fails": {
+   "pass_": true,
+   "ok": false,
+   "rc": 1,
+   "frozen_ok": false,
+   "n_problems": 2,
+   "first": [
+    "sea R3: PN9-c6-r5__n5000__A20__s740953: SEA seed or adapter check",
+    "sea_R3: 901 of 902 planned jobs verified"
+   ]
+  },
+  "timeout without a later ok record": {
+   "pass_": true,
+   "ok": false,
+   "rc": 1,
+   "frozen_ok": false,
+   "n_problems": 2,
+   "first": [
+    "sea R3: PN9-c6-r5__n5000__A20__s740953 has 0 ok records, not one ok record with an output",
+    "sea_R3: 901 of 902 planned jobs verified"
+   ]
+  },
+  "FoundCause error listed": {
+   "pass_": true,
+   "ok": false,
+   "rc": 1,
+   "frozen_ok": false,
+   "n_problems": 1,
+   "first": [
+    "listed record outside the scope of amendments 1 and 2: ('foundcause', 'R3', 'PN9-c4-r0__n125__k0', 'error: exit timeout', 5000.0)"
+   ]
+  },
+  "SEA error with another status listed": {
+   "pass_": true,
+   "ok": false,
+   "rc": 1,
+   "frozen_ok": false,
+   "n_problems": 1,
+   "first": [
+    "listed record outside the scope of amendments 1 and 2: ('sea', 'R3', 'PN9-c6-r5__n5000__A20__s740953', 'error: exit 1', 23409.8)"
+   ]
+  },
+  "SEA R4 timeout listed": {
+   "pass_": true,
+   "ok": false,
+   "rc": 1,
+   "frozen_ok": false,
+   "n_problems": 1,
+   "first": [
+    "listed record outside the scope of amendments 1 and 2: ('sea', 'R4', 'PN9-c5-r0__n500__A20__s740750', 'error: exit timeout', 4000.0)"
+   ]
+  },
+  "SEA budget stop listed": {
+   "pass_": true,
+   "ok": false,
+   "rc": 1,
+   "frozen_ok": false,
+   "n_problems": 1,
+   "first": [
+    "listed record outside the scope of amendments 1 and 2: ('sea', 'R3', 'PN9-c6-r5__n5000__A20__s740953', 'budget_stop', 30000.0)"
+   ]
+  },
+  "GES stop unlisted while the SEA timeout is listed": {
+   "pass_": true,
+   "ok": false,
+   "rc": 1,
+   "frozen_ok": false,
+   "n_problems": 3,
+   "first": [
+    "non-ok records in the logs [('ges', 'R1', 'PN9-c0-r0__n4000__k0', 'budget_stop', 373.3), ('sea', 'R3', 'PN9-c6-r5__n5000__A20__s740953', 'error: exit timeout', 23409.8)] differ from the listed records [('sea', 'R3', 'PN9-c6-r5__n5000__A20__s740953', 'error: exit timeout', 23409.8)]",
+    "frozen-check problems not explained by the listed records: ['ges R1: PN9-c0-r0__n4000__k0 has 2 records or no output', \"ges R1: non-ok records ['PN9-c0-r0__n4000__k0']\"]; expected but absent: []"
+   ]
+  },
+  "wrong input hash on the job after the timeout": {
+   "pass_": true,
+   "ok": false,
+   "rc": 1,
+   "frozen_ok": false,
+   "n_problems": 2,
+   "first": [
+    "sea R3: PN9-c6-r5__n5000__A20__s740953: input hash differs; output metadata differs from the record",
+    "sea_R3: 901 of 902 planned jobs verified"
+   ]
+  },
+  "rerun after a timeout differs from the original": {
+   "pass_": true,
+   "ok": false,
+   "rc": 1,
+   "frozen_ok": false,
+   "n_problems": 2,
+   "first": [
+    "sea R3: PN9-c4-r0__n500__k0__s740600__rerun: rerun differs from PN9-c4-r0__n500__k0__s740600",
+    "sea_R3: 901 of 902 planned jobs verified"
+   ]
+  },
+  "listed records plus an unrelated missing output": {
+   "pass_": true,
+   "ok": false,
+   "rc": 1,
+   "frozen_ok": false,
+   "n_problems": 2,
+   "first": [
+    "frozen-check problems not explained by the listed records: ['avici R2: PN9-c1-r0__n200__A20 has 1 records or no output']; expected but absent: []",
+    "avici_R2: 241 of 242 planned jobs verified"
+   ]
+  },
+  "listed records plus a failed end header": {
+   "pass_": true,
+   "ok": false,
+   "rc": 1,
+   "frozen_ok": false,
+   "n_problems": 2,
+   "first": [
+    "sea R3: last start or end header missing, failed or out of order",
+    "frozen-check problems not explained by the listed records: ['sea R3: missing or failed start/end freeze header']; expected but absent: []"
+   ]
+  }
+ }
+}

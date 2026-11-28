@@ -1,0 +1,383 @@
+{
+ "agreement": {
+  "effects": {
+   "ok": true,
+   "n_outputs": 8640,
+   "n_compared": 3626,
+   "n_mismatches": 0,
+   "n_problems": 0,
+   "first": [],
+   "labels": {
+    "A1": "PERSISTS",
+    "C1": "PRESENT_BELOW_MARGIN",
+    "S1": "PERSISTS",
+    "A2": [
+     "HIGHER"
+    ],
+    "C2": [
+     "SHRINKS"
+    ],
+    "F1": [
+     "STABLE"
+    ],
+    "S2": [
+     "STABLE"
+    ]
+   },
+   "planned_labels_missed": {},
+   "seconds": 382
+  },
+  "null": {
+   "ok": true,
+   "n_outputs": 8640,
+   "n_compared": 3604,
+   "n_mismatches": 0,
+   "n_problems": 0,
+   "first": [],
+   "labels": {
+    "A1": "PRESENT_BELOW_MARGIN",
+    "C1": "PRESENT_BELOW_MARGIN",
+    "S1": "PRESENT_BELOW_MARGIN",
+    "A2": [
+     "SIMILAR"
+    ],
+    "C2": [
+     "STABLE"
+    ],
+    "F1": [
+     "STABLE"
+    ],
+    "S2": [
+     "STABLE"
+    ]
+   },
+   "planned_labels_missed": {},
+   "seconds": 392
+  },
+  "ushape": {
+   "ok": true,
+   "n_outputs": 8640,
+   "n_compared": 3604,
+   "n_mismatches": 0,
+   "n_problems": 0,
+   "first": [],
+   "labels": {
+    "A1": "PERSISTS",
+    "C1": "PERSISTS",
+    "S1": "PERSISTS",
+    "A2": [
+     "LOWER"
+    ],
+    "C2": [
+     "UNCLEAR"
+    ],
+    "F1": [
+     "UNCLEAR"
+    ],
+    "S2": [
+     "UNCLEAR"
+    ]
+   },
+   "planned_labels_missed": {},
+   "seconds": 376
+  },
+  "zero": {
+   "ok": true,
+   "n_outputs": 8640,
+   "n_compared": 3604,
+   "n_mismatches": 0,
+   "n_problems": 0,
+   "first": [],
+   "labels": {
+    "A1": "NOT_CONFIRMED",
+    "C1": "NOT_CONFIRMED",
+    "S1": "NOT_CONFIRMED",
+    "A2": [
+     "UNCLEAR"
+    ],
+    "C2": [
+     "UNCLEAR"
+    ],
+    "F1": [
+     "UNCLEAR"
+    ],
+    "S2": [
+     "UNCLEAR"
+    ]
+   },
+   "planned_labels_missed": {},
+   "seconds": 353
+  },
+  "both": {
+   "ok": true,
+   "n_outputs": 8640,
+   "n_compared": 3626,
+   "n_mismatches": 0,
+   "n_problems": 0,
+   "first": [],
+   "labels": {
+    "A1": "PRESENT_BELOW_MARGIN",
+    "C1": "NOT_CONFIRMED",
+    "S1": "PRESENT_BELOW_MARGIN",
+    "A2": [
+     "HIGHER",
+     "SIMILAR"
+    ],
+    "C2": [
+     "SHRINKS"
+    ],
+    "F1": [
+     "SHRINKS"
+    ],
+    "S2": [
+     "SHRINKS"
+    ]
+   },
+   "planned_labels_missed": {},
+   "seconds": 351
+  },
+  "noisy": {
+   "ok": true,
+   "n_outputs": 8640,
+   "n_compared": 3626,
+   "n_mismatches": 0,
+   "n_problems": 0,
+   "first": [],
+   "labels": {
+    "A1": "PERSISTS",
+    "C1": "PERSISTS",
+    "S1": "PERSISTS",
+    "A2": [
+     "UNCLEAR"
+    ],
+    "C2": [
+     "STABLE"
+    ],
+    "F1": [
+     "UNCLEAR"
+    ],
+    "S2": [
+     "STABLE"
+    ]
+   },
+   "planned_labels_missed": {},
+   "seconds": 340
+  }
+ },
+ "faults": {
+  "p of C1": {
+   "caught": true,
+   "n_messages": 1,
+   "first": [
+    "C1.p: recheck 7.520361225370627e-10, analyze9 7.520368745731852e-10"
+   ]
+  },
+  "p of C2s with the margin of the wrong sign": {
+   "caught": true,
+   "n_messages": 1,
+   "first": [
+    "C2s.p: recheck 6.113996322791796e-16, analyze9 1.110906132596029e-21"
+   ]
+  },
+  "p of S1 two-sided": {
+   "caught": true,
+   "n_messages": 1,
+   "first": [
+    "S1.p: recheck 4.2860107304394186e-73, analyze9 8.572021460878837e-73"
+   ]
+  },
+  "Holm decision of A1": {
+   "caught": true,
+   "n_messages": 1,
+   "first": [
+    "A1.holm.rejected: recheck True, analyze9 False"
+   ]
+  },
+  "label S2": {
+   "caught": true,
+   "n_messages": 1,
+   "first": [
+    "labels.S2: recheck {'STABLE'}, analyze9 {'STABLE', 'SHRINKS'}"
+   ]
+  },
+  "label A1": {
+   "caught": true,
+   "n_messages": 1,
+   "first": [
+    "labels.A1: recheck 'PERSISTS', analyze9 'PRESENT_BELOW_MARGIN'"
+   ]
+  },
+  "label A2": {
+   "caught": true,
+   "n_messages": 1,
+   "first": [
+    "labels.A2: recheck {'HIGHER'}, analyze9 {'UNCLEAR'}"
+   ]
+  },
+  "theta of a descriptive entry": {
+   "caught": true,
+   "n_messages": 1,
+   "first": [
+    "descriptive.avici.200.H.theta: recheck 0.09862163760823528, analyze9 0.09862173622987289"
+   ]
+  },
+  "SE of C2t at n = 1000": {
+   "caught": true,
+   "n_messages": 1,
+   "first": [
+    "C2t.res_by_level.1000.se: recheck 0.00540078817608147, analyze9 0.005400793576869646"
+   ]
+  },
+  "count of FoundCause at n = 125": {
+   "caught": true,
+   "n_messages": 1,
+   "first": [
+    "counts.foundcause.125: recheck 120, analyze9 119"
+   ]
+  },
+  "rho of CDFM": {
+   "caught": true,
+   "n_messages": 1,
+   "first": [
+    "rho.cdfm[0][1]: recheck 0.9515713464733714, analyze9 0.9515723464733714"
+   ]
+  },
+  "size of A2d": {
+   "caught": true,
+   "n_messages": 1,
+   "first": [
+    "size.A2d: recheck ['POS', 'LARGE'], analyze9 ['POS', 'SMALL']"
+   ]
+  },
+  "beyond-classical entry of SEA": {
+   "caught": true,
+   "n_messages": 1,
+   "first": [
+    "beyond_classical_linear.sea.500.theta: recheck 0.14863401581430494, analyze9 0.14863416444832073"
+   ]
+  },
+  "df of S1": {
+   "caught": true,
+   "n_messages": 1,
+   "first": [
+    "S1.res.df: recheck 67.76301538017185, analyze9 67.76308314318723"
+   ]
+  },
+  "CI of A1": {
+   "caught": true,
+   "n_messages": 1,
+   "first": [
+    "A1.res.ci95[1]: recheck 0.11332221931106598, analyze9 0.11332321931106598"
+   ]
+  },
+  "cell counts of F1s": {
+   "caught": true,
+   "n_messages": 1,
+   "first": [
+    "F1s.res.n_by_cell: recheck [15, 15, 15, 15, 15, 15, 15, 15], analyze9 [16, 15, 15, 15, 15, 15, 15, 15]"
+   ]
+  },
+  "margin c_C": {
+   "caught": true,
+   "n_messages": 1,
+   "first": [
+    "margins.c_C: recheck 0.009395091235455379, analyze9 0.009395100630546613"
+   ]
+  },
+  "component removed": {
+   "caught": true,
+   "n_messages": 10,
+   "first": [
+    "components (ids): recheck ['A1', 'A2d', 'A2s', 'C1', 'C2s', 'C2t', 'F1s', 'F1t', 'S1', 'S2s'], analyze9 ['A1', 'A2d', 'A2s', 'C1', 'C2s', 'C2t', 'F1s', 'F1t', 'S1', 'S2s', 'S2t']",
+    "S2t.p: recheck 1.6370217300874253e-24, analyze9 None"
+   ]
+  },
+  "descriptive field removed": {
+   "caught": true,
+   "n_messages": 2,
+   "first": [
+    "descriptive.cdfm.4000 (fields): recheck ['H', 'H_fixed', 'H_frozen', 'dp', 'f1_0', 'f1_1', 'flips'], analyze9 ['H', 'H_fixed', 'dp', 'f1_0', 'f1_1', 'flips']",
+    "descriptive.cdfm.4000.H_frozen (present): recheck True, analyze9 False"
+   ]
+  },
+  "linear descriptive entry": {
+   "caught": true,
+   "n_messages": 1,
+   "first": [
+    "descriptive_linear.foundcause.200.theta: recheck 0.19762957349217306, analyze9 0.19762977112174654"
+   ]
+  },
+  "missing output": {
+   "caught": true,
+   "n_messages": 64,
+   "first": [
+    "avici PN9-c3-r4__n500__k0: missing output",
+    "counts.avici.500: recheck 119, analyze9 120"
+   ]
+  },
+  "wrong level in the metadata": {
+   "caught": true,
+   "n_messages": 96,
+   "first": [
+    "cdfm PN9-c1-r2__n1000__A20: n=999 (plan 1000)",
+    "counts.cdfm.1000: recheck 119, analyze9 120"
+   ]
+  },
+  "non-finite probability": {
+   "caught": true,
+   "n_messages": 72,
+   "first": [
+    "avici PN9-c5-r1__n200__A20: probs shape (40, 40) or not finite",
+    "counts.avici.200: recheck 119, analyze9 120"
+   ]
+  },
+  "SEA adapter flag": {
+   "caught": true,
+   "n_messages": 114,
+   "first": [
+    "sea PN9-c2-r3__n2000__k0__s753323: layout_ok=False (plan True)",
+    "counts.sea.2000: recheck 119, analyze9 120"
+   ]
+  },
+  "array missing": {
+   "caught": true,
+   "n_messages": 72,
+   "first": [
+    "foundcause PN9-c6-r0__n125__k0: arrays ['C', 'adj', 'agreement', 'probs', 'threshold']",
+    "counts.foundcause.125: recheck 119, analyze9 120"
+   ]
+  },
+  "output changed after the frozen reading": {
+   "caught": true,
+   "n_messages": 53,
+   "first": [
+    "C2s.p: recheck 6.003619535360047e-16, analyze9 6.113996322791828e-16",
+    "C2s.res.theta: recheck -0.041900827258138415, analyze9 -0.04187512272166282"
+   ]
+  },
+  "figure missing": {
+   "caught": true,
+   "n_messages": 1,
+   "first": [
+    "figure files missing: ['pn9_fig_flips.pdf']"
+   ]
+  },
+  "wrong target block from the generator": {
+   "caught": true,
+   "n_messages": 400,
+   "first": [
+    "avici PN9-c0-r0__n100__k0: input hash differs from the input rebuilt from the rules",
+    "avici PN9-c0-r0__n100__A20: input hash differs from the input rebuilt from the rules"
+   ]
+  },
+  "wrong padding formula": {
+   "caught": true,
+   "n_messages": 400,
+   "first": [
+    "avici PN9-c0-r0__n100__A20: input hash differs from the input rebuilt from the rules",
+    "avici PN9-c0-r0__n200__A20: input hash differs from the input rebuilt from the rules"
+   ]
+  }
+ },
+ "ok": true
+}
